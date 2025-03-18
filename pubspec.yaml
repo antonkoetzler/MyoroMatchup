@@ -9,6 +9,11 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  myoro_flutter_library:
+    path: ../myoro_flutter_library
+    # git:
+    #   url: git@github.com:antonkoetzler/myoro_flutter_library
+  faker: 2.1.0
 
 dev_dependencies:
   flutter_test:
