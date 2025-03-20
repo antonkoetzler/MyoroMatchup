@@ -50,7 +50,7 @@ packages:
     source: hosted
     version: "1.1.2"
   collection:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: collection
       sha256: "2f5709ae4d3d59dd8f7cd309b4e023046b57d8a6c82130785d2b0e5868084e76"
@@ -119,7 +119,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_bloc:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: flutter_bloc
       sha256: "1046d719fbdf230330d3443187cc33cc11963d15c9089f6cc56faa42a4c5f0cc"
@@ -152,6 +152,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.19.0"
+  kiwi:
+    dependency: "direct main"
+    description:
+      name: kiwi
+      sha256: d078364a90fb1b93852bb74468efdf4aaae35c036c538c1cf4f9c74a19df9a61
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.0.1"
   leak_tracker:
     dependency: transitive
     description:
@@ -216,13 +224,21 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.16.0"
+  mocktail:
+    dependency: transitive
+    description:
+      name: mocktail
+      sha256: "890df3f9688106f25755f26b1c60589a92b3ab91a22b8b224947ad041bf172d8"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.4"
   myoro_flutter_library:
     dependency: "direct main"
     description:
       path: "../myoro_flutter_library"
       relative: true
     source: path
-    version: "1.0.3"
+    version: "1.2.0"
   nested:
     dependency: transitive
     description:
@@ -312,7 +328,7 @@ packages:
     source: hosted
     version: "6.1.2"
   shared_preferences:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: shared_preferences
       sha256: "846849e3e9b68f3ef4b60c60cf4b3e02e9321bc7f4d8c4692cf87ffa82fc8a3a"
