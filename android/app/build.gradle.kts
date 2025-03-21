@@ -8,7 +8,9 @@ plugins {
 android {
     namespace = "com.example.myoro_matchup"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    // TODO: Try uncommenting this line and deleting the 27.bla.blabla when Flutter is updated.
+    // ndkVersion = flutter.ndkVersion
+    ndkVersion = "27.0.12077973"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

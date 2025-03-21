@@ -16,11 +16,15 @@ final class App extends StatelessWidget {
         builder: (_, ThemeEnum themeEnum) {
           return MyoroMaterialApp(
             title: 'MyoroMatchup',
-            themeExtensionsBuilder: (_, __) => createThemeExtensions(themeEnum),
-            home: const LoginScreen(),
+            themeExtensionsBuilder: _themeExtensionsBuilder,
+            home: const LoginSignupScreen(),
           );
         },
       ),
     );
+  }
+
+  List<ThemeExtension> _themeExtensionsBuilder(ColorScheme colorScheme, _) {
+    return createThemeExtensions(colorScheme);
   }
 }

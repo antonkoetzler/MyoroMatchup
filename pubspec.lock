@@ -238,7 +238,7 @@ packages:
       path: "../myoro_flutter_library"
       relative: true
     source: path
-    version: "1.2.0"
+    version: "1.2.5"
   nested:
     dependency: transitive
     description:
