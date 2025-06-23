@@ -1,9 +1,10 @@
-import { Text, View } from 'react-native';
+import { SafeAreaView, StatusBar, Text } from 'react-native';
 
 export default function Index() {
   return (
-    <View className='w-52 h-52 bg-pink-500'>
+    <SafeAreaView>
+      <StatusBar />
       <Text>MyoroMatchup</Text>
-    </View>
+    </SafeAreaView>
   );
 }
