@@ -1,10 +1,5 @@
-import { SafeAreaView, StatusBar, Text } from 'react-native';
+import { Redirect } from 'expo-router';
 
 export default function Index() {
-  return (
-    <SafeAreaView>
-      <StatusBar />
-      <Text>MyoroMatchup</Text>
-    </SafeAreaView>
-  );
+  return <Redirect href='/screens/welcome_screen' />;
 }
