@@ -1,12 +1,12 @@
-part of '../home_screen.dart';
+part of '../game_screen.dart';
 
-/// Body of [HomeScreen].
+/// Body of [GameScreen].
 final class _Body extends StatelessWidget {
   const _Body();
 
   @override
   Widget build(BuildContext context) {
-    final viewModel = context.read<HomeScreenViewModel>();
+    final viewModel = context.read<GameScreenViewModel>();
 
     return ValueListenableBuilder(
       valueListenable: viewModel.state.gamesRequestNotifier,

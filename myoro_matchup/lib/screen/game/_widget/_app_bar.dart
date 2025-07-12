@@ -1,6 +1,6 @@
-part of '../home_screen.dart';
+part of '../game_screen.dart';
 
-/// [MyoroAppBar] of [HomeScreen].
+/// [MyoroAppBar] of [GameScreen].
 final class _AppBar extends StatelessWidget implements PreferredSizeWidget {
   const _AppBar();
 
@@ -9,6 +9,7 @@ final class _AppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(_) {
+    // TODO: Localization.
     return const MyoroAppBar(configuration: MyoroAppBarConfiguration(child: Text('MyoroMatchup')));
   }
 }

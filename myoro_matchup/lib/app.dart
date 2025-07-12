@@ -12,7 +12,7 @@ final class App extends StatelessWidget {
       configuration: MyoroAppConfiguration(
         themeMode: ThemeMode.dark,
         themeExtensionsBuilder: createThemeExtensions,
-        home: HomeScreen(),
+        home: GameScreen(),
       ),
     );
   }

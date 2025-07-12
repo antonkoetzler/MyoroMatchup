@@ -1,7 +1,7 @@
 part of 'home_screen_view_model.dart';
 
-/// State of [HomeScreenViewModel].
-final class HomeScreenState {
+/// State of [GameScreenViewModel].
+final class GameScreenState {
   /// [ValueNotifier] of the [MyoroRequest] of the [Game]s being fetched.
   final _gamesRequestNotifier = ValueNotifier(const MyoroRequest<Set<Game>>());
   ValueNotifier<MyoroRequest<Set<Game>>> get gamesRequestNotifier => _gamesRequestNotifier;

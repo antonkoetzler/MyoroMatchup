@@ -1,1 +1,1 @@
-export 'home/exports.dart';
+export 'game/exports.dart';

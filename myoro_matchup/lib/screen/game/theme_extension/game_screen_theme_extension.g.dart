@@ -1,30 +1,30 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'home_screen_theme_extension.dart';
+part of 'game_screen_theme_extension.dart';
 
 // **************************************************************************
 // MyoroThemeExtensionGenerator
 // **************************************************************************
 
-/// Apply this mixin to [HomeScreenThemeExtension] once the code is generated.
+/// Apply this mixin to [GameScreenThemeExtension] once the code is generated.
 ///
 /// ```dart
-/// class HomeScreenThemeExtension with _$HomeScreenThemeExtensionMixin {}
+/// class GameScreenThemeExtension with _$GameScreenThemeExtensionMixin {}
 /// ```
-mixin _$HomeScreenThemeExtensionMixin
-    on ThemeExtension<HomeScreenThemeExtension> {
-  HomeScreenThemeExtension get self => this as HomeScreenThemeExtension;
+mixin _$GameScreenThemeExtensionMixin
+    on ThemeExtension<GameScreenThemeExtension> {
+  GameScreenThemeExtension get self => this as GameScreenThemeExtension;
 
   @override
-  HomeScreenThemeExtension copyWith({TextStyle? errorStateTextStyle}) {
-    return HomeScreenThemeExtension(
+  GameScreenThemeExtension copyWith({TextStyle? errorStateTextStyle}) {
+    return GameScreenThemeExtension(
       errorStateTextStyle: errorStateTextStyle ?? self.errorStateTextStyle,
     );
   }
 
   @override
   bool operator ==(Object other) {
-    return other is HomeScreenThemeExtension &&
+    return other is GameScreenThemeExtension &&
         other.runtimeType == runtimeType &&
         other.errorStateTextStyle == self.errorStateTextStyle;
   }
@@ -36,7 +36,7 @@ mixin _$HomeScreenThemeExtensionMixin
 
   @override
   String toString() =>
-      'HomeScreenThemeExtension(\n'
+      'GameScreenThemeExtension(\n'
       '  errorStateTextStyle: ${self.errorStateTextStyle},\n'
       ');';
 }

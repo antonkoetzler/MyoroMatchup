@@ -1,4 +1,4 @@
-part of '../home_screen.dart';
+part of '../game_screen.dart';
 
 /// [MyoroCircularLoader] of [_Body].
 final class _BodyLoader extends StatelessWidget {

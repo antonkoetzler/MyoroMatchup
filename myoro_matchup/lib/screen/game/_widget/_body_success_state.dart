@@ -1,4 +1,4 @@
-part of '../home_screen.dart';
+part of '../game_screen.dart';
 
 /// [MyoroRequestEnum.success] state of [_Body].
 final class _BodySuccessState extends StatelessWidget {

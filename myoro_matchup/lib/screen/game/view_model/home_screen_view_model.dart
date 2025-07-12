@@ -5,14 +5,14 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 
 part 'home_screen_state.dart';
 
-/// View model of [HomeScreen].
+/// View model of [GameScreen].
 @injectable
-final class HomeScreenViewModel {
-  HomeScreenViewModel(this._gameService);
+final class GameScreenViewModel {
+  GameScreenViewModel(this._gameService);
 
   /// State.
-  final _state = HomeScreenState();
-  HomeScreenState get state => _state;
+  final _state = GameScreenState();
+  GameScreenState get state => _state;
 
   /// Game service.
   final GameService _gameService;
@@ -26,7 +26,7 @@ final class HomeScreenViewModel {
       final errorMessage = error.toString();
 
       if (kDebugMode) {
-        print('[HomeScreenViewModel.fetchGames]: Error fetching games: "$errorMessage".');
+        print('[GameScreenViewModel.fetchGames]: Error fetching games: "$errorMessage".');
         print('Stack trace:\n$stackTrace');
       }
 

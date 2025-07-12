@@ -10,13 +10,13 @@ part '_widget/_body_loader.dart';
 part '_widget/_body_success_state.dart';
 
 /// Home screen.
-final class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+final class GameScreen extends StatelessWidget {
+  const GameScreen({super.key});
 
   @override
   Widget build(_) {
     return InheritedProvider(
-      create: (_) => getIt<HomeScreenViewModel>()..fetchGames(),
+      create: (_) => getIt<GameScreenViewModel>()..fetchGames(),
       child: const MyoroScreen(
         configuration: MyoroScreenConfiguration(appBar: _AppBar(), body: _Body()),
       ),
