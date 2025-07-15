@@ -7,7 +7,7 @@ final class _BodyErrorState extends StatelessWidget {
   final String _message;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameScreenThemeExtension>();
     return Center(child: Text(_message, style: themeExtension.errorStateTextStyle));
   }

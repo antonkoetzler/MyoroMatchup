@@ -9,6 +9,10 @@ final class _BodySuccessState extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return Text('Hewwo uwu, there were ${_games.length} games fetched.');
+    return CustomScrollView(
+      slivers: [
+        SliverList.builder(itemCount: _games.length, itemBuilder: (_, index) => _Game(_games.elementAt(index))),
+      ],
+    );
   }
 }

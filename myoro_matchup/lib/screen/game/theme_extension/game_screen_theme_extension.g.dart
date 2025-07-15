@@ -16,9 +16,16 @@ mixin _$GameScreenThemeExtensionMixin
   GameScreenThemeExtension get self => this as GameScreenThemeExtension;
 
   @override
-  GameScreenThemeExtension copyWith({TextStyle? errorStateTextStyle}) {
+  GameScreenThemeExtension copyWith({
+    TextStyle? errorStateTextStyle,
+    TextStyle? gameNameTextStyle,
+    TextStyle? gameSportNameTextStyle,
+  }) {
     return GameScreenThemeExtension(
       errorStateTextStyle: errorStateTextStyle ?? self.errorStateTextStyle,
+      gameNameTextStyle: gameNameTextStyle ?? self.gameNameTextStyle,
+      gameSportNameTextStyle:
+          gameSportNameTextStyle ?? self.gameSportNameTextStyle,
     );
   }
 
@@ -26,17 +33,25 @@ mixin _$GameScreenThemeExtensionMixin
   bool operator ==(Object other) {
     return other is GameScreenThemeExtension &&
         other.runtimeType == runtimeType &&
-        other.errorStateTextStyle == self.errorStateTextStyle;
+        other.errorStateTextStyle == self.errorStateTextStyle &&
+        other.gameNameTextStyle == self.gameNameTextStyle &&
+        other.gameSportNameTextStyle == self.gameSportNameTextStyle;
   }
 
   @override
   int get hashCode {
-    return Object.hashAll([self.errorStateTextStyle]);
+    return Object.hash(
+      self.errorStateTextStyle,
+      self.gameNameTextStyle,
+      self.gameSportNameTextStyle,
+    );
   }
 
   @override
   String toString() =>
       'GameScreenThemeExtension(\n'
       '  errorStateTextStyle: ${self.errorStateTextStyle},\n'
+      '  gameNameTextStyle: ${self.gameNameTextStyle},\n'
+      '  gameSportNameTextStyle: ${self.gameSportNameTextStyle},\n'
       ');';
 }

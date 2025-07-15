@@ -8,6 +8,7 @@ part '_widget/_body.dart';
 part '_widget/_body_error_state.dart';
 part '_widget/_body_loader.dart';
 part '_widget/_body_success_state.dart';
+part '_widget/_game.dart';
 
 /// Home screen.
 final class GameScreen extends StatelessWidget {
