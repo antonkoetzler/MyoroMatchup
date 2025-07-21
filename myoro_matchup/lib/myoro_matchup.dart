@@ -1,3 +1,4 @@
+export 'commons/exports.dart';
 export 'core/exports.dart';
 export 'screen/exports.dart';
 export 'app.dart';

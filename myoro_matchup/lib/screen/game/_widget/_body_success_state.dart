@@ -8,11 +8,23 @@ final class _BodySuccessState extends StatelessWidget {
   final Set<Game> _games;
 
   @override
-  Widget build(_) {
-    return CustomScrollView(
-      slivers: [
-        SliverList.builder(itemCount: _games.length, itemBuilder: (_, index) => _Game(_games.elementAt(index))),
-      ],
+  Widget build(context) {
+    final themeExtension = context.resolveThemeExtension<GameScreenThemeExtension>();
+
+    if (_games.isEmpty) {
+      return Center(child: Text(context.localization.gameScreenBodySuccessStateEmptyMessage));
+    }
+
+    return Padding(
+      padding: themeExtension.bodySuccessStateMargin,
+      child: CustomScrollView(
+        slivers: [
+          SliverList.builder(
+            itemCount: _games.length,
+            itemBuilder: (_, index) => _Game(index == 0, _games.elementAt(index)),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -17,12 +17,25 @@ mixin _$GameScreenThemeExtensionMixin
 
   @override
   GameScreenThemeExtension copyWith({
-    TextStyle? errorStateTextStyle,
+    TextStyle? bodyErrorStateTextStyle,
+    EdgeInsets? bodySuccessStateMargin,
+    EdgeInsets? gameMargin,
+    double? gameSpacing,
+    double? gameBannerMaxHeight,
+    double? gameProfilePictureSize,
     TextStyle? gameNameTextStyle,
     TextStyle? gameSportNameTextStyle,
   }) {
     return GameScreenThemeExtension(
-      errorStateTextStyle: errorStateTextStyle ?? self.errorStateTextStyle,
+      bodyErrorStateTextStyle:
+          bodyErrorStateTextStyle ?? self.bodyErrorStateTextStyle,
+      bodySuccessStateMargin:
+          bodySuccessStateMargin ?? self.bodySuccessStateMargin,
+      gameMargin: gameMargin ?? self.gameMargin,
+      gameSpacing: gameSpacing ?? self.gameSpacing,
+      gameBannerMaxHeight: gameBannerMaxHeight ?? self.gameBannerMaxHeight,
+      gameProfilePictureSize:
+          gameProfilePictureSize ?? self.gameProfilePictureSize,
       gameNameTextStyle: gameNameTextStyle ?? self.gameNameTextStyle,
       gameSportNameTextStyle:
           gameSportNameTextStyle ?? self.gameSportNameTextStyle,
@@ -33,7 +46,12 @@ mixin _$GameScreenThemeExtensionMixin
   bool operator ==(Object other) {
     return other is GameScreenThemeExtension &&
         other.runtimeType == runtimeType &&
-        other.errorStateTextStyle == self.errorStateTextStyle &&
+        other.bodyErrorStateTextStyle == self.bodyErrorStateTextStyle &&
+        other.bodySuccessStateMargin == self.bodySuccessStateMargin &&
+        other.gameMargin == self.gameMargin &&
+        other.gameSpacing == self.gameSpacing &&
+        other.gameBannerMaxHeight == self.gameBannerMaxHeight &&
+        other.gameProfilePictureSize == self.gameProfilePictureSize &&
         other.gameNameTextStyle == self.gameNameTextStyle &&
         other.gameSportNameTextStyle == self.gameSportNameTextStyle;
   }
@@ -41,7 +59,12 @@ mixin _$GameScreenThemeExtensionMixin
   @override
   int get hashCode {
     return Object.hash(
-      self.errorStateTextStyle,
+      self.bodyErrorStateTextStyle,
+      self.bodySuccessStateMargin,
+      self.gameMargin,
+      self.gameSpacing,
+      self.gameBannerMaxHeight,
+      self.gameProfilePictureSize,
       self.gameNameTextStyle,
       self.gameSportNameTextStyle,
     );
@@ -50,7 +73,12 @@ mixin _$GameScreenThemeExtensionMixin
   @override
   String toString() =>
       'GameScreenThemeExtension(\n'
-      '  errorStateTextStyle: ${self.errorStateTextStyle},\n'
+      '  bodyErrorStateTextStyle: ${self.bodyErrorStateTextStyle},\n'
+      '  bodySuccessStateMargin: ${self.bodySuccessStateMargin},\n'
+      '  gameMargin: ${self.gameMargin},\n'
+      '  gameSpacing: ${self.gameSpacing},\n'
+      '  gameBannerMaxHeight: ${self.gameBannerMaxHeight},\n'
+      '  gameProfilePictureSize: ${self.gameProfilePictureSize},\n'
       '  gameNameTextStyle: ${self.gameNameTextStyle},\n'
       '  gameSportNameTextStyle: ${self.gameSportNameTextStyle},\n'
       ');';

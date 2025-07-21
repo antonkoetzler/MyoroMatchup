@@ -16,6 +16,9 @@ dependencies:
   get_it: ^8.0.3
   injectable: ^2.5.0
   faker: 2.1.0
+  flutter_localizations:
+    sdk: flutter
+  intl: any
 
 dev_dependencies:
   flutter_test:
@@ -26,5 +29,6 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
   assets:
     - assets/images/
