@@ -9,13 +9,13 @@ final class App extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const MyoroApp(
+    return MyoroApp(
       configuration: MyoroAppConfiguration(
         themeMode: ThemeMode.dark,
         themeExtensionsBuilder: createThemeExtensions,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: GameScreen(),
+        router: getIt<AppRouter>().router,
       ),
     );
   }

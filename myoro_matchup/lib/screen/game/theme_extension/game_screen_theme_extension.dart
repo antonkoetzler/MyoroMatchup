@@ -17,7 +17,9 @@ final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExten
     required this.bodyErrorStateTextStyle,
     required this.bodySuccessStateMargin,
     required this.gameMargin,
+    required this.gameBorderRadius,
     required this.gameSpacing,
+    required this.gameInfoBarPadding,
     required this.gameBannerMaxHeight,
     required this.gameProfilePictureSize,
     required this.gameNameTextStyle,
@@ -28,17 +30,21 @@ final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExten
     : bodyErrorStateTextStyle = myoroFake<TextStyle>(),
       bodySuccessStateMargin = myoroFake<EdgeInsets>(),
       gameMargin = myoroFake<EdgeInsets>(),
+      gameBorderRadius = myoroFake<BorderRadius>(),
       gameSpacing = faker.randomGenerator.decimal(scale: 20, min: 5),
+      gameInfoBarPadding = myoroFake<EdgeInsets>(),
       gameBannerMaxHeight = faker.randomGenerator.decimal(scale: 300, min: 50),
       gameProfilePictureSize = faker.randomGenerator.decimal(scale: 150, min: 10),
       gameNameTextStyle = myoroFake<TextStyle>(),
       gameSportNameTextStyle = myoroFake<TextStyle>();
 
-  GameScreenThemeExtension.builder(TextTheme textTheme)
-    : bodyErrorStateTextStyle = textTheme.headlineMedium!.withColor(MyoroColors.red1),
-      bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: 10),
-      gameMargin = const EdgeInsets.only(bottom: 10),
+  GameScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
+    : bodyErrorStateTextStyle = textTheme.headlineMedium!.withColor(colorScheme.error),
+      bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: kEdgeInsetsLength),
+      gameMargin = const EdgeInsets.only(bottom: kEdgeInsetsLength),
+      gameBorderRadius = BorderRadius.circular(kBorderRadiusLength),
       gameSpacing = 10,
+      gameInfoBarPadding = const EdgeInsets.all(kEdgeInsetsLength),
       gameBannerMaxHeight = 100,
       gameProfilePictureSize = 50,
       gameNameTextStyle = textTheme.titleMedium!,
@@ -53,8 +59,14 @@ final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExten
   /// [EdgeInsets] margin of a [Game] item.
   final EdgeInsets gameMargin;
 
+  /// [BorderRadius] of a [Game] item.
+  final BorderRadius gameBorderRadius;
+
   /// Spacing between the [Widget]s in a [Game] item.
   final double gameSpacing;
+
+  /// [EdgeInsets] of the info bar of a [Game] item.
+  final EdgeInsets gameInfoBarPadding;
 
   /// Maximum height of a [Game]'s banner.
   final double gameBannerMaxHeight;
@@ -75,7 +87,9 @@ final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExten
       bodyErrorStateTextStyle: TextStyle.lerp(bodyErrorStateTextStyle, other.bodyErrorStateTextStyle, t),
       bodySuccessStateMargin: EdgeInsets.lerp(bodySuccessStateMargin, other.bodySuccessStateMargin, t),
       gameMargin: EdgeInsets.lerp(gameMargin, other.gameMargin, t),
+      gameBorderRadius: BorderRadius.lerp(gameBorderRadius, other.gameBorderRadius, t),
       gameSpacing: lerpDouble(gameSpacing, other.gameSpacing, t),
+      gameInfoBarPadding: EdgeInsets.lerp(gameInfoBarPadding, other.gameInfoBarPadding, t),
       gameBannerMaxHeight: lerpDouble(gameBannerMaxHeight, other.gameBannerMaxHeight, t),
       gameProfilePictureSize: lerpDouble(gameProfilePictureSize, other.gameProfilePictureSize, t),
       gameNameTextStyle: TextStyle.lerp(gameNameTextStyle, other.gameNameTextStyle, t),

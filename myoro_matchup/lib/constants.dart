@@ -1,3 +1,11 @@
+import 'package:flutter/material.dart';
+
+/// Default [BorderRadius] length.
+const kBorderRadiusLength = 8.0;
+
+/// Default [EdgeInsets] length.
+const kEdgeInsetsLength = 8.0;
+
 /// List of random profile pictures (cats).
 const kTestProfilePictures = [
   'assets/images/cat1.jpg',

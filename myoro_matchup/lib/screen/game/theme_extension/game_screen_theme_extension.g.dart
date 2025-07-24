@@ -20,7 +20,9 @@ mixin _$GameScreenThemeExtensionMixin
     TextStyle? bodyErrorStateTextStyle,
     EdgeInsets? bodySuccessStateMargin,
     EdgeInsets? gameMargin,
+    BorderRadius? gameBorderRadius,
     double? gameSpacing,
+    EdgeInsets? gameInfoBarPadding,
     double? gameBannerMaxHeight,
     double? gameProfilePictureSize,
     TextStyle? gameNameTextStyle,
@@ -32,7 +34,9 @@ mixin _$GameScreenThemeExtensionMixin
       bodySuccessStateMargin:
           bodySuccessStateMargin ?? self.bodySuccessStateMargin,
       gameMargin: gameMargin ?? self.gameMargin,
+      gameBorderRadius: gameBorderRadius ?? self.gameBorderRadius,
       gameSpacing: gameSpacing ?? self.gameSpacing,
+      gameInfoBarPadding: gameInfoBarPadding ?? self.gameInfoBarPadding,
       gameBannerMaxHeight: gameBannerMaxHeight ?? self.gameBannerMaxHeight,
       gameProfilePictureSize:
           gameProfilePictureSize ?? self.gameProfilePictureSize,
@@ -49,7 +53,9 @@ mixin _$GameScreenThemeExtensionMixin
         other.bodyErrorStateTextStyle == self.bodyErrorStateTextStyle &&
         other.bodySuccessStateMargin == self.bodySuccessStateMargin &&
         other.gameMargin == self.gameMargin &&
+        other.gameBorderRadius == self.gameBorderRadius &&
         other.gameSpacing == self.gameSpacing &&
+        other.gameInfoBarPadding == self.gameInfoBarPadding &&
         other.gameBannerMaxHeight == self.gameBannerMaxHeight &&
         other.gameProfilePictureSize == self.gameProfilePictureSize &&
         other.gameNameTextStyle == self.gameNameTextStyle &&
@@ -62,7 +68,9 @@ mixin _$GameScreenThemeExtensionMixin
       self.bodyErrorStateTextStyle,
       self.bodySuccessStateMargin,
       self.gameMargin,
+      self.gameBorderRadius,
       self.gameSpacing,
+      self.gameInfoBarPadding,
       self.gameBannerMaxHeight,
       self.gameProfilePictureSize,
       self.gameNameTextStyle,
@@ -76,7 +84,9 @@ mixin _$GameScreenThemeExtensionMixin
       '  bodyErrorStateTextStyle: ${self.bodyErrorStateTextStyle},\n'
       '  bodySuccessStateMargin: ${self.bodySuccessStateMargin},\n'
       '  gameMargin: ${self.gameMargin},\n'
+      '  gameBorderRadius: ${self.gameBorderRadius},\n'
       '  gameSpacing: ${self.gameSpacing},\n'
+      '  gameInfoBarPadding: ${self.gameInfoBarPadding},\n'
       '  gameBannerMaxHeight: ${self.gameBannerMaxHeight},\n'
       '  gameProfilePictureSize: ${self.gameProfilePictureSize},\n'
       '  gameNameTextStyle: ${self.gameNameTextStyle},\n'
