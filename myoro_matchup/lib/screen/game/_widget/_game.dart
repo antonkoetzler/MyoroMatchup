@@ -27,6 +27,7 @@ final class _Game extends StatelessWidget {
                 width: double.infinity,
                 child: _game.banner != null
                     ? Image.asset(_game.banner!, fit: BoxFit.cover)
+                    // TODO
                     : Container(color: Colors.pink.shade200),
               ),
               Padding(
@@ -66,6 +67,7 @@ final class _Game extends StatelessWidget {
                                       width: themeExtension.gameProfilePictureSize,
                                       fit: BoxFit.contain,
                                     )
+                                  // TODO
                                   : Container(
                                       width: themeExtension.gameProfilePictureSize,
                                       height: themeExtension.gameProfilePictureSize,
