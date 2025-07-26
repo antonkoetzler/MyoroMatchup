@@ -21,11 +21,26 @@ mixin _$LoginSignupScreenThemeExtensionMixin
     EdgeInsets? bodyPadding,
     double? bodySpacing,
     double? inputsSpacing,
+    TextStyle? buttonTextStyle,
+    double? buttonsSpacing,
+    TextStyle? formTypeSwitcherButtonTextStyle,
+    Color? formTypeSwitcherButtonIdleColor,
+    Color? formTypeSwitcherButtonTapColor,
   }) {
     return LoginSignupScreenThemeExtension(
       bodyPadding: bodyPadding ?? self.bodyPadding,
       bodySpacing: bodySpacing ?? self.bodySpacing,
       inputsSpacing: inputsSpacing ?? self.inputsSpacing,
+      buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
+      buttonsSpacing: buttonsSpacing ?? self.buttonsSpacing,
+      formTypeSwitcherButtonTextStyle:
+          formTypeSwitcherButtonTextStyle ??
+          self.formTypeSwitcherButtonTextStyle,
+      formTypeSwitcherButtonIdleColor:
+          formTypeSwitcherButtonIdleColor ??
+          self.formTypeSwitcherButtonIdleColor,
+      formTypeSwitcherButtonTapColor:
+          formTypeSwitcherButtonTapColor ?? self.formTypeSwitcherButtonTapColor,
     );
   }
 
@@ -35,12 +50,29 @@ mixin _$LoginSignupScreenThemeExtensionMixin
         other.runtimeType == runtimeType &&
         other.bodyPadding == self.bodyPadding &&
         other.bodySpacing == self.bodySpacing &&
-        other.inputsSpacing == self.inputsSpacing;
+        other.inputsSpacing == self.inputsSpacing &&
+        other.buttonTextStyle == self.buttonTextStyle &&
+        other.buttonsSpacing == self.buttonsSpacing &&
+        other.formTypeSwitcherButtonTextStyle ==
+            self.formTypeSwitcherButtonTextStyle &&
+        other.formTypeSwitcherButtonIdleColor ==
+            self.formTypeSwitcherButtonIdleColor &&
+        other.formTypeSwitcherButtonTapColor ==
+            self.formTypeSwitcherButtonTapColor;
   }
 
   @override
   int get hashCode {
-    return Object.hash(self.bodyPadding, self.bodySpacing, self.inputsSpacing);
+    return Object.hash(
+      self.bodyPadding,
+      self.bodySpacing,
+      self.inputsSpacing,
+      self.buttonTextStyle,
+      self.buttonsSpacing,
+      self.formTypeSwitcherButtonTextStyle,
+      self.formTypeSwitcherButtonIdleColor,
+      self.formTypeSwitcherButtonTapColor,
+    );
   }
 
   @override
@@ -49,5 +81,10 @@ mixin _$LoginSignupScreenThemeExtensionMixin
       '  bodyPadding: ${self.bodyPadding},\n'
       '  bodySpacing: ${self.bodySpacing},\n'
       '  inputsSpacing: ${self.inputsSpacing},\n'
+      '  buttonTextStyle: ${self.buttonTextStyle},\n'
+      '  buttonsSpacing: ${self.buttonsSpacing},\n'
+      '  formTypeSwitcherButtonTextStyle: ${self.formTypeSwitcherButtonTextStyle},\n'
+      '  formTypeSwitcherButtonIdleColor: ${self.formTypeSwitcherButtonIdleColor},\n'
+      '  formTypeSwitcherButtonTapColor: ${self.formTypeSwitcherButtonTapColor},\n'
       ');';
 }

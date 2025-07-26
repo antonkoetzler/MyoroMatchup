@@ -23,6 +23,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'Contraseña';
 
   @override
+  String get loginSignupScreenLoginLoginButton => 'Iniciar sesión';
+
+  @override
+  String get loginSignupScreenLoginForgotPasswordButton =>
+      '¿Olvidaste tu contraseña?';
+
+  @override
   String get loginSignupScreenSignupNameInputPlaceholder => 'Nombre';
 
   @override
@@ -38,4 +45,15 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
       'Contraseña repetida';
+
+  @override
+  String get loginSignupScreenSignupSignupButton => 'Registrarse';
+
+  @override
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      '¿Nuevo en MyoroMatchup? ¡Regístrate!';
+
+  @override
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      '¿Ya estás registrado? ¡Inicia sesión!';
 }

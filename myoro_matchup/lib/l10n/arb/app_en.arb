@@ -4,9 +4,14 @@
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Username/email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Password",
+  "loginSignupScreenLoginLoginButton": "Login",
+  "loginSignupScreenLoginForgotPasswordButton": "Forward password?",
   "loginSignupScreenSignupNameInputPlaceholder": "Name",
   "loginSignupScreenSignupUsernameInputPlaceholder": "Username",
   "loginSignupScreenSignupEmailInputPlaceholder": "Email",
   "loginSignupScreenSignupPasswordInputPlaceholder": "Password",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Repeated password"
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Repeated password",
+  "loginSignupScreenSignupSignupButton": "Signup",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "New to MyoroMatchup? Signup!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "New to MyoroMatchup? Login!"
 }

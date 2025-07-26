@@ -17,4 +17,12 @@ final class LoginSignupScreenViewModel {
   void dispose() {
     _state.dispose();
   }
+
+  /// Updates the [LoginSignupScreenState.formTypeNotifier].
+  void formTypeSwitcherButtonOnTapUp() {
+    _state.formTypeNotifier.value = switch (_state.formTypeNotifier.value) {
+      LoginSignupScreenEnum.login => LoginSignupScreenEnum.signup,
+      LoginSignupScreenEnum.signup => LoginSignupScreenEnum.login,
+    };
+  }
 }

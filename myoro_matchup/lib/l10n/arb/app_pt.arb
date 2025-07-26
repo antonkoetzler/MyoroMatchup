@@ -4,9 +4,14 @@
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nome de usuário ou email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Senha",
+  "loginSignupScreenLoginLoginButton": "Entrar",
+  "loginSignupScreenLoginForgotPasswordButton": "Esqueceu sua senha?",
   "loginSignupScreenSignupNameInputPlaceholder": "Nome",
   "loginSignupScreenSignupUsernameInputPlaceholder": "Nome de usuário",
   "loginSignupScreenSignupEmailInputPlaceholder": "Email",
   "loginSignupScreenSignupPasswordInputPlaceholder": "Senha",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Senha repetida"
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Senha repetida",
+  "loginSignupScreenSignupSignupButton": "Cadastrar-se",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Novo no MyoroMatchup? Cadastre-se!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Já tem cadastro? Entre"
 }

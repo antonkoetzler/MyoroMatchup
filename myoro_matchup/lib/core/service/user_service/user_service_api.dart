@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:faker/faker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
@@ -41,6 +40,6 @@ final class UserServiceApi implements UserService {
   @override
   Future<bool> isLoggedIn() async {
     // TODO: Mocked.
-    return faker.randomGenerator.boolean();
+    return false;
   }
 }

@@ -23,6 +23,13 @@ class AppLocalizationsPt extends AppLocalizations {
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'Senha';
 
   @override
+  String get loginSignupScreenLoginLoginButton => 'Entrar';
+
+  @override
+  String get loginSignupScreenLoginForgotPasswordButton =>
+      'Esqueceu sua senha?';
+
+  @override
   String get loginSignupScreenSignupNameInputPlaceholder => 'Nome';
 
   @override
@@ -38,4 +45,15 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
       'Senha repetida';
+
+  @override
+  String get loginSignupScreenSignupSignupButton => 'Cadastrar-se';
+
+  @override
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'Novo no MyoroMatchup? Cadastre-se!';
+
+  @override
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      'Já tem cadastro? Entre';
 }

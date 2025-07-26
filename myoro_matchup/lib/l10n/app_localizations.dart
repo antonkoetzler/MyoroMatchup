@@ -124,6 +124,18 @@ abstract class AppLocalizations {
   /// **'Password'**
   String get loginSignupScreenLoginPasswordInputPlaceholder;
 
+  /// No description provided for @loginSignupScreenLoginLoginButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Login'**
+  String get loginSignupScreenLoginLoginButton;
+
+  /// No description provided for @loginSignupScreenLoginForgotPasswordButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Forward password?'**
+  String get loginSignupScreenLoginForgotPasswordButton;
+
   /// No description provided for @loginSignupScreenSignupNameInputPlaceholder.
   ///
   /// In en, this message translates to:
@@ -153,6 +165,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Repeated password'**
   String get loginSignupScreenSignupPasswordRepeatInputPlaceholder;
+
+  /// No description provided for @loginSignupScreenSignupSignupButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Signup'**
+  String get loginSignupScreenSignupSignupButton;
+
+  /// No description provided for @loginSignupScreenFormTypeSwitcherButtonLoginText.
+  ///
+  /// In en, this message translates to:
+  /// **'New to MyoroMatchup? Signup!'**
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText;
+
+  /// No description provided for @loginSignupScreenFormTypeSwitcherButtonSignupText.
+  ///
+  /// In en, this message translates to:
+  /// **'New to MyoroMatchup? Login!'**
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText;
 }
 
 class _AppLocalizationsDelegate

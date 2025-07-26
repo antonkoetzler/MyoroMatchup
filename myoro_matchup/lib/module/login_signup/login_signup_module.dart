@@ -8,6 +8,6 @@ final class LoginSignupModule extends Module {
   LoginSignupModule()
     : super(
         route: GoRoute(path: loginSignupScreenRoute, builder: (_, _) => const LoginSignupScreen()),
-        themeExtensionsBuilder: (_, _, _) => const [LoginSignupScreenThemeExtension.builder()],
+        themeExtensionsBuilder: (_, _, textTheme) => [LoginSignupScreenThemeExtension.builder(textTheme)],
       );
 }

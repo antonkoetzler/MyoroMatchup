@@ -12,23 +12,31 @@ final class _Body extends StatelessWidget {
     final state = viewModel.state;
     final formTypeNotifier = state.formTypeNotifier;
 
-    // TODO: Make this scrollable.
-    return Padding(
-      padding: themeExtension.bodyPadding,
-      child: ValueListenableBuilder(
-        valueListenable: formTypeNotifier,
-        builder: (_, formType, _) {
-          return Column(
-            spacing: themeExtension.bodySpacing,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const _Logo(),
-              Flexible(child: _Inputs(formType)),
-              const _Buttons(),
-            ],
-          );
-        },
-      ),
+    return LayoutBuilder(
+      builder: (_, constraints) {
+        return SingleChildScrollView(
+          child: Container(
+            constraints: BoxConstraints(minHeight: constraints.maxHeight),
+            padding: themeExtension.bodyPadding,
+            child: ValueListenableBuilder(
+              valueListenable: formTypeNotifier,
+              builder: (_, formType, _) {
+                return Column(
+                  spacing: themeExtension.bodySpacing,
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const _Logo(),
+                    Flexible(child: _Inputs(formType)),
+                    _Buttons(formType),
+                    _FormTypeSwitcherButton(formType),
+                  ],
+                );
+              },
+            ),
+          ),
+        );
+      },
     );
   }
 }
