@@ -41,7 +41,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'Repeated password';
+      'Repeat password';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Signup';

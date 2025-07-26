@@ -44,7 +44,7 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'Senha repetida';
+      'Repetir senha';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Cadastrar-se';

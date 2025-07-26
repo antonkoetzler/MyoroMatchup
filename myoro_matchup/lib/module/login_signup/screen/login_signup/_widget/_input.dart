@@ -8,9 +8,15 @@ final class _Input extends StatelessWidget {
   final TextEditingController controller;
 
   @override
-  Widget build(_) {
+  Widget build(context) {
+    final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
+
     return MyoroInput(
-      configuration: MyoroInputConfiguration(placeholder: placeholder, controller: controller),
+      configuration: MyoroInputConfiguration(
+        placeholder: placeholder,
+        controller: controller,
+        inputTextStyle: themeExtension.inputTextStyle,
+      ),
     );
   }
 }

@@ -44,13 +44,22 @@ final class _Inputs extends StatelessWidget {
             placeholder: localization.loginSignupScreenSignupEmailInputPlaceholder,
             controller: signupState.emailController,
           ),
-          _Input(
-            placeholder: localization.loginSignupScreenSignupPasswordInputPlaceholder,
-            controller: signupState.passwordController,
-          ),
-          _Input(
-            placeholder: localization.loginSignupScreenSignupPasswordRepeatInputPlaceholder,
-            controller: signupState.passwordRepeatController,
+          Row(
+            spacing: themeExtension.inputsSpacing,
+            children: [
+              Expanded(
+                child: _Input(
+                  placeholder: localization.loginSignupScreenSignupPasswordInputPlaceholder,
+                  controller: signupState.passwordController,
+                ),
+              ),
+              Expanded(
+                child: _Input(
+                  placeholder: localization.loginSignupScreenSignupPasswordRepeatInputPlaceholder,
+                  controller: signupState.passwordRepeatController,
+                ),
+              ),
+            ],
           ),
         ],
       },

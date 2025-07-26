@@ -17,6 +17,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
     required this.bodyPadding,
     required this.bodySpacing,
     required this.inputsSpacing,
+    required this.inputTextStyle,
     required this.buttonTextStyle,
     required this.buttonsSpacing,
     required this.formTypeSwitcherButtonTextStyle,
@@ -28,6 +29,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
     : bodyPadding = myoroFake<EdgeInsets>(),
       bodySpacing = faker.randomGenerator.decimal(scale: 20),
       inputsSpacing = faker.randomGenerator.decimal(scale: 20),
+      inputTextStyle = myoroFake<TextStyle>(),
       buttonTextStyle = myoroFake<TextStyle>(),
       buttonsSpacing = faker.randomGenerator.decimal(scale: 20),
       formTypeSwitcherButtonTextStyle = myoroFake<TextStyle>(),
@@ -38,6 +40,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
     : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength * 2),
       bodySpacing = kSpacing * 4,
       inputsSpacing = kSpacing * 2,
+      inputTextStyle = textTheme.bodySmall!,
       buttonTextStyle = textTheme.bodySmall!,
       buttonsSpacing = kSpacing * 2,
       formTypeSwitcherButtonTextStyle = textTheme.headlineSmall!,
@@ -52,6 +55,9 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
 
   /// Spacing between the [MyoroInput]s.
   final double inputsSpacing;
+
+  /// [MyoroInputConfiguration.inputTextStyle] of an input of [LoginSignupScreen].
+  final TextStyle inputTextStyle;
 
   /// [TextStyle] of a generic button of [LoginSignupScreen].
   final TextStyle buttonTextStyle;
@@ -75,6 +81,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       bodyPadding: EdgeInsets.lerp(bodyPadding, other.bodyPadding, t),
       bodySpacing: lerpDouble(bodySpacing, other.bodySpacing, t),
       inputsSpacing: lerpDouble(inputsSpacing, other.inputsSpacing, t),
+      inputTextStyle: TextStyle.lerp(inputTextStyle, other.inputTextStyle, t),
       buttonTextStyle: TextStyle.lerp(buttonTextStyle, other.buttonTextStyle, t),
       buttonsSpacing: lerpDouble(buttonsSpacing, other.buttonsSpacing, t),
       formTypeSwitcherButtonTextStyle: TextStyle.lerp(

@@ -26,6 +26,7 @@ final class _FormTypeSwitcherButton extends StatelessWidget {
           MyoroTapStatusEnum.hover => themeExtension.formTypeSwitcherButtonIdleColor,
           MyoroTapStatusEnum.tap => themeExtension.formTypeSwitcherButtonTapColor,
         },
+        backgroundColorBuilder: (_) => MyoroColors.transparent,
         onTapUp: (_) => viewModel.formTypeSwitcherButtonOnTapUp(),
       ),
     );

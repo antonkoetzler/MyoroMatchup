@@ -10,7 +10,7 @@
   "loginSignupScreenSignupUsernameInputPlaceholder": "Username",
   "loginSignupScreenSignupEmailInputPlaceholder": "Email",
   "loginSignupScreenSignupPasswordInputPlaceholder": "Password",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Repeated password",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Repeat password",
   "loginSignupScreenSignupSignupButton": "Signup",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "New to MyoroMatchup? Signup!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "New to MyoroMatchup? Login!"

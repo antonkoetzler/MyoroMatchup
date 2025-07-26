@@ -21,6 +21,7 @@ mixin _$LoginSignupScreenThemeExtensionMixin
     EdgeInsets? bodyPadding,
     double? bodySpacing,
     double? inputsSpacing,
+    TextStyle? inputTextStyle,
     TextStyle? buttonTextStyle,
     double? buttonsSpacing,
     TextStyle? formTypeSwitcherButtonTextStyle,
@@ -31,6 +32,7 @@ mixin _$LoginSignupScreenThemeExtensionMixin
       bodyPadding: bodyPadding ?? self.bodyPadding,
       bodySpacing: bodySpacing ?? self.bodySpacing,
       inputsSpacing: inputsSpacing ?? self.inputsSpacing,
+      inputTextStyle: inputTextStyle ?? self.inputTextStyle,
       buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
       buttonsSpacing: buttonsSpacing ?? self.buttonsSpacing,
       formTypeSwitcherButtonTextStyle:
@@ -51,6 +53,7 @@ mixin _$LoginSignupScreenThemeExtensionMixin
         other.bodyPadding == self.bodyPadding &&
         other.bodySpacing == self.bodySpacing &&
         other.inputsSpacing == self.inputsSpacing &&
+        other.inputTextStyle == self.inputTextStyle &&
         other.buttonTextStyle == self.buttonTextStyle &&
         other.buttonsSpacing == self.buttonsSpacing &&
         other.formTypeSwitcherButtonTextStyle ==
@@ -67,6 +70,7 @@ mixin _$LoginSignupScreenThemeExtensionMixin
       self.bodyPadding,
       self.bodySpacing,
       self.inputsSpacing,
+      self.inputTextStyle,
       self.buttonTextStyle,
       self.buttonsSpacing,
       self.formTypeSwitcherButtonTextStyle,
@@ -81,6 +85,7 @@ mixin _$LoginSignupScreenThemeExtensionMixin
       '  bodyPadding: ${self.bodyPadding},\n'
       '  bodySpacing: ${self.bodySpacing},\n'
       '  inputsSpacing: ${self.inputsSpacing},\n'
+      '  inputTextStyle: ${self.inputTextStyle},\n'
       '  buttonTextStyle: ${self.buttonTextStyle},\n'
       '  buttonsSpacing: ${self.buttonsSpacing},\n'
       '  formTypeSwitcherButtonTextStyle: ${self.formTypeSwitcherButtonTextStyle},\n'

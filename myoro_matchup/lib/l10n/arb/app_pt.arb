@@ -10,7 +10,7 @@
   "loginSignupScreenSignupUsernameInputPlaceholder": "Nome de usuário",
   "loginSignupScreenSignupEmailInputPlaceholder": "Email",
   "loginSignupScreenSignupPasswordInputPlaceholder": "Senha",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Senha repetida",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Repetir senha",
   "loginSignupScreenSignupSignupButton": "Cadastrar-se",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "Novo no MyoroMatchup? Cadastre-se!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "Já tem cadastro? Entre"
