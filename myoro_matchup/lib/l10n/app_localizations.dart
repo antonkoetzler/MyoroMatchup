@@ -100,11 +100,59 @@ abstract class AppLocalizations {
     Locale('pt'),
   ];
 
+  /// No description provided for @gameScreenAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'MyoroMatchup'**
+  String get gameScreenAppBarTitle;
+
   /// No description provided for @gameScreenBodySuccessStateEmptyMessage.
   ///
   /// In en, this message translates to:
   /// **'No games found!'**
   String get gameScreenBodySuccessStateEmptyMessage;
+
+  /// No description provided for @loginSignupScreenLoginUsernameEmailInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Username/email'**
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder;
+
+  /// No description provided for @loginSignupScreenLoginPasswordInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get loginSignupScreenLoginPasswordInputPlaceholder;
+
+  /// No description provided for @loginSignupScreenSignupNameInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get loginSignupScreenSignupNameInputPlaceholder;
+
+  /// No description provided for @loginSignupScreenSignupUsernameInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Username'**
+  String get loginSignupScreenSignupUsernameInputPlaceholder;
+
+  /// No description provided for @loginSignupScreenSignupEmailInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Email'**
+  String get loginSignupScreenSignupEmailInputPlaceholder;
+
+  /// No description provided for @loginSignupScreenSignupPasswordInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Password'**
+  String get loginSignupScreenSignupPasswordInputPlaceholder;
+
+  /// No description provided for @loginSignupScreenSignupPasswordRepeatInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Repeated password'**
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder;
 }
 
 class _AppLocalizationsDelegate

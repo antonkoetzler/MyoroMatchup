@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+/// Spacing to be used as a multiplier (i.e. kSpacing * 3).
+const kSpacing = 4.0;
+
 /// Default [BorderRadius] length.
 const kBorderRadiusLength = 8.0;
 

@@ -9,6 +9,33 @@ class AppLocalizationsEs extends AppLocalizations {
   AppLocalizationsEs([String locale = 'es']) : super(locale);
 
   @override
+  String get gameScreenAppBarTitle => 'MyoroMatchup';
+
+  @override
   String get gameScreenBodySuccessStateEmptyMessage =>
       '¡No se encontraron juegos!';
+
+  @override
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+      'Nombre de usuario o email';
+
+  @override
+  String get loginSignupScreenLoginPasswordInputPlaceholder => 'Contraseña';
+
+  @override
+  String get loginSignupScreenSignupNameInputPlaceholder => 'Nombre';
+
+  @override
+  String get loginSignupScreenSignupUsernameInputPlaceholder =>
+      'Nombre de usuario';
+
+  @override
+  String get loginSignupScreenSignupEmailInputPlaceholder => 'Email';
+
+  @override
+  String get loginSignupScreenSignupPasswordInputPlaceholder => 'Contraseña';
+
+  @override
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
+      'Contraseña repetida';
 }

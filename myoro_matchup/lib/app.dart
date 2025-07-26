@@ -12,7 +12,7 @@ final class App extends StatelessWidget {
     return MyoroApp(
       configuration: MyoroAppConfiguration(
         themeMode: ThemeMode.dark,
-        themeExtensionsBuilder: createThemeExtensions,
+        themeExtensionsBuilder: getIt<ModulesController>().themeExtensionsBuilder,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         router: getIt<AppRouter>().router,

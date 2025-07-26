@@ -1,0 +1,12 @@
+{
+  "gameScreenAppBarTitle": "MyoroMatchup",
+  "gameScreenBodySuccessStateEmptyMessage": "No games found!",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Username/email",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "Password",
+  "loginSignupScreenSignupNameInputPlaceholder": "Name",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "Username",
+  "loginSignupScreenSignupEmailInputPlaceholder": "Email",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "Password",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Repeated password"
+}
