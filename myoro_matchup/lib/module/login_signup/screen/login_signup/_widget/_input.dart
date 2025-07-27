@@ -2,10 +2,9 @@ part of '../login_signup_screen.dart';
 
 /// An input apart of [_Inputs].
 final class _Input extends StatelessWidget {
-  const _Input({required this.placeholder, required this.validation, required this.controller});
+  const _Input({required this.placeholder, required this.controller});
 
   final String placeholder;
-  final MyoroInputValidation validation;
   final TextEditingController controller;
 
   @override
@@ -17,7 +16,6 @@ final class _Input extends StatelessWidget {
         placeholder: placeholder,
         controller: controller,
         inputTextStyle: themeExtension.inputTextStyle,
-        validation: validation,
       ),
     );
   }

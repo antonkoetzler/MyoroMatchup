@@ -15,10 +15,10 @@ import 'package:myoro_matchup/core/module/modules_controller.dart' as _i264;
 import 'package:myoro_matchup/core/router/app_router.dart' as _i854;
 import 'package:myoro_matchup/core/service/user_service/user_service_api.dart'
     as _i614;
-import 'package:myoro_matchup/module/game/screen/game/service/game/game_service_api.dart'
-    as _i358;
-import 'package:myoro_matchup/module/game/screen/game/view_model/game_screen_view_model.dart'
-    as _i172;
+import 'package:myoro_matchup/module/game/domain/service/game/game_service_api.dart'
+    as _i859;
+import 'package:myoro_matchup/module/game/screen/listing/view_model/game_listing_screen_view_model.dart'
+    as _i512;
 import 'package:myoro_matchup/module/login_signup/screen/login_signup/view_model/login_signup_screen_view_model.dart'
     as _i205;
 import 'package:myoro_matchup/myoro_matchup.dart' as _i460;
@@ -41,9 +41,9 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.UserService>(),
       ),
     );
-    gh.singleton<_i460.GameService>(() => _i358.GameServiceApi());
-    gh.factory<_i172.GameScreenViewModel>(
-      () => _i172.GameScreenViewModel(gh<_i460.GameService>()),
+    gh.singleton<_i460.GameService>(() => _i859.GameServiceApi());
+    gh.factory<_i512.GameListingScreenViewModel>(
+      () => _i512.GameListingScreenViewModel(gh<_i460.GameService>()),
     );
     return this;
   }

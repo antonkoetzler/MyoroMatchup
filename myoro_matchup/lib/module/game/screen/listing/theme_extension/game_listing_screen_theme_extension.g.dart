@@ -1,23 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'game_screen_theme_extension.dart';
+part of 'game_listing_screen_theme_extension.dart';
 
 // **************************************************************************
 // MyoroThemeExtensionGenerator
 // **************************************************************************
 
-/// Apply this mixin to [GameScreenThemeExtension] once the code is generated.
+/// Apply this mixin to [GameListingScreenThemeExtension] once the code is generated.
 ///
 /// ```dart
-/// class GameScreenThemeExtension with _$GameScreenThemeExtensionMixin {}
+/// class GameListingScreenThemeExtension with _$GameListingScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameScreenThemeExtensionMixin
-    on ThemeExtension<GameScreenThemeExtension> {
-  GameScreenThemeExtension get self => this as GameScreenThemeExtension;
+mixin _$GameListingScreenThemeExtensionMixin
+    on ThemeExtension<GameListingScreenThemeExtension> {
+  GameListingScreenThemeExtension get self =>
+      this as GameListingScreenThemeExtension;
 
   @override
-  GameScreenThemeExtension copyWith({
+  GameListingScreenThemeExtension copyWith({
     TextStyle? appBarTitleTextStyle,
+    MyoroIconConfiguration? menuButtonIconConfiguration,
     TextStyle? bodyErrorStateTextStyle,
     EdgeInsets? bodySuccessStateMargin,
     EdgeInsets? gameMargin,
@@ -29,8 +31,10 @@ mixin _$GameScreenThemeExtensionMixin
     TextStyle? gameNameTextStyle,
     TextStyle? gameSportNameTextStyle,
   }) {
-    return GameScreenThemeExtension(
+    return GameListingScreenThemeExtension(
       appBarTitleTextStyle: appBarTitleTextStyle ?? self.appBarTitleTextStyle,
+      menuButtonIconConfiguration:
+          menuButtonIconConfiguration ?? self.menuButtonIconConfiguration,
       bodyErrorStateTextStyle:
           bodyErrorStateTextStyle ?? self.bodyErrorStateTextStyle,
       bodySuccessStateMargin:
@@ -50,9 +54,10 @@ mixin _$GameScreenThemeExtensionMixin
 
   @override
   bool operator ==(Object other) {
-    return other is GameScreenThemeExtension &&
+    return other is GameListingScreenThemeExtension &&
         other.runtimeType == runtimeType &&
         other.appBarTitleTextStyle == self.appBarTitleTextStyle &&
+        other.menuButtonIconConfiguration == self.menuButtonIconConfiguration &&
         other.bodyErrorStateTextStyle == self.bodyErrorStateTextStyle &&
         other.bodySuccessStateMargin == self.bodySuccessStateMargin &&
         other.gameMargin == self.gameMargin &&
@@ -69,6 +74,7 @@ mixin _$GameScreenThemeExtensionMixin
   int get hashCode {
     return Object.hash(
       self.appBarTitleTextStyle,
+      self.menuButtonIconConfiguration,
       self.bodyErrorStateTextStyle,
       self.bodySuccessStateMargin,
       self.gameMargin,
@@ -84,8 +90,9 @@ mixin _$GameScreenThemeExtensionMixin
 
   @override
   String toString() =>
-      'GameScreenThemeExtension(\n'
+      'GameListingScreenThemeExtension(\n'
       '  appBarTitleTextStyle: ${self.appBarTitleTextStyle},\n'
+      '  menuButtonIconConfiguration: ${self.menuButtonIconConfiguration},\n'
       '  bodyErrorStateTextStyle: ${self.bodyErrorStateTextStyle},\n'
       '  bodySuccessStateMargin: ${self.bodySuccessStateMargin},\n'
       '  gameMargin: ${self.gameMargin},\n'

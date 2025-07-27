@@ -37,7 +37,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       formTypeSwitcherButtonTapColor = myoroFake<Color>();
 
   LoginSignupScreenThemeExtension.builder(TextTheme textTheme)
-    : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength * 2),
+    : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength * 1.5),
       bodySpacing = kSpacing * 4,
       inputsSpacing = kSpacing * 2,
       inputTextStyle = textTheme.bodySmall!,

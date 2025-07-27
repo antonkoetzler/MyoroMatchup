@@ -6,15 +6,16 @@ import 'package:myoro_flutter_annotations/myoro_flutter_annotations.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
-part 'game_screen_theme_extension.g.dart';
+part 'game_listing_screen_theme_extension.g.dart';
 
 /// [ThemeExtension] of [GameScreen].
 @immutable
 @myoroThemeExtension
-final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExtension>
-    with _$GameScreenThemeExtensionMixin {
-  const GameScreenThemeExtension({
+final class GameListingScreenThemeExtension extends ThemeExtension<GameListingScreenThemeExtension>
+    with _$GameListingScreenThemeExtensionMixin {
+  const GameListingScreenThemeExtension({
     required this.appBarTitleTextStyle,
+    required this.menuButtonIconConfiguration,
     required this.bodyErrorStateTextStyle,
     required this.bodySuccessStateMargin,
     required this.gameMargin,
@@ -27,8 +28,9 @@ final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExten
     required this.gameSportNameTextStyle,
   });
 
-  GameScreenThemeExtension.fake()
+  GameListingScreenThemeExtension.fake()
     : appBarTitleTextStyle = myoroFake<TextStyle>(),
+      menuButtonIconConfiguration = MyoroIconConfiguration.fake(),
       bodyErrorStateTextStyle = myoroFake<TextStyle>(),
       bodySuccessStateMargin = myoroFake<EdgeInsets>(),
       gameMargin = myoroFake<EdgeInsets>(),
@@ -40,8 +42,9 @@ final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExten
       gameNameTextStyle = myoroFake<TextStyle>(),
       gameSportNameTextStyle = myoroFake<TextStyle>();
 
-  GameScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
+  GameListingScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
     : appBarTitleTextStyle = textTheme.titleMedium!,
+      menuButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.menu, size: kSpacing * 6),
       bodyErrorStateTextStyle = textTheme.headlineMedium!.withColor(colorScheme.error),
       bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: kEdgeInsetsLength),
       gameMargin = const EdgeInsets.only(bottom: kEdgeInsetsLength),
@@ -55,6 +58,9 @@ final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExten
 
   /// [TextStyle] of the title in the app bar.
   final TextStyle appBarTitleTextStyle;
+
+  /// [MyoroIconConfiguration] of [GameScreen]'s menu button in the app bar.
+  final MyoroIconConfiguration menuButtonIconConfiguration;
 
   /// [TextStyle] of the error message text.
   final TextStyle bodyErrorStateTextStyle;
@@ -87,10 +93,15 @@ final class GameScreenThemeExtension extends ThemeExtension<GameScreenThemeExten
   final TextStyle gameSportNameTextStyle;
 
   @override
-  GameScreenThemeExtension lerp(covariant ThemeExtension<GameScreenThemeExtension>? other, double t) {
-    if (other is! GameScreenThemeExtension) return this;
+  GameListingScreenThemeExtension lerp(covariant ThemeExtension<GameListingScreenThemeExtension>? other, double t) {
+    if (other is! GameListingScreenThemeExtension) return this;
     return copyWith(
       appBarTitleTextStyle: TextStyle.lerp(appBarTitleTextStyle, other.appBarTitleTextStyle, t),
+      menuButtonIconConfiguration: MyoroIconConfiguration.lerp(
+        menuButtonIconConfiguration,
+        other.menuButtonIconConfiguration,
+        t,
+      ),
       bodyErrorStateTextStyle: TextStyle.lerp(bodyErrorStateTextStyle, other.bodyErrorStateTextStyle, t),
       bodySuccessStateMargin: EdgeInsets.lerp(bodySuccessStateMargin, other.bodySuccessStateMargin, t),
       gameMargin: EdgeInsets.lerp(gameMargin, other.gameMargin, t),

@@ -1,4 +1,4 @@
-part of '../game_screen.dart';
+part of '../game_listing_screen.dart';
 
 /// [MyoroRequestEnum.error] state of [_Body].
 final class _BodyErrorState extends StatelessWidget {
@@ -8,7 +8,7 @@ final class _BodyErrorState extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final themeExtension = context.resolveThemeExtension<GameScreenThemeExtension>();
+    final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
     return Center(child: Text(_message, style: themeExtension.bodyErrorStateTextStyle));
   }
 }

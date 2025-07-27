@@ -1,4 +1,4 @@
-part of '../game_screen.dart';
+part of '../game_listing_screen.dart';
 
 /// Item of [_BodySuccessState].
 final class _Game extends StatelessWidget {
@@ -9,7 +9,7 @@ final class _Game extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final themeExtension = context.resolveThemeExtension<GameScreenThemeExtension>();
+    final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
 
     return Padding(
       padding: themeExtension.gameMargin.copyWith(top: _isFirstGame ? themeExtension.gameMargin.bottom : null),
@@ -17,6 +17,7 @@ final class _Game extends StatelessWidget {
         configuration: MyoroButtonConfiguration(
           borderRadius: themeExtension.gameBorderRadius,
           borderBuilder: (_) => MyoroButtonStyleEnum.border(context),
+          onTapUp: (_) => AppRouter.push(GameModule.gameDetailsScreenRoute),
         ),
         builder: (_, _) {
           return Column(

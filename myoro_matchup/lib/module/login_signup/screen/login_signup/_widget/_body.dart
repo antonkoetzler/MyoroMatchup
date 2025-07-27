@@ -24,7 +24,7 @@ final class _Body extends StatelessWidget {
               builder: (_, formType, _) {
                 return MyoroForm<int>(
                   controller: formController,
-                  builder: (_, _) {
+                  builder: (request, _) {
                     return Column(
                       spacing: themeExtension.bodySpacing,
                       mainAxisSize: MainAxisSize.min,
@@ -32,7 +32,7 @@ final class _Body extends StatelessWidget {
                       children: [
                         const _Logo(),
                         Flexible(child: _Inputs(formType)),
-                        _Buttons(formType),
+                        if (request.status.isLoading) const MyoroCircularLoader() else _Buttons(formType),
                         _FormTypeSwitcherButton(formType),
                       ],
                     );

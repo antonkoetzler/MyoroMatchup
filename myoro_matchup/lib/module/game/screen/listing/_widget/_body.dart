@@ -1,12 +1,12 @@
-part of '../game_screen.dart';
+part of '../game_listing_screen.dart';
 
-/// Body of [GameScreen].
+/// Body of [GameListingScreen].
 final class _Body extends StatelessWidget {
   const _Body();
 
   @override
   Widget build(context) {
-    final viewModel = context.read<GameScreenViewModel>();
+    final viewModel = context.read<GameListingScreenViewModel>();
 
     return ValueListenableBuilder(
       valueListenable: viewModel.state.gamesRequestNotifier,

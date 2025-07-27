@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:faker/faker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
@@ -7,9 +8,10 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 @Singleton(as: UserService)
 final class UserServiceApi implements UserService {
   @override
-  Future<int> create(User model) {
-    // TODO: implement create
-    throw UnimplementedError();
+  Future<int> create(User model) async {
+    // TODO: Mocked.
+    await Future.delayed(const Duration(seconds: 2));
+    return faker.randomGenerator.integer(9999);
   }
 
   @override
@@ -40,6 +42,6 @@ final class UserServiceApi implements UserService {
   @override
   Future<bool> isLoggedIn() async {
     // TODO: Mocked.
-    return false;
+    return true;
   }
 }

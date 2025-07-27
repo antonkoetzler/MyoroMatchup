@@ -3,16 +3,16 @@ import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
-part 'game_screen_state.dart';
+part 'game_listing_screen_state.dart';
 
 /// View model of [GameScreen].
 @injectable
-final class GameScreenViewModel {
-  GameScreenViewModel(this._gameService);
+final class GameListingScreenViewModel {
+  GameListingScreenViewModel(this._gameService);
 
   /// State.
-  final _state = GameScreenState();
-  GameScreenState get state => _state;
+  final _state = GameListingScreenState();
+  GameListingScreenState get state => _state;
 
   /// Game service.
   final GameService _gameService;
@@ -26,7 +26,7 @@ final class GameScreenViewModel {
       final errorMessage = error.toString();
 
       if (kDebugMode) {
-        print('[GameScreenViewModel.fetchGames]: Error fetching games: "$errorMessage".');
+        print('[GameListingScreenViewModel.fetchGames]: Error fetching games: "$errorMessage".');
         print('Stack trace:\n$stackTrace');
       }
 

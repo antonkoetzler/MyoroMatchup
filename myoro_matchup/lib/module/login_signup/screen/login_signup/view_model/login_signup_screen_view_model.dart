@@ -10,13 +10,15 @@ part 'login_signup_screen_state.dart';
 /// View model of [LoginSignupScreen].
 @injectable
 final class LoginSignupScreenViewModel {
-  LoginSignupScreenViewModel(this._userService);
+  LoginSignupScreenViewModel(this._userService) {
+    _state.formController.addListener(_formControllerListener);
+  }
 
   /// [User] service.
   final UserService _userService;
 
   /// State.
-  late final _state = LoginSignupScreenState(MyoroFormConfiguration<int>(request: _request));
+  late final _state = LoginSignupScreenState(MyoroFormConfiguration<int>(validation: _validation, request: _request));
   LoginSignupScreenState get state => _state;
 
   /// Dispose function.
@@ -32,74 +34,44 @@ final class LoginSignupScreenViewModel {
     };
   }
 
-  /// Validation function of the username/email field of the [LoginSignupScreenEnum.login] form.
-  String? loginFormUsernameEmailValidation(_) {
-    final loginState = _state.loginState;
-    final usernameEmailController = loginState.usernameEmailController;
+  /// Form validation function.
+  String? _validation() {
+    switch (_state.formTypeNotifier.value) {
+      case LoginSignupScreenEnum.login:
+        final loginState = _state.loginState;
+        final usernameEmailController = loginState.usernameEmailController;
+        final passwordController = loginState.passwordController;
 
-    if (usernameEmailController.text.isEmpty) {
-      return localization.loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage;
-    }
+        if (usernameEmailController.text.isEmpty) {
+          return AppRouter.localization.loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage;
+        }
+        if (passwordController.text.isEmpty) {
+          return AppRouter.localization.loginSignupScreenLoginFormPasswordFieldEmptyMessage;
+        }
 
-    return null;
-  }
+        break;
+      case LoginSignupScreenEnum.signup:
+        final signupState = _state.signupState;
+        final nameController = signupState.nameController;
+        final usernameController = signupState.usernameController;
+        final emailController = signupState.emailController;
+        final passwordController = signupState.passwordController;
+        final passwordRepeatController = signupState.passwordRepeatController;
 
-  /// Validation function of the password field of the [LoginSignupScreenEnum.login] form.
-  String? loginFormPasswordValidation(_) {
-    final loginState = _state.loginState;
-    final passwordController = loginState.passwordController;
+        if (nameController.text.isEmpty) {
+          return AppRouter.localization.loginSignupScreenSignupFormNameFieldEmptyMessage;
+        }
+        if (usernameController.text.isEmpty) {
+          return AppRouter.localization.loginSignupScreenSignupFormUsernameFieldEmptyMessage;
+        }
+        if (emailController.text.isEmpty) {
+          return AppRouter.localization.loginSignupScreenSignupFormEmailFieldEmptyMessage;
+        }
+        if (passwordController.text.isEmpty || passwordRepeatController.text.isEmpty) {
+          return AppRouter.localization.loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
+        }
 
-    if (passwordController.text.isEmpty) {
-      return localization.loginSignupScreenLoginFormPasswordFieldEmptyMessage;
-    }
-
-    return null;
-  }
-
-  /// Validation function of the name field of the [LoginSignupScreenEnum.signup] form.
-  String? signupFormNameValidation(_) {
-    final signupState = _state.signupState;
-    final nameController = signupState.nameController;
-
-    if (nameController.text.isEmpty) {
-      return localization.loginSignupScreenSignupFormNameFieldEmptyMessage;
-    }
-
-    return null;
-  }
-
-  /// Validation function of the username field of the [LoginSignupScreenEnum.signup] form.
-  String? signupFormUsernameValidation(_) {
-    final signupState = _state.signupState;
-    final usernameController = signupState.usernameController;
-
-    if (usernameController.text.isEmpty) {
-      return localization.loginSignupScreenSignupFormUsernameFieldEmptyMessage;
-    }
-
-    return null;
-  }
-
-  /// Validation function of the email field of the [LoginSignupScreenEnum.signup] form.
-  String? signupFormEmailValidation(_) {
-    final signupState = _state.signupState;
-    final emailController = signupState.emailController;
-
-    if (emailController.text.isEmpty) {
-      return localization.loginSignupScreenSignupFormEmailFieldEmptyMessage;
-    }
-
-    return null;
-  }
-
-  /// Validation function of the password field of the [LoginSignupScreenEnum.signup] form.
-  String? signupFormPasswordValidation(_) {
-    final signupState = _state.signupState;
-    final passwordController = signupState.passwordController;
-    final passwordRepeatController = signupState.passwordRepeatController;
-
-    if (passwordController.text.isEmpty || passwordRepeatController.text.isEmpty) {
-      return localization.loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
+        break;
     }
 
     return null;
@@ -107,7 +79,24 @@ final class LoginSignupScreenViewModel {
 
   /// Form request function.
   Future<int>? _request() async {
-    // TODO
     return await _userService.create(User.fake());
+  }
+
+  /// Listener of [LoginSignupScreenState.formController].
+  void _formControllerListener() {
+    final formController = _state.formController;
+    final request = formController.request;
+    final status = request.status;
+    final errorMessage = request.errorMessage;
+    if (status.isError) {
+      AppRouter.rootNavigatorKey.currentContext?.showSnackBar(
+        snackBar: MyoroSnackBar(
+          configuration: MyoroSnackBarConfiguration(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage!),
+        ),
+      );
+    }
+    if (status.isSuccess) {
+      AppRouter.push(GameModule.gameListingScreenRoute);
+    }
   }
 }

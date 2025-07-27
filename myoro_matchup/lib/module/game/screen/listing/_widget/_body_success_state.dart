@@ -1,4 +1,4 @@
-part of '../game_screen.dart';
+part of '../game_listing_screen.dart';
 
 /// [MyoroRequestEnum.success] state of [_Body].
 final class _BodySuccessState extends StatelessWidget {
@@ -9,10 +9,10 @@ final class _BodySuccessState extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final themeExtension = context.resolveThemeExtension<GameScreenThemeExtension>();
+    final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
 
     if (_games.isEmpty) {
-      return Center(child: Text(localization.gameScreenBodySuccessStateEmptyMessage));
+      return Center(child: Text(AppRouter.localization.gameScreenBodySuccessStateEmptyMessage));
     }
 
     return Padding(

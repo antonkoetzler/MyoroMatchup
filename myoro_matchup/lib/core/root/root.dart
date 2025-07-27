@@ -16,7 +16,6 @@ final class Root extends StatelessWidget {
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         router: getIt<AppRouter>().router,
-        builder: (_, child) => Builder(key: localizationKey, builder: (_) => child!),
       ),
     );
   }
