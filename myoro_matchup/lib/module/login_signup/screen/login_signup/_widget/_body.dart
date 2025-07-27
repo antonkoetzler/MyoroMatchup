@@ -11,6 +11,7 @@ final class _Body extends StatelessWidget {
     final viewModel = context.read<LoginSignupScreenViewModel>();
     final state = viewModel.state;
     final formTypeNotifier = state.formTypeNotifier;
+    final formController = state.formController;
 
     return LayoutBuilder(
       builder: (_, constraints) {
@@ -21,17 +22,21 @@ final class _Body extends StatelessWidget {
             child: ValueListenableBuilder(
               valueListenable: formTypeNotifier,
               builder: (_, formType, _) {
-                YOU ARE HERE, YOU MUST ADD A MYORO FORM AND DO THE VALIDATION AND SHIT
-                return Column(
-                  spacing: themeExtension.bodySpacing,
-                  mainAxisSize: MainAxisSize.min,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const _Logo(),
-                    Flexible(child: _Inputs(formType)),
-                    _Buttons(formType),
-                    _FormTypeSwitcherButton(formType),
-                  ],
+                return MyoroForm<int>(
+                  controller: formController,
+                  builder: (_, _) {
+                    return Column(
+                      spacing: themeExtension.bodySpacing,
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const _Logo(),
+                        Flexible(child: _Inputs(formType)),
+                        _Buttons(formType),
+                        _FormTypeSwitcherButton(formType),
+                      ],
+                    );
+                  },
                 );
               },
             ),

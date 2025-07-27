@@ -13,5 +13,11 @@
   "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Repetir contraseña",
   "loginSignupScreenSignupSignupButton": "Registrarse",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "¿Nuevo en MyoroMatchup? ¡Regístrate!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "¿Ya estás registrado? ¡Inicia sesión!"
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "¿Ya estás registrado? ¡Inicia sesión!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "El nombre de usuario/correo electrónico no puede estar vacío.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Contraseña no puede estar vacío.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "El nombre no puede estar vacío.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "El nombre de usuario no puede estar vacío.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "El correo electrónico no puede estar vacío.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Los campos de contraseña no pueden estar vacíos."
 }

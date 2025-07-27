@@ -10,6 +10,10 @@ final class _Buttons extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
 
+    final viewModel = context.read<LoginSignupScreenViewModel>();
+    final state = viewModel.state;
+    final formController = state.formController;
+
     return Row(
       spacing: themeExtension.buttonsSpacing,
       children: switch (_formType) {
@@ -22,20 +26,12 @@ final class _Buttons extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: _Button(
-              text: localization.loginSignupScreenLoginLoginButton,
-              // TODO
-              onTapUp: () => throw UnimplementedError(),
-            ),
+            child: _Button(text: localization.loginSignupScreenLoginLoginButton, onTapUp: formController.fetch),
           ),
         ],
         LoginSignupScreenEnum.signup => [
           Expanded(
-            child: _Button(
-              text: localization.loginSignupScreenSignupSignupButton,
-              // TODO
-              onTapUp: () => throw UnimplementedError(),
-            ),
+            child: _Button(text: localization.loginSignupScreenSignupSignupButton, onTapUp: formController.fetch),
           ),
         ],
       },

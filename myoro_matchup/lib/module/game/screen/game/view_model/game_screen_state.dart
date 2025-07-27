@@ -1,4 +1,4 @@
-part of 'home_screen_view_model.dart';
+part of 'game_screen_view_model.dart';
 
 /// State of [GameScreenViewModel].
 final class GameScreenState {

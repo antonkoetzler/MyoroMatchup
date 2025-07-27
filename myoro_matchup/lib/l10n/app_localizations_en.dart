@@ -53,4 +53,28 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
       'New to MyoroMatchup? Login!';
+
+  @override
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'Username/email cannot be empty.';
+
+  @override
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'Password cannot be empty.';
+
+  @override
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      'Name cannot be empty.';
+
+  @override
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'Username cannot be empty.';
+
+  @override
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'Email cannot be empty.';
+
+  @override
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'Password fields cannot be empty.';
 }

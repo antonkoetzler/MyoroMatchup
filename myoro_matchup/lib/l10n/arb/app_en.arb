@@ -13,5 +13,11 @@
   "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Repeat password",
   "loginSignupScreenSignupSignupButton": "Signup",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "New to MyoroMatchup? Signup!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "New to MyoroMatchup? Login!"
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "New to MyoroMatchup? Login!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Username/email cannot be empty.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Password cannot be empty.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Name cannot be empty.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Username cannot be empty.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email cannot be empty.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Password fields cannot be empty."
 }

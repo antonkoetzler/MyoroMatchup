@@ -183,6 +183,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'New to MyoroMatchup? Login!'**
   String get loginSignupScreenFormTypeSwitcherButtonSignupText;
+
+  /// No description provided for @loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Username/email cannot be empty.'**
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage;
+
+  /// No description provided for @loginSignupScreenLoginFormPasswordFieldEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Password cannot be empty.'**
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage;
+
+  /// No description provided for @loginSignupScreenSignupFormNameFieldEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Name cannot be empty.'**
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage;
+
+  /// No description provided for @loginSignupScreenSignupFormUsernameFieldEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Username cannot be empty.'**
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage;
+
+  /// No description provided for @loginSignupScreenSignupFormEmailFieldEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Email cannot be empty.'**
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage;
+
+  /// No description provided for @loginSignupScreenSignupFormPasswordFieldsEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Password fields cannot be empty.'**
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
 }
 
 class _AppLocalizationsDelegate

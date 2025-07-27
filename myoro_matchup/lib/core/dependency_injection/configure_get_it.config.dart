@@ -17,8 +17,8 @@ import 'package:myoro_matchup/core/service/user_service/user_service_api.dart'
     as _i614;
 import 'package:myoro_matchup/module/game/screen/game/service/game/game_service_api.dart'
     as _i358;
-import 'package:myoro_matchup/module/game/screen/game/view_model/home_screen_view_model.dart'
-    as _i230;
+import 'package:myoro_matchup/module/game/screen/game/view_model/game_screen_view_model.dart'
+    as _i172;
 import 'package:myoro_matchup/module/login_signup/screen/login_signup/view_model/login_signup_screen_view_model.dart'
     as _i205;
 import 'package:myoro_matchup/myoro_matchup.dart' as _i460;
@@ -30,11 +30,11 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
-    gh.factory<_i205.LoginSignupScreenViewModel>(
-      () => _i205.LoginSignupScreenViewModel(),
-    );
     gh.singleton<_i264.ModulesController>(() => _i264.ModulesController());
     gh.singleton<_i460.UserService>(() => _i614.UserServiceApi());
+    gh.factory<_i205.LoginSignupScreenViewModel>(
+      () => _i205.LoginSignupScreenViewModel(gh<_i460.UserService>()),
+    );
     gh.singleton<_i854.AppRouter>(
       () => _i854.AppRouter(
         gh<_i460.ModulesController>(),
@@ -42,8 +42,8 @@ extension GetItInjectableX on _i174.GetIt {
       ),
     );
     gh.singleton<_i460.GameService>(() => _i358.GameServiceApi());
-    gh.factory<_i230.GameScreenViewModel>(
-      () => _i230.GameScreenViewModel(gh<_i460.GameService>()),
+    gh.factory<_i172.GameScreenViewModel>(
+      () => _i172.GameScreenViewModel(gh<_i460.GameService>()),
     );
     return this;
   }

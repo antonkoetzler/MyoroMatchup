@@ -1,1 +1,1 @@
-export 'home_screen_view_model.dart';
+export 'game_screen_view_model.dart';

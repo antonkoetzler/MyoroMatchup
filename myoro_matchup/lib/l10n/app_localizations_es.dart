@@ -56,4 +56,28 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
       '¿Ya estás registrado? ¡Inicia sesión!';
+
+  @override
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'El nombre de usuario/correo electrónico no puede estar vacío.';
+
+  @override
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'Contraseña no puede estar vacío.';
+
+  @override
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      'El nombre no puede estar vacío.';
+
+  @override
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'El nombre de usuario no puede estar vacío.';
+
+  @override
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'El correo electrónico no puede estar vacío.';
+
+  @override
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'Los campos de contraseña no pueden estar vacíos.';
 }
