@@ -25,7 +25,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get loginSignupScreenLoginLoginButton => 'Login';
 
   @override
-  String get loginSignupScreenLoginForgotPasswordButton => 'Forward password?';
+  String get loginSignupScreenLoginForgotPasswordButton => 'Forgot password?';
 
   @override
   String get loginSignupScreenSignupNameInputPlaceholder => 'Name';

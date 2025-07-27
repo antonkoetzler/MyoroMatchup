@@ -133,7 +133,7 @@ abstract class AppLocalizations {
   /// No description provided for @loginSignupScreenLoginForgotPasswordButton.
   ///
   /// In en, this message translates to:
-  /// **'Forward password?'**
+  /// **'Forgot password?'**
   String get loginSignupScreenLoginForgotPasswordButton;
 
   /// No description provided for @loginSignupScreenSignupNameInputPlaceholder.

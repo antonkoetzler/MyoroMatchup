@@ -5,7 +5,7 @@
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Username/email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Password",
   "loginSignupScreenLoginLoginButton": "Login",
-  "loginSignupScreenLoginForgotPasswordButton": "Forward password?",
+  "loginSignupScreenLoginForgotPasswordButton": "Forgot password?",
   "loginSignupScreenSignupNameInputPlaceholder": "Name",
   "loginSignupScreenSignupUsernameInputPlaceholder": "Username",
   "loginSignupScreenSignupEmailInputPlaceholder": "Email",
