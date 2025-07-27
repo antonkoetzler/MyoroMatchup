@@ -9,7 +9,6 @@ final class _AppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(_) {
-    // TODO: Localization.
     return const MyoroAppBar(
       configuration: MyoroAppBarConfiguration(child: Row(children: [_AppBarTitle()]), bordered: true),
     );

@@ -12,7 +12,7 @@ final class _BodySuccessState extends StatelessWidget {
     final themeExtension = context.resolveThemeExtension<GameScreenThemeExtension>();
 
     if (_games.isEmpty) {
-      return Center(child: Text(context.localization.gameScreenBodySuccessStateEmptyMessage));
+      return Center(child: Text(localization.gameScreenBodySuccessStateEmptyMessage));
     }
 
     return Padding(

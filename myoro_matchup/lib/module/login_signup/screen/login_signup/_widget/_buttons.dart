@@ -8,7 +8,6 @@ final class _Buttons extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final localization = context.localization;
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
 
     return Row(

@@ -8,7 +8,6 @@ final class _FormTypeSwitcherButton extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final localization = context.localization;
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
     final viewModel = context.read<LoginSignupScreenViewModel>();
 
