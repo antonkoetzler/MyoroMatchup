@@ -16,6 +16,7 @@ final class App extends StatelessWidget {
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         router: getIt<AppRouter>().router,
+        builder: (_, _) => YOU ARE HERE, NEED TO ADD LOCALIZATION KEY,
       ),
     );
   }
