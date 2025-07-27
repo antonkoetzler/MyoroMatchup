@@ -4,8 +4,8 @@ import 'package:myoro_matchup/l10n/app_localizations.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Root [Widget] of the application.
-final class App extends StatelessWidget {
-  const App({super.key});
+final class Root extends StatelessWidget {
+  const Root({super.key});
 
   @override
   Widget build(_) {
