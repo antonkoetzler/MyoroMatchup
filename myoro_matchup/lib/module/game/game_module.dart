@@ -3,15 +3,19 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// [Module]
 final class GameModule extends Module {
-  static const gameListingScreenRoute = '/game-listing';
-  static const gameDetailsScreenRoute = '/game-details';
+  static const _prefix = '/game';
+  static const gameListingScreenRoute = '$_prefix/listing';
+  static const gameDetailsScreenRoute = '$_prefix/details';
 
   GameModule()
     : super(
         route: GoRoute(
-          path: gameListingScreenRoute,
+          path: _prefix,
           builder: (_, _) => const GameListingScreen(),
-          routes: [GoRoute(path: gameDetailsScreenRoute, builder: (_, _) => const GameDetailsScreen())],
+          routes: [
+            GoRoute(path: 'listing', builder: (_, _) => const GameListingScreen()),
+            GoRoute(path: 'details', builder: (_, _) => const GameDetailsScreen()),
+          ],
         ),
         themeExtensionsBuilder: (_, colorScheme, textTheme) => [
           GameListingScreenThemeExtension.builder(colorScheme, textTheme),
