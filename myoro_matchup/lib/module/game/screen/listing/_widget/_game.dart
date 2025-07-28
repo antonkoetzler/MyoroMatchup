@@ -17,7 +17,7 @@ final class _Game extends StatelessWidget {
         configuration: MyoroButtonConfiguration(
           borderRadius: themeExtension.gameBorderRadius,
           borderBuilder: (_) => MyoroButtonStyleEnum.border(context),
-          onTapUp: (_) => AppRouter.push(GameModule.gameDetailsScreenRoute),
+          onTapUp: (_) => Routes.gameRoutes.gameDetailsScreen.push(_game.id),
         ),
         builder: (_, _) {
           return Column(

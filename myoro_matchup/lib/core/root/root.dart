@@ -12,7 +12,7 @@ final class Root extends StatelessWidget {
     return MyoroApp(
       configuration: MyoroAppConfiguration(
         themeMode: ThemeMode.dark,
-        themeExtensionsBuilder: getIt<ModulesController>().themeExtensionsBuilder,
+        themeExtensionsBuilder: themeExtensionsBuilder,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         router: getIt<AppRouter>().router,

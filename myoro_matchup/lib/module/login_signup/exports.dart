@@ -1,2 +1,2 @@
-export 'login_signup_module.dart';
+export 'login_signup_routes.dart';
 export 'screen/exports.dart';
