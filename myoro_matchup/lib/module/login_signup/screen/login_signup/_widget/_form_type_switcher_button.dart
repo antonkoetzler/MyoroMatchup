@@ -15,8 +15,8 @@ final class _FormTypeSwitcherButton extends StatelessWidget {
       configuration: MyoroIconTextButtonConfiguration(
         textConfiguration: MyoroTextConfiguration(
           text: switch (_formType) {
-            LoginSignupScreenEnum.login => AppRouter.localization.loginSignupScreenFormTypeSwitcherButtonLoginText,
-            LoginSignupScreenEnum.signup => AppRouter.localization.loginSignupScreenFormTypeSwitcherButtonSignupText,
+            LoginSignupScreenEnum.login => localization.loginSignupScreenFormTypeSwitcherButtonLoginText,
+            LoginSignupScreenEnum.signup => localization.loginSignupScreenFormTypeSwitcherButtonSignupText,
           },
           style: themeExtension.formTypeSwitcherButtonTextStyle,
         ),

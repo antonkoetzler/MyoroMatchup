@@ -8,6 +8,6 @@ abstract class PayloadRoute<T> extends GoRoute {
     : super(path: path, builder: (context, state) => builder(context, state.extra as T));
 
   void push(T payload) {
-    AppRouter.rootNavigatorKey.currentContext?.push(path, extra: payload);
+    navigatorKey.currentContext?.push(path, extra: payload);
   }
 }

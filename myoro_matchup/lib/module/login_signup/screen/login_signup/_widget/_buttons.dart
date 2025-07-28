@@ -20,24 +20,18 @@ final class _Buttons extends StatelessWidget {
         LoginSignupScreenEnum.login => [
           Expanded(
             child: _Button(
-              text: AppRouter.localization.loginSignupScreenLoginForgotPasswordButton,
+              text: localization.loginSignupScreenLoginForgotPasswordButton,
               // TODO
               onTapUp: () => throw UnimplementedError(),
             ),
           ),
           Expanded(
-            child: _Button(
-              text: AppRouter.localization.loginSignupScreenLoginLoginButton,
-              onTapUp: formController.fetch,
-            ),
+            child: _Button(text: localization.loginSignupScreenLoginLoginButton, onTapUp: formController.fetch),
           ),
         ],
         LoginSignupScreenEnum.signup => [
           Expanded(
-            child: _Button(
-              text: AppRouter.localization.loginSignupScreenSignupSignupButton,
-              onTapUp: formController.fetch,
-            ),
+            child: _Button(text: localization.loginSignupScreenSignupSignupButton, onTapUp: formController.fetch),
           ),
         ],
       },

@@ -43,10 +43,10 @@ final class LoginSignupScreenViewModel {
         final passwordController = loginState.passwordController;
 
         if (usernameEmailController.text.isEmpty) {
-          return AppRouter.localization.loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage;
+          return localization.loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage;
         }
         if (passwordController.text.isEmpty) {
-          return AppRouter.localization.loginSignupScreenLoginFormPasswordFieldEmptyMessage;
+          return localization.loginSignupScreenLoginFormPasswordFieldEmptyMessage;
         }
 
         break;
@@ -59,16 +59,16 @@ final class LoginSignupScreenViewModel {
         final passwordRepeatController = signupState.passwordRepeatController;
 
         if (nameController.text.isEmpty) {
-          return AppRouter.localization.loginSignupScreenSignupFormNameFieldEmptyMessage;
+          return localization.loginSignupScreenSignupFormNameFieldEmptyMessage;
         }
         if (usernameController.text.isEmpty) {
-          return AppRouter.localization.loginSignupScreenSignupFormUsernameFieldEmptyMessage;
+          return localization.loginSignupScreenSignupFormUsernameFieldEmptyMessage;
         }
         if (emailController.text.isEmpty) {
-          return AppRouter.localization.loginSignupScreenSignupFormEmailFieldEmptyMessage;
+          return localization.loginSignupScreenSignupFormEmailFieldEmptyMessage;
         }
         if (passwordController.text.isEmpty || passwordRepeatController.text.isEmpty) {
-          return AppRouter.localization.loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
+          return localization.loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
         }
 
         break;
@@ -89,7 +89,7 @@ final class LoginSignupScreenViewModel {
     final status = request.status;
     final errorMessage = request.errorMessage;
     if (status.isError) {
-      AppRouter.rootNavigatorKey.currentContext?.showSnackBar(
+      SnackBarHelper.showSnackBar(
         snackBar: MyoroSnackBar(
           configuration: MyoroSnackBarConfiguration(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage!),
         ),

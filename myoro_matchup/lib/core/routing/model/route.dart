@@ -8,6 +8,6 @@ abstract class Route extends GoRoute {
 
   /// Pushes the route.
   void push() {
-    AppRouter.rootNavigatorKey.currentContext?.push(path);
+    navigatorKey.currentContext?.push(path);
   }
 }

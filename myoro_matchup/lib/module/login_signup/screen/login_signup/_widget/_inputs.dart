@@ -21,25 +21,25 @@ final class _Inputs extends StatelessWidget {
       children: switch (_formType) {
         LoginSignupScreenEnum.login => [
           _Input(
-            placeholder: AppRouter.localization.loginSignupScreenLoginUsernameEmailInputPlaceholder,
+            placeholder: localization.loginSignupScreenLoginUsernameEmailInputPlaceholder,
             controller: loginState.usernameEmailController,
           ),
           _Input(
-            placeholder: AppRouter.localization.loginSignupScreenLoginPasswordInputPlaceholder,
+            placeholder: localization.loginSignupScreenLoginPasswordInputPlaceholder,
             controller: loginState.passwordController,
           ),
         ],
         LoginSignupScreenEnum.signup => [
           _Input(
-            placeholder: AppRouter.localization.loginSignupScreenSignupNameInputPlaceholder,
+            placeholder: localization.loginSignupScreenSignupNameInputPlaceholder,
             controller: signupState.nameController,
           ),
           _Input(
-            placeholder: AppRouter.localization.loginSignupScreenSignupUsernameInputPlaceholder,
+            placeholder: localization.loginSignupScreenSignupUsernameInputPlaceholder,
             controller: signupState.usernameController,
           ),
           _Input(
-            placeholder: AppRouter.localization.loginSignupScreenSignupEmailInputPlaceholder,
+            placeholder: localization.loginSignupScreenSignupEmailInputPlaceholder,
             controller: signupState.emailController,
           ),
           Row(
@@ -47,13 +47,13 @@ final class _Inputs extends StatelessWidget {
             children: [
               Expanded(
                 child: _Input(
-                  placeholder: AppRouter.localization.loginSignupScreenSignupPasswordInputPlaceholder,
+                  placeholder: localization.loginSignupScreenSignupPasswordInputPlaceholder,
                   controller: signupState.passwordController,
                 ),
               ),
               Expanded(
                 child: _Input(
-                  placeholder: AppRouter.localization.loginSignupScreenSignupPasswordRepeatInputPlaceholder,
+                  placeholder: localization.loginSignupScreenSignupPasswordRepeatInputPlaceholder,
                   controller: signupState.passwordRepeatController,
                 ),
               ),

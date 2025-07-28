@@ -7,6 +7,6 @@ final class _AppBarTitle extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
-    return Text(AppRouter.localization.gameScreenAppBarTitle, style: themeExtension.appBarTitleTextStyle);
+    return Text(localization.gameScreenAppBarTitle, style: themeExtension.appBarTitleTextStyle);
   }
 }
