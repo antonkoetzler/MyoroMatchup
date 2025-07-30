@@ -15,19 +15,19 @@ final class UserServiceApi implements UserService {
   }
 
   @override
-  Future<User>? get({Map<String, dynamic>? queryParameters}) {
+  Future<User>? get(int id) {
     // TODO: implement get
     throw UnimplementedError();
   }
 
   @override
-  Future<Set<User>> select({Map<String, dynamic>? queryParameters}) {
+  Future<Set<User>> select([Map<String, dynamic>? queryParameters]) {
     // TODO: implement select
     throw UnimplementedError();
   }
 
   @override
-  Future<void> update(User data) {
+  Future<void> update(int id, User data) {
     // TODO: implement update
     throw UnimplementedError();
   }

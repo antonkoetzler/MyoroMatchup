@@ -14,21 +14,21 @@ final class GameServiceApi implements GameService {
   }
 
   @override
-  // TODO: Implement.
-  Future<Game>? get({Map<String, dynamic>? queryParameters}) {
-    throw UnimplementedError();
+  // TODO: Mocked.
+  Future<Game>? get(int id) {
+    return Future.delayed(const Duration(milliseconds: 500));
   }
 
   @override
   // TODO: Mocked.
-  Future<Set<Game>> select({Map<String, dynamic>? queryParameters}) async {
+  Future<Set<Game>> select([Map<String, dynamic>? queryParameters]) async {
     await Future.delayed(const Duration(seconds: 2));
     return List.generate(faker.randomGenerator.integer(10), (_) => Game.fake()).toSet();
   }
 
   @override
   // TODO: Implement.
-  Future<void> update(Game data) {
+  Future<void> update(int id, Game data) {
     throw UnimplementedError();
   }
 

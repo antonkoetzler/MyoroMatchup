@@ -4,6 +4,21 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 
 @singleton
 final class AppRouter {
+  static const loginModuleRoute = '/login_signup';
+  static const gameModuleRoute = '/game';
+
+  /// Navigates to a route.
+  ///
+  /// i.e. [AppRouter.push(Routes.gameRoutes.gameListingScreen.navigate())]
+  static void push(RouteNavigationConfiguration navigationConfiguration) {
+    navigatorKey.currentContext?.push(navigationConfiguration.location, extra: navigationConfiguration.payload);
+  }
+
+  /// Pops the current [Route].
+  static void pop() {
+    navigatorKey.currentContext?.pop();
+  }
+
   AppRouter(this._userService);
 
   final UserService _userService;
@@ -17,16 +32,18 @@ final class AppRouter {
   /// Initialization function.
   Future<void> init() async {
     if (_router != null) return;
+
     _router = GoRouter(
       navigatorKey: navigatorKey,
-      initialLocation: await _userService.isLoggedIn() ? '/game/listing' : '/login_signup',
+      initialLocation: await _userService.isLoggedIn()
+          ? Routes.gameRoutes.gameListingScreen.location
+          : Routes.loginSignupRoutes.loginSignupScreen.location,
       routes: [
-        GoRoute(
-          path: '/game',
-          redirect: (_, __) => '/game/listing',
+        RedirectRoute(
+          name: gameModuleRoute,
           routes: [Routes.gameRoutes.gameListingScreen, Routes.gameRoutes.gameDetailsScreen],
-        ),
-        Routes.loginSignupRoutes.loginSignupScreen,
+        ).goRoute,
+        Routes.loginSignupRoutes.loginSignupScreen.goRoute,
       ],
     );
   }

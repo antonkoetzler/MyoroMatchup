@@ -1,13 +1,32 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:myoro_matchup/myoro_matchup.dart';
 
-/// Abstract class representing a route.
-abstract class Route extends GoRoute {
-  Route({required super.path, required Widget child}) : super(builder: (_, _) => child);
+/// Abtract model of representing a route.
+abstract class Route<T extends Object> {
+  Route({String? parentLocation, required String name, this.redirect, this.builder, this.routes = const []})
+    : location = '${parentLocation ?? ''}/$name',
+      name = '/$name';
 
-  /// Pushes the route.
-  void push() {
-    navigatorKey.currentContext?.push(path);
+  /// The full location of the [Route]
+  ///
+  /// i.e. /game/listing/:id
+  final String location;
+
+  /// The name of the route.
+  ///
+  /// i.e. game
+  final String name;
+
+  /// [GoRoute.redirect]
+  final GoRouterRedirect? redirect;
+
+  /// [GoRoute.builder]
+  final GoRouterWidgetBuilder? builder;
+
+  /// [GoRoute.routes]
+  final List<Route> routes;
+
+  /// [GoRoute] generator.
+  GoRoute get goRoute {
+    return GoRoute(path: name, redirect: redirect, builder: builder, routes: routes.map((r) => r.goRoute).toList());
   }
 }

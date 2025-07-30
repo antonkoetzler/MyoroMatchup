@@ -96,7 +96,7 @@ final class LoginSignupScreenViewModel {
       );
     }
     if (status.isSuccess) {
-      Routes.gameRoutes.gameListingScreen.push();
+      AppRouter.push(Routes.gameRoutes.gameListingScreen.navigate());
     }
   }
 }

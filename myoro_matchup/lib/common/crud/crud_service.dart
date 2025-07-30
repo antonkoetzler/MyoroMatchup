@@ -8,15 +8,15 @@ abstract class CrudService<T> {
   FutureOr<int> create(T model);
 
   /// Get function.
-  FutureOr<T>? get({Map<String, dynamic>? queryParameters});
+  FutureOr<T>? get(int id);
 
   /// Select function.
-  FutureOr<Set<T>> select({Map<String, dynamic>? queryParameters});
+  FutureOr<Set<T>> select([Map<String, dynamic>? queryParameters]);
 
   /// Update function.
   ///
   /// Returns if the operation was successful or not.
-  FutureOr<void> update(T data);
+  FutureOr<void> update(int id, T data);
 
   /// Delete function.
   FutureOr<void> delete(int id);

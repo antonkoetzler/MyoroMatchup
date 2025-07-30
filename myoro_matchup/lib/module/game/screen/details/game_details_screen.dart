@@ -1,19 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
+import 'package:myoro_matchup/myoro_matchup.dart';
+import 'package:provider/provider.dart';
 
 part '_widget/_app_bar.dart';
 part '_widget/_body.dart';
 
 /// Game details screen.
-final class GameDetailsScreen extends StatelessWidget {
+final class GameDetailsScreen extends StatefulWidget {
   const GameDetailsScreen({super.key, required this.gameId});
 
   final int gameId;
 
   @override
+  State<GameDetailsScreen> createState() => _GameDetailsScreenState();
+}
+
+final class _GameDetailsScreenState extends State<GameDetailsScreen> {
+  late final _viewModel = getIt<GameDetailsScreenViewModel>()..init(widget.gameId);
+
+  @override
+  void dispose() {
+    _viewModel.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(_) {
-    return const MyoroScreen(
-      configuration: MyoroScreenConfiguration(appBar: _AppBar(), body: _Body()),
+    return InheritedProvider.value(
+      value: _viewModel,
+      child: ValueListenableBuilder(
+        valueListenable: _viewModel.state.gameRequestController,
+        builder: (_, gameRequest, _) => switch (gameRequest.status) {
+          FINISH THE FUCKIN ERROR VIEW GENERIC WIDGET
+          MAKE SURE YOU APPLY THIS VIEW TO THE OTHER SCREENS
+          AND ALSO MAKE A GENERIC EMPTY VIEW
+          MyoroRequestEnum.idle => ,
+          MyoroRequestEnum.loading => ,
+          MyoroRequestEnum.success => ,
+          MyoroRequestEnum.error => ,
+        },
+        //   return const MyoroScreen(
+        //     configuration: MyoroScreenConfiguration(appBar: _AppBar(), body: _Body()),
+        //   );
+        // }
+      ),
     );
   }
 }
