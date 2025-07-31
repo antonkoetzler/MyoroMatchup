@@ -16,16 +16,14 @@ mixin _$MyoroErrorFeedbackConfigurationMixin {
       this as MyoroErrorFeedbackConfiguration;
 
   MyoroErrorFeedbackConfiguration copyWith({
-    void Function()? retryCallback,
-    IconData? icon,
     String? title,
     String? subtitle,
-    MyoroFeedbackActionButtonConfiguration? actionButtonConfiguration,
-    bool actionButtonConfigurationProvided = true,
+    bool subtitleProvided = true,
+    void Function()? retryCallback,
   }) {
     return MyoroErrorFeedbackConfiguration(
       title: title ?? self.title,
-      subtitle: subtitle ?? self.subtitle,
+      subtitle: subtitleProvided ? (subtitle ?? self.subtitle) : null,
       retryCallback: retryCallback ?? self.retryCallback,
     );
   }

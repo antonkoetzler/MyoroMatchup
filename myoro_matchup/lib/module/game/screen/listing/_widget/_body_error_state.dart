@@ -2,13 +2,19 @@ part of '../game_listing_screen.dart';
 
 /// [MyoroRequestEnum.error] state of [_Body].
 final class _BodyErrorState extends StatelessWidget {
-  const _BodyErrorState(this._message);
-
-  final String _message;
+  const _BodyErrorState();
 
   @override
   Widget build(context) {
-    final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
-    return Center(child: Text(_message, style: themeExtension.bodyErrorStateTextStyle));
+    final viewModel = context.read<GameListingScreenViewModel>();
+
+    return Center(
+      child: MyoroErrorFeedback(
+        configuration: MyoroErrorFeedbackConfiguration(
+          title: localization.gameListingScreenBodyErrorStateTitle,
+          retryCallback: viewModel.fetchGames,
+        ),
+      ),
+    );
   }
 }

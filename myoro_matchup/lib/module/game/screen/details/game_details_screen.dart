@@ -5,9 +5,9 @@ import 'package:provider/provider.dart';
 
 part '_widget/_app_bar.dart';
 part '_widget/_body.dart';
-part '_widget/_error_state.dart';
+part '_widget/_body_error_state.dart';
 part '_widget/_loader.dart';
-part '_widget/_success_state.dart';
+part '_widget/_body_success_state.dart';
 
 /// Game details screen.
 final class GameDetailsScreen extends StatefulWidget {

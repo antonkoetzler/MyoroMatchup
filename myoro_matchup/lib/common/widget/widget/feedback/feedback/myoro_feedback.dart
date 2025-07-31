@@ -19,7 +19,15 @@ final class MyoroFeedback extends StatelessWidget {
   Widget build(_) {
     return InheritedProvider.value(
       value: configuration,
-      child: const Column(mainAxisSize: MainAxisSize.min, children: [_Icon(), _Title(), _Subtitle(), _ActionButton()]),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          const _Icon(),
+          const _Title(),
+          if (configuration.subtitle != null) const _Subtitle(),
+          const _ActionButton(),
+        ],
+      ),
     );
   }
 }

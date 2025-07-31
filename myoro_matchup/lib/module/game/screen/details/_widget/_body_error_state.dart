@@ -8,11 +8,12 @@ final class _ErrorState extends StatelessWidget {
   Widget build(context) {
     final viewModel = context.read<GameDetailsScreenViewModel>();
 
-    return MyoroErrorFeedback(
-      configuration: MyoroErrorFeedbackConfiguration(
-        title: localization.gameDetailsScreenErrorStateTitle,
-        subtitle: localization.gameDetailsScreenErrorStateSubtitle,
-        retryCallback: viewModel.fetch,
+    return Center(
+      child: MyoroErrorFeedback(
+        configuration: MyoroErrorFeedbackConfiguration(
+          title: localization.gameDetailsScreenBodyErrorStateTitle,
+          retryCallback: viewModel.fetch,
+        ),
       ),
     );
   }

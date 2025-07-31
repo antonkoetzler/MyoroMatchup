@@ -20,7 +20,6 @@ mixin _$GameListingScreenThemeExtensionMixin
   GameListingScreenThemeExtension copyWith({
     TextStyle? appBarTitleTextStyle,
     MyoroIconConfiguration? menuButtonIconConfiguration,
-    TextStyle? bodyErrorStateTextStyle,
     EdgeInsets? bodySuccessStateMargin,
     EdgeInsets? gameMargin,
     BorderRadius? gameBorderRadius,
@@ -35,8 +34,6 @@ mixin _$GameListingScreenThemeExtensionMixin
       appBarTitleTextStyle: appBarTitleTextStyle ?? self.appBarTitleTextStyle,
       menuButtonIconConfiguration:
           menuButtonIconConfiguration ?? self.menuButtonIconConfiguration,
-      bodyErrorStateTextStyle:
-          bodyErrorStateTextStyle ?? self.bodyErrorStateTextStyle,
       bodySuccessStateMargin:
           bodySuccessStateMargin ?? self.bodySuccessStateMargin,
       gameMargin: gameMargin ?? self.gameMargin,
@@ -58,7 +55,6 @@ mixin _$GameListingScreenThemeExtensionMixin
         other.runtimeType == runtimeType &&
         other.appBarTitleTextStyle == self.appBarTitleTextStyle &&
         other.menuButtonIconConfiguration == self.menuButtonIconConfiguration &&
-        other.bodyErrorStateTextStyle == self.bodyErrorStateTextStyle &&
         other.bodySuccessStateMargin == self.bodySuccessStateMargin &&
         other.gameMargin == self.gameMargin &&
         other.gameBorderRadius == self.gameBorderRadius &&
@@ -75,7 +71,6 @@ mixin _$GameListingScreenThemeExtensionMixin
     return Object.hash(
       self.appBarTitleTextStyle,
       self.menuButtonIconConfiguration,
-      self.bodyErrorStateTextStyle,
       self.bodySuccessStateMargin,
       self.gameMargin,
       self.gameBorderRadius,
@@ -93,7 +88,6 @@ mixin _$GameListingScreenThemeExtensionMixin
       'GameListingScreenThemeExtension(\n'
       '  appBarTitleTextStyle: ${self.appBarTitleTextStyle},\n'
       '  menuButtonIconConfiguration: ${self.menuButtonIconConfiguration},\n'
-      '  bodyErrorStateTextStyle: ${self.bodyErrorStateTextStyle},\n'
       '  bodySuccessStateMargin: ${self.bodySuccessStateMargin},\n'
       '  gameMargin: ${self.gameMargin},\n'
       '  gameBorderRadius: ${self.gameBorderRadius},\n'

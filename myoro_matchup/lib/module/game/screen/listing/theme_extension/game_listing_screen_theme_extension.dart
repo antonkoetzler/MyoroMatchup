@@ -16,7 +16,6 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   const GameListingScreenThemeExtension({
     required this.appBarTitleTextStyle,
     required this.menuButtonIconConfiguration,
-    required this.bodyErrorStateTextStyle,
     required this.bodySuccessStateMargin,
     required this.gameMargin,
     required this.gameBorderRadius,
@@ -31,7 +30,6 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   GameListingScreenThemeExtension.fake()
     : appBarTitleTextStyle = myoroFake<TextStyle>(),
       menuButtonIconConfiguration = MyoroIconConfiguration.fake(),
-      bodyErrorStateTextStyle = myoroFake<TextStyle>(),
       bodySuccessStateMargin = myoroFake<EdgeInsets>(),
       gameMargin = myoroFake<EdgeInsets>(),
       gameBorderRadius = myoroFake<BorderRadius>(),
@@ -45,7 +43,6 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   GameListingScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
     : appBarTitleTextStyle = textTheme.titleMedium!,
       menuButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.menu, size: kSpacing * 6),
-      bodyErrorStateTextStyle = textTheme.headlineMedium!.withColor(colorScheme.error),
       bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: kEdgeInsetsLength),
       gameMargin = const EdgeInsets.only(bottom: kEdgeInsetsLength),
       gameBorderRadius = BorderRadius.circular(kBorderRadiusLength),
@@ -61,9 +58,6 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
 
   /// [MyoroIconConfiguration] of [GameScreen]'s menu button in the app bar.
   final MyoroIconConfiguration menuButtonIconConfiguration;
-
-  /// [TextStyle] of the error message text.
-  final TextStyle bodyErrorStateTextStyle;
 
   /// [EdgeInsets] margin of the [Game] listing.
   final EdgeInsets bodySuccessStateMargin;
@@ -102,7 +96,6 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
         other.menuButtonIconConfiguration,
         t,
       ),
-      bodyErrorStateTextStyle: TextStyle.lerp(bodyErrorStateTextStyle, other.bodyErrorStateTextStyle, t),
       bodySuccessStateMargin: EdgeInsets.lerp(bodySuccessStateMargin, other.bodySuccessStateMargin, t),
       gameMargin: EdgeInsets.lerp(gameMargin, other.gameMargin, t),
       gameBorderRadius: BorderRadius.lerp(gameBorderRadius, other.gameBorderRadius, t),

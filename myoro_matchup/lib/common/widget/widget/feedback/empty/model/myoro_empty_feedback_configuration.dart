@@ -9,9 +9,6 @@ part 'myoro_empty_feedback_configuration.g.dart';
 @myoroModel
 final class MyoroEmptyFeedbackConfiguration extends MyoroFeedbackConfiguration
     with _$MyoroEmptyFeedbackConfigurationMixin {
-  const MyoroEmptyFeedbackConfiguration({
-    required super.title,
-    required super.subtitle,
-    super.actionButtonConfiguration,
-  }) : super(icon: Icons.hourglass_empty);
+  const MyoroEmptyFeedbackConfiguration({required super.title, super.subtitle, super.actionButtonConfiguration})
+    : super(icon: Icons.hourglass_empty);
 }

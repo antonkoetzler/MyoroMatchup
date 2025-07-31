@@ -9,9 +9,10 @@ part 'myoro_error_feedback_configuration.g.dart';
 @myoroModel
 final class MyoroErrorFeedbackConfiguration extends MyoroFeedbackConfiguration
     with _$MyoroErrorFeedbackConfigurationMixin {
-  MyoroErrorFeedbackConfiguration({required super.title, required super.subtitle, required this.retryCallback})
+  MyoroErrorFeedbackConfiguration({required super.title, String? subtitle, required this.retryCallback})
     : super(
         icon: Icons.error,
+        subtitle: subtitle ?? localization.myoroErrorFeedbackSubtitle,
         actionButtonConfiguration: MyoroFeedbackActionButtonConfiguration(
           text: localization.myoroErrorFeedbackActionButtonText,
           onTapUp: retryCallback,

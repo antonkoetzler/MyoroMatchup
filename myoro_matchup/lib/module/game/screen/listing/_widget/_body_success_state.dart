@@ -11,20 +11,18 @@ final class _BodySuccessState extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
 
-    if (_games.isEmpty) {
-      return Center(child: Text(localization.gameListingScreenBodySuccessStateEmptyMessage));
-    }
-
-    return Padding(
-      padding: themeExtension.bodySuccessStateMargin,
-      child: CustomScrollView(
-        slivers: [
-          SliverList.builder(
-            itemCount: _games.length,
-            itemBuilder: (_, index) => _Game(index == 0, _games.elementAt(index)),
-          ),
-        ],
-      ),
-    );
+    return _games.isEmpty
+        ? const _BodySuccessStateEmptyFeedback()
+        : Padding(
+            padding: themeExtension.bodySuccessStateMargin,
+            child: CustomScrollView(
+              slivers: [
+                SliverList.builder(
+                  itemCount: _games.length,
+                  itemBuilder: (_, index) => _Game(index == 0, _games.elementAt(index)),
+                ),
+              ],
+            ),
+          );
   }
 }

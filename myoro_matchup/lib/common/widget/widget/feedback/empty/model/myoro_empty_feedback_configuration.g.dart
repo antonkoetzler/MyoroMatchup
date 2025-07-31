@@ -16,15 +16,15 @@ mixin _$MyoroEmptyFeedbackConfigurationMixin {
       this as MyoroEmptyFeedbackConfiguration;
 
   MyoroEmptyFeedbackConfiguration copyWith({
-    IconData? icon,
     String? title,
     String? subtitle,
+    bool subtitleProvided = true,
     MyoroFeedbackActionButtonConfiguration? actionButtonConfiguration,
     bool actionButtonConfigurationProvided = true,
   }) {
     return MyoroEmptyFeedbackConfiguration(
       title: title ?? self.title,
-      subtitle: subtitle ?? self.subtitle,
+      subtitle: subtitleProvided ? (subtitle ?? self.subtitle) : null,
       actionButtonConfiguration: actionButtonConfigurationProvided
           ? (actionButtonConfiguration ?? self.actionButtonConfiguration)
           : null,

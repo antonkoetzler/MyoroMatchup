@@ -9,21 +9,24 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get myoroErrorFeedbackSubtitle =>
+      'Please verify your connection and try again!';
+
+  @override
   String get myoroErrorFeedbackActionButtonText => 'Retry';
 
   @override
   String get gameListingScreenAppBarTitle => 'MyoroMatchup';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyMessage => 'No games found!';
+  String get gameListingScreenBodyErrorStateTitle => 'Error retrieving games!';
 
   @override
-  String get gameDetailsScreenErrorStateTitle =>
+  String get gameListingScreenBodySuccessStateEmptyTitle => 'No games found!';
+
+  @override
+  String get gameDetailsScreenBodyErrorStateTitle =>
       'Failed to retrieve game details!';
-
-  @override
-  String get gameDetailsScreenErrorStateSubtitle =>
-      'Please verify your connection and try again.';
 
   @override
   String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>

@@ -14,7 +14,7 @@ final class _Body extends StatelessWidget {
         MyoroRequestEnum.idle => const _BodyLoader(),
         MyoroRequestEnum.loading => const _BodyLoader(),
         MyoroRequestEnum.success => _BodySuccessState(gamesRequest.data!),
-        MyoroRequestEnum.error => _BodyErrorState(gamesRequest.errorMessage!),
+        MyoroRequestEnum.error => const _BodyErrorState(),
       },
     );
   }

@@ -100,6 +100,12 @@ abstract class AppLocalizations {
     Locale('pt'),
   ];
 
+  /// No description provided for @myoroErrorFeedbackSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Please verify your connection and try again!'**
+  String get myoroErrorFeedbackSubtitle;
+
   /// No description provided for @myoroErrorFeedbackActionButtonText.
   ///
   /// In en, this message translates to:
@@ -112,23 +118,23 @@ abstract class AppLocalizations {
   /// **'MyoroMatchup'**
   String get gameListingScreenAppBarTitle;
 
-  /// No description provided for @gameListingScreenBodySuccessStateEmptyMessage.
+  /// No description provided for @gameListingScreenBodyErrorStateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Error retrieving games!'**
+  String get gameListingScreenBodyErrorStateTitle;
+
+  /// No description provided for @gameListingScreenBodySuccessStateEmptyTitle.
   ///
   /// In en, this message translates to:
   /// **'No games found!'**
-  String get gameListingScreenBodySuccessStateEmptyMessage;
+  String get gameListingScreenBodySuccessStateEmptyTitle;
 
-  /// No description provided for @gameDetailsScreenErrorStateTitle.
+  /// No description provided for @gameDetailsScreenBodyErrorStateTitle.
   ///
   /// In en, this message translates to:
   /// **'Failed to retrieve game details!'**
-  String get gameDetailsScreenErrorStateTitle;
-
-  /// No description provided for @gameDetailsScreenErrorStateSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Please verify your connection and try again.'**
-  String get gameDetailsScreenErrorStateSubtitle;
+  String get gameDetailsScreenBodyErrorStateTitle;
 
   /// No description provided for @loginSignupScreenLoginUsernameEmailInputPlaceholder.
   ///

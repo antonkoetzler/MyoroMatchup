@@ -9,22 +9,26 @@ class AppLocalizationsPt extends AppLocalizations {
   AppLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
+  String get myoroErrorFeedbackSubtitle =>
+      'Verifique sua conexão e tente novamente.';
+
+  @override
   String get myoroErrorFeedbackActionButtonText => 'Tentar novamente';
 
   @override
   String get gameListingScreenAppBarTitle => 'MyoroMatchup';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyMessage =>
+  String get gameListingScreenBodyErrorStateTitle =>
+      'Erro ao recuperar os jogos!';
+
+  @override
+  String get gameListingScreenBodySuccessStateEmptyTitle =>
       'Nenhum jogo encontrado!';
 
   @override
-  String get gameDetailsScreenErrorStateTitle =>
-      'Falha ao obter os detalhes do jogo!';
-
-  @override
-  String get gameDetailsScreenErrorStateSubtitle =>
-      'Verifique sua conexão e tente novamente.';
+  String get gameDetailsScreenBodyErrorStateTitle =>
+      'Failed to retrieve game details!';
 
   @override
   String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
