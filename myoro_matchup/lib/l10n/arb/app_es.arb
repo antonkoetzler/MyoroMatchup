@@ -1,6 +1,11 @@
 {
-  "gameScreenAppBarTitle": "MyoroMatchup",
-  "gameScreenBodySuccessStateEmptyMessage": "¡No se encontraron juegos!",
+  "myoroErrorFeedbackActionButtonText": "Reintentar",
+
+  "gameListingScreenAppBarTitle": "MyoroMatchup",
+  "gameListingScreenBodySuccessStateEmptyMessage": "¡No se encontraron juegos!",
+
+  "gameDetailsScreenErrorStateTitle": "¡No se pudieron obtener los detalles del juego!",
+  "gameDetailsScreenErrorStateSubtitle": "Por favor, verifica tu conexión e inténtalo de nuevo.",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nombre de usuario o email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Contraseña",

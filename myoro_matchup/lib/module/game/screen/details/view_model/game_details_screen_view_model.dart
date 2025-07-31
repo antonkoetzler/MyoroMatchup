@@ -22,11 +22,16 @@ final class GameDetailsScreenViewModel {
   /// Initialization function.
   void init(int gameId) {
     if (_state != null) return;
-    _state = GameDetailsScreenState(() async => _gameService.get(gameId));
+    _state = GameDetailsScreenState(() async => await _gameService.get(gameId));
   }
 
   /// Dispose function.
   void dispose() {
     _state?.dispose();
+  }
+
+  /// Fetch the [Game].
+  void fetch() {
+    state.gameRequestController.fetch();
   }
 }

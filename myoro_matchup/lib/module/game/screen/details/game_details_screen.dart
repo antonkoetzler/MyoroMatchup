@@ -5,6 +5,9 @@ import 'package:provider/provider.dart';
 
 part '_widget/_app_bar.dart';
 part '_widget/_body.dart';
+part '_widget/_error_state.dart';
+part '_widget/_loader.dart';
+part '_widget/_success_state.dart';
 
 /// Game details screen.
 final class GameDetailsScreen extends StatefulWidget {
@@ -32,18 +35,11 @@ final class _GameDetailsScreenState extends State<GameDetailsScreen> {
       child: ValueListenableBuilder(
         valueListenable: _viewModel.state.gameRequestController,
         builder: (_, gameRequest, _) => switch (gameRequest.status) {
-          FINISH THE FUCKIN ERROR VIEW GENERIC WIDGET
-          MAKE SURE YOU APPLY THIS VIEW TO THE OTHER SCREENS
-          AND ALSO MAKE A GENERIC EMPTY VIEW
-          MyoroRequestEnum.idle => ,
-          MyoroRequestEnum.loading => ,
-          MyoroRequestEnum.success => ,
-          MyoroRequestEnum.error => ,
+          MyoroRequestEnum.idle => const _Loader(),
+          MyoroRequestEnum.loading => const _Loader(),
+          MyoroRequestEnum.success => const _SuccessState(),
+          MyoroRequestEnum.error => const _ErrorState(),
         },
-        //   return const MyoroScreen(
-        //     configuration: MyoroScreenConfiguration(appBar: _AppBar(), body: _Body()),
-        //   );
-        // }
       ),
     );
   }
