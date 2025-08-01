@@ -1,13 +1,22 @@
 part of '../game_details_screen.dart';
 
-/// Success state of [GameDetailsScreen].
-final class _SuccessState extends StatelessWidget {
-  const _SuccessState();
+/// Success body of [GameDetailsScreen].
+final class _BodySuccessState extends StatelessWidget {
+  const _BodySuccessState(this._game);
+
+  final Game _game;
 
   @override
-  Widget build(_) {
-    return const MyoroScreen(
-      configuration: MyoroScreenConfiguration(appBar: _AppBar(), body: _Body()),
+  Widget build(context) {
+    final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
+
+    return Padding(padding: themeExtension.bodySuccessStatePadding,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          YOU ARE HERE.
+        ],
+      ),
     );
   }
 }

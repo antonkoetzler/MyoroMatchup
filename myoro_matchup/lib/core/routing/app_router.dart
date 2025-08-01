@@ -19,6 +19,11 @@ final class AppRouter {
     navigatorKey.currentContext?.pop();
   }
 
+  /// Returns a [bool] of whether or not the the navigation stack is poppable.
+  static bool canPop() {
+    return navigatorKey.currentContext?.canPop() ?? false;
+  }
+
   AppRouter(this._userService);
 
   final UserService _userService;

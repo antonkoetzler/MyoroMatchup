@@ -28,7 +28,7 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get gameDetailsScreenBodyErrorStateTitle =>
-      'Failed to retrieve game details!';
+      '¡No se pudieron obtener los detalles del juego!';
 
   @override
   String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>

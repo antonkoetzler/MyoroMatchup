@@ -1,1 +1,1 @@
-export 'myoro_empty_feedback_configuration.dart';
+export 'mm_empty_feedback_configuration.dart';

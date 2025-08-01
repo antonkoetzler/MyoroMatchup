@@ -1,25 +1,25 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'myoro_feedback_action_button_configuration.dart';
+part of 'mm_feedback_action_button_configuration.dart';
 
 // **************************************************************************
 // MyoroModelGenerator
 // **************************************************************************
 
-/// Apply this mixin to [MyoroFeedbackActionButtonConfiguration] once the code is generated.
+/// Apply this mixin to [MmFeedbackActionButtonConfiguration] once the code is generated.
 ///
 /// ```dart
-/// class MyoroFeedbackActionButtonConfiguration with _$MyoroFeedbackActionButtonConfigurationMixin {}
+/// class MmFeedbackActionButtonConfiguration with _$MmFeedbackActionButtonConfigurationMixin {}
 /// ```
-mixin _$MyoroFeedbackActionButtonConfigurationMixin {
-  MyoroFeedbackActionButtonConfiguration get self =>
-      this as MyoroFeedbackActionButtonConfiguration;
+mixin _$MmFeedbackActionButtonConfigurationMixin {
+  MmFeedbackActionButtonConfiguration get self =>
+      this as MmFeedbackActionButtonConfiguration;
 
-  MyoroFeedbackActionButtonConfiguration copyWith({
+  MmFeedbackActionButtonConfiguration copyWith({
     String? text,
     void Function()? onTapUp,
   }) {
-    return MyoroFeedbackActionButtonConfiguration(
+    return MmFeedbackActionButtonConfiguration(
       text: text ?? self.text,
       onTapUp: onTapUp ?? self.onTapUp,
     );
@@ -27,7 +27,7 @@ mixin _$MyoroFeedbackActionButtonConfigurationMixin {
 
   @override
   bool operator ==(Object other) {
-    return other is MyoroFeedbackActionButtonConfiguration &&
+    return other is MmFeedbackActionButtonConfiguration &&
         other.runtimeType == runtimeType &&
         other.text == self.text &&
         other.onTapUp == self.onTapUp;
@@ -40,7 +40,7 @@ mixin _$MyoroFeedbackActionButtonConfigurationMixin {
 
   @override
   String toString() =>
-      'MyoroFeedbackActionButtonConfiguration(\n'
+      'MmFeedbackActionButtonConfiguration(\n'
       '  text: ${self.text},\n'
       '  onTapUp: ${self.onTapUp},\n'
       ');';

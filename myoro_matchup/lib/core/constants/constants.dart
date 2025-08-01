@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 
 /// Spacing to be used as a multiplier (i.e. kSpacing * 3).
 const kSpacing = 4.0;
@@ -8,6 +9,9 @@ const kBorderRadiusLength = 8.0;
 
 /// Default [EdgeInsets] length.
 const kEdgeInsetsLength = 8.0;
+
+/// Default [MyoroAppBarConfiguration.bordered] value.
+const kAppBarBordered = true;
 
 /// List of random profile pictures (cats).
 const kTestProfilePictures = [

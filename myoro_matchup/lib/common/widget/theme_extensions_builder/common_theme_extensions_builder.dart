@@ -4,9 +4,12 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 /// [ThemeExtension] builder of the common [Widget]s of the application.
 List<ThemeExtension> commonThemeExtensionsBuilder(bool isDarkMode, ColorScheme colorScheme, TextTheme textTheme) {
   return [
-    // Feedback
-    const MyoroEmptyFeedbackThemeExtension.builder(),
-    const MyoroErrorFeedbackThemeExtension.builder(),
-    MyoroFeedbackThemeExtension.builder(textTheme),
+    // App bars
+    MmAppBarThemeExtension.builder(textTheme),
+
+    // Feedbacks
+    const MmEmptyFeedbackThemeExtension.builder(),
+    const MmErrorFeedbackThemeExtension.builder(),
+    MmFeedbackThemeExtension.builder(textTheme),
   ];
 }

@@ -1,12 +1,13 @@
-part of '../myoro_feedback.dart';
+part of '../mm_feedback.dart';
 
-/// Icon of [MyoroFeedback].
+/// Icon of [MmFeedback].
 final class _Icon extends StatelessWidget {
   const _Icon();
 
   @override
   Widget build(context) {
-    final configuration = context.read<MyoroFeedbackConfiguration>();
-    return Icon(configuration.icon);
+    final themeExtension = context.resolveThemeExtension<MmFeedbackThemeExtension>();
+    final configuration = context.read<MmFeedbackConfiguration>();
+    return Icon(configuration.icon, size: themeExtension.iconSize);
   }
 }

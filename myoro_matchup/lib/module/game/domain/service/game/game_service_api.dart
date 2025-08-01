@@ -15,8 +15,9 @@ final class GameServiceApi implements GameService {
 
   @override
   // TODO: Mocked.
-  Future<Game>? get(int id) {
-    return Future.delayed(const Duration(milliseconds: 500));
+  Future<Game>? get(int id) async {
+    await Future.delayed(const Duration(milliseconds: 500));
+    return Game.fake();
   }
 
   @override

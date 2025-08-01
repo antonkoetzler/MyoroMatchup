@@ -1,38 +1,39 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'myoro_error_feedback_configuration.dart';
+part of 'mm_empty_feedback_configuration.dart';
 
 // **************************************************************************
 // MyoroModelGenerator
 // **************************************************************************
 
-/// Apply this mixin to [MyoroErrorFeedbackConfiguration] once the code is generated.
+/// Apply this mixin to [MmEmptyFeedbackConfiguration] once the code is generated.
 ///
 /// ```dart
-/// class MyoroErrorFeedbackConfiguration with _$MyoroErrorFeedbackConfigurationMixin {}
+/// class MmEmptyFeedbackConfiguration with _$MmEmptyFeedbackConfigurationMixin {}
 /// ```
-mixin _$MyoroErrorFeedbackConfigurationMixin {
-  MyoroErrorFeedbackConfiguration get self =>
-      this as MyoroErrorFeedbackConfiguration;
+mixin _$MmEmptyFeedbackConfigurationMixin {
+  MmEmptyFeedbackConfiguration get self => this as MmEmptyFeedbackConfiguration;
 
-  MyoroErrorFeedbackConfiguration copyWith({
+  MmEmptyFeedbackConfiguration copyWith({
     String? title,
     String? subtitle,
     bool subtitleProvided = true,
-    void Function()? retryCallback,
+    MmFeedbackActionButtonConfiguration? actionButtonConfiguration,
+    bool actionButtonConfigurationProvided = true,
   }) {
-    return MyoroErrorFeedbackConfiguration(
+    return MmEmptyFeedbackConfiguration(
       title: title ?? self.title,
       subtitle: subtitleProvided ? (subtitle ?? self.subtitle) : null,
-      retryCallback: retryCallback ?? self.retryCallback,
+      actionButtonConfiguration: actionButtonConfigurationProvided
+          ? (actionButtonConfiguration ?? self.actionButtonConfiguration)
+          : null,
     );
   }
 
   @override
   bool operator ==(Object other) {
-    return other is MyoroErrorFeedbackConfiguration &&
+    return other is MmEmptyFeedbackConfiguration &&
         other.runtimeType == runtimeType &&
-        other.retryCallback == self.retryCallback &&
         other.icon == self.icon &&
         other.title == self.title &&
         other.subtitle == self.subtitle &&
@@ -42,7 +43,6 @@ mixin _$MyoroErrorFeedbackConfigurationMixin {
   @override
   int get hashCode {
     return Object.hash(
-      self.retryCallback,
       self.icon,
       self.title,
       self.subtitle,
@@ -52,8 +52,7 @@ mixin _$MyoroErrorFeedbackConfigurationMixin {
 
   @override
   String toString() =>
-      'MyoroErrorFeedbackConfiguration(\n'
-      '  retryCallback: ${self.retryCallback},\n'
+      'MmEmptyFeedbackConfiguration(\n'
       '  icon: ${self.icon},\n'
       '  title: ${self.title},\n'
       '  subtitle: ${self.subtitle},\n'

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
-/// Configuration model of [MyoroFeedback].
+/// Configuration model of [MmFeedback].
 @immutable
-abstract class MyoroFeedbackConfiguration {
-  const MyoroFeedbackConfiguration({
+abstract class MmFeedbackConfiguration {
+  const MmFeedbackConfiguration({
     required this.icon,
     required this.title,
     this.subtitle,
@@ -21,5 +21,5 @@ abstract class MyoroFeedbackConfiguration {
   final String? subtitle;
 
   /// Configuration of the action button.
-  final MyoroFeedbackActionButtonConfiguration? actionButtonConfiguration;
+  final MmFeedbackActionButtonConfiguration? actionButtonConfiguration;
 }

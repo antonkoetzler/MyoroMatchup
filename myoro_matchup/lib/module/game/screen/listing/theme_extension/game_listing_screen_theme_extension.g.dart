@@ -18,7 +18,6 @@ mixin _$GameListingScreenThemeExtensionMixin
 
   @override
   GameListingScreenThemeExtension copyWith({
-    TextStyle? appBarTitleTextStyle,
     MyoroIconConfiguration? menuButtonIconConfiguration,
     EdgeInsets? bodySuccessStateMargin,
     EdgeInsets? gameMargin,
@@ -31,7 +30,6 @@ mixin _$GameListingScreenThemeExtensionMixin
     TextStyle? gameSportNameTextStyle,
   }) {
     return GameListingScreenThemeExtension(
-      appBarTitleTextStyle: appBarTitleTextStyle ?? self.appBarTitleTextStyle,
       menuButtonIconConfiguration:
           menuButtonIconConfiguration ?? self.menuButtonIconConfiguration,
       bodySuccessStateMargin:
@@ -53,7 +51,6 @@ mixin _$GameListingScreenThemeExtensionMixin
   bool operator ==(Object other) {
     return other is GameListingScreenThemeExtension &&
         other.runtimeType == runtimeType &&
-        other.appBarTitleTextStyle == self.appBarTitleTextStyle &&
         other.menuButtonIconConfiguration == self.menuButtonIconConfiguration &&
         other.bodySuccessStateMargin == self.bodySuccessStateMargin &&
         other.gameMargin == self.gameMargin &&
@@ -69,7 +66,6 @@ mixin _$GameListingScreenThemeExtensionMixin
   @override
   int get hashCode {
     return Object.hash(
-      self.appBarTitleTextStyle,
       self.menuButtonIconConfiguration,
       self.bodySuccessStateMargin,
       self.gameMargin,
@@ -86,7 +82,6 @@ mixin _$GameListingScreenThemeExtensionMixin
   @override
   String toString() =>
       'GameListingScreenThemeExtension(\n'
-      '  appBarTitleTextStyle: ${self.appBarTitleTextStyle},\n'
       '  menuButtonIconConfiguration: ${self.menuButtonIconConfiguration},\n'
       '  bodySuccessStateMargin: ${self.bodySuccessStateMargin},\n'
       '  gameMargin: ${self.gameMargin},\n'

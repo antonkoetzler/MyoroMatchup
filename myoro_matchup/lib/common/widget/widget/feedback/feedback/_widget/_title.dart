@@ -1,13 +1,17 @@
-part of '../myoro_feedback.dart';
+part of '../mm_feedback.dart';
 
-/// Title of [MyoroFeedback].
+/// Title of [MmFeedback].
 final class _Title extends StatelessWidget {
   const _Title();
 
   @override
   Widget build(context) {
-    final themeExtension = context.resolveThemeExtension<MyoroFeedbackThemeExtension>();
-    final configuration = context.read<MyoroFeedbackConfiguration>();
-    return Text(configuration.title, style: themeExtension.titleTextStyle);
+    final themeExtension = context.resolveThemeExtension<MmFeedbackThemeExtension>();
+    final configuration = context.read<MmFeedbackConfiguration>();
+    return Text(
+      configuration.title,
+      textAlign: themeExtension.textAlign,
+      style: themeExtension.titleTextStyle,
+    ); // , style: themeExtension.titleTextStyle);
   }
 }

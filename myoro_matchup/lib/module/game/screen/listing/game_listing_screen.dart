@@ -10,7 +10,6 @@ part '_widget/_body_loader.dart';
 part '_widget/_body_success_state.dart';
 part '_widget/_body_success_state_empty_feedback.dart';
 part '_widget/_game.dart';
-part '_widget/_app_bar_title.dart';
 part '_widget/_menu_button.dart';
 
 /// Game listing screne.

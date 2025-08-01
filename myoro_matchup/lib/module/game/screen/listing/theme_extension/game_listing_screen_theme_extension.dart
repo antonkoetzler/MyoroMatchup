@@ -14,7 +14,6 @@ part 'game_listing_screen_theme_extension.g.dart';
 final class GameListingScreenThemeExtension extends ThemeExtension<GameListingScreenThemeExtension>
     with _$GameListingScreenThemeExtensionMixin {
   const GameListingScreenThemeExtension({
-    required this.appBarTitleTextStyle,
     required this.menuButtonIconConfiguration,
     required this.bodySuccessStateMargin,
     required this.gameMargin,
@@ -28,8 +27,7 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   });
 
   GameListingScreenThemeExtension.fake()
-    : appBarTitleTextStyle = myoroFake<TextStyle>(),
-      menuButtonIconConfiguration = MyoroIconConfiguration.fake(),
+    : menuButtonIconConfiguration = MyoroIconConfiguration.fake(),
       bodySuccessStateMargin = myoroFake<EdgeInsets>(),
       gameMargin = myoroFake<EdgeInsets>(),
       gameBorderRadius = myoroFake<BorderRadius>(),
@@ -41,8 +39,7 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
       gameSportNameTextStyle = myoroFake<TextStyle>();
 
   GameListingScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
-    : appBarTitleTextStyle = textTheme.titleMedium!,
-      menuButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.menu, size: kSpacing * 6),
+    : menuButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.menu, size: kSpacing * 6),
       bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: kEdgeInsetsLength),
       gameMargin = const EdgeInsets.only(bottom: kEdgeInsetsLength),
       gameBorderRadius = BorderRadius.circular(kBorderRadiusLength),
@@ -52,9 +49,6 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
       gameProfilePictureSize = 48,
       gameNameTextStyle = textTheme.titleMedium!,
       gameSportNameTextStyle = textTheme.labelSmall!;
-
-  /// [TextStyle] of the title in the app bar.
-  final TextStyle appBarTitleTextStyle;
 
   /// [MyoroIconConfiguration] of [GameScreen]'s menu button in the app bar.
   final MyoroIconConfiguration menuButtonIconConfiguration;
@@ -90,7 +84,6 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   GameListingScreenThemeExtension lerp(covariant ThemeExtension<GameListingScreenThemeExtension>? other, double t) {
     if (other is! GameListingScreenThemeExtension) return this;
     return copyWith(
-      appBarTitleTextStyle: TextStyle.lerp(appBarTitleTextStyle, other.appBarTitleTextStyle, t),
       menuButtonIconConfiguration: MyoroIconConfiguration.lerp(
         menuButtonIconConfiguration,
         other.menuButtonIconConfiguration,

@@ -17,23 +17,44 @@ mixin _$GameDetailsScreenThemeExtensionMixin
       this as GameDetailsScreenThemeExtension;
 
   @override
-  GameDetailsScreenThemeExtension copyWith() {
-    return self;
+  GameDetailsScreenThemeExtension copyWith({
+    EdgeInsets? errorStatePadding,
+    MyoroIconConfiguration? appBarOptionsIconConfiguration,
+    EdgeInsets? bodySuccessStatePadding,
+  }) {
+    return GameDetailsScreenThemeExtension(
+      errorStatePadding: errorStatePadding ?? self.errorStatePadding,
+      appBarOptionsIconConfiguration:
+          appBarOptionsIconConfiguration ?? self.appBarOptionsIconConfiguration,
+      bodySuccessStatePadding:
+          bodySuccessStatePadding ?? self.bodySuccessStatePadding,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return other is GameDetailsScreenThemeExtension &&
-        other.runtimeType == runtimeType;
+        other.runtimeType == runtimeType &&
+        other.errorStatePadding == self.errorStatePadding &&
+        other.appBarOptionsIconConfiguration ==
+            self.appBarOptionsIconConfiguration &&
+        other.bodySuccessStatePadding == self.bodySuccessStatePadding;
   }
 
   @override
   int get hashCode {
-    return Object.hashAll(const []);
+    return Object.hash(
+      self.errorStatePadding,
+      self.appBarOptionsIconConfiguration,
+      self.bodySuccessStatePadding,
+    );
   }
 
   @override
   String toString() =>
       'GameDetailsScreenThemeExtension(\n'
+      '  errorStatePadding: ${self.errorStatePadding},\n'
+      '  appBarOptionsIconConfiguration: ${self.appBarOptionsIconConfiguration},\n'
+      '  bodySuccessStatePadding: ${self.bodySuccessStatePadding},\n'
       ');';
 }

@@ -8,11 +8,11 @@ final class _AppBar extends StatelessWidget implements PreferredSizeWidget {
   Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
-  Widget build(_) {
-    return const MyoroAppBar(
-      configuration: MyoroAppBarConfiguration(
-        child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [_AppBarTitle(), _MenuButton()]),
-        bordered: true,
+  Widget build(context) {
+    return MmAppBar(
+      configuration: MmAppBarConfiguration(
+        title: localization.gameListingScreenAppBarTitle,
+        trailing: const _MenuButton(),
       ),
     );
   }

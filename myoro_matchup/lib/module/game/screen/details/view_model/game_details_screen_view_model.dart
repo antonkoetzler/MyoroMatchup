@@ -23,6 +23,7 @@ final class GameDetailsScreenViewModel {
   void init(int gameId) {
     if (_state != null) return;
     _state = GameDetailsScreenState(() async => await _gameService.get(gameId));
+    fetch();
   }
 
   /// Dispose function.

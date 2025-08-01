@@ -7,7 +7,7 @@
   "gameListingScreenBodyErrorStateTitle": "Erro ao recuperar os jogos!",
   "gameListingScreenBodySuccessStateEmptyTitle": "Nenhum jogo encontrado!",
 
-  "gameDetailsScreenErrorStateTitle": "Falha ao obter os detalhes do jogo!",
+  "gameDetailsScreenBodyErrorStateTitle": "Falha ao obter os detalhes do jogo!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nome de usuário ou email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Senha",
