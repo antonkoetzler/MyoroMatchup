@@ -8,50 +8,47 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 
 part 'game_listing_screen_theme_extension.g.dart';
 
-/// [ThemeExtension] of [GameScreen].
+/// [ThemeExtension] of [GameListingScreen].
 @immutable
 @myoroThemeExtension
 final class GameListingScreenThemeExtension extends ThemeExtension<GameListingScreenThemeExtension>
     with _$GameListingScreenThemeExtensionMixin {
   const GameListingScreenThemeExtension({
-    required this.menuButtonIconConfiguration,
+    required this.profileButtonIconConfiguration,
     required this.bodySuccessStateMargin,
     required this.gameMargin,
     required this.gameBorderRadius,
-    required this.gameSpacing,
-    required this.gameInfoBarPadding,
-    required this.gameBannerMaxHeight,
-    required this.gameProfilePictureSize,
-    required this.gameNameTextStyle,
-    required this.gameSportNameTextStyle,
+    required this.newGameButtonIconConfiguration,
+    required this.newGameButtonTextStyle,
+    required this.newGameButtonBorderRadius,
+    required this.newGameButtonSpacing,
+    required this.newGameButtonOffset,
   });
 
   GameListingScreenThemeExtension.fake()
-    : menuButtonIconConfiguration = MyoroIconConfiguration.fake(),
+    : profileButtonIconConfiguration = MyoroIconConfiguration.fake(),
       bodySuccessStateMargin = myoroFake<EdgeInsets>(),
       gameMargin = myoroFake<EdgeInsets>(),
       gameBorderRadius = myoroFake<BorderRadius>(),
-      gameSpacing = faker.randomGenerator.decimal(scale: 20, min: 5),
-      gameInfoBarPadding = myoroFake<EdgeInsets>(),
-      gameBannerMaxHeight = faker.randomGenerator.decimal(scale: 300, min: 50),
-      gameProfilePictureSize = faker.randomGenerator.decimal(scale: 150, min: 10),
-      gameNameTextStyle = myoroFake<TextStyle>(),
-      gameSportNameTextStyle = myoroFake<TextStyle>();
+      newGameButtonIconConfiguration = MyoroIconConfiguration.fake(),
+      newGameButtonTextStyle = myoroFake<TextStyle>(),
+      newGameButtonBorderRadius = myoroFake<BorderRadius>(),
+      newGameButtonSpacing = faker.randomGenerator.decimal(scale: 20),
+      newGameButtonOffset = Offset(faker.randomGenerator.decimal(scale: 20), faker.randomGenerator.decimal(scale: 20));
 
   GameListingScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
-    : menuButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.menu, size: kSpacing * 6),
+    : profileButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.person, size: kSpacing * 6),
       bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: kEdgeInsetsLength),
       gameMargin = const EdgeInsets.only(bottom: kEdgeInsetsLength),
       gameBorderRadius = BorderRadius.circular(kBorderRadiusLength),
-      gameSpacing = kSpacing * 2,
-      gameInfoBarPadding = const EdgeInsets.all(kEdgeInsetsLength),
-      gameBannerMaxHeight = 96,
-      gameProfilePictureSize = 48,
-      gameNameTextStyle = textTheme.titleMedium!,
-      gameSportNameTextStyle = textTheme.labelSmall!;
+      newGameButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.add, size: kSpacing * 6),
+      newGameButtonTextStyle = textTheme.bodySmall!,
+      newGameButtonBorderRadius = BorderRadius.circular(kBorderRadiusLength),
+      newGameButtonSpacing = kSpacing,
+      newGameButtonOffset = const Offset(kEdgeInsetsLength, kEdgeInsetsLength);
 
-  /// [MyoroIconConfiguration] of [GameScreen]'s menu button in the app bar.
-  final MyoroIconConfiguration menuButtonIconConfiguration;
+  /// [MyoroIconConfiguration] of [GameListingScreen]'s profile button in the app bar.
+  final MyoroIconConfiguration profileButtonIconConfiguration;
 
   /// [EdgeInsets] margin of the [Game] listing.
   final EdgeInsets bodySuccessStateMargin;
@@ -62,42 +59,42 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   /// [BorderRadius] of a [Game] item.
   final BorderRadius gameBorderRadius;
 
-  /// Spacing between the [Widget]s in a [Game] item.
-  final double gameSpacing;
+  /// [MyoroIconConfiguration] of the new game button.
+  final MyoroIconConfiguration newGameButtonIconConfiguration;
 
-  /// [EdgeInsets] of the info bar of a [Game] item.
-  final EdgeInsets gameInfoBarPadding;
+  /// [TextStyle] of the new game button's text.
+  final TextStyle newGameButtonTextStyle;
 
-  /// Maximum height of a [Game]'s banner.
-  final double gameBannerMaxHeight;
+  /// [BorderRadius] of the new game button.
+  final BorderRadius newGameButtonBorderRadius;
 
-  /// Size of the [Game]'s profile picture.
-  final double gameProfilePictureSize;
+  // Spacing between the icon and text of the new game button.
+  final double newGameButtonSpacing;
 
-  /// [TextStyle] of the name of a [Game] item.
-  final TextStyle gameNameTextStyle;
-
-  /// [TextStyle] of the name of the [SportsEnum] of the [Game].
-  final TextStyle gameSportNameTextStyle;
+  /// Offset of the new game button within the body's [Stack].
+  final Offset newGameButtonOffset;
 
   @override
   GameListingScreenThemeExtension lerp(covariant ThemeExtension<GameListingScreenThemeExtension>? other, double t) {
     if (other is! GameListingScreenThemeExtension) return this;
     return copyWith(
-      menuButtonIconConfiguration: MyoroIconConfiguration.lerp(
-        menuButtonIconConfiguration,
-        other.menuButtonIconConfiguration,
+      profileButtonIconConfiguration: MyoroIconConfiguration.lerp(
+        profileButtonIconConfiguration,
+        other.profileButtonIconConfiguration,
         t,
       ),
       bodySuccessStateMargin: EdgeInsets.lerp(bodySuccessStateMargin, other.bodySuccessStateMargin, t),
       gameMargin: EdgeInsets.lerp(gameMargin, other.gameMargin, t),
       gameBorderRadius: BorderRadius.lerp(gameBorderRadius, other.gameBorderRadius, t),
-      gameSpacing: lerpDouble(gameSpacing, other.gameSpacing, t),
-      gameInfoBarPadding: EdgeInsets.lerp(gameInfoBarPadding, other.gameInfoBarPadding, t),
-      gameBannerMaxHeight: lerpDouble(gameBannerMaxHeight, other.gameBannerMaxHeight, t),
-      gameProfilePictureSize: lerpDouble(gameProfilePictureSize, other.gameProfilePictureSize, t),
-      gameNameTextStyle: TextStyle.lerp(gameNameTextStyle, other.gameNameTextStyle, t),
-      gameSportNameTextStyle: TextStyle.lerp(gameSportNameTextStyle, other.gameSportNameTextStyle, t),
+      newGameButtonIconConfiguration: MyoroIconConfiguration.lerp(
+        newGameButtonIconConfiguration,
+        other.newGameButtonIconConfiguration,
+        t,
+      ),
+      newGameButtonTextStyle: TextStyle.lerp(newGameButtonTextStyle, other.newGameButtonTextStyle, t),
+      newGameButtonBorderRadius: BorderRadius.lerp(newGameButtonBorderRadius, other.newGameButtonBorderRadius, t),
+      newGameButtonSpacing: lerpDouble(newGameButtonSpacing, other.newGameButtonSpacing, t),
+      newGameButtonOffset: Offset.lerp(newGameButtonOffset, other.newGameButtonOffset, t),
     );
   }
 }

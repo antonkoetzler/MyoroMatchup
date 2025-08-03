@@ -100,17 +100,17 @@ abstract class AppLocalizations {
     Locale('pt'),
   ];
 
-  /// No description provided for @myoroErrorFeedbackSubtitle.
+  /// No description provided for @mmErrorFeedbackSubtitle.
   ///
   /// In en, this message translates to:
   /// **'Please verify your connection and try again!'**
-  String get myoroErrorFeedbackSubtitle;
+  String get mmErrorFeedbackSubtitle;
 
-  /// No description provided for @myoroErrorFeedbackActionButtonText.
+  /// No description provided for @mmErrorFeedbackActionButtonText.
   ///
   /// In en, this message translates to:
   /// **'Retry'**
-  String get myoroErrorFeedbackActionButtonText;
+  String get mmErrorFeedbackActionButtonText;
 
   /// No description provided for @gameListingScreenAppBarTitle.
   ///
@@ -129,6 +129,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No games found!'**
   String get gameListingScreenBodySuccessStateEmptyTitle;
+
+  /// No description provided for @gameListingScreenNewGameButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Create game'**
+  String get gameListingScreenNewGameButtonText;
 
   /// No description provided for @gameDetailsScreenBodyErrorStateTitle.
   ///

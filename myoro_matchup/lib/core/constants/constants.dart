@@ -5,10 +5,10 @@ import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 const kSpacing = 4.0;
 
 /// Default [BorderRadius] length.
-const kBorderRadiusLength = 8.0;
+const kBorderRadiusLength = kSpacing * 2.0;
 
 /// Default [EdgeInsets] length.
-const kEdgeInsetsLength = 8.0;
+const kEdgeInsetsLength = kSpacing * 2.0;
 
 /// Default [MyoroAppBarConfiguration.bordered] value.
 const kAppBarBordered = true;

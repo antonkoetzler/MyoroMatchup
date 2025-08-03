@@ -7,16 +7,10 @@ final class _BodySuccessState extends StatelessWidget {
   final Game _game;
 
   @override
-  Widget build(context) {
-    final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
-
-    return Padding(padding: themeExtension.bodySuccessStatePadding,
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          YOU ARE HERE.
-        ],
-      ),
+  Widget build(_) {
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [GameCard(_game, displayDividerBetweenBannerAndInfoBar: true)],
     );
   }
 }

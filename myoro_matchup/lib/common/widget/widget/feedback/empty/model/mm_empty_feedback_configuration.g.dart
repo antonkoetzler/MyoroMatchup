@@ -14,38 +14,22 @@ part of 'mm_empty_feedback_configuration.dart';
 mixin _$MmEmptyFeedbackConfigurationMixin {
   MmEmptyFeedbackConfiguration get self => this as MmEmptyFeedbackConfiguration;
 
-  MmEmptyFeedbackConfiguration copyWith({
-    String? title,
-    String? subtitle,
-    bool subtitleProvided = true,
-    MmFeedbackActionButtonConfiguration? actionButtonConfiguration,
-    bool actionButtonConfigurationProvided = true,
-  }) {
-    return MmEmptyFeedbackConfiguration(
-      title: title ?? self.title,
-      subtitle: subtitleProvided ? (subtitle ?? self.subtitle) : null,
-      actionButtonConfiguration: actionButtonConfigurationProvided
-          ? (actionButtonConfiguration ?? self.actionButtonConfiguration)
-          : null,
-    );
-  }
-
   @override
   bool operator ==(Object other) {
     return other is MmEmptyFeedbackConfiguration &&
         other.runtimeType == runtimeType &&
-        other.icon == self.icon &&
-        other.title == self.title &&
-        other.subtitle == self.subtitle &&
+        other.iconConfiguration == self.iconConfiguration &&
+        other.titleConfiguration == self.titleConfiguration &&
+        other.subtitleConfiguration == self.subtitleConfiguration &&
         other.actionButtonConfiguration == self.actionButtonConfiguration;
   }
 
   @override
   int get hashCode {
     return Object.hash(
-      self.icon,
-      self.title,
-      self.subtitle,
+      self.iconConfiguration,
+      self.titleConfiguration,
+      self.subtitleConfiguration,
       self.actionButtonConfiguration,
     );
   }
@@ -53,9 +37,27 @@ mixin _$MmEmptyFeedbackConfigurationMixin {
   @override
   String toString() =>
       'MmEmptyFeedbackConfiguration(\n'
-      '  icon: ${self.icon},\n'
-      '  title: ${self.title},\n'
-      '  subtitle: ${self.subtitle},\n'
+      '  iconConfiguration: ${self.iconConfiguration},\n'
+      '  titleConfiguration: ${self.titleConfiguration},\n'
+      '  subtitleConfiguration: ${self.subtitleConfiguration},\n'
       '  actionButtonConfiguration: ${self.actionButtonConfiguration},\n'
       ');';
+}
+
+/// Extension class for @myoroModel to place the copyWith function.
+extension $MmEmptyFeedbackConfigurationExtension
+    on MmEmptyFeedbackConfiguration {
+  MmEmptyFeedbackConfiguration copyWith({
+    required String title,
+    String? subtitle,
+    String? actionButtonText,
+    void Function()? actionButtonCallback,
+  }) {
+    return MmEmptyFeedbackConfiguration(
+      title: title,
+      subtitle: subtitle,
+      actionButtonText: actionButtonText,
+      actionButtonCallback: actionButtonCallback,
+    );
+  }
 }

@@ -1,11 +1,12 @@
 {
-  "myoroErrorFeedbackSubtitle": "Please verify your connection and try again!",
+  "mmErrorFeedbackSubtitle": "Please verify your connection and try again!",
 
-  "myoroErrorFeedbackActionButtonText": "Retry",
+  "mmErrorFeedbackActionButtonText": "Retry",
 
   "gameListingScreenAppBarTitle": "MyoroMatchup",
   "gameListingScreenBodyErrorStateTitle": "Error retrieving games!",
   "gameListingScreenBodySuccessStateEmptyTitle": "No games found!",
+  "gameListingScreenNewGameButtonText": "Create game",
 
   "gameDetailsScreenBodyErrorStateTitle": "Failed to retrieve game details!",
 

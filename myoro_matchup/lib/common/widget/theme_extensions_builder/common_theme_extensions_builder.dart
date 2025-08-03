@@ -10,6 +10,5 @@ List<ThemeExtension> commonThemeExtensionsBuilder(bool isDarkMode, ColorScheme c
     // Feedbacks
     const MmEmptyFeedbackThemeExtension.builder(),
     const MmErrorFeedbackThemeExtension.builder(),
-    MmFeedbackThemeExtension.builder(textTheme),
   ];
 }

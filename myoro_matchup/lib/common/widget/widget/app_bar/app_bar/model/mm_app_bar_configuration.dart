@@ -9,10 +9,11 @@ part 'mm_app_bar_configuration.g.dart';
 @immutable
 @myoroModel
 final class MmAppBarConfiguration with _$MmAppBarConfigurationMixin {
-  const MmAppBarConfiguration({this.onBack, required this.title, required this.trailing});
+  const MmAppBarConfiguration({this.onBack, required this.title, this.leading, required this.trailing});
 
   MmAppBarConfiguration.fake()
     : onBack = faker.randomGenerator.boolean() ? (() {}) : null,
+      leading = Text(faker.lorem.word()),
       title = faker.lorem.word(),
       trailing = Text(faker.lorem.word());
 
@@ -21,6 +22,9 @@ final class MmAppBarConfiguration with _$MmAppBarConfigurationMixin {
 
   /// Leading [Widget].
   final String title;
+
+  // Leading [Widget].
+  final Widget? leading;
 
   /// Trailing [Widget].
   final Widget trailing;

@@ -12,7 +12,7 @@ final class _AppBar extends StatelessWidget implements PreferredSizeWidget {
     return MmAppBar(
       configuration: MmAppBarConfiguration(
         title: localization.gameListingScreenAppBarTitle,
-        trailing: const _MenuButton(),
+        trailing: const _ProfileButton(),
       ),
     );
   }

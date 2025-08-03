@@ -1,0 +1,76 @@
+// GENERATED CODE - DO NOT MODIFY BY HAND
+
+part of 'game_card_theme_extension.dart';
+
+// **************************************************************************
+// MyoroThemeExtensionGenerator
+// **************************************************************************
+
+/// Apply this mixin to [GameCardThemeExtension] once the code is generated.
+///
+/// ```dart
+/// class GameCardThemeExtension with _$GameCardThemeExtensionMixin {}
+/// ```
+mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
+  GameCardThemeExtension get self => this as GameCardThemeExtension;
+
+  @override
+  GameCardThemeExtension copyWith({
+    double? bannerMaxHeight,
+    BorderRadius? profilePictureBorderRadius,
+    double? profilePictureSize,
+    EdgeInsets? infoBarPadding,
+    double? infoBarSpacing,
+    TextStyle? gameNameTextStyle,
+    TextStyle? sportNameTextStyle,
+  }) {
+    return GameCardThemeExtension(
+      bannerMaxHeight: bannerMaxHeight ?? self.bannerMaxHeight,
+      profilePictureBorderRadius:
+          profilePictureBorderRadius ?? self.profilePictureBorderRadius,
+      profilePictureSize: profilePictureSize ?? self.profilePictureSize,
+      infoBarPadding: infoBarPadding ?? self.infoBarPadding,
+      infoBarSpacing: infoBarSpacing ?? self.infoBarSpacing,
+      gameNameTextStyle: gameNameTextStyle ?? self.gameNameTextStyle,
+      sportNameTextStyle: sportNameTextStyle ?? self.sportNameTextStyle,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return other is GameCardThemeExtension &&
+        other.runtimeType == runtimeType &&
+        other.bannerMaxHeight == self.bannerMaxHeight &&
+        other.profilePictureBorderRadius == self.profilePictureBorderRadius &&
+        other.profilePictureSize == self.profilePictureSize &&
+        other.infoBarPadding == self.infoBarPadding &&
+        other.infoBarSpacing == self.infoBarSpacing &&
+        other.gameNameTextStyle == self.gameNameTextStyle &&
+        other.sportNameTextStyle == self.sportNameTextStyle;
+  }
+
+  @override
+  int get hashCode {
+    return Object.hash(
+      self.bannerMaxHeight,
+      self.profilePictureBorderRadius,
+      self.profilePictureSize,
+      self.infoBarPadding,
+      self.infoBarSpacing,
+      self.gameNameTextStyle,
+      self.sportNameTextStyle,
+    );
+  }
+
+  @override
+  String toString() =>
+      'GameCardThemeExtension(\n'
+      '  bannerMaxHeight: ${self.bannerMaxHeight},\n'
+      '  profilePictureBorderRadius: ${self.profilePictureBorderRadius},\n'
+      '  profilePictureSize: ${self.profilePictureSize},\n'
+      '  infoBarPadding: ${self.infoBarPadding},\n'
+      '  infoBarSpacing: ${self.infoBarSpacing},\n'
+      '  gameNameTextStyle: ${self.gameNameTextStyle},\n'
+      '  sportNameTextStyle: ${self.sportNameTextStyle},\n'
+      ');';
+}

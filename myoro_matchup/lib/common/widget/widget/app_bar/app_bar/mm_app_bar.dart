@@ -23,18 +23,12 @@ final class MmAppBar extends StatelessWidget {
         configuration: MyoroAppBarConfiguration(
           bordered: themeExtension.bordered,
           child: Row(
+            spacing: themeExtension.spacing,
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Flexible(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  spacing: themeExtension.spacing,
-                  children: [
-                    if (AppRouter.canPop()) const _BackButton(),
-                    const Flexible(child: _Title()),
-                  ],
-                ),
-              ),
+              if (AppRouter.canPop()) const _BackButton(),
+              ?configuration.leading,
+              const Flexible(child: _Title()),
               Flexible(child: configuration.trailing),
             ],
           ),

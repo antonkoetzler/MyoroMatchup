@@ -9,11 +9,11 @@ class AppLocalizationsPt extends AppLocalizations {
   AppLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
-  String get myoroErrorFeedbackSubtitle =>
+  String get mmErrorFeedbackSubtitle =>
       'Verifique sua conexão e tente novamente.';
 
   @override
-  String get myoroErrorFeedbackActionButtonText => 'Tentar novamente';
+  String get mmErrorFeedbackActionButtonText => 'Tentar novamente';
 
   @override
   String get gameListingScreenAppBarTitle => 'MyoroMatchup';
@@ -25,6 +25,9 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get gameListingScreenBodySuccessStateEmptyTitle =>
       'Nenhum jogo encontrado!';
+
+  @override
+  String get gameListingScreenNewGameButtonText => 'Criar jogo';
 
   @override
   String get gameDetailsScreenBodyErrorStateTitle =>

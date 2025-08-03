@@ -1,6 +1,6 @@
 part of '../game_details_screen.dart';
 
-/// [MmRequestEnum.error] state of [GameDetailsScreen].
+/// [MyoroRequestEnum.error] state of [GameDetailsScreen].
 final class _ErrorState extends StatelessWidget {
   const _ErrorState();
 
@@ -15,7 +15,7 @@ final class _ErrorState extends StatelessWidget {
         child: MmErrorFeedback(
           configuration: MmErrorFeedbackConfiguration(
             title: localization.gameDetailsScreenBodyErrorStateTitle,
-            retryCallback: viewModel.fetch,
+            onRetry: viewModel.fetch,
           ),
         ),
       ),

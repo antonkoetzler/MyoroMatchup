@@ -20,14 +20,11 @@ mixin _$GameDetailsScreenThemeExtensionMixin
   GameDetailsScreenThemeExtension copyWith({
     EdgeInsets? errorStatePadding,
     MyoroIconConfiguration? appBarOptionsIconConfiguration,
-    EdgeInsets? bodySuccessStatePadding,
   }) {
     return GameDetailsScreenThemeExtension(
       errorStatePadding: errorStatePadding ?? self.errorStatePadding,
       appBarOptionsIconConfiguration:
           appBarOptionsIconConfiguration ?? self.appBarOptionsIconConfiguration,
-      bodySuccessStatePadding:
-          bodySuccessStatePadding ?? self.bodySuccessStatePadding,
     );
   }
 
@@ -37,8 +34,7 @@ mixin _$GameDetailsScreenThemeExtensionMixin
         other.runtimeType == runtimeType &&
         other.errorStatePadding == self.errorStatePadding &&
         other.appBarOptionsIconConfiguration ==
-            self.appBarOptionsIconConfiguration &&
-        other.bodySuccessStatePadding == self.bodySuccessStatePadding;
+            self.appBarOptionsIconConfiguration;
   }
 
   @override
@@ -46,7 +42,6 @@ mixin _$GameDetailsScreenThemeExtensionMixin
     return Object.hash(
       self.errorStatePadding,
       self.appBarOptionsIconConfiguration,
-      self.bodySuccessStatePadding,
     );
   }
 
@@ -55,6 +50,5 @@ mixin _$GameDetailsScreenThemeExtensionMixin
       'GameDetailsScreenThemeExtension(\n'
       '  errorStatePadding: ${self.errorStatePadding},\n'
       '  appBarOptionsIconConfiguration: ${self.appBarOptionsIconConfiguration},\n'
-      '  bodySuccessStatePadding: ${self.bodySuccessStatePadding},\n'
       ');';
 }

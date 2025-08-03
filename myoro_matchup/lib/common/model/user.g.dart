@@ -14,10 +14,6 @@ part of 'user.dart';
 mixin _$UserMixin {
   User get self => this as User;
 
-  User copyWith({String? username}) {
-    return User(username: username ?? self.username);
-  }
-
   @override
   bool operator ==(Object other) {
     return other is User &&
@@ -35,4 +31,11 @@ mixin _$UserMixin {
       'User(\n'
       '  username: ${self.username},\n'
       ');';
+}
+
+/// Extension class for @myoroModel to place the copyWith function.
+extension $UserExtension on User {
+  User copyWith({String? username}) {
+    return User(username: username ?? self.username);
+  }
 }

@@ -13,27 +13,21 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
   const GameDetailsScreenThemeExtension({
     required this.errorStatePadding,
     required this.appBarOptionsIconConfiguration,
-    required this.bodySuccessStatePadding,
   });
 
   GameDetailsScreenThemeExtension.fake()
     : errorStatePadding = myoroFake<EdgeInsets>(),
-      appBarOptionsIconConfiguration = MyoroIconConfiguration.fake(),
-      bodySuccessStatePadding = myoroFake<EdgeInsets>();
+      appBarOptionsIconConfiguration = MyoroIconConfiguration.fake();
 
   const GameDetailsScreenThemeExtension.builder()
     : errorStatePadding = const EdgeInsets.all(kSpacing * 4),
-      appBarOptionsIconConfiguration = const MyoroIconConfiguration(icon: Icons.more_vert, size: kSpacing * 6),
-      bodySuccessStatePadding = const EdgeInsets.all(kSpacing * 2);
+      appBarOptionsIconConfiguration = const MyoroIconConfiguration(icon: Icons.more_vert, size: kSpacing * 6);
 
   /// [EdgeInsets] of the error state's content.
   final EdgeInsets errorStatePadding;
 
   /// [MyoroIconConfiguration] of the app bar options button.
   final MyoroIconConfiguration appBarOptionsIconConfiguration;
-
-  /// Padding of the body's success state content.
-  final EdgeInsets bodySuccessStatePadding;
 
   @override
   ThemeExtension<GameDetailsScreenThemeExtension> lerp(
@@ -48,7 +42,6 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
         other.appBarOptionsIconConfiguration,
         t,
       ),
-      bodySuccessStatePadding: EdgeInsets.lerp(bodySuccessStatePadding, other.bodySuccessStatePadding, t),
     );
   }
 }

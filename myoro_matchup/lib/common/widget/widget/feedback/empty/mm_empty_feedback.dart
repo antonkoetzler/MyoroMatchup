@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Empty feedback variant of [MmFeedback].
@@ -9,5 +10,5 @@ final class MmEmptyFeedback extends StatelessWidget {
   final MmEmptyFeedbackConfiguration configuration;
 
   @override
-  Widget build(_) => MmFeedback(configuration: configuration);
+  Widget build(_) => MyoroFeedback(configuration: configuration);
 }

@@ -14,26 +14,6 @@ part of 'game.dart';
 mixin _$GameMixin {
   Game get self => this as Game;
 
-  Game copyWith({
-    int? id,
-    String? name,
-    String? profilePicture,
-    bool profilePictureProvided = true,
-    String? banner,
-    bool bannerProvided = true,
-    SportsEnum? sport,
-  }) {
-    return Game(
-      id: id ?? self.id,
-      name: name ?? self.name,
-      profilePicture: profilePictureProvided
-          ? (profilePicture ?? self.profilePicture)
-          : null,
-      banner: bannerProvided ? (banner ?? self.banner) : null,
-      sport: sport ?? self.sport,
-    );
-  }
-
   @override
   bool operator ==(Object other) {
     return other is Game &&
@@ -65,4 +45,27 @@ mixin _$GameMixin {
       '  banner: ${self.banner},\n'
       '  sport: ${self.sport},\n'
       ');';
+}
+
+/// Extension class for @myoroModel to place the copyWith function.
+extension $GameExtension on Game {
+  Game copyWith({
+    int? id,
+    String? name,
+    String? profilePicture,
+    bool profilePictureProvided = true,
+    String? banner,
+    bool bannerProvided = true,
+    SportsEnum? sport,
+  }) {
+    return Game(
+      id: id ?? self.id,
+      name: name ?? self.name,
+      profilePicture: profilePictureProvided
+          ? (profilePicture ?? self.profilePicture)
+          : null,
+      banner: bannerProvided ? (banner ?? self.banner) : null,
+      sport: sport ?? self.sport,
+    );
+  }
 }

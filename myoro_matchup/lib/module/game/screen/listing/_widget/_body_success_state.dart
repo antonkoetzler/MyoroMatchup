@@ -10,19 +10,26 @@ final class _BodySuccessState extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
+    final bodySuccessStateMargin = themeExtension.bodySuccessStateMargin;
+    final newGameButtonOffset = themeExtension.newGameButtonOffset;
 
     return _games.isEmpty
         ? const _BodySuccessStateEmptyFeedback()
-        : Padding(
-            padding: themeExtension.bodySuccessStateMargin,
-            child: CustomScrollView(
-              slivers: [
-                SliverList.builder(
-                  itemCount: _games.length,
-                  itemBuilder: (_, index) => _Game(index == 0, _games.elementAt(index)),
+        : Stack(
+            children: [
+              Padding(
+                padding: bodySuccessStateMargin,
+                child: CustomScrollView(
+                  slivers: [
+                    SliverList.builder(
+                      itemCount: _games.length,
+                      itemBuilder: (_, index) => _Game(index == 0, _games.elementAt(index)),
+                    ),
+                  ],
                 ),
-              ],
-            ),
+              ),
+              Positioned(right: newGameButtonOffset.dx, bottom: newGameButtonOffset.dy, child: const _NewGameButton()),
+            ],
           );
   }
 }

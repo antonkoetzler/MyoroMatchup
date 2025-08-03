@@ -12,7 +12,7 @@ final class _BodyErrorState extends StatelessWidget {
       child: MmErrorFeedback(
         configuration: MmErrorFeedbackConfiguration(
           title: localization.gameListingScreenBodyErrorStateTitle,
-          retryCallback: viewModel.fetchGames,
+          onRetry: viewModel.fetchGames,
         ),
       ),
     );

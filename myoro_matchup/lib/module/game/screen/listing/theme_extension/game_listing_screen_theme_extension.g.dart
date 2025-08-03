@@ -18,32 +18,31 @@ mixin _$GameListingScreenThemeExtensionMixin
 
   @override
   GameListingScreenThemeExtension copyWith({
-    MyoroIconConfiguration? menuButtonIconConfiguration,
+    MyoroIconConfiguration? profileButtonIconConfiguration,
     EdgeInsets? bodySuccessStateMargin,
     EdgeInsets? gameMargin,
     BorderRadius? gameBorderRadius,
-    double? gameSpacing,
-    EdgeInsets? gameInfoBarPadding,
-    double? gameBannerMaxHeight,
-    double? gameProfilePictureSize,
-    TextStyle? gameNameTextStyle,
-    TextStyle? gameSportNameTextStyle,
+    MyoroIconConfiguration? newGameButtonIconConfiguration,
+    TextStyle? newGameButtonTextStyle,
+    BorderRadius? newGameButtonBorderRadius,
+    double? newGameButtonSpacing,
+    Offset? newGameButtonOffset,
   }) {
     return GameListingScreenThemeExtension(
-      menuButtonIconConfiguration:
-          menuButtonIconConfiguration ?? self.menuButtonIconConfiguration,
+      profileButtonIconConfiguration:
+          profileButtonIconConfiguration ?? self.profileButtonIconConfiguration,
       bodySuccessStateMargin:
           bodySuccessStateMargin ?? self.bodySuccessStateMargin,
       gameMargin: gameMargin ?? self.gameMargin,
       gameBorderRadius: gameBorderRadius ?? self.gameBorderRadius,
-      gameSpacing: gameSpacing ?? self.gameSpacing,
-      gameInfoBarPadding: gameInfoBarPadding ?? self.gameInfoBarPadding,
-      gameBannerMaxHeight: gameBannerMaxHeight ?? self.gameBannerMaxHeight,
-      gameProfilePictureSize:
-          gameProfilePictureSize ?? self.gameProfilePictureSize,
-      gameNameTextStyle: gameNameTextStyle ?? self.gameNameTextStyle,
-      gameSportNameTextStyle:
-          gameSportNameTextStyle ?? self.gameSportNameTextStyle,
+      newGameButtonIconConfiguration:
+          newGameButtonIconConfiguration ?? self.newGameButtonIconConfiguration,
+      newGameButtonTextStyle:
+          newGameButtonTextStyle ?? self.newGameButtonTextStyle,
+      newGameButtonBorderRadius:
+          newGameButtonBorderRadius ?? self.newGameButtonBorderRadius,
+      newGameButtonSpacing: newGameButtonSpacing ?? self.newGameButtonSpacing,
+      newGameButtonOffset: newGameButtonOffset ?? self.newGameButtonOffset,
     );
   }
 
@@ -51,46 +50,45 @@ mixin _$GameListingScreenThemeExtensionMixin
   bool operator ==(Object other) {
     return other is GameListingScreenThemeExtension &&
         other.runtimeType == runtimeType &&
-        other.menuButtonIconConfiguration == self.menuButtonIconConfiguration &&
+        other.profileButtonIconConfiguration ==
+            self.profileButtonIconConfiguration &&
         other.bodySuccessStateMargin == self.bodySuccessStateMargin &&
         other.gameMargin == self.gameMargin &&
         other.gameBorderRadius == self.gameBorderRadius &&
-        other.gameSpacing == self.gameSpacing &&
-        other.gameInfoBarPadding == self.gameInfoBarPadding &&
-        other.gameBannerMaxHeight == self.gameBannerMaxHeight &&
-        other.gameProfilePictureSize == self.gameProfilePictureSize &&
-        other.gameNameTextStyle == self.gameNameTextStyle &&
-        other.gameSportNameTextStyle == self.gameSportNameTextStyle;
+        other.newGameButtonIconConfiguration ==
+            self.newGameButtonIconConfiguration &&
+        other.newGameButtonTextStyle == self.newGameButtonTextStyle &&
+        other.newGameButtonBorderRadius == self.newGameButtonBorderRadius &&
+        other.newGameButtonSpacing == self.newGameButtonSpacing &&
+        other.newGameButtonOffset == self.newGameButtonOffset;
   }
 
   @override
   int get hashCode {
     return Object.hash(
-      self.menuButtonIconConfiguration,
+      self.profileButtonIconConfiguration,
       self.bodySuccessStateMargin,
       self.gameMargin,
       self.gameBorderRadius,
-      self.gameSpacing,
-      self.gameInfoBarPadding,
-      self.gameBannerMaxHeight,
-      self.gameProfilePictureSize,
-      self.gameNameTextStyle,
-      self.gameSportNameTextStyle,
+      self.newGameButtonIconConfiguration,
+      self.newGameButtonTextStyle,
+      self.newGameButtonBorderRadius,
+      self.newGameButtonSpacing,
+      self.newGameButtonOffset,
     );
   }
 
   @override
   String toString() =>
       'GameListingScreenThemeExtension(\n'
-      '  menuButtonIconConfiguration: ${self.menuButtonIconConfiguration},\n'
+      '  profileButtonIconConfiguration: ${self.profileButtonIconConfiguration},\n'
       '  bodySuccessStateMargin: ${self.bodySuccessStateMargin},\n'
       '  gameMargin: ${self.gameMargin},\n'
       '  gameBorderRadius: ${self.gameBorderRadius},\n'
-      '  gameSpacing: ${self.gameSpacing},\n'
-      '  gameInfoBarPadding: ${self.gameInfoBarPadding},\n'
-      '  gameBannerMaxHeight: ${self.gameBannerMaxHeight},\n'
-      '  gameProfilePictureSize: ${self.gameProfilePictureSize},\n'
-      '  gameNameTextStyle: ${self.gameNameTextStyle},\n'
-      '  gameSportNameTextStyle: ${self.gameSportNameTextStyle},\n'
+      '  newGameButtonIconConfiguration: ${self.newGameButtonIconConfiguration},\n'
+      '  newGameButtonTextStyle: ${self.newGameButtonTextStyle},\n'
+      '  newGameButtonBorderRadius: ${self.newGameButtonBorderRadius},\n'
+      '  newGameButtonSpacing: ${self.newGameButtonSpacing},\n'
+      '  newGameButtonOffset: ${self.newGameButtonOffset},\n'
       ');';
 }

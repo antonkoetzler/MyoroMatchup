@@ -14,37 +14,22 @@ part of 'mm_error_feedback_configuration.dart';
 mixin _$MmErrorFeedbackConfigurationMixin {
   MmErrorFeedbackConfiguration get self => this as MmErrorFeedbackConfiguration;
 
-  MmErrorFeedbackConfiguration copyWith({
-    String? title,
-    String? subtitle,
-    bool subtitleProvided = true,
-    void Function()? retryCallback,
-  }) {
-    return MmErrorFeedbackConfiguration(
-      title: title ?? self.title,
-      subtitle: subtitleProvided ? (subtitle ?? self.subtitle) : null,
-      retryCallback: retryCallback ?? self.retryCallback,
-    );
-  }
-
   @override
   bool operator ==(Object other) {
     return other is MmErrorFeedbackConfiguration &&
         other.runtimeType == runtimeType &&
-        other.retryCallback == self.retryCallback &&
-        other.icon == self.icon &&
-        other.title == self.title &&
-        other.subtitle == self.subtitle &&
+        other.iconConfiguration == self.iconConfiguration &&
+        other.titleConfiguration == self.titleConfiguration &&
+        other.subtitleConfiguration == self.subtitleConfiguration &&
         other.actionButtonConfiguration == self.actionButtonConfiguration;
   }
 
   @override
   int get hashCode {
     return Object.hash(
-      self.retryCallback,
-      self.icon,
-      self.title,
-      self.subtitle,
+      self.iconConfiguration,
+      self.titleConfiguration,
+      self.subtitleConfiguration,
       self.actionButtonConfiguration,
     );
   }
@@ -52,10 +37,25 @@ mixin _$MmErrorFeedbackConfigurationMixin {
   @override
   String toString() =>
       'MmErrorFeedbackConfiguration(\n'
-      '  retryCallback: ${self.retryCallback},\n'
-      '  icon: ${self.icon},\n'
-      '  title: ${self.title},\n'
-      '  subtitle: ${self.subtitle},\n'
+      '  iconConfiguration: ${self.iconConfiguration},\n'
+      '  titleConfiguration: ${self.titleConfiguration},\n'
+      '  subtitleConfiguration: ${self.subtitleConfiguration},\n'
       '  actionButtonConfiguration: ${self.actionButtonConfiguration},\n'
       ');';
+}
+
+/// Extension class for @myoroModel to place the copyWith function.
+extension $MmErrorFeedbackConfigurationExtension
+    on MmErrorFeedbackConfiguration {
+  MmErrorFeedbackConfiguration copyWith({
+    required String title,
+    String? subtitle,
+    required void Function() onRetry,
+  }) {
+    return MmErrorFeedbackConfiguration(
+      title: title,
+      subtitle: subtitle,
+      onRetry: onRetry,
+    );
+  }
 }
