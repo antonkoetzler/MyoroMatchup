@@ -22,7 +22,7 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
     required this.newGameButtonTextStyle,
     required this.newGameButtonBorderRadius,
     required this.newGameButtonSpacing,
-    required this.newGameButtonOffset,
+    required this.newGameButtonBottomOffset,
   });
 
   GameListingScreenThemeExtension.fake()
@@ -34,7 +34,7 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
       newGameButtonTextStyle = myoroFake<TextStyle>(),
       newGameButtonBorderRadius = myoroFake<BorderRadius>(),
       newGameButtonSpacing = faker.randomGenerator.decimal(scale: 20),
-      newGameButtonOffset = Offset(faker.randomGenerator.decimal(scale: 20), faker.randomGenerator.decimal(scale: 20));
+      newGameButtonBottomOffset = faker.randomGenerator.decimal(scale: 20);
 
   GameListingScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
     : profileButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.person, size: kSpacing * 6),
@@ -45,7 +45,7 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
       newGameButtonTextStyle = textTheme.bodySmall!,
       newGameButtonBorderRadius = BorderRadius.circular(kBorderRadiusLength),
       newGameButtonSpacing = kSpacing,
-      newGameButtonOffset = const Offset(kEdgeInsetsLength, kEdgeInsetsLength);
+      newGameButtonBottomOffset = kSpacing;
 
   /// [MyoroIconConfiguration] of [GameListingScreen]'s profile button in the app bar.
   final MyoroIconConfiguration profileButtonIconConfiguration;
@@ -72,7 +72,7 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   final double newGameButtonSpacing;
 
   /// Offset of the new game button within the body's [Stack].
-  final Offset newGameButtonOffset;
+  final double newGameButtonBottomOffset;
 
   @override
   GameListingScreenThemeExtension lerp(covariant ThemeExtension<GameListingScreenThemeExtension>? other, double t) {
@@ -94,7 +94,7 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
       newGameButtonTextStyle: TextStyle.lerp(newGameButtonTextStyle, other.newGameButtonTextStyle, t),
       newGameButtonBorderRadius: BorderRadius.lerp(newGameButtonBorderRadius, other.newGameButtonBorderRadius, t),
       newGameButtonSpacing: lerpDouble(newGameButtonSpacing, other.newGameButtonSpacing, t),
-      newGameButtonOffset: Offset.lerp(newGameButtonOffset, other.newGameButtonOffset, t),
+      newGameButtonBottomOffset: lerpDouble(newGameButtonBottomOffset, other.newGameButtonBottomOffset, t),
     );
   }
 }

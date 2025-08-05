@@ -34,6 +34,17 @@ class AppLocalizationsEs extends AppLocalizations {
       '¡No se pudieron obtener los detalles del juego!';
 
   @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Jugadores';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText =>
+      'Jugadores';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
+      'Clasificaciones';
+
+  @override
   String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
       'Nombre de usuario o email';
 

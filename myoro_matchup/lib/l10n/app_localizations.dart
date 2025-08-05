@@ -142,6 +142,24 @@ abstract class AppLocalizations {
   /// **'Failed to retrieve game details!'**
   String get gameDetailsScreenBodyErrorStateTitle;
 
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabText.
+  ///
+  /// In en, this message translates to:
+  /// **'Players'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabText;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewPlayersTabText.
+  ///
+  /// In en, this message translates to:
+  /// **'Players'**
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewRankingsTabText.
+  ///
+  /// In en, this message translates to:
+  /// **'Rankings'**
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText;
+
   /// No description provided for @loginSignupScreenLoginUsernameEmailInputPlaceholder.
   ///
   /// In en, this message translates to:

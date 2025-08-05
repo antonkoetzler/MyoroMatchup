@@ -14,6 +14,7 @@ part 'game_card_theme_extension.g.dart';
 final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension> with _$GameCardThemeExtensionMixin {
   const GameCardThemeExtension({
     required this.bannerMaxHeight,
+    required this.bannerDecoration,
     required this.profilePictureBorderRadius,
     required this.profilePictureSize,
     required this.infoBarPadding,
@@ -24,6 +25,7 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
 
   GameCardThemeExtension.fake()
     : bannerMaxHeight = faker.randomGenerator.decimal(scale: 300, min: 50),
+      bannerDecoration = myoroFake<BoxDecoration>(),
       profilePictureBorderRadius = myoroFake<BorderRadius>(),
       profilePictureSize = faker.randomGenerator.decimal(scale: 150, min: 10),
       infoBarPadding = myoroFake<EdgeInsets>(),
@@ -31,8 +33,21 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
       gameNameTextStyle = myoroFake<TextStyle>(),
       sportNameTextStyle = myoroFake<TextStyle>();
 
-  GameCardThemeExtension.builder(TextTheme textTheme)
+  GameCardThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
     : bannerMaxHeight = kSpacing * 24,
+      bannerDecoration = BoxDecoration(
+        gradient: RadialGradient(
+          center: Alignment.center,
+          radius: 1.5,
+          colors: [
+            Colors.transparent,
+            colorScheme.primary.withValues(alpha: 0.02),
+            colorScheme.primary.withValues(alpha: 0.08),
+            colorScheme.primary.withValues(alpha: 0.15),
+          ],
+          stops: const [0.0, 0.3, 0.6, 1.0],
+        ),
+      ),
       profilePictureBorderRadius = BorderRadius.circular(kBorderRadiusLength),
       profilePictureSize = kSpacing * 12,
       infoBarPadding = const EdgeInsets.all(kEdgeInsetsLength),
@@ -42,6 +57,9 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
 
   /// Banner's max height.
   final double bannerMaxHeight;
+
+  /// [BoxDecoration] of the banner.
+  final BoxDecoration bannerDecoration;
 
   /// Profile picture's [BorderRadius].
   final BorderRadius profilePictureBorderRadius;
@@ -66,6 +84,7 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
     if (other is! GameCardThemeExtension) return this;
     return copyWith(
       bannerMaxHeight: lerpDouble(bannerMaxHeight, other.bannerMaxHeight, t),
+      bannerDecoration: BoxDecoration.lerp(bannerDecoration, other.bannerDecoration, t),
       profilePictureBorderRadius: BorderRadius.lerp(profilePictureBorderRadius, other.profilePictureBorderRadius, t),
       profilePictureSize: lerpDouble(profilePictureSize, other.profilePictureSize, t),
       infoBarPadding: EdgeInsets.lerp(infoBarPadding, other.infoBarPadding, t),

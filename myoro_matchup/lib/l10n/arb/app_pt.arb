@@ -9,6 +9,9 @@
   "gameListingScreenNewGameButtonText": "Criar jogo",
 
   "gameDetailsScreenBodyErrorStateTitle": "Falha ao obter os detalhes do jogo!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Jogadores",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Jogadores",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Classificações",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nome de usuário ou email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Senha",

@@ -11,13 +11,14 @@ final class _BodySuccessState extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
     final bodySuccessStateMargin = themeExtension.bodySuccessStateMargin;
-    final newGameButtonOffset = themeExtension.newGameButtonOffset;
+    final newGameButtonBottomOffset = themeExtension.newGameButtonBottomOffset;
 
-    return _games.isEmpty
-        ? const _BodySuccessStateEmptyFeedback()
-        : Stack(
-            children: [
-              Padding(
+    return Stack(
+      alignment: Alignment.center,
+      children: [
+        _games.isEmpty
+            ? const _BodySuccessStateEmptyFeedback()
+            : Padding(
                 padding: bodySuccessStateMargin,
                 child: CustomScrollView(
                   slivers: [
@@ -28,8 +29,8 @@ final class _BodySuccessState extends StatelessWidget {
                   ],
                 ),
               ),
-              Positioned(right: newGameButtonOffset.dx, bottom: newGameButtonOffset.dy, child: const _NewGameButton()),
-            ],
-          );
+        Positioned(bottom: newGameButtonBottomOffset, child: const _NewGameButton()),
+      ],
+    );
   }
 }

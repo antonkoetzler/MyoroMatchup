@@ -5,7 +5,7 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 List<ThemeExtension> gameModuleThemeExtensionsBuilder(bool isDarkMode, ColorScheme colorScheme, TextTheme textTheme) {
   return [
     // Shared widgets
-    GameCardThemeExtension.builder(textTheme),
+    GameCardThemeExtension.builder(colorScheme, textTheme),
 
     // Screens
     const GameDetailsScreenThemeExtension.builder(),

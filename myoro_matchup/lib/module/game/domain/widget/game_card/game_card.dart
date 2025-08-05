@@ -26,7 +26,7 @@ final class GameCard extends StatelessWidget {
   Widget build(_) {
     return Column(
       mainAxisSize: MainAxisSize.min,
-      children: [_Banner(_game), if (displayDividerBetweenBannerAndInfoBar) _Divider(), _InfoBar(_game)],
+      children: [_Banner(_game), if (displayDividerBetweenBannerAndInfoBar) const _Divider(), _InfoBar(_game)],
     );
   }
 }

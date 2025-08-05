@@ -26,7 +26,7 @@ mixin _$GameListingScreenThemeExtensionMixin
     TextStyle? newGameButtonTextStyle,
     BorderRadius? newGameButtonBorderRadius,
     double? newGameButtonSpacing,
-    Offset? newGameButtonOffset,
+    double? newGameButtonBottomOffset,
   }) {
     return GameListingScreenThemeExtension(
       profileButtonIconConfiguration:
@@ -42,7 +42,8 @@ mixin _$GameListingScreenThemeExtensionMixin
       newGameButtonBorderRadius:
           newGameButtonBorderRadius ?? self.newGameButtonBorderRadius,
       newGameButtonSpacing: newGameButtonSpacing ?? self.newGameButtonSpacing,
-      newGameButtonOffset: newGameButtonOffset ?? self.newGameButtonOffset,
+      newGameButtonBottomOffset:
+          newGameButtonBottomOffset ?? self.newGameButtonBottomOffset,
     );
   }
 
@@ -60,7 +61,7 @@ mixin _$GameListingScreenThemeExtensionMixin
         other.newGameButtonTextStyle == self.newGameButtonTextStyle &&
         other.newGameButtonBorderRadius == self.newGameButtonBorderRadius &&
         other.newGameButtonSpacing == self.newGameButtonSpacing &&
-        other.newGameButtonOffset == self.newGameButtonOffset;
+        other.newGameButtonBottomOffset == self.newGameButtonBottomOffset;
   }
 
   @override
@@ -74,7 +75,7 @@ mixin _$GameListingScreenThemeExtensionMixin
       self.newGameButtonTextStyle,
       self.newGameButtonBorderRadius,
       self.newGameButtonSpacing,
-      self.newGameButtonOffset,
+      self.newGameButtonBottomOffset,
     );
   }
 
@@ -89,6 +90,6 @@ mixin _$GameListingScreenThemeExtensionMixin
       '  newGameButtonTextStyle: ${self.newGameButtonTextStyle},\n'
       '  newGameButtonBorderRadius: ${self.newGameButtonBorderRadius},\n'
       '  newGameButtonSpacing: ${self.newGameButtonSpacing},\n'
-      '  newGameButtonOffset: ${self.newGameButtonOffset},\n'
+      '  newGameButtonBottomOffset: ${self.newGameButtonBottomOffset},\n'
       ');';
 }

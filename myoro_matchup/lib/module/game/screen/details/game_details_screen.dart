@@ -8,6 +8,10 @@ part '_widget/_app_bar_options_button.dart';
 part '_widget/_body_error_state.dart';
 part '_widget/_body_success_state.dart';
 part '_widget/_body_loader_state.dart';
+part '_widget/_body_success_state_tab_view.dart';
+part '_widget/_body_success_state_tab_view_info_tab.dart';
+part '_widget/_body_success_state_tab_view_players_tab.dart';
+part '_widget/_body_success_state_tab_view_rankings_tab.dart';
 
 /// Game details screen.
 final class GameDetailsScreen extends StatefulWidget {

@@ -18,8 +18,13 @@ final class _NewGameButton extends StatelessWidget {
             style: themeExtension.newGameButtonTextStyle,
           ),
           borderRadius: themeExtension.newGameButtonBorderRadius,
-          borderBuilder: (_) => MyoroButtonStyleEnum.border(context),
           spacing: themeExtension.newGameButtonSpacing,
+          backgroundColorBuilder: (tapStatus) {
+            return MyoroButtonStyleEnum.secondary.backgroundColorBuilder(context, tapStatus);
+          },
+          contentColorBuilder: (tapStatus) {
+            return MyoroButtonStyleEnum.secondary.contentColorBuilder(context, tapStatus);
+          },
         ),
       ),
     );

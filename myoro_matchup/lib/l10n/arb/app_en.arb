@@ -9,6 +9,9 @@
   "gameListingScreenNewGameButtonText": "Create game",
 
   "gameDetailsScreenBodyErrorStateTitle": "Failed to retrieve game details!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Players",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Players",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Rankings",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Username/email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Password",

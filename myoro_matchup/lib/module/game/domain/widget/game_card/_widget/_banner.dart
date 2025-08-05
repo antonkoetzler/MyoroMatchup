@@ -13,10 +13,16 @@ final class _Banner extends StatelessWidget {
     return SizedBox(
       height: themeExtension.bannerMaxHeight,
       width: double.infinity,
-      child: _game.banner != null
-          ? Image.asset(_game.banner!, fit: BoxFit.cover)
-          // TODO
-          : Container(color: Colors.pink.shade200),
+      child: Stack(
+        fit: StackFit.expand,
+        children: [
+          _game.banner != null
+              ? Image.asset(_game.banner!, fit: BoxFit.cover)
+              // TODO
+              : Container(color: Colors.pink.shade200),
+          Container(decoration: themeExtension.bannerDecoration),
+        ],
+      ),
     );
   }
 }

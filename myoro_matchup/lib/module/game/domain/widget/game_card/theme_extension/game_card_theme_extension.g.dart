@@ -17,6 +17,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
   @override
   GameCardThemeExtension copyWith({
     double? bannerMaxHeight,
+    BoxDecoration? bannerDecoration,
     BorderRadius? profilePictureBorderRadius,
     double? profilePictureSize,
     EdgeInsets? infoBarPadding,
@@ -26,6 +27,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
   }) {
     return GameCardThemeExtension(
       bannerMaxHeight: bannerMaxHeight ?? self.bannerMaxHeight,
+      bannerDecoration: bannerDecoration ?? self.bannerDecoration,
       profilePictureBorderRadius:
           profilePictureBorderRadius ?? self.profilePictureBorderRadius,
       profilePictureSize: profilePictureSize ?? self.profilePictureSize,
@@ -41,6 +43,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
     return other is GameCardThemeExtension &&
         other.runtimeType == runtimeType &&
         other.bannerMaxHeight == self.bannerMaxHeight &&
+        other.bannerDecoration == self.bannerDecoration &&
         other.profilePictureBorderRadius == self.profilePictureBorderRadius &&
         other.profilePictureSize == self.profilePictureSize &&
         other.infoBarPadding == self.infoBarPadding &&
@@ -53,6 +56,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
   int get hashCode {
     return Object.hash(
       self.bannerMaxHeight,
+      self.bannerDecoration,
       self.profilePictureBorderRadius,
       self.profilePictureSize,
       self.infoBarPadding,
@@ -66,6 +70,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
   String toString() =>
       'GameCardThemeExtension(\n'
       '  bannerMaxHeight: ${self.bannerMaxHeight},\n'
+      '  bannerDecoration: ${self.bannerDecoration},\n'
       '  profilePictureBorderRadius: ${self.profilePictureBorderRadius},\n'
       '  profilePictureSize: ${self.profilePictureSize},\n'
       '  infoBarPadding: ${self.infoBarPadding},\n'
