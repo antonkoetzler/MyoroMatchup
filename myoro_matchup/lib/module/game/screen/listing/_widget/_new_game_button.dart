@@ -8,7 +8,6 @@ final class _NewGameButton extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
 
-    // TODO
     return IntrinsicWidth(
       child: MyoroIconTextButton(
         configuration: MyoroIconTextButtonConfiguration(
@@ -25,6 +24,7 @@ final class _NewGameButton extends StatelessWidget {
           contentColorBuilder: (tapStatus) {
             return MyoroButtonStyleEnum.secondary.contentColorBuilder(context, tapStatus);
           },
+          onTapUp: (_) => AppRouter.push(GameCreationScreenRoute().navigate()),
         ),
       ),
     );

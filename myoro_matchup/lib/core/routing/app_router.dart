@@ -46,7 +46,11 @@ final class AppRouter {
       routes: [
         RedirectRoute(
           name: gameModuleRoute,
-          routes: [Routes.gameRoutes.gameListingScreen, Routes.gameRoutes.gameDetailsScreen],
+          routes: [
+            Routes.gameRoutes.gameListingScreen,
+            Routes.gameRoutes.gameDetailsScreen,
+            Routes.gameRoutes.gameCreationScreen,
+          ],
         ).goRoute,
         Routes.loginSignupRoutes.loginSignupScreen.goRoute,
       ],

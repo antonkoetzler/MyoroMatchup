@@ -3,15 +3,19 @@
 
   "mmErrorFeedbackActionButtonText": "Tentar novamente",
 
-  "gameListingScreenAppBarTitle": "MyoroMatchup",
-  "gameListingScreenBodyErrorStateTitle": "Erro ao recuperar os jogos!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "Nenhum jogo encontrado!",
-  "gameListingScreenNewGameButtonText": "Criar jogo",
+  "gameCreationScreenAppBarTitle": "Novo jogo",
+  "gameCreationScreenNameFieldLabel": "Nome",
+  "gameCreationScreenSportFieldLabel": "Esporte",
 
   "gameDetailsScreenBodyErrorStateTitle": "Falha ao obter os detalhes do jogo!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Jogadores",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Jogadores",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Classificações",
+
+  "gameListingScreenAppBarTitle": "MyoroMatchup",
+  "gameListingScreenBodyErrorStateTitle": "Erro ao recuperar os jogos!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "Nenhum jogo encontrado!",
+  "gameListingScreenNewGameButtonText": "Criar jogo",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nome de usuário ou email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Senha",

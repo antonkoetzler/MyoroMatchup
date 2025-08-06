@@ -9,9 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  # TODO
-  myoro_flutter_library:
-    path: ../../myoro_flutter_library
+  myoro_flutter_library: ^2.1.0
   myoro_flutter_annotations: ^1.2.6
   provider: ^6.1.5
   get_it: ^8.0.3

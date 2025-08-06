@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 
 /// Spacing to be used as a multiplier (i.e. kSpacing * 3).
+///
+/// TODO: Delete and just use the MFL constant.
 const kSpacing = 4.0;
 
 /// Default [BorderRadius] length.
+///
+/// TODO: Delete and just use the MFL constant.
 const kBorderRadiusLength = kSpacing * 2.0;
 
 /// Default [EdgeInsets] length.
+///
+/// TODO: Delete and just use the MFL constant.
 const kEdgeInsetsLength = kSpacing * 2.0;
 
 /// Default [MyoroAppBarConfiguration.bordered] value.

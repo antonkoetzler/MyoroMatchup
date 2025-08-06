@@ -112,29 +112,23 @@ abstract class AppLocalizations {
   /// **'Retry'**
   String get mmErrorFeedbackActionButtonText;
 
-  /// No description provided for @gameListingScreenAppBarTitle.
+  /// No description provided for @gameCreationScreenAppBarTitle.
   ///
   /// In en, this message translates to:
-  /// **'MyoroMatchup'**
-  String get gameListingScreenAppBarTitle;
+  /// **'New game'**
+  String get gameCreationScreenAppBarTitle;
 
-  /// No description provided for @gameListingScreenBodyErrorStateTitle.
+  /// No description provided for @gameCreationScreenNameFieldLabel.
   ///
   /// In en, this message translates to:
-  /// **'Error retrieving games!'**
-  String get gameListingScreenBodyErrorStateTitle;
+  /// **'Name'**
+  String get gameCreationScreenNameFieldLabel;
 
-  /// No description provided for @gameListingScreenBodySuccessStateEmptyTitle.
+  /// No description provided for @gameCreationScreenSportFieldLabel.
   ///
   /// In en, this message translates to:
-  /// **'No games found!'**
-  String get gameListingScreenBodySuccessStateEmptyTitle;
-
-  /// No description provided for @gameListingScreenNewGameButtonText.
-  ///
-  /// In en, this message translates to:
-  /// **'Create game'**
-  String get gameListingScreenNewGameButtonText;
+  /// **'Sport'**
+  String get gameCreationScreenSportFieldLabel;
 
   /// No description provided for @gameDetailsScreenBodyErrorStateTitle.
   ///
@@ -159,6 +153,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Rankings'**
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText;
+
+  /// No description provided for @gameListingScreenAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'MyoroMatchup'**
+  String get gameListingScreenAppBarTitle;
+
+  /// No description provided for @gameListingScreenBodyErrorStateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Error retrieving games!'**
+  String get gameListingScreenBodyErrorStateTitle;
+
+  /// No description provided for @gameListingScreenBodySuccessStateEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No games found!'**
+  String get gameListingScreenBodySuccessStateEmptyTitle;
+
+  /// No description provided for @gameListingScreenNewGameButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Create game'**
+  String get gameListingScreenNewGameButtonText;
 
   /// No description provided for @loginSignupScreenLoginUsernameEmailInputPlaceholder.
   ///

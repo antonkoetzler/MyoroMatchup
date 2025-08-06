@@ -16,18 +16,13 @@ class AppLocalizationsEs extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Reintentar';
 
   @override
-  String get gameListingScreenAppBarTitle => 'MyoroMatchup';
+  String get gameCreationScreenAppBarTitle => 'Nuevo juego';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle =>
-      '¡Error al recuperar los juegos!';
+  String get gameCreationScreenNameFieldLabel => 'Nombre';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle =>
-      '¡No se encontraron juegos!';
-
-  @override
-  String get gameListingScreenNewGameButtonText => 'Crear juego';
+  String get gameCreationScreenSportFieldLabel => 'Esporte';
 
   @override
   String get gameDetailsScreenBodyErrorStateTitle =>
@@ -43,6 +38,20 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
       'Clasificaciones';
+
+  @override
+  String get gameListingScreenAppBarTitle => 'MyoroMatchup';
+
+  @override
+  String get gameListingScreenBodyErrorStateTitle =>
+      '¡Error al recuperar los juegos!';
+
+  @override
+  String get gameListingScreenBodySuccessStateEmptyTitle =>
+      '¡No se encontraron juegos!';
+
+  @override
+  String get gameListingScreenNewGameButtonText => 'Crear juego';
 
   @override
   String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
