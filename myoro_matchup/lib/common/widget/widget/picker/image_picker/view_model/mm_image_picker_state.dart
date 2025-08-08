@@ -16,6 +16,9 @@ final class MmImagePickerState {
   /// [_selectedImageNotifier] getter.
   ValueNotifier<String?> get selectedImageNotifier => _selectedImageNotifier;
 
+  /// [_selectedImageNotifier] setter.
+  set selectedImage(String? selectedImage) => _selectedImageNotifier.value = selectedImage;
+
   /// Dispose function.
   void dispose() {
     _selectedImageNotifier.dispose();

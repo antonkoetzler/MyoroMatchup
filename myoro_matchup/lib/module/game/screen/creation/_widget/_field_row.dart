@@ -9,10 +9,6 @@ final class _FieldRow extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameCreationScreenThemeExtension>();
-
-    return Row(
-      spacing: themeExtension.spacing,
-      children: _children.map((c) => Expanded(child: c)).toList(),
-    );
+    return Row(spacing: themeExtension.spacing, children: _children);
   }
 }

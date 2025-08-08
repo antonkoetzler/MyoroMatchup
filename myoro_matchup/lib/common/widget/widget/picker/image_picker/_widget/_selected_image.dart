@@ -8,8 +8,6 @@ final class _SelectedImage extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final themeExtension = context.resolveThemeExtension<MmImagePickerThemeExtension>();
-
-    return ClipRRect(borderRadius: themeExtension.selectedImageBorderRadius);
+    return _selectedImage != null ? Image.asset(_selectedImage) : const _SelectedImageUnselectedState();
   }
 }

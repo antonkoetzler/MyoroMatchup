@@ -1,3 +1,4 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/foundation.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
@@ -16,5 +17,11 @@ final class MmImagePickerViewModel {
   /// Dispose function.
   void dispose() {
     _state.dispose();
+  }
+
+  /// Opens the file picker.
+  void openPicker() async {
+    final result = await FilePicker.platform.pickFiles(allowMultiple: false);
+    if (result != null) _state.selectedImage = result.paths.first;
   }
 }

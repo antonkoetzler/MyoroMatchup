@@ -6,6 +6,6 @@ final class _PictureField extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const Text('PictureField');
+    return const MmImagePicker(configuration: MmImagePickerConfiguration());
   }
 }

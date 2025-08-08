@@ -6,6 +6,7 @@ import 'package:provider/provider.dart';
 part '_widget/_content.dart';
 part '_widget/_overlay.dart';
 part '_widget/_selected_image.dart';
+part '_widget/_selected_image_unselected_state.dart';
 
 /// Image picker [Widget] of MyoroMatchup.
 final class MmImagePicker extends StatelessWidget {

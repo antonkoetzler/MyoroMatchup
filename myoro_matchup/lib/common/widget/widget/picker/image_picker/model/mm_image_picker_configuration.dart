@@ -1,17 +1,18 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:myoro_flutter_annotations/myoro_flutter_annotations.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
+
+part 'mm_image_picker_configuration.g.dart';
 
 /// Configuration model of [MmImagePicker].
 @immutable
 @myoroModel
 final class MmImagePickerConfiguration with _$MmImagePickerConfigurationMixin {
-  const MmImagePickerConfiguration({this.initialImage, required this.builder});
+  const MmImagePickerConfiguration({this.initialImage, this.constraints});
 
   /// Initially selected image.
   final String? initialImage;
 
-  /// [Widget] builder.
-  final MmImagePickerBuilder builder;
+  /// Constraints of the [MmImagePicker].
+  final BoxConstraints? constraints;
 }

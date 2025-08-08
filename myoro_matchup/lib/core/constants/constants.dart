@@ -6,18 +6,21 @@ import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 /// TODO: Delete and just use the MFL constant.
 const kSpacing = 4.0;
 
-/// Default [BorderRadius] length.
+/// [BorderRadius] length.
 ///
 /// TODO: Delete and just use the MFL constant.
 const kBorderRadiusLength = kSpacing * 2.0;
 
-/// Default [EdgeInsets] length.
+/// [EdgeInsets] length.
 ///
 /// TODO: Delete and just use the MFL constant.
 const kEdgeInsetsLength = kSpacing * 2.0;
 
-/// Default [MyoroAppBarConfiguration.bordered] value.
+/// [MyoroAppBarConfiguration.bordered] value.
 const kAppBarBordered = true;
+
+/// Transparency opacity.
+const kTransparencyOpacity = 0.08;
 
 /// List of random profile pictures (cats).
 const kTestProfilePictures = [

@@ -12,6 +12,6 @@ List<ThemeExtension> commonThemeExtensionsBuilder(bool isDarkMode, ColorScheme c
     const MmErrorFeedbackThemeExtension.builder(),
 
     // Pickers
-    const MmImagePickerThemeExtension.builder(),
+    MmImagePickerThemeExtension.builder(colorScheme),
   ];
 }
