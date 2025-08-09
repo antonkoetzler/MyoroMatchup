@@ -14,8 +14,8 @@ part '_widget/_location_field.dart';
 part '_widget/_monthly_price_field.dart';
 part '_widget/_name_field.dart';
 part '_widget/_one_time_price_field.dart';
-part '_widget/_picture_field.dart';
 part '_widget/_player_quantity_field.dart';
+part '_widget/_profile_picture_field.dart';
 part '_widget/_sport_field.dart';
 part '_widget/_visibility_field.dart';
 

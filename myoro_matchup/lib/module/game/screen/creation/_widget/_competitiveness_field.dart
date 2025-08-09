@@ -5,7 +5,17 @@ final class _CompetitivenessField extends StatelessWidget {
   const _CompetitivenessField();
 
   @override
-  Widget build(_) {
-    return const Text('Competitiveness field');
+  Widget build(context) {
+    final viewModel = context.read<GameCreationScreenViewModel>();
+
+    return MyoroSingularDropdown<CompetitivenessEnum>(
+      configuration: MyoroSingularDropdownConfiguration(
+        menuConfiguration: MyoroMenuConfiguration(
+          request: CompetitivenessEnum.values.toSet,
+          itemBuilder: viewModel.competitivenessFieldItemBuilder,
+        ),
+        selectedItemBuilder: viewModel.competitivenessFieldSelectedItemBuilder,
+      ),
+    );
   }
 }

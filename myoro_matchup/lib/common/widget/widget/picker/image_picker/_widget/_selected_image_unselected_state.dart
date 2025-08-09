@@ -5,7 +5,8 @@ final class _SelectedImageUnselectedState extends StatelessWidget {
   const _SelectedImageUnselectedState();
 
   @override
-  Widget build(_) {
-    return const Icon(Icons.image);
+  Widget build(context) {
+    final themeExtension = context.resolveThemeExtension<MmImagePickerThemeExtension>();
+    return Icon(Icons.image, size: themeExtension.selectedImageUnselectedStateIconSize);
   }
 }

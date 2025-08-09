@@ -8,11 +8,11 @@ part 'mm_image_picker_configuration.g.dart';
 @immutable
 @myoroModel
 final class MmImagePickerConfiguration with _$MmImagePickerConfigurationMixin {
-  const MmImagePickerConfiguration({this.initialImage, this.constraints});
+  const MmImagePickerConfiguration({required this.type, this.initialImage});
+
+  /// Type of [MmImagePicker].
+  final MmImagePickerEnum type;
 
   /// Initially selected image.
   final String? initialImage;
-
-  /// Constraints of the [MmImagePicker].
-  final BoxConstraints? constraints;
 }

@@ -6,6 +6,12 @@ final class _PlayerQuantityField extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const Text('PlayerQuantityField');
+    return MyoroSingularDropdown<int>(
+      configuration: MyoroSingularDropdownConfiguration(
+        menuConfiguration: MyoroMenuConfiguration(
+          request: 
+        ),
+      ),
+    );
   }
 }

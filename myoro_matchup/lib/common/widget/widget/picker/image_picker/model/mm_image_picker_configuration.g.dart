@@ -18,37 +18,34 @@ mixin _$MmImagePickerConfigurationMixin {
   bool operator ==(Object other) {
     return other is MmImagePickerConfiguration &&
         other.runtimeType == runtimeType &&
-        other.initialImage == self.initialImage &&
-        other.constraints == self.constraints;
+        other.type == self.type &&
+        other.initialImage == self.initialImage;
   }
 
   @override
   int get hashCode {
-    return Object.hash(self.initialImage, self.constraints);
+    return Object.hash(self.type, self.initialImage);
   }
 
   @override
   String toString() =>
       'MmImagePickerConfiguration(\n'
+      '  type: ${self.type},\n'
       '  initialImage: ${self.initialImage},\n'
-      '  constraints: ${self.constraints},\n'
       ');';
 }
 
 /// Extension class for @myoroModel to place the copyWith function.
 extension $MmImagePickerConfigurationExtension on MmImagePickerConfiguration {
   MmImagePickerConfiguration copyWith({
+    MmImagePickerEnum? type,
     String? initialImage,
     bool initialImageProvided = true,
-    BoxConstraints? constraints,
-    bool constraintsProvided = true,
   }) {
     return MmImagePickerConfiguration(
+      type: type ?? self.type,
       initialImage: initialImageProvided
           ? (initialImage ?? self.initialImage)
-          : null,
-      constraints: constraintsProvided
-          ? (constraints ?? self.constraints)
           : null,
     );
   }

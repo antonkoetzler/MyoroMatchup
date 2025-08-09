@@ -16,7 +16,7 @@ final class GameCreationScreenThemeExtension extends ThemeExtension<GameCreation
 
   GameCreationScreenThemeExtension.fake() : spacing = faker.randomGenerator.decimal(scale: 20);
 
-  const GameCreationScreenThemeExtension.builder() : spacing = kSpacing;
+  const GameCreationScreenThemeExtension.builder() : spacing = kSpacing * 2;
 
   /// Spacing between [Widget]s.
   final double spacing;

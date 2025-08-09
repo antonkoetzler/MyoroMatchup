@@ -5,7 +5,7 @@ final class _BannerField extends StatelessWidget {
   const _BannerField();
 
   @override
-  Widget build(_) {
-    return const MmImagePicker(configuration: MmImagePickerConfiguration());
+  Widget build(context) {
+    return const MmImagePicker(configuration: MmImagePickerConfiguration(type: MmImagePickerEnum.banner));
   }
 }

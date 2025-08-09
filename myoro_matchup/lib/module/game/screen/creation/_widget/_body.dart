@@ -13,7 +13,7 @@ final class _Body extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: const [
         _BannerField(),
-        _FieldRow([_PictureField(), Expanded(child: _NameField())]),
+        _ProfilePictureField(),
         _FieldRow([Expanded(child: _NameField()), Expanded(child: _SportField())]),
         _FieldRow([Expanded(child: _CompetitivenessField()), Expanded(child: _PlayerQuantityField())]),
         _FieldRow([Expanded(child: _OneTimePriceField()), Expanded(child: _MonthlyPriceField())]),

@@ -20,7 +20,9 @@ const kEdgeInsetsLength = kSpacing * 2.0;
 const kAppBarBordered = true;
 
 /// Transparency opacity.
-const kTransparencyOpacity = 0.08;
+const kTransparencyOpacity1 = kSpacing * 4 / 100;
+const kTransparencyOpacity2 = kSpacing * 5 / 100;
+const kTransparencyOpacity3 = kSpacing * 6 / 100;
 
 /// List of random profile pictures (cats).
 const kTestProfilePictures = [

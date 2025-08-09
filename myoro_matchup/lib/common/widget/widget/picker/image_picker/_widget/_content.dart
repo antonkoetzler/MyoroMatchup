@@ -9,23 +9,30 @@ final class _Content extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<MmImagePickerThemeExtension>();
-    final constraints = themeExtension.constraints;
     final borderRadius = themeExtension.borderRadius;
     final clipBehavior = themeExtension.clipBehavior;
+    final profilePictureConstraints = themeExtension.profilePictureConstraints;
+    final bannerConstraints = themeExtension.bannerConstraints;
 
     final viewModel = context.read<MmImagePickerViewModel>();
     final state = viewModel.state;
+    final configuration = state.configuration;
+    final type = configuration.type;
     final selectedImageNotifier = state.selectedImageNotifier;
 
     return ValueListenableBuilder(
       valueListenable: selectedImageNotifier,
       builder: (_, selectedImage, _) {
         return ConstrainedBox(
-          constraints: constraints,
+          constraints: switch (type) {
+            MmImagePickerEnum.profilePicture => profilePictureConstraints,
+            MmImagePickerEnum.banner => bannerConstraints,
+          },
           child: ClipRRect(
             borderRadius: borderRadius,
             clipBehavior: clipBehavior,
             child: Stack(
+              alignment: Alignment.center,
               children: [
                 _SelectedImage(selectedImage),
                 const Positioned.fill(child: _Overlay()),

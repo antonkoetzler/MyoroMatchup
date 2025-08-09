@@ -6,7 +6,7 @@ part 'game_creation_screen_state.dart';
 /// View model of [GameCreationScreen].
 final class GameCreationScreenViewModel {
   /// State.
-  static const _state = GameCreationScreenState();
+  final _state = GameCreationScreenState();
 
   /// [_state] getter.
   GameCreationScreenState get state => _state;
@@ -19,5 +19,15 @@ final class GameCreationScreenViewModel {
   /// Sport field's [MyoroSingularDropdownConfiguration.selectedItemBuilder].
   String sportFieldSelectedItemBuilder(SportsEnum value) {
     return value.name;
+  }
+
+  /// Competitiveness field's [MyoroMenuConfiguration.itemBuilder].
+  MyoroMenuItem competitivenessFieldItemBuilder(CompetitivenessEnum value) {
+    return MyoroMenuItem(textConfiguration: MyoroTextConfiguration(text: value.formattedName));
+  }
+
+  /// Competitiveness field's [MyoroSingularDropdownConfiguration.selectedItemBuilder].
+  String competitivenessFieldSelectedItemBuilder(CompetitivenessEnum value) {
+    return value.formattedName;
   }
 }

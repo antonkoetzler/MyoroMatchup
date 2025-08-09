@@ -10,12 +10,13 @@ final class _Overlay extends StatelessWidget {
 
     final viewModel = context.read<MmImagePickerViewModel>();
 
-    return MouseRegion(
-      cursor: themeExtension.overlayCursor,
-      child: GestureDetector(
+    return MyoroButton(
+      configuration: MyoroButtonConfiguration(
+        backgroundColorBuilder: themeExtension.overlayBackgroundColorBuilder,
+        cursor: themeExtension.overlayCursor,
         onTapUp: (_) => viewModel.openPicker(),
-        child: ColoredBox(color: themeExtension.overlayColor),
       ),
+      builder: (_, _) => const SizedBox.shrink(),
     );
   }
 }
