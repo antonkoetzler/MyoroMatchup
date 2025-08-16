@@ -8,20 +8,29 @@ final class _Body extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameCreationScreenThemeExtension>();
 
-    return Column(
-      spacing: themeExtension.spacing,
-      mainAxisSize: MainAxisSize.min,
-      children: const [
-        _BannerField(),
-        _ProfilePictureField(),
-        _FieldRow([Expanded(child: _NameField()), Expanded(child: _SportField())]),
-        _FieldRow([Expanded(child: _CompetitivenessField()), Expanded(child: _PlayerQuantityField())]),
-        _FieldRow([Expanded(child: _OneTimePriceField()), Expanded(child: _MonthlyPriceField())]),
-        _AgeRangeField(),
-        _VisibilityField(),
-        _LocationField(),
-        _FrequencyDateTimeField(),
-      ],
+    final viewModel = context.read<GameCreationScreenViewModel>();
+
+    return ListenableBuilder(
+      listenable: viewModel.state,
+      builder: (_, _) {
+        final state = viewModel.state;
+
+        return Column(
+          spacing: themeExtension.spacing,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const _BannerField(),
+            const _ProfilePictureField(),
+            _FieldRow([const Expanded(child: _NameField()), Expanded(child: _SportField(state))]),
+            _FieldRow([const Expanded(child: _CompetitivenessField()), Expanded(child: _PlayerQuantityField(state))]),
+            const _FieldRow([Expanded(child: _OneTimePriceField()), Expanded(child: _MonthlyPriceField())]),
+            const _AgeRangeField(),
+            const _VisibilityField(),
+            const _LocationField(),
+            const _FrequencyDateTimeField(),
+          ],
+        );
+      },
     );
   }
 }

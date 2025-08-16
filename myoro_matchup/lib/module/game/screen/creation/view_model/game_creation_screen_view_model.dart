@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
@@ -10,6 +11,11 @@ final class GameCreationScreenViewModel {
 
   /// [_state] getter.
   GameCreationScreenState get state => _state;
+
+  /// Dispose function.
+  void dispose() {
+    _state.dispose();
+  }
 
   /// Sport field's [MyoroMenuConfiguration.itemBuilder].
   MyoroMenuItem sportFieldItemBuilder(SportsEnum value) {
@@ -29,5 +35,15 @@ final class GameCreationScreenViewModel {
   /// Competitiveness field's [MyoroSingularDropdownConfiguration.selectedItemBuilder].
   String competitivenessFieldSelectedItemBuilder(CompetitivenessEnum value) {
     return value.formattedName;
+  }
+
+  /// Player quantity field's [MyoroMenuConfiguration.itemBuilder].
+  MyoroMenuItem playerQuantityFieldItemBuilder(int playerQuantity) {
+    return MyoroMenuItem(textConfiguration: MyoroTextConfiguration(text: playerQuantity.toString()));
+  }
+
+  /// Player quantity field's [MyoroSingularDropdownConfiguration.selectedItemBuilder].
+  String playerQuantityFieldSelectedItemBuilder(int playerQuantity) {
+    return playerQuantity.toString();
   }
 }
