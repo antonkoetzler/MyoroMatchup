@@ -22,6 +22,18 @@ class AppLocalizationsEs extends AppLocalizations {
   String get visibilityEnumPublicLabel => 'Público';
 
   @override
+  String get frequencyEnumWeeklyLabel => 'Semanal';
+
+  @override
+  String get frequencyEnumBiWeeklyLabel => 'Quincenal';
+
+  @override
+  String get frequencyEnumMonthlyLabel => 'Mensual';
+
+  @override
+  String get frequencyEnumYearlyLabel => 'Anual';
+
+  @override
   String get gameCreationScreenAppBarTitle => 'Nuevo juego';
 
   @override

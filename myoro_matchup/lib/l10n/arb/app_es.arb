@@ -6,6 +6,11 @@
   "visibilityEnumPrivateLabel": "Privado",
   "visibilityEnumPublicLabel": "Público",
 
+  "frequencyEnumWeeklyLabel": "Semanal",
+  "frequencyEnumBiWeeklyLabel": "Quincenal",
+  "frequencyEnumMonthlyLabel": "Mensual",
+  "frequencyEnumYearlyLabel": "Anual",
+
   "gameCreationScreenAppBarTitle": "Nuevo juego",
   "gameCreationScreenNameFieldLabel": "Nombre",
   "gameCreationScreenSportFieldLabel": "Esporte",

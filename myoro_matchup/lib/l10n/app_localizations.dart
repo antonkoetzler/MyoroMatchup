@@ -124,6 +124,30 @@ abstract class AppLocalizations {
   /// **'Public'**
   String get visibilityEnumPublicLabel;
 
+  /// No description provided for @frequencyEnumWeeklyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Weekly'**
+  String get frequencyEnumWeeklyLabel;
+
+  /// No description provided for @frequencyEnumBiWeeklyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Bi-weekly'**
+  String get frequencyEnumBiWeeklyLabel;
+
+  /// No description provided for @frequencyEnumMonthlyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Monthly'**
+  String get frequencyEnumMonthlyLabel;
+
+  /// No description provided for @frequencyEnumYearlyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Yearly'**
+  String get frequencyEnumYearlyLabel;
+
   /// No description provided for @gameCreationScreenAppBarTitle.
   ///
   /// In en, this message translates to:

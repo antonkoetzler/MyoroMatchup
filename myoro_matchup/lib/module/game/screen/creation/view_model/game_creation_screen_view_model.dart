@@ -61,4 +61,14 @@ final class GameCreationScreenViewModel {
   MyoroMenuItem locationFieldItemBuilder(String item) {
     return MyoroMenuItem(textConfiguration: MyoroTextConfiguration(text: item));
   }
+
+  /// Frequency field's [MyoroMenuConfiguration.itemBuilder].
+  MyoroMenuItem frequencyFieldItemBuilder(FrequencyEnum value) {
+    return MyoroMenuItem(textConfiguration: MyoroTextConfiguration(text: value.label));
+  }
+
+  /// Frequency field's [MyoroSingularDropdownConfiguration.selectedItemBuilder].
+  String frequencyFieldSelectedItemBuilder(FrequencyEnum value) {
+    return value.label;
+  }
 }
