@@ -112,6 +112,18 @@ abstract class AppLocalizations {
   /// **'Retry'**
   String get mmErrorFeedbackActionButtonText;
 
+  /// No description provided for @visibilityEnumPrivateLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Private'**
+  String get visibilityEnumPrivateLabel;
+
+  /// No description provided for @visibilityEnumPublicLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Public'**
+  String get visibilityEnumPublicLabel;
+
   /// No description provided for @gameCreationScreenAppBarTitle.
   ///
   /// In en, this message translates to:

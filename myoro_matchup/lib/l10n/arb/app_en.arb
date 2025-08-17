@@ -3,6 +3,9 @@
 
   "mmErrorFeedbackActionButtonText": "Retry",
 
+  "visibilityEnumPrivateLabel": "Private",
+  "visibilityEnumPublicLabel": "Public",
+
   "gameCreationScreenAppBarTitle": "New game",
   "gameCreationScreenNameFieldLabel": "Name",
   "gameCreationScreenSportFieldLabel": "Sport",

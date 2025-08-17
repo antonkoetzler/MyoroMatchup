@@ -46,4 +46,19 @@ final class GameCreationScreenViewModel {
   String playerQuantityFieldSelectedItemBuilder(int playerQuantity) {
     return playerQuantity.toString();
   }
+
+  /// Visibility field's [MyoroMenuConfiguration.itemBuilder].
+  MyoroMenuItem visibilityFieldItemBuilder(VisibilityEnum visibility) {
+    return MyoroMenuItem(textConfiguration: MyoroTextConfiguration(text: visibility.label));
+  }
+
+  /// Visibility field's [MyoroSingularDropdownConfiguration.selectedItemBuilder].
+  String visibilityFieldSelectedItemBuilder(VisibilityEnum visibility) {
+    return visibility.label;
+  }
+
+  /// Location field's [MyoroMenuConfiguration.itemBuilder].
+  MyoroMenuItem locationFieldItemBuilder(String item) {
+    return MyoroMenuItem(textConfiguration: MyoroTextConfiguration(text: item));
+  }
 }

@@ -5,7 +5,19 @@ final class _VisibilityField extends StatelessWidget {
   const _VisibilityField();
 
   @override
-  Widget build(_) {
-    return const Text('VisilibilityField');
+  Widget build(context) {
+    final viewModel = context.read<GameCreationScreenViewModel>();
+    final visibilityFieldItemBuilder = viewModel.visibilityFieldItemBuilder;
+    final visibilityFieldSelectedItemBuilder = viewModel.visibilityFieldSelectedItemBuilder;
+
+    return MyoroSingularDropdown(
+      configuration: MyoroSingularDropdownConfiguration(
+        menuConfiguration: MyoroMenuConfiguration(
+          request: VisibilityEnum.values.toSet,
+          itemBuilder: visibilityFieldItemBuilder,
+        ),
+        selectedItemBuilder: visibilityFieldSelectedItemBuilder,
+      ),
+    );
   }
 }

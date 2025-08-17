@@ -3,6 +3,9 @@
 
   "mmErrorFeedbackActionButtonText": "Reintentar",
 
+  "visibilityEnumPrivateLabel": "Privado",
+  "visibilityEnumPublicLabel": "Público",
+
   "gameCreationScreenAppBarTitle": "Nuevo juego",
   "gameCreationScreenNameFieldLabel": "Nombre",
   "gameCreationScreenSportFieldLabel": "Esporte",

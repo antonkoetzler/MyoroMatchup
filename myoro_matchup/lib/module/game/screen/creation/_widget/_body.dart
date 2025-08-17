@@ -27,7 +27,8 @@ final class _Body extends StatelessWidget {
             const _AgeRangeField(),
             const _VisibilityField(),
             const _LocationField(),
-            const _FrequencyDateTimeField(),
+            const _FieldRow([_FrequencyField(), _DateField()]),
+            const _TimeField(),
           ],
         );
       },

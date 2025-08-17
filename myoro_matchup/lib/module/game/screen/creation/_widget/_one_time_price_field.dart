@@ -6,6 +6,6 @@ final class _OneTimePriceField extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const Text('OneTimePriceField');
+    return MyoroInput.number();
   }
 }

@@ -6,6 +6,6 @@ final class _MonthlyPriceField extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const Text('_MonthlyPriceField');
+    return MyoroInput.number();
   }
 }

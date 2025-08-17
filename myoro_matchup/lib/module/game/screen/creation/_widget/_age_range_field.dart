@@ -6,6 +6,8 @@ final class _AgeRangeField extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const Text('AgeRangeField');
+    return MyoroRangeSlider(
+      configuration: MyoroRangeSliderConfiguration(values: const RangeValues(0, 1), onChanged: (_) {}),
+    );
   }
 }

@@ -16,6 +16,12 @@ class AppLocalizationsPt extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Tentar novamente';
 
   @override
+  String get visibilityEnumPrivateLabel => 'Privado';
+
+  @override
+  String get visibilityEnumPublicLabel => 'Público';
+
+  @override
   String get gameCreationScreenAppBarTitle => 'Novo jogo';
 
   @override
