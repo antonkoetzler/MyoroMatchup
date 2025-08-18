@@ -15,4 +15,6 @@ final class MmLocationInputViewModel {
 
   /// [MyoroSearchInputConfiguration.request] of the [MmLocationInput].
   Future<Set<MmLocationInputLocation>> request(String query) async {}
+
+  GET https://countrystatecity.in/api/cities/search?q=Calgary
 }
