@@ -112,6 +112,30 @@ abstract class AppLocalizations {
   /// **'Retry'**
   String get mmErrorFeedbackActionButtonText;
 
+  /// No description provided for @mmLocationInputTypeEnumCityLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'City'**
+  String get mmLocationInputTypeEnumCityLabel;
+
+  /// No description provided for @mmLocationInputTypeEnumStateLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'State'**
+  String get mmLocationInputTypeEnumStateLabel;
+
+  /// No description provided for @mmLocationInputTypeEnumCountryLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Country'**
+  String get mmLocationInputTypeEnumCountryLabel;
+
+  /// No description provided for @mmLocationInputTypeEnumContinentLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Continent'**
+  String get mmLocationInputTypeEnumContinentLabel;
+
   /// No description provided for @visibilityEnumPrivateLabel.
   ///
   /// In en, this message translates to:
@@ -165,6 +189,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sport'**
   String get gameCreationScreenSportFieldLabel;
+
+  /// No description provided for @gameCreationScreenCompetitivenessFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Competitiveness'**
+  String get gameCreationScreenCompetitivenessFieldLabel;
+
+  /// No description provided for @gameCreationScreenPlayerQuantityFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'# of players'**
+  String get gameCreationScreenPlayerQuantityFieldLabel;
+
+  /// No description provided for @gameCreationScreenOneTimePriceFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'One-time price'**
+  String get gameCreationScreenOneTimePriceFieldLabel;
+
+  /// No description provided for @gameCreationScreenMemberPriceFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Member price'**
+  String get gameCreationScreenMemberPriceFieldLabel;
+
+  /// No description provided for @gameCreationScreenAgeRangeFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Age range'**
+  String get gameCreationScreenAgeRangeFieldLabel;
+
+  /// No description provided for @gameCreationScreenVisibilityFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Game visibility'**
+  String get gameCreationScreenVisibilityFieldLabel;
 
   /// No description provided for @gameDetailsScreenBodyErrorStateTitle.
   ///

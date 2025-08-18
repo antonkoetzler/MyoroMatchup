@@ -7,7 +7,11 @@ final class _AgeRangeField extends StatelessWidget {
   @override
   Widget build(_) {
     return MyoroRangeSlider(
-      configuration: MyoroRangeSliderConfiguration(values: const RangeValues(0, 1), onChanged: (_) {}),
+      configuration: MyoroRangeSliderConfiguration(
+        label: localization.gameCreationScreenAgeRangeFieldLabel,
+        values: const RangeValues(0, 1),
+        onChanged: (_) {},
+      ),
     );
   }
 }

@@ -14,6 +14,7 @@ final class _PlayerQuantityField extends StatelessWidget {
 
     return MyoroSingularDropdown<int>(
       configuration: MyoroSingularDropdownConfiguration(
+        label: localization.gameCreationScreenPlayerQuantityFieldLabel,
         enabled: _state.sport != null,
         menuConfiguration: MyoroMenuConfiguration(
           request: List.generate(_state.sport?.minPlayers ?? 0, (i) => i + 1).toSet,

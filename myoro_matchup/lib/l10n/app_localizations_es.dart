@@ -16,6 +16,18 @@ class AppLocalizationsEs extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Reintentar';
 
   @override
+  String get mmLocationInputTypeEnumCityLabel => 'Ciudad';
+
+  @override
+  String get mmLocationInputTypeEnumStateLabel => 'Estado';
+
+  @override
+  String get mmLocationInputTypeEnumCountryLabel => 'País';
+
+  @override
+  String get mmLocationInputTypeEnumContinentLabel => 'Continente';
+
+  @override
   String get visibilityEnumPrivateLabel => 'Privado';
 
   @override
@@ -41,6 +53,25 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get gameCreationScreenSportFieldLabel => 'Esporte';
+
+  @override
+  String get gameCreationScreenCompetitivenessFieldLabel => 'Competitividad';
+
+  @override
+  String get gameCreationScreenPlayerQuantityFieldLabel =>
+      'Cantidad de jugadores';
+
+  @override
+  String get gameCreationScreenOneTimePriceFieldLabel => 'Precio único';
+
+  @override
+  String get gameCreationScreenMemberPriceFieldLabel => 'Precio para miembros';
+
+  @override
+  String get gameCreationScreenAgeRangeFieldLabel => 'Rango de edad';
+
+  @override
+  String get gameCreationScreenVisibilityFieldLabel => 'Visibilidad del juego';
 
   @override
   String get gameDetailsScreenBodyErrorStateTitle =>

@@ -3,6 +3,11 @@
 
   "mmErrorFeedbackActionButtonText": "Reintentar",
 
+  "mmLocationInputTypeEnumCityLabel": "Ciudad",
+  "mmLocationInputTypeEnumStateLabel": "Estado",
+  "mmLocationInputTypeEnumCountryLabel": "País",
+  "mmLocationInputTypeEnumContinentLabel": "Continente",
+
   "visibilityEnumPrivateLabel": "Privado",
   "visibilityEnumPublicLabel": "Público",
 
@@ -14,6 +19,12 @@
   "gameCreationScreenAppBarTitle": "Nuevo juego",
   "gameCreationScreenNameFieldLabel": "Nombre",
   "gameCreationScreenSportFieldLabel": "Esporte",
+  "gameCreationScreenCompetitivenessFieldLabel": "Competitividad",
+  "gameCreationScreenPlayerQuantityFieldLabel": "Cantidad de jugadores",
+  "gameCreationScreenOneTimePriceFieldLabel": "Precio único",
+  "gameCreationScreenMemberPriceFieldLabel": "Precio para miembros",
+  "gameCreationScreenAgeRangeFieldLabel": "Rango de edad",
+  "gameCreationScreenVisibilityFieldLabel": "Visibilidad del juego",
 
   "gameDetailsScreenBodyErrorStateTitle": "¡No se pudieron obtener los detalles del juego!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Jugadores",

@@ -3,6 +3,11 @@
 
   "mmErrorFeedbackActionButtonText": "Retry",
 
+  "mmLocationInputTypeEnumCityLabel": "City",
+  "mmLocationInputTypeEnumStateLabel": "State",
+  "mmLocationInputTypeEnumCountryLabel": "Country",
+  "mmLocationInputTypeEnumContinentLabel": "Continent",
+
   "visibilityEnumPrivateLabel": "Private",
   "visibilityEnumPublicLabel": "Public",
 
@@ -14,6 +19,12 @@
   "gameCreationScreenAppBarTitle": "New game",
   "gameCreationScreenNameFieldLabel": "Name",
   "gameCreationScreenSportFieldLabel": "Sport",
+  "gameCreationScreenCompetitivenessFieldLabel": "Competitiveness",
+  "gameCreationScreenPlayerQuantityFieldLabel": "# of players",
+  "gameCreationScreenOneTimePriceFieldLabel": "One-time price",
+  "gameCreationScreenMemberPriceFieldLabel": "Member price",
+  "gameCreationScreenAgeRangeFieldLabel": "Age range",
+  "gameCreationScreenVisibilityFieldLabel": "Game visibility",
 
   "gameDetailsScreenBodyErrorStateTitle": "Failed to retrieve game details!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Players",

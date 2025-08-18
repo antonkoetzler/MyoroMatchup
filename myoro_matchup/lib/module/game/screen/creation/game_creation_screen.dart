@@ -13,7 +13,7 @@ part '_widget/_frequency_field.dart';
 part '_widget/_date_field.dart';
 part '_widget/_time_field.dart';
 part '_widget/_location_field.dart';
-part '_widget/_monthly_price_field.dart';
+part '_widget/_member_price_field.dart';
 part '_widget/_name_field.dart';
 part '_widget/_one_time_price_field.dart';
 part '_widget/_player_quantity_field.dart';
