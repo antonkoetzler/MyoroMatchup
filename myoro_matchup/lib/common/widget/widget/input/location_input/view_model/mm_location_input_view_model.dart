@@ -14,7 +14,12 @@ final class MmLocationInputViewModel {
   MmLocationInputState get state => _state;
 
   /// [MyoroSearchInputConfiguration.request] of the [MmLocationInput].
-  Future<Set<MmLocationInputLocation>> request(String query) async {}
+  Future<Set<MmLocationInputLocation>> request(String query) async {
+    final configuration = _state.configuration;
+    final type = configuration.type;
+  }
 
   GET https://countrystatecity.in/api/cities/search?q=Calgary
+  https://rapidapi.com/wirefreethought/api/geodb-cities
+  Google places API
 }
