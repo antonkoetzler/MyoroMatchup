@@ -6,6 +6,8 @@ part of 'mm_location_input_theme_extension.dart';
 // MyoroThemeExtensionGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmLocationInputThemeExtension] once the code is generated.
 ///
 /// ```dart

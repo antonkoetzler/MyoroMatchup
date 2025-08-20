@@ -38,11 +38,11 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
 
   LoginSignupScreenThemeExtension.builder(TextTheme textTheme)
     : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength * 1.5),
-      bodySpacing = kSpacing * 4,
-      inputsSpacing = kSpacing * 2,
+      bodySpacing = kMyoroMultiplier * 4,
+      inputsSpacing = kMyoroMultiplier * 2,
       inputTextStyle = textTheme.bodySmall!,
       buttonTextStyle = textTheme.bodySmall!,
-      buttonsSpacing = kSpacing * 2,
+      buttonsSpacing = kMyoroMultiplier * 2,
       formTypeSwitcherButtonTextStyle = textTheme.headlineSmall!,
       formTypeSwitcherButtonIdleColor = MyoroColors.blue1.darken(0.05),
       formTypeSwitcherButtonTapColor = MyoroColors.blue1;

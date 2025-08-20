@@ -6,6 +6,8 @@ part of 'mm_app_bar_theme_extension.dart';
 // MyoroThemeExtensionGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmAppBarThemeExtension] once the code is generated.
 ///
 /// ```dart
@@ -16,14 +18,14 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
 
   @override
   MmAppBarThemeExtension copyWith({
-    double? spacing,
     bool? bordered,
+    double? spacing,
     TextStyle? titleTextStyle,
     MyoroIconConfiguration? backButtonIconConfiguration,
   }) {
     return MmAppBarThemeExtension(
-      spacing: spacing ?? self.spacing,
       bordered: bordered ?? self.bordered,
+      spacing: spacing ?? self.spacing,
       titleTextStyle: titleTextStyle ?? self.titleTextStyle,
       backButtonIconConfiguration:
           backButtonIconConfiguration ?? self.backButtonIconConfiguration,

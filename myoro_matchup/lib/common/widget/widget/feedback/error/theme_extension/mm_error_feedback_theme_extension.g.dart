@@ -6,6 +6,8 @@ part of 'mm_error_feedback_theme_extension.dart';
 // MyoroThemeExtensionGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmErrorFeedbackThemeExtension] once the code is generated.
 ///
 /// ```dart

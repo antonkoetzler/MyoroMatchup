@@ -6,6 +6,8 @@ part of 'login_signup_screen_theme_extension.dart';
 // MyoroThemeExtensionGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [LoginSignupScreenThemeExtension] once the code is generated.
 ///
 /// ```dart

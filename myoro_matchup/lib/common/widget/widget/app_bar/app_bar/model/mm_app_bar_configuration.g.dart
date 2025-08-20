@@ -6,6 +6,8 @@ part of 'mm_app_bar_configuration.dart';
 // MyoroModelGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmAppBarConfiguration] once the code is generated.
 ///
 /// ```dart
@@ -13,6 +15,22 @@ part of 'mm_app_bar_configuration.dart';
 /// ```
 mixin _$MmAppBarConfigurationMixin {
   MmAppBarConfiguration get self => this as MmAppBarConfiguration;
+
+  MmAppBarConfiguration copyWith({
+    void Function()? onBack,
+    bool onBackProvided = true,
+    String? title,
+    Widget? leading,
+    bool leadingProvided = true,
+    Widget? trailing,
+  }) {
+    return MmAppBarConfiguration(
+      onBack: onBackProvided ? (onBack ?? self.onBack) : null,
+      title: title ?? self.title,
+      leading: leadingProvided ? (leading ?? self.leading) : null,
+      trailing: trailing ?? self.trailing,
+    );
+  }
 
   @override
   bool operator ==(Object other) {
@@ -37,23 +55,4 @@ mixin _$MmAppBarConfigurationMixin {
       '  leading: ${self.leading},\n'
       '  trailing: ${self.trailing},\n'
       ');';
-}
-
-/// Extension class for @myoroModel to place the copyWith function.
-extension $MmAppBarConfigurationExtension on MmAppBarConfiguration {
-  MmAppBarConfiguration copyWith({
-    void Function()? onBack,
-    bool onBackProvided = true,
-    String? title,
-    Widget? leading,
-    bool leadingProvided = true,
-    Widget? trailing,
-  }) {
-    return MmAppBarConfiguration(
-      onBack: onBackProvided ? (onBack ?? self.onBack) : null,
-      title: title ?? self.title,
-      leading: leadingProvided ? (leading ?? self.leading) : null,
-      trailing: trailing ?? self.trailing,
-    );
-  }
 }

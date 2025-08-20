@@ -11,7 +11,7 @@ abstract class CrudService<T> {
   FutureOr<T>? get(int id);
 
   /// Select function.
-  FutureOr<Set<T>> select([Map<String, dynamic>? queryParameters]);
+  FutureOr<Set<T>> select([Map<String, dynamic> queryParameters = const {}]);
 
   /// Update function.
   ///

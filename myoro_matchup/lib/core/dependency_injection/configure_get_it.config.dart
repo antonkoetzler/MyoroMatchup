@@ -11,8 +11,12 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
+import 'package:myoro_matchup/common/service/location_service/location_service_api.dart'
+    as _i453;
 import 'package:myoro_matchup/common/service/user_service/user_service_api.dart'
     as _i820;
+import 'package:myoro_matchup/common/widget/widget/input/location_input/view_model/mm_location_input_view_model.dart'
+    as _i789;
 import 'package:myoro_matchup/core/routing/app_router.dart' as _i49;
 import 'package:myoro_matchup/module/game/domain/service/game/game_service_api.dart'
     as _i859;
@@ -32,11 +36,15 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     gh.singleton<_i460.UserService>(() => _i820.UserServiceApi());
+    gh.singleton<_i460.LocationService>(() => _i453.LocationServiceApi());
     gh.singleton<_i49.AppRouter>(() => _i49.AppRouter(gh<_i460.UserService>()));
     gh.factory<_i205.LoginSignupScreenViewModel>(
       () => _i205.LoginSignupScreenViewModel(gh<_i460.UserService>()),
     );
     gh.singleton<_i460.GameService>(() => _i859.GameServiceApi());
+    gh.factory<_i789.MmLocationInputViewModel>(
+      () => _i789.MmLocationInputViewModel(gh<_i460.LocationService>()),
+    );
     gh.factory<_i17.GameDetailsScreenViewModel>(
       () => _i17.GameDetailsScreenViewModel(gh<_i460.GameService>()),
     );

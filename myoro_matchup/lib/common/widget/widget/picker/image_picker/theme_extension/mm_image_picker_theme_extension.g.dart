@@ -6,6 +6,8 @@ part of 'mm_image_picker_theme_extension.dart';
 // MyoroThemeExtensionGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmImagePickerThemeExtension] once the code is generated.
 ///
 /// ```dart

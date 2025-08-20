@@ -6,6 +6,8 @@ part of 'mm_empty_feedback_configuration.dart';
 // MyoroModelGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmEmptyFeedbackConfiguration] once the code is generated.
 ///
 /// ```dart
@@ -13,6 +15,26 @@ part of 'mm_empty_feedback_configuration.dart';
 /// ```
 mixin _$MmEmptyFeedbackConfigurationMixin {
   MmEmptyFeedbackConfiguration get self => this as MmEmptyFeedbackConfiguration;
+
+  MmEmptyFeedbackConfiguration copyWith({
+    MyoroIconConfiguration? iconConfiguration,
+    MyoroTextConfiguration? titleConfiguration,
+    MyoroTextConfiguration? subtitleConfiguration,
+    bool subtitleConfigurationProvided = true,
+    MyoroIconTextButtonConfiguration? actionButtonConfiguration,
+    bool actionButtonConfigurationProvided = true,
+    // required String title, TODO: FIX THIS
+    // String? subtitle,
+    // String? actionButtonText,
+    // void Function()? actionButtonCallback,
+  }) {
+    return MmEmptyFeedbackConfiguration(
+      title: faker.lorem.word(),
+      subtitle: faker.lorem.word(),
+      actionButtonText: 'qwe',
+      actionButtonCallback: () {},
+    );
+  }
 
   @override
   bool operator ==(Object other) {
@@ -42,22 +64,4 @@ mixin _$MmEmptyFeedbackConfigurationMixin {
       '  subtitleConfiguration: ${self.subtitleConfiguration},\n'
       '  actionButtonConfiguration: ${self.actionButtonConfiguration},\n'
       ');';
-}
-
-/// Extension class for @myoroModel to place the copyWith function.
-extension $MmEmptyFeedbackConfigurationExtension
-    on MmEmptyFeedbackConfiguration {
-  MmEmptyFeedbackConfiguration copyWith({
-    required String title,
-    String? subtitle,
-    String? actionButtonText,
-    void Function()? actionButtonCallback,
-  }) {
-    return MmEmptyFeedbackConfiguration(
-      title: title,
-      subtitle: subtitle,
-      actionButtonText: actionButtonText,
-      actionButtonCallback: actionButtonCallback,
-    );
-  }
 }

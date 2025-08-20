@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:myoro_flutter_annotations/myoro_flutter_annotations.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 part 'game_creation_screen_theme_extension.g.dart';
@@ -16,7 +17,7 @@ final class GameCreationScreenThemeExtension extends ThemeExtension<GameCreation
 
   GameCreationScreenThemeExtension.fake() : spacing = faker.randomGenerator.decimal(scale: 20);
 
-  const GameCreationScreenThemeExtension.builder() : spacing = kSpacing * 2;
+  const GameCreationScreenThemeExtension.builder() : spacing = kMyoroMultiplier * 2;
 
   /// Spacing between [Widget]s.
   final double spacing;

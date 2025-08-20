@@ -37,15 +37,15 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
       newGameButtonBottomOffset = faker.randomGenerator.decimal(scale: 20);
 
   GameListingScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
-    : profileButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.person, size: kSpacing * 6),
+    : profileButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.person, size: kMyoroMultiplier * 6),
       bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: kEdgeInsetsLength),
       gameMargin = const EdgeInsets.only(bottom: kEdgeInsetsLength),
-      gameBorderRadius = BorderRadius.circular(kBorderRadiusLength),
-      newGameButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.add, size: kSpacing * 6),
+      gameBorderRadius = BorderRadius.circular(kMyoroBorderRadiusLength),
+      newGameButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.add, size: kMyoroMultiplier * 6),
       newGameButtonTextStyle = textTheme.bodySmall!,
-      newGameButtonBorderRadius = BorderRadius.circular(kBorderRadiusLength),
-      newGameButtonSpacing = kSpacing,
-      newGameButtonBottomOffset = kSpacing;
+      newGameButtonBorderRadius = BorderRadius.circular(kMyoroBorderRadiusLength),
+      newGameButtonSpacing = kMyoroMultiplier,
+      newGameButtonBottomOffset = kMyoroMultiplier;
 
   /// [MyoroIconConfiguration] of [GameListingScreen]'s profile button in the app bar.
   final MyoroIconConfiguration profileButtonIconConfiguration;

@@ -20,8 +20,8 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
       appBarOptionsIconConfiguration = MyoroIconConfiguration.fake();
 
   const GameDetailsScreenThemeExtension.builder()
-    : errorStatePadding = const EdgeInsets.all(kSpacing * 4),
-      appBarOptionsIconConfiguration = const MyoroIconConfiguration(icon: Icons.more_vert, size: kSpacing * 6);
+    : errorStatePadding = const EdgeInsets.all(kMyoroMultiplier * 4),
+      appBarOptionsIconConfiguration = const MyoroIconConfiguration(icon: Icons.more_vert, size: kMyoroMultiplier * 6);
 
   /// [EdgeInsets] of the error state's content.
   final EdgeInsets errorStatePadding;

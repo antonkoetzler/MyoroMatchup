@@ -26,10 +26,13 @@ final class MmAppBarThemeExtension extends ThemeExtension<MmAppBarThemeExtension
       backButtonIconConfiguration = MyoroIconConfiguration.fake();
 
   MmAppBarThemeExtension.builder(TextTheme textTheme)
-    : spacing = kSpacing * 2,
+    : spacing = kMyoroMultiplier * 2,
       bordered = true,
       titleTextStyle = textTheme.titleMedium!,
-      backButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.keyboard_arrow_left, size: kSpacing * 6);
+      backButtonIconConfiguration = const MyoroIconConfiguration(
+        icon: Icons.keyboard_arrow_left,
+        size: kMyoroMultiplier * 6,
+      );
 
   /// [MyoroAppBarConfiguration.bordered]
   final bool bordered;

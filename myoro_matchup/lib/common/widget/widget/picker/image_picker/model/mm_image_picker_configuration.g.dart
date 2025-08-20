@@ -6,6 +6,8 @@ part of 'mm_image_picker_configuration.dart';
 // MyoroModelGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmImagePickerConfiguration] once the code is generated.
 ///
 /// ```dart
@@ -13,6 +15,19 @@ part of 'mm_image_picker_configuration.dart';
 /// ```
 mixin _$MmImagePickerConfigurationMixin {
   MmImagePickerConfiguration get self => this as MmImagePickerConfiguration;
+
+  MmImagePickerConfiguration copyWith({
+    MmImagePickerEnum? type,
+    String? initialImage,
+    bool initialImageProvided = true,
+  }) {
+    return MmImagePickerConfiguration(
+      type: type ?? self.type,
+      initialImage: initialImageProvided
+          ? (initialImage ?? self.initialImage)
+          : null,
+    );
+  }
 
   @override
   bool operator ==(Object other) {
@@ -33,20 +48,4 @@ mixin _$MmImagePickerConfigurationMixin {
       '  type: ${self.type},\n'
       '  initialImage: ${self.initialImage},\n'
       ');';
-}
-
-/// Extension class for @myoroModel to place the copyWith function.
-extension $MmImagePickerConfigurationExtension on MmImagePickerConfiguration {
-  MmImagePickerConfiguration copyWith({
-    MmImagePickerEnum? type,
-    String? initialImage,
-    bool initialImageProvided = true,
-  }) {
-    return MmImagePickerConfiguration(
-      type: type ?? self.type,
-      initialImage: initialImageProvided
-          ? (initialImage ?? self.initialImage)
-          : null,
-    );
-  }
 }

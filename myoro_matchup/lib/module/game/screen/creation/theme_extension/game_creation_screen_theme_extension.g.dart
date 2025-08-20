@@ -6,6 +6,8 @@ part of 'game_creation_screen_theme_extension.dart';
 // MyoroThemeExtensionGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [GameCreationScreenThemeExtension] once the code is generated.
 ///
 /// ```dart

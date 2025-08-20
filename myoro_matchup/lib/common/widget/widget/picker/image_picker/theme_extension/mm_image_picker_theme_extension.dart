@@ -37,15 +37,18 @@ final class MmImagePickerThemeExtension extends ThemeExtension<MmImagePickerThem
       selectedImageUnselectedStateIconSize = faker.randomGenerator.decimal(scale: 500, min: 20);
 
   MmImagePickerThemeExtension.builder(ColorScheme colorScheme)
-    : profilePictureConstraints = const BoxConstraints(minWidth: kSpacing * 20, minHeight: kSpacing * 20),
-      bannerConstraints = const BoxConstraints(minWidth: double.infinity, minHeight: kSpacing * 20),
+    : profilePictureConstraints = const BoxConstraints(
+        minWidth: kMyoroMultiplier * 20,
+        minHeight: kMyoroMultiplier * 20,
+      ),
+      bannerConstraints = const BoxConstraints(minWidth: double.infinity, minHeight: kMyoroMultiplier * 20),
       borderRadius = BorderRadius.circular(kMyoroBorderRadiusLength),
       clipBehavior = Clip.hardEdge,
       overlayCursor = SystemMouseCursors.click,
       overlayIdleBackgroundColor = colorScheme.onPrimary.withValues(alpha: kTransparencyOpacity1),
       overlayHoverBackgroundColor = colorScheme.onPrimary.withValues(alpha: kTransparencyOpacity2),
       overlayTapBackgroundColor = colorScheme.onPrimary.withValues(alpha: kTransparencyOpacity3),
-      selectedImageUnselectedStateIconSize = kSpacing * 10;
+      selectedImageUnselectedStateIconSize = kMyoroMultiplier * 10;
 
   /// [BoxConstraints] of [MmImagePickerEnum.profilePicture].
   final BoxConstraints profilePictureConstraints;

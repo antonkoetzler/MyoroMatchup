@@ -34,7 +34,7 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
       sportNameTextStyle = myoroFake<TextStyle>();
 
   GameCardThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
-    : bannerMaxHeight = kSpacing * 24,
+    : bannerMaxHeight = kMyoroMultiplier * 24,
       bannerDecoration = BoxDecoration(
         gradient: RadialGradient(
           center: Alignment.center,
@@ -48,10 +48,10 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
           stops: const [0.0, 0.3, 0.6, 1.0],
         ),
       ),
-      profilePictureBorderRadius = BorderRadius.circular(kBorderRadiusLength),
-      profilePictureSize = kSpacing * 12,
+      profilePictureBorderRadius = BorderRadius.circular(kMyoroBorderRadiusLength),
+      profilePictureSize = kMyoroMultiplier * 12,
       infoBarPadding = const EdgeInsets.all(kEdgeInsetsLength),
-      infoBarSpacing = kSpacing * 2,
+      infoBarSpacing = kMyoroMultiplier * 2,
       gameNameTextStyle = textTheme.titleMedium!,
       sportNameTextStyle = textTheme.labelSmall!;
 

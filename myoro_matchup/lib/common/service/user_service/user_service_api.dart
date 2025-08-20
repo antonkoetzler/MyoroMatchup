@@ -21,7 +21,7 @@ final class UserServiceApi implements UserService {
   }
 
   @override
-  Future<Set<User>> select([Map<String, dynamic>? queryParameters]) {
+  Future<Set<User>> select([Map<String, dynamic> queryParameters = const {}]) {
     // TODO: implement select
     throw UnimplementedError();
   }

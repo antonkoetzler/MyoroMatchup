@@ -6,6 +6,8 @@ part of 'mm_error_feedback_configuration.dart';
 // MyoroModelGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmErrorFeedbackConfiguration] once the code is generated.
 ///
 /// ```dart
@@ -13,6 +15,24 @@ part of 'mm_error_feedback_configuration.dart';
 /// ```
 mixin _$MmErrorFeedbackConfigurationMixin {
   MmErrorFeedbackConfiguration get self => this as MmErrorFeedbackConfiguration;
+
+  MmErrorFeedbackConfiguration copyWith({
+    MyoroIconConfiguration? iconConfiguration,
+    MyoroTextConfiguration? titleConfiguration,
+    MyoroTextConfiguration? subtitleConfiguration,
+    bool subtitleConfigurationProvided = true,
+    MyoroIconTextButtonConfiguration? actionButtonConfiguration,
+    bool actionButtonConfigurationProvided = true,
+    required String title,
+    String? subtitle,
+    required void Function() onRetry,
+  }) {
+    return MmErrorFeedbackConfiguration(
+      title: title,
+      subtitle: subtitle,
+      onRetry: onRetry,
+    );
+  }
 
   @override
   bool operator ==(Object other) {
@@ -42,20 +62,4 @@ mixin _$MmErrorFeedbackConfigurationMixin {
       '  subtitleConfiguration: ${self.subtitleConfiguration},\n'
       '  actionButtonConfiguration: ${self.actionButtonConfiguration},\n'
       ');';
-}
-
-/// Extension class for @myoroModel to place the copyWith function.
-extension $MmErrorFeedbackConfigurationExtension
-    on MmErrorFeedbackConfiguration {
-  MmErrorFeedbackConfiguration copyWith({
-    required String title,
-    String? subtitle,
-    required void Function() onRetry,
-  }) {
-    return MmErrorFeedbackConfiguration(
-      title: title,
-      subtitle: subtitle,
-      onRetry: onRetry,
-    );
-  }
 }

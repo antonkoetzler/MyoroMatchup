@@ -6,6 +6,8 @@ part of 'mm_location_input_configuration.dart';
 // MyoroModelGenerator
 // **************************************************************************
 
+// coverage:ignore-file
+
 /// Apply this mixin to [MmLocationInputConfiguration] once the code is generated.
 ///
 /// ```dart
@@ -13,6 +15,10 @@ part of 'mm_location_input_configuration.dart';
 /// ```
 mixin _$MmLocationInputConfigurationMixin {
   MmLocationInputConfiguration get self => this as MmLocationInputConfiguration;
+
+  MmLocationInputConfiguration copyWith({MmLocationInputTypeEnum? type}) {
+    return MmLocationInputConfiguration(type: type ?? self.type);
+  }
 
   @override
   bool operator ==(Object other) {
@@ -31,12 +37,4 @@ mixin _$MmLocationInputConfigurationMixin {
       'MmLocationInputConfiguration(\n'
       '  type: ${self.type},\n'
       ');';
-}
-
-/// Extension class for @myoroModel to place the copyWith function.
-extension $MmLocationInputConfigurationExtension
-    on MmLocationInputConfiguration {
-  MmLocationInputConfiguration copyWith({MmLocationInputTypeEnum? type}) {
-    return MmLocationInputConfiguration(type: type ?? self.type);
-  }
 }

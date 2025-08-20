@@ -3,25 +3,44 @@ import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 import 'package:provider/provider.dart';
 
+part '_widget/_item.dart';
+
 /// Location input.
-final class MmLocationInput extends StatelessWidget {
+final class MmLocationInput extends StatefulWidget {
   const MmLocationInput({super.key, required this.configuration});
 
   /// Configuration.
   final MmLocationInputConfiguration configuration;
 
   @override
+  State<MmLocationInput> createState() => _MmLocationInputState();
+}
+
+final class _MmLocationInputState extends State<MmLocationInput> {
+  late final MmLocationInputViewModel _viewModel;
+
+  @override
+  void initState() {
+    super.initState();
+    _viewModel = getIt<MmLocationInputViewModel>()..init(widget.configuration);
+  }
+
+  @override
   Widget build(_) {
+    final state = _viewModel.state;
+    final configuration = state.configuration;
     final type = configuration.type;
     final label = type.label;
+    final request = _viewModel.request;
+    final itemBuilder = _viewModel.itemBuilder;
 
-    return InheritedProvider(
-      create: (_) => MmLocationInputViewModel(configuration),
-      child: MyoroSearchInput(
+    return InheritedProvider.value(
+      value: _viewModel,
+      child: MyoroSearchInput<Location>(
         configuration: MyoroSearchInputConfiguration(
           inputConfiguration: MyoroInputConfiguration(label: label),
-          request: (_) => {},
-          itemBuilder: (_) => MyoroMenuItem.fake(),
+          request: request,
+          itemBuilder: (item) => itemBuilder(() => _Item()),
         ),
       ),
     );
