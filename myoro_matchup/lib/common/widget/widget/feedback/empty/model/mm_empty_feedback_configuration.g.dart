@@ -23,16 +23,21 @@ mixin _$MmEmptyFeedbackConfigurationMixin {
     bool subtitleConfigurationProvided = true,
     MyoroIconTextButtonConfiguration? actionButtonConfiguration,
     bool actionButtonConfigurationProvided = true,
-    // required String title, TODO: FIX THIS
-    // String? subtitle,
-    // String? actionButtonText,
-    // void Function()? actionButtonCallback,
+    String? title,
+    String? subtitle,
+    String? actionButtonText,
+    void Function()? actionButtonCallback,
   }) {
+    assert(
+      title != null,
+      '[MmEmptyFeedbackConfiguration.copyWith]: [title] cannot be null.',
+    );
+
     return MmEmptyFeedbackConfiguration(
-      title: faker.lorem.word(),
-      subtitle: faker.lorem.word(),
-      actionButtonText: 'qwe',
-      actionButtonCallback: () {},
+      title: title!,
+      subtitle: subtitle,
+      actionButtonText: actionButtonText,
+      actionButtonCallback: actionButtonCallback,
     );
   }
 

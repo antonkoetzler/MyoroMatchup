@@ -1,1 +1,1 @@
-export 'snack_bar_helper.dart';
+export 'mm_snack_bar_helper.dart';

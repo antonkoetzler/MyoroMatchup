@@ -89,7 +89,7 @@ final class LoginSignupScreenViewModel {
     final status = request.status;
     final errorMessage = request.errorMessage;
     if (status.isError) {
-      SnackBarHelper.showSnackBar(
+      MmSnackBarHelper.showSnackBar(
         snackBar: MyoroSnackBar(
           configuration: MyoroSnackBarConfiguration(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage!),
         ),

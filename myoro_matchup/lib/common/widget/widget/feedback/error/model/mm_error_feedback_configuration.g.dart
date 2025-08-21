@@ -23,14 +23,23 @@ mixin _$MmErrorFeedbackConfigurationMixin {
     bool subtitleConfigurationProvided = true,
     MyoroIconTextButtonConfiguration? actionButtonConfiguration,
     bool actionButtonConfigurationProvided = true,
-    required String title,
+    String? title,
     String? subtitle,
-    required void Function() onRetry,
+    void Function()? onRetry,
   }) {
+    assert(
+      title != null,
+      '[MmErrorFeedbackConfiguration.copyWith]: [title] cannot be null.',
+    );
+    assert(
+      onRetry != null,
+      '[MmErrorFeedbackConfiguration.copyWith]: [onRetry] cannot be null.',
+    );
+
     return MmErrorFeedbackConfiguration(
-      title: title,
+      title: title!,
       subtitle: subtitle,
-      onRetry: onRetry,
+      onRetry: onRetry!,
     );
   }
 

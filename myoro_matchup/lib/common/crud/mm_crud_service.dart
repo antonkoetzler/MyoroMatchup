@@ -1,7 +1,7 @@
 import 'dart:async';
 
 /// Abstract class representing a CRUD service.
-abstract class CrudService<T> {
+abstract class MmCrudService<T> {
   /// Create function.
   ///
   /// Returns the ID of the created [T].
