@@ -16,7 +16,7 @@ part of 'mm_location_input_configuration.dart';
 mixin _$MmLocationInputConfigurationMixin {
   MmLocationInputConfiguration get self => this as MmLocationInputConfiguration;
 
-  MmLocationInputConfiguration copyWith({MmLocationInputTypeEnum? type}) {
+  MmLocationInputConfiguration copyWith({LocationTypeEnum? type}) {
     return MmLocationInputConfiguration(type: type ?? self.type);
   }
 

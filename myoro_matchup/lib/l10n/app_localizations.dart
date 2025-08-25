@@ -112,6 +112,12 @@ abstract class AppLocalizations {
   /// **'Retry'**
   String get mmErrorFeedbackActionButtonText;
 
+  /// No description provided for @mmLocationInputTypeEnumPlaceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Place'**
+  String get mmLocationInputTypeEnumPlaceLabel;
+
   /// No description provided for @mmLocationInputTypeEnumCityLabel.
   ///
   /// In en, this message translates to:

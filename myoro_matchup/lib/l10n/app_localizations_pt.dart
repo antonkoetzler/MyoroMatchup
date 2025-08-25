@@ -16,6 +16,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Tentar novamente';
 
   @override
+  String get mmLocationInputTypeEnumPlaceLabel => 'Lugar';
+
+  @override
   String get mmLocationInputTypeEnumCityLabel => 'Cidade';
 
   @override

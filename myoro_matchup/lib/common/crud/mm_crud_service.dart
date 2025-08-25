@@ -11,7 +11,7 @@ abstract class MmCrudService<T> {
   FutureOr<T>? get(int id);
 
   /// Select function.
-  FutureOr<Set<T>> select([Map<String, dynamic> queryParameters = const {}]);
+  FutureOr<Set<T>> select();
 
   /// Update function.
   ///

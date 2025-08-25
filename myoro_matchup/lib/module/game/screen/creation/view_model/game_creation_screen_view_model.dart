@@ -57,11 +57,6 @@ final class GameCreationScreenViewModel {
     return visibility.label;
   }
 
-  /// Location field's [MyoroMenuConfiguration.itemBuilder].
-  MyoroMenuItem locationFieldItemBuilder(String item) {
-    return MyoroMenuItem(textConfiguration: MyoroTextConfiguration(text: item));
-  }
-
   /// Frequency field's [MyoroMenuConfiguration.itemBuilder].
   MyoroMenuItem frequencyFieldItemBuilder(FrequencyEnum value) {
     return MyoroMenuItem(textConfiguration: MyoroTextConfiguration(text: value.label));

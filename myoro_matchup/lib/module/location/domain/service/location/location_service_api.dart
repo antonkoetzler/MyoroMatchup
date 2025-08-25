@@ -22,7 +22,7 @@ final class LocationServiceApi implements LocationService {
 
   // TODO: Mocked.
   @override
-  Future<Set<Location>> select([Map<String, dynamic> queryParameters = const {}]) async {
+  Future<Set<Location>> select({LocationTypeEnum? locationType}) async {
     // https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&q=Elase
     // TODO: Mocked.
     if (kDebugMode) {
@@ -44,4 +44,3 @@ final class LocationServiceApi implements LocationService {
     throw UnimplementedError();
   }
 }
-

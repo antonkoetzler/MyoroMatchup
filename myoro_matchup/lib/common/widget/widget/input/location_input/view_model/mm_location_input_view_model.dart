@@ -29,7 +29,7 @@ final class MmLocationInputViewModel {
 
   /// [MyoroSearchInputConfiguration.request] of the [MmLocationInput].
   Future<Set<Location>> request(String query) async {
-    final response = await _locationService.select({LocationService.queryQueryParameterJsonKey: query});
+    final response = await _locationService.select();
     return response;
   }
 

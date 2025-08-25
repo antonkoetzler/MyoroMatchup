@@ -16,6 +16,9 @@ class AppLocalizationsEs extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Reintentar';
 
   @override
+  String get mmLocationInputTypeEnumPlaceLabel => 'Lugar';
+
+  @override
   String get mmLocationInputTypeEnumCityLabel => 'Ciudad';
 
   @override

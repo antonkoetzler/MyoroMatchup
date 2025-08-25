@@ -10,8 +10,8 @@ part 'mm_location_input_configuration.g.dart';
 final class MmLocationInputConfiguration with _$MmLocationInputConfigurationMixin {
   const MmLocationInputConfiguration({required this.type});
 
-  MmLocationInputConfiguration.fake() : type = MmLocationInputTypeEnum.fake();
+  MmLocationInputConfiguration.fake() : type = LocationTypeEnum.fake();
 
   /// Type of location being queried.
-  final MmLocationInputTypeEnum type;
+  final LocationTypeEnum type;
 }

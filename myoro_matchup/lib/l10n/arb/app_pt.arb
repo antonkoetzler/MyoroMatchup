@@ -1,8 +1,8 @@
 {
   "mmErrorFeedbackSubtitle": "Verifique sua conexão e tente novamente.",
-
   "mmErrorFeedbackActionButtonText": "Tentar novamente",
 
+  "mmLocationInputTypeEnumPlaceLabel": "Lugar",
   "mmLocationInputTypeEnumCityLabel": "Cidade",
   "mmLocationInputTypeEnumStateLabel": "Estado",
   "mmLocationInputTypeEnumCountryLabel": "País",

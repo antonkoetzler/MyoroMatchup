@@ -2,7 +2,10 @@ import 'package:faker/faker.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Enum encapsulating the types of location that can be queried in [MmLocationInput].
-enum MmLocationInputTypeEnum {
+enum LocationTypeEnum {
+  /// Specific address / place.
+  place,
+
   /// City.
   city,
 
@@ -15,13 +18,14 @@ enum MmLocationInputTypeEnum {
   /// Continent.
   continent;
 
-  factory MmLocationInputTypeEnum.fake() {
+  factory LocationTypeEnum.fake() {
     return values[faker.randomGenerator.integer(values.length)];
   }
 
   /// Label.
   String get label {
     return switch (this) {
+      place => localization.mmLocationInputTypeEnumPlaceLabel,
       city => localization.mmLocationInputTypeEnumCityLabel,
       state => localization.mmLocationInputTypeEnumStateLabel,
       country => localization.mmLocationInputTypeEnumCountryLabel,
@@ -29,6 +33,7 @@ enum MmLocationInputTypeEnum {
     };
   }
 
+  bool get isPlace => this == place;
   bool get isCity => this == city;
   bool get isState => this == state;
   bool get isCountry => this == country;
