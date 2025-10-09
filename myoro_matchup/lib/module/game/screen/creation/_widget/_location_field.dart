@@ -6,7 +6,6 @@ final class _LocationField extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final viewModel = context.read<GameCreationScreenViewModel>();
     return const MmLocationInput(configuration: MmLocationInputConfiguration(type: LocationTypeEnum.place));
   }
 }

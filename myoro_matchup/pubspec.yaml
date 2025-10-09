@@ -9,10 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  myoro_flutter_library: # ^2.5.4
-    path: ../../myoro_flutter_library
-  myoro_flutter_annotations: # ^1.4.7
-    path: ../../myoro_flutter_annotations
+  myoro_flutter_library: ^2.5.5
+  myoro_flutter_annotations: ^1.4.9
   provider: ^6.1.5
   get_it: ^8.0.3
   injectable: ^2.5.0
