@@ -6,6 +6,6 @@ final class _ProfilePictureField extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const MmImagePicker(configuration: MmImagePickerConfiguration(type: MmImagePickerEnum.profilePicture));
+    return MyoroImagePicker(configuration: MyoroImagePickerConfiguration(onChanged: (_) {}));
   }
 }

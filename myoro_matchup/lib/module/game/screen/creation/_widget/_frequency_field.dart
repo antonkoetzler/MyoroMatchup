@@ -10,12 +10,9 @@ final class _FrequencyField extends StatelessWidget {
     final frequencyFieldItemBuilder = viewModel.frequencyFieldItemBuilder;
     final frequencyFieldSelectedItemBuilder = viewModel.frequencyFieldSelectedItemBuilder;
 
-    return MyoroSingularDropdown(
-      configuration: MyoroSingularDropdownConfiguration(
-        menuConfiguration: MyoroMenuConfiguration(
-          request: FrequencyEnum.values.toSet,
-          itemBuilder: frequencyFieldItemBuilder,
-        ),
+    return MyoroSingleSelectionDropdown<FrequencyEnum>(
+      configuration: MyoroSingleSelectionDropdownConfiguration(
+        menuConfiguration: MyoroSingleMenuConfiguration(request: FrequencyEnum.values.toSet, itemBuilder: frequencyFieldItemBuilder),
         selectedItemBuilder: frequencyFieldSelectedItemBuilder,
       ),
     );

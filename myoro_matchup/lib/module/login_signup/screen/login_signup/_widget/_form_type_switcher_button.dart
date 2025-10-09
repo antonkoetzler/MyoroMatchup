@@ -20,14 +20,13 @@ final class _FormTypeSwitcherButton extends StatelessWidget {
           },
           style: themeExtension.formTypeSwitcherButtonTextStyle,
         ),
-        contentColorBuilder: (tapStatus) => switch (tapStatus) {
-          MyoroTapStatusEnum.idle => themeExtension.formTypeSwitcherButtonIdleColor,
-          MyoroTapStatusEnum.hover => themeExtension.formTypeSwitcherButtonIdleColor,
-          MyoroTapStatusEnum.tap => themeExtension.formTypeSwitcherButtonTapColor,
-        },
-        backgroundColorBuilder: (_) => MyoroColors.transparent,
         onTapUp: (_) => viewModel.formTypeSwitcherButtonOnTapUp(),
       ),
+      style: MyoroIconTextButtonStyle(
+        contentIdleColor: themeExtension.formTypeSwitcherButtonIdleColor,
+        contentHoverColor: themeExtension.formTypeSwitcherButtonIdleColor,
+        contentTapColor: themeExtension.formTypeSwitcherButtonTapColor,
+      ).singleBackgroundColor(MyoroColors.transparent),
     );
   }
 }

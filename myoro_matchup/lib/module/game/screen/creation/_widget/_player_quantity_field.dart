@@ -12,11 +12,11 @@ final class _PlayerQuantityField extends StatelessWidget {
     final playerQuantityFieldItemBuilder = viewModel.playerQuantityFieldItemBuilder;
     final playerQuantityFieldSelectedItemBuilder = viewModel.playerQuantityFieldSelectedItemBuilder;
 
-    return MyoroSingularDropdown<int>(
-      configuration: MyoroSingularDropdownConfiguration(
+    return MyoroSingleSelectionDropdown<int>(
+      configuration: MyoroSingleSelectionDropdownConfiguration(
         label: localization.gameCreationScreenPlayerQuantityFieldLabel,
         enabled: _state.sport != null,
-        menuConfiguration: MyoroMenuConfiguration(
+        menuConfiguration: MyoroSingleMenuConfiguration(
           request: List.generate(_state.sport?.minPlayers ?? 0, (i) => i + 1).toSet,
           itemBuilder: playerQuantityFieldItemBuilder,
         ),

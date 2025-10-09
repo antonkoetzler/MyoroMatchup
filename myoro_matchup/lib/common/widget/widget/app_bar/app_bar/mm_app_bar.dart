@@ -20,24 +20,22 @@ final class MmAppBar extends StatelessWidget {
     return InheritedProvider.value(
       value: configuration,
       child: MyoroAppBar(
-        configuration: MyoroAppBarConfiguration(
-          bordered: themeExtension.bordered,
-          child: Stack(
-            alignment: Alignment.center,
-            children: [
-              Row(
-                spacing: themeExtension.spacing,
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  if (AppRouter.canPop()) const _BackButton(),
-                  ?configuration.leading,
-                  const Spacer(),
-                  Flexible(child: configuration.trailing),
-                ],
-              ),
-              const Positioned(child: _Title()),
-            ],
-          ),
+        showBottomDivider: themeExtension.bordered,
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Row(
+              spacing: themeExtension.spacing,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                if (AppRouter.canPop()) const _BackButton(),
+                ?configuration.leading,
+                const Spacer(),
+                Flexible(child: configuration.trailing),
+              ],
+            ),
+            const Positioned(child: _Title()),
+          ],
         ),
       ),
     );

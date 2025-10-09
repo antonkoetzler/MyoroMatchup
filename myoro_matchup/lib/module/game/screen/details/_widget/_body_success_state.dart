@@ -12,7 +12,7 @@ final class _BodySuccessState extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         GameCard(_game, displayDividerBetweenBannerAndInfoBar: true),
-        const MyoroBasicDivider(configuration: MyoroBasicDividerConfiguration(direction: Axis.horizontal)),
+        const MyoroBasicDivider(Axis.horizontal),
         Expanded(child: _BodySuccessStateTabView(_game)),
       ],
     );

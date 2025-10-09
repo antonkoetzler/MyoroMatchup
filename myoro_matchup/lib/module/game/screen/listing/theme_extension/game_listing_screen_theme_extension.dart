@@ -11,8 +11,7 @@ part 'game_listing_screen_theme_extension.g.dart';
 /// [ThemeExtension] of [GameListingScreen].
 @immutable
 @myoroThemeExtension
-final class GameListingScreenThemeExtension extends ThemeExtension<GameListingScreenThemeExtension>
-    with _$GameListingScreenThemeExtensionMixin {
+final class GameListingScreenThemeExtension extends ThemeExtension<GameListingScreenThemeExtension> with _$GameListingScreenThemeExtensionMixin {
   const GameListingScreenThemeExtension({
     required this.profileButtonIconConfiguration,
     required this.bodySuccessStateMargin,
@@ -40,10 +39,10 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
     : profileButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.person, size: kMyoroMultiplier * 6),
       bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: kEdgeInsetsLength),
       gameMargin = const EdgeInsets.only(bottom: kEdgeInsetsLength),
-      gameBorderRadius = BorderRadius.circular(kMyoroBorderRadiusLength),
+      gameBorderRadius = BorderRadius.circular(kMyoroBorderRadius),
       newGameButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.add, size: kMyoroMultiplier * 6),
       newGameButtonTextStyle = textTheme.bodySmall!,
-      newGameButtonBorderRadius = BorderRadius.circular(kMyoroBorderRadiusLength),
+      newGameButtonBorderRadius = BorderRadius.circular(kMyoroBorderRadius),
       newGameButtonSpacing = kMyoroMultiplier,
       newGameButtonBottomOffset = kMyoroMultiplier;
 
@@ -78,19 +77,11 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   GameListingScreenThemeExtension lerp(covariant ThemeExtension<GameListingScreenThemeExtension>? other, double t) {
     if (other is! GameListingScreenThemeExtension) return this;
     return copyWith(
-      profileButtonIconConfiguration: MyoroIconConfiguration.lerp(
-        profileButtonIconConfiguration,
-        other.profileButtonIconConfiguration,
-        t,
-      ),
+      profileButtonIconConfiguration: MyoroIconConfiguration.lerp(profileButtonIconConfiguration, other.profileButtonIconConfiguration, t),
       bodySuccessStateMargin: EdgeInsets.lerp(bodySuccessStateMargin, other.bodySuccessStateMargin, t),
       gameMargin: EdgeInsets.lerp(gameMargin, other.gameMargin, t),
       gameBorderRadius: BorderRadius.lerp(gameBorderRadius, other.gameBorderRadius, t),
-      newGameButtonIconConfiguration: MyoroIconConfiguration.lerp(
-        newGameButtonIconConfiguration,
-        other.newGameButtonIconConfiguration,
-        t,
-      ),
+      newGameButtonIconConfiguration: MyoroIconConfiguration.lerp(newGameButtonIconConfiguration, other.newGameButtonIconConfiguration, t),
       newGameButtonTextStyle: TextStyle.lerp(newGameButtonTextStyle, other.newGameButtonTextStyle, t),
       newGameButtonBorderRadius: BorderRadius.lerp(newGameButtonBorderRadius, other.newGameButtonBorderRadius, t),
       newGameButtonSpacing: lerpDouble(newGameButtonSpacing, other.newGameButtonSpacing, t),

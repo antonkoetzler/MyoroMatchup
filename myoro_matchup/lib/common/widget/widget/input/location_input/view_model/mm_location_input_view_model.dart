@@ -35,6 +35,11 @@ final class MmLocationInputViewModel {
 
   /// [MyoroSearchInputConfiguration.request] of the [MmLocationInput].
   MyoroMenuItem itemBuilder(Widget Function() builder) {
-    return MyoroMenuItem(builder: (_, _) => builder());
+    return MyoroMenuItem(buttonBuilder: (_, _) => builder());
+  }
+
+  /// [MyoroSearchInputConfiguration.selectedItemBuilder] of the [MmLocationInput].
+  String selectedItemBuilder(Location location) {
+    return location.name;
   }
 }

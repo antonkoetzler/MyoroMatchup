@@ -10,13 +10,13 @@ final class _SportField extends StatelessWidget {
   Widget build(context) {
     final viewModel = context.read<GameCreationScreenViewModel>();
 
-    return MyoroSingularDropdown<SportsEnum>(
-      configuration: MyoroSingularDropdownConfiguration(
+    return MyoroSingleSelectionDropdown<SportsEnum>(
+      configuration: MyoroSingleSelectionDropdownConfiguration(
         label: localization.gameCreationScreenSportFieldLabel,
-        selectedItem: _state.sport,
-        menuConfiguration: MyoroMenuConfiguration(
+        menuConfiguration: MyoroSingleMenuConfiguration(
           request: SportsEnum.values.toSet,
           itemBuilder: viewModel.sportFieldItemBuilder,
+          selectedItem: _state.sport,
         ),
         selectedItemBuilder: viewModel.sportFieldSelectedItemBuilder,
         onChanged: (sport) => _state.sport = sport,

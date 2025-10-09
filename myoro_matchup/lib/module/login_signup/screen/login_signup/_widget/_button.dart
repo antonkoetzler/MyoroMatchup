@@ -14,9 +14,9 @@ final class _Button extends StatelessWidget {
     return MyoroIconTextButton(
       configuration: MyoroIconTextButtonConfiguration(
         textConfiguration: MyoroTextConfiguration(text: text, style: themeExtension.buttonTextStyle),
-        borderBuilder: (_) => MyoroButtonStyleEnum.border(context),
         onTapUp: (_) => onTapUp(),
       ),
+      style: const MyoroIconTextButtonStyle().bordered(context),
     );
   }
 }

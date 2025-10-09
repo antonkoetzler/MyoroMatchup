@@ -9,9 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  myoro_flutter_library: # ^2.3.2
+  myoro_flutter_library: # ^2.5.4
     path: ../../myoro_flutter_library
-  myoro_flutter_annotations: # ^1.4.4
+  myoro_flutter_annotations: # ^1.4.7
     path: ../../myoro_flutter_annotations
   provider: ^6.1.5
   get_it: ^8.0.3
@@ -21,7 +21,6 @@ dependencies:
     sdk: flutter
   intl: ^0.20.2
   go_router: ^16.0.0
-  file_picker: ^10.2.3
   json_serializable: ^6.10.0
   json_annotation: ^4.9.0
 

@@ -2,14 +2,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Debug Java",
             "type": "java",
-            "name": "Run Spring Boot",
             "request": "launch",
             "mainClass": "com.example.myoro_matchup_api.MyoroMatchupApiApplication",
             "classPaths": [
                 "${workspaceFolder}/myoro_matchup_api/target/classes",
                 "${workspaceFolder}/myoro_matchup_api/target/dependency/*"
             ],
+        },
+        {
+            "name": "Debug Flutter",
+            "request": "launch",
+            "type": "dart",
+            "program": "myoro_matchup/lib/main.dart"
         }
     ]
 }

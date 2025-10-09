@@ -33,14 +33,15 @@ final class _MmLocationInputState extends State<MmLocationInput> {
     final label = type.label;
     final request = _viewModel.request;
     final itemBuilder = _viewModel.itemBuilder;
+    final selectedItemBuilder = _viewModel.selectedItemBuilder;
 
     return InheritedProvider.value(
       value: _viewModel,
       child: MyoroSearchInput<Location>(
         configuration: MyoroSearchInputConfiguration(
-          inputConfiguration: MyoroInputConfiguration(label: label),
-          request: request,
-          itemBuilder: (item) => itemBuilder(() => _Item()),
+          label: label,
+          menuConfiguration: MyoroSearchInputMenuConfiguration(request: request, itemBuilder: (item) => itemBuilder(() => const _Item())),
+          selectedItemBuilder: selectedItemBuilder,
         ),
       ),
     );

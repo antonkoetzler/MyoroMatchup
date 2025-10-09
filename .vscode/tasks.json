@@ -1,0 +1,38 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Format and fix files",
+      "type": "shell",
+      "command": "cd myoro_matchup && bash tool/format_and_fix.sh",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Run Flutter build runner",
+      "type": "shell",
+      "command": "cd myoro_matchup && bash tool/generate_code.sh",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Setup environment",
+      "type": "shell",
+      "command": "cd myoro_matchup && bash tool/setup.sh",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ]
+}

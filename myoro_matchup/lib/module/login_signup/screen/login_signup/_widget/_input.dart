@@ -12,11 +12,8 @@ final class _Input extends StatelessWidget {
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
 
     return MyoroInput(
-      configuration: MyoroInputConfiguration(
-        placeholder: placeholder,
-        controller: controller,
-        inputTextStyle: themeExtension.inputTextStyle,
-      ),
+      configuration: MyoroInputConfiguration(placeholder: placeholder, controller: controller),
+      style: MyoroInputStyle(inputTextStyle: themeExtension.inputTextStyle),
     );
   }
 }

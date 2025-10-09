@@ -21,6 +21,7 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
     required this.infoBarSpacing,
     required this.gameNameTextStyle,
     required this.sportNameTextStyle,
+    required this.profilePictureBorder,
   });
 
   GameCardThemeExtension.fake()
@@ -31,7 +32,8 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
       infoBarPadding = myoroFake<EdgeInsets>(),
       infoBarSpacing = faker.randomGenerator.decimal(scale: 20),
       gameNameTextStyle = myoroFake<TextStyle>(),
-      sportNameTextStyle = myoroFake<TextStyle>();
+      sportNameTextStyle = myoroFake<TextStyle>(),
+      profilePictureBorder = myoroFake<Border>();
 
   GameCardThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
     : bannerMaxHeight = kMyoroMultiplier * 24,
@@ -48,12 +50,13 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
           stops: const [0.0, 0.3, 0.6, 1.0],
         ),
       ),
-      profilePictureBorderRadius = BorderRadius.circular(kMyoroBorderRadiusLength),
+      profilePictureBorderRadius = BorderRadius.circular(kMyoroBorderRadius),
       profilePictureSize = kMyoroMultiplier * 12,
       infoBarPadding = const EdgeInsets.all(kEdgeInsetsLength),
       infoBarSpacing = kMyoroMultiplier * 2,
       gameNameTextStyle = textTheme.titleMedium!,
-      sportNameTextStyle = textTheme.labelSmall!;
+      sportNameTextStyle = textTheme.labelSmall!,
+      profilePictureBorder = Border.all(color: colorScheme.primary, width: kMyoroBorderWidth);
 
   /// Banner's max height.
   final double bannerMaxHeight;
@@ -79,6 +82,9 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
   /// [TextStyle] of the [Game]'s sport name.
   final TextStyle sportNameTextStyle;
 
+  /// [Border] of the profile picture.
+  final Border profilePictureBorder;
+
   @override
   GameCardThemeExtension lerp(covariant ThemeExtension<GameCardThemeExtension>? other, double t) {
     if (other is! GameCardThemeExtension) return this;
@@ -91,6 +97,7 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
       infoBarSpacing: lerpDouble(infoBarSpacing, other.infoBarSpacing, t),
       gameNameTextStyle: TextStyle.lerp(gameNameTextStyle, other.gameNameTextStyle, t),
       sportNameTextStyle: TextStyle.lerp(sportNameTextStyle, other.sportNameTextStyle, t),
+      profilePictureBorder: Border.lerp(profilePictureBorder, other.profilePictureBorder, t),
     );
   }
 }

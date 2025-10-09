@@ -8,10 +8,10 @@ final class _CompetitivenessField extends StatelessWidget {
   Widget build(context) {
     final viewModel = context.read<GameCreationScreenViewModel>();
 
-    return MyoroSingularDropdown<CompetitivenessEnum>(
-      configuration: MyoroSingularDropdownConfiguration(
+    return MyoroSingleSelectionDropdown<CompetitivenessEnum>(
+      configuration: MyoroSingleSelectionDropdownConfiguration(
         label: localization.gameCreationScreenCompetitivenessFieldLabel,
-        menuConfiguration: MyoroMenuConfiguration(request: CompetitivenessEnum.values.toSet, itemBuilder: viewModel.competitivenessFieldItemBuilder),
+        menuConfiguration: MyoroSingleMenuConfiguration(request: CompetitivenessEnum.values.toSet, itemBuilder: viewModel.competitivenessFieldItemBuilder),
         selectedItemBuilder: viewModel.competitivenessFieldSelectedItemBuilder,
       ),
     );

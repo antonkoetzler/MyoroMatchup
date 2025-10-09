@@ -17,7 +17,7 @@ mixin _$MmAppBarConfigurationMixin {
   MmAppBarConfiguration get self => this as MmAppBarConfiguration;
 
   MmAppBarConfiguration copyWith({
-    void Function()? onBack,
+    VoidCallback? onBack,
     bool onBackProvided = true,
     String? title,
     Widget? leading,

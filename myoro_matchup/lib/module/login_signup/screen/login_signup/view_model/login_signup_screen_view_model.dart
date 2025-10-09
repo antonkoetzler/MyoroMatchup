@@ -35,7 +35,7 @@ final class LoginSignupScreenViewModel {
   }
 
   /// Form validation function.
-  String? _validation() {
+  String _validation() {
     switch (_state.formTypeNotifier.value) {
       case LoginSignupScreenEnum.login:
         final loginState = _state.loginState;
@@ -74,7 +74,7 @@ final class LoginSignupScreenViewModel {
         break;
     }
 
-    return null;
+    return kMyoroEmptyString;
   }
 
   /// Form request function.
