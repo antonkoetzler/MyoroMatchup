@@ -4,7 +4,7 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 
 @singleton
 final class AppRouter {
-  static const loginModuleRoute = '/login_signup';
+  static const loginModuleRoute = 'login_signup';
   static const gameModuleRoute = '/game';
 
   /// Navigates to a route.

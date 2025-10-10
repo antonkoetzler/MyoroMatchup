@@ -28,9 +28,7 @@ mixin _$GameMixin {
     return Game(
       id: id ?? self.id,
       name: name ?? self.name,
-      profilePicture: profilePictureProvided
-          ? (profilePicture ?? self.profilePicture)
-          : null,
+      profilePicture: profilePictureProvided ? (profilePicture ?? self.profilePicture) : null,
       banner: bannerProvided ? (banner ?? self.banner) : null,
       sport: sport ?? self.sport,
     );
@@ -49,13 +47,7 @@ mixin _$GameMixin {
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.id,
-      self.name,
-      self.profilePicture,
-      self.banner,
-      self.sport,
-    );
+    return Object.hash(self.id, self.name, self.profilePicture, self.banner, self.sport);
   }
 
   @override

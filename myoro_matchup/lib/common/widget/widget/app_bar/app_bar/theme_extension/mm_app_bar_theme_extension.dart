@@ -12,7 +12,12 @@ part 'mm_app_bar_theme_extension.g.dart';
 @immutable
 @myoroThemeExtension
 final class MmAppBarThemeExtension extends ThemeExtension<MmAppBarThemeExtension> with _$MmAppBarThemeExtensionMixin {
-  const MmAppBarThemeExtension({required this.spacing, required this.bordered, required this.titleTextStyle, required this.backButtonIconConfiguration});
+  const MmAppBarThemeExtension({
+    required this.spacing,
+    required this.bordered,
+    required this.titleTextStyle,
+    required this.backButtonIconConfiguration,
+  });
 
   MmAppBarThemeExtension.fake()
     : spacing = faker.randomGenerator.decimal(scale: 20),
@@ -24,7 +29,10 @@ final class MmAppBarThemeExtension extends ThemeExtension<MmAppBarThemeExtension
     : spacing = kMyoroMultiplier * 2,
       bordered = true,
       titleTextStyle = textTheme.titleMedium!,
-      backButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.keyboard_arrow_left, size: kMyoroMultiplier * 6);
+      backButtonIconConfiguration = const MyoroIconConfiguration(
+        icon: Icons.keyboard_arrow_left,
+        size: kMyoroMultiplier * 6,
+      );
 
   /// [MyoroAppBarConfiguration.bordered]
   final bool bordered;

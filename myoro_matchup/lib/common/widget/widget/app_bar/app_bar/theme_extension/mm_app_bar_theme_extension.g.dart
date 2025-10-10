@@ -27,8 +27,7 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
       bordered: bordered ?? self.bordered,
       spacing: spacing ?? self.spacing,
       titleTextStyle: titleTextStyle ?? self.titleTextStyle,
-      backButtonIconConfiguration:
-          backButtonIconConfiguration ?? self.backButtonIconConfiguration,
+      backButtonIconConfiguration: backButtonIconConfiguration ?? self.backButtonIconConfiguration,
     );
   }
 
@@ -44,12 +43,7 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.bordered,
-      self.spacing,
-      self.titleTextStyle,
-      self.backButtonIconConfiguration,
-    );
+    return Object.hash(self.bordered, self.spacing, self.titleTextStyle, self.backButtonIconConfiguration);
   }
 
   @override

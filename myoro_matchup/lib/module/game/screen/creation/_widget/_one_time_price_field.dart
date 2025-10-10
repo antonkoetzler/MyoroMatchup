@@ -6,6 +6,8 @@ final class _OneTimePriceField extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return MyoroInput.number(configuration: MyoroInputConfiguration(label: localization.gameCreationScreenOneTimePriceFieldLabel));
+    return MyoroInput.number(
+      configuration: MyoroInputConfiguration(label: localization.gameCreationScreenOneTimePriceFieldLabel),
+    );
   }
 }

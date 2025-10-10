@@ -13,10 +13,8 @@ part of 'game_details_screen_theme_extension.dart';
 /// ```dart
 /// class GameDetailsScreenThemeExtension with _$GameDetailsScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameDetailsScreenThemeExtensionMixin
-    on ThemeExtension<GameDetailsScreenThemeExtension> {
-  GameDetailsScreenThemeExtension get self =>
-      this as GameDetailsScreenThemeExtension;
+mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreenThemeExtension> {
+  GameDetailsScreenThemeExtension get self => this as GameDetailsScreenThemeExtension;
 
   @override
   GameDetailsScreenThemeExtension copyWith({
@@ -25,8 +23,7 @@ mixin _$GameDetailsScreenThemeExtensionMixin
   }) {
     return GameDetailsScreenThemeExtension(
       errorStatePadding: errorStatePadding ?? self.errorStatePadding,
-      appBarOptionsIconConfiguration:
-          appBarOptionsIconConfiguration ?? self.appBarOptionsIconConfiguration,
+      appBarOptionsIconConfiguration: appBarOptionsIconConfiguration ?? self.appBarOptionsIconConfiguration,
     );
   }
 
@@ -35,16 +32,12 @@ mixin _$GameDetailsScreenThemeExtensionMixin
     return other is GameDetailsScreenThemeExtension &&
         other.runtimeType == runtimeType &&
         other.errorStatePadding == self.errorStatePadding &&
-        other.appBarOptionsIconConfiguration ==
-            self.appBarOptionsIconConfiguration;
+        other.appBarOptionsIconConfiguration == self.appBarOptionsIconConfiguration;
   }
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.errorStatePadding,
-      self.appBarOptionsIconConfiguration,
-    );
+    return Object.hash(self.errorStatePadding, self.appBarOptionsIconConfiguration);
   }
 
   @override

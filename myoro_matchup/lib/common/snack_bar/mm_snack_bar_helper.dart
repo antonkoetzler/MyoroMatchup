@@ -4,7 +4,10 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 /// Helper class to use snack bars.
 final class MmSnackBarHelper {
   /// Shows a snack bar.
-  static void showSnackBar({Duration duration = MyoroSnackBarContainer.durationDefaultValue, required MyoroSnackBar snackBar}) {
+  static void showSnackBar({
+    Duration duration = MyoroSnackBarContainer.durationDefaultValue,
+    required MyoroSnackBar snackBar,
+  }) {
     navigatorKey.currentContext?.showSnackBar(duration: duration, snackBar: snackBar);
   }
 

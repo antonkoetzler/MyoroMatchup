@@ -13,10 +13,8 @@ part of 'game_creation_screen_theme_extension.dart';
 /// ```dart
 /// class GameCreationScreenThemeExtension with _$GameCreationScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameCreationScreenThemeExtensionMixin
-    on ThemeExtension<GameCreationScreenThemeExtension> {
-  GameCreationScreenThemeExtension get self =>
-      this as GameCreationScreenThemeExtension;
+mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScreenThemeExtension> {
+  GameCreationScreenThemeExtension get self => this as GameCreationScreenThemeExtension;
 
   @override
   GameCreationScreenThemeExtension copyWith({double? spacing}) {

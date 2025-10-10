@@ -19,9 +19,9 @@ final class _Body extends StatelessWidget {
           child: Column(
             spacing: themeExtension.spacing,
             mainAxisSize: MainAxisSize.min,
-            children: [
-              const _BannerField(),
-              const _ProfilePictureField(),
+            children: const [
+              _BannerField(),
+              _ProfilePictureField(),
               // _FieldRow([const Expanded(child: _NameField()), Expanded(child: _SportField(state))]),
               // _FieldRow([const Expanded(child: _CompetitivenessField()), Expanded(child: _PlayerQuantityField(state))]),
               // const _FieldRow([Expanded(child: _OneTimePriceField()), Expanded(child: _MemberPriceField())]),

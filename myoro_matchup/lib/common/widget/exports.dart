@@ -1,2 +1,2 @@
-export 'theme_extensions_builder/exports.dart';
+export 'function/exports.dart';
 export 'widget/exports.dart';

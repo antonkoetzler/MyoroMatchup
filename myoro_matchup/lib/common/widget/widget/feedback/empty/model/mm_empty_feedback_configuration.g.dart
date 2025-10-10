@@ -28,10 +28,7 @@ mixin _$MmEmptyFeedbackConfigurationMixin {
     String? actionButtonText,
     VoidCallback? actionButtonCallback,
   }) {
-    assert(
-      title != null,
-      '[MmEmptyFeedbackConfiguration.copyWith]: [title] cannot be null.',
-    );
+    assert(title != null, '[MmEmptyFeedbackConfiguration.copyWith]: [title] cannot be null.');
 
     return MmEmptyFeedbackConfiguration(
       title: title!,

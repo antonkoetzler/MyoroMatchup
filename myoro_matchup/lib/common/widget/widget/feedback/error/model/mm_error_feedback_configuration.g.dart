@@ -27,20 +27,10 @@ mixin _$MmErrorFeedbackConfigurationMixin {
     String? subtitle,
     VoidCallback? onRetry,
   }) {
-    assert(
-      title != null,
-      '[MmErrorFeedbackConfiguration.copyWith]: [title] cannot be null.',
-    );
-    assert(
-      onRetry != null,
-      '[MmErrorFeedbackConfiguration.copyWith]: [onRetry] cannot be null.',
-    );
+    assert(title != null, '[MmErrorFeedbackConfiguration.copyWith]: [title] cannot be null.');
+    assert(onRetry != null, '[MmErrorFeedbackConfiguration.copyWith]: [onRetry] cannot be null.');
 
-    return MmErrorFeedbackConfiguration(
-      title: title!,
-      subtitle: subtitle,
-      onRetry: onRetry!,
-    );
+    return MmErrorFeedbackConfiguration(title: title!, subtitle: subtitle, onRetry: onRetry!);
   }
 
   @override

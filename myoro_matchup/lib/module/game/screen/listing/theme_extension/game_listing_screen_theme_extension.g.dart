@@ -13,10 +13,8 @@ part of 'game_listing_screen_theme_extension.dart';
 /// ```dart
 /// class GameListingScreenThemeExtension with _$GameListingScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameListingScreenThemeExtensionMixin
-    on ThemeExtension<GameListingScreenThemeExtension> {
-  GameListingScreenThemeExtension get self =>
-      this as GameListingScreenThemeExtension;
+mixin _$GameListingScreenThemeExtensionMixin on ThemeExtension<GameListingScreenThemeExtension> {
+  GameListingScreenThemeExtension get self => this as GameListingScreenThemeExtension;
 
   @override
   GameListingScreenThemeExtension copyWith({
@@ -31,21 +29,15 @@ mixin _$GameListingScreenThemeExtensionMixin
     double? newGameButtonBottomOffset,
   }) {
     return GameListingScreenThemeExtension(
-      profileButtonIconConfiguration:
-          profileButtonIconConfiguration ?? self.profileButtonIconConfiguration,
-      bodySuccessStateMargin:
-          bodySuccessStateMargin ?? self.bodySuccessStateMargin,
+      profileButtonIconConfiguration: profileButtonIconConfiguration ?? self.profileButtonIconConfiguration,
+      bodySuccessStateMargin: bodySuccessStateMargin ?? self.bodySuccessStateMargin,
       gameMargin: gameMargin ?? self.gameMargin,
       gameBorderRadius: gameBorderRadius ?? self.gameBorderRadius,
-      newGameButtonIconConfiguration:
-          newGameButtonIconConfiguration ?? self.newGameButtonIconConfiguration,
-      newGameButtonTextStyle:
-          newGameButtonTextStyle ?? self.newGameButtonTextStyle,
-      newGameButtonBorderRadius:
-          newGameButtonBorderRadius ?? self.newGameButtonBorderRadius,
+      newGameButtonIconConfiguration: newGameButtonIconConfiguration ?? self.newGameButtonIconConfiguration,
+      newGameButtonTextStyle: newGameButtonTextStyle ?? self.newGameButtonTextStyle,
+      newGameButtonBorderRadius: newGameButtonBorderRadius ?? self.newGameButtonBorderRadius,
       newGameButtonSpacing: newGameButtonSpacing ?? self.newGameButtonSpacing,
-      newGameButtonBottomOffset:
-          newGameButtonBottomOffset ?? self.newGameButtonBottomOffset,
+      newGameButtonBottomOffset: newGameButtonBottomOffset ?? self.newGameButtonBottomOffset,
     );
   }
 
@@ -53,13 +45,11 @@ mixin _$GameListingScreenThemeExtensionMixin
   bool operator ==(Object other) {
     return other is GameListingScreenThemeExtension &&
         other.runtimeType == runtimeType &&
-        other.profileButtonIconConfiguration ==
-            self.profileButtonIconConfiguration &&
+        other.profileButtonIconConfiguration == self.profileButtonIconConfiguration &&
         other.bodySuccessStateMargin == self.bodySuccessStateMargin &&
         other.gameMargin == self.gameMargin &&
         other.gameBorderRadius == self.gameBorderRadius &&
-        other.newGameButtonIconConfiguration ==
-            self.newGameButtonIconConfiguration &&
+        other.newGameButtonIconConfiguration == self.newGameButtonIconConfiguration &&
         other.newGameButtonTextStyle == self.newGameButtonTextStyle &&
         other.newGameButtonBorderRadius == self.newGameButtonBorderRadius &&
         other.newGameButtonSpacing == self.newGameButtonSpacing &&

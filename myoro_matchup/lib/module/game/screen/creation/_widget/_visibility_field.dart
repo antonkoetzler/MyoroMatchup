@@ -13,7 +13,10 @@ final class _VisibilityField extends StatelessWidget {
     return MyoroSingleSelectionDropdown<VisibilityEnum>(
       configuration: MyoroSingleSelectionDropdownConfiguration(
         label: localization.gameCreationScreenVisibilityFieldLabel,
-        menuConfiguration: MyoroSingleMenuConfiguration(request: VisibilityEnum.values.toSet, itemBuilder: visibilityFieldItemBuilder),
+        menuConfiguration: MyoroSingleMenuConfiguration(
+          request: VisibilityEnum.values.toSet,
+          itemBuilder: visibilityFieldItemBuilder,
+        ),
         selectedItemBuilder: visibilityFieldSelectedItemBuilder,
       ),
     );

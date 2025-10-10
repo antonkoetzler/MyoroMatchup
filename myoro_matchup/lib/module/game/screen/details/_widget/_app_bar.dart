@@ -1,13 +1,13 @@
 part of '../game_details_screen.dart';
 
 /// App bar of [GameDetailsScreen].
-final class _AppBar extends StatelessWidget implements PreferredSizeWidget {
-  const _AppBar(this._game);
+final class _AppBar extends MmAppBar {
+  const _AppBar(this._game)
+    : super(
+        configuration: const MmAppBarConfiguration(title: '', trailing: _AppBarOptionsButton()),
+      );
 
   final Game _game;
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(context) {

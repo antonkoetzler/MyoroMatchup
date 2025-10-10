@@ -22,9 +22,7 @@ mixin _$MmLocationInputConfigurationMixin {
 
   @override
   bool operator ==(Object other) {
-    return other is MmLocationInputConfiguration &&
-        other.runtimeType == runtimeType &&
-        other.type == self.type;
+    return other is MmLocationInputConfiguration && other.runtimeType == runtimeType && other.type == self.type;
   }
 
   @override

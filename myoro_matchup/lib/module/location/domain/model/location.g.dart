@@ -6,11 +6,8 @@ part of 'location.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Location _$LocationFromJson(Map<String, dynamic> json) => Location(
-  name: json['name'] as String,
-  city: json['city'] as String,
-  country: json['country'] as String,
-);
+Location _$LocationFromJson(Map<String, dynamic> json) =>
+    Location(name: json['name'] as String, city: json['city'] as String, country: json['country'] as String);
 
 Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
   'name': instance.name,
@@ -33,11 +30,7 @@ mixin _$LocationMixin {
   Location get self => this as Location;
 
   Location copyWith({String? name, String? city, String? country}) {
-    return Location(
-      name: name ?? self.name,
-      city: city ?? self.city,
-      country: country ?? self.country,
-    );
+    return Location(name: name ?? self.name, city: city ?? self.city, country: country ?? self.country);
   }
 
   @override

@@ -13,10 +13,8 @@ part of 'mm_location_input_theme_extension.dart';
 /// ```dart
 /// class MmLocationInputThemeExtension with _$MmLocationInputThemeExtensionMixin {}
 /// ```
-mixin _$MmLocationInputThemeExtensionMixin
-    on ThemeExtension<MmLocationInputThemeExtension> {
-  MmLocationInputThemeExtension get self =>
-      this as MmLocationInputThemeExtension;
+mixin _$MmLocationInputThemeExtensionMixin on ThemeExtension<MmLocationInputThemeExtension> {
+  MmLocationInputThemeExtension get self => this as MmLocationInputThemeExtension;
 
   @override
   MmLocationInputThemeExtension copyWith() {
@@ -25,8 +23,7 @@ mixin _$MmLocationInputThemeExtensionMixin
 
   @override
   bool operator ==(Object other) {
-    return other is MmLocationInputThemeExtension &&
-        other.runtimeType == runtimeType;
+    return other is MmLocationInputThemeExtension && other.runtimeType == runtimeType;
   }
 
   @override

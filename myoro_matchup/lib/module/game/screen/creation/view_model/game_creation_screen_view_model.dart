@@ -20,7 +20,9 @@ final class GameCreationScreenViewModel {
   /// Sport field's [MyoroMenuConfiguration.itemBuilder].
   MyoroMenuItem sportFieldItemBuilder(SportsEnum value) {
     return MyoroMenuItem(
-      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(textConfiguration: MyoroTextConfiguration(text: value.name)),
+      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(
+        textConfiguration: MyoroTextConfiguration(text: value.name),
+      ),
     );
   }
 
@@ -32,7 +34,9 @@ final class GameCreationScreenViewModel {
   /// Competitiveness field's [MyoroMenuConfiguration.itemBuilder].
   MyoroMenuItem competitivenessFieldItemBuilder(CompetitivenessEnum value) {
     return MyoroMenuItem(
-      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(textConfiguration: MyoroTextConfiguration(text: value.formattedName)),
+      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(
+        textConfiguration: MyoroTextConfiguration(text: value.formattedName),
+      ),
     );
   }
 
@@ -44,7 +48,9 @@ final class GameCreationScreenViewModel {
   /// Player quantity field's [MyoroMenuConfiguration.itemBuilder].
   MyoroMenuItem playerQuantityFieldItemBuilder(int playerQuantity) {
     return MyoroMenuItem(
-      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(textConfiguration: MyoroTextConfiguration(text: playerQuantity.toString())),
+      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(
+        textConfiguration: MyoroTextConfiguration(text: playerQuantity.toString()),
+      ),
     );
   }
 
@@ -56,7 +62,9 @@ final class GameCreationScreenViewModel {
   /// Visibility field's [MyoroMenuConfiguration.itemBuilder].
   MyoroMenuItem visibilityFieldItemBuilder(VisibilityEnum visibility) {
     return MyoroMenuItem(
-      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(textConfiguration: MyoroTextConfiguration(text: visibility.label)),
+      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(
+        textConfiguration: MyoroTextConfiguration(text: visibility.label),
+      ),
     );
   }
 
@@ -68,7 +76,9 @@ final class GameCreationScreenViewModel {
   /// Frequency field's [MyoroMenuConfiguration.itemBuilder].
   MyoroMenuItem frequencyFieldItemBuilder(FrequencyEnum value) {
     return MyoroMenuItem(
-      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(textConfiguration: MyoroTextConfiguration(text: value.label)),
+      iconTextButtonConfiguration: MyoroIconTextButtonConfiguration(
+        textConfiguration: MyoroTextConfiguration(text: value.label),
+      ),
     );
   }
 

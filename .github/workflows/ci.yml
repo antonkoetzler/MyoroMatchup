@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: 
+      - '**'
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install actions checkout
+        uses: actions/checkout@v4
+
+      - name: Install LCOV for code coverage report generation
+        run: sudo apt-get install lcov
+
+      - name: Install flutter using stable channel
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Dart fix check (fails if fixes exist)
+        run: dart fix --dry-run .
+
+      - name: Dart format check (fails if not formatted)
+        run: dart format --line-length 120 -o none --set-exit-if-changed

@@ -6,6 +6,8 @@ final class _MemberPriceField extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return MyoroInput.number(configuration: MyoroInputConfiguration(label: localization.gameCreationScreenMemberPriceFieldLabel));
+    return MyoroInput.number(
+      configuration: MyoroInputConfiguration(label: localization.gameCreationScreenMemberPriceFieldLabel),
+    );
   }
 }

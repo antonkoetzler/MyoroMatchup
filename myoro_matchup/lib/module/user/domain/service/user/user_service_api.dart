@@ -42,6 +42,6 @@ final class UserServiceApi implements UserService {
   @override
   Future<bool> isLoggedIn() async {
     // TODO: Mocked.
-    return true;
+    return false;
   }
 }

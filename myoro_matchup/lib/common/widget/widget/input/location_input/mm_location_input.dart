@@ -40,7 +40,10 @@ final class _MmLocationInputState extends State<MmLocationInput> {
       child: MyoroSearchInput<Location>(
         configuration: MyoroSearchInputConfiguration(
           label: label,
-          menuConfiguration: MyoroSearchInputMenuConfiguration(request: request, itemBuilder: (item) => itemBuilder(() => const _Item())),
+          menuConfiguration: MyoroSearchInputMenuConfiguration(
+            request: request,
+            itemBuilder: (item) => itemBuilder(() => const _Item()),
+          ),
           selectedItemBuilder: selectedItemBuilder,
         ),
       ),

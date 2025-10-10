@@ -7,7 +7,8 @@ part 'mm_location_input_theme_extension.g.dart';
 /// [ThemeExtension] of [MmLocationInput].
 @immutable
 @myoroThemeExtension
-final class MmLocationInputThemeExtension extends ThemeExtension<MmLocationInputThemeExtension> with _$MmLocationInputThemeExtensionMixin {
+final class MmLocationInputThemeExtension extends ThemeExtension<MmLocationInputThemeExtension>
+    with _$MmLocationInputThemeExtensionMixin {
   const MmLocationInputThemeExtension();
 
   const MmLocationInputThemeExtension.fake();

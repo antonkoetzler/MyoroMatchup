@@ -12,7 +12,10 @@ final class _FrequencyField extends StatelessWidget {
 
     return MyoroSingleSelectionDropdown<FrequencyEnum>(
       configuration: MyoroSingleSelectionDropdownConfiguration(
-        menuConfiguration: MyoroSingleMenuConfiguration(request: FrequencyEnum.values.toSet, itemBuilder: frequencyFieldItemBuilder),
+        menuConfiguration: MyoroSingleMenuConfiguration(
+          request: FrequencyEnum.values.toSet,
+          itemBuilder: frequencyFieldItemBuilder,
+        ),
         selectedItemBuilder: frequencyFieldSelectedItemBuilder,
       ),
     );
