@@ -10,15 +10,20 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+  /**
+   * Security filter chain.
+   * 
+   * We need to add the endpoints that will not require authentication.
+   */
   @Bean
   public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
     http
         .csrf(csrf -> csrf.disable()) // Disable CSRF for API
         .authorizeHttpRequests(authz -> authz
-            .requestMatchers("/api/auth/**").permitAll() // Allow signup without auth
-            .requestMatchers("/").permitAll() // Allow health check
-            .anyRequest().authenticated() // Everything else needs auth
-        );
+            .requestMatchers("/api/auth/**").permitAll()
+            .requestMatchers("/api/user/**").permitAll()
+            .requestMatchers("/").permitAll()
+            .anyRequest().authenticated());
     return http.build();
   }
 }
