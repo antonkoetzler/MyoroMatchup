@@ -18,6 +18,8 @@ final class LoginSignupScreen extends StatelessWidget {
 
   @override
   Widget build(_) {
+    YOU ARE HERE, YOU NEED TO USE ENVIRONMENT CONFIGURATION AND SETUP DIO
+
     return InheritedProvider(
       create: (_) => getIt<LoginSignupScreenViewModel>(),
       child: const MyoroScreen(configuration: MyoroScreenConfiguration(body: _Body())),

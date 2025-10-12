@@ -5,7 +5,10 @@
             "name": "Debug Flutter",
             "request": "launch",
             "type": "dart",
-            "program": "myoro_matchup/lib/main.dart"
+            "program": "myoro_matchup/lib/main.dart",
+            "args": [
+                "--dart-define=env=${input:environment}"
+            ]
         },
         {
             "type": "java",
@@ -16,6 +19,16 @@
             "projectName": "myoro-matchup-api",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "environment",
+            "description": "Select environment",
+            "type": "pickString",
+            "options": [
+                "local"
+            ]
         }
     ]
 }
