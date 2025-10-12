@@ -6,22 +6,14 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-/** Signup request. */
-public class SignupRequest {
+/** Login request. */
+public class LoginRequest {
   /** Username. */
-  @NotBlank(message = "Username is required.")
   @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, message = "Username must be at least "
       + ValidationConstants.MIN_USERNAME_LENGTH + " characters long.")
   private String username;
 
-  /** Name. */
-  @NotBlank(message = "Name is required.")
-  @Size(min = ValidationConstants.MIN_NAME_LENGTH, message = "Name must be at least "
-      + ValidationConstants.MIN_NAME_LENGTH + " characters long.")
-  private String name;
-
   /** Email. */
-  @NotBlank(message = "Email is required.")
   @Email(message = "Invalid email address.")
   private String email;
 
@@ -31,14 +23,13 @@ public class SignupRequest {
       + ValidationConstants.MIN_PASSWORD_LENGTH + " characters long.")
   private String password;
 
-  /** Default constructor. */
-  public SignupRequest() {
+  /* Default constructor. */
+  public LoginRequest() {
   }
 
   /** Constructor with all fields. */
-  public SignupRequest(String username, String name, String email, String password) {
+  public LoginRequest(String username, String email, String password) {
     this.username = username;
-    this.name = name;
     this.email = email;
     this.password = password;
   }
@@ -46,11 +37,6 @@ public class SignupRequest {
   /** Getter for username. */
   public String getUsername() {
     return username;
-  }
-
-  /** Getter for name. */
-  public String getName() {
-    return name;
   }
 
   /** Getter for email. */
@@ -66,11 +52,6 @@ public class SignupRequest {
   /** Setter for username. */
   public void setUsername(String username) {
     this.username = username;
-  }
-
-  /** Setter for name. */
-  public void setName(String name) {
-    this.name = name;
   }
 
   /** Setter for email. */

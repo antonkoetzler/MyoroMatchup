@@ -33,4 +33,12 @@ public class GlobalExceptionHandler {
     });
     return ResponseEntity.badRequest().body(errors);
   }
+
+  /** Handles when an exception is thrown. */
+  @ExceptionHandler(RuntimeException.class)
+  public ResponseEntity<Map<String, String>> handleException(RuntimeException ex) {
+    Map<String, String> error = new HashMap<>();
+    error.put("message", ex.getMessage());
+    return ResponseEntity.internalServerError().body(error);
+  }
 }
