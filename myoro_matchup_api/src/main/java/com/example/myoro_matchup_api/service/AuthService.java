@@ -22,16 +22,20 @@ public class AuthService {
   @Autowired
   private PasswordEncoder passwordEncoder;
 
+  /** Message service for localization. */
+  @Autowired
+  private MessageService messageService;
+
   /** Signup function. */
   public User signup(SignupRequest request) {
     // Check if the username is already taken.
     if (userRepository.existsByUsername(request.getUsername())) {
-      throw new RuntimeException("Username already taken.");
+      throw new RuntimeException(messageService.getMessage("auth.username.taken"));
     }
 
     // Check if the email is already taken.
     if (userRepository.existsByEmail(request.getEmail())) {
-      throw new RuntimeException("Email already taken.");
+      throw new RuntimeException(messageService.getMessage("auth.email.taken"));
     }
 
     // Create a new user.
@@ -56,7 +60,7 @@ public class AuthService {
 
     // XOR: exactly one must be provided, not both, not neither
     if (usernameProvided == emailProvided) {
-      throw new RuntimeException("Username (x)or email must be provided.");
+      throw new RuntimeException(messageService.getMessage("auth.invalid.login.request"));
     }
 
     // Find user by username or email.
@@ -69,12 +73,12 @@ public class AuthService {
 
     // Check if the user exists.
     if (user == null) {
-      throw new RuntimeException("User not found.");
+      throw new RuntimeException(messageService.getMessage("auth.user.not.found"));
     }
 
     // Check if the password is correct.
     if (!passwordEncoder.matches(request.getPassword(), user.getPassword())) {
-      throw new RuntimeException("Invalid credentials.");
+      throw new RuntimeException(messageService.getMessage("auth.incorrect.password"));
     }
 
     return user;

@@ -25,10 +25,16 @@ jobs:
           cache: true
 
       - name: Install dependencies
-        run: flutter pub get
+        run: |
+          cd myoro_matchup
+          flutter pub get
 
       - name: Dart fix check (fails if fixes exist)
-        run: dart fix --dry-run .
+        run: |
+          cd myoro_matchup
+          dart fix --dry-run .
 
       - name: Dart format check (fails if not formatted)
-        run: dart format --line-length 120 -o none --set-exit-if-changed
+        run: |
+          cd myoro_matchup
+          dart format --line-length 120 -o none --set-exit-if-changed

@@ -9,26 +9,23 @@ import jakarta.validation.constraints.Size;
 /** Signup request. */
 public class SignupRequest {
   /** Username. */
-  @NotBlank(message = "Username is required.")
-  @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, message = "Username must be at least "
-      + ValidationConstants.MIN_USERNAME_LENGTH + " characters long.")
+  @NotBlank(message = "{validation.username.required}")
+  @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, message = "{validation.username.length}")
   private String username;
 
   /** Name. */
-  @NotBlank(message = "Name is required.")
-  @Size(min = ValidationConstants.MIN_NAME_LENGTH, message = "Name must be at least "
-      + ValidationConstants.MIN_NAME_LENGTH + " characters long.")
+  @NotBlank(message = "{validation.name.required}")
+  @Size(min = ValidationConstants.MIN_NAME_LENGTH, message = "{validation.name.length}")
   private String name;
 
   /** Email. */
-  @NotBlank(message = "Email is required.")
-  @Email(message = "Invalid email address.")
+  @NotBlank(message = "{validation.email.required}")
+  @Email(message = "{validation.email.invalid}")
   private String email;
 
   /** Password. */
-  @NotBlank(message = "Password is required.")
-  @Size(min = ValidationConstants.MIN_PASSWORD_LENGTH, message = "Password must be at least "
-      + ValidationConstants.MIN_PASSWORD_LENGTH + " characters long.")
+  @NotBlank(message = "{validation.password.required}")
+  @Size(min = ValidationConstants.MIN_PASSWORD_LENGTH, message = "{validation.password.length}")
   private String password;
 
   /** Default constructor. */

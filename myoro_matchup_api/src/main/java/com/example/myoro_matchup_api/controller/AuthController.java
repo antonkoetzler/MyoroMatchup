@@ -13,12 +13,17 @@ import org.springframework.web.bind.annotation.RestController;
 import com.example.myoro_matchup_api.dto.LoginRequest;
 import com.example.myoro_matchup_api.dto.SignupRequest;
 import com.example.myoro_matchup_api.service.AuthService;
+import com.example.myoro_matchup_api.service.MessageService;
 
 import jakarta.validation.Valid;
 
 @RestController
 @RequestMapping("/api/auth")
 public class AuthController {
+  /** Message service. */
+  @Autowired
+  private MessageService messageService;
+
   /** Auth service. */
   @Autowired
   private AuthService authService;
@@ -27,7 +32,7 @@ public class AuthController {
   public ResponseEntity<Map<String, String>> signup(@Valid @RequestBody SignupRequest request) {
     authService.signup(request);
     Map<String, String> response = new HashMap<>();
-    response.put("message", "Signup successful.");
+    response.put("message", messageService.getMessage("auth.signup.success"));
     return ResponseEntity.ok(response);
   }
 
@@ -35,7 +40,7 @@ public class AuthController {
   public ResponseEntity<Map<String, String>> login(@Valid @RequestBody LoginRequest request) {
     authService.login(request);
     Map<String, String> response = new HashMap<>();
-    response.put("message", "Login successful.");
+    response.put("message", messageService.getMessage("auth.login.success"));
     return ResponseEntity.ok(response);
   }
 }

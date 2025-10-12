@@ -9,18 +9,16 @@ import jakarta.validation.constraints.Size;
 /** Login request. */
 public class LoginRequest {
   /** Username. */
-  @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, message = "Username must be at least "
-      + ValidationConstants.MIN_USERNAME_LENGTH + " characters long.")
+  @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, message = "{validation.username.length}")
   private String username;
 
   /** Email. */
-  @Email(message = "Invalid email address.")
+  @Email(message = "{validation.email.invalid}")
   private String email;
 
   /** Password. */
-  @NotBlank(message = "Password is required.")
-  @Size(min = ValidationConstants.MIN_PASSWORD_LENGTH, message = "Password must be at least "
-      + ValidationConstants.MIN_PASSWORD_LENGTH + " characters long.")
+  @NotBlank(message = "{validation.password.required}")
+  @Size(min = ValidationConstants.MIN_PASSWORD_LENGTH, message = "{validation.password.length}")
   private String password;
 
   /* Default constructor. */
