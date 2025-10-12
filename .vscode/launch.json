@@ -2,20 +2,20 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Java",
-            "type": "java",
-            "request": "launch",
-            "mainClass": "com.example.myoro_matchup_api.MyoroMatchupApiApplication",
-            "classPaths": [
-                "${workspaceFolder}/myoro_matchup_api/target/classes",
-                "${workspaceFolder}/myoro_matchup_api/target/dependency/*"
-            ],
-        },
-        {
             "name": "Debug Flutter",
             "request": "launch",
             "type": "dart",
             "program": "myoro_matchup/lib/main.dart"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MyoroMatchupApiApplication<myoro-matchup-api>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.example.myoro_matchup_api.MyoroMatchupApiApplication",
+            "projectName": "myoro-matchup-api",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
