@@ -39,9 +39,11 @@ extension GetItInjectableX on _i174.GetIt {
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     gh.singleton<_i32.HttpClient>(() => _i32.HttpClient());
-    gh.singleton<_i460.UserRepository>(() => _i100.UserRepositoryApi());
     gh.singleton<_i460.LocationRepository>(() => _i643.LocationRepositoryApi());
     gh.singleton<_i460.GameRepository>(() => _i171.GameRepositoryApi());
+    gh.singleton<_i460.UserRepository>(
+      () => _i100.UserRepositoryApi(gh<_i460.HttpClient>()),
+    );
     gh.factory<_i17.GameDetailsScreenViewModel>(
       () => _i17.GameDetailsScreenViewModel(gh<_i460.GameRepository>()),
     );
@@ -51,14 +53,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i789.MmLocationInputViewModel>(
       () => _i789.MmLocationInputViewModel(gh<_i460.LocationRepository>()),
     );
+    gh.factory<_i205.LoginSignupScreenViewModel>(
+      () => _i205.LoginSignupScreenViewModel(gh<_i460.UserRepository>()),
+    );
     gh.singleton<_i460.UserService>(
       () => _i741.UserServiceApi(gh<_i460.UserRepository>()),
-    );
-    gh.factory<_i205.LoginSignupScreenViewModel>(
-      () => _i205.LoginSignupScreenViewModel(
-        gh<_i460.UserService>(),
-        gh<_i460.UserRepository>(),
-      ),
     );
     gh.singleton<_i49.AppRouter>(() => _i49.AppRouter(gh<_i460.UserService>()));
     return this;
