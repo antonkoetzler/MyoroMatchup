@@ -1,8 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 
 /// [EdgeInsets] length.
-///
-/// TODO: Create a cosntants for this in MFL.
 const kEdgeInsetsLength = kMyoroMultiplier * 2.0;
 
 /// [MyoroAppBarConfiguration.bordered] value.
