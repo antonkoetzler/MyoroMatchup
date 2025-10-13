@@ -1,5 +1,11 @@
 # TODO
 
+## What are we doing right now?
+
+Implementing the API in `LoginSignupScreen` and return the user data from the signup endpoint.
+
+## List
+
 1. Remove desktop/web platforms in the flutter project, only accept android
 1. Change org name of projects
 1. Make a script to create a new screen and all of it's files

@@ -8,20 +8,20 @@ part 'game_listing_screen_state.dart';
 /// View model of [GameScreen].
 @injectable
 final class GameListingScreenViewModel {
-  GameListingScreenViewModel(this._gameService);
+  GameListingScreenViewModel(this._gameRepository);
 
   /// State.
   final _state = GameListingScreenState();
   GameListingScreenState get state => _state;
 
-  /// Game service.
-  final GameService _gameService;
+  /// Game repository.
+  final GameRepository _gameRepository;
 
   /// Fetches the [Game]s.
   void fetchGames() async {
     try {
       _state.gamesRequest = _state.gamesRequest.createLoadingState();
-      _state.gamesRequest = _state.gamesRequest.createSuccessState(await _gameService.select());
+      _state.gamesRequest = _state.gamesRequest.createSuccessState(await _gameRepository.select());
     } catch (error, stackTrace) {
       final errorMessage = error.toString();
 

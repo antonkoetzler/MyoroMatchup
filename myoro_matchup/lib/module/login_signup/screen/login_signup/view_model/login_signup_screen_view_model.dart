@@ -10,12 +10,12 @@ part 'login_signup_screen_state.dart';
 /// View model of [LoginSignupScreen].
 @injectable
 final class LoginSignupScreenViewModel {
-  LoginSignupScreenViewModel(this._userService) {
+  LoginSignupScreenViewModel(this._userRepository) {
     _state.formController.addListener(_formControllerListener);
   }
 
-  /// [User] service.
-  final UserService _userService;
+  /// [User] repository.
+  final UserRepository _userRepository;
 
   /// State.
   late final _state = LoginSignupScreenState(MyoroFormConfiguration<int>(validation: _validation, request: _request));
@@ -79,7 +79,7 @@ final class LoginSignupScreenViewModel {
 
   /// Form request function.
   Future<int>? _request() async {
-    return await _userService.create(User.fake());
+    return await _userRepository.create(User.fake());
   }
 
   /// Listener of [LoginSignupScreenState.formController].

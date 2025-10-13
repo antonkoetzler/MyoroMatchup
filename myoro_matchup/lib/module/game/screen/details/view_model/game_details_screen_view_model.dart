@@ -7,10 +7,10 @@ part 'game_details_screen_state.dart';
 /// View model of [GameDetailsScreen].
 @injectable
 final class GameDetailsScreenViewModel {
-  GameDetailsScreenViewModel(this._gameService);
+  GameDetailsScreenViewModel(this._gameRepository);
 
-  /// [GameService]
-  final GameService _gameService;
+  /// [GameRepository]
+  final GameRepository _gameRepository;
 
   /// State.
   GameDetailsScreenState? _state;
@@ -22,7 +22,7 @@ final class GameDetailsScreenViewModel {
   /// Initialization function.
   void init(int gameId) {
     if (_state != null) return;
-    _state = GameDetailsScreenState(() async => await _gameService.get(gameId));
+    _state = GameDetailsScreenState(() async => await _gameRepository.get(gameId));
     fetch();
   }
 

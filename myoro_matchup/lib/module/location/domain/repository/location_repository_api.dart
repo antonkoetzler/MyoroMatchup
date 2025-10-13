@@ -5,9 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
-/// API implementation of [LocationService].
-@Singleton(as: LocationService)
-final class LocationServiceApi implements LocationService {
+/// API implementation of [LocationRepository].
+@Singleton(as: LocationRepository)
+final class LocationRepositoryApi implements LocationRepository {
   @override
   Future<int> create(Location model) {
     // TODO: implement create
@@ -26,7 +26,7 @@ final class LocationServiceApi implements LocationService {
     // https://nominatim.openstreetmap.org/search?format=json&addressdetails=1&q=Elase
     // TODO: Mocked.
     if (kDebugMode) {
-      print('[LocationServiceApi.select]: Mocked.');
+      print('[LocationRepositoryApi.select]: Mocked.');
     }
     await Future.delayed(const Duration(milliseconds: 500));
     return List.generate(faker.randomGenerator.integer(100), (_) => Location.fake()).toSet();

@@ -1,1 +1,1 @@
-export 'mm_crud_service.dart';
+export 'mm_crud_repository.dart';

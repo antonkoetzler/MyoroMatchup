@@ -8,6 +8,6 @@ final class EnvironmentConfiguration {
     final baseUrl = switch (currentEnvironment) {
       EnvironmentEnum.local => 'http://localhost:8080',
     };
-    return '$baseUrl/api';
+    return '$baseUrl/api/';
   }
 }

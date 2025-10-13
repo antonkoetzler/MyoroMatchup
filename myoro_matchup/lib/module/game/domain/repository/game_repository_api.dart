@@ -4,11 +4,12 @@ import 'package:faker/faker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
-/// API implementation of [GameService].
-@Singleton(as: GameService)
-final class GameServiceApi implements GameService {
+/// API implementation of [GameRepository].
+@Singleton(as: GameRepository)
+final class GameRepositoryApi implements GameRepository {
+  /// Create function.
   @override
-  // TODO: Implement.
+  // TODO: Mocked.
   Future<int> create(Game model) {
     throw UnimplementedError();
   }

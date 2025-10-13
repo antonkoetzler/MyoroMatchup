@@ -8,15 +8,15 @@ part 'mm_location_input_state.dart';
 /// View model of [MmLocationInput].
 @injectable
 final class MmLocationInputViewModel {
-  MmLocationInputViewModel(this._locationService);
+  MmLocationInputViewModel(this._locationRepository);
 
   /// Initialization function.
   void init(MmLocationInputConfiguration configuration) {
     _state ??= MmLocationInputState(configuration);
   }
 
-  /// [LocationService] to search for places.
-  final LocationService _locationService;
+  /// [LocationRepository] to search for places.
+  final LocationRepository _locationRepository;
 
   /// State.
   MmLocationInputState? _state;
@@ -29,7 +29,7 @@ final class MmLocationInputViewModel {
 
   /// [MyoroSearchInputConfiguration.request] of the [MmLocationInput].
   Future<Set<Location>> request(String query) async {
-    final response = await _locationService.select();
+    final response = await _locationRepository.select();
     return response;
   }
 
