@@ -39,7 +39,10 @@ final class _Body extends StatelessWidget {
                   Column(
                     spacing: bodySpacing,
                     mainAxisSize: MainAxisSize.min,
-                    children: [_FormTypeSwitcherButton(formType), if (request.status.isLoading) const MyoroCircularLoader() else _Buttons(formType)],
+                    children: [
+                      _FormTypeSwitcherButton(formType),
+                      if (request.status.isLoading) const MyoroCircularLoader() else _Buttons(formType),
+                    ],
                   ),
                 ],
               ),

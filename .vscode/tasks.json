@@ -26,7 +26,7 @@
     {
       "label": "Initialize Myoro Flutter Annotations and Myoro Flutter Library",
       "type": "shell",
-      "command": "cd myoro_matchup && bash tool/setup_mfl.sh ${input:mfaMflInitType}",
+      "command": "cd myoro_matchup && bash tool/setup_mfl_and_mfa.sh ${input:mfaMflInitType}",
       "problemMatcher": [],
       "group": "build",
       "presentation": {

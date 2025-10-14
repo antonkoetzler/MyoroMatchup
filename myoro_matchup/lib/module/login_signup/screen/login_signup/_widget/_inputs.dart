@@ -20,13 +20,28 @@ final class _Inputs extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: switch (_formType) {
         LoginSignupScreenEnum.login => [
-          _Input(placeholder: localization.loginSignupScreenLoginUsernameEmailInputPlaceholder, controller: loginState.usernameEmailController),
-          _Input(placeholder: localization.loginSignupScreenLoginPasswordInputPlaceholder, controller: loginState.passwordController),
+          _Input(
+            placeholder: localization.loginSignupScreenLoginUsernameEmailInputPlaceholder,
+            controller: loginState.usernameEmailController,
+          ),
+          _Input(
+            placeholder: localization.loginSignupScreenLoginPasswordInputPlaceholder,
+            controller: loginState.passwordController,
+          ),
         ],
         LoginSignupScreenEnum.signup => [
-          _Input(placeholder: localization.loginSignupScreenSignupNameInputPlaceholder, controller: signupState.nameController),
-          _Input(placeholder: localization.loginSignupScreenSignupUsernameInputPlaceholder, controller: signupState.usernameController),
-          _Input(placeholder: localization.loginSignupScreenSignupEmailInputPlaceholder, controller: signupState.emailController),
+          _Input(
+            placeholder: localization.loginSignupScreenSignupNameInputPlaceholder,
+            controller: signupState.nameController,
+          ),
+          _Input(
+            placeholder: localization.loginSignupScreenSignupUsernameInputPlaceholder,
+            controller: signupState.usernameController,
+          ),
+          _Input(
+            placeholder: localization.loginSignupScreenSignupEmailInputPlaceholder,
+            controller: signupState.emailController,
+          ),
           Row(
             spacing: themeExtension.inputsSpacing,
             children: [

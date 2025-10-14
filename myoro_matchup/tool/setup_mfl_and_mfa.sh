@@ -132,7 +132,7 @@ setup_local() {
     git clone git@github.com:antonkoetzler/myoro_flutter_library.git
     
     # Step 4: Edit pubspec.yaml files in myoro_flutter_library
-    print_status "Step 4: Editing myoro_flutter_library pubspec files..."
+    print_status "Step 4: Editing myoro_flutter_library pubspec.yaml files..."
     
     cd "$PROJECT_ROOT/myoro_flutter_library"
     
