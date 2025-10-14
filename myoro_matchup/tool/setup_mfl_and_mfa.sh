@@ -43,13 +43,11 @@ check_argument() {
 convert_to_path_dependency() {
     local pubspec_file="$1"
     local dependency_name="$2"
-    local version="$3"
-    local path_value="$4"
+    local path_value="$3"
     
     if [ -f "$pubspec_file" ]; then
         # Comment out version number and uncomment path (handle both states)
-        sed -i.bak "s|^  ${dependency_name}: \^[0-9].*|  ${dependency_name}: # ${version}|" "$pubspec_file"
-        sed -i.bak "s|^  ${dependency_name}: # ${version}|  ${dependency_name}: # ${version}|" "$pubspec_file"  # Already commented, keep as is
+        sed -i.bak "s|^  ${dependency_name}: \(\^[0-9].*\)|  ${dependency_name}: # \1|" "$pubspec_file"
         sed -i.bak "s|^    # path: ${path_value}|    path: ${path_value}|" "$pubspec_file"
         rm "${pubspec_file}.bak"
         print_success "Updated $(pwd)/$pubspec_file"
@@ -62,13 +60,11 @@ convert_to_path_dependency() {
 convert_to_pubdev_dependency() {
     local pubspec_file="$1"
     local dependency_name="$2"
-    local version="$3"
-    local path_value="$4"
+    local path_value="$3"
     
     if [ -f "$pubspec_file" ]; then
         # Uncomment version number and comment path (handle both states)
-        sed -i.bak "s|^  ${dependency_name}: # ${version}|  ${dependency_name}: ${version}|" "$pubspec_file"
-        sed -i.bak "s|^  ${dependency_name}: ${version}|  ${dependency_name}: ${version}|" "$pubspec_file"  # Already uncommented, keep as is
+        sed -i.bak "s|^  ${dependency_name}: # \(\^[0-9].*\)|  ${dependency_name}: \1|" "$pubspec_file"
         sed -i.bak "s|^    path: ${path_value}|    # path: ${path_value}|" "$pubspec_file"
         rm "${pubspec_file}.bak"
         print_success "Updated $(pwd)/$pubspec_file"
@@ -137,10 +133,10 @@ setup_local() {
     cd "$PROJECT_ROOT/myoro_flutter_library"
     
     # Convert myoro_flutter_annotations to path dependency in main pubspec
-    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "^1.4.10" "../myoro_flutter_annotations"
+    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "../myoro_flutter_annotations"
     
     # Convert myoro_flutter_annotations to path dependency in storyboard pubspec
-    convert_to_path_dependency "storyboard/pubspec.yaml" "myoro_flutter_annotations" "^1.4.10" "../../myoro_flutter_annotations"
+    convert_to_path_dependency "storyboard/pubspec.yaml" "myoro_flutter_annotations" "../../myoro_flutter_annotations"
     
     # Step 5: Setup myoro_flutter_library
     print_status "Step 5: Setting up myoro_flutter_library..."
@@ -157,8 +153,8 @@ setup_local() {
     cd "$PROJECT_ROOT/myoro_matchup"
     
     # Convert both dependencies to path dependencies
-    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_library" "^2.5.5" "../../myoro_flutter_library"
-    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "^1.4.9" "../../myoro_flutter_annotations"
+    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_library" "../myoro_flutter_library"
+    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "../myoro_flutter_annotations"
     
     # Step 7: Run MyoroMatchup setup
     print_status "Step 7: Running MyoroMatchup setup..."
@@ -186,8 +182,8 @@ setup_remote() {
     cd "$PROJECT_ROOT/myoro_matchup"
     
     # Convert both dependencies to pub.dev versions
-    convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_library" "^2.5.5" "../../myoro_flutter_library"
-    convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_annotations" "^1.4.9" "../../myoro_flutter_annotations"
+    convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_library" "../myoro_flutter_library"
+    convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_annotations" "../myoro_flutter_annotations"
     
     # Run MyoroMatchup setup
     print_status "Running MyoroMatchup setup..."
