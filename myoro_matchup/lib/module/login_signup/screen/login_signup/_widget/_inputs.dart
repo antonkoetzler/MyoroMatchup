@@ -31,11 +31,16 @@ final class _Inputs extends StatelessWidget {
             spacing: themeExtension.inputsSpacing,
             children: [
               Expanded(
-                child: _Input(placeholder: localization.loginSignupScreenSignupPasswordInputPlaceholder, controller: signupState.passwordController),
+                child: _Input(
+                  placeholder: localization.loginSignupScreenSignupPasswordInputPlaceholder,
+                  obscurify: true,
+                  controller: signupState.passwordController,
+                ),
               ),
               Expanded(
                 child: _Input(
                   placeholder: localization.loginSignupScreenSignupPasswordRepeatInputPlaceholder,
+                  obscurify: true,
                   controller: signupState.passwordRepeatController,
                 ),
               ),

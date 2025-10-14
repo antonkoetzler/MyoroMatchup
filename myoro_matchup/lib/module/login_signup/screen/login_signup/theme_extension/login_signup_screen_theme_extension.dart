@@ -11,8 +11,7 @@ part 'login_signup_screen_theme_extension.g.dart';
 /// [ThemeExtension] of [LoginSignupScreen].
 @immutable
 @myoroThemeExtension
-final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupScreenThemeExtension>
-    with _$LoginSignupScreenThemeExtensionMixin {
+final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupScreenThemeExtension> with _$LoginSignupScreenThemeExtensionMixin {
   const LoginSignupScreenThemeExtension({
     required this.bodyPadding,
     required this.bodySpacing,
@@ -37,7 +36,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       formTypeSwitcherButtonTapColor = myoroFake<Color>();
 
   LoginSignupScreenThemeExtension.builder(TextTheme textTheme)
-    : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength * 1.5),
+    : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength * 2),
       bodySpacing = kMyoroMultiplier * 4,
       inputsSpacing = kMyoroMultiplier * 2,
       inputTextStyle = textTheme.bodySmall!,
@@ -84,21 +83,9 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       inputTextStyle: TextStyle.lerp(inputTextStyle, other.inputTextStyle, t),
       buttonTextStyle: TextStyle.lerp(buttonTextStyle, other.buttonTextStyle, t),
       buttonsSpacing: lerpDouble(buttonsSpacing, other.buttonsSpacing, t),
-      formTypeSwitcherButtonTextStyle: TextStyle.lerp(
-        formTypeSwitcherButtonTextStyle,
-        other.formTypeSwitcherButtonTextStyle,
-        t,
-      ),
-      formTypeSwitcherButtonIdleColor: Color.lerp(
-        formTypeSwitcherButtonIdleColor,
-        other.formTypeSwitcherButtonIdleColor,
-        t,
-      ),
-      formTypeSwitcherButtonTapColor: Color.lerp(
-        formTypeSwitcherButtonTapColor,
-        other.formTypeSwitcherButtonTapColor,
-        t,
-      ),
+      formTypeSwitcherButtonTextStyle: TextStyle.lerp(formTypeSwitcherButtonTextStyle, other.formTypeSwitcherButtonTextStyle, t),
+      formTypeSwitcherButtonIdleColor: Color.lerp(formTypeSwitcherButtonIdleColor, other.formTypeSwitcherButtonIdleColor, t),
+      formTypeSwitcherButtonTapColor: Color.lerp(formTypeSwitcherButtonTapColor, other.formTypeSwitcherButtonTapColor, t),
     );
   }
 }
