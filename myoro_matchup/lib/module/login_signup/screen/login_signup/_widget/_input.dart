@@ -16,7 +16,7 @@ final class _Input extends StatelessWidget {
       configuration: MyoroInputConfiguration(
         placeholder: placeholder,
         obscureText: obscurify,
-        showObscureButton: obscurify,
+        showObscureTextButton: obscurify,
         controller: controller,
       ),
       style: MyoroInputStyle(inputTextStyle: themeExtension.inputTextStyle),

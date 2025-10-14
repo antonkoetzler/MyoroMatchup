@@ -3,6 +3,11 @@
 # Script to setup MFL (Myoro Flutter Library) dependencies
 # Usage: ./setup_mfl.sh [local|remote]
 
+# If setup locally, the MFL and MFA will be cloned in the parent directory of MyoroMatchup.
+# This is for DX as we can open a workspace with MyoroMatchup, myoro_flutter_library and myoro_flutter_annotations
+# and be able to use VSCode's file explorer. If the repos are cloned in MyoroMatchup, VSCode's file explorer will
+# not list any files in myoro_flutter_library and myoro_flutter_annotations.
+
 set -e  # Exit on any error
 
 # Colors for output
@@ -96,16 +101,20 @@ cleanup_repos() {
 setup_local() {
     print_status "Setting up MFL dependencies locally..."
     
-    # Get the project root (MyoroMatchup directory)
+    # Get the project root (MyoroMatchup directory) and parent directory
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
     PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
+    PARENT_DIR="$(dirname "$PROJECT_ROOT")"
     
     print_status "Project root: $PROJECT_ROOT"
+    print_status "Parent directory: $PARENT_DIR"
     
-    # Step 1: Clean up and clone repositories
-    cleanup_repos "$PROJECT_ROOT"
+    # Step 1: Clean up and clone repositories in parent directory
+    cleanup_repos "$PARENT_DIR"
     
     print_status "Step 1: Cloning repositories..."
+    
+    cd "$PARENT_DIR"
     
     # Clone myoro_flutter_annotations first
     print_status "Cloning myoro_flutter_annotations..."
@@ -113,7 +122,7 @@ setup_local() {
     
     # Step 2: Setup myoro_flutter_annotations immediately
     print_status "Step 2: Setting up myoro_flutter_annotations..."
-    cd "$PROJECT_ROOT/myoro_flutter_annotations"
+    cd "$PARENT_DIR/myoro_flutter_annotations"
     if [ -f "tool/setup.sh" ]; then
         bash tool/setup.sh
         print_success "myoro_flutter_annotations setup completed"
@@ -124,13 +133,13 @@ setup_local() {
     
     # Step 3: Clone myoro_flutter_library
     print_status "Step 3: Cloning myoro_flutter_library..."
-    cd "$PROJECT_ROOT"
+    cd "$PARENT_DIR"
     git clone git@github.com:antonkoetzler/myoro_flutter_library.git
     
     # Step 4: Edit pubspec.yaml files in myoro_flutter_library
     print_status "Step 4: Editing myoro_flutter_library pubspec.yaml files..."
     
-    cd "$PROJECT_ROOT/myoro_flutter_library"
+    cd "$PARENT_DIR/myoro_flutter_library"
     
     # Convert myoro_flutter_annotations to path dependency in main pubspec
     convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "../myoro_flutter_annotations"
@@ -153,8 +162,8 @@ setup_local() {
     cd "$PROJECT_ROOT/myoro_matchup"
     
     # Convert both dependencies to path dependencies
-    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_library" "../myoro_flutter_library"
-    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "../myoro_flutter_annotations"
+    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_library" "../../myoro_flutter_library"
+    convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "../../myoro_flutter_annotations"
     
     # Step 7: Run MyoroMatchup setup
     print_status "Step 7: Running MyoroMatchup setup..."
@@ -168,22 +177,24 @@ setup_local() {
 setup_remote() {
     print_status "Setting up MFL dependencies remotely..."
     
-    # Get the project root
+    # Get the project root and parent directory
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
     PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
+    PARENT_DIR="$(dirname "$PROJECT_ROOT")"
     
     print_status "Project root: $PROJECT_ROOT"
+    print_status "Parent directory: $PARENT_DIR"
     
     # Clean up existing repositories
-    cleanup_repos "$PROJECT_ROOT"
+    cleanup_repos "$PARENT_DIR"
     
     # Edit MyoroMatchup pubspec.yaml to use pub.dev versions
     print_status "Editing MyoroMatchup pubspec.yaml to use pub.dev versions..."
     cd "$PROJECT_ROOT/myoro_matchup"
     
     # Convert both dependencies to pub.dev versions
-    convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_library" "../myoro_flutter_library"
-    convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_annotations" "../myoro_flutter_annotations"
+    convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_library" "../../myoro_flutter_library"
+    convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_annotations" "../../myoro_flutter_annotations"
     
     # Run MyoroMatchup setup
     print_status "Running MyoroMatchup setup..."

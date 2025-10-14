@@ -41,7 +41,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       bodySpacing = kMyoroMultiplier * 4,
       inputsSpacing = kMyoroMultiplier * 2,
       inputTextStyle = textTheme.bodySmall!,
-      buttonTextStyle = textTheme.bodySmall!,
+      buttonTextStyle = textTheme.bodyMedium!,
       buttonsSpacing = kMyoroMultiplier * 2,
       formTypeSwitcherButtonTextStyle = textTheme.headlineSmall!,
       formTypeSwitcherButtonIdleColor = MyoroColors.blue1.darken(0.05),

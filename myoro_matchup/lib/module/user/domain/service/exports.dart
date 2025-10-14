@@ -1,1 +1,1 @@
-export 'user/exports.dart';
+export 'user_service.dart';

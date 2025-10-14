@@ -15,20 +15,20 @@ import 'package:myoro_matchup/common/widget/widget/input/location_input/view_mod
     as _i789;
 import 'package:myoro_matchup/core/api/http_client.dart' as _i32;
 import 'package:myoro_matchup/core/routing/app_router.dart' as _i49;
-import 'package:myoro_matchup/module/game/domain/repository/game_repository_api.dart'
-    as _i171;
+import 'package:myoro_matchup/module/game/domain/repository/game_repository.dart'
+    as _i1006;
 import 'package:myoro_matchup/module/game/screen/details/view_model/game_details_screen_view_model.dart'
     as _i17;
 import 'package:myoro_matchup/module/game/screen/listing/view_model/game_listing_screen_view_model.dart'
     as _i512;
-import 'package:myoro_matchup/module/location/domain/repository/location_repository_api.dart'
-    as _i643;
+import 'package:myoro_matchup/module/location/domain/repository/location_repository.dart'
+    as _i143;
 import 'package:myoro_matchup/module/login_signup/screen/login_signup/view_model/login_signup_screen_view_model.dart'
     as _i205;
-import 'package:myoro_matchup/module/user/domain/repository/user_repository_api.dart'
-    as _i100;
-import 'package:myoro_matchup/module/user/domain/service/user/user_service_api.dart'
-    as _i741;
+import 'package:myoro_matchup/module/user/domain/repository/user_repository.dart'
+    as _i476;
+import 'package:myoro_matchup/module/user/domain/service/user_service.dart'
+    as _i565;
 import 'package:myoro_matchup/myoro_matchup.dart' as _i460;
 
 extension GetItInjectableX on _i174.GetIt {
@@ -38,11 +38,11 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
+    gh.factory<_i143.LocationRepository>(() => _i143.LocationRepository());
+    gh.factory<_i1006.GameRepository>(() => _i1006.GameRepository());
     gh.singleton<_i32.HttpClient>(() => _i32.HttpClient());
-    gh.singleton<_i460.LocationRepository>(() => _i643.LocationRepositoryApi());
-    gh.singleton<_i460.GameRepository>(() => _i171.GameRepositoryApi());
-    gh.singleton<_i460.UserRepository>(
-      () => _i100.UserRepositoryApi(gh<_i460.HttpClient>()),
+    gh.factory<_i476.UserRepository>(
+      () => _i476.UserRepository(gh<_i460.HttpClient>()),
     );
     gh.factory<_i17.GameDetailsScreenViewModel>(
       () => _i17.GameDetailsScreenViewModel(gh<_i460.GameRepository>()),
@@ -53,11 +53,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i789.MmLocationInputViewModel>(
       () => _i789.MmLocationInputViewModel(gh<_i460.LocationRepository>()),
     );
+    gh.factory<_i565.UserService>(
+      () => _i565.UserService(gh<_i460.UserRepository>()),
+    );
     gh.factory<_i205.LoginSignupScreenViewModel>(
       () => _i205.LoginSignupScreenViewModel(gh<_i460.UserRepository>()),
-    );
-    gh.singleton<_i460.UserService>(
-      () => _i741.UserServiceApi(gh<_i460.UserRepository>()),
     );
     gh.singleton<_i49.AppRouter>(() => _i49.AppRouter(gh<_i460.UserService>()));
     return this;
