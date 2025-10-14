@@ -24,6 +24,17 @@
       }
     },
     {
+      "label": "Initialize Myoro Flutter Annotations and Myoro Flutter Library",
+      "type": "shell",
+      "command": "cd myoro_matchup && bash tool/setup_mfl.sh ${input:mfaMflInitType}",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    },
+    {
       "label": "Setup environment",
       "type": "shell",
       "command": "cd myoro_matchup && bash tool/setup.sh",
@@ -33,6 +44,18 @@
         "reveal": "always",
         "panel": "shared"
       }
+    },
+  ],
+  "inputs": [
+    {
+      "id": "mfaMflInitType",
+      "type": "pickString",
+      "description": "Select Myoro Flutter Annotations and Myoro Flutter Library initialization type",
+      "options": [
+        "remote",
+        "local"
+      ],
+      "default": "remote"
     }
   ]
 }
