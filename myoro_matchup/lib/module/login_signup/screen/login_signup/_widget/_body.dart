@@ -7,40 +7,44 @@ final class _Body extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
+    final bodySpacing = themeExtension.bodySpacing;
+    final bodyPadding = themeExtension.bodyPadding;
 
     final viewModel = context.read<LoginSignupScreenViewModel>();
     final state = viewModel.state;
     final formTypeNotifier = state.formTypeNotifier;
     final formController = state.formController;
 
-    return LayoutBuilder(
-      builder: (_, constraints) {
-        return SingleChildScrollView(
-          child: Container(
-            constraints: BoxConstraints(minHeight: constraints.maxHeight),
-            padding: themeExtension.bodyPadding,
-            child: ValueListenableBuilder(
-              valueListenable: formTypeNotifier,
-              builder: (_, formType, _) {
-                return MyoroForm<int>(
-                  controller: formController,
-                  builder: (request, _) {
-                    return Column(
-                      spacing: themeExtension.bodySpacing,
-                      mainAxisSize: MainAxisSize.min,
+    return ValueListenableBuilder(
+      valueListenable: formTypeNotifier,
+      builder: (_, formType, _) {
+        return MyoroForm<int>(
+          controller: formController,
+          builder: (request, _) {
+            return Padding(
+              padding: bodyPadding,
+              child: Column(
+                spacing: bodySpacing,
+                children: [
+                  Expanded(
+                    child: Column(
+                      spacing: bodySpacing,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const _Logo(),
                         Flexible(child: _Inputs(formType)),
-                        if (request.status.isLoading) const MyoroCircularLoader() else _Buttons(formType),
-                        _FormTypeSwitcherButton(formType),
                       ],
-                    );
-                  },
-                );
-              },
-            ),
-          ),
+                    ),
+                  ),
+                  Column(
+                    spacing: bodySpacing,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [_FormTypeSwitcherButton(formType), if (request.status.isLoading) const MyoroCircularLoader() else _Buttons(formType)],
+                  ),
+                ],
+              ),
+            );
+          },
         );
       },
     );
