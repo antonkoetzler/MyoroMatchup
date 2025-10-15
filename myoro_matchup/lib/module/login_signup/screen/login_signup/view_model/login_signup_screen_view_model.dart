@@ -26,9 +26,9 @@ final class LoginSignupScreenViewModel {
     _state.dispose();
   }
 
-  /// Updates the [LoginSignupScreenState.formTypeNotifier].
+  /// Updates the [LoginSignupScreenState.formTypeController].
   void formTypeSwitcherButtonOnTapUp() {
-    _state.formTypeNotifier.value = switch (_state.formTypeNotifier.value) {
+    _state.formTypeController.value = switch (_state.formTypeController.value) {
       LoginSignupScreenEnum.login => LoginSignupScreenEnum.signup,
       LoginSignupScreenEnum.signup => LoginSignupScreenEnum.login,
     };
@@ -36,7 +36,7 @@ final class LoginSignupScreenViewModel {
 
   /// Form validation function.
   String _validation() {
-    switch (_state.formTypeNotifier.value) {
+    switch (_state.formTypeController.value) {
       case LoginSignupScreenEnum.login:
         final loginState = _state.loginState;
         final usernameEmailController = loginState.usernameEmailController;

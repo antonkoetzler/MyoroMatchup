@@ -7,16 +7,17 @@ final class _Body extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
-    final bodySpacing = themeExtension.bodySpacing;
     final bodyPadding = themeExtension.bodyPadding;
+    final logoInputsSpacing = themeExtension.logoInputsSpacing;
+    final formTypeSwitcherButtonActionButtonsSpacing = themeExtension.formTypeSwitcherButtonActionButtonsSpacing;
 
     final viewModel = context.read<LoginSignupScreenViewModel>();
     final state = viewModel.state;
-    final formTypeNotifier = state.formTypeNotifier;
+    final formTypeController = state.formTypeController;
     final formController = state.formController;
 
     return ValueListenableBuilder(
-      valueListenable: formTypeNotifier,
+      valueListenable: formTypeController,
       builder: (_, formType, _) {
         return MyoroForm<int>(
           controller: formController,
@@ -24,11 +25,10 @@ final class _Body extends StatelessWidget {
             return Padding(
               padding: bodyPadding,
               child: Column(
-                spacing: bodySpacing,
                 children: [
                   Expanded(
                     child: Column(
-                      spacing: bodySpacing,
+                      spacing: logoInputsSpacing,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const _Logo(),
@@ -37,12 +37,9 @@ final class _Body extends StatelessWidget {
                     ),
                   ),
                   Column(
-                    spacing: bodySpacing,
+                    spacing: formTypeSwitcherButtonActionButtonsSpacing,
                     mainAxisSize: MainAxisSize.min,
-                    children: [
-                      _FormTypeSwitcherButton(formType),
-                      if (request.status.isLoading) const MyoroCircularLoader() else _Buttons(formType),
-                    ],
+                    children: [_FormTypeSwitcherButton(formType), if (request.status.isLoading) const MyoroCircularLoader() else _ActionButtons(formType)],
                   ),
                 ],
               ),

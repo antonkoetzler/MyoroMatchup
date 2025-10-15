@@ -78,6 +78,34 @@ convert_to_pubdev_dependency() {
     fi
 }
 
+# Function to update VSCode configuration paths for parent directory workspace
+update_vscode_paths() {
+    local vscode_dir="$1"
+    
+    if [ -d "$vscode_dir" ]; then
+        print_status "Updating VSCode configuration paths..."
+        
+        # Update launch.json paths
+        if [ -f "$vscode_dir/launch.json" ]; then
+            sed -i.bak 's|"program": "myoro_matchup/lib/main.dart"|"program": "MyoroMatchup/myoro_matchup/lib/main.dart"|' "$vscode_dir/launch.json"
+            sed -i.bak 's|"projectName": "myoro-matchup-api"|"projectName": "MyoroMatchup/myoro-matchup-api"|' "$vscode_dir/launch.json"
+            rm "$vscode_dir/launch.json.bak"
+            print_success "Updated launch.json paths"
+        fi
+        
+        # Update tasks.json paths
+        if [ -f "$vscode_dir/tasks.json" ]; then
+            sed -i.bak 's|cd myoro_matchup \&\&|cd MyoroMatchup/myoro_matchup \&\&|g' "$vscode_dir/tasks.json"
+            rm "$vscode_dir/tasks.json.bak"
+            print_success "Updated tasks.json paths"
+        fi
+        
+        print_success "VSCode configuration paths updated for parent directory workspace"
+    else
+        print_warning "VSCode directory not found, skipping path updates"
+    fi
+}
+
 # Function to clean up existing repositories
 cleanup_repos() {
     local project_root="$1"
@@ -94,6 +122,11 @@ cleanup_repos() {
     if [ -d "myoro_flutter_annotations" ]; then
         print_status "Removing existing myoro_flutter_annotations directory..."
         rm -rf myoro_flutter_annotations
+    fi
+    
+    if [ -d ".vscode" ]; then
+        print_status "Removing existing .vscode directory..."
+        rm -rf .vscode
     fi
 }
 
@@ -144,8 +177,8 @@ setup_local() {
     # Convert myoro_flutter_annotations to path dependency in main pubspec
     convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "../myoro_flutter_annotations"
     
-    # Convert myoro_flutter_annotations to path dependency in storyboard pubspec
-    convert_to_path_dependency "storyboard/pubspec.yaml" "myoro_flutter_annotations" "../../myoro_flutter_annotations"
+    # Convert myoro_flutter_annotations to path dependency in storybook pubspec
+    convert_to_path_dependency "storybook/pubspec.yaml" "myoro_flutter_annotations" "../../myoro_flutter_annotations"
     
     # Step 5: Setup myoro_flutter_library
     print_status "Step 5: Setting up myoro_flutter_library..."
@@ -169,6 +202,23 @@ setup_local() {
     print_status "Step 7: Running MyoroMatchup setup..."
     bash tool/setup.sh
     print_success "MyoroMatchup setup completed"
+    
+    # Step 8: Copy .vscode folder to parent directory for workspace setup
+    print_status "Step 8: Setting up VSCode workspace configuration..."
+    if [ -d "$PROJECT_ROOT/.vscode" ]; then
+        cp -r "$PROJECT_ROOT/.vscode" "$PARENT_DIR/"
+        print_success "Copied .vscode folder to parent directory"
+        
+        # Update paths in the copied .vscode files
+        update_vscode_paths "$PARENT_DIR/.vscode"
+    else
+        print_warning ".vscode folder not found in MyoroMatchup, skipping copy"
+    fi
+    
+    # Step 9: Display workspace setup instructions
+    print_status "Step 9: Workspace setup instructions"
+    print_status "IMPORTANT: Open a workspace in VSCode one directory above MyoroMatchup ($PARENT_DIR) where the 3 repos are stored."
+    print_status "This setup allows VSCode's file explorer to properly display all three repositories."
     
     print_success "Local MFL setup completed successfully!"
 }

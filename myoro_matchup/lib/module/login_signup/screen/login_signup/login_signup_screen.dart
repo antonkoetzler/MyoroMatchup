@@ -5,8 +5,8 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 import 'package:provider/provider.dart';
 
 part '_widget/_body.dart';
-part '_widget/_button.dart';
-part '_widget/_buttons.dart';
+part '_widget/_active_button.dart';
+part '_widget/_action_buttons.dart';
 part '_widget/_form_type_switcher_button.dart';
 part '_widget/_input.dart';
 part '_widget/_inputs.dart';

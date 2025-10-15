@@ -2,12 +2,11 @@ part of 'game_details_screen_view_model.dart';
 
 /// State of [GameDetailsScreenViewModel].
 final class GameDetailsScreenState {
-  GameDetailsScreenState(MyoroRequestNotifierRequest<Game> gameRequest)
-    : _gameRequestController = MyoroRequestNotifier(requestCallback: gameRequest);
+  GameDetailsScreenState(MyoroRequestControllerRequest<Game> gameRequest) : _gameRequestController = MyoroRequestController(requestCallback: gameRequest);
 
-  /// [MyoroRequestNotifier] of the [Game] being viewed.
-  final MyoroRequestNotifier<Game> _gameRequestController;
-  MyoroRequestNotifier<Game> get gameRequestController => _gameRequestController;
+  /// [MyoroRequestController] of the [Game] being viewed.
+  final MyoroRequestController<Game> _gameRequestController;
+  MyoroRequestController<Game> get gameRequestController => _gameRequestController;
 
   /// Dispose function.
   void dispose() {

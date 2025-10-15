@@ -1,8 +1,8 @@
 part of '../login_signup_screen.dart';
 
 /// Action button section of [LoginSignupScreen].
-final class _Buttons extends StatelessWidget {
-  const _Buttons(this._formType);
+final class _ActionButtons extends StatelessWidget {
+  const _ActionButtons(this._formType);
 
   final LoginSignupScreenEnum _formType;
 
@@ -19,19 +19,19 @@ final class _Buttons extends StatelessWidget {
       children: switch (_formType) {
         LoginSignupScreenEnum.login => [
           Expanded(
-            child: _Button(
+            child: _ActionButton(
               text: localization.loginSignupScreenLoginForgotPasswordButton,
               // TODO
               onTapUp: () => throw UnimplementedError(),
             ),
           ),
           Expanded(
-            child: _Button(text: localization.loginSignupScreenLoginLoginButton, onTapUp: formController.fetch),
+            child: _ActionButton(text: localization.loginSignupScreenLoginLoginButton, onTapUp: formController.fetch),
           ),
         ],
         LoginSignupScreenEnum.signup => [
           Expanded(
-            child: _Button(text: localization.loginSignupScreenSignupSignupButton, onTapUp: formController.fetch),
+            child: _ActionButton(text: localization.loginSignupScreenSignupSignupButton, onTapUp: formController.fetch),
           ),
         ],
       },

@@ -19,24 +19,27 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
   @override
   LoginSignupScreenThemeExtension copyWith({
     EdgeInsets? bodyPadding,
-    double? bodySpacing,
+    double? formTypeSwitcherButtonActionButtonsSpacing,
     double? inputsSpacing,
     TextStyle? inputTextStyle,
     TextStyle? buttonTextStyle,
     double? buttonsSpacing,
     TextStyle? formTypeSwitcherButtonTextStyle,
     Color? formTypeSwitcherButtonIdleColor,
+    double? logoInputsSpacing,
     Color? formTypeSwitcherButtonTapColor,
   }) {
     return LoginSignupScreenThemeExtension(
       bodyPadding: bodyPadding ?? self.bodyPadding,
-      bodySpacing: bodySpacing ?? self.bodySpacing,
+      formTypeSwitcherButtonActionButtonsSpacing:
+          formTypeSwitcherButtonActionButtonsSpacing ?? self.formTypeSwitcherButtonActionButtonsSpacing,
       inputsSpacing: inputsSpacing ?? self.inputsSpacing,
       inputTextStyle: inputTextStyle ?? self.inputTextStyle,
       buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
       buttonsSpacing: buttonsSpacing ?? self.buttonsSpacing,
       formTypeSwitcherButtonTextStyle: formTypeSwitcherButtonTextStyle ?? self.formTypeSwitcherButtonTextStyle,
       formTypeSwitcherButtonIdleColor: formTypeSwitcherButtonIdleColor ?? self.formTypeSwitcherButtonIdleColor,
+      logoInputsSpacing: logoInputsSpacing ?? self.logoInputsSpacing,
       formTypeSwitcherButtonTapColor: formTypeSwitcherButtonTapColor ?? self.formTypeSwitcherButtonTapColor,
     );
   }
@@ -46,13 +49,14 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
     return other is LoginSignupScreenThemeExtension &&
         other.runtimeType == runtimeType &&
         other.bodyPadding == self.bodyPadding &&
-        other.bodySpacing == self.bodySpacing &&
+        other.formTypeSwitcherButtonActionButtonsSpacing == self.formTypeSwitcherButtonActionButtonsSpacing &&
         other.inputsSpacing == self.inputsSpacing &&
         other.inputTextStyle == self.inputTextStyle &&
         other.buttonTextStyle == self.buttonTextStyle &&
         other.buttonsSpacing == self.buttonsSpacing &&
         other.formTypeSwitcherButtonTextStyle == self.formTypeSwitcherButtonTextStyle &&
         other.formTypeSwitcherButtonIdleColor == self.formTypeSwitcherButtonIdleColor &&
+        other.logoInputsSpacing == self.logoInputsSpacing &&
         other.formTypeSwitcherButtonTapColor == self.formTypeSwitcherButtonTapColor;
   }
 
@@ -60,13 +64,14 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
   int get hashCode {
     return Object.hash(
       self.bodyPadding,
-      self.bodySpacing,
+      self.formTypeSwitcherButtonActionButtonsSpacing,
       self.inputsSpacing,
       self.inputTextStyle,
       self.buttonTextStyle,
       self.buttonsSpacing,
       self.formTypeSwitcherButtonTextStyle,
       self.formTypeSwitcherButtonIdleColor,
+      self.logoInputsSpacing,
       self.formTypeSwitcherButtonTapColor,
     );
   }
@@ -75,13 +80,14 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
   String toString() =>
       'LoginSignupScreenThemeExtension(\n'
       '  bodyPadding: ${self.bodyPadding},\n'
-      '  bodySpacing: ${self.bodySpacing},\n'
+      '  formTypeSwitcherButtonActionButtonsSpacing: ${self.formTypeSwitcherButtonActionButtonsSpacing},\n'
       '  inputsSpacing: ${self.inputsSpacing},\n'
       '  inputTextStyle: ${self.inputTextStyle},\n'
       '  buttonTextStyle: ${self.buttonTextStyle},\n'
       '  buttonsSpacing: ${self.buttonsSpacing},\n'
       '  formTypeSwitcherButtonTextStyle: ${self.formTypeSwitcherButtonTextStyle},\n'
       '  formTypeSwitcherButtonIdleColor: ${self.formTypeSwitcherButtonIdleColor},\n'
+      '  logoInputsSpacing: ${self.logoInputsSpacing},\n'
       '  formTypeSwitcherButtonTapColor: ${self.formTypeSwitcherButtonTapColor},\n'
       ');';
 }
