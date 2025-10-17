@@ -3,6 +3,9 @@ import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 import 'package:provider/provider.dart';
 
+part '_widget/_app_bar.dart';
+part '_widget/_body.dart';
+
 /// Screen to create a new [Game].
 final class GameCreationScreen extends StatelessWidget {
   const GameCreationScreen({super.key});

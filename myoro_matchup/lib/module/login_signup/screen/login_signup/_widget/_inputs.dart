@@ -26,6 +26,7 @@ final class _Inputs extends StatelessWidget {
           ),
           _Input(
             placeholder: localization.loginSignupScreenLoginPasswordInputPlaceholder,
+            obscurify: true,
             controller: loginState.passwordController,
           ),
         ],

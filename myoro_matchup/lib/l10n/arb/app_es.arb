@@ -18,25 +18,17 @@
   "frequencyEnumMonthlyLabel": "Mensual",
   "frequencyEnumYearlyLabel": "Anual",
 
-  "gameCreationScreenAppBarTitle": "Nuevo juego",
-  "gameCreationScreenNameFieldLabel": "Nombre",
-  "gameCreationScreenSportFieldLabel": "Esporte",
-  "gameCreationScreenCompetitivenessFieldLabel": "Competitividad",
-  "gameCreationScreenPlayerQuantityFieldLabel": "Cantidad de jugadores",
-  "gameCreationScreenOneTimePriceFieldLabel": "Precio único",
-  "gameCreationScreenMemberPriceFieldLabel": "Precio para miembros",
-  "gameCreationScreenAgeRangeFieldLabel": "Rango de edad",
-  "gameCreationScreenVisibilityFieldLabel": "Visibilidad del juego",
-
   "gameDetailsScreenBodyErrorStateTitle": "¡No se pudieron obtener los detalles del juego!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Jugadores",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Jugadores",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Clasificaciones",
 
-  "gameListingScreenAppBarTitle": "MyoroMatchup",
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "¡Error al recuperar los juegos!",
   "gameListingScreenBodySuccessStateEmptyTitle": "¡No se encontraron juegos!",
   "gameListingScreenNewGameButtonText": "Crear juego",
+
+  "gameCreationScreenAppBarTitle": "Crear juego",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nombre de usuario o email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Contraseña",

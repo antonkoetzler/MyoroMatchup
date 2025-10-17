@@ -26,6 +26,8 @@ import 'package:myoro_matchup/core/shared_preferences/service/shared_preferences
 import 'package:myoro_matchup/core/user/service/user_service.dart' as _i730;
 import 'package:myoro_matchup/module/game/domain/repository/game_repository.dart'
     as _i1006;
+import 'package:myoro_matchup/module/game/screen/creation/view_model/game_creation_screen_view_model.dart'
+    as _i606;
 import 'package:myoro_matchup/module/game/screen/details/view_model/game_details_screen_view_model.dart'
     as _i17;
 import 'package:myoro_matchup/module/game/screen/listing/view_model/game_listing_screen_view_model.dart'
@@ -46,8 +48,11 @@ extension GetItInjectableX on _i174.GetIt {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final sharedPreferencesModule = _$SharedPreferencesModule();
     final appRouterModule = _$AppRouterModule();
-    gh.factory<_i1006.GameRepository>(() => _i1006.GameRepository());
     gh.factory<_i143.LocationRepository>(() => _i143.LocationRepository());
+    gh.factory<_i606.GameCreationScreenViewModel>(
+      () => _i606.GameCreationScreenViewModel(),
+    );
+    gh.factory<_i1006.GameRepository>(() => _i1006.GameRepository());
     gh.singleton<_i126.HttpClient>(() => _i126.HttpClient());
     await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.sharedPreferences,

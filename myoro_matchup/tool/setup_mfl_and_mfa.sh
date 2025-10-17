@@ -3,11 +3,6 @@
 # Script to setup MFL (Myoro Flutter Library) dependencies
 # Usage: ./setup_mfl.sh [local|remote]
 
-# If setup locally, the MFL and MFA will be cloned in the parent directory of MyoroMatchup.
-# This is for DX as we can open a workspace with MyoroMatchup, myoro_flutter_library and myoro_flutter_annotations
-# and be able to use VSCode's file explorer. If the repos are cloned in MyoroMatchup, VSCode's file explorer will
-# not list any files in myoro_flutter_library and myoro_flutter_annotations.
-
 set -e  # Exit on any error
 
 # Colors for output
@@ -51,9 +46,11 @@ convert_to_path_dependency() {
     local path_value="$3"
     
     if [ -f "$pubspec_file" ]; then
-        # Comment out version number and uncomment path (handle both states)
+        # Comment out version number
         sed -i.bak "s|^  ${dependency_name}: \(\^[0-9].*\)|  ${dependency_name}: # \1|" "$pubspec_file"
-        sed -i.bak "s|^    # path: ${path_value}|    path: ${path_value}|" "$pubspec_file"
+        # Find and replace any commented path line for this dependency
+        sed -i.bak "s|^    # path: .*|    path: ${path_value}|" "$pubspec_file"
+        sed -i.bak "s|^  # path: .*|  path: ${path_value}|" "$pubspec_file"
         rm "${pubspec_file}.bak"
         print_success "Updated $(pwd)/$pubspec_file"
     else
@@ -71,38 +68,12 @@ convert_to_pubdev_dependency() {
         # Uncomment version number and comment path (handle both states)
         sed -i.bak "s|^  ${dependency_name}: # \(\^[0-9].*\)|  ${dependency_name}: \1|" "$pubspec_file"
         sed -i.bak "s|^    path: ${path_value}|    # path: ${path_value}|" "$pubspec_file"
+        # Also handle the case where path has different spacing
+        sed -i.bak "s|^  path: ${path_value}|  # path: ${path_value}|" "$pubspec_file"
         rm "${pubspec_file}.bak"
         print_success "Updated $(pwd)/$pubspec_file"
     else
         print_warning "$pubspec_file not found, skipping"
-    fi
-}
-
-# Function to update VSCode configuration paths for parent directory workspace
-update_vscode_paths() {
-    local vscode_dir="$1"
-    
-    if [ -d "$vscode_dir" ]; then
-        print_status "Updating VSCode configuration paths..."
-        
-        # Update launch.json paths
-        if [ -f "$vscode_dir/launch.json" ]; then
-            sed -i.bak 's|"program": "myoro_matchup/lib/main.dart"|"program": "MyoroMatchup/myoro_matchup/lib/main.dart"|' "$vscode_dir/launch.json"
-            sed -i.bak 's|"projectName": "myoro-matchup-api"|"projectName": "myoro-matchup-api"|' "$vscode_dir/launch.json"
-            rm "$vscode_dir/launch.json.bak"
-            print_success "Updated launch.json paths"
-        fi
-        
-        # Update tasks.json paths
-        if [ -f "$vscode_dir/tasks.json" ]; then
-            sed -i.bak 's|cd myoro_matchup \&\&|cd MyoroMatchup/myoro_matchup \&\&|g' "$vscode_dir/tasks.json"
-            rm "$vscode_dir/tasks.json.bak"
-            print_success "Updated tasks.json paths"
-        fi
-        
-        print_success "VSCode configuration paths updated for parent directory workspace"
-    else
-        print_warning "VSCode directory not found, skipping path updates"
     fi
 }
 
@@ -134,20 +105,16 @@ cleanup_repos() {
 setup_local() {
     print_status "Setting up MFL dependencies locally..."
     
-    # Get the project root (MyoroMatchup directory) and parent directory
+    # Get the project root (parent of MyoroMatchup directory)
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-    PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
-    PARENT_DIR="$(dirname "$PROJECT_ROOT")"
+    PROJECT_ROOT="$(dirname "$(dirname "$(dirname "$SCRIPT_DIR")")")"
     
     print_status "Project root: $PROJECT_ROOT"
-    print_status "Parent directory: $PARENT_DIR"
     
-    # Step 1: Clean up and clone repositories in parent directory
-    cleanup_repos "$PARENT_DIR"
+    # Step 1: Clean up and clone repositories
+    cleanup_repos "$PROJECT_ROOT"
     
     print_status "Step 1: Cloning repositories..."
-    
-    cd "$PARENT_DIR"
     
     # Clone myoro_flutter_annotations first
     print_status "Cloning myoro_flutter_annotations..."
@@ -155,7 +122,7 @@ setup_local() {
     
     # Step 2: Setup myoro_flutter_annotations immediately
     print_status "Step 2: Setting up myoro_flutter_annotations..."
-    cd "$PARENT_DIR/myoro_flutter_annotations"
+    cd "$PROJECT_ROOT/myoro_flutter_annotations"
     if [ -f "tool/setup.sh" ]; then
         bash tool/setup.sh
         print_success "myoro_flutter_annotations setup completed"
@@ -166,18 +133,18 @@ setup_local() {
     
     # Step 3: Clone myoro_flutter_library
     print_status "Step 3: Cloning myoro_flutter_library..."
-    cd "$PARENT_DIR"
+    cd "$PROJECT_ROOT"
     git clone git@github.com:antonkoetzler/myoro_flutter_library.git
     
     # Step 4: Edit pubspec.yaml files in myoro_flutter_library
     print_status "Step 4: Editing myoro_flutter_library pubspec.yaml files..."
     
-    cd "$PARENT_DIR/myoro_flutter_library"
+    cd "$PROJECT_ROOT/myoro_flutter_library"
     
     # Convert myoro_flutter_annotations to path dependency in main pubspec
     convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "../myoro_flutter_annotations"
     
-    # Convert myoro_flutter_annotations to path dependency in storybook pubspec
+    # Convert myoro_flutter_annotations to path dependency in storyboard pubspec
     convert_to_path_dependency "storybook/pubspec.yaml" "myoro_flutter_annotations" "../../myoro_flutter_annotations"
     
     # Step 5: Setup myoro_flutter_library
@@ -192,33 +159,45 @@ setup_local() {
     
     # Step 6: Edit MyoroMatchup pubspec.yaml
     print_status "Step 6: Editing MyoroMatchup pubspec.yaml..."
-    cd "$PROJECT_ROOT/myoro_matchup"
+    cd "$PROJECT_ROOT/MyoroMatchup/myoro_matchup"
     
     # Convert both dependencies to path dependencies
     convert_to_path_dependency "pubspec.yaml" "myoro_flutter_library" "../../myoro_flutter_library"
     convert_to_path_dependency "pubspec.yaml" "myoro_flutter_annotations" "../../myoro_flutter_annotations"
     
-    # Step 7: Run MyoroMatchup setup
-    print_status "Step 7: Running MyoroMatchup setup..."
-    bash tool/setup.sh
-    print_success "MyoroMatchup setup completed"
-    
-    # Step 8: Copy .vscode folder to parent directory for workspace setup
-    print_status "Step 8: Setting up VSCode workspace configuration..."
-    if [ -d "$PROJECT_ROOT/.vscode" ]; then
-        cp -r "$PROJECT_ROOT/.vscode" "$PARENT_DIR/"
-        print_success "Copied .vscode folder to parent directory"
+    # Step 7: Copy .vscode to project root
+    print_status "Step 7: Copying .vscode to project root..."
+    cd "$PROJECT_ROOT"
+    if [ -d "MyoroMatchup/.vscode" ]; then
+        cp -r MyoroMatchup/.vscode .
+        print_success "Copied .vscode to project root"
         
-        # Update paths in the copied .vscode files
-        update_vscode_paths "$PARENT_DIR/.vscode"
+        # Fix paths in copied .vscode files
+        print_status "Fixing paths in .vscode files..."
+        if [ -f ".vscode/launch.json" ]; then
+            # Fix Flutter program path
+            sed -i.bak 's|"program": "myoro_matchup/lib/main.dart"|"program": "MyoroMatchup/myoro_matchup/lib/main.dart"|' .vscode/launch.json
+            # Fix env file path
+            sed -i.bak 's|"envFile": "${workspaceFolder}/.env"|"envFile": "${workspaceFolder}/MyoroMatchup/.env"|' .vscode/launch.json
+            rm .vscode/launch.json.bak
+            print_success "Fixed launch.json paths"
+        fi
+        
+        if [ -f ".vscode/tasks.json" ]; then
+            # Fix all task command paths
+            sed -i.bak 's|"command": "cd myoro_matchup|"command": "cd MyoroMatchup/myoro_matchup|' .vscode/tasks.json
+            rm .vscode/tasks.json.bak
+            print_success "Fixed tasks.json paths"
+        fi
     else
-        print_warning ".vscode folder not found in MyoroMatchup, skipping copy"
+        print_warning "MyoroMatchup/.vscode not found, skipping"
     fi
     
-    # Step 9: Display workspace setup instructions
-    print_status "Step 9: Workspace setup instructions"
-    print_status "IMPORTANT: Open a workspace in VSCode one directory above MyoroMatchup ($PARENT_DIR) where the 3 repos are stored."
-    print_status "This setup allows VSCode's file explorer to properly display all three repositories."
+    # Step 8: Run MyoroMatchup setup
+    print_status "Step 8: Running MyoroMatchup setup..."
+    cd "$PROJECT_ROOT/MyoroMatchup/myoro_matchup"
+    bash tool/setup.sh
+    print_success "MyoroMatchup setup completed"
     
     print_success "Local MFL setup completed successfully!"
 }
@@ -227,27 +206,54 @@ setup_local() {
 setup_remote() {
     print_status "Setting up MFL dependencies remotely..."
     
-    # Get the project root and parent directory
+    # Get the project root (parent of MyoroMatchup directory)
     SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-    PROJECT_ROOT="$(dirname "$(dirname "$SCRIPT_DIR")")"
-    PARENT_DIR="$(dirname "$PROJECT_ROOT")"
+    PROJECT_ROOT="$(dirname "$(dirname "$(dirname "$SCRIPT_DIR")")")"
     
     print_status "Project root: $PROJECT_ROOT"
-    print_status "Parent directory: $PARENT_DIR"
     
     # Clean up existing repositories
-    cleanup_repos "$PARENT_DIR"
+    cleanup_repos "$PROJECT_ROOT"
     
     # Edit MyoroMatchup pubspec.yaml to use pub.dev versions
     print_status "Editing MyoroMatchup pubspec.yaml to use pub.dev versions..."
-    cd "$PROJECT_ROOT/myoro_matchup"
+    cd "$PROJECT_ROOT/MyoroMatchup/myoro_matchup"
     
     # Convert both dependencies to pub.dev versions
     convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_library" "../../myoro_flutter_library"
     convert_to_pubdev_dependency "pubspec.yaml" "myoro_flutter_annotations" "../../myoro_flutter_annotations"
     
+    # Copy .vscode to project root
+    print_status "Copying .vscode to project root..."
+    cd "$PROJECT_ROOT"
+    if [ -d "MyoroMatchup/.vscode" ]; then
+        cp -r MyoroMatchup/.vscode .
+        print_success "Copied .vscode to project root"
+        
+        # Fix paths in copied .vscode files
+        print_status "Fixing paths in .vscode files..."
+        if [ -f ".vscode/launch.json" ]; then
+            # Fix Flutter program path
+            sed -i.bak 's|"program": "myoro_matchup/lib/main.dart"|"program": "MyoroMatchup/myoro_matchup/lib/main.dart"|' .vscode/launch.json
+            # Fix env file path
+            sed -i.bak 's|"envFile": "${workspaceFolder}/.env"|"envFile": "${workspaceFolder}/MyoroMatchup/.env"|' .vscode/launch.json
+            rm .vscode/launch.json.bak
+            print_success "Fixed launch.json paths"
+        fi
+        
+        if [ -f ".vscode/tasks.json" ]; then
+            # Fix all task command paths
+            sed -i.bak 's|"command": "cd myoro_matchup|"command": "cd MyoroMatchup/myoro_matchup|' .vscode/tasks.json
+            rm .vscode/tasks.json.bak
+            print_success "Fixed tasks.json paths"
+        fi
+    else
+        print_warning "MyoroMatchup/.vscode not found, skipping"
+    fi
+    
     # Run MyoroMatchup setup
     print_status "Running MyoroMatchup setup..."
+    cd "$PROJECT_ROOT/MyoroMatchup/myoro_matchup"
     bash tool/setup.sh
     print_success "MyoroMatchup setup completed"
     

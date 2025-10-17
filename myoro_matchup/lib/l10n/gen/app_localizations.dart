@@ -19,7 +19,7 @@ import 'app_localizations_pt.dart';
 /// `supportedLocales` list. For example:
 ///
 /// ```dart
-/// import 'l10n/app_localizations.dart';
+/// import 'gen/app_localizations.dart';
 ///
 /// return MaterialApp(
 ///   localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -63,8 +63,7 @@ import 'app_localizations_pt.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -72,8 +71,7 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -85,20 +83,15 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
-      <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
-  static const List<Locale> supportedLocales = <Locale>[
-    Locale('en'),
-    Locale('es'),
-    Locale('pt'),
-  ];
+  static const List<Locale> supportedLocales = <Locale>[Locale('en'), Locale('es'), Locale('pt')];
 
   /// No description provided for @httpClientConnectionExceptionMessage.
   ///
@@ -184,60 +177,6 @@ abstract class AppLocalizations {
   /// **'Yearly'**
   String get frequencyEnumYearlyLabel;
 
-  /// No description provided for @gameCreationScreenAppBarTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'New game'**
-  String get gameCreationScreenAppBarTitle;
-
-  /// No description provided for @gameCreationScreenNameFieldLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Name'**
-  String get gameCreationScreenNameFieldLabel;
-
-  /// No description provided for @gameCreationScreenSportFieldLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Sport'**
-  String get gameCreationScreenSportFieldLabel;
-
-  /// No description provided for @gameCreationScreenCompetitivenessFieldLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Competitiveness'**
-  String get gameCreationScreenCompetitivenessFieldLabel;
-
-  /// No description provided for @gameCreationScreenPlayerQuantityFieldLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'# of players'**
-  String get gameCreationScreenPlayerQuantityFieldLabel;
-
-  /// No description provided for @gameCreationScreenOneTimePriceFieldLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'One-time price'**
-  String get gameCreationScreenOneTimePriceFieldLabel;
-
-  /// No description provided for @gameCreationScreenMemberPriceFieldLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Member price'**
-  String get gameCreationScreenMemberPriceFieldLabel;
-
-  /// No description provided for @gameCreationScreenAgeRangeFieldLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Age range'**
-  String get gameCreationScreenAgeRangeFieldLabel;
-
-  /// No description provided for @gameCreationScreenVisibilityFieldLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Game visibility'**
-  String get gameCreationScreenVisibilityFieldLabel;
-
   /// No description provided for @gameDetailsScreenBodyErrorStateTitle.
   ///
   /// In en, this message translates to:
@@ -265,7 +204,7 @@ abstract class AppLocalizations {
   /// No description provided for @gameListingScreenAppBarTitle.
   ///
   /// In en, this message translates to:
-  /// **'MyoroMatchup'**
+  /// **'Myoro Matchup'**
   String get gameListingScreenAppBarTitle;
 
   /// No description provided for @gameListingScreenBodyErrorStateTitle.
@@ -285,6 +224,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Create game'**
   String get gameListingScreenNewGameButtonText;
+
+  /// No description provided for @gameCreationScreenAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Create game'**
+  String get gameCreationScreenAppBarTitle;
 
   /// No description provided for @loginSignupScreenLoginUsernameEmailInputPlaceholder.
   ///
@@ -401,8 +346,7 @@ abstract class AppLocalizations {
   String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage;
 }
 
-class _AppLocalizationsDelegate
-    extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -411,8 +355,7 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en', 'es', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'es', 'pt'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
