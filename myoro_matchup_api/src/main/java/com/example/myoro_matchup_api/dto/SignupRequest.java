@@ -4,6 +4,7 @@ import com.example.myoro_matchup_api.util.ValidationConstants;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
 /** Signup request. */
@@ -11,6 +12,7 @@ public class SignupRequest {
   /** Username. */
   @NotBlank(message = "{validation.username.required}")
   @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, message = "{validation.username.length}")
+  @Pattern(regexp = ValidationConstants.USERNAME_PATTERN, message = "{validation.username.pattern}")
   private String username;
 
   /** Name. */

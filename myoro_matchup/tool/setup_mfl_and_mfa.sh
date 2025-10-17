@@ -88,7 +88,7 @@ update_vscode_paths() {
         # Update launch.json paths
         if [ -f "$vscode_dir/launch.json" ]; then
             sed -i.bak 's|"program": "myoro_matchup/lib/main.dart"|"program": "MyoroMatchup/myoro_matchup/lib/main.dart"|' "$vscode_dir/launch.json"
-            sed -i.bak 's|"projectName": "myoro-matchup-api"|"projectName": "MyoroMatchup/myoro-matchup-api"|' "$vscode_dir/launch.json"
+            sed -i.bak 's|"projectName": "myoro-matchup-api"|"projectName": "myoro-matchup-api"|' "$vscode_dir/launch.json"
             rm "$vscode_dir/launch.json.bak"
             print_success "Updated launch.json paths"
         fi

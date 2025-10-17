@@ -100,6 +100,12 @@ abstract class AppLocalizations {
     Locale('pt'),
   ];
 
+  /// No description provided for @httpClientConnectionExceptionMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Couldn\'t connect to server, please check your internet and try again.'**
+  String get httpClientConnectionExceptionMessage;
+
   /// No description provided for @mmErrorFeedbackSubtitle.
   ///
   /// In en, this message translates to:
@@ -387,6 +393,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Password fields cannot be empty.'**
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
+
+  /// No description provided for @loginSignupScreenSignupFormPasswordFieldsMismatchMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Passwords do not match.'**
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage;
 }
 
 class _AppLocalizationsDelegate

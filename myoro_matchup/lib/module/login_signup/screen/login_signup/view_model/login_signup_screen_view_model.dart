@@ -10,16 +10,15 @@ part 'login_signup_screen_state.dart';
 /// View model of [LoginSignupScreen].
 @injectable
 final class LoginSignupScreenViewModel {
-  LoginSignupScreenViewModel(this._userRepository) {
+  LoginSignupScreenViewModel(this._authService) {
     _state.formController.addListener(_formControllerListener);
   }
 
   /// [User] repository.
-  final UserRepository _userRepository;
+  final AuthService _authService;
 
   /// State.
-  late final _state = LoginSignupScreenState(MyoroFormConfiguration<int>(validation: _validation, request: _request));
-  LoginSignupScreenState get state => _state;
+  late final _state = LoginSignupScreenState(MyoroFormConfiguration(validation: _validation, request: _request));
 
   /// Dispose function.
   void dispose() {
@@ -70,6 +69,9 @@ final class LoginSignupScreenViewModel {
         if (passwordController.text.isEmpty || passwordRepeatController.text.isEmpty) {
           return localization.loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
         }
+        if (passwordController.text != passwordRepeatController.text) {
+          return localization.loginSignupScreenSignupFormPasswordFieldsMismatchMessage;
+        }
 
         break;
     }
@@ -78,8 +80,32 @@ final class LoginSignupScreenViewModel {
   }
 
   /// Form request function.
-  Future<int>? _request() async {
-    return await _userRepository.create(User.fake());
+  Future<void> _request() async {
+    final formType = _state.formType;
+
+    final loginState = _state.loginState;
+    final loginUsernameEmail = loginState.usernameEmail;
+    final loginPassword = loginState.password;
+    final loginIsEmail = loginUsernameEmail.contains('@');
+
+    final signupState = _state.signupState;
+    final signupName = signupState.name;
+    final signupUsername = signupState.username;
+    final signupEmail = signupState.email;
+    final signupPassword = signupState.password;
+
+    return await switch (formType) {
+      LoginSignupScreenEnum.login => _authService.login(
+        LoginRequest(
+          username: loginIsEmail ? null : loginUsernameEmail,
+          email: loginIsEmail ? loginUsernameEmail : null,
+          password: loginPassword,
+        ),
+      ),
+      LoginSignupScreenEnum.signup => _authService.signup(
+        SignupRequest(username: signupUsername, name: signupName, email: signupEmail, password: signupPassword),
+      ),
+    };
   }
 
   /// Listener of [LoginSignupScreenState.formController].
@@ -96,7 +122,10 @@ final class LoginSignupScreenViewModel {
       );
     }
     if (status.isSuccess) {
-      AppRouter.push(Routes.gameRoutes.gameListingScreen.navigate());
+      AppRouter.replace(Routes.gameRoutes.gameListingScreen.navigate());
     }
   }
+
+  /// [_state] getter.
+  LoginSignupScreenState get state => _state;
 }

@@ -9,6 +9,10 @@ class AppLocalizationsPt extends AppLocalizations {
   AppLocalizationsPt([String locale = 'pt']) : super(locale);
 
   @override
+  String get httpClientConnectionExceptionMessage =>
+      'Não foi possível conectar ao servidor, verifique sua internet e tente novamente.';
+
+  @override
   String get mmErrorFeedbackSubtitle =>
       'Verifique sua conexão e tente novamente.';
 
@@ -170,4 +174,8 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
       'Os campos de senha não podem estar vazios.';
+
+  @override
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      'As senhas não coincidem.';
 }

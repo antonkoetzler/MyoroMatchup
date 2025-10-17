@@ -27,7 +27,7 @@ public class AuthService {
   private MessageService messageService;
 
   /** Signup function. */
-  public User signup(SignupRequest request) {
+  public Long signup(SignupRequest request) {
     // Check if the username is already taken.
     if (userRepository.existsByUsername(request.getUsername())) {
       throw new RuntimeException(messageService.getMessage("auth.username.taken"));
@@ -47,11 +47,12 @@ public class AuthService {
     user.setCreatedAt(LocalDateTime.now());
 
     // Save the user.
-    return userRepository.save(user);
+    final User savedUser = userRepository.save(user);
+    return savedUser.getId();
   }
 
   /** Login function. */
-  public User login(LoginRequest request) {
+  public Long login(LoginRequest request) {
     String username = request.getUsername();
     String email = request.getEmail();
 
@@ -81,6 +82,6 @@ public class AuthService {
       throw new RuntimeException(messageService.getMessage("auth.incorrect.password"));
     }
 
-    return user;
+    return user.getId();
   }
 }

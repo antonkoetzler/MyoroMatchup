@@ -11,6 +11,7 @@ final class _FormTypeSwitcherButton extends StatelessWidget {
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
     final viewModel = context.read<LoginSignupScreenViewModel>();
 
+    // TODO: Could be a [Widget] like MyoroLinkButton.
     return MyoroIconTextButton(
       configuration: MyoroIconTextButtonConfiguration(
         textConfiguration: MyoroTextConfiguration(

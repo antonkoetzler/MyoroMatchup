@@ -1,4 +1,6 @@
 {
+  "httpClientConnectionExceptionMessage": "Couldn't connect to server, please check your internet and try again.",
+  
   "mmErrorFeedbackSubtitle": "Please verify your connection and try again!",
   "mmErrorFeedbackActionButtonText": "Retry",
 
@@ -53,5 +55,6 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "Name cannot be empty.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Username cannot be empty.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email cannot be empty.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Password fields cannot be empty."
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Password fields cannot be empty.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwords do not match."
 }

@@ -29,17 +29,19 @@ public class AuthController {
   private AuthService authService;
 
   @PostMapping("/signup")
-  public ResponseEntity<Map<String, String>> signup(@Valid @RequestBody SignupRequest request) {
-    authService.signup(request);
-    Map<String, String> response = new HashMap<>();
+  public ResponseEntity<Map<String, Object>> signup(@Valid @RequestBody SignupRequest request) {
+    final Long userId = authService.signup(request);
+    Map<String, Object> response = new HashMap<>();
+    response.put("id", userId);
     response.put("message", messageService.getMessage("auth.signup.success"));
     return ResponseEntity.ok(response);
   }
 
   @PostMapping("/login")
-  public ResponseEntity<Map<String, String>> login(@Valid @RequestBody LoginRequest request) {
-    authService.login(request);
-    Map<String, String> response = new HashMap<>();
+  public ResponseEntity<Map<String, Object>> login(@Valid @RequestBody LoginRequest request) {
+    final Long userId = authService.login(request);
+    Map<String, Object> response = new HashMap<>();
+    response.put("id", userId);
     response.put("message", messageService.getMessage("auth.login.success"));
     return ResponseEntity.ok(response);
   }

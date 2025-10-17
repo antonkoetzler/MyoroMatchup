@@ -11,6 +11,9 @@ public final class ValidationConstants {
   /** Minimum password length. */
   public static final int MIN_PASSWORD_LENGTH = 8;
 
+  /** Username pattern - only letters and numbers. */
+  public static final String USERNAME_PATTERN = "^[a-zA-Z0-9]+$";
+
   /** Private constructor to prevent instantiation. */
   private ValidationConstants() {
     throw new UnsupportedOperationException("This is a utility class and cannot be instantiated.");

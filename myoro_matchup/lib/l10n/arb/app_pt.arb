@@ -1,4 +1,6 @@
 {
+  "httpClientConnectionExceptionMessage": "Não foi possível conectar ao servidor, verifique sua internet e tente novamente.",
+
   "mmErrorFeedbackSubtitle": "Verifique sua conexão e tente novamente.",
   "mmErrorFeedbackActionButtonText": "Tentar novamente",
 
@@ -53,5 +55,6 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "O nome não pode estar vazio.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "O nome de usuário não pode estar vazio.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "O e-mail não pode estar vazio.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Os campos de senha não podem estar vazios."
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Os campos de senha não podem estar vazios.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "As senhas não coincidem."
 }

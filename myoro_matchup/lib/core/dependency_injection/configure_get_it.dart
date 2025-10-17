@@ -5,6 +5,6 @@ import 'package:myoro_matchup/core/dependency_injection/configure_get_it.config.
 final getIt = GetIt.instance;
 
 @InjectableInit()
-void configureGetIt() {
-  getIt.init();
+Future<void> configureGetIt() async {
+  await getIt.init();
 }

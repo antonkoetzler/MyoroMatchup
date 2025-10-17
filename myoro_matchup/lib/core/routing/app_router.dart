@@ -1,8 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
-@singleton
 final class AppRouter {
   static const loginModuleRoute = 'login_signup';
   static const gameModuleRoute = '/game';
@@ -12,6 +10,13 @@ final class AppRouter {
   /// i.e. [AppRouter.push(Routes.gameRoutes.gameListingScreen.navigate())]
   static void push(RouteNavigationConfiguration navigationConfiguration) {
     navigatorKey.currentContext?.push(navigationConfiguration.location, extra: navigationConfiguration.payload);
+  }
+
+  /// Replaces the current route stack with the provided route.
+  ///
+  /// i.e. [AppRouter.replace(Routes.gameRoutes.gameListingScreen.navigate())]
+  static void replace(RouteNavigationConfiguration navigationConfiguration) {
+    navigatorKey.currentContext?.go(navigationConfiguration.location, extra: navigationConfiguration.payload);
   }
 
   /// Pops the current [Route].
@@ -24,23 +29,20 @@ final class AppRouter {
     return navigatorKey.currentContext?.canPop() ?? false;
   }
 
+  /// Default constructor.
   AppRouter(this._userService);
 
+  /// User service.
   final UserService _userService;
 
-  GoRouter? _router;
-  GoRouter get router {
-    assert(_router != null, '[Router.router]: [_router] not initialized.');
-    return _router!;
-  }
+  /// Router.
+  late final GoRouter _router;
 
   /// Initialization function.
   Future<void> init() async {
-    if (_router != null) return;
-
     _router = GoRouter(
       navigatorKey: navigatorKey,
-      initialLocation: await _userService.isLoggedIn()
+      initialLocation: _userService.isLoggedIn
           ? Routes.gameRoutes.gameListingScreen.location
           : Routes.loginSignupRoutes.loginSignupScreen.location,
       routes: [
@@ -55,5 +57,10 @@ final class AppRouter {
         Routes.loginSignupRoutes.loginSignupScreen.goRoute,
       ],
     );
+  }
+
+  /// [_router] getter.
+  GoRouter get router {
+    return _router;
   }
 }

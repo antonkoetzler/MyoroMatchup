@@ -9,7 +9,7 @@ final class _Body extends StatelessWidget {
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
     final bodyPadding = themeExtension.bodyPadding;
     final logoInputsSpacing = themeExtension.logoInputsSpacing;
-    final formTypeSwitcherButtonActionButtonsSpacing = themeExtension.formTypeSwitcherButtonActionButtonsSpacing;
+    final inputsFormTypeSwitcherButtonSpacing = themeExtension.inputsFormTypeSwitcherButtonSpacing;
 
     final viewModel = context.read<LoginSignupScreenViewModel>();
     final state = viewModel.state;
@@ -19,7 +19,7 @@ final class _Body extends StatelessWidget {
     return ValueListenableBuilder(
       valueListenable: formTypeController,
       builder: (_, formType, _) {
-        return MyoroForm<int>(
+        return MyoroForm(
           controller: formController,
           builder: (request, _) {
             return Padding(
@@ -28,18 +28,19 @@ final class _Body extends StatelessWidget {
                 children: [
                   Expanded(
                     child: Column(
-                      spacing: logoInputsSpacing,
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const _Logo(),
+                        SizedBox(height: logoInputsSpacing),
                         Flexible(child: _Inputs(formType)),
+                        SizedBox(height: inputsFormTypeSwitcherButtonSpacing),
+                        _FormTypeSwitcherButton(formType),
                       ],
                     ),
                   ),
                   Column(
-                    spacing: formTypeSwitcherButtonActionButtonsSpacing,
                     mainAxisSize: MainAxisSize.min,
-                    children: [_FormTypeSwitcherButton(formType), if (request.status.isLoading) const MyoroCircularLoader() else _ActionButtons(formType)],
+                    children: [if (request.status.isLoading) const MyoroCircularLoader() else _ActionButtons(formType)],
                   ),
                 ],
               ),

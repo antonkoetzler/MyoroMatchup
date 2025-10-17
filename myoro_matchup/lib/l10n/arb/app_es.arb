@@ -1,4 +1,6 @@
 {
+  "httpClientConnectionExceptionMessage": "No se pudo conectar al servidor, verifica tu internet e inténtalo de nuevo.",
+  
   "mmErrorFeedbackSubtitle": "Por favor, verifica tu conexión e inténtalo de nuevo.",
   "mmErrorFeedbackActionButtonText": "Reintentar",
 
@@ -53,5 +55,6 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "El nombre no puede estar vacío.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "El nombre de usuario no puede estar vacío.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "El correo electrónico no puede estar vacío.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Los campos de contraseña no pueden estar vacíos."
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Los campos de contraseña no pueden estar vacíos.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Las contraseñas no coinciden."
 }

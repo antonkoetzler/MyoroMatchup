@@ -19,7 +19,6 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
   @override
   LoginSignupScreenThemeExtension copyWith({
     EdgeInsets? bodyPadding,
-    double? formTypeSwitcherButtonActionButtonsSpacing,
     double? inputsSpacing,
     TextStyle? inputTextStyle,
     TextStyle? buttonTextStyle,
@@ -28,11 +27,10 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
     Color? formTypeSwitcherButtonIdleColor,
     double? logoInputsSpacing,
     Color? formTypeSwitcherButtonTapColor,
+    double? inputsFormTypeSwitcherButtonSpacing,
   }) {
     return LoginSignupScreenThemeExtension(
       bodyPadding: bodyPadding ?? self.bodyPadding,
-      formTypeSwitcherButtonActionButtonsSpacing:
-          formTypeSwitcherButtonActionButtonsSpacing ?? self.formTypeSwitcherButtonActionButtonsSpacing,
       inputsSpacing: inputsSpacing ?? self.inputsSpacing,
       inputTextStyle: inputTextStyle ?? self.inputTextStyle,
       buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
@@ -41,6 +39,8 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
       formTypeSwitcherButtonIdleColor: formTypeSwitcherButtonIdleColor ?? self.formTypeSwitcherButtonIdleColor,
       logoInputsSpacing: logoInputsSpacing ?? self.logoInputsSpacing,
       formTypeSwitcherButtonTapColor: formTypeSwitcherButtonTapColor ?? self.formTypeSwitcherButtonTapColor,
+      inputsFormTypeSwitcherButtonSpacing:
+          inputsFormTypeSwitcherButtonSpacing ?? self.inputsFormTypeSwitcherButtonSpacing,
     );
   }
 
@@ -49,7 +49,6 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
     return other is LoginSignupScreenThemeExtension &&
         other.runtimeType == runtimeType &&
         other.bodyPadding == self.bodyPadding &&
-        other.formTypeSwitcherButtonActionButtonsSpacing == self.formTypeSwitcherButtonActionButtonsSpacing &&
         other.inputsSpacing == self.inputsSpacing &&
         other.inputTextStyle == self.inputTextStyle &&
         other.buttonTextStyle == self.buttonTextStyle &&
@@ -57,14 +56,14 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
         other.formTypeSwitcherButtonTextStyle == self.formTypeSwitcherButtonTextStyle &&
         other.formTypeSwitcherButtonIdleColor == self.formTypeSwitcherButtonIdleColor &&
         other.logoInputsSpacing == self.logoInputsSpacing &&
-        other.formTypeSwitcherButtonTapColor == self.formTypeSwitcherButtonTapColor;
+        other.formTypeSwitcherButtonTapColor == self.formTypeSwitcherButtonTapColor &&
+        other.inputsFormTypeSwitcherButtonSpacing == self.inputsFormTypeSwitcherButtonSpacing;
   }
 
   @override
   int get hashCode {
     return Object.hash(
       self.bodyPadding,
-      self.formTypeSwitcherButtonActionButtonsSpacing,
       self.inputsSpacing,
       self.inputTextStyle,
       self.buttonTextStyle,
@@ -73,6 +72,7 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
       self.formTypeSwitcherButtonIdleColor,
       self.logoInputsSpacing,
       self.formTypeSwitcherButtonTapColor,
+      self.inputsFormTypeSwitcherButtonSpacing,
     );
   }
 
@@ -80,7 +80,6 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
   String toString() =>
       'LoginSignupScreenThemeExtension(\n'
       '  bodyPadding: ${self.bodyPadding},\n'
-      '  formTypeSwitcherButtonActionButtonsSpacing: ${self.formTypeSwitcherButtonActionButtonsSpacing},\n'
       '  inputsSpacing: ${self.inputsSpacing},\n'
       '  inputTextStyle: ${self.inputTextStyle},\n'
       '  buttonTextStyle: ${self.buttonTextStyle},\n'
@@ -89,5 +88,6 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
       '  formTypeSwitcherButtonIdleColor: ${self.formTypeSwitcherButtonIdleColor},\n'
       '  logoInputsSpacing: ${self.logoInputsSpacing},\n'
       '  formTypeSwitcherButtonTapColor: ${self.formTypeSwitcherButtonTapColor},\n'
+      '  inputsFormTypeSwitcherButtonSpacing: ${self.inputsFormTypeSwitcherButtonSpacing},\n'
       ');';
 }

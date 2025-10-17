@@ -6,8 +6,8 @@ final class EnvironmentConfiguration {
 
   static String get apiUrl {
     final baseUrl = switch (currentEnvironment) {
-      EnvironmentEnum.local => 'http://localhost:8080',
+      EnvironmentEnum.local => 'http://10.0.2.2:8080',
     };
-    return '$baseUrl/api/';
+    return '$baseUrl/api';
   }
 }

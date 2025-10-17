@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 void main() async {
+  // Ensure the Flutter binding is initialized.
+  WidgetsFlutterBinding.ensureInitialized();
+
   // Get the environment.
   final environment = EnvironmentEnum.getEnvironment(
     String.fromEnvironment('env', defaultValue: EnvironmentEnum.local.name),
@@ -9,11 +12,7 @@ void main() async {
   EnvironmentConfiguration.currentEnvironment = environment;
 
   // Configure the get it instance.
-  configureGetIt();
+  await configureGetIt();
 
-  // Initialize the app router.
-  await getIt<AppRouter>().init();
-
-  // Run the app.
-  runApp(const Root());
+  runApp(const App());
 }

@@ -11,7 +11,8 @@ part 'login_signup_screen_theme_extension.g.dart';
 /// [ThemeExtension] of [LoginSignupScreen].
 @immutable
 @myoroThemeExtension
-final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupScreenThemeExtension> with _$LoginSignupScreenThemeExtensionMixin {
+final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupScreenThemeExtension>
+    with _$LoginSignupScreenThemeExtensionMixin {
   const LoginSignupScreenThemeExtension({
     required this.bodyPadding,
     required this.inputsSpacing,
@@ -22,7 +23,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
     required this.formTypeSwitcherButtonIdleColor,
     required this.formTypeSwitcherButtonTapColor,
     required this.logoInputsSpacing,
-    required this.formTypeSwitcherButtonActionButtonsSpacing,
+    required this.inputsFormTypeSwitcherButtonSpacing,
   });
 
   LoginSignupScreenThemeExtension.fake()
@@ -35,7 +36,7 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       formTypeSwitcherButtonIdleColor = myoroFake<Color>(),
       formTypeSwitcherButtonTapColor = myoroFake<Color>(),
       logoInputsSpacing = faker.randomGenerator.decimal(scale: 20),
-      formTypeSwitcherButtonActionButtonsSpacing = faker.randomGenerator.decimal(scale: 20);
+      inputsFormTypeSwitcherButtonSpacing = faker.randomGenerator.decimal(scale: 20);
 
   LoginSignupScreenThemeExtension.builder(TextTheme textTheme)
     : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength * 2),
@@ -46,14 +47,11 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       formTypeSwitcherButtonTextStyle = textTheme.headlineSmall!,
       formTypeSwitcherButtonIdleColor = MyoroColors.blue1.darken(0.05),
       formTypeSwitcherButtonTapColor = MyoroColors.blue1,
-      logoInputsSpacing = kMyoroMultiplier * 8,
-      formTypeSwitcherButtonActionButtonsSpacing = kMyoroMultiplier;
+      logoInputsSpacing = kMyoroMultiplier * 6,
+      inputsFormTypeSwitcherButtonSpacing = kMyoroMultiplier;
 
   /// Padding of [LoginSignupScreen].
   final EdgeInsets bodyPadding;
-
-  /// Spacing between form type switcher button and action buttons.
-  final double formTypeSwitcherButtonActionButtonsSpacing;
 
   /// Spacing between the [MyoroInput]s.
   final double inputsSpacing;
@@ -79,6 +77,9 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
   /// [MyoroTapStatusEnum.tap]'s [Color] of the [LoginSignupScreenEnum] form switcher button.
   final Color formTypeSwitcherButtonTapColor;
 
+  /// Spacing between the innputs and form switcher button.
+  final double inputsFormTypeSwitcherButtonSpacing;
+
   @override
   LoginSignupScreenThemeExtension lerp(covariant ThemeExtension<LoginSignupScreenThemeExtension>? other, double t) {
     if (other is! LoginSignupScreenThemeExtension) return this;
@@ -88,11 +89,27 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       inputTextStyle: TextStyle.lerp(inputTextStyle, other.inputTextStyle, t),
       buttonTextStyle: TextStyle.lerp(buttonTextStyle, other.buttonTextStyle, t),
       buttonsSpacing: lerpDouble(buttonsSpacing, other.buttonsSpacing, t),
-      formTypeSwitcherButtonTextStyle: TextStyle.lerp(formTypeSwitcherButtonTextStyle, other.formTypeSwitcherButtonTextStyle, t),
-      formTypeSwitcherButtonIdleColor: Color.lerp(formTypeSwitcherButtonIdleColor, other.formTypeSwitcherButtonIdleColor, t),
-      formTypeSwitcherButtonTapColor: Color.lerp(formTypeSwitcherButtonTapColor, other.formTypeSwitcherButtonTapColor, t),
+      formTypeSwitcherButtonTextStyle: TextStyle.lerp(
+        formTypeSwitcherButtonTextStyle,
+        other.formTypeSwitcherButtonTextStyle,
+        t,
+      ),
+      formTypeSwitcherButtonIdleColor: Color.lerp(
+        formTypeSwitcherButtonIdleColor,
+        other.formTypeSwitcherButtonIdleColor,
+        t,
+      ),
+      formTypeSwitcherButtonTapColor: Color.lerp(
+        formTypeSwitcherButtonTapColor,
+        other.formTypeSwitcherButtonTapColor,
+        t,
+      ),
       logoInputsSpacing: lerpDouble(logoInputsSpacing, other.logoInputsSpacing, t),
-      formTypeSwitcherButtonActionButtonsSpacing: lerpDouble(formTypeSwitcherButtonActionButtonsSpacing, other.formTypeSwitcherButtonActionButtonsSpacing, t),
+      inputsFormTypeSwitcherButtonSpacing: lerpDouble(
+        inputsFormTypeSwitcherButtonSpacing,
+        other.inputsFormTypeSwitcherButtonSpacing,
+        t,
+      ),
     );
   }
 }
