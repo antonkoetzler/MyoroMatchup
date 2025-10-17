@@ -13,7 +13,8 @@ class AppLocalizationsEn extends AppLocalizations {
       'Couldn\'t connect to server, please check your internet and try again.';
 
   @override
-  String get mmErrorFeedbackSubtitle => 'Please verify your connection and try again!';
+  String get mmErrorFeedbackSubtitle =>
+      'Please verify your connection and try again!';
 
   @override
   String get mmErrorFeedbackActionButtonText => 'Retry';
@@ -52,16 +53,19 @@ class AppLocalizationsEn extends AppLocalizations {
   String get frequencyEnumYearlyLabel => 'Yearly';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle => 'Failed to retrieve game details!';
+  String get gameDetailsScreenBodyErrorStateTitle =>
+      'Failed to retrieve game details!';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Players';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Players';
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText =>
+      'Players';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Rankings';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
+      'Rankings';
 
   @override
   String get gameListingScreenAppBarTitle => 'Myoro Matchup';
@@ -79,7 +83,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get gameCreationScreenAppBarTitle => 'Create game';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'Username/email';
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+      'Username/email';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'Password';
@@ -103,35 +108,45 @@ class AppLocalizationsEn extends AppLocalizations {
   String get loginSignupScreenSignupPasswordInputPlaceholder => 'Password';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'Repeat password';
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
+      'Repeat password';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Signup';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'New to MyoroMatchup? Signup!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'New to MyoroMatchup? Signup!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'New to MyoroMatchup? Login!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      'New to MyoroMatchup? Login!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'Username/email cannot be empty.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'Username/email cannot be empty.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'Password cannot be empty.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'Password cannot be empty.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'Name cannot be empty.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      'Name cannot be empty.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'Username cannot be empty.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'Username cannot be empty.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'Email cannot be empty.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'Email cannot be empty.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'Password fields cannot be empty.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'Password fields cannot be empty.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Passwords do not match.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      'Passwords do not match.';
 }
