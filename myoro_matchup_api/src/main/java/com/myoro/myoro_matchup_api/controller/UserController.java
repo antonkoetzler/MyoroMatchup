@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.myoro.myoro_matchup_api.model.User;
+import com.myoro.myoro_matchup_api.model.UserModel;
 import com.myoro.myoro_matchup_api.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import io.swagger.v3.oas.annotations.Operation;
@@ -35,7 +35,12 @@ public class UserController {
       @ApiResponse(responseCode = "401", description = "Unauthorized - Authentication required.", content = @Content(mediaType = "application/json", schema = @Schema(example = "{\"error\": \"Authentication required\", \"message\": \"Please provide valid authentication credentials\"}")))
   })
   @SecurityRequirement(name = "bearerAuth")
-  public ResponseEntity<List<User>> getAllUsers() {
+  /**
+   * Retrieves all users in the system
+   * 
+   * @return ResponseEntity containing list of all users
+   */
+  public ResponseEntity<List<UserModel>> getAllUsers() {
     return ResponseEntity.ok(userService.getAllUsers());
   }
 }

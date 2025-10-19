@@ -8,11 +8,16 @@ import org.springframework.stereotype.Service;
 /** Message service (for localizing messages). */
 @Service
 public class MessageService {
-  /** Message source. */
+  /** Spring message source for internationalization */
   @Autowired
   private MessageSource messageSource;
 
-  /** Get message. */
+  /**
+   * Retrieves localized message by key
+   * 
+   * @param key the message key to retrieve
+   * @return localized message string
+   */
   public String getMessage(String key) {
     return messageSource.getMessage(key, null, LocaleContextHolder.getLocale());
   }

@@ -1,4 +1,4 @@
-package com.myoro.myoro_matchup_api.config;
+package com.myoro.myoro_matchup_api.component;
 
 import java.io.IOException;
 
@@ -8,7 +8,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
-import com.myoro.myoro_matchup_api.exception.ErrorResponse;
+import com.myoro.myoro_matchup_api.dto.ErrorResponseDto;
 import com.myoro.myoro_matchup_api.service.MessageService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -20,13 +20,24 @@ import jakarta.servlet.http.HttpServletResponse;
  * Custom authentication entry point that returns JSON error responses.
  */
 @Component
-public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint {
+public class CustomAuthenticationEntryPointComponent implements AuthenticationEntryPoint {
+  /** Service for retrieving localized messages */
   @Autowired
   private MessageService messageService;
 
+  /** JSON serializer for converting objects to JSON */
   @Autowired
   private ObjectMapper objectMapper;
 
+  /**
+   * Handles authentication failures by returning JSON error response
+   * 
+   * @param request       the HTTP request
+   * @param response      the HTTP response
+   * @param authException the authentication exception
+   * @throws IOException      if I/O error occurs
+   * @throws ServletException if servlet error occurs
+   */
   @Override
   public void commence(final HttpServletRequest request, final HttpServletResponse response,
       final AuthenticationException authException) throws IOException, ServletException {
@@ -34,7 +45,7 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
     response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
     response.setContentType(MediaType.APPLICATION_JSON_VALUE);
 
-    final ErrorResponse error = new ErrorResponse(
+    final ErrorResponseDto error = new ErrorResponseDto(
         messageService.getMessage("error.authentication.required"),
         messageService.getMessage("error.authentication.required.message"));
 

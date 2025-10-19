@@ -12,7 +12,7 @@ import jakarta.persistence.Table;
 /** User model. */
 @Entity
 @Table(name = "users")
-public class User {
+public class UserModel {
   /* User ID. */
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,11 +39,11 @@ public class User {
   private LocalDateTime createdAt;
 
   /** Default constructor. */
-  public User() {
+  public UserModel() {
   }
 
   /** Constructor with all fields. */
-  public User(String username, String name, String email, String password) {
+  public UserModel(String username, String name, String email, String password) {
     this.username = username;
     this.name = name;
     this.email = email;
@@ -51,32 +51,56 @@ public class User {
     this.createdAt = LocalDateTime.now();
   }
 
-  /** Getter for id. */
+  /**
+   * Getter for id
+   * 
+   * @return the user ID
+   */
   public Long getId() {
     return id;
   }
 
-  /** Getter for username. */
+  /**
+   * Getter for username
+   * 
+   * @return the username
+   */
   public String getUsername() {
     return username;
   }
 
-  /** Getter for name. */
+  /**
+   * Getter for name
+   * 
+   * @return the name
+   */
   public String getName() {
     return name;
   }
 
-  /** Getter for email. */
+  /**
+   * Getter for email
+   * 
+   * @return the email
+   */
   public String getEmail() {
     return email;
   }
 
-  /** Getter for password. */
+  /**
+   * Getter for password
+   * 
+   * @return the password
+   */
   public String getPassword() {
     return password;
   }
 
-  /** Getter for created at. */
+  /**
+   * Getter for created at
+   * 
+   * @return the creation timestamp
+   */
   public LocalDateTime getCreatedAt() {
     return createdAt;
   }

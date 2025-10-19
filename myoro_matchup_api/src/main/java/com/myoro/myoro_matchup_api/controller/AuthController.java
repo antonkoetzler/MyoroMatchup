@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.myoro.myoro_matchup_api.dto.LoginRequest;
-import com.myoro.myoro_matchup_api.dto.SignupRequest;
+import com.myoro.myoro_matchup_api.dto.LoginRequestDto;
+import com.myoro.myoro_matchup_api.dto.SignupRequestDto;
 import com.myoro.myoro_matchup_api.service.AuthService;
 
 import com.myoro.myoro_matchup_api.service.MessageService;
@@ -42,7 +42,13 @@ public class AuthController {
       @ApiResponse(responseCode = "200", description = "User successfully registered.", content = @Content(mediaType = "application/json", schema = @Schema(example = "{\"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\", \"message\": \"User registered successfully\"}"))),
       @ApiResponse(responseCode = "400", description = "Invalid request data or user already exists.", content = @Content(mediaType = "application/json", schema = @Schema(example = "{\"error\": \"User already exists\", \"message\": \"A user with this email already exists\"}")))
   })
-  public ResponseEntity<Map<String, Object>> signup(@Valid @RequestBody SignupRequest request) {
+  /**
+   * Registers a new user account
+   * 
+   * @param request the signup request containing user details
+   * @return ResponseEntity containing JWT token and success message
+   */
+  public ResponseEntity<Map<String, Object>> signup(@Valid @RequestBody SignupRequestDto request) {
     String token = authService.signup(request);
     Map<String, Object> responseBody = new HashMap<>();
     responseBody.put("token", token);
@@ -57,7 +63,13 @@ public class AuthController {
       @ApiResponse(responseCode = "401", description = "Invalid credentials.", content = @Content(mediaType = "application/json", schema = @Schema(example = "{\"error\": \"Invalid credentials\", \"message\": \"Email or password is incorrect\"}"))),
       @ApiResponse(responseCode = "400", description = "Invalid request data.", content = @Content(mediaType = "application/json", schema = @Schema(example = "{\"error\": \"Validation failed\", \"message\": \"Email and password are required\"}")))
   })
-  public ResponseEntity<Map<String, Object>> login(@Valid @RequestBody LoginRequest request) {
+  /**
+   * Authenticates user credentials
+   * 
+   * @param request the login request containing credentials
+   * @return ResponseEntity containing JWT token and success message
+   */
+  public ResponseEntity<Map<String, Object>> login(@Valid @RequestBody LoginRequestDto request) {
     String token = authService.login(request);
     Map<String, Object> responseBody = new HashMap<>();
     responseBody.put("token", token);

@@ -6,32 +6,38 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.myoro.myoro_matchup_api.dto.LoginRequest;
-import com.myoro.myoro_matchup_api.dto.SignupRequest;
-import com.myoro.myoro_matchup_api.model.User;
+import com.myoro.myoro_matchup_api.dto.LoginRequestDto;
+import com.myoro.myoro_matchup_api.dto.SignupRequestDto;
+import com.myoro.myoro_matchup_api.model.UserModel;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
 
 /** Auth service. */
 @Service
 public class AuthService {
-  /** User repository. */
+  /** User repository for database operations */
   @Autowired
   private UserRepository userRepository;
 
-  /** JWT service. */
+  /** JWT service for token generation */
   @Autowired
   private JwtService jwtService;
 
-  /** Message service for localization. */
+  /** Message service for localized error messages */
   @Autowired
   private MessageService messageService;
 
-  /** Password encoder. */
+  /** Password encoder for hashing passwords */
   @Autowired
   private PasswordEncoder passwordEncoder;
 
-  /** Signup function. */
-  public String signup(SignupRequest request) {
+  /**
+   * Registers a new user and returns JWT token
+   * 
+   * @param request the signup request containing user details
+   * @return JWT token for the newly created user
+   * @throws RuntimeException if username or email already exists
+   */
+  public String signup(SignupRequestDto request) {
     // Check if the username is already taken.
     if (userRepository.existsByUsername(request.getUsername())) {
       throw new RuntimeException(messageService.getMessage("auth.username.taken"));
@@ -43,7 +49,7 @@ public class AuthService {
     }
 
     // Create a new user.
-    User user = new User();
+    UserModel user = new UserModel();
     user.setUsername(request.getUsername());
     user.setName(request.getName());
     user.setEmail(request.getEmail());
@@ -51,7 +57,7 @@ public class AuthService {
     user.setCreatedAt(LocalDateTime.now());
 
     // Save the user.
-    final User savedUser = userRepository.save(user);
+    final UserModel savedUser = userRepository.save(user);
 
     // Generate token
     String token = jwtService.generateToken(savedUser.getId());
@@ -59,8 +65,15 @@ public class AuthService {
     return token;
   }
 
-  /** Login function. */
-  public String login(LoginRequest request) {
+  /**
+   * Authenticates user and returns JWT token
+   * 
+   * @param request the login request containing credentials
+   * @return JWT token for the authenticated user
+   * @throws RuntimeException if credentials are invalid or login request is
+   *                          malformed
+   */
+  public String login(LoginRequestDto request) {
     String username = request.getUsername();
     String email = request.getEmail();
 
@@ -73,7 +86,7 @@ public class AuthService {
     }
 
     // Find user by username or email.
-    User user = null;
+    UserModel user = null;
     if (usernameProvided) {
       user = userRepository.findByUsername(username);
     } else {

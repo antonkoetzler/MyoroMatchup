@@ -18,6 +18,11 @@ public class HealthController {
             @ApiResponse(responseCode = "200", description = "API is running successfully.", content = @Content(mediaType = "text/plain", schema = @Schema(example = "API is running!")))
     })
     @GetMapping("/")
+    /**
+     * Health check endpoint
+     * 
+     * @return simple status message indicating API is running
+     */
     public String home() {
         return "API is running!";
     }

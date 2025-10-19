@@ -8,16 +8,19 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
+import com.myoro.myoro_matchup_api.component.CustomAuthenticationEntryPointComponent;
+import com.myoro.myoro_matchup_api.component.JwtAuthenticationFilterComponent;
+
 /** Security config. */
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
 
   @Autowired
-  private CustomAuthenticationEntryPoint customAuthenticationEntryPoint;
+  private CustomAuthenticationEntryPointComponent customAuthenticationEntryPoint;
 
   @Autowired
-  private JwtAuthenticationFilter jwtAuthenticationFilter;
+  private JwtAuthenticationFilterComponent jwtAuthenticationFilter;
 
   /**
    * Security filter chain.

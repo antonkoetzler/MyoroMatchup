@@ -8,9 +8,15 @@ import io.swagger.v3.oas.models.security.SecurityRequirement;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/** OpenAPI configuration for Swagger documentation */
 @Configuration
 public class OpenApiConfig {
 
+  /**
+   * Creates OpenAPI configuration with JWT security scheme
+   * 
+   * @return OpenAPI configuration with JWT bearer authentication
+   */
   @Bean
   public OpenAPI customOpenAPI() {
     return new OpenAPI()

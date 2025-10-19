@@ -1,4 +1,4 @@
-package com.myoro.myoro_matchup_api.config;
+package com.myoro.myoro_matchup_api.component;
 
 import java.io.IOException;
 
@@ -20,11 +20,21 @@ import jakarta.servlet.http.HttpServletResponse;
  * JWT authentication filter that validates JWT tokens in requests.
  */
 @Component
-public class JwtAuthenticationFilter extends OncePerRequestFilter {
+public class JwtAuthenticationFilterComponent extends OncePerRequestFilter {
 
+  /** JWT service for token validation */
   @Autowired
   private JwtService jwtService;
 
+  /**
+   * Validates JWT tokens and sets authentication context
+   * 
+   * @param request     the HTTP request
+   * @param response    the HTTP response
+   * @param filterChain the filter chain
+   * @throws ServletException if servlet error occurs
+   * @throws IOException      if I/O error occurs
+   */
   @Override
   protected void doFilterInternal(@NonNull final HttpServletRequest request,
       @NonNull final HttpServletResponse response,

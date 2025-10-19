@@ -3,11 +3,11 @@ package com.myoro.myoro_matchup_api.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.myoro.myoro_matchup_api.model.User;
+import com.myoro.myoro_matchup_api.model.UserModel;
 
 /** User repository. */
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<UserModel, Long> {
   /** Checks if the username exists. */
   boolean existsByUsername(String username);
 
@@ -15,8 +15,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
   boolean existsByEmail(String email);
 
   /** Finds a user by username. */
-  User findByUsername(String username);
+  UserModel findByUsername(String username);
 
   /** Finds a user by email. */
-  User findByEmail(String email);
+  UserModel findByEmail(String email);
 }

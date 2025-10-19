@@ -11,11 +11,10 @@ import io.jsonwebtoken.security.Keys;
 
 @Service
 public final class JwtService {
-  /**
-   * Secret key for JWT.
-   */
+  /** Secret key for JWT signing and validation */
   private final String secret = "mySecretKey123456789012345678901234567890";
 
+  /** Message service for localized error messages */
   @Autowired
   private MessageService messageService;
 

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.myoro.myoro_matchup_api.service.MessageService;
+import com.myoro.myoro_matchup_api.dto.ErrorResponseDto;
 
 /**
  * Global exception handler for centralized error handling across all REST
@@ -33,8 +34,8 @@ public class GlobalExceptionHandler {
    *         status
    */
   @ExceptionHandler(HttpMessageNotReadableException.class)
-  public ResponseEntity<ErrorResponse> handleMissingBody(final HttpMessageNotReadableException ex) {
-    final ErrorResponse error = new ErrorResponse(
+  public ResponseEntity<ErrorResponseDto> handleMissingBody(final HttpMessageNotReadableException ex) {
+    final ErrorResponseDto error = new ErrorResponseDto(
         messageService.getMessage("error.request.body.required"),
         messageService.getMessage("error.invalid.json"));
     return ResponseEntity.badRequest().body(error);
@@ -49,14 +50,14 @@ public class GlobalExceptionHandler {
    *         Bad Request status
    */
   @ExceptionHandler(MethodArgumentNotValidException.class)
-  public ResponseEntity<ErrorResponse> handleValidationException(final MethodArgumentNotValidException ex) {
+  public ResponseEntity<ErrorResponseDto> handleValidationException(final MethodArgumentNotValidException ex) {
     String errorMessage = "Validation failed";
     if (!ex.getBindingResult().getAllErrors().isEmpty()) {
       final ObjectError firstError = ex.getBindingResult().getAllErrors().get(0);
       errorMessage = firstError.getDefaultMessage();
     }
 
-    final ErrorResponse error = new ErrorResponse(
+    final ErrorResponseDto error = new ErrorResponseDto(
         messageService.getMessage("error.validation.failed"),
         errorMessage);
     return ResponseEntity.badRequest().body(error);
@@ -71,8 +72,8 @@ public class GlobalExceptionHandler {
    *         Forbidden status
    */
   @ExceptionHandler(AccessDeniedException.class)
-  public ResponseEntity<ErrorResponse> handleAccessDenied(final AccessDeniedException ex) {
-    final ErrorResponse error = new ErrorResponse(
+  public ResponseEntity<ErrorResponseDto> handleAccessDenied(final AccessDeniedException ex) {
+    final ErrorResponseDto error = new ErrorResponseDto(
         messageService.getMessage("error.access.denied"),
         messageService.getMessage("error.access.denied.message"));
     return ResponseEntity.status(HttpStatus.FORBIDDEN).body(error);
@@ -86,8 +87,8 @@ public class GlobalExceptionHandler {
    *         401 Unauthorized status
    */
   @ExceptionHandler(AuthenticationException.class)
-  public ResponseEntity<ErrorResponse> handleAuthentication(final AuthenticationException ex) {
-    final ErrorResponse error = new ErrorResponse(
+  public ResponseEntity<ErrorResponseDto> handleAuthentication(final AuthenticationException ex) {
+    final ErrorResponseDto error = new ErrorResponseDto(
         messageService.getMessage("error.authentication.required"),
         messageService.getMessage("error.authentication.required.message"));
     return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(error);
@@ -102,8 +103,8 @@ public class GlobalExceptionHandler {
    *         status
    */
   @ExceptionHandler(RuntimeException.class)
-  public ResponseEntity<ErrorResponse> handleException(final RuntimeException ex) {
-    final ErrorResponse error = new ErrorResponse(
+  public ResponseEntity<ErrorResponseDto> handleException(final RuntimeException ex) {
+    final ErrorResponseDto error = new ErrorResponseDto(
         messageService.getMessage("error.request.failed"),
         ex.getMessage());
     return ResponseEntity.badRequest().body(error);
@@ -117,8 +118,8 @@ public class GlobalExceptionHandler {
    *         Error status
    */
   @ExceptionHandler(Exception.class)
-  public ResponseEntity<ErrorResponse> handleAllExceptions(final Exception ex) {
-    final ErrorResponse error = new ErrorResponse(
+  public ResponseEntity<ErrorResponseDto> handleAllExceptions(final Exception ex) {
+    final ErrorResponseDto error = new ErrorResponseDto(
         messageService.getMessage("error.internal.server"),
         ex.getClass().getSimpleName() + ": " + ex.getMessage());
     return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);

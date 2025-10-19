@@ -8,6 +8,11 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /** Password config. */
 @Configuration
 public class PasswordConfig {
+  /**
+   * Creates BCrypt password encoder bean
+   * 
+   * @return BCrypt password encoder instance
+   */
   @Bean
   public PasswordEncoder passwordEncoder() {
     return new BCryptPasswordEncoder();

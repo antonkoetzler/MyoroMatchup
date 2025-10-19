@@ -15,7 +15,7 @@
             "name": "Spring Boot-MyoroMatchupApiApplication<myoro-matchup-api>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
-            "mainClass": "com.example.myoro_matchup_api.MyoroMatchupApiApplication",
+            "mainClass": "com.myoro.myoro_matchup_api.MyoroMatchupApiApplication",
             "projectName": "myoro-matchup-api",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
@@ -27,8 +27,11 @@
             "description": "Select environment",
             "type": "pickString",
             "options": [
-                "local"
-            ]
+                "local",
+                "dev",
+                "prod"
+            ],
+            "default": "local"
         }
     ]
 }
