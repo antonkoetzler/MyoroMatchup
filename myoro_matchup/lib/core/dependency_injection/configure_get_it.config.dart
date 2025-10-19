@@ -48,11 +48,11 @@ extension GetItInjectableX on _i174.GetIt {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final sharedPreferencesModule = _$SharedPreferencesModule();
     final appRouterModule = _$AppRouterModule();
-    gh.factory<_i143.LocationRepository>(() => _i143.LocationRepository());
+    gh.factory<_i1006.GameRepository>(() => _i1006.GameRepository());
     gh.factory<_i606.GameCreationScreenViewModel>(
       () => _i606.GameCreationScreenViewModel(),
     );
-    gh.factory<_i1006.GameRepository>(() => _i1006.GameRepository());
+    gh.factory<_i143.LocationRepository>(() => _i143.LocationRepository());
     gh.singleton<_i126.HttpClient>(() => _i126.HttpClient());
     await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.sharedPreferences,

@@ -12,17 +12,17 @@ final class AuthRepository {
 
   /// Signup.
   ///
-  /// Returns the ID of the newly created user.
-  Future<int> signup(SignupRequest request) async {
+  /// Returns the token of the newly created [User].
+  Future<String> signup(SignupRequest request) async {
     final response = await _httpClient.post('/auth/signup', data: request.toJson());
-    return response.data[User.idJsonKey];
+    return response.data[SharedPreferencesEnum.loginToken.key];
   }
 
   /// Login.
   ///
-  /// Returns the [User] if successful.
-  Future<int> login(LoginRequest request) async {
+  /// Returns the token of the logged in [User].
+  Future<String> login(LoginRequest request) async {
     final response = await _httpClient.post('/auth/login', data: request.toJson());
-    return response.data[User.idJsonKey];
+    return response.data[SharedPreferencesEnum.loginToken.key];
   }
 }

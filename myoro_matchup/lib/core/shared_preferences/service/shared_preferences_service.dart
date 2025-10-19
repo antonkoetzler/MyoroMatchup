@@ -11,13 +11,13 @@ final class SharedPreferencesService {
   /// Shared preferences.
   final SharedPreferences _sharedPreferences;
 
-  /// Returns a [int] value from the shared preferences.
-  int? getInt(SharedPreferencesEnum value) {
-    return _sharedPreferences.getInt(value.key);
+  /// Returns a [String] value from the shared preferences.
+  String? getString(SharedPreferencesEnum value) {
+    return _sharedPreferences.getString(value.key);
   }
 
-  /// Sets a [int] value in the shared preferences.
-  Future<void> setInt(SharedPreferencesEnum value, int int) async {
-    await _sharedPreferences.setInt(value.key, int);
+  /// Sets a [String] value in the shared preferences.
+  Future<void> setString(SharedPreferencesEnum value, String string) async {
+    await _sharedPreferences.setString(value.key, string);
   }
 }

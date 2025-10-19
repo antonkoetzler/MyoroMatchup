@@ -12,6 +12,6 @@ final class UserService {
 
   /// Returns if there is a user logged in.
   bool get isLoggedIn {
-    return sharedPreferencesService.getInt(SharedPreferencesEnum.loggedInUserId) != null;
+    return sharedPreferencesService.getString(SharedPreferencesEnum.loginToken) != null;
   }
 }
