@@ -18,6 +18,11 @@
   "frequencyEnumMonthlyLabel": "Mensual",
   "frequencyEnumYearlyLabel": "Anual",
 
+  "sportsEnumFootballLabel": "Fútbol",
+  "sportsEnumFutsalLabel": "Fútbol Sala",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Voleibol",
+
   "gameDetailsScreenBodyErrorStateTitle": "¡No se pudieron obtener los detalles del juego!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Jugadores",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Jugadores",
@@ -29,6 +34,14 @@
   "gameListingScreenNewGameButtonText": "Crear juego",
 
   "gameCreationScreenAppBarTitle": "Crear juego",
+  "gameCreationScreenNameScreenTitle": "Nombre",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "i.e., Fútbol...",
+  "gameCreationScreenSportScreenTitle": "Deporte",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Frecuencia y Fecha/Hora",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frecuencia",
+  "gameCreationScreenButtonPreviousText": "Anterior",
+  "gameCreationScreenButtonNextText": "Siguiente",
+  "gameCreationScreenButtonFinishText": "Finalizar",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nombre de usuario o email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Contraseña",
@@ -48,5 +61,13 @@
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "El nombre de usuario no puede estar vacío.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "El correo electrónico no puede estar vacío.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Los campos de contraseña no pueden estar vacíos.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Las contraseñas no coinciden."
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Las contraseñas no coinciden.",
+
+  "mmDayEnumMondayLabel": "Lunes",
+  "mmDayEnumTuesdayLabel": "Martes",
+  "mmDayEnumWednesdayLabel": "Miércoles",
+  "mmDayEnumThursdayLabel": "Jueves",
+  "mmDayEnumFridayLabel": "Viernes",
+  "mmDayEnumSaturdayLabel": "Sábado",
+  "mmDayEnumSundayLabel": "Domingo"
 }

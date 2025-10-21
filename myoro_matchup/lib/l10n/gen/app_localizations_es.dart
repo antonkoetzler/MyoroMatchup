@@ -52,6 +52,18 @@ class AppLocalizationsEs extends AppLocalizations {
   String get frequencyEnumYearlyLabel => 'Anual';
 
   @override
+  String get sportsEnumFootballLabel => 'Fútbol';
+
+  @override
+  String get sportsEnumFutsalLabel => 'Fútbol Sala';
+
+  @override
+  String get sportsEnumFut7Label => 'Fut7';
+
+  @override
+  String get sportsEnumVolleyballLabel => 'Voleibol';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => '¡No se pudieron obtener los detalles del juego!';
 
   @override
@@ -77,6 +89,30 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get gameCreationScreenAppBarTitle => 'Crear juego';
+
+  @override
+  String get gameCreationScreenNameScreenTitle => 'Nombre';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputPlaceholder => 'i.e., Fútbol...';
+
+  @override
+  String get gameCreationScreenSportScreenTitle => 'Deporte';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Frecuencia y Fecha/Hora';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Frecuencia';
+
+  @override
+  String get gameCreationScreenButtonPreviousText => 'Anterior';
+
+  @override
+  String get gameCreationScreenButtonNextText => 'Siguiente';
+
+  @override
+  String get gameCreationScreenButtonFinishText => 'Finalizar';
 
   @override
   String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'Nombre de usuario o email';
@@ -136,4 +172,25 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Las contraseñas no coinciden.';
+
+  @override
+  String get mmDayEnumMondayLabel => 'Lunes';
+
+  @override
+  String get mmDayEnumTuesdayLabel => 'Martes';
+
+  @override
+  String get mmDayEnumWednesdayLabel => 'Miércoles';
+
+  @override
+  String get mmDayEnumThursdayLabel => 'Jueves';
+
+  @override
+  String get mmDayEnumFridayLabel => 'Viernes';
+
+  @override
+  String get mmDayEnumSaturdayLabel => 'Sábado';
+
+  @override
+  String get mmDayEnumSundayLabel => 'Domingo';
 }

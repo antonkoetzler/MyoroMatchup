@@ -177,6 +177,30 @@ abstract class AppLocalizations {
   /// **'Yearly'**
   String get frequencyEnumYearlyLabel;
 
+  /// No description provided for @sportsEnumFootballLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Football'**
+  String get sportsEnumFootballLabel;
+
+  /// No description provided for @sportsEnumFutsalLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Futsal'**
+  String get sportsEnumFutsalLabel;
+
+  /// No description provided for @sportsEnumFut7Label.
+  ///
+  /// In en, this message translates to:
+  /// **'Fut7'**
+  String get sportsEnumFut7Label;
+
+  /// No description provided for @sportsEnumVolleyballLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Volleyball'**
+  String get sportsEnumVolleyballLabel;
+
   /// No description provided for @gameDetailsScreenBodyErrorStateTitle.
   ///
   /// In en, this message translates to:
@@ -230,6 +254,54 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Create game'**
   String get gameCreationScreenAppBarTitle;
+
+  /// No description provided for @gameCreationScreenNameScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get gameCreationScreenNameScreenTitle;
+
+  /// No description provided for @gameCreationScreenNameScreenNameInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'i.e., Soccer...'**
+  String get gameCreationScreenNameScreenNameInputPlaceholder;
+
+  /// No description provided for @gameCreationScreenSportScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Sport'**
+  String get gameCreationScreenSportScreenTitle;
+
+  /// No description provided for @gameCreationScreenFrequencyDayTimeScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Frequency & Date/Time'**
+  String get gameCreationScreenFrequencyDayTimeScreenTitle;
+
+  /// No description provided for @gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Frequency'**
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel;
+
+  /// No description provided for @gameCreationScreenButtonPreviousText.
+  ///
+  /// In en, this message translates to:
+  /// **'Previous'**
+  String get gameCreationScreenButtonPreviousText;
+
+  /// No description provided for @gameCreationScreenButtonNextText.
+  ///
+  /// In en, this message translates to:
+  /// **'Next'**
+  String get gameCreationScreenButtonNextText;
+
+  /// No description provided for @gameCreationScreenButtonFinishText.
+  ///
+  /// In en, this message translates to:
+  /// **'Finish'**
+  String get gameCreationScreenButtonFinishText;
 
   /// No description provided for @loginSignupScreenLoginUsernameEmailInputPlaceholder.
   ///
@@ -344,6 +416,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Passwords do not match.'**
   String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage;
+
+  /// No description provided for @mmDayEnumMondayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Monday'**
+  String get mmDayEnumMondayLabel;
+
+  /// No description provided for @mmDayEnumTuesdayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Tuesday'**
+  String get mmDayEnumTuesdayLabel;
+
+  /// No description provided for @mmDayEnumWednesdayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Wednesday'**
+  String get mmDayEnumWednesdayLabel;
+
+  /// No description provided for @mmDayEnumThursdayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Thursday'**
+  String get mmDayEnumThursdayLabel;
+
+  /// No description provided for @mmDayEnumFridayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Friday'**
+  String get mmDayEnumFridayLabel;
+
+  /// No description provided for @mmDayEnumSaturdayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Saturday'**
+  String get mmDayEnumSaturdayLabel;
+
+  /// No description provided for @mmDayEnumSundayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Sunday'**
+  String get mmDayEnumSundayLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

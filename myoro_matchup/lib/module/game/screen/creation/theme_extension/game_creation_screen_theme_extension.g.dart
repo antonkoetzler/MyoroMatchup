@@ -17,25 +17,41 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
   GameCreationScreenThemeExtension get self => this as GameCreationScreenThemeExtension;
 
   @override
-  GameCreationScreenThemeExtension copyWith({double? spacing}) {
-    return GameCreationScreenThemeExtension(spacing: spacing ?? self.spacing);
+  GameCreationScreenThemeExtension copyWith({
+    double? spacing,
+    TextStyle? titleTextStyle,
+    EdgeInsets? bodyPadding,
+    TextStyle? buttonTextStyle,
+  }) {
+    return GameCreationScreenThemeExtension(
+      spacing: spacing ?? self.spacing,
+      titleTextStyle: titleTextStyle ?? self.titleTextStyle,
+      bodyPadding: bodyPadding ?? self.bodyPadding,
+      buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return other is GameCreationScreenThemeExtension &&
         other.runtimeType == runtimeType &&
-        other.spacing == self.spacing;
+        other.spacing == self.spacing &&
+        other.titleTextStyle == self.titleTextStyle &&
+        other.bodyPadding == self.bodyPadding &&
+        other.buttonTextStyle == self.buttonTextStyle;
   }
 
   @override
   int get hashCode {
-    return Object.hashAll([self.spacing]);
+    return Object.hash(self.spacing, self.titleTextStyle, self.bodyPadding, self.buttonTextStyle);
   }
 
   @override
   String toString() =>
       'GameCreationScreenThemeExtension(\n'
       '  spacing: ${self.spacing},\n'
+      '  titleTextStyle: ${self.titleTextStyle},\n'
+      '  bodyPadding: ${self.bodyPadding},\n'
+      '  buttonTextStyle: ${self.buttonTextStyle},\n'
       ');';
 }

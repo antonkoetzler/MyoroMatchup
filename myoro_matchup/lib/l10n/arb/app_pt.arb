@@ -18,6 +18,11 @@
   "frequencyEnumMonthlyLabel": "Mensal",
   "frequencyEnumYearlyLabel": "Anual",
 
+  "sportsEnumFootballLabel": "Futebol",
+  "sportsEnumFutsalLabel": "Futsal",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Vôlei",
+
   "gameDetailsScreenBodyErrorStateTitle": "Falha ao obter os detalhes do jogo!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Jogadores",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Jogadores",
@@ -29,6 +34,14 @@
   "gameListingScreenNewGameButtonText": "Criar jogo",
 
   "gameCreationScreenAppBarTitle": "Criar jogo",
+  "gameCreationScreenNameScreenTitle": "Nome",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "i.e., Futebol...",
+  "gameCreationScreenSportScreenTitle": "Esporte",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Frequência e Data/Hora",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frequência",
+  "gameCreationScreenButtonPreviousText": "Anterior",
+  "gameCreationScreenButtonNextText": "Próximo",
+  "gameCreationScreenButtonFinishText": "Finalizar",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nome de usuário ou email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Senha",
@@ -48,5 +61,13 @@
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "O nome de usuário não pode estar vazio.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "O e-mail não pode estar vazio.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Os campos de senha não podem estar vazios.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "As senhas não coincidem."
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "As senhas não coincidem.",
+
+  "mmDayEnumMondayLabel": "Segunda-feira",
+  "mmDayEnumTuesdayLabel": "Terça-feira",
+  "mmDayEnumWednesdayLabel": "Quarta-feira",
+  "mmDayEnumThursdayLabel": "Quinta-feira",
+  "mmDayEnumFridayLabel": "Sexta-feira",
+  "mmDayEnumSaturdayLabel": "Sábado",
+  "mmDayEnumSundayLabel": "Domingo"
 }

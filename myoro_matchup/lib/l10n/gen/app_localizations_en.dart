@@ -52,6 +52,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get frequencyEnumYearlyLabel => 'Yearly';
 
   @override
+  String get sportsEnumFootballLabel => 'Football';
+
+  @override
+  String get sportsEnumFutsalLabel => 'Futsal';
+
+  @override
+  String get sportsEnumFut7Label => 'Fut7';
+
+  @override
+  String get sportsEnumVolleyballLabel => 'Volleyball';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'Failed to retrieve game details!';
 
   @override
@@ -77,6 +89,30 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get gameCreationScreenAppBarTitle => 'Create game';
+
+  @override
+  String get gameCreationScreenNameScreenTitle => 'Name';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputPlaceholder => 'i.e., Soccer...';
+
+  @override
+  String get gameCreationScreenSportScreenTitle => 'Sport';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Frequency & Date/Time';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Frequency';
+
+  @override
+  String get gameCreationScreenButtonPreviousText => 'Previous';
+
+  @override
+  String get gameCreationScreenButtonNextText => 'Next';
+
+  @override
+  String get gameCreationScreenButtonFinishText => 'Finish';
 
   @override
   String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'Username/email';
@@ -134,4 +170,25 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Passwords do not match.';
+
+  @override
+  String get mmDayEnumMondayLabel => 'Monday';
+
+  @override
+  String get mmDayEnumTuesdayLabel => 'Tuesday';
+
+  @override
+  String get mmDayEnumWednesdayLabel => 'Wednesday';
+
+  @override
+  String get mmDayEnumThursdayLabel => 'Thursday';
+
+  @override
+  String get mmDayEnumFridayLabel => 'Friday';
+
+  @override
+  String get mmDayEnumSaturdayLabel => 'Saturday';
+
+  @override
+  String get mmDayEnumSundayLabel => 'Sunday';
 }

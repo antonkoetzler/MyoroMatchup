@@ -46,12 +46,35 @@ convert_to_path_dependency() {
     local path_value="$3"
     
     if [ -f "$pubspec_file" ]; then
-        # Comment out version number
+        # Comment out version number (only on the dependency declaration line)
         sed -i.bak "s|^  ${dependency_name}: \(\^[0-9].*\)|  ${dependency_name}: # \1|" "$pubspec_file"
-        # Find and replace any commented path line for this dependency
-        sed -i.bak "s|^    # path: .*|    path: ${path_value}|" "$pubspec_file"
-        sed -i.bak "s|^  # path: .*|  path: ${path_value}|" "$pubspec_file"
-        rm "${pubspec_file}.bak"
+        # Update only the path within the matched dependency block
+        awk -v dep="${dependency_name}" -v p="${path_value}" '
+            BEGIN { in_dep=0 }
+            {
+                if ($0 ~ "^  " dep ":") {
+                    in_dep=1
+                    print $0
+                    next
+                }
+                if (in_dep==1) {
+                    if ($0 ~ /^  [^ ]/ || $0 ~ /^dependencies:/ || $0 ~ /^dev_dependencies:/ || $0 ~ /^flutter:/) {
+                        in_dep=0
+                        # fallthrough to normal printing of this line
+                    } else if ($0 ~ /^    # path: /) {
+                        print "    path: " p
+                        in_dep=0
+                        next
+                    } else if ($0 ~ /^    path: /) {
+                        print "    path: " p
+                        in_dep=0
+                        next
+                    }
+                }
+                print $0
+            }
+        ' "$pubspec_file" > "${pubspec_file}.tmp" && mv "${pubspec_file}.tmp" "$pubspec_file"
+        rm -f "${pubspec_file}.bak"
         print_success "Updated $(pwd)/$pubspec_file"
     else
         print_warning "$pubspec_file not found, skipping"
@@ -65,12 +88,32 @@ convert_to_pubdev_dependency() {
     local path_value="$3"
     
     if [ -f "$pubspec_file" ]; then
-        # Uncomment version number and comment path (handle both states)
+        # Uncomment version number only on the dependency declaration line
         sed -i.bak "s|^  ${dependency_name}: # \(\^[0-9].*\)|  ${dependency_name}: \1|" "$pubspec_file"
-        sed -i.bak "s|^    path: ${path_value}|    # path: ${path_value}|" "$pubspec_file"
-        # Also handle the case where path has different spacing
-        sed -i.bak "s|^  path: ${path_value}|  # path: ${path_value}|" "$pubspec_file"
-        rm "${pubspec_file}.bak"
+        # Comment only the path within the matched dependency block (if it matches provided path)
+        awk -v dep="${dependency_name}" -v p="${path_value}" '
+            BEGIN { in_dep=0 }
+            {
+                if ($0 ~ "^  " dep ":") {
+                    in_dep=1
+                    print $0
+                    next
+                }
+                if (in_dep==1) {
+                    if ($0 ~ /^  [^ ]/ || $0 ~ /^dependencies:/ || $0 ~ /^dev_dependencies:/ || $0 ~ /^flutter:/) {
+                        in_dep=0
+                    } else if ($0 ~ /^    path: /) {
+                        if ($0 == "    path: " p) {
+                            print "    # path: " p
+                            in_dep=0
+                            next
+                        }
+                    }
+                }
+                print $0
+            }
+        ' "$pubspec_file" > "${pubspec_file}.tmp" && mv "${pubspec_file}.tmp" "$pubspec_file"
+        rm -f "${pubspec_file}.bak"
         print_success "Updated $(pwd)/$pubspec_file"
     else
         print_warning "$pubspec_file not found, skipping"

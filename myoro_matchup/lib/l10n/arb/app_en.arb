@@ -18,6 +18,11 @@
   "frequencyEnumMonthlyLabel": "Monthly",
   "frequencyEnumYearlyLabel": "Yearly",
 
+  "sportsEnumFootballLabel": "Football",
+  "sportsEnumFutsalLabel": "Futsal",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Volleyball",
+
   "gameDetailsScreenBodyErrorStateTitle": "Failed to retrieve game details!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Players",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Players",
@@ -29,6 +34,14 @@
   "gameListingScreenNewGameButtonText": "Create game",
 
   "gameCreationScreenAppBarTitle": "Create game",
+  "gameCreationScreenNameScreenTitle": "Name",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "i.e., Soccer...",
+  "gameCreationScreenSportScreenTitle": "Sport",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Frequency & Date/Time",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frequency",
+  "gameCreationScreenButtonPreviousText": "Previous",
+  "gameCreationScreenButtonNextText": "Next",
+  "gameCreationScreenButtonFinishText": "Finish",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Username/email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Password",
@@ -48,5 +61,13 @@
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Username cannot be empty.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email cannot be empty.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Password fields cannot be empty.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwords do not match."
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwords do not match.",
+
+  "mmDayEnumMondayLabel": "Monday",
+  "mmDayEnumTuesdayLabel": "Tuesday",
+  "mmDayEnumWednesdayLabel": "Wednesday",
+  "mmDayEnumThursdayLabel": "Thursday",
+  "mmDayEnumFridayLabel": "Friday",
+  "mmDayEnumSaturdayLabel": "Saturday",
+  "mmDayEnumSundayLabel": "Sunday"
 }

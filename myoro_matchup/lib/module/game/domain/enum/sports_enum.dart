@@ -1,5 +1,5 @@
 import 'package:faker/faker.dart';
-import 'package:myoro_flutter_library/myoro_flutter_library.dart';
+import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Enum containing all of the supported sports in MyoroMatchup.
 enum SportsEnum {
@@ -13,7 +13,14 @@ enum SportsEnum {
   }
 
   /// Formatted name.
-  String get formattedName => name.capitalized;
+  String get formattedName {
+    return switch (this) {
+      football => localization.sportsEnumFootballLabel,
+      futsal => localization.sportsEnumFutsalLabel,
+      fut7 => localization.sportsEnumFut7Label,
+      volleyball => localization.sportsEnumVolleyballLabel,
+    };
+  }
 
   /// Minimum amount of players needed.
   int get minPlayers {
