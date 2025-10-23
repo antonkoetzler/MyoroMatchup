@@ -42,17 +42,11 @@ final class AppRouter {
   Future<void> init() async {
     _router = GoRouter(
       navigatorKey: navigatorKey,
-      initialLocation: _userService.isLoggedIn
-          ? Routes.gameRoutes.gameListingScreen.location
-          : Routes.loginSignupRoutes.loginSignupScreen.location,
+      initialLocation: _userService.isLoggedIn ? Routes.gameRoutes.gameListingScreen.location : Routes.loginSignupRoutes.loginSignupScreen.location,
       routes: [
         RedirectRoute(
           name: gameModuleRoute,
-          routes: [
-            Routes.gameRoutes.gameListingScreen,
-            Routes.gameRoutes.gameDetailsScreen,
-            Routes.gameRoutes.gameCreationScreen,
-          ],
+          routes: [Routes.gameRoutes.gameListingScreen, Routes.gameRoutes.gameDetailsScreen, Routes.gameRoutes.gameCreationScreen],
         ).goRoute,
         Routes.loginSignupRoutes.loginSignupScreen.goRoute,
       ],

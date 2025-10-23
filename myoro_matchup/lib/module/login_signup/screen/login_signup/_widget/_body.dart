@@ -38,10 +38,7 @@ final class _Body extends StatelessWidget {
                       ],
                     ),
                   ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [if (request.status.isLoading) const MyoroCircularLoader() else _ActionButtons(formType)],
-                  ),
+                  Column(mainAxisSize: MainAxisSize.min, children: [if (request.status.isLoading) const MyoroCircularLoader() else _ActionButtons(formType)]),
                 ],
               ),
             );

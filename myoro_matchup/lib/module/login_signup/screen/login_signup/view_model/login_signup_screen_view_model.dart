@@ -96,11 +96,7 @@ final class LoginSignupScreenViewModel {
 
     return await switch (formType) {
       LoginSignupScreenEnum.login => _authService.login(
-        LoginRequest(
-          username: loginIsEmail ? null : loginUsernameEmail,
-          email: loginIsEmail ? loginUsernameEmail : null,
-          password: loginPassword,
-        ),
+        LoginRequest(username: loginIsEmail ? null : loginUsernameEmail, email: loginIsEmail ? loginUsernameEmail : null, password: loginPassword),
       ),
       LoginSignupScreenEnum.signup => _authService.signup(
         SignupRequest(username: signupUsername, name: signupName, email: signupEmail, password: signupPassword),

@@ -43,13 +43,12 @@ final class _Body extends StatelessWidget {
             spacing: spacing,
             children: [
               Expanded(
-                child: MyoroIndexedStackIndicator(index: selectedIndex, children: screens),
+                child: MyoroIndexedStack(index: selectedIndex, children: screens),
               ),
               Row(
                 spacing: spacing,
                 children: [
-                  if (!isFirstScreen)
-                    Expanded(child: _Button(gameCreationScreenButtonPreviousText, () => onPrevious())),
+                  if (!isFirstScreen) Expanded(child: _Button(gameCreationScreenButtonPreviousText, () => onPrevious())),
                   Expanded(
                     child: _Button(
                       isLastScreen ? gameCreationScreenButtonFinishText : gameCreationScreenButtonNextText,
