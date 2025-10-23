@@ -27,15 +27,19 @@ final class _Body extends StatelessWidget {
               child: Column(
                 children: [
                   Expanded(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const _Logo(),
-                        SizedBox(height: logoInputsSpacing),
-                        Flexible(child: _Inputs(formType)),
-                        SizedBox(height: inputsFormTypeSwitcherButtonSpacing),
-                        _FormTypeSwitcherButton(formType),
-                      ],
+                    child: Center(
+                      child: MyoroSingleChildScrollable(
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const _Logo(),
+                            SizedBox(height: logoInputsSpacing),
+                            Flexible(child: _Inputs(formType)),
+                            SizedBox(height: inputsFormTypeSwitcherButtonSpacing),
+                            _FormTypeSwitcherButton(formType),
+                          ],
+                        ),
+                      ),
                     ),
                   ),
                   Column(mainAxisSize: MainAxisSize.min, children: [if (request.status.isLoading) const MyoroCircularLoader() else _ActionButtons(formType)]),

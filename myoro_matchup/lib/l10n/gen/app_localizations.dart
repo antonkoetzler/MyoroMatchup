@@ -361,7 +361,7 @@ abstract class AppLocalizations {
   /// No description provided for @loginSignupScreenSignupPasswordRepeatInputPlaceholder.
   ///
   /// In en, this message translates to:
-  /// **'Repeat password'**
+  /// **'Password'**
   String get loginSignupScreenSignupPasswordRepeatInputPlaceholder;
 
   /// No description provided for @loginSignupScreenSignupSignupButton.

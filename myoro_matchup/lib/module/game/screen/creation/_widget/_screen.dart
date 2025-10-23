@@ -15,11 +15,20 @@ final class _Screen extends StatelessWidget {
 
     return Center(
       child: Column(
-        spacing: spacing,
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(title, style: titleTextStyle),
-          Expanded(child: Center(child: child)),
+          Expanded(
+            child: Center(
+              child: MyoroSingleChildScrollable(
+                child: Padding(
+                  padding: EdgeInsets.only(top: spacing),
+                  child: child,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -151,8 +151,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get loginSignupScreenSignupPasswordInputPlaceholder => 'Senha';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'Repetir senha';
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'Senha';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Cadastrar-se';

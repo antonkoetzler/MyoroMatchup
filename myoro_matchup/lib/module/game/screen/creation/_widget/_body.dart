@@ -48,7 +48,8 @@ final class _Body extends StatelessWidget {
               Row(
                 spacing: spacing,
                 children: [
-                  if (!isFirstScreen) Expanded(child: _Button(gameCreationScreenButtonPreviousText, () => onPrevious())),
+                  if (!isFirstScreen)
+                    Expanded(child: _Button(gameCreationScreenButtonPreviousText, () => onPrevious())),
                   Expanded(
                     child: _Button(
                       isLastScreen ? gameCreationScreenButtonFinishText : gameCreationScreenButtonNextText,
