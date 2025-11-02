@@ -602,7 +602,7 @@ packages:
       path: "../../myoro_flutter_library"
       relative: true
     source: path
-    version: "2.6.3"
+    version: "2.6.4"
   nested:
     dependency: transitive
     description:

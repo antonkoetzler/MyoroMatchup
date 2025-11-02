@@ -11,7 +11,8 @@ part 'login_signup_screen_theme_extension.g.dart';
 /// [ThemeExtension] of [LoginSignupScreen].
 @immutable
 @myoroThemeExtension
-final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupScreenThemeExtension> with _$LoginSignupScreenThemeExtensionMixin {
+final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupScreenThemeExtension>
+    with _$LoginSignupScreenThemeExtensionMixin {
   const LoginSignupScreenThemeExtension({
     required this.bodyPadding,
     required this.inputsSpacing,
@@ -88,11 +89,27 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       inputTextStyle: TextStyle.lerp(inputTextStyle, other.inputTextStyle, t),
       buttonTextStyle: TextStyle.lerp(buttonTextStyle, other.buttonTextStyle, t),
       buttonsSpacing: lerpDouble(buttonsSpacing, other.buttonsSpacing, t),
-      formTypeSwitcherButtonTextStyle: TextStyle.lerp(formTypeSwitcherButtonTextStyle, other.formTypeSwitcherButtonTextStyle, t),
-      formTypeSwitcherButtonIdleColor: Color.lerp(formTypeSwitcherButtonIdleColor, other.formTypeSwitcherButtonIdleColor, t),
-      formTypeSwitcherButtonTapColor: Color.lerp(formTypeSwitcherButtonTapColor, other.formTypeSwitcherButtonTapColor, t),
+      formTypeSwitcherButtonTextStyle: TextStyle.lerp(
+        formTypeSwitcherButtonTextStyle,
+        other.formTypeSwitcherButtonTextStyle,
+        t,
+      ),
+      formTypeSwitcherButtonIdleColor: Color.lerp(
+        formTypeSwitcherButtonIdleColor,
+        other.formTypeSwitcherButtonIdleColor,
+        t,
+      ),
+      formTypeSwitcherButtonTapColor: Color.lerp(
+        formTypeSwitcherButtonTapColor,
+        other.formTypeSwitcherButtonTapColor,
+        t,
+      ),
       logoInputsSpacing: lerpDouble(logoInputsSpacing, other.logoInputsSpacing, t),
-      inputsFormTypeSwitcherButtonSpacing: lerpDouble(inputsFormTypeSwitcherButtonSpacing, other.inputsFormTypeSwitcherButtonSpacing, t),
+      inputsFormTypeSwitcherButtonSpacing: lerpDouble(
+        inputsFormTypeSwitcherButtonSpacing,
+        other.inputsFormTypeSwitcherButtonSpacing,
+        t,
+      ),
     );
   }
 }

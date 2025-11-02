@@ -10,13 +10,11 @@ final class _BackButton extends StatelessWidget {
     final configuration = context.read<MmAppBarConfiguration>();
 
     return MyoroIconTextButton(
-      configuration: MyoroIconTextButtonConfiguration(
-        iconConfiguration: themeExtension.backButtonIconConfiguration,
-        onTapUp: (_) {
-          configuration.onBack?.call();
-          AppRouter.pop();
-        },
-      ),
+      iconConfiguration: themeExtension.backButtonIconConfiguration,
+      onTapUp: (_) {
+        configuration.onBack?.call();
+        AppRouter.pop();
+      },
     );
   }
 }
