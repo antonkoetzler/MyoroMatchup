@@ -14,7 +14,9 @@ final class _Button extends StatelessWidget {
     final buttonTextStyle = themeExtension.buttonTextStyle;
 
     return MyoroIconTextButton(
-      style: _isSecondary ? const MyoroIconTextButtonStyle().secondary(context) : const MyoroIconTextButtonStyle().bordered(context),
+      style: _isSecondary
+          ? const MyoroIconTextButtonStyle().secondary(context)
+          : const MyoroIconTextButtonStyle().bordered(context),
       textConfiguration: MyoroTextConfiguration(text: _text, style: buttonTextStyle),
       onTapUp: (_) => _onTapUp(),
     );

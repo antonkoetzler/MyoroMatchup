@@ -10,10 +10,12 @@ final class _FrequencyDayTimeScreenFrequencyField extends StatelessWidget {
     final state = viewModel.state;
     final frequency = state.frequency;
     final frequencyDayTimeScreenFrequencyFieldItemBuilder = viewModel.frequencyDayTimeScreenFrequencyFieldItemBuilder;
-    final frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder = viewModel.frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder;
+    final frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder =
+        viewModel.frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder;
     final onFrequencyChanged = viewModel.onFrequencyChanged;
 
-    final frequencyDayTimeScreenFrequencyFieldLabel = localization.gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel;
+    final frequencyDayTimeScreenFrequencyFieldLabel =
+        localization.gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel;
 
     return MyoroSingleSelectionDropdown<FrequencyEnum>(
       label: frequencyDayTimeScreenFrequencyFieldLabel,

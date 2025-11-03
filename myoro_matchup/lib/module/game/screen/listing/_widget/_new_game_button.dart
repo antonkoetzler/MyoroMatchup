@@ -15,7 +15,10 @@ final class _NewGameButton extends StatelessWidget {
           spacing: themeExtension.newGameButtonSpacing,
         ).secondary(context),
         iconConfiguration: themeExtension.newGameButtonIconConfiguration,
-        textConfiguration: MyoroTextConfiguration(text: localization.gameListingScreenNewGameButtonText, style: themeExtension.newGameButtonTextStyle),
+        textConfiguration: MyoroTextConfiguration(
+          text: localization.gameListingScreenNewGameButtonText,
+          style: themeExtension.newGameButtonTextStyle,
+        ),
         onTapUp: (_) => AppRouter.push(GameCreationScreenRoute().navigate()),
       ),
     );

@@ -12,9 +12,18 @@ final class _BodySuccessStateTabView extends StatelessWidget {
   Widget build(_) {
     return MyoroTabView(
       tabs: [
-        MyoroTabViewTab(text: localization.gameDetailsScreenBodySuccessStateTabViewInfoTabText, content: const _BodySuccessStateTabViewInfoTab()),
-        MyoroTabViewTab(text: localization.gameDetailsScreenBodySuccessStateTabViewPlayersTabText, content: const _BodySuccessStateTabViewPlayersTab()),
-        MyoroTabViewTab(text: localization.gameDetailsScreenBodySuccessStateTabViewRankingsTabText, content: const _BodySuccessStateTabViewRankingsTab()),
+        MyoroTabViewTab(
+          text: localization.gameDetailsScreenBodySuccessStateTabViewInfoTabText,
+          content: const _BodySuccessStateTabViewInfoTab(),
+        ),
+        MyoroTabViewTab(
+          text: localization.gameDetailsScreenBodySuccessStateTabViewPlayersTabText,
+          content: const _BodySuccessStateTabViewPlayersTab(),
+        ),
+        MyoroTabViewTab(
+          text: localization.gameDetailsScreenBodySuccessStateTabViewRankingsTabText,
+          content: const _BodySuccessStateTabViewRankingsTab(),
+        ),
       ],
     );
   }

@@ -10,7 +10,8 @@ final class _NameScreen extends StatelessWidget {
     final onNameChanged = viewModel.onNameChanged;
 
     final gameCreationScreenNameScreenTitle = localization.gameCreationScreenNameScreenTitle;
-    final gameCreationScreenNameScreenNameInputPlaceholder = localization.gameCreationScreenNameScreenNameInputPlaceholder;
+    final gameCreationScreenNameScreenNameInputPlaceholder =
+        localization.gameCreationScreenNameScreenNameInputPlaceholder;
 
     return _Screen(
       title: gameCreationScreenNameScreenTitle,
