@@ -12,12 +12,7 @@ final class _ErrorState extends StatelessWidget {
     return Center(
       child: Padding(
         padding: themeExtension.errorStatePadding,
-        child: MmErrorFeedback(
-          configuration: MmErrorFeedbackConfiguration(
-            title: localization.gameDetailsScreenBodyErrorStateTitle,
-            onRetry: viewModel.fetch,
-          ),
-        ),
+        child: MmErrorFeedback(title: localization.gameDetailsScreenBodyErrorStateTitle, onRetry: viewModel.fetch),
       ),
     );
   }

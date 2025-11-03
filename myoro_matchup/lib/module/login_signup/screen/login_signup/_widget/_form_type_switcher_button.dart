@@ -13,21 +13,19 @@ final class _FormTypeSwitcherButton extends StatelessWidget {
 
     // TODO: Could be a [Widget] like MyoroLinkButton.
     return MyoroIconTextButton(
-      configuration: MyoroIconTextButtonConfiguration(
-        textConfiguration: MyoroTextConfiguration(
-          text: switch (_formType) {
-            LoginSignupScreenEnum.login => localization.loginSignupScreenFormTypeSwitcherButtonLoginText,
-            LoginSignupScreenEnum.signup => localization.loginSignupScreenFormTypeSwitcherButtonSignupText,
-          },
-          style: themeExtension.formTypeSwitcherButtonTextStyle,
-        ),
-        onTapUp: (_) => viewModel.formTypeSwitcherButtonOnTapUp(),
-      ),
       style: MyoroIconTextButtonStyle(
         contentIdleColor: themeExtension.formTypeSwitcherButtonIdleColor,
         contentHoverColor: themeExtension.formTypeSwitcherButtonIdleColor,
         contentTapColor: themeExtension.formTypeSwitcherButtonTapColor,
       ).singleBackgroundColor(MyoroColors.transparent),
+      textConfiguration: MyoroTextConfiguration(
+        text: switch (_formType) {
+          LoginSignupScreenEnum.login => localization.loginSignupScreenFormTypeSwitcherButtonLoginText,
+          LoginSignupScreenEnum.signup => localization.loginSignupScreenFormTypeSwitcherButtonSignupText,
+        },
+        style: themeExtension.formTypeSwitcherButtonTextStyle,
+      ),
+      onTapUp: (_) => viewModel.formTypeSwitcherButtonOnTapUp(),
     );
   }
 }

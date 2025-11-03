@@ -20,7 +20,7 @@ final class LoginSignupScreen extends StatelessWidget {
   Widget build(_) {
     return InheritedProvider(
       create: (_) => getIt<LoginSignupScreenViewModel>(),
-      child: const MyoroScreen(configuration: MyoroScreenConfiguration(body: _Body())),
+      child: const MyoroScreen(body: _Body()),
     );
   }
 }

@@ -38,9 +38,7 @@ final class GameCreationScreenViewModel {
 
   /// [MyoroSingleMenuConfiguration.itemBuilder] of the frequency field.
   MyoroMenuItem frequencyDayTimeScreenFrequencyFieldItemBuilder(FrequencyEnum frequency) {
-    return MyoroMenuIconTextButtonItem(
-      configuration: MyoroIconTextButtonConfiguration(textConfiguration: MyoroTextConfiguration(text: frequency.label)),
-    );
+    return MyoroMenuIconTextButtonItem(textConfiguration: MyoroTextConfiguration(text: frequency.label));
   }
 
   /// [MyoroSingleSelectionDropdownConfiguration.selectedItemBuilder] of the frequency field.

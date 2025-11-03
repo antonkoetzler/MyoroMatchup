@@ -7,10 +7,9 @@ final class _AppBarOptionsButton extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
+    final appBarOptionsIconConfiguration = themeExtension.appBarOptionsIconConfiguration;
 
     // TODO
-    return MyoroIconTextButton(
-      configuration: MyoroIconTextButtonConfiguration(iconConfiguration: themeExtension.appBarOptionsIconConfiguration),
-    );
+    return MyoroIconTextButton(iconConfiguration: appBarOptionsIconConfiguration);
   }
 }

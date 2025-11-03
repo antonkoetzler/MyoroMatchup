@@ -27,9 +27,7 @@ final class GameCreationScreen extends StatelessWidget {
   Widget build(_) {
     return InheritedProvider(
       create: (_) => GameCreationScreenViewModel(),
-      child: MyoroScreen(
-        configuration: MyoroScreenConfiguration(appBar: _AppBar(), body: const _Body()),
-      ),
+      child: MyoroScreen(appBar: _AppBar(), body: const _Body()),
     );
   }
 }

@@ -6,10 +6,6 @@ final class _BodySuccessStateEmptyFeedback extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return Center(
-      child: MmEmptyFeedback(
-        configuration: MmEmptyFeedbackConfiguration(title: localization.gameListingScreenBodySuccessStateEmptyTitle),
-      ),
-    );
+    return Center(child: MmEmptyFeedback(title: localization.gameListingScreenBodySuccessStateEmptyTitle));
   }
 }

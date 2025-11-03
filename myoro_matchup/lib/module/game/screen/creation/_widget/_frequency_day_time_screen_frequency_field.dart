@@ -10,25 +10,19 @@ final class _FrequencyDayTimeScreenFrequencyField extends StatelessWidget {
     final state = viewModel.state;
     final frequency = state.frequency;
     final frequencyDayTimeScreenFrequencyFieldItemBuilder = viewModel.frequencyDayTimeScreenFrequencyFieldItemBuilder;
-    final frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder =
-        viewModel.frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder;
+    final frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder = viewModel.frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder;
     final onFrequencyChanged = viewModel.onFrequencyChanged;
 
-    final frequencyDayTimeScreenFrequencyFieldLabel =
-        localization.gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel;
+    final frequencyDayTimeScreenFrequencyFieldLabel = localization.gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel;
 
     return MyoroSingleSelectionDropdown<FrequencyEnum>(
-      configuration: MyoroSingleSelectionDropdownConfiguration(
-        label: frequencyDayTimeScreenFrequencyFieldLabel,
-        menuConfiguration: MyoroSingleMenuConfiguration(
-          request: FrequencyEnum.values.toSet,
-          itemBuilder: frequencyDayTimeScreenFrequencyFieldItemBuilder,
-          selectedItem: frequency,
-          onChanged: (f) => onFrequencyChanged(f!),
-          allowDeselection: false,
-        ),
-        selectedItemBuilder: frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder,
-      ),
+      label: frequencyDayTimeScreenFrequencyFieldLabel,
+      items: FrequencyEnum.values.toSet(),
+      itemBuilder: frequencyDayTimeScreenFrequencyFieldItemBuilder,
+      selectedItem: frequency,
+      onChanged: (f) => onFrequencyChanged(f!),
+      allowDeselection: false,
+      selectedItemBuilder: frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder,
     );
   }
 }

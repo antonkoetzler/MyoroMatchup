@@ -13,11 +13,9 @@ final class _ActionButton extends StatelessWidget {
     final buttonTextStyle = themeExtension.buttonTextStyle;
 
     return MyoroIconTextButton(
-      configuration: MyoroIconTextButtonConfiguration(
-        textConfiguration: MyoroTextConfiguration(text: text, style: buttonTextStyle),
-        onTapUp: (_) => onTapUp(),
-      ),
       style: const MyoroIconTextButtonStyle().secondary(context),
+      textConfiguration: MyoroTextConfiguration(text: text, style: buttonTextStyle),
+      onTapUp: (_) => onTapUp(),
     );
   }
 }

@@ -40,15 +40,13 @@ final class _GameDetailsScreenState extends State<GameDetailsScreen> {
         valueListenable: _viewModel.state.gameRequestController,
         builder: (_, gameRequest, _) {
           return MyoroScreen(
-            configuration: MyoroScreenConfiguration(
-              appBar: gameRequest.status.isSuccess ? _AppBar(gameRequest.data!) : null,
-              body: switch (gameRequest.status) {
-                MyoroRequestEnum.idle => const _BodyLoaderState(),
-                MyoroRequestEnum.loading => const _BodyLoaderState(),
-                MyoroRequestEnum.success => _BodySuccessState(gameRequest.data!),
-                MyoroRequestEnum.error => const _ErrorState(),
-              },
-            ),
+            appBar: gameRequest.status.isSuccess ? _AppBar(gameRequest.data!) : null,
+            body: switch (gameRequest.status) {
+              MyoroRequestEnum.idle => const _BodyLoaderState(),
+              MyoroRequestEnum.loading => const _BodyLoaderState(),
+              MyoroRequestEnum.success => _BodySuccessState(gameRequest.data!),
+              MyoroRequestEnum.error => const _ErrorState(),
+            },
           );
         },
       ),

@@ -18,7 +18,7 @@ final class LoginSignupScreenViewModel {
   final AuthService _authService;
 
   /// State.
-  late final _state = LoginSignupScreenState(MyoroFormConfiguration(validation: _validation, request: _request));
+  late final _state = LoginSignupScreenState(_validation, _request);
 
   /// Dispose function.
   void dispose() {
@@ -96,11 +96,7 @@ final class LoginSignupScreenViewModel {
 
     return await switch (formType) {
       LoginSignupScreenEnum.login => _authService.login(
-        LoginRequest(
-          username: loginIsEmail ? null : loginUsernameEmail,
-          email: loginIsEmail ? loginUsernameEmail : null,
-          password: loginPassword,
-        ),
+        LoginRequest(username: loginIsEmail ? null : loginUsernameEmail, email: loginIsEmail ? loginUsernameEmail : null, password: loginPassword),
       ),
       LoginSignupScreenEnum.signup => _authService.signup(
         SignupRequest(username: signupUsername, name: signupName, email: signupEmail, password: signupPassword),
@@ -116,9 +112,7 @@ final class LoginSignupScreenViewModel {
     final errorMessage = request.errorMessage;
     if (status.isError) {
       MmSnackBarHelper.showSnackBar(
-        snackBar: MyoroSnackBar(
-          configuration: MyoroSnackBarConfiguration(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage!),
-        ),
+        snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage!),
       );
     }
     if (status.isSuccess) {

@@ -9,8 +9,6 @@ final class _ProfileButton extends StatelessWidget {
     final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
 
     // TODO
-    return MyoroIconTextButton(
-      configuration: MyoroIconTextButtonConfiguration(iconConfiguration: themeExtension.profileButtonIconConfiguration),
-    );
+    return MyoroIconTextButton(iconConfiguration: themeExtension.profileButtonIconConfiguration);
   }
 }

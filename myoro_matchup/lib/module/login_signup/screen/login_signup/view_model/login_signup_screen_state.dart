@@ -2,8 +2,8 @@ part of 'login_signup_screen_view_model.dart';
 
 /// State of [LoginSignupScreenViewModel].
 final class LoginSignupScreenState {
-  LoginSignupScreenState(MyoroFormConfiguration formConfiguration)
-    : _formController = MyoroFormController(configuration: formConfiguration);
+  LoginSignupScreenState(MyoroFormValidation validation, MyoroFormRequest<void> request)
+    : _formController = MyoroFormController(validation: validation, request: request);
 
   /// [ValueNotifier] that controls which [LoginSignupScreenEnum] form is selected.
   final _formTypeController = ValueNotifier(LoginSignupScreenEnum.login);
