@@ -18,6 +18,7 @@ final class LoginSignupScreen extends StatelessWidget {
 
   @override
   Widget build(_) {
+    add focus nodes and on field submitted shite
     return InheritedProvider(
       create: (_) => getIt<LoginSignupScreenViewModel>(),
       child: const MyoroScreen(body: _Body()),

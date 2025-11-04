@@ -15,6 +15,7 @@ final class AuthService {
 
   /// Signup function.
   Future<void> signup(SignupRequest request) async {
+    print(request);
     final token = await _authRepository.signup(request);
     await _sharedPreferencesService.setString(SharedPreferencesEnum.loginToken, token);
   }

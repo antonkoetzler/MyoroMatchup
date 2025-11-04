@@ -1,11 +1,18 @@
 package com.myoro.myoro_matchup_api.exception;
 
+import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.security.access.AccessDeniedException;
 import org.springframework.security.core.AuthenticationException;
+import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -20,7 +27,6 @@ import com.myoro.myoro_matchup_api.dto.ErrorResponseDto;
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
-
   /** Message service for localization and internationalization. */
   @Autowired
   private MessageService messageService;
@@ -44,6 +50,7 @@ public class GlobalExceptionHandler {
   /**
    * Handles method argument validation exceptions when request body validation
    * fails.
+   * Returns the first error based on field declaration order in the DTO.
    * 
    * @param ex the MethodArgumentNotValidException containing validation errors
    * @return ResponseEntity containing the first validation error with HTTP 400
@@ -51,10 +58,37 @@ public class GlobalExceptionHandler {
    */
   @ExceptionHandler(MethodArgumentNotValidException.class)
   public ResponseEntity<ErrorResponseDto> handleValidationException(final MethodArgumentNotValidException ex) {
-    String errorMessage = "Validation failed";
+    String errorMessage = messageService.getMessage("error.validation.failed");
+
     if (!ex.getBindingResult().getAllErrors().isEmpty()) {
-      final ObjectError firstError = ex.getBindingResult().getAllErrors().get(0);
-      errorMessage = firstError.getDefaultMessage();
+      Object target = ex.getBindingResult().getTarget();
+
+      if (target != null) {
+        // Get field declaration order from DTO class
+        Class<?> dtoClass = target.getClass();
+        Field[] declaredFields = dtoClass.getDeclaredFields();
+        List<String> fieldOrder = Arrays.stream(declaredFields)
+            .map(Field::getName)
+            .collect(Collectors.toList());
+
+        // Sort errors by field declaration order and get first
+        List<ObjectError> errors = ex.getBindingResult().getAllErrors();
+        FieldError firstFieldError = errors.stream()
+            .filter(error -> error instanceof FieldError)
+            .map(error -> (FieldError) error)
+            .min(Comparator.comparingInt(error -> {
+              String fieldName = error.getField();
+              int index = fieldOrder.indexOf(fieldName);
+              return index == -1 ? Integer.MAX_VALUE : index;
+            }))
+            .orElse(null);
+
+        errorMessage = firstFieldError != null
+            ? firstFieldError.getDefaultMessage()
+            : errors.get(0).getDefaultMessage();
+      } else {
+        errorMessage = ex.getBindingResult().getAllErrors().get(0).getDefaultMessage();
+      }
     }
 
     final ErrorResponseDto error = new ErrorResponseDto(

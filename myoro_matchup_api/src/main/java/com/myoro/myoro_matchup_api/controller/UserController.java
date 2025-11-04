@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,7 +19,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 
 /** User controller. */
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/users")
 @Tag(name = "User Management", description = "User management endpoints.")
 public class UserController {
   /** User service. */
@@ -28,7 +27,6 @@ public class UserController {
   private UserService userService;
 
   /** Get all users. */
-  @GetMapping("/get-all")
   @Operation(summary = "Get All Users", description = "Retrieve a list of all registered users in the system.")
   @ApiResponses(value = {
       @ApiResponse(responseCode = "200", description = "Successfully retrieved list of users.", content = @Content(mediaType = "application/json", schema = @Schema(example = "[{\"id\": 1, \"email\": \"user@example.com\", \"username\": \"johndoe\"}, {\"id\": 2, \"email\": \"admin@example.com\", \"username\": \"admin\"}]"))),
