@@ -2,6 +2,21 @@ part of 'login_signup_screen_view_model.dart';
 
 /// State to encapsulate the controllers of [LoginSignupScreen]'s [LoginSignupScreenEnum.signup]'s form.
 final class LoginSignupScreenSignupState {
+  /// Name [FocusNode].
+  final _nameFocusNode = FocusNode();
+
+  /// Username [FocusNode].
+  final _usernameFocusNode = FocusNode();
+
+  /// Email [FocusNode].
+  final _emailFocusNode = FocusNode();
+
+  /// Password [FocusNode].
+  final _passwordFocusNode = FocusNode();
+
+  /// Repeated password [FocusNode].
+  final _passwordRepeatFocusNode = FocusNode();
+
   /// Name controller.
   final _nameController = TextEditingController();
 
@@ -19,11 +34,41 @@ final class LoginSignupScreenSignupState {
 
   /// Dispose function.
   void dispose() {
+    _nameFocusNode.dispose();
+    _usernameFocusNode.dispose();
+    _emailFocusNode.dispose();
+    _passwordFocusNode.dispose();
+    _passwordRepeatFocusNode.dispose();
     _nameController.dispose();
     _usernameController.dispose();
     _emailController.dispose();
     _passwordController.dispose();
     _passwordRepeatController.dispose();
+  }
+
+  /// [_nameFocusNode] getter.
+  FocusNode get nameFocusNode {
+    return _nameFocusNode;
+  }
+
+  /// [_usernameFocusNode] getter.
+  FocusNode get usernameFocusNode {
+    return _usernameFocusNode;
+  }
+
+  /// [_emailFocusNode] getter.
+  FocusNode get emailFocusNode {
+    return _emailFocusNode;
+  }
+
+  /// [_passwordFocusNode] getter.
+  FocusNode get passwordFocusNode {
+    return _passwordFocusNode;
+  }
+
+  /// [_passwordRepeatFocusNode] getter.
+  FocusNode get passwordRepeatFocusNode {
+    return _passwordRepeatFocusNode;
   }
 
   /// [_nameController] getter.

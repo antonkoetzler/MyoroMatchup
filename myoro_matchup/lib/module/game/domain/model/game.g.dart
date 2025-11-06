@@ -24,6 +24,7 @@ mixin _$GameMixin {
     String? banner,
     bool bannerProvided = true,
     SportsEnum? sport,
+    RangeValues? ageRange,
   }) {
     return Game(
       id: id ?? self.id,
@@ -31,6 +32,7 @@ mixin _$GameMixin {
       profilePicture: profilePictureProvided ? (profilePicture ?? self.profilePicture) : null,
       banner: bannerProvided ? (banner ?? self.banner) : null,
       sport: sport ?? self.sport,
+      ageRange: ageRange ?? self.ageRange,
     );
   }
 
@@ -42,12 +44,13 @@ mixin _$GameMixin {
         other.name == self.name &&
         other.profilePicture == self.profilePicture &&
         other.banner == self.banner &&
-        other.sport == self.sport;
+        other.sport == self.sport &&
+        other.ageRange == self.ageRange;
   }
 
   @override
   int get hashCode {
-    return Object.hash(self.id, self.name, self.profilePicture, self.banner, self.sport);
+    return Object.hash(self.id, self.name, self.profilePicture, self.banner, self.sport, self.ageRange);
   }
 
   @override
@@ -58,5 +61,6 @@ mixin _$GameMixin {
       '  profilePicture: ${self.profilePicture},\n'
       '  banner: ${self.banner},\n'
       '  sport: ${self.sport},\n'
+      '  ageRange: ${self.ageRange},\n'
       ');';
 }

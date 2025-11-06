@@ -1,5 +1,4 @@
-import 'package:flutter/widgets.dart' hide Route;
-import 'package:myoro_matchup/myoro_matchup.dart';
+part of 'route.dart';
 
 /// [Route] without a payload.
 abstract class NoPayloadRoute extends Route {

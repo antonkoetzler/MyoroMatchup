@@ -1,5 +1,4 @@
-import 'package:flutter/widgets.dart' hide Route;
-import 'package:myoro_matchup/myoro_matchup.dart';
+part of 'route.dart';
 
 /// [Route] accepting a payload.
 abstract class PayloadRoute<T extends Object> extends Route<T> {

@@ -15,14 +15,13 @@ final class AuthService {
 
   /// Signup function.
   Future<void> signup(SignupRequest request) async {
-    print(request);
-    final token = await _authRepository.signup(request);
-    await _sharedPreferencesService.setString(SharedPreferencesEnum.loginToken, token);
+    final loggedInUser = await _authRepository.signup(request);
+    await _sharedPreferencesService.setJson(SharedPreferencesEnum.loggedInUser, loggedInUser.toJson());
   }
 
   /// Login function.
   Future<void> login(LoginRequest request) async {
-    final token = await _authRepository.login(request);
-    await _sharedPreferencesService.setString(SharedPreferencesEnum.loginToken, token);
+    final loggedInUser = await _authRepository.login(request);
+    await _sharedPreferencesService.setJson(SharedPreferencesEnum.loggedInUser, loggedInUser.toJson());
   }
 }

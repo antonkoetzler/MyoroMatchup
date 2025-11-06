@@ -14,12 +14,13 @@ final class _FrequencyDayTimeScreen extends StatelessWidget {
     return _Screen(
       title: gameCreationScreenFrequencyDayTimeScreenTitle,
       child: Column(
-        spacing: spacing,
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          _FrequencyDayTimeScreenFrequencyField(),
-          _FrequencyDayTimeScreenDayField(),
-          _FrequencyDayTimeScreenTimeField(),
+        children: [
+          const _FrequencyDayTimeScreenFrequencyField(),
+          SizedBox(height: spacing * 1.4),
+          const _FrequencyDayTimeScreenTimeField(),
+          SizedBox(height: spacing),
+          const _FrequencyDayTimeScreenDayField(),
         ],
       ),
     );

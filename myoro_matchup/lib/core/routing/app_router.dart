@@ -4,6 +4,7 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 final class AppRouter {
   static const loginModuleRoute = 'login_signup';
   static const gameModuleRoute = '/game';
+  static const userModuleRoute = 'user';
 
   /// Navigates to a route.
   ///
@@ -55,6 +56,7 @@ final class AppRouter {
           ],
         ).goRoute,
         Routes.loginSignupRoutes.loginSignupScreen.goRoute,
+        Routes.userRoutes.userScreen.goRoute,
       ],
     );
   }

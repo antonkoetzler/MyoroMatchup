@@ -19,15 +19,19 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
   @override
   MmAppBarThemeExtension copyWith({
     bool? bordered,
-    double? spacing,
     TextStyle? titleTextStyle,
     MyoroIconConfiguration? backButtonIconConfiguration,
+    MyoroIconConfiguration? menuButtonIconConfiguration,
+    double? menuDrawerSpacing,
+    EdgeInsets? menuDrawerContentPadding,
   }) {
     return MmAppBarThemeExtension(
       bordered: bordered ?? self.bordered,
-      spacing: spacing ?? self.spacing,
       titleTextStyle: titleTextStyle ?? self.titleTextStyle,
       backButtonIconConfiguration: backButtonIconConfiguration ?? self.backButtonIconConfiguration,
+      menuButtonIconConfiguration: menuButtonIconConfiguration ?? self.menuButtonIconConfiguration,
+      menuDrawerSpacing: menuDrawerSpacing ?? self.menuDrawerSpacing,
+      menuDrawerContentPadding: menuDrawerContentPadding ?? self.menuDrawerContentPadding,
     );
   }
 
@@ -36,22 +40,33 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
     return other is MmAppBarThemeExtension &&
         other.runtimeType == runtimeType &&
         other.bordered == self.bordered &&
-        other.spacing == self.spacing &&
         other.titleTextStyle == self.titleTextStyle &&
-        other.backButtonIconConfiguration == self.backButtonIconConfiguration;
+        other.backButtonIconConfiguration == self.backButtonIconConfiguration &&
+        other.menuButtonIconConfiguration == self.menuButtonIconConfiguration &&
+        other.menuDrawerSpacing == self.menuDrawerSpacing &&
+        other.menuDrawerContentPadding == self.menuDrawerContentPadding;
   }
 
   @override
   int get hashCode {
-    return Object.hash(self.bordered, self.spacing, self.titleTextStyle, self.backButtonIconConfiguration);
+    return Object.hash(
+      self.bordered,
+      self.titleTextStyle,
+      self.backButtonIconConfiguration,
+      self.menuButtonIconConfiguration,
+      self.menuDrawerSpacing,
+      self.menuDrawerContentPadding,
+    );
   }
 
   @override
   String toString() =>
       'MmAppBarThemeExtension(\n'
       '  bordered: ${self.bordered},\n'
-      '  spacing: ${self.spacing},\n'
       '  titleTextStyle: ${self.titleTextStyle},\n'
       '  backButtonIconConfiguration: ${self.backButtonIconConfiguration},\n'
+      '  menuButtonIconConfiguration: ${self.menuButtonIconConfiguration},\n'
+      '  menuDrawerSpacing: ${self.menuDrawerSpacing},\n'
+      '  menuDrawerContentPadding: ${self.menuDrawerContentPadding},\n'
       ');';
 }

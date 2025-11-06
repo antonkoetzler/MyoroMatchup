@@ -22,25 +22,35 @@ final class _Inputs extends StatelessWidget {
         LoginSignupScreenEnum.login => [
           _Input(
             placeholder: localization.loginSignupScreenLoginUsernameEmailInputPlaceholder,
+            onFieldSubmitted: loginState.passwordFocusNode.requestFocus,
+            focusNode: loginState.usernameEmailFocusNode,
             controller: loginState.usernameEmailController,
           ),
           _Input(
             placeholder: localization.loginSignupScreenLoginPasswordInputPlaceholder,
             obscurify: true,
+            onFieldSubmitted: state.formController.fetch,
+            focusNode: loginState.passwordFocusNode,
             controller: loginState.passwordController,
           ),
         ],
         LoginSignupScreenEnum.signup => [
           _Input(
             placeholder: localization.loginSignupScreenSignupNameInputPlaceholder,
+            onFieldSubmitted: signupState.usernameFocusNode.requestFocus,
+            focusNode: signupState.nameFocusNode,
             controller: signupState.nameController,
           ),
           _Input(
             placeholder: localization.loginSignupScreenSignupUsernameInputPlaceholder,
+            onFieldSubmitted: signupState.emailFocusNode.requestFocus,
+            focusNode: signupState.usernameFocusNode,
             controller: signupState.usernameController,
           ),
           _Input(
             placeholder: localization.loginSignupScreenSignupEmailInputPlaceholder,
+            onFieldSubmitted: signupState.passwordFocusNode.requestFocus,
+            focusNode: signupState.emailFocusNode,
             controller: signupState.emailController,
           ),
           Row(
@@ -50,6 +60,8 @@ final class _Inputs extends StatelessWidget {
                 child: _Input(
                   placeholder: localization.loginSignupScreenSignupPasswordInputPlaceholder,
                   obscurify: true,
+                  onFieldSubmitted: signupState.passwordRepeatFocusNode.requestFocus,
+                  focusNode: signupState.passwordFocusNode,
                   controller: signupState.passwordController,
                 ),
               ),
@@ -57,6 +69,8 @@ final class _Inputs extends StatelessWidget {
                 child: _Input(
                   placeholder: localization.loginSignupScreenSignupPasswordRepeatInputPlaceholder,
                   obscurify: true,
+                  onFieldSubmitted: state.formController.fetch,
+                  focusNode: signupState.passwordRepeatFocusNode,
                   controller: signupState.passwordRepeatController,
                 ),
               ),

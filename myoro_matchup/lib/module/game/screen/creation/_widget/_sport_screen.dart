@@ -6,19 +6,28 @@ final class _SportScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
+    final gameCreationScreenSportScreenTitle = localization.gameCreationScreenSportScreenTitle;
+
     final viewModel = context.read<GameCreationScreenViewModel>();
     final state = viewModel.state;
     final sportController = state.sportController;
     final onSportChanged = viewModel.onSportChanged;
 
-    final gameCreationScreenSportScreenTitle = localization.gameCreationScreenSportScreenTitle;
+    final themeExtension = context.resolveThemeExtension<GameCreationScreenThemeExtension>();
+    final spacing = themeExtension.spacing;
 
     return _Screen(
       title: gameCreationScreenSportScreenTitle,
       child: ValueListenableBuilder(
         valueListenable: sportController,
         builder: (_, sport, _) {
-          return _ButtonRadioSelection<SportsEnum>((s) => s.formattedName, sport, onSportChanged, SportsEnum.values);
+          return Column(
+            spacing: spacing,
+            children: SportsEnum.values.map((item) {
+              final isSelected = item == sport;
+              return _Button(item.formattedName, () => onSportChanged(item), isSelected);
+            }).toList(),
+          );
         },
       ),
     );

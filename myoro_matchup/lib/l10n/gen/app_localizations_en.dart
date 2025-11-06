@@ -99,7 +99,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get gameCreationScreenNameScreenNameInputPlaceholder =>
-      'i.e., Soccer...';
+      'i.e., Weekly Soccer Game';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Sport';
@@ -111,6 +111,28 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
       'Frequency';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      'Start';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'End';
+
+  @override
+  String get gameCreationScreenPriceScreenTitle => 'Price';
+
+  @override
+  String get gameCreationScreenPriceScreenMemberLabel => 'Member: ';
+
+  @override
+  String get gameCreationScreenPriceScreenDropInLabel => 'Drop-in: ';
+
+  @override
+  String get gameCreationScreenAgeRangeScreenTitle => 'Age Range';
+
+  @override
+  String get gameCreationScreenLocationScreenTitle => 'Location';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Previous';
@@ -209,4 +231,13 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get mmDayEnumSundayLabel => 'Sunday';
+
+  @override
+  String get mmAppBarMenuDrawerTitle => 'Menu';
+
+  @override
+  String get mmAppBarMenuDrawerUserScreenText => 'User Screen';
+
+  @override
+  String get mmAppBarMenuDrawerCreateGameText => 'Create Game';
 }

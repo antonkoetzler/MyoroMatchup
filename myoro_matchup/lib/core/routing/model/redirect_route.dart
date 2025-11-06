@@ -1,4 +1,4 @@
-import 'package:myoro_matchup/myoro_matchup.dart';
+part of 'route.dart';
 
 /// [Route] that only redirects to other provides [Route]s.
 class RedirectRoute extends Route {

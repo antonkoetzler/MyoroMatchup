@@ -15,6 +15,16 @@ public class UserService {
   @Autowired
   private UserRepository userRepository;
 
+  /** Message service for localization and internationalization. */
+  @Autowired
+  private MessageService messageService;
+
+  /** Get user by ID. */
+  public UserModel get(Long id) {
+    return userRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+  }
+
   /**
    * Retrieves all users from database
    * 

@@ -11,8 +11,8 @@ final class MmLocationInputViewModel {
   MmLocationInputViewModel(this._locationRepository);
 
   /// Initialization function.
-  void init(MmLocationInputConfiguration configuration) {
-    _state ??= MmLocationInputState(configuration);
+  void init(LocationTypeEnum type) {
+    _state ??= MmLocationInputState(type);
   }
 
   /// [LocationRepository] to search for places.

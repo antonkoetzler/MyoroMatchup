@@ -6,4 +6,3 @@ export 'environment/exports.dart';
 export 'key/exports.dart';
 export 'routing/exports.dart';
 export 'shared_preferences/exports.dart';
-export 'user/exports.dart';

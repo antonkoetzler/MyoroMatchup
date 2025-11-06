@@ -2,8 +2,8 @@ part of 'mm_location_input_view_model.dart';
 
 /// State of [MmLocationInputViewModel].
 final class MmLocationInputState {
-  MmLocationInputState(this.configuration);
+  MmLocationInputState(this.type);
 
   /// Configuration.
-  final MmLocationInputConfiguration configuration;
+  final LocationTypeEnum type;
 }

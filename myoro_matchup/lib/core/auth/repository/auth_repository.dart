@@ -13,16 +13,16 @@ final class AuthRepository {
   /// Signup.
   ///
   /// Returns the token of the newly created [User].
-  Future<String> signup(SignupRequest request) async {
+  Future<LoggedInUser> signup(SignupRequest request) async {
     final response = await _httpClient.post('/auth/signup', data: request.toJson());
-    return response.data[SharedPreferencesEnum.loginToken.key];
+    return LoggedInUser.fromJson(response.data['user']);
   }
 
   /// Login.
   ///
   /// Returns the token of the logged in [User].
-  Future<String> login(LoginRequest request) async {
+  Future<LoggedInUser> login(LoginRequest request) async {
     final response = await _httpClient.post('/auth/login', data: request.toJson());
-    return response.data[SharedPreferencesEnum.loginToken.key];
+    return LoggedInUser.fromJson(response.data['user']);
   }
 }

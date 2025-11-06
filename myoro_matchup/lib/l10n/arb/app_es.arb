@@ -35,10 +35,17 @@
 
   "gameCreationScreenAppBarTitle": "Crear juego",
   "gameCreationScreenNameScreenTitle": "Nombre",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "i.e., Fútbol...",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "i.e., Partido Semanal de Fútbol",
   "gameCreationScreenSportScreenTitle": "Deporte",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Frecuencia y Fecha/Hora",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frecuencia",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "Inicio",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "Fin",
+  "gameCreationScreenPriceScreenTitle": "Precio",
+  "gameCreationScreenPriceScreenMemberLabel": "Miembro: ",
+  "gameCreationScreenPriceScreenDropInLabel": "Invitado: ",
+  "gameCreationScreenAgeRangeScreenTitle": "Rango de Edad",
+  "gameCreationScreenLocationScreenTitle": "Ubicación",
   "gameCreationScreenButtonPreviousText": "Anterior",
   "gameCreationScreenButtonNextText": "Siguiente",
   "gameCreationScreenButtonFinishText": "Finalizar",
@@ -69,5 +76,9 @@
   "mmDayEnumThursdayLabel": "Jueves",
   "mmDayEnumFridayLabel": "Viernes",
   "mmDayEnumSaturdayLabel": "Sábado",
-  "mmDayEnumSundayLabel": "Domingo"
+  "mmDayEnumSundayLabel": "Domingo",
+
+  "mmAppBarMenuDrawerTitle": "Menú",
+  "mmAppBarMenuDrawerUserScreenText": "Pantalla de Usuario",
+  "mmAppBarMenuDrawerCreateGameText": "Crear Juego"
 }

@@ -17,13 +17,15 @@ final class GameCreationScreenThemeExtension extends ThemeExtension<GameCreation
     required this.titleTextStyle,
     required this.bodyPadding,
     required this.buttonTextStyle,
+    required this.priceScreenInputLabelTextStyle,
   });
 
   GameCreationScreenThemeExtension.fake()
     : spacing = myoroFake<double>(),
       titleTextStyle = myoroFake<TextStyle>(),
       bodyPadding = myoroFake<EdgeInsets>(),
-      buttonTextStyle = myoroFake<TextStyle>();
+      buttonTextStyle = myoroFake<TextStyle>(),
+      priceScreenInputLabelTextStyle = myoroFake<TextStyle>();
 
   GameCreationScreenThemeExtension.builder(TextTheme textTheme)
     : spacing = kMyoroMultiplier * 2,
@@ -34,12 +36,14 @@ final class GameCreationScreenThemeExtension extends ThemeExtension<GameCreation
         kMyoroMultiplier * 3,
         kMyoroMultiplier * 2,
       ),
-      buttonTextStyle = textTheme.bodyMedium!;
+      buttonTextStyle = textTheme.bodyMedium!,
+      priceScreenInputLabelTextStyle = textTheme.titleLarge!;
 
   final double spacing;
   final TextStyle titleTextStyle;
   final EdgeInsets bodyPadding;
   final TextStyle buttonTextStyle;
+  final TextStyle priceScreenInputLabelTextStyle;
 
   @override
   GameCreationScreenThemeExtension lerp(covariant ThemeExtension<GameCreationScreenThemeExtension>? other, double t) {
@@ -49,6 +53,11 @@ final class GameCreationScreenThemeExtension extends ThemeExtension<GameCreation
       titleTextStyle: TextStyle.lerp(titleTextStyle, other.titleTextStyle, t)!,
       bodyPadding: EdgeInsets.lerp(bodyPadding, other.bodyPadding, t)!,
       buttonTextStyle: TextStyle.lerp(buttonTextStyle, other.buttonTextStyle, t)!,
+      priceScreenInputLabelTextStyle: TextStyle.lerp(
+        priceScreenInputLabelTextStyle,
+        other.priceScreenInputLabelTextStyle,
+        t,
+      )!,
     );
   }
 }

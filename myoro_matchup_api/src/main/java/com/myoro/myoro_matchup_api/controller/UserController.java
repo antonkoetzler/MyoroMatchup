@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,6 +27,24 @@ public class UserController {
   /** User service. */
   @Autowired
   private UserService userService;
+
+  /** Get user by ID. */
+  @GetMapping("/{id}")
+  @Operation(summary = "Get User by ID", description = "Retrieve a user by their unique identifier.")
+  @ApiResponses(value = {
+      @ApiResponse(responseCode = "200", description = "Successfully retrieved user.", content = @Content(mediaType = "application/json", schema = @Schema(example = "{\"id\": 1, \"email\": \"user@example.com\", \"username\": \"johndoe\"}"))),
+      @ApiResponse(responseCode = "401", description = "Unauthorized - Authentication required.", content = @Content(mediaType = "application/json", schema = @Schema(example = "{\"error\": \"Authentication required\", \"message\": \"Please provide valid authentication credentials\"}")))
+  })
+  @SecurityRequirement(name = "bearerAuth")
+  /**
+   * Retrieves a user by their unique identifier
+   * 
+   * @param id the unique identifier of the user to retrieve
+   * @return ResponseEntity containing the user details
+   */
+  public ResponseEntity<UserModel> getUserById(@PathVariable Long id) {
+    return ResponseEntity.ok(userService.get(id));
+  }
 
   /** Get all users. */
   @Operation(summary = "Get All Users", description = "Retrieve a list of all registered users in the system.")

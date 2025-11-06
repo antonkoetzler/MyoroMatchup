@@ -10,8 +10,6 @@ part '_widget/_body_loader.dart';
 part '_widget/_body_success_state.dart';
 part '_widget/_body_success_state_empty_feedback.dart';
 part '_widget/_game.dart';
-part '_widget/_new_game_button.dart';
-part '_widget/_profile_button.dart';
 
 /// Game listing screne.
 final class GameListingScreen extends StatelessWidget {

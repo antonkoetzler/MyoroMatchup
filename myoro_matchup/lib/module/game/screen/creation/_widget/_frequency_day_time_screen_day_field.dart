@@ -11,10 +11,22 @@ final class _FrequencyDayTimeScreenDayField extends StatelessWidget {
     final onDayChanged = viewModel.onDayChanged;
     final dayController = state.dayController;
 
+    final themeExtension = context.resolveThemeExtension<GameCreationScreenThemeExtension>();
+    final spacing = themeExtension.spacing;
+
     return ValueListenableBuilder(
       valueListenable: dayController,
       builder: (_, day, _) {
-        return _ButtonRadioSelection<MmDayEnum>((d) => d.label, day, onDayChanged, MmDayEnum.values);
+        return Wrap(
+          spacing: spacing,
+          runSpacing: spacing,
+          alignment: WrapAlignment.center,
+          crossAxisAlignment: WrapCrossAlignment.center,
+          children: MmDayEnum.values.map((item) {
+            final isSelected = item == day;
+            return IntrinsicWidth(child: _Button(item.label, () => onDayChanged(item), isSelected));
+          }).toList(),
+        );
       },
     );
   }

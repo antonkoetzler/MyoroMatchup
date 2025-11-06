@@ -2,10 +2,18 @@ part of '../login_signup_screen.dart';
 
 /// An input apart of [_Inputs].
 final class _Input extends StatelessWidget {
-  const _Input({required this.placeholder, this.obscurify = false, required this.controller});
+  const _Input({
+    required this.placeholder,
+    this.obscurify = false,
+    required this.onFieldSubmitted,
+    required this.focusNode,
+    required this.controller,
+  });
 
   final String placeholder;
   final bool obscurify;
+  final VoidCallback onFieldSubmitted;
+  final FocusNode focusNode;
   final TextEditingController controller;
 
   @override
@@ -17,6 +25,8 @@ final class _Input extends StatelessWidget {
       placeholder: placeholder,
       obscureText: obscurify,
       showObscureTextButton: obscurify,
+      onFieldSubmitted: (_) => onFieldSubmitted(),
+      focusNode: focusNode,
       controller: controller,
     );
   }

@@ -6,7 +6,11 @@ final class _LocationScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
-    // TODO
-    return const _Screen(title: 'Location screen', child: Text('Location screen'));
+    final gameCreationScreenLocationScreenTitle = localization.gameCreationScreenLocationScreenTitle;
+
+    return _Screen(
+      title: gameCreationScreenLocationScreenTitle,
+      child: MmLocationInput(type: LocationTypeEnum.city),
+    );
   }
 }

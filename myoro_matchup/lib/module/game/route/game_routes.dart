@@ -3,14 +3,11 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 /// [Route] of modules.
 final class GameRoutes {
   /// [GameCreationScreen].
-  late final _gameCreationScreen = GameCreationScreenRoute();
-  GameCreationScreenRoute get gameCreationScreen => _gameCreationScreen;
+  late final gameCreationScreen = GameCreationScreenRoute();
 
   /// [GameDetailsScreen]
-  late final _gameDetailsScreen = GameDetailsScreenRoute();
-  GameDetailsScreenRoute get gameDetailsScreen => _gameDetailsScreen;
+  late final gameDetailsScreen = GameDetailsScreenRoute();
 
   /// [GameListingScreen]
-  late final _gameListingScreen = GameListingScreenRoute();
-  GameListingScreenRoute get gameListingScreen => _gameListingScreen;
+  late final gameListingScreen = GameListingScreenRoute();
 }

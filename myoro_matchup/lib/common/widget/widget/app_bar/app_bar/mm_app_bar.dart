@@ -1,10 +1,13 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Route;
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
-import 'package:provider/provider.dart';
 
 part '_widget/_back_button.dart';
 part '_widget/_title.dart';
+part '_widget/_menu_button.dart';
+part '_widget/_menu_modal.dart';
+part '_widget/_menu_modal_item.dart';
+part '_widget/_profile_button.dart';
 
 /// Standard app bar of every screen.
 ///
@@ -15,10 +18,8 @@ part '_widget/_title.dart';
 /// ```dart
 /// final class _AppBar extends MmAppBar {
 ///   const _AppBar() : super(
-///     configuration: MmAppBarConfiguration(
-///       title: 'Screen Title',
-///       trailing: YourTrailingWidget(),
-///     ),
+///     title: 'Screen Title',
+///     trailing: YourTrailingWidget(),
 ///   );
 /// }
 /// ```
@@ -26,10 +27,16 @@ part '_widget/_title.dart';
 /// This approach eliminates the need to implement [PreferredSizeWidget] in
 /// every screen's app bar class.
 class MmAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const MmAppBar({super.key, required this.configuration});
+  /// Default value of [title].
+  static const titleDefaultValue = kMyoroEmptyString;
 
-  /// Configuration.
-  final MmAppBarConfiguration configuration;
+  const MmAppBar({super.key, this.onBack, this.title = titleDefaultValue});
+
+  /// Callback execute when the back button is pressed.
+  final VoidCallback? onBack;
+
+  /// Leading [Widget].
+  final String title;
 
   @override
   Size get preferredSize => const Size.fromHeight(kMyoroMultiplier * 16);
@@ -37,27 +44,19 @@ class MmAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<MmAppBarThemeExtension>();
+    final bordered = themeExtension.bordered;
 
-    return InheritedProvider.value(
-      value: configuration,
-      child: MyoroAppBar(
-        showBottomDivider: themeExtension.bordered,
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Row(
-              spacing: themeExtension.spacing,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                if (AppRouter.canPop()) const _BackButton(),
-                ?configuration.leading,
-                const Spacer(),
-                Flexible(child: configuration.trailing),
-              ],
-            ),
-            const Positioned(child: _Title()),
-          ],
-        ),
+    return MyoroAppBar(
+      showBottomDivider: bordered,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [if (AppRouter.canPop()) _BackButton(onBack) else const _MenuButton(), const _ProfileButton()],
+          ),
+          if (title.isNotEmpty) Positioned(child: _Title(title)),
+        ],
       ),
     );
   }

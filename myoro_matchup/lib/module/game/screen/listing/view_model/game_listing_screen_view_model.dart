@@ -17,6 +17,11 @@ final class GameListingScreenViewModel {
   /// Game repository.
   final GameRepository _gameRepository;
 
+  /// Dispose function.
+  void dispose() {
+    _state.dispose();
+  }
+
   /// Fetches the [Game]s.
   void fetchGames() async {
     try {
@@ -32,10 +37,5 @@ final class GameListingScreenViewModel {
 
       _state.gamesRequest = _state.gamesRequest.createErrorState(errorMessage);
     }
-  }
-
-  /// Dispose function.
-  void dispose() {
-    _state.dispose();
   }
 }

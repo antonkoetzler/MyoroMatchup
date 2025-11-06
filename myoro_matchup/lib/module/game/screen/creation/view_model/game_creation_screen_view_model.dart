@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
@@ -36,14 +36,19 @@ final class GameCreationScreenViewModel {
     _state.day = day;
   }
 
-  /// [MyoroSingleMenuConfiguration.itemBuilder] of the frequency field.
-  MyoroMenuItem frequencyDayTimeScreenFrequencyFieldItemBuilder(FrequencyEnum frequency) {
-    return MyoroMenuIconTextButtonItem(textConfiguration: MyoroTextConfiguration(text: frequency.label));
+  /// On member price changed.
+  void onMemberPriceChanged(double price) {
+    _state.memberPrice = price;
   }
 
-  /// [MyoroSingleSelectionDropdownConfiguration.selectedItemBuilder] of the frequency field.
-  String frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder(FrequencyEnum frequency) {
-    return frequency.label;
+  /// On drop in price changed.
+  void onDropInPriceChanged(double price) {
+    _state.dropInPrice = price;
+  }
+
+  /// On age range changed.
+  void onAgeRangeChanged(RangeValues values) {
+    _state.ageRange = values;
   }
 
   /// On previous.
@@ -60,6 +65,16 @@ final class GameCreationScreenViewModel {
   void onFinish() {
     // TODO
     throw UnimplementedError();
+  }
+
+  /// Item builder of the frequency field.
+  MyoroMenuItem frequencyDayTimeScreenFrequencyFieldItemBuilder(FrequencyEnum frequency) {
+    return MyoroMenuIconTextButtonItem(textConfiguration: MyoroTextConfiguration(text: frequency.label));
+  }
+
+  /// Selected item builder of the frequency field.
+  String frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder(FrequencyEnum frequency) {
+    return frequency.label;
   }
 
   /// [_state] getter.

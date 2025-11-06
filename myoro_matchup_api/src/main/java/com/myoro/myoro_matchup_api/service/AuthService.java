@@ -7,6 +7,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.myoro.myoro_matchup_api.dto.LoginRequestDto;
+import com.myoro.myoro_matchup_api.dto.LoginResponseDto;
 import com.myoro.myoro_matchup_api.dto.SignupRequestDto;
 import com.myoro.myoro_matchup_api.model.UserModel;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
@@ -37,7 +38,7 @@ public class AuthService {
    * @return JWT token for the newly created user
    * @throws RuntimeException if username or email already exists
    */
-  public String signup(SignupRequestDto request) {
+  public LoginResponseDto signup(SignupRequestDto request) {
     // Check if the username is already taken.
     if (userRepository.existsByUsername(request.getUsername())) {
       throw new RuntimeException(messageService.getMessage("auth.username.taken"));
@@ -62,7 +63,7 @@ public class AuthService {
     // Generate token
     String token = jwtService.generateToken(savedUser.getId());
 
-    return token;
+    return new LoginResponseDto(savedUser.getId(), token);
   }
 
   /**
@@ -73,7 +74,7 @@ public class AuthService {
    * @throws RuntimeException if credentials are invalid or login request is
    *                          malformed
    */
-  public String login(LoginRequestDto request) {
+  public LoginResponseDto login(LoginRequestDto request) {
     String username = request.getUsername();
     String email = request.getEmail();
 
@@ -101,6 +102,6 @@ public class AuthService {
     // Generate token
     String token = jwtService.generateToken(user.getId());
 
-    return token;
+    return new LoginResponseDto(user.getId(), token);
   }
 }

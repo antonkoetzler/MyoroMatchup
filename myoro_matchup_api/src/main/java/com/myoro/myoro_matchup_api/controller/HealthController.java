@@ -9,6 +9,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 
+/** Health controller. */
 @RestController
 @Tag(name = "Health", description = "Health check endpoints.")
 public class HealthController {

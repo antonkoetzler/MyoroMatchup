@@ -5,6 +5,9 @@ public final class ValidationConstants {
   /** Minimum username length. */
   public static final int MIN_USERNAME_LENGTH = 3;
 
+  /** Maximum username length. */
+  public static final int MAX_USERNAME_LENGTH = 30;
+
   /** Minimum name length. */
   public static final int MIN_NAME_LENGTH = 3;
 

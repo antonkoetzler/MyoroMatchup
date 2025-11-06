@@ -2,6 +2,12 @@ part of 'login_signup_screen_view_model.dart';
 
 /// State of the [LoginSignupScreenEnum.login] form controllers.
 final class LoginSignupScreenLoginState {
+  /// Username/email [FocusNode].
+  final _usernameEmailFocusNode = FocusNode();
+
+  /// Password [FocusNode].
+  final _passwordFocusNode = FocusNode();
+
   /// Username/email [TextEditingController].
   final _usernameEmailController = TextEditingController();
 
@@ -10,8 +16,20 @@ final class LoginSignupScreenLoginState {
 
   /// Dispose function.
   void dispose() {
+    _usernameEmailFocusNode.dispose();
+    _passwordFocusNode.dispose();
     _usernameEmailController.dispose();
     _passwordController.dispose();
+  }
+
+  /// [_usernameEmailFocusNode] getter.
+  FocusNode get usernameEmailFocusNode {
+    return _usernameEmailFocusNode;
+  }
+
+  /// [_passwordFocusNode] getter.
+  FocusNode get passwordFocusNode {
+    return _passwordFocusNode;
   }
 
   /// [_usernameEmailController] getter.

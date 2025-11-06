@@ -1,7 +1,13 @@
+import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:myoro_matchup/myoro_matchup.dart';
+
+part 'no_payload_route.dart';
+part 'payload_route.dart';
+part 'redirect_route.dart';
 
 /// Abtract model of representing a route.
-abstract class Route<T extends Object> {
+sealed class Route<T extends Object> {
   Route({String? parentLocation, required String name, this.redirect, this.builder, this.routes = const []})
     : location = '${parentLocation ?? ''}/$name',
       name = '/$name';

@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.myoro.myoro_matchup_api.dto.LoginRequestDto;
+import com.myoro.myoro_matchup_api.dto.LoginResponseDto;
 import com.myoro.myoro_matchup_api.dto.SignupRequestDto;
 import com.myoro.myoro_matchup_api.service.AuthService;
 
@@ -49,10 +50,10 @@ public class AuthController {
    * @return ResponseEntity containing JWT token and success message
    */
   public ResponseEntity<Map<String, Object>> signup(@Valid @RequestBody SignupRequestDto request) {
-    String token = authService.signup(request);
+    final LoginResponseDto response = authService.signup(request);
     Map<String, Object> responseBody = new HashMap<>();
-    responseBody.put("token", token);
     responseBody.put("message", messageService.getMessage("auth.signup.success"));
+    responseBody.put("user", response);
     return ResponseEntity.ok(responseBody);
   }
 
@@ -70,10 +71,10 @@ public class AuthController {
    * @return ResponseEntity containing JWT token and success message
    */
   public ResponseEntity<Map<String, Object>> login(@Valid @RequestBody LoginRequestDto request) {
-    String token = authService.login(request);
+    final LoginResponseDto response = authService.login(request);
     Map<String, Object> responseBody = new HashMap<>();
-    responseBody.put("token", token);
     responseBody.put("message", messageService.getMessage("auth.login.success"));
+    responseBody.put("user", response);
     return ResponseEntity.ok(responseBody);
   }
 }

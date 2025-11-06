@@ -13,17 +13,27 @@ final class User with _$UserMixin {
   static const idJsonKey = 'id';
   static const usernameJsonKey = 'username';
 
-  const User({required this.id, required this.username});
+  const User({required this.id, this.token, required this.username});
 
-  User.fake() : id = faker.randomGenerator.integer(1000000), username = faker.internet.userName();
+  User.fake()
+    : id = faker.randomGenerator.integer(1000000),
+      token = faker.randomGenerator.string(10),
+      username = faker.internet.userName();
 
-  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  factory User.fromJson(Map<String, dynamic> json) {
+    return _$UserFromJson(json);
+  }
 
   /// ID.
   final int id;
 
+  /// Token.
+  final String? token;
+
   /// Username.
   final String username;
 
-  Map<String, dynamic> toJson() => _$UserToJson(this);
+  Map<String, dynamic> toJson() {
+    return _$UserToJson(this);
+  }
 }

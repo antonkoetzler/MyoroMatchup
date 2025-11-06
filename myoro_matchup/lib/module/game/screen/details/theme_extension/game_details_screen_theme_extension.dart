@@ -10,24 +10,14 @@ part 'game_details_screen_theme_extension.g.dart';
 @myoroThemeExtension
 final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsScreenThemeExtension>
     with _$GameDetailsScreenThemeExtensionMixin {
-  const GameDetailsScreenThemeExtension({
-    required this.errorStatePadding,
-    required this.appBarOptionsIconConfiguration,
-  });
+  const GameDetailsScreenThemeExtension({required this.errorStatePadding});
 
-  GameDetailsScreenThemeExtension.fake()
-    : errorStatePadding = myoroFake<EdgeInsets>(),
-      appBarOptionsIconConfiguration = MyoroIconConfiguration.fake();
+  GameDetailsScreenThemeExtension.fake() : errorStatePadding = myoroFake<EdgeInsets>();
 
-  const GameDetailsScreenThemeExtension.builder()
-    : errorStatePadding = const EdgeInsets.all(kMyoroMultiplier * 4),
-      appBarOptionsIconConfiguration = const MyoroIconConfiguration(icon: Icons.more_vert, size: kMyoroMultiplier * 6);
+  const GameDetailsScreenThemeExtension.builder() : errorStatePadding = const EdgeInsets.all(kMyoroMultiplier * 4);
 
   /// [EdgeInsets] of the error state's content.
   final EdgeInsets errorStatePadding;
-
-  /// [MyoroIconConfiguration] of the app bar options button.
-  final MyoroIconConfiguration appBarOptionsIconConfiguration;
 
   @override
   ThemeExtension<GameDetailsScreenThemeExtension> lerp(
@@ -35,13 +25,6 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
     double t,
   ) {
     if (other is! GameDetailsScreenThemeExtension) return this;
-    return copyWith(
-      errorStatePadding: EdgeInsets.lerp(errorStatePadding, other.errorStatePadding, t),
-      appBarOptionsIconConfiguration: MyoroIconConfiguration.lerp(
-        appBarOptionsIconConfiguration,
-        other.appBarOptionsIconConfiguration,
-        t,
-      ),
-    );
+    return copyWith(errorStatePadding: EdgeInsets.lerp(errorStatePadding, other.errorStatePadding, t));
   }
 }

@@ -11,7 +11,7 @@ import jakarta.validation.constraints.Size;
 public class SignupRequestDto {
   /** Username. */
   @NotBlank(message = "{validation.username.required}")
-  @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, message = "{validation.username.length}")
+  @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, max = ValidationConstants.MAX_USERNAME_LENGTH, message = "{validation.username.length}")
   @Pattern(regexp = ValidationConstants.USERNAME_PATTERN, message = "{validation.username.pattern}")
   private String username;
 

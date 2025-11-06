@@ -22,12 +22,14 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
     TextStyle? titleTextStyle,
     EdgeInsets? bodyPadding,
     TextStyle? buttonTextStyle,
+    TextStyle? priceScreenInputLabelTextStyle,
   }) {
     return GameCreationScreenThemeExtension(
       spacing: spacing ?? self.spacing,
       titleTextStyle: titleTextStyle ?? self.titleTextStyle,
       bodyPadding: bodyPadding ?? self.bodyPadding,
       buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
+      priceScreenInputLabelTextStyle: priceScreenInputLabelTextStyle ?? self.priceScreenInputLabelTextStyle,
     );
   }
 
@@ -38,12 +40,19 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
         other.spacing == self.spacing &&
         other.titleTextStyle == self.titleTextStyle &&
         other.bodyPadding == self.bodyPadding &&
-        other.buttonTextStyle == self.buttonTextStyle;
+        other.buttonTextStyle == self.buttonTextStyle &&
+        other.priceScreenInputLabelTextStyle == self.priceScreenInputLabelTextStyle;
   }
 
   @override
   int get hashCode {
-    return Object.hash(self.spacing, self.titleTextStyle, self.bodyPadding, self.buttonTextStyle);
+    return Object.hash(
+      self.spacing,
+      self.titleTextStyle,
+      self.bodyPadding,
+      self.buttonTextStyle,
+      self.priceScreenInputLabelTextStyle,
+    );
   }
 
   @override
@@ -53,5 +62,6 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
       '  titleTextStyle: ${self.titleTextStyle},\n'
       '  bodyPadding: ${self.bodyPadding},\n'
       '  buttonTextStyle: ${self.buttonTextStyle},\n'
+      '  priceScreenInputLabelTextStyle: ${self.priceScreenInputLabelTextStyle},\n'
       ');';
 }

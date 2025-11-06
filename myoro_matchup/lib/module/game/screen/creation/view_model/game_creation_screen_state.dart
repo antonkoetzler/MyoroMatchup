@@ -17,11 +17,21 @@ final class GameCreationScreenState {
   /// Day field.
   final _dayController = ValueNotifier(MmDayEnum.monday);
 
+  /// Member price field.
+  double memberPrice = 0;
+
+  /// Drop in price field.
+  double dropInPrice = 0;
+
+  /// Age range field.
+  final _ageRangeController = ValueNotifier(const RangeValues(0, 100));
+
   /// Dispose function.
   void dispose() {
     _selectedIndexController.dispose();
     _sportController.dispose();
     _dayController.dispose();
+    _ageRangeController.dispose();
   }
 
   /// [_selectedIndexController] getter.
@@ -54,6 +64,16 @@ final class GameCreationScreenState {
     return _dayController.value;
   }
 
+  /// [_ageRangeController] getter.
+  ValueNotifier<RangeValues> get ageRangeController {
+    return _ageRangeController;
+  }
+
+  /// Getter of [_ageRangeController]'s value.
+  RangeValues get ageRange {
+    return _ageRangeController.value;
+  }
+
   /// Setter of [_selectedIndexController]'s value.
   set selectedIndex(int value) {
     _selectedIndexController.value = value;
@@ -67,5 +87,10 @@ final class GameCreationScreenState {
   /// Setter of [_dayController]'s value.
   set day(MmDayEnum value) {
     _dayController.value = value;
+  }
+
+  /// Setter of [_ageRangeController]'s value.
+  set ageRange(RangeValues value) {
+    _ageRangeController.value = value;
   }
 }

@@ -271,7 +271,7 @@ abstract class AppLocalizations {
   /// No description provided for @gameCreationScreenNameScreenNameInputPlaceholder.
   ///
   /// In en, this message translates to:
-  /// **'i.e., Soccer...'**
+  /// **'i.e., Weekly Soccer Game'**
   String get gameCreationScreenNameScreenNameInputPlaceholder;
 
   /// No description provided for @gameCreationScreenSportScreenTitle.
@@ -291,6 +291,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Frequency'**
   String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel;
+
+  /// No description provided for @gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Start'**
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel;
+
+  /// No description provided for @gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'End'**
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel;
+
+  /// No description provided for @gameCreationScreenPriceScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Price'**
+  String get gameCreationScreenPriceScreenTitle;
+
+  /// No description provided for @gameCreationScreenPriceScreenMemberLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Member: '**
+  String get gameCreationScreenPriceScreenMemberLabel;
+
+  /// No description provided for @gameCreationScreenPriceScreenDropInLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Drop-in: '**
+  String get gameCreationScreenPriceScreenDropInLabel;
+
+  /// No description provided for @gameCreationScreenAgeRangeScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Age Range'**
+  String get gameCreationScreenAgeRangeScreenTitle;
+
+  /// No description provided for @gameCreationScreenLocationScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Location'**
+  String get gameCreationScreenLocationScreenTitle;
 
   /// No description provided for @gameCreationScreenButtonPreviousText.
   ///
@@ -465,6 +507,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Sunday'**
   String get mmDayEnumSundayLabel;
+
+  /// No description provided for @mmAppBarMenuDrawerTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Menu'**
+  String get mmAppBarMenuDrawerTitle;
+
+  /// No description provided for @mmAppBarMenuDrawerUserScreenText.
+  ///
+  /// In en, this message translates to:
+  /// **'User Screen'**
+  String get mmAppBarMenuDrawerUserScreenText;
+
+  /// No description provided for @mmAppBarMenuDrawerCreateGameText.
+  ///
+  /// In en, this message translates to:
+  /// **'Create Game'**
+  String get mmAppBarMenuDrawerCreateGameText;
 }
 
 class _AppLocalizationsDelegate

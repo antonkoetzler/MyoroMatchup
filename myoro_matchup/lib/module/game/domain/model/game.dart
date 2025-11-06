@@ -1,5 +1,5 @@
 import 'package:faker/faker.dart';
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:myoro_flutter_annotations/myoro_flutter_annotations.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
@@ -9,7 +9,14 @@ part 'game.g.dart';
 @immutable
 @myoroModel
 final class Game with _$GameMixin {
-  const Game({required this.id, required this.name, this.profilePicture, this.banner, required this.sport});
+  const Game({
+    required this.id,
+    required this.name,
+    this.profilePicture,
+    this.banner,
+    required this.sport,
+    required this.ageRange,
+  });
 
   Game.fake()
     : id = faker.randomGenerator.integer(9999),
@@ -20,6 +27,7 @@ final class Game with _$GameMixin {
       banner = faker.randomGenerator.boolean()
           ? kTestBanners[faker.randomGenerator.integer(kTestBanners.length)]
           : null,
+      ageRange = const RangeValues(0, 100),
       sport = SportsEnum.fake();
 
   /// ID of the [Game].
@@ -36,4 +44,7 @@ final class Game with _$GameMixin {
 
   /// Sport being played.
   final SportsEnum sport;
+
+  /// Age range of the [Game].
+  final RangeValues ageRange;
 }
