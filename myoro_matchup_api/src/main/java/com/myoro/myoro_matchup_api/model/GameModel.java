@@ -1,8 +1,10 @@
 package com.myoro.myoro_matchup_api.model;
 
+import com.myoro.myoro_matchup_api.enums.GameVisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,6 +20,10 @@ public class GameModel {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  /** ID of the user that owns the game. */
+  @Column(name = "user_id", nullable = false)
+  private Long userId;
+
   /** Game name. */
   @Column(nullable = false)
   private String name;
@@ -26,18 +32,39 @@ public class GameModel {
   @Column(nullable = false)
   private SportsEnum sport;
 
-  /** ID of the user that owns the game. */
-  @Column(name = "user_id", nullable = false)
-  private Long userId;
+  /** Frequency of the game. */
+  @Embedded
+  private GameFrequencyDayTimeModel frequencyDayTime;
+
+  /** Price of the game. */
+  @Embedded
+  private GamePriceModel price;
+
+  /** Age range of the game. */
+  @Embedded
+  private GameAgeRangeModel ageRange;
+
+  /** Visibility of the game. */
+  @Column(nullable = false)
+  private GameVisibilityEnum visibility;
+
+  /** Profile picture of the game. */
+  @Column(nullable = false)
+  private String profilePicture;
+
+  /** Banner of the game. */
+  @Column(nullable = false)
+  private String banner;
 
   /** Default constructor. */
   public GameModel() {
   }
 
   /** Constructor with all fields. */
-  public GameModel(String name, SportsEnum sport) {
+  public GameModel(String name, SportsEnum sport, GameFrequencyDayTimeModel frequencyDayTime) {
     this.name = name;
     this.sport = sport;
+    this.frequencyDayTime = frequencyDayTime;
   }
 
   /**
@@ -47,6 +74,15 @@ public class GameModel {
    */
   public Long getId() {
     return id;
+  }
+
+  /**
+   * Getter for userId
+   * 
+   * @return the ID of the user that owns the game
+   */
+  public Long getUserId() {
+    return userId;
   }
 
   /**
@@ -68,12 +104,75 @@ public class GameModel {
   }
 
   /**
+   * Getter for frequencyDayTime
+   * 
+   * @return the frequency and day time of the game
+   */
+  public GameFrequencyDayTimeModel getFrequencyDayTime() {
+    return frequencyDayTime;
+  }
+
+  /**
+   * Getter for price
+   * 
+   * @return the price of the game
+   */
+  public GamePriceModel getPrice() {
+    return price;
+  }
+
+  /**
+   * Getter for ageRange
+   * 
+   * @return the age range of the game
+   */
+  public GameAgeRangeModel getAgeRange() {
+    return ageRange;
+  }
+
+  /**
+   * Getter for visibility
+   * 
+   * @return the visibility of the game
+   */
+  public GameVisibilityEnum getVisibility() {
+    return visibility;
+  }
+
+  /**
+   * Getter for profilePicture
+   * 
+   * @return the profile picture of the game
+   */
+  public String getProfilePicture() {
+    return profilePicture;
+  }
+
+  /**
+   * Getter for banner
+   * 
+   * @return the banner of the game
+   */
+  public String getBanner() {
+    return banner;
+  }
+
+  /**
    * Setter for id
    * 
    * @param id the game ID
    */
   public void setId(Long id) {
     this.id = id;
+  }
+
+  /**
+   * Setter for userId
+   * 
+   * @param userId the ID of the user that owns the game
+   */
+  public void setUserId(Long userId) {
+    this.userId = userId;
   }
 
   /**
@@ -95,20 +194,56 @@ public class GameModel {
   }
 
   /**
-   * Getter for userId
+   * Setter for frequencyDayTime
    * 
-   * @return the ID of the user that owns the game
+   * @param frequencyDayTime the frequency and day time of the game
    */
-  public Long getUserId() {
-    return userId;
+  public void setFrequencyDayTime(GameFrequencyDayTimeModel frequencyDayTime) {
+    this.frequencyDayTime = frequencyDayTime;
   }
 
   /**
-   * Setter for userId
+   * Setter for price
    * 
-   * @param userId the ID of the user that owns the game
+   * @param price the price of the game
    */
-  public void setUserId(Long userId) {
-    this.userId = userId;
+  public void setPrice(GamePriceModel price) {
+    this.price = price;
+  }
+
+  /**
+   * Setter for ageRange
+   * 
+   * @param ageRange the age range of the game
+   */
+  public void setAgeRange(GameAgeRangeModel ageRange) {
+    this.ageRange = ageRange;
+  }
+
+  /**
+   * Setter for visibility
+   * 
+   * @param visibility the visibility of the game
+   */
+  public void setVisibility(GameVisibilityEnum visibility) {
+    this.visibility = visibility;
+  }
+
+  /**
+   * Setter for profilePicture
+   * 
+   * @param profilePicture the profile picture of the game
+   */
+  public void setProfilePicture(String profilePicture) {
+    this.profilePicture = profilePicture;
+  }
+
+  /**
+   * Setter for banner
+   * 
+   * @param banner the banner of the game
+   */
+  public void setBanner(String banner) {
+    this.banner = banner;
   }
 }

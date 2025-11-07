@@ -19,7 +19,7 @@ final class _VisibilityAndImageScreen extends StatelessWidget {
         children: [
           const _VisibilityAndImageScreenVisibilityField(),
           SizedBox(
-            height: 300,
+            height: 100, // TODO
             child: Row(
               spacing: spacing,
               children: const [
