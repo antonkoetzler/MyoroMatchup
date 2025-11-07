@@ -6,7 +6,30 @@ final class _VisibilityAndImageScreen extends StatelessWidget {
 
   @override
   Widget build(context) {
-    // TODO
-    return const _Screen(title: 'Visibility and image screen', child: Text('Visibility and image screen'));
+    final gameCreationScreenVisibilityAndImageScreenTitle = localization.gameCreationScreenVisibilityAndImageScreenTitle;
+
+    final themeExtension = context.resolveThemeExtension<GameCreationScreenThemeExtension>();
+    final spacing = themeExtension.spacing;
+
+    return _Screen(
+      title: gameCreationScreenVisibilityAndImageScreenTitle,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        spacing: spacing,
+        children: [
+          const _VisibilityAndImageScreenVisibilityField(),
+          SizedBox(
+            height: 300,
+            child: Row(
+              spacing: spacing,
+              children: const [
+                Expanded(child: _VisibilityAndImageScreenProfilePictureImageField()),
+                Expanded(child: _VisibilityAndImageScreenBannerImageField()),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

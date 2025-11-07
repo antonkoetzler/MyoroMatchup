@@ -20,12 +20,10 @@ final class _Screen extends StatelessWidget {
         children: [
           Text(title, style: titleTextStyle),
           Expanded(
-            child: Center(
-              child: MyoroSingleChildScrollable(
-                child: Padding(
-                  padding: EdgeInsets.only(top: spacing),
-                  child: child,
-                ),
+            child: MyoroSingleChildScrollable(
+              child: Padding(
+                padding: EdgeInsets.only(top: spacing),
+                child: child,
               ),
             ),
           ),

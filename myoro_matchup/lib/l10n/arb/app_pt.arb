@@ -46,6 +46,7 @@
   "gameCreationScreenPriceScreenDropInLabel": "Visitante: ",
   "gameCreationScreenAgeRangeScreenTitle": "Faixa Etária",
   "gameCreationScreenLocationScreenTitle": "Localização",
+  "gameCreationScreenVisibilityAndImageScreenTitle": "Visibilidade e Imagem",
   "gameCreationScreenButtonPreviousText": "Anterior",
   "gameCreationScreenButtonNextText": "Próximo",
   "gameCreationScreenButtonFinishText": "Finalizar",

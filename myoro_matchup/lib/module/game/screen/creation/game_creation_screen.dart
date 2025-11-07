@@ -18,6 +18,9 @@ part '_widget/_screen.dart';
 part '_widget/_sport_screen.dart';
 part '_widget/_visibility_and_image_screen.dart';
 part '_widget/_price_screen_input.dart';
+part '_widget/_visibility_and_image_screen_visibility_field.dart';
+part '_widget/_visibility_and_image_screen_profile_picture_image_field.dart';
+part '_widget/_visibility_and_image_screen_banner_image_field.dart';
 
 /// Screen to create a new [Game].
 final class GameCreationScreen extends StatelessWidget {

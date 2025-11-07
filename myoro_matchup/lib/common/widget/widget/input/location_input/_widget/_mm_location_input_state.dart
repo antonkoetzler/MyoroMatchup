@@ -9,7 +9,7 @@ final class _MmLocationInputState extends State<MmLocationInput> {
   @override
   void initState() {
     super.initState();
-    _viewModel = getIt<MmLocationInputViewModel>()..init(widget.type);
+    _viewModel = getIt<MmLocationInputViewModel>(param1: widget.type);
   }
 
   /// Build state function.
@@ -19,16 +19,14 @@ final class _MmLocationInputState extends State<MmLocationInput> {
     final type = state.type;
     final label = type.label;
     final request = _viewModel.request;
-    final itemBuilder = _viewModel.itemBuilder;
-    final selectedItemBuilder = _viewModel.selectedItemBuilder;
 
     return InheritedProvider.value(
       value: _viewModel,
       child: MyoroSearchInput<Location>(
         label: label,
         request: request,
-        itemBuilder: (item) => itemBuilder(() => const _Item()),
-        selectedItemBuilder: selectedItemBuilder,
+        itemBuilder: (item) => MyoroMenuButtonItem(builder: (_, _) => const _Item(), onTapUp: (_) {}),
+        selectedItemBuilder: (item) => item.name,
       ),
     );
   }

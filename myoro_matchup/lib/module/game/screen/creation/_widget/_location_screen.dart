@@ -10,7 +10,7 @@ final class _LocationScreen extends StatelessWidget {
 
     return _Screen(
       title: gameCreationScreenLocationScreenTitle,
-      child: MmLocationInput(type: LocationTypeEnum.city),
+      child: const MmLocationInput(type: LocationTypeEnum.city),
     );
   }
 }

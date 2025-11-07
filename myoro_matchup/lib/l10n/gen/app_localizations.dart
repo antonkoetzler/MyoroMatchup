@@ -334,6 +334,12 @@ abstract class AppLocalizations {
   /// **'Location'**
   String get gameCreationScreenLocationScreenTitle;
 
+  /// No description provided for @gameCreationScreenVisibilityAndImageScreenTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Visibility & Image'**
+  String get gameCreationScreenVisibilityAndImageScreenTitle;
+
   /// No description provided for @gameCreationScreenButtonPreviousText.
   ///
   /// In en, this message translates to:

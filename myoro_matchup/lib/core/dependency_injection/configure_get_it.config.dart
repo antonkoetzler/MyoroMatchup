@@ -77,14 +77,19 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.AuthRepository>(),
       ),
     );
+    gh.factoryParam<
+      _i789.MmLocationInputViewModel,
+      _i460.LocationTypeEnum,
+      dynamic
+    >(
+      (type, _) =>
+          _i789.MmLocationInputViewModel(gh<_i460.LocationRepository>(), type),
+    );
     gh.factory<_i17.GameDetailsScreenViewModel>(
       () => _i17.GameDetailsScreenViewModel(gh<_i460.GameRepository>()),
     );
     gh.factory<_i512.GameListingScreenViewModel>(
       () => _i512.GameListingScreenViewModel(gh<_i460.GameRepository>()),
-    );
-    gh.factory<_i789.MmLocationInputViewModel>(
-      () => _i789.MmLocationInputViewModel(gh<_i460.LocationRepository>()),
     );
     gh.singleton<_i782.UserService>(
       () => _i782.UserService(gh<_i460.SharedPreferencesService>()),

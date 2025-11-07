@@ -137,6 +137,10 @@ class AppLocalizationsEs extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Ubicación';
 
   @override
+  String get gameCreationScreenVisibilityAndImageScreenTitle =>
+      'Visibilidad e Imagen';
+
+  @override
   String get gameCreationScreenButtonPreviousText => 'Anterior';
 
   @override

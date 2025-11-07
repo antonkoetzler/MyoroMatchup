@@ -51,6 +51,21 @@ final class GameCreationScreenViewModel {
     _state.ageRange = values;
   }
 
+  /// On visibility changed.
+  void onVisibilityChanged(VisibilityEnum visibility) {
+    _state.visibility = visibility;
+  }
+
+  /// On profile picture image changed.
+  void onProfilePictureImageChanged(String image) {
+    _state.profilePictureImage = image;
+  }
+
+  /// On banner image changed.
+  void onBannerImageChanged(String image) {
+    _state.bannerImage = image;
+  }
+
   /// On previous.
   void onPrevious() {
     _state.selectedIndex = state.selectedIndex - 1;

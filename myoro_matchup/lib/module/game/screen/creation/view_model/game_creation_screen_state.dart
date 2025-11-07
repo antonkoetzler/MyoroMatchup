@@ -26,6 +26,15 @@ final class GameCreationScreenState {
   /// Age range field.
   final _ageRangeController = ValueNotifier(const RangeValues(0, 100));
 
+  /// Visibility field.
+  var visibility = VisibilityEnum.public;
+
+  /// Profile picture image field.
+  String profilePictureImage = kMyoroEmptyString;
+
+  /// Banner image field.
+  String bannerImage = kMyoroEmptyString;
+
   /// Dispose function.
   void dispose() {
     _selectedIndexController.dispose();
