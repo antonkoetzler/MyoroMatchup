@@ -1,5 +1,4 @@
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
-import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Enum encapsulating the values of the level of competitive of a [Game].
 enum CompetitivenessEnum {

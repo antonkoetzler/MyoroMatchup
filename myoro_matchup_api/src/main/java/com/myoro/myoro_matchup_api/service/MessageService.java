@@ -21,4 +21,15 @@ public class MessageService {
   public String getMessage(String key) {
     return messageSource.getMessage(key, null, LocaleContextHolder.getLocale());
   }
+
+  /**
+   * Retrieves localized message by key with parameters
+   * 
+   * @param key the message key to retrieve
+   * @param args the arguments to substitute in the message
+   * @return localized message string
+   */
+  public String getMessage(String key, String... args) {
+    return messageSource.getMessage(key, args, LocaleContextHolder.getLocale());
+  }
 }

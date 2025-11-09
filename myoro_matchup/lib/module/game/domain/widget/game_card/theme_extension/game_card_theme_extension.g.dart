@@ -31,7 +31,8 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
     return GameCardThemeExtension(
       bannerMaxHeight: bannerMaxHeight ?? self.bannerMaxHeight,
       bannerDecoration: bannerDecoration ?? self.bannerDecoration,
-      profilePictureBorderRadius: profilePictureBorderRadius ?? self.profilePictureBorderRadius,
+      profilePictureBorderRadius:
+          profilePictureBorderRadius ?? self.profilePictureBorderRadius,
       profilePictureSize: profilePictureSize ?? self.profilePictureSize,
       infoBarPadding: infoBarPadding ?? self.infoBarPadding,
       infoBarSpacing: infoBarSpacing ?? self.infoBarSpacing,

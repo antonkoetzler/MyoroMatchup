@@ -5,10 +5,12 @@ import java.util.List;
 
 import com.myoro.myoro_matchup_api.enums.DayEnum;
 import com.myoro.myoro_matchup_api.enums.GameFrequencyEnum;
+import com.myoro.myoro_matchup_api.service.MessageService;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.Transient;
 
 /** Game frequency model. */
 @Embeddable
@@ -24,6 +26,10 @@ public class GameFrequencyDayTimeModel {
   /** Time of the game. */
   @ElementCollection
   private List<LocalTime> times;
+
+  /** Message service for localization. */
+  @Transient
+  private MessageService messageService;
 
   /** Default constructor. */
   public GameFrequencyDayTimeModel() {
@@ -94,6 +100,15 @@ public class GameFrequencyDayTimeModel {
     validate();
   }
 
+  /**
+   * Setter for messageService
+   * 
+   * @param messageService the message service for localization
+   */
+  public void setMessageService(MessageService messageService) {
+    this.messageService = messageService;
+  }
+
   /** Validates the model constraints. */
   private void validate() {
     if (frequency == null || days == null || times == null) {
@@ -103,15 +118,21 @@ public class GameFrequencyDayTimeModel {
     int expectedSize = frequency == GameFrequencyEnum.BI_WEEKLY ? 2 : 1;
 
     if (days.size() != expectedSize) {
-      throw new IllegalArgumentException(
-          String.format("For %s frequency, days list must contain exactly %d item(s), but got %d",
-              frequency, expectedSize, days.size()));
+      if (messageService == null) {
+        throw new IllegalStateException("MessageService must be set before validation.");
+      }
+      String message = messageService.getMessage("validation.game.frequency.days.size.mismatch",
+          frequency.toString(), String.valueOf(expectedSize), String.valueOf(days.size()));
+      throw new IllegalArgumentException(message);
     }
 
     if (times.size() != expectedSize) {
-      throw new IllegalArgumentException(
-          String.format("For %s frequency, times list must contain exactly %d item(s), but got %d",
-              frequency, expectedSize, times.size()));
+      if (messageService == null) {
+        throw new IllegalStateException("MessageService must be set before validation.");
+      }
+      String message = messageService.getMessage("validation.game.frequency.times.size.mismatch",
+          frequency.toString(), String.valueOf(expectedSize), String.valueOf(times.size()));
+      throw new IllegalArgumentException(message);
     }
   }
 }

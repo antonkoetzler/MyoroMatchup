@@ -4,7 +4,7 @@ part of '../game_details_screen.dart';
 final class _BodySuccessState extends StatelessWidget {
   const _BodySuccessState(this._game);
 
-  final Game _game;
+  final GameResponseDto _game;
 
   @override
   Widget build(_) {

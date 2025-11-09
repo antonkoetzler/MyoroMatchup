@@ -6,9 +6,20 @@ final class _VisibilityAndImageScreenProfilePictureImageField extends StatelessW
 
   @override
   Widget build(context) {
+    final gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =
+        localization.gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle;
+
+    final themeExtension = context.resolveThemeExtension<GameCreationScreenThemeExtension>();
+    final visibilityAndImageScreenProfilePictureImageFieldStyle =
+        themeExtension.visibilityAndImageScreenProfilePictureImageFieldStyle;
+
     final viewModel = context.read<GameCreationScreenViewModel>();
     final onProfilePictureImageChanged = viewModel.onProfilePictureImageChanged;
 
-    return MyoroImagePicker(onChanged: (image) => onProfilePictureImageChanged(image ?? kMyoroEmptyString));
+    return _ImagePicker(
+      gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle,
+      (image) => onProfilePictureImageChanged(image ?? kMyoroEmptyString),
+      visibilityAndImageScreenProfilePictureImageFieldStyle,
+    );
   }
 }

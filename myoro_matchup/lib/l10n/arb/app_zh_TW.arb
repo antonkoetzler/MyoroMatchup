@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "無法連接到伺服器，請檢查您的網路連線後重試。",
+  
+  "mmErrorFeedbackSubtitle": "請檢查您的連線後重試！",
+  "mmErrorFeedbackActionButtonText": "重試",
+
+  "mmLocationInputTypeEnumPlaceLabel": "地點",
+  "mmLocationInputTypeEnumCityLabel": "城市",
+  "mmLocationInputTypeEnumStateLabel": "州/省",
+  "mmLocationInputTypeEnumCountryLabel": "國家",
+  "mmLocationInputTypeEnumContinentLabel": "大洲",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "私密",
+  "visibilityEnumPublicLabel": "公開",
+
+  "frequencyEnumWeeklyLabel": "每週",
+  "frequencyEnumBiWeeklyLabel": "每兩週",
+  "frequencyEnumMonthlyLabel": "每月",
+  "frequencyEnumYearlyLabel": "每年",
+
+  "sportsEnumFootballLabel": "足球",
+  "sportsEnumFutsalLabel": "五人制足球",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "排球",
+
+  "gameDetailsScreenBodyErrorStateTitle": "無法取得遊戲詳情！",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "玩家",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "玩家",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "排名",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "取得遊戲時發生錯誤！",
+  "gameListingScreenBodySuccessStateEmptyTitle": "找不到遊戲！",
+  "gameListingScreenNewGameButtonText": "建立遊戲",
+
+  "gameCreationScreenAppBarTitle": "建立遊戲",
+  "gameCreationScreenNameScreenTitle": "名稱",
+  "gameCreationScreenNameScreenNameInputLabel": "名稱",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "例如：每週足球賽",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "名稱不能為空。",
+  "gameCreationScreenSportScreenTitle": "運動",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "頻率和日期/時間",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "頻率",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "開始",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "結束",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "開始時間不能為空。",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "結束時間不能為空。",
+  "gameCreationScreenPriceScreenTitle": "價格",
+  "gameCreationScreenPriceScreenMemberLabel": "會員: ",
+  "gameCreationScreenPriceScreenDropInLabel": "臨時: ",
+  "gameCreationScreenAgeRangeScreenTitle": "年齡範圍",
+  "gameCreationScreenLocationScreenTitle": "位置",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "請選擇一個位置。",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "可見性和圖片",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "頭像",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "橫幅",
+  "gameCreationScreenButtonPreviousText": "上一步",
+  "gameCreationScreenButtonNextText": "下一步",
+  "gameCreationScreenButtonFinishText": "完成",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "使用者名稱/電子郵件",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "密碼",
+  "loginSignupScreenLoginLoginButton": "登入",
+  "loginSignupScreenLoginForgotPasswordButton": "忘記密碼？",
+  "loginSignupScreenSignupNameInputPlaceholder": "姓名",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "使用者名稱",
+  "loginSignupScreenSignupEmailInputPlaceholder": "電子郵件",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "密碼",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "密碼",
+  "loginSignupScreenSignupSignupButton": "註冊",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "新用戶？註冊！",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "已有帳號？登入！",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "使用者名稱/電子郵件不能為空。",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "密碼不能為空。",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "姓名不能為空。",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "使用者名稱不能為空。",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "電子郵件不能為空。",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "密碼欄位不能為空。",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "密碼不相符。",
+
+  "mmAppBarMenuDrawerTitle": "選單",
+  "mmAppBarMenuDrawerUserScreenText": "使用者畫面",
+  "mmAppBarMenuDrawerCreateGameText": "建立遊戲"
+}
+

@@ -5,9 +5,24 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
+import 'app_localizations_ar.dart';
+import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
+import 'app_localizations_fr.dart';
+import 'app_localizations_hi.dart';
+import 'app_localizations_id.dart';
+import 'app_localizations_it.dart';
+import 'app_localizations_ja.dart';
+import 'app_localizations_ko.dart';
+import 'app_localizations_nl.dart';
+import 'app_localizations_pl.dart';
 import 'app_localizations_pt.dart';
+import 'app_localizations_ru.dart';
+import 'app_localizations_th.dart';
+import 'app_localizations_tr.dart';
+import 'app_localizations_vi.dart';
+import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
 
@@ -95,9 +110,25 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
+    Locale('ar'),
+    Locale('de'),
     Locale('en'),
     Locale('es'),
+    Locale('fr'),
+    Locale('hi'),
+    Locale('id'),
+    Locale('it'),
+    Locale('ja'),
+    Locale('ko'),
+    Locale('nl'),
+    Locale('pl'),
     Locale('pt'),
+    Locale('ru'),
+    Locale('th'),
+    Locale('tr'),
+    Locale('vi'),
+    Locale('zh'),
+    Locale('zh', 'TW'),
   ];
 
   /// No description provided for @httpClientConnectionExceptionMessage.
@@ -147,6 +178,16 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Continent'**
   String get mmLocationInputTypeEnumContinentLabel;
+
+  /// No description provided for @mmLocationInputItemCityCountryText.
+  ///
+  /// In en, this message translates to:
+  /// **'{city}, {emoji} {countryName}'**
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  );
 
   /// No description provided for @visibilityEnumPrivateLabel.
   ///
@@ -268,11 +309,23 @@ abstract class AppLocalizations {
   /// **'Name'**
   String get gameCreationScreenNameScreenTitle;
 
+  /// No description provided for @gameCreationScreenNameScreenNameInputLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get gameCreationScreenNameScreenNameInputLabel;
+
   /// No description provided for @gameCreationScreenNameScreenNameInputPlaceholder.
   ///
   /// In en, this message translates to:
   /// **'i.e., Weekly Soccer Game'**
   String get gameCreationScreenNameScreenNameInputPlaceholder;
+
+  /// No description provided for @gameCreationScreenNameScreenNameInputEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Name cannot be empty.'**
+  String get gameCreationScreenNameScreenNameInputEmptyMessage;
 
   /// No description provided for @gameCreationScreenSportScreenTitle.
   ///
@@ -304,6 +357,20 @@ abstract class AppLocalizations {
   /// **'End'**
   String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel;
 
+  /// No description provided for @gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Start time cannot be empty.'**
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage;
+
+  /// No description provided for @gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'End time cannot be empty.'**
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage;
+
   /// No description provided for @gameCreationScreenPriceScreenTitle.
   ///
   /// In en, this message translates to:
@@ -334,11 +401,40 @@ abstract class AppLocalizations {
   /// **'Location'**
   String get gameCreationScreenLocationScreenTitle;
 
+  /// No description provided for @gameCreationScreenLocationScreenLocationValidationMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please select a location.'**
+  String get gameCreationScreenLocationScreenLocationValidationMessage;
+
+  /// No description provided for @gameCreationScreenLocationScreenCurrencyNotificationText.
+  ///
+  /// In en, this message translates to:
+  /// **'{emoji} {locationName} selected, {currencySymbol} will be used as the currency.'**
+  String gameCreationScreenLocationScreenCurrencyNotificationText(
+    String emoji,
+    String locationName,
+    String currencySymbol,
+  );
+
   /// No description provided for @gameCreationScreenVisibilityAndImageScreenTitle.
   ///
   /// In en, this message translates to:
   /// **'Visibility & Image'**
   String get gameCreationScreenVisibilityAndImageScreenTitle;
+
+  /// No description provided for @gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Profile Picture'**
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle;
+
+  /// No description provided for @gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Banner'**
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle;
 
   /// No description provided for @gameCreationScreenButtonPreviousText.
   ///
@@ -472,48 +568,6 @@ abstract class AppLocalizations {
   /// **'Passwords do not match.'**
   String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage;
 
-  /// No description provided for @mmDayEnumMondayLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Monday'**
-  String get mmDayEnumMondayLabel;
-
-  /// No description provided for @mmDayEnumTuesdayLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Tuesday'**
-  String get mmDayEnumTuesdayLabel;
-
-  /// No description provided for @mmDayEnumWednesdayLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Wednesday'**
-  String get mmDayEnumWednesdayLabel;
-
-  /// No description provided for @mmDayEnumThursdayLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Thursday'**
-  String get mmDayEnumThursdayLabel;
-
-  /// No description provided for @mmDayEnumFridayLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Friday'**
-  String get mmDayEnumFridayLabel;
-
-  /// No description provided for @mmDayEnumSaturdayLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Saturday'**
-  String get mmDayEnumSaturdayLabel;
-
-  /// No description provided for @mmDayEnumSundayLabel.
-  ///
-  /// In en, this message translates to:
-  /// **'Sunday'**
-  String get mmDayEnumSundayLabel;
-
   /// No description provided for @mmAppBarMenuDrawerTitle.
   ///
   /// In en, this message translates to:
@@ -543,22 +597,82 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en', 'es', 'pt'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>[
+    'ar',
+    'de',
+    'en',
+    'es',
+    'fr',
+    'hi',
+    'id',
+    'it',
+    'ja',
+    'ko',
+    'nl',
+    'pl',
+    'pt',
+    'ru',
+    'th',
+    'tr',
+    'vi',
+    'zh',
+  ].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
+  // Lookup logic when language+country codes are specified.
+  switch (locale.languageCode) {
+    case 'zh':
+      {
+        switch (locale.countryCode) {
+          case 'TW':
+            return AppLocalizationsZhTw();
+        }
+        break;
+      }
+  }
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
+    case 'ar':
+      return AppLocalizationsAr();
+    case 'de':
+      return AppLocalizationsDe();
     case 'en':
       return AppLocalizationsEn();
     case 'es':
       return AppLocalizationsEs();
+    case 'fr':
+      return AppLocalizationsFr();
+    case 'hi':
+      return AppLocalizationsHi();
+    case 'id':
+      return AppLocalizationsId();
+    case 'it':
+      return AppLocalizationsIt();
+    case 'ja':
+      return AppLocalizationsJa();
+    case 'ko':
+      return AppLocalizationsKo();
+    case 'nl':
+      return AppLocalizationsNl();
+    case 'pl':
+      return AppLocalizationsPl();
     case 'pt':
       return AppLocalizationsPt();
+    case 'ru':
+      return AppLocalizationsRu();
+    case 'th':
+      return AppLocalizationsTh();
+    case 'tr':
+      return AppLocalizationsTr();
+    case 'vi':
+      return AppLocalizationsVi();
+    case 'zh':
+      return AppLocalizationsZh();
   }
 
   throw FlutterError(

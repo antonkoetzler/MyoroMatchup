@@ -23,6 +23,8 @@ final class _VisibilityAndImageScreenVisibilityField extends StatelessWidget {
         textConfiguration: MyoroTextConfiguration(text: item.label),
       ),
       selectedItemBuilder: (item) => item.label,
+      allowDeselection: false,
+      items: VisibilityEnum.values.toSet(),
       onChanged: (item) => onVisibilityChanged(item!),
     );
   }

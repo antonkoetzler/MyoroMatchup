@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "Verbindung zum Server nicht möglich. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+  
+  "mmErrorFeedbackSubtitle": "Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut!",
+  "mmErrorFeedbackActionButtonText": "Wiederholen",
+
+  "mmLocationInputTypeEnumPlaceLabel": "Ort",
+  "mmLocationInputTypeEnumCityLabel": "Stadt",
+  "mmLocationInputTypeEnumStateLabel": "Bundesland",
+  "mmLocationInputTypeEnumCountryLabel": "Land",
+  "mmLocationInputTypeEnumContinentLabel": "Kontinent",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "Privat",
+  "visibilityEnumPublicLabel": "Öffentlich",
+
+  "frequencyEnumWeeklyLabel": "Wöchentlich",
+  "frequencyEnumBiWeeklyLabel": "Zweiwöchentlich",
+  "frequencyEnumMonthlyLabel": "Monatlich",
+  "frequencyEnumYearlyLabel": "Jährlich",
+
+  "sportsEnumFootballLabel": "Fußball",
+  "sportsEnumFutsalLabel": "Futsal",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Volleyball",
+
+  "gameDetailsScreenBodyErrorStateTitle": "Spieldetails konnten nicht abgerufen werden!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Spieler",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Spieler",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Ranglisten",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "Fehler beim Abrufen der Spiele!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "Keine Spiele gefunden!",
+  "gameListingScreenNewGameButtonText": "Spiel erstellen",
+
+  "gameCreationScreenAppBarTitle": "Spiel erstellen",
+  "gameCreationScreenNameScreenTitle": "Name",
+  "gameCreationScreenNameScreenNameInputLabel": "Name",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "z.B. Wöchentliches Fußballspiel",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "Der Name darf nicht leer sein.",
+  "gameCreationScreenSportScreenTitle": "Sport",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Häufigkeit & Datum/Uhrzeit",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Häufigkeit",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "Start",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "Ende",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "Die Startzeit darf nicht leer sein.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "Die Endzeit darf nicht leer sein.",
+  "gameCreationScreenPriceScreenTitle": "Preis",
+  "gameCreationScreenPriceScreenMemberLabel": "Mitglied: ",
+  "gameCreationScreenPriceScreenDropInLabel": "Gast: ",
+  "gameCreationScreenAgeRangeScreenTitle": "Altersspanne",
+  "gameCreationScreenLocationScreenTitle": "Standort",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "Bitte wählen Sie einen Standort aus.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "Sichtbarkeit & Bild",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "Profilbild",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "Banner",
+  "gameCreationScreenButtonPreviousText": "Zurück",
+  "gameCreationScreenButtonNextText": "Weiter",
+  "gameCreationScreenButtonFinishText": "Fertigstellen",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Benutzername/E-Mail",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "Passwort",
+  "loginSignupScreenLoginLoginButton": "Anmelden",
+  "loginSignupScreenLoginForgotPasswordButton": "Passwort vergessen?",
+  "loginSignupScreenSignupNameInputPlaceholder": "Name",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "Benutzername",
+  "loginSignupScreenSignupEmailInputPlaceholder": "E-Mail",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "Passwort",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Passwort",
+  "loginSignupScreenSignupSignupButton": "Registrieren",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Neu bei MyoroMatchup? Registrieren!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Bereits registriert? Anmelden!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Benutzername/E-Mail darf nicht leer sein.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Passwort darf nicht leer sein.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Name darf nicht leer sein.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Benutzername darf nicht leer sein.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "E-Mail darf nicht leer sein.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Passwortfelder dürfen nicht leer sein.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwörter stimmen nicht überein.",
+
+  "mmAppBarMenuDrawerTitle": "Menü",
+  "mmAppBarMenuDrawerUserScreenText": "Benutzerbildschirm",
+  "mmAppBarMenuDrawerCreateGameText": "Spiel erstellen"
+}
+

@@ -49,11 +49,11 @@ public class GameModel {
   private GameVisibilityEnum visibility;
 
   /** Profile picture of the game. */
-  @Column(nullable = false)
+  @Column(nullable = true)
   private String profilePicture;
 
   /** Banner of the game. */
-  @Column(nullable = false)
+  @Column(nullable = true)
   private String banner;
 
   /** Default constructor. */

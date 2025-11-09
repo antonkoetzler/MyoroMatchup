@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "सर्वर से कनेक्ट नहीं हो सका, कृपया अपना इंटरनेट जांचें और पुनः प्रयास करें।",
+  
+  "mmErrorFeedbackSubtitle": "कृपया अपना कनेक्शन सत्यापित करें और पुनः प्रयास करें!",
+  "mmErrorFeedbackActionButtonText": "पुनः प्रयास करें",
+
+  "mmLocationInputTypeEnumPlaceLabel": "स्थान",
+  "mmLocationInputTypeEnumCityLabel": "शहर",
+  "mmLocationInputTypeEnumStateLabel": "राज्य",
+  "mmLocationInputTypeEnumCountryLabel": "देश",
+  "mmLocationInputTypeEnumContinentLabel": "महाद्वीप",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "निजी",
+  "visibilityEnumPublicLabel": "सार्वजनिक",
+
+  "frequencyEnumWeeklyLabel": "साप्ताहिक",
+  "frequencyEnumBiWeeklyLabel": "द्वि-साप्ताहिक",
+  "frequencyEnumMonthlyLabel": "मासिक",
+  "frequencyEnumYearlyLabel": "वार्षिक",
+
+  "sportsEnumFootballLabel": "फुटबॉल",
+  "sportsEnumFutsalLabel": "फुटसल",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "वॉलीबॉल",
+
+  "gameDetailsScreenBodyErrorStateTitle": "गेम विवरण प्राप्त करने में विफल!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "खिलाड़ी",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "खिलाड़ी",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "रैंकिंग",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "गेम प्राप्त करने में त्रुटि!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "कोई गेम नहीं मिला!",
+  "gameListingScreenNewGameButtonText": "गेम बनाएं",
+
+  "gameCreationScreenAppBarTitle": "गेम बनाएं",
+  "gameCreationScreenNameScreenTitle": "नाम",
+  "gameCreationScreenNameScreenNameInputLabel": "नाम",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "उदाहरण: साप्ताहिक फुटबॉल गेम",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "नाम खाली नहीं हो सकता।",
+  "gameCreationScreenSportScreenTitle": "खेल",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "आवृत्ति और तारीख/समय",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "आवृत्ति",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "शुरुआत",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "समाप्ति",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "शुरुआत का समय खाली नहीं हो सकता।",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "समाप्ति का समय खाली नहीं हो सकता।",
+  "gameCreationScreenPriceScreenTitle": "मूल्य",
+  "gameCreationScreenPriceScreenMemberLabel": "सदस्य: ",
+  "gameCreationScreenPriceScreenDropInLabel": "ड्रॉप-इन: ",
+  "gameCreationScreenAgeRangeScreenTitle": "आयु सीमा",
+  "gameCreationScreenLocationScreenTitle": "स्थान",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "कृपया एक स्थान चुनें।",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "दृश्यता और छवि",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "प्रोफ़ाइल चित्र",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "बैनर",
+  "gameCreationScreenButtonPreviousText": "पिछला",
+  "gameCreationScreenButtonNextText": "अगला",
+  "gameCreationScreenButtonFinishText": "समाप्त करें",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "उपयोगकर्ता नाम/ईमेल",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "पासवर्ड",
+  "loginSignupScreenLoginLoginButton": "लॉगिन",
+  "loginSignupScreenLoginForgotPasswordButton": "पासवर्ड भूल गए?",
+  "loginSignupScreenSignupNameInputPlaceholder": "नाम",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "उपयोगकर्ता नाम",
+  "loginSignupScreenSignupEmailInputPlaceholder": "ईमेल",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "पासवर्ड",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "पासवर्ड",
+  "loginSignupScreenSignupSignupButton": "साइन अप",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchup में नए हैं? साइन अप करें!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "पहले से पंजीकृत हैं? लॉगिन करें!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "उपयोगकर्ता नाम/ईमेल खाली नहीं हो सकता।",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "पासवर्ड खाली नहीं हो सकता।",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "नाम खाली नहीं हो सकता।",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "उपयोगकर्ता नाम खाली नहीं हो सकता।",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "ईमेल खाली नहीं हो सकता।",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "पासवर्ड फ़ील्ड खाली नहीं हो सकते।",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "पासवर्ड मेल नहीं खाते।",
+
+  "mmAppBarMenuDrawerTitle": "मेनू",
+  "mmAppBarMenuDrawerUserScreenText": "उपयोगकर्ता स्क्रीन",
+  "mmAppBarMenuDrawerCreateGameText": "गेम बनाएं"
+}
+

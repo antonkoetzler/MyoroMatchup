@@ -14,7 +14,7 @@ final class GameCard extends StatelessWidget {
   const GameCard(this._game, {super.key, this.displayDividerBetweenBannerAndInfoBar = false, this.onTapUp});
 
   /// The [Game].
-  final Game _game;
+  final GameResponseDto _game;
 
   /// If there should be a divider between [_Banner] and [_InfoBar].
   final bool displayDividerBetweenBannerAndInfoBar;

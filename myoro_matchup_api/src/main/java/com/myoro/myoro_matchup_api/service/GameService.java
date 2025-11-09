@@ -8,6 +8,9 @@ import org.springframework.stereotype.Service;
 import com.myoro.myoro_matchup_api.dto.GameCreationRequestDto;
 import com.myoro.myoro_matchup_api.model.GameModel;
 import com.myoro.myoro_matchup_api.repository.GameRepository;
+import com.myoro.myoro_matchup_api.model.GamePriceModel;
+import com.myoro.myoro_matchup_api.model.GameAgeRangeModel;
+import com.myoro.myoro_matchup_api.model.GameFrequencyDayTimeModel;
 
 /** Game service. */
 @Service
@@ -26,6 +29,23 @@ public class GameService {
     game.setName(request.getName());
     game.setSport(request.getSport());
     game.setUserId(userId);
+    GamePriceModel priceModel = new GamePriceModel();
+    priceModel.setMonthlyPrice(request.getPrice().getMonthlyPrice());
+    priceModel.setDropInPrice(request.getPrice().getDropInPrice());
+    game.setPrice(priceModel);
+    GameAgeRangeModel ageRangeModel = new GameAgeRangeModel();
+    ageRangeModel.setMinAge(request.getAgeRange().getMinAge());
+    ageRangeModel.setMaxAge(request.getAgeRange().getMaxAge());
+    game.setAgeRange(ageRangeModel);
+    GameFrequencyDayTimeModel frequencyModel = new GameFrequencyDayTimeModel();
+    frequencyModel.setMessageService(messageService);
+    frequencyModel.setFrequency(request.getFrequencyDayTime().getFrequency());
+    frequencyModel.setDays(request.getFrequencyDayTime().getDays());
+    frequencyModel.setTimes(request.getFrequencyDayTime().getTimes());
+    game.setFrequencyDayTime(frequencyModel);
+    game.setVisibility(request.getVisibility());
+    game.setProfilePicture(request.getProfilePicture());
+    game.setBanner(request.getBanner());
     return gameRepository.save(game);
   }
 

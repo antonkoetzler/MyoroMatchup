@@ -1,21 +1,28 @@
 part of '../game_creation_screen.dart';
 
 /// Name screen of [GameCreationScreen].
-final class _NameScreen extends StatelessWidget {
-  const _NameScreen();
+class _NameScreen extends _Screen {
+  _NameScreen()
+    : super(
+        title: localization.gameCreationScreenNameScreenTitle,
+        builder: (context) {
+          final gameCreationScreenNameScreenNameInputLabel = localization.gameCreationScreenNameScreenNameInputLabel;
+          final gameCreationScreenNameScreenNameInputPlaceholder =
+              localization.gameCreationScreenNameScreenNameInputPlaceholder;
 
-  @override
-  Widget build(context) {
-    final viewModel = context.read<GameCreationScreenViewModel>();
-    final onNameChanged = viewModel.onNameChanged;
+          final viewModel = context.read<GameCreationScreenViewModel>();
+          final onNameChanged = viewModel.onNameChanged;
+          final nameValidation = viewModel.nameValidation;
+          final onNext = viewModel.onNext;
 
-    final gameCreationScreenNameScreenTitle = localization.gameCreationScreenNameScreenTitle;
-    final gameCreationScreenNameScreenNameInputPlaceholder =
-        localization.gameCreationScreenNameScreenNameInputPlaceholder;
-
-    return _Screen(
-      title: gameCreationScreenNameScreenTitle,
-      child: MyoroInput(placeholder: gameCreationScreenNameScreenNameInputPlaceholder, onChanged: onNameChanged),
-    );
-  }
+          return MyoroInput(
+            label: gameCreationScreenNameScreenNameInputLabel,
+            placeholder: gameCreationScreenNameScreenNameInputPlaceholder,
+            validation: nameValidation,
+            onChanged: onNameChanged,
+            autofocus: true,
+            onFieldSubmitted: (_) => onNext(),
+          );
+        },
+      );
 }

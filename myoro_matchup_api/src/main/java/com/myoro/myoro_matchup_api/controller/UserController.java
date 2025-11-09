@@ -47,6 +47,7 @@ public class UserController {
   }
 
   /** Get all users. */
+  @GetMapping
   @Operation(summary = "Get All Users", description = "Retrieve a list of all registered users in the system.")
   @ApiResponses(value = {
       @ApiResponse(responseCode = "200", description = "Successfully retrieved list of users.", content = @Content(mediaType = "application/json", schema = @Schema(example = "[{\"id\": 1, \"email\": \"user@example.com\", \"username\": \"johndoe\"}, {\"id\": 2, \"email\": \"admin@example.com\", \"username\": \"admin\"}]"))),

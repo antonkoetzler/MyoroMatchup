@@ -5,7 +5,7 @@ final class _BodySuccessState extends StatelessWidget {
   const _BodySuccessState(this._games);
 
   /// The fetched [Game]s.
-  final Set<Game> _games;
+  final Set<GameResponseDto> _games;
 
   @override
   Widget build(context) {

@@ -12,16 +12,37 @@ final class GameCreationScreenState {
   final _sportController = ValueNotifier(SportsEnum.football);
 
   /// Frequency field.
-  FrequencyEnum frequency = FrequencyEnum.weekly;
+  final _frequencyController = ValueNotifier(FrequencyEnum.weekly);
+
+  /// Time field.
+  TimeOfDay? startTime;
+
+  /// End time field.
+  TimeOfDay? endTime;
 
   /// Day field.
-  final _dayController = ValueNotifier(MmDayEnum.monday);
+  final _dayController = ValueNotifier(MyoroDayEnum.monday);
+
+  /// Bi weekly day field.
+  final _biWeeklyDayController = ValueNotifier(MyoroDayEnum.monday);
+
+  /// Location field.
+  final _locationController = ValueNotifier<Location?>(null);
+
+  /// Location field [FocusNode].
+  final _locationFocusNode = FocusNode();
 
   /// Member price field.
   double memberPrice = 0;
 
+  /// Member price field [FocusNode].
+  final _memberPriceFocusNode = FocusNode();
+
   /// Drop in price field.
   double dropInPrice = 0;
+
+  /// Drop in price field [FocusNode].
+  final _dropInPriceFocusNode = FocusNode();
 
   /// Age range field.
   final _ageRangeController = ValueNotifier(const RangeValues(0, 100));
@@ -39,7 +60,12 @@ final class GameCreationScreenState {
   void dispose() {
     _selectedIndexController.dispose();
     _sportController.dispose();
+    _frequencyController.dispose();
     _dayController.dispose();
+    _locationController.dispose();
+    _locationFocusNode.dispose();
+    _memberPriceFocusNode.dispose();
+    _dropInPriceFocusNode.dispose();
     _ageRangeController.dispose();
   }
 
@@ -63,14 +89,59 @@ final class GameCreationScreenState {
     return _sportController.value;
   }
 
+  /// [_frequencyController] getter.
+  ValueNotifier<FrequencyEnum> get frequencyController {
+    return _frequencyController;
+  }
+
+  /// Getter of [_frequencyController]'s value.
+  FrequencyEnum get frequency {
+    return _frequencyController.value;
+  }
+
   /// [_dayController] getter.
-  ValueNotifier<MmDayEnum> get dayController {
+  ValueNotifier<MyoroDayEnum> get dayController {
     return _dayController;
   }
 
   /// Getter of [_dayController]'s value.
-  MmDayEnum get day {
+  MyoroDayEnum get day {
     return _dayController.value;
+  }
+
+  /// [_biWeeklyDayController] getter.
+  ValueNotifier<MyoroDayEnum> get biWeeklyDayController {
+    return _biWeeklyDayController;
+  }
+
+  /// Getter of [_biWeeklyDayController]'s value.
+  MyoroDayEnum get biWeeklyDay {
+    return _biWeeklyDayController.value;
+  }
+
+  /// [_locationController] getter.
+  ValueNotifier<Location?> get locationController {
+    return _locationController;
+  }
+
+  /// Getter of [_locationController]'s value.
+  Location? get location {
+    return _locationController.value;
+  }
+
+  /// [_locationFocusNode] getter.
+  FocusNode get locationFocusNode {
+    return _locationFocusNode;
+  }
+
+  /// [_memberPriceFocusNode] getter.
+  FocusNode get memberPriceFocusNode {
+    return _memberPriceFocusNode;
+  }
+
+  /// [_dropInPriceFocusNode] getter.
+  FocusNode get dropInPriceFocusNode {
+    return _dropInPriceFocusNode;
   }
 
   /// [_ageRangeController] getter.
@@ -93,9 +164,24 @@ final class GameCreationScreenState {
     _sportController.value = value;
   }
 
+  /// Setter of [_frequencyController]'s value.
+  set frequency(FrequencyEnum value) {
+    _frequencyController.value = value;
+  }
+
   /// Setter of [_dayController]'s value.
-  set day(MmDayEnum value) {
+  set day(MyoroDayEnum value) {
     _dayController.value = value;
+  }
+
+  /// Setter of [_biWeeklyDayController]'s value.
+  set biWeeklyDay(MyoroDayEnum value) {
+    _biWeeklyDayController.value = value;
+  }
+
+  /// Setter of [_locationController]'s value.
+  set location(Location? value) {
+    _locationController.value = value;
   }
 
   /// Setter of [_ageRangeController]'s value.

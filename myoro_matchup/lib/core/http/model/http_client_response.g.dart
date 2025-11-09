@@ -11,18 +11,18 @@ part of 'http_client_response.dart';
 /// Apply this mixin to [HttpClientResponse] once the code is generated.
 ///
 /// ```dart
-/// class HttpClientResponse with _$HttpClientResponseMixin {}
+/// class HttpClientResponse<T> with _$HttpClientResponseMixin<T> {}
 /// ```
-mixin _$HttpClientResponseMixin {
-  HttpClientResponse get self => this as HttpClientResponse;
+mixin _$HttpClientResponseMixin<T> {
+  HttpClientResponse<T> get self => this as HttpClientResponse<T>;
 
-  HttpClientResponse copyWith({int? statusCode, Map<String, dynamic>? data}) {
+  HttpClientResponse<T> copyWith({int? statusCode, T? data}) {
     return HttpClientResponse(statusCode: statusCode ?? self.statusCode, data: data ?? self.data);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is HttpClientResponse &&
+    return other is HttpClientResponse<T> &&
         other.runtimeType == runtimeType &&
         other.statusCode == self.statusCode &&
         other.data == self.data;
@@ -35,7 +35,7 @@ mixin _$HttpClientResponseMixin {
 
   @override
   String toString() =>
-      'HttpClientResponse(\n'
+      'HttpClientResponse<T>(\n'
       '  statusCode: ${self.statusCode},\n'
       '  data: ${self.data},\n'
       ');';

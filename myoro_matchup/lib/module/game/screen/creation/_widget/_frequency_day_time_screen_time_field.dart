@@ -6,27 +6,36 @@ final class _FrequencyDayTimeScreenTimeField extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final themeExtension = context.resolveThemeExtension<GameCreationScreenThemeExtension>();
-    final spacing = themeExtension.spacing;
-
     final gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =
         localization.gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel;
     final gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =
         localization.gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel;
 
+    final themeExtension = context.resolveThemeExtension<GameCreationScreenThemeExtension>();
+    final spacing = themeExtension.spacing;
+
+    final viewModel = context.read<GameCreationScreenViewModel>();
+    final startTimeValidation = viewModel.startTimeValidation;
+    final onStartTimeChanged = viewModel.onStartTimeChanged;
+    final endTimeValidation = viewModel.endTimeValidation;
+    final onEndTimeChanged = viewModel.onEndTimeChanged;
+
     return Row(
       spacing: spacing,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Expanded(
           child: MyoroTimePickerInput(
             label: gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel,
-            onChanged: (_) => print('qwe'),
+            validation: startTimeValidation,
+            onChanged: onStartTimeChanged,
           ),
         ),
         Expanded(
           child: MyoroTimePickerInput(
             label: gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel,
-            onChanged: (_) => print('qwe'),
+            validation: endTimeValidation,
+            onChanged: onEndTimeChanged,
           ),
         ),
       ],

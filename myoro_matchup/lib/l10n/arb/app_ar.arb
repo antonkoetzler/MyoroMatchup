@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "تعذر الاتصال بالخادم، يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
+  
+  "mmErrorFeedbackSubtitle": "يرجى التحقق من اتصالك والمحاولة مرة أخرى!",
+  "mmErrorFeedbackActionButtonText": "إعادة المحاولة",
+
+  "mmLocationInputTypeEnumPlaceLabel": "مكان",
+  "mmLocationInputTypeEnumCityLabel": "مدينة",
+  "mmLocationInputTypeEnumStateLabel": "ولاية",
+  "mmLocationInputTypeEnumCountryLabel": "دولة",
+  "mmLocationInputTypeEnumContinentLabel": "قارة",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "خاص",
+  "visibilityEnumPublicLabel": "عام",
+
+  "frequencyEnumWeeklyLabel": "أسبوعي",
+  "frequencyEnumBiWeeklyLabel": "كل أسبوعين",
+  "frequencyEnumMonthlyLabel": "شهري",
+  "frequencyEnumYearlyLabel": "سنوي",
+
+  "sportsEnumFootballLabel": "كرة القدم",
+  "sportsEnumFutsalLabel": "كرة الصالات",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "الكرة الطائرة",
+
+  "gameDetailsScreenBodyErrorStateTitle": "فشل في استرداد تفاصيل اللعبة!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "اللاعبون",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "اللاعبون",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "التصنيفات",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "خطأ في استرداد الألعاب!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "لم يتم العثور على ألعاب!",
+  "gameListingScreenNewGameButtonText": "إنشاء لعبة",
+
+  "gameCreationScreenAppBarTitle": "إنشاء لعبة",
+  "gameCreationScreenNameScreenTitle": "الاسم",
+  "gameCreationScreenNameScreenNameInputLabel": "الاسم",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "مثال: مباراة كرة قدم أسبوعية",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "لا يمكن أن يكون الاسم فارغًا.",
+  "gameCreationScreenSportScreenTitle": "الرياضة",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "التكرار والتاريخ/الوقت",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "التكرار",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "البداية",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "النهاية",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "لا يمكن أن يكون وقت البداية فارغًا.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "لا يمكن أن يكون وقت النهاية فارغًا.",
+  "gameCreationScreenPriceScreenTitle": "السعر",
+  "gameCreationScreenPriceScreenMemberLabel": "عضو: ",
+  "gameCreationScreenPriceScreenDropInLabel": "زائر: ",
+  "gameCreationScreenAgeRangeScreenTitle": "النطاق العمري",
+  "gameCreationScreenLocationScreenTitle": "الموقع",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "يرجى تحديد موقع.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "الرؤية والصورة",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "صورة الملف الشخصي",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "لافتة",
+  "gameCreationScreenButtonPreviousText": "السابق",
+  "gameCreationScreenButtonNextText": "التالي",
+  "gameCreationScreenButtonFinishText": "إنهاء",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "اسم المستخدم/البريد الإلكتروني",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "كلمة المرور",
+  "loginSignupScreenLoginLoginButton": "تسجيل الدخول",
+  "loginSignupScreenLoginForgotPasswordButton": "نسيت كلمة المرور؟",
+  "loginSignupScreenSignupNameInputPlaceholder": "الاسم",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "اسم المستخدم",
+  "loginSignupScreenSignupEmailInputPlaceholder": "البريد الإلكتروني",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "كلمة المرور",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "كلمة المرور",
+  "loginSignupScreenSignupSignupButton": "التسجيل",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "جديد في MyoroMatchup؟ سجل!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "مسجل بالفعل؟ سجل الدخول!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "لا يمكن أن يكون اسم المستخدم/البريد الإلكتروني فارغًا.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "لا يمكن أن تكون كلمة المرور فارغة.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "لا يمكن أن يكون الاسم فارغًا.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "لا يمكن أن يكون اسم المستخدم فارغًا.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "لا يمكن أن يكون البريد الإلكتروني فارغًا.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "لا يمكن أن تكون حقول كلمة المرور فارغة.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "كلمات المرور غير متطابقة.",
+
+  "mmAppBarMenuDrawerTitle": "القائمة",
+  "mmAppBarMenuDrawerUserScreenText": "شاشة المستخدم",
+  "mmAppBarMenuDrawerCreateGameText": "إنشاء لعبة"
+}
+

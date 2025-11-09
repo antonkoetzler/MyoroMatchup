@@ -35,6 +35,15 @@ class AppLocalizationsEs extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'Continente';
 
   @override
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
+    return '$city, $emoji $countryName';
+  }
+
+  @override
   String get visibilityEnumPrivateLabel => 'Privado';
 
   @override
@@ -100,8 +109,15 @@ class AppLocalizationsEs extends AppLocalizations {
   String get gameCreationScreenNameScreenTitle => 'Nombre';
 
   @override
+  String get gameCreationScreenNameScreenNameInputLabel => 'Nombre';
+
+  @override
   String get gameCreationScreenNameScreenNameInputPlaceholder =>
       'i.e., Partido Semanal de Fútbol';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
+      'El nombre no puede estar vacío.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Deporte';
@@ -122,6 +138,16 @@ class AppLocalizationsEs extends AppLocalizations {
   String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'Fin';
 
   @override
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+      'La hora de inicio no puede estar vacía.';
+
+  @override
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+      'La hora de finalización no puede estar vacía.';
+
+  @override
   String get gameCreationScreenPriceScreenTitle => 'Precio';
 
   @override
@@ -137,8 +163,30 @@ class AppLocalizationsEs extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Ubicación';
 
   @override
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      'Por favor, seleccione una ubicación.';
+
+  @override
+  String gameCreationScreenLocationScreenCurrencyNotificationText(
+    String emoji,
+    String locationName,
+    String currencySymbol,
+  ) {
+    return '$emoji $locationName selected, $currencySymbol will be used as the currency.';
+  }
+
+  @override
   String get gameCreationScreenVisibilityAndImageScreenTitle =>
       'Visibilidad e Imagen';
+
+  @override
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      'Foto de perfil';
+
+  @override
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      'Banner';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Anterior';
@@ -218,27 +266,6 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
       'Las contraseñas no coinciden.';
-
-  @override
-  String get mmDayEnumMondayLabel => 'Lunes';
-
-  @override
-  String get mmDayEnumTuesdayLabel => 'Martes';
-
-  @override
-  String get mmDayEnumWednesdayLabel => 'Miércoles';
-
-  @override
-  String get mmDayEnumThursdayLabel => 'Jueves';
-
-  @override
-  String get mmDayEnumFridayLabel => 'Viernes';
-
-  @override
-  String get mmDayEnumSaturdayLabel => 'Sábado';
-
-  @override
-  String get mmDayEnumSundayLabel => 'Domingo';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Menú';

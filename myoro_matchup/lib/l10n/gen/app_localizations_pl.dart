@@ -1,0 +1,276 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Polish (`pl`).
+class AppLocalizationsPl extends AppLocalizations {
+  AppLocalizationsPl([String locale = 'pl']) : super(locale);
+
+  @override
+  String get httpClientConnectionExceptionMessage =>
+      'Nie można połączyć się z serwerem, sprawdź połączenie internetowe i spróbuj ponownie.';
+
+  @override
+  String get mmErrorFeedbackSubtitle =>
+      'Sprawdź połączenie i spróbuj ponownie!';
+
+  @override
+  String get mmErrorFeedbackActionButtonText => 'Spróbuj ponownie';
+
+  @override
+  String get mmLocationInputTypeEnumPlaceLabel => 'Miejsce';
+
+  @override
+  String get mmLocationInputTypeEnumCityLabel => 'Miasto';
+
+  @override
+  String get mmLocationInputTypeEnumStateLabel => 'Województwo';
+
+  @override
+  String get mmLocationInputTypeEnumCountryLabel => 'Kraj';
+
+  @override
+  String get mmLocationInputTypeEnumContinentLabel => 'Kontynent';
+
+  @override
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
+    return '$city, $emoji $countryName';
+  }
+
+  @override
+  String get visibilityEnumPrivateLabel => 'Prywatny';
+
+  @override
+  String get visibilityEnumPublicLabel => 'Publiczny';
+
+  @override
+  String get frequencyEnumWeeklyLabel => 'Tygodniowo';
+
+  @override
+  String get frequencyEnumBiWeeklyLabel => 'Co dwa tygodnie';
+
+  @override
+  String get frequencyEnumMonthlyLabel => 'Miesięcznie';
+
+  @override
+  String get frequencyEnumYearlyLabel => 'Rocznie';
+
+  @override
+  String get sportsEnumFootballLabel => 'Piłka nożna';
+
+  @override
+  String get sportsEnumFutsalLabel => 'Futsal';
+
+  @override
+  String get sportsEnumFut7Label => 'Fut7';
+
+  @override
+  String get sportsEnumVolleyballLabel => 'Siatkówka';
+
+  @override
+  String get gameDetailsScreenBodyErrorStateTitle =>
+      'Nie udało się pobrać szczegółów gry!';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Gracze';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Gracze';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
+      'Rankingi';
+
+  @override
+  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+
+  @override
+  String get gameListingScreenBodyErrorStateTitle =>
+      'Błąd podczas pobierania gier!';
+
+  @override
+  String get gameListingScreenBodySuccessStateEmptyTitle =>
+      'Nie znaleziono gier!';
+
+  @override
+  String get gameListingScreenNewGameButtonText => 'Utwórz grę';
+
+  @override
+  String get gameCreationScreenAppBarTitle => 'Utwórz grę';
+
+  @override
+  String get gameCreationScreenNameScreenTitle => 'Nazwa';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputLabel => 'Nazwa';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputPlaceholder =>
+      'np. Tygodniowa gra w piłkę nożną';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
+      'Nazwa nie może być pusta.';
+
+  @override
+  String get gameCreationScreenSportScreenTitle => 'Sport';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
+      'Częstotliwość i Data/Godzina';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      'Częstotliwość';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      'Start';
+
+  @override
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
+      'Koniec';
+
+  @override
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+      'Godzina rozpoczęcia nie może być pusta.';
+
+  @override
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+      'Godzina zakończenia nie może być pusta.';
+
+  @override
+  String get gameCreationScreenPriceScreenTitle => 'Cena';
+
+  @override
+  String get gameCreationScreenPriceScreenMemberLabel => 'Członek: ';
+
+  @override
+  String get gameCreationScreenPriceScreenDropInLabel => 'Gość: ';
+
+  @override
+  String get gameCreationScreenAgeRangeScreenTitle => 'Zakres wiekowy';
+
+  @override
+  String get gameCreationScreenLocationScreenTitle => 'Lokalizacja';
+
+  @override
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      'Proszę wybrać lokalizację.';
+
+  @override
+  String gameCreationScreenLocationScreenCurrencyNotificationText(
+    String emoji,
+    String locationName,
+    String currencySymbol,
+  ) {
+    return '$emoji $locationName selected, $currencySymbol will be used as the currency.';
+  }
+
+  @override
+  String get gameCreationScreenVisibilityAndImageScreenTitle =>
+      'Widoczność i Obraz';
+
+  @override
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      'Zdjęcie profilowe';
+
+  @override
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      'Baner';
+
+  @override
+  String get gameCreationScreenButtonPreviousText => 'Wstecz';
+
+  @override
+  String get gameCreationScreenButtonNextText => 'Dalej';
+
+  @override
+  String get gameCreationScreenButtonFinishText => 'Zakończ';
+
+  @override
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+      'Nazwa użytkownika/e-mail';
+
+  @override
+  String get loginSignupScreenLoginPasswordInputPlaceholder => 'Hasło';
+
+  @override
+  String get loginSignupScreenLoginLoginButton => 'Zaloguj się';
+
+  @override
+  String get loginSignupScreenLoginForgotPasswordButton => 'Zapomniałeś hasła?';
+
+  @override
+  String get loginSignupScreenSignupNameInputPlaceholder => 'Imię';
+
+  @override
+  String get loginSignupScreenSignupUsernameInputPlaceholder =>
+      'Nazwa użytkownika';
+
+  @override
+  String get loginSignupScreenSignupEmailInputPlaceholder => 'E-mail';
+
+  @override
+  String get loginSignupScreenSignupPasswordInputPlaceholder => 'Hasło';
+
+  @override
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'Hasło';
+
+  @override
+  String get loginSignupScreenSignupSignupButton => 'Zarejestruj się';
+
+  @override
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'Nowy w MyoroMatchup? Zarejestruj się!';
+
+  @override
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      'Już zarejestrowany? Zaloguj się!';
+
+  @override
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'Nazwa użytkownika/e-mail nie może być pusta.';
+
+  @override
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'Hasło nie może być puste.';
+
+  @override
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      'Imię nie może być puste.';
+
+  @override
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'Nazwa użytkownika nie może być pusta.';
+
+  @override
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'E-mail nie może być pusty.';
+
+  @override
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'Pola hasła nie mogą być puste.';
+
+  @override
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      'Hasła nie pasują do siebie.';
+
+  @override
+  String get mmAppBarMenuDrawerTitle => 'Menu';
+
+  @override
+  String get mmAppBarMenuDrawerUserScreenText => 'Ekran użytkownika';
+
+  @override
+  String get mmAppBarMenuDrawerCreateGameText => 'Utwórz grę';
+}

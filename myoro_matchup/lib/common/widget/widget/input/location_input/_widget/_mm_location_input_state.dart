@@ -3,13 +3,30 @@ part of '../mm_location_input.dart';
 /// [State] of [MmLocationInput].
 final class _MmLocationInputState extends State<MmLocationInput> {
   /// View model.
-  late final MmLocationInputViewModel _viewModel;
+  final _viewModel = getIt<MmLocationInputViewModel>();
 
   /// Initialize state function.
   @override
   void initState() {
     super.initState();
-    _viewModel = getIt<MmLocationInputViewModel>(param1: widget.type);
+    _viewModel.state
+      ..type = widget.type
+      ..onChanged = widget.onChanged
+      ..focusNode = widget.focusNode
+      ..validation = widget.validation
+      ..onFieldSubmitted = widget.onFieldSubmitted;
+  }
+
+  /// Did update widget function.
+  @override
+  void didUpdateWidget(MmLocationInput oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    _viewModel.state
+      ..type = widget.type
+      ..onChanged = widget.onChanged
+      ..focusNode = widget.focusNode
+      ..validation = widget.validation
+      ..onFieldSubmitted = widget.onFieldSubmitted;
   }
 
   /// Build state function.
@@ -18,15 +35,23 @@ final class _MmLocationInputState extends State<MmLocationInput> {
     final state = _viewModel.state;
     final type = state.type;
     final label = type.label;
-    final request = _viewModel.request;
+    final requestCallback = _viewModel.requestCallback;
+    final onChanged = state.onChanged;
+    final focusNode = state.focusNode;
+    final validation = state.validation;
+    final onFieldSubmitted = state.onFieldSubmitted;
 
     return InheritedProvider.value(
       value: _viewModel,
       child: MyoroSearchInput<Location>(
         label: label,
-        request: request,
-        itemBuilder: (item) => MyoroMenuButtonItem(builder: (_, _) => const _Item(), onTapUp: (_) {}),
+        requestCallback: requestCallback,
+        onChanged: onChanged,
+        itemBuilder: (item) => MyoroMenuButtonItem(builder: (_, _) => _Item(item), onTapUp: (_) {}),
         selectedItemBuilder: (item) => item.name,
+        validation: validation,
+        focusNode: focusNode,
+        onFieldSubmitted: onFieldSubmitted,
       ),
     );
   }

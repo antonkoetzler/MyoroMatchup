@@ -13,8 +13,10 @@ part of 'mm_empty_feedback_theme_extension.dart';
 /// ```dart
 /// class MmEmptyFeedbackThemeExtension with _$MmEmptyFeedbackThemeExtensionMixin {}
 /// ```
-mixin _$MmEmptyFeedbackThemeExtensionMixin on ThemeExtension<MmEmptyFeedbackThemeExtension> {
-  MmEmptyFeedbackThemeExtension get self => this as MmEmptyFeedbackThemeExtension;
+mixin _$MmEmptyFeedbackThemeExtensionMixin
+    on ThemeExtension<MmEmptyFeedbackThemeExtension> {
+  MmEmptyFeedbackThemeExtension get self =>
+      this as MmEmptyFeedbackThemeExtension;
 
   @override
   MmEmptyFeedbackThemeExtension copyWith() {
@@ -23,7 +25,8 @@ mixin _$MmEmptyFeedbackThemeExtensionMixin on ThemeExtension<MmEmptyFeedbackThem
 
   @override
   bool operator ==(Object other) {
-    return other is MmEmptyFeedbackThemeExtension && other.runtimeType == runtimeType;
+    return other is MmEmptyFeedbackThemeExtension &&
+        other.runtimeType == runtimeType;
   }
 
   @override

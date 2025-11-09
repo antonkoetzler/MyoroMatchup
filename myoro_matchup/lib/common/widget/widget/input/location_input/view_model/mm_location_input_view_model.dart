@@ -1,5 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 
 part 'mm_location_input_state.dart';
 
@@ -7,18 +9,17 @@ part 'mm_location_input_state.dart';
 @injectable
 final class MmLocationInputViewModel {
   /// Default constructor.
-  MmLocationInputViewModel(this._locationRepository, @factoryParam LocationTypeEnum type)
-    : _state = MmLocationInputState(type);
+  MmLocationInputViewModel(this._locationRepository);
 
   /// [LocationRepository] to search for places.
   final LocationRepository _locationRepository;
 
   /// State.
-  final MmLocationInputState _state;
+  final _state = MmLocationInputState();
 
-  /// [MyoroSearchInputConfiguration.request] of the [MmLocationInput].
-  Future<Set<Location>> request(String query) async {
-    final response = await _locationRepository.select();
+  /// [MyoroSearchInput.requestCallback] of the [MmLocationInput].
+  Future<Set<Location>> requestCallback(String query) async {
+    final response = await _locationRepository.select(query);
     return response;
   }
 

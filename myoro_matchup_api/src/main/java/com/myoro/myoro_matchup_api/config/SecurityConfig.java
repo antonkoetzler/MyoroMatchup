@@ -35,7 +35,6 @@ public class SecurityConfig {
             .authenticationEntryPoint(customAuthenticationEntryPoint))
         .authorizeHttpRequests(authz -> authz
             .requestMatchers("/api/auth/**").permitAll()
-            .requestMatchers("/api/users/**").permitAll()
             .requestMatchers("/").permitAll()
             .requestMatchers("/api/test/**").permitAll()
             .requestMatchers("/swagger-ui/**").permitAll()

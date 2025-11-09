@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "Không thể kết nối với máy chủ, vui lòng kiểm tra kết nối internet của bạn và thử lại.",
+  
+  "mmErrorFeedbackSubtitle": "Vui lòng xác minh kết nối của bạn và thử lại!",
+  "mmErrorFeedbackActionButtonText": "Thử lại",
+
+  "mmLocationInputTypeEnumPlaceLabel": "Địa điểm",
+  "mmLocationInputTypeEnumCityLabel": "Thành phố",
+  "mmLocationInputTypeEnumStateLabel": "Bang",
+  "mmLocationInputTypeEnumCountryLabel": "Quốc gia",
+  "mmLocationInputTypeEnumContinentLabel": "Lục địa",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "Riêng tư",
+  "visibilityEnumPublicLabel": "Công khai",
+
+  "frequencyEnumWeeklyLabel": "Hàng tuần",
+  "frequencyEnumBiWeeklyLabel": "Hai tuần một lần",
+  "frequencyEnumMonthlyLabel": "Hàng tháng",
+  "frequencyEnumYearlyLabel": "Hàng năm",
+
+  "sportsEnumFootballLabel": "Bóng đá",
+  "sportsEnumFutsalLabel": "Futsal",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Bóng chuyền",
+
+  "gameDetailsScreenBodyErrorStateTitle": "Không thể lấy chi tiết trò chơi!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Người chơi",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Người chơi",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Bảng xếp hạng",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "Lỗi khi lấy trò chơi!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "Không tìm thấy trò chơi!",
+  "gameListingScreenNewGameButtonText": "Tạo trò chơi",
+
+  "gameCreationScreenAppBarTitle": "Tạo trò chơi",
+  "gameCreationScreenNameScreenTitle": "Tên",
+  "gameCreationScreenNameScreenNameInputLabel": "Tên",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "ví dụ: Trận bóng đá hàng tuần",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "Tên không thể để trống.",
+  "gameCreationScreenSportScreenTitle": "Môn thể thao",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Tần suất và Ngày/Giờ",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Tần suất",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "Bắt đầu",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "Kết thúc",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "Thời gian bắt đầu không thể để trống.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "Thời gian kết thúc không thể để trống.",
+  "gameCreationScreenPriceScreenTitle": "Giá",
+  "gameCreationScreenPriceScreenMemberLabel": "Thành viên: ",
+  "gameCreationScreenPriceScreenDropInLabel": "Khách: ",
+  "gameCreationScreenAgeRangeScreenTitle": "Độ tuổi",
+  "gameCreationScreenLocationScreenTitle": "Vị trí",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "Vui lòng chọn một vị trí.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "Hiển thị và Hình ảnh",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "Ảnh đại diện",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "Biểu ngữ",
+  "gameCreationScreenButtonPreviousText": "Trước",
+  "gameCreationScreenButtonNextText": "Tiếp",
+  "gameCreationScreenButtonFinishText": "Hoàn thành",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Tên người dùng/email",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "Mật khẩu",
+  "loginSignupScreenLoginLoginButton": "Đăng nhập",
+  "loginSignupScreenLoginForgotPasswordButton": "Quên mật khẩu?",
+  "loginSignupScreenSignupNameInputPlaceholder": "Tên",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "Tên người dùng",
+  "loginSignupScreenSignupEmailInputPlaceholder": "Email",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "Mật khẩu",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Mật khẩu",
+  "loginSignupScreenSignupSignupButton": "Đăng ký",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Mới với MyoroMatchup? Đăng ký!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Đã đăng ký? Đăng nhập!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Tên người dùng/email không thể để trống.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Mật khẩu không thể để trống.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Tên không thể để trống.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Tên người dùng không thể để trống.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email không thể để trống.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Các trường mật khẩu không thể để trống.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Mật khẩu không khớp.",
+
+  "mmAppBarMenuDrawerTitle": "Menu",
+  "mmAppBarMenuDrawerUserScreenText": "Màn hình người dùng",
+  "mmAppBarMenuDrawerCreateGameText": "Tạo trò chơi"
+}
+

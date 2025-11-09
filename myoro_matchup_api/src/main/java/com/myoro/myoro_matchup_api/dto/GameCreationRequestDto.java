@@ -40,11 +40,9 @@ public class GameCreationRequestDto {
   private GameVisibilityEnum visibility;
 
   /** Profile picture of the game. */
-  @NotBlank(message = "{validation.game.profile.picture.required}")
   private String profilePicture;
 
   /** Banner of the game. */
-  @NotBlank(message = "{validation.game.banner.required}")
   private String banner;
 
   /** Default constructor. */

@@ -4,7 +4,7 @@ part of '../game_details_screen.dart';
 final class _AppBar extends MmAppBar {
   const _AppBar(this._game) : super();
 
-  final Game _game;
+  final GameResponseDto _game;
 
   @override
   Widget build(context) {

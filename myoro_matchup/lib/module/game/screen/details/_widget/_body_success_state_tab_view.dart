@@ -6,7 +6,7 @@ final class _BodySuccessStateTabView extends StatelessWidget {
 
   // TODO
   // ignore: unused_field
-  final Game _game;
+  final GameResponseDto _game;
 
   @override
   Widget build(_) {

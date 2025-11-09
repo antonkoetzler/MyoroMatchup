@@ -18,11 +18,15 @@ public class GameFrequencyDayTimeDto {
   /** Day of the game. */
   @NotNull(message = "{validation.game.days.required}")
   @NotEmpty(message = "{validation.game.days.not.empty}")
+  make their
+  own dto
   private List<DayEnum> days;
 
   /** Time of the game. */
   @NotNull(message = "{validation.game.times.required}")
   @NotEmpty(message = "{validation.game.times.not.empty}")
+  make their
+  own dto
   private List<LocalTime> times;
 
   /** Default constructor. */
@@ -90,4 +94,3 @@ public class GameFrequencyDayTimeDto {
     this.times = times;
   }
 }
-

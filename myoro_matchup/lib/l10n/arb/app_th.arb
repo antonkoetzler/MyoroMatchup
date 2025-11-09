@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณและลองอีกครั้ง",
+  
+  "mmErrorFeedbackSubtitle": "โปรดตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้ง!",
+  "mmErrorFeedbackActionButtonText": "ลองอีกครั้ง",
+
+  "mmLocationInputTypeEnumPlaceLabel": "สถานที่",
+  "mmLocationInputTypeEnumCityLabel": "เมือง",
+  "mmLocationInputTypeEnumStateLabel": "รัฐ",
+  "mmLocationInputTypeEnumCountryLabel": "ประเทศ",
+  "mmLocationInputTypeEnumContinentLabel": "ทวีป",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "ส่วนตัว",
+  "visibilityEnumPublicLabel": "สาธารณะ",
+
+  "frequencyEnumWeeklyLabel": "รายสัปดาห์",
+  "frequencyEnumBiWeeklyLabel": "ทุกสองสัปดาห์",
+  "frequencyEnumMonthlyLabel": "รายเดือน",
+  "frequencyEnumYearlyLabel": "รายปี",
+
+  "sportsEnumFootballLabel": "ฟุตบอล",
+  "sportsEnumFutsalLabel": "ฟุตซอล",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "วอลเลย์บอล",
+
+  "gameDetailsScreenBodyErrorStateTitle": "ไม่สามารถดึงรายละเอียดเกมได้!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "ผู้เล่น",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "ผู้เล่น",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "อันดับ",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "เกิดข้อผิดพลาดในการดึงเกม!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "ไม่พบเกม!",
+  "gameListingScreenNewGameButtonText": "สร้างเกม",
+
+  "gameCreationScreenAppBarTitle": "สร้างเกม",
+  "gameCreationScreenNameScreenTitle": "ชื่อ",
+  "gameCreationScreenNameScreenNameInputLabel": "ชื่อ",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "เช่น เกมฟุตบอลรายสัปดาห์",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "ชื่อไม่สามารถว่างได้",
+  "gameCreationScreenSportScreenTitle": "กีฬา",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "ความถี่และวันที่/เวลา",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "ความถี่",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "เริ่มต้น",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "สิ้นสุด",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "เวลาเริ่มต้นไม่สามารถว่างได้",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "เวลาสิ้นสุดไม่สามารถว่างได้",
+  "gameCreationScreenPriceScreenTitle": "ราคา",
+  "gameCreationScreenPriceScreenMemberLabel": "สมาชิก: ",
+  "gameCreationScreenPriceScreenDropInLabel": "แขก: ",
+  "gameCreationScreenAgeRangeScreenTitle": "ช่วงอายุ",
+  "gameCreationScreenLocationScreenTitle": "ตำแหน่ง",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "กรุณาเลือกตำแหน่ง",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "การมองเห็นและรูปภาพ",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "รูปโปรไฟล์",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "แบนเนอร์",
+  "gameCreationScreenButtonPreviousText": "ก่อนหน้า",
+  "gameCreationScreenButtonNextText": "ถัดไป",
+  "gameCreationScreenButtonFinishText": "เสร็จสิ้น",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "ชื่อผู้ใช้/อีเมล",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "รหัสผ่าน",
+  "loginSignupScreenLoginLoginButton": "เข้าสู่ระบบ",
+  "loginSignupScreenLoginForgotPasswordButton": "ลืมรหัสผ่าน?",
+  "loginSignupScreenSignupNameInputPlaceholder": "ชื่อ",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "ชื่อผู้ใช้",
+  "loginSignupScreenSignupEmailInputPlaceholder": "อีเมล",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "รหัสผ่าน",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "รหัสผ่าน",
+  "loginSignupScreenSignupSignupButton": "สมัครสมาชิก",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "ใหม่ใน MyoroMatchup? สมัครสมาชิก!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "ลงทะเบียนแล้ว? เข้าสู่ระบบ!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "ชื่อผู้ใช้/อีเมลไม่สามารถว่างได้",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "รหัสผ่านไม่สามารถว่างได้",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "ชื่อไม่สามารถว่างได้",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "ชื่อผู้ใช้ไม่สามารถว่างได้",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "อีเมลไม่สามารถว่างได้",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "ฟิลด์รหัสผ่านไม่สามารถว่างได้",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "รหัสผ่านไม่ตรงกัน",
+
+  "mmAppBarMenuDrawerTitle": "เมนู",
+  "mmAppBarMenuDrawerUserScreenText": "หน้าจอผู้ใช้",
+  "mmAppBarMenuDrawerCreateGameText": "สร้างเกม"
+}
+

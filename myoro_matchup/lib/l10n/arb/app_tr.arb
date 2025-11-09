@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "Sunucuya bağlanılamadı, lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.",
+  
+  "mmErrorFeedbackSubtitle": "Lütfen bağlantınızı doğrulayın ve tekrar deneyin!",
+  "mmErrorFeedbackActionButtonText": "Yeniden Dene",
+
+  "mmLocationInputTypeEnumPlaceLabel": "Yer",
+  "mmLocationInputTypeEnumCityLabel": "Şehir",
+  "mmLocationInputTypeEnumStateLabel": "Eyalet",
+  "mmLocationInputTypeEnumCountryLabel": "Ülke",
+  "mmLocationInputTypeEnumContinentLabel": "Kıta",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "Özel",
+  "visibilityEnumPublicLabel": "Herkese Açık",
+
+  "frequencyEnumWeeklyLabel": "Haftalık",
+  "frequencyEnumBiWeeklyLabel": "İki Haftada Bir",
+  "frequencyEnumMonthlyLabel": "Aylık",
+  "frequencyEnumYearlyLabel": "Yıllık",
+
+  "sportsEnumFootballLabel": "Futbol",
+  "sportsEnumFutsalLabel": "Futsal",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Voleybol",
+
+  "gameDetailsScreenBodyErrorStateTitle": "Oyun detayları alınamadı!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Oyuncular",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Oyuncular",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Sıralamalar",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "Oyunlar alınırken hata oluştu!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "Oyun bulunamadı!",
+  "gameListingScreenNewGameButtonText": "Oyun oluştur",
+
+  "gameCreationScreenAppBarTitle": "Oyun oluştur",
+  "gameCreationScreenNameScreenTitle": "İsim",
+  "gameCreationScreenNameScreenNameInputLabel": "İsim",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "örn. Haftalık Futbol Maçı",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "İsim boş olamaz.",
+  "gameCreationScreenSportScreenTitle": "Spor",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Sıklık ve Tarih/Saat",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Sıklık",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "Başlangıç",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "Bitiş",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "Başlangıç saati boş olamaz.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "Bitiş saati boş olamaz.",
+  "gameCreationScreenPriceScreenTitle": "Fiyat",
+  "gameCreationScreenPriceScreenMemberLabel": "Üye: ",
+  "gameCreationScreenPriceScreenDropInLabel": "Misafir: ",
+  "gameCreationScreenAgeRangeScreenTitle": "Yaş Aralığı",
+  "gameCreationScreenLocationScreenTitle": "Konum",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "Lütfen bir konum seçin.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "Görünürlük ve Görsel",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "Profil Resmi",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "Afiş",
+  "gameCreationScreenButtonPreviousText": "Önceki",
+  "gameCreationScreenButtonNextText": "Sonraki",
+  "gameCreationScreenButtonFinishText": "Bitir",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Kullanıcı adı/e-posta",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "Şifre",
+  "loginSignupScreenLoginLoginButton": "Giriş Yap",
+  "loginSignupScreenLoginForgotPasswordButton": "Şifrenizi mi unuttunuz?",
+  "loginSignupScreenSignupNameInputPlaceholder": "İsim",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "Kullanıcı adı",
+  "loginSignupScreenSignupEmailInputPlaceholder": "E-posta",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "Şifre",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Şifre",
+  "loginSignupScreenSignupSignupButton": "Kayıt Ol",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchup'a yeni misiniz? Kayıt olun!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Zaten kayıtlı mısınız? Giriş yapın!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Kullanıcı adı/e-posta boş olamaz.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Şifre boş olamaz.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "İsim boş olamaz.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Kullanıcı adı boş olamaz.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "E-posta boş olamaz.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Şifre alanları boş olamaz.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Şifreler eşleşmiyor.",
+
+  "mmAppBarMenuDrawerTitle": "Menü",
+  "mmAppBarMenuDrawerUserScreenText": "Kullanıcı Ekranı",
+  "mmAppBarMenuDrawerCreateGameText": "Oyun Oluştur"
+}
+

@@ -13,8 +13,10 @@ part of 'game_creation_screen_theme_extension.dart';
 /// ```dart
 /// class GameCreationScreenThemeExtension with _$GameCreationScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScreenThemeExtension> {
-  GameCreationScreenThemeExtension get self => this as GameCreationScreenThemeExtension;
+mixin _$GameCreationScreenThemeExtensionMixin
+    on ThemeExtension<GameCreationScreenThemeExtension> {
+  GameCreationScreenThemeExtension get self =>
+      this as GameCreationScreenThemeExtension;
 
   @override
   GameCreationScreenThemeExtension copyWith({
@@ -23,13 +25,23 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
     EdgeInsets? bodyPadding,
     TextStyle? buttonTextStyle,
     TextStyle? priceScreenInputLabelTextStyle,
+    TextStyle? locationScreenCurrencyNotificationTextStyle,
+    MyoroImagePickerStyle?
+    visibilityAndImageScreenProfilePictureImageFieldStyle,
   }) {
     return GameCreationScreenThemeExtension(
       spacing: spacing ?? self.spacing,
       titleTextStyle: titleTextStyle ?? self.titleTextStyle,
       bodyPadding: bodyPadding ?? self.bodyPadding,
       buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
-      priceScreenInputLabelTextStyle: priceScreenInputLabelTextStyle ?? self.priceScreenInputLabelTextStyle,
+      priceScreenInputLabelTextStyle:
+          priceScreenInputLabelTextStyle ?? self.priceScreenInputLabelTextStyle,
+      locationScreenCurrencyNotificationTextStyle:
+          locationScreenCurrencyNotificationTextStyle ??
+          self.locationScreenCurrencyNotificationTextStyle,
+      visibilityAndImageScreenProfilePictureImageFieldStyle:
+          visibilityAndImageScreenProfilePictureImageFieldStyle ??
+          self.visibilityAndImageScreenProfilePictureImageFieldStyle,
     );
   }
 
@@ -41,7 +53,12 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
         other.titleTextStyle == self.titleTextStyle &&
         other.bodyPadding == self.bodyPadding &&
         other.buttonTextStyle == self.buttonTextStyle &&
-        other.priceScreenInputLabelTextStyle == self.priceScreenInputLabelTextStyle;
+        other.priceScreenInputLabelTextStyle ==
+            self.priceScreenInputLabelTextStyle &&
+        other.locationScreenCurrencyNotificationTextStyle ==
+            self.locationScreenCurrencyNotificationTextStyle &&
+        other.visibilityAndImageScreenProfilePictureImageFieldStyle ==
+            self.visibilityAndImageScreenProfilePictureImageFieldStyle;
   }
 
   @override
@@ -52,6 +69,8 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
       self.bodyPadding,
       self.buttonTextStyle,
       self.priceScreenInputLabelTextStyle,
+      self.locationScreenCurrencyNotificationTextStyle,
+      self.visibilityAndImageScreenProfilePictureImageFieldStyle,
     );
   }
 
@@ -63,5 +82,7 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
       '  bodyPadding: ${self.bodyPadding},\n'
       '  buttonTextStyle: ${self.buttonTextStyle},\n'
       '  priceScreenInputLabelTextStyle: ${self.priceScreenInputLabelTextStyle},\n'
+      '  locationScreenCurrencyNotificationTextStyle: ${self.locationScreenCurrencyNotificationTextStyle},\n'
+      '  visibilityAndImageScreenProfilePictureImageFieldStyle: ${self.visibilityAndImageScreenProfilePictureImageFieldStyle},\n'
       ');';
 }

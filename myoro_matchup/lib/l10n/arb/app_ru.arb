@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "Не удалось подключиться к серверу, проверьте подключение к интернету и попробуйте снова.",
+  
+  "mmErrorFeedbackSubtitle": "Пожалуйста, проверьте ваше подключение и попробуйте снова!",
+  "mmErrorFeedbackActionButtonText": "Повторить",
+
+  "mmLocationInputTypeEnumPlaceLabel": "Место",
+  "mmLocationInputTypeEnumCityLabel": "Город",
+  "mmLocationInputTypeEnumStateLabel": "Штат",
+  "mmLocationInputTypeEnumCountryLabel": "Страна",
+  "mmLocationInputTypeEnumContinentLabel": "Континент",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "Приватный",
+  "visibilityEnumPublicLabel": "Публичный",
+
+  "frequencyEnumWeeklyLabel": "Еженедельно",
+  "frequencyEnumBiWeeklyLabel": "Раз в две недели",
+  "frequencyEnumMonthlyLabel": "Ежемесячно",
+  "frequencyEnumYearlyLabel": "Ежегодно",
+
+  "sportsEnumFootballLabel": "Футбол",
+  "sportsEnumFutsalLabel": "Футзал",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Волейбол",
+
+  "gameDetailsScreenBodyErrorStateTitle": "Не удалось получить детали игры!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Игроки",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Игроки",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Рейтинги",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "Ошибка при получении игр!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "Игры не найдены!",
+  "gameListingScreenNewGameButtonText": "Создать игру",
+
+  "gameCreationScreenAppBarTitle": "Создать игру",
+  "gameCreationScreenNameScreenTitle": "Название",
+  "gameCreationScreenNameScreenNameInputLabel": "Название",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "например, Еженедельная футбольная игра",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "Название не может быть пустым.",
+  "gameCreationScreenSportScreenTitle": "Спорт",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Частота и Дата/Время",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Частота",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "Начало",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "Конец",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "Время начала не может быть пустым.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "Время окончания не может быть пустым.",
+  "gameCreationScreenPriceScreenTitle": "Цена",
+  "gameCreationScreenPriceScreenMemberLabel": "Участник: ",
+  "gameCreationScreenPriceScreenDropInLabel": "Гость: ",
+  "gameCreationScreenAgeRangeScreenTitle": "Возрастной диапазон",
+  "gameCreationScreenLocationScreenTitle": "Местоположение",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "Пожалуйста, выберите местоположение.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "Видимость и Изображение",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "Фото профиля",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "Баннер",
+  "gameCreationScreenButtonPreviousText": "Назад",
+  "gameCreationScreenButtonNextText": "Далее",
+  "gameCreationScreenButtonFinishText": "Завершить",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Имя пользователя/email",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "Пароль",
+  "loginSignupScreenLoginLoginButton": "Войти",
+  "loginSignupScreenLoginForgotPasswordButton": "Забыли пароль?",
+  "loginSignupScreenSignupNameInputPlaceholder": "Имя",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "Имя пользователя",
+  "loginSignupScreenSignupEmailInputPlaceholder": "Email",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "Пароль",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Пароль",
+  "loginSignupScreenSignupSignupButton": "Зарегистрироваться",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Новичок в MyoroMatchup? Зарегистрируйтесь!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Уже зарегистрированы? Войдите!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Имя пользователя/email не может быть пустым.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Пароль не может быть пустым.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Имя не может быть пустым.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Имя пользователя не может быть пустым.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email не может быть пустым.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Поля пароля не могут быть пустыми.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Пароли не совпадают.",
+
+  "mmAppBarMenuDrawerTitle": "Меню",
+  "mmAppBarMenuDrawerUserScreenText": "Экран пользователя",
+  "mmAppBarMenuDrawerCreateGameText": "Создать игру"
+}
+

@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "サーバーに接続できませんでした。インターネット接続を確認して、もう一度お試しください。",
+  
+  "mmErrorFeedbackSubtitle": "接続を確認して、もう一度お試しください！",
+  "mmErrorFeedbackActionButtonText": "再試行",
+
+  "mmLocationInputTypeEnumPlaceLabel": "場所",
+  "mmLocationInputTypeEnumCityLabel": "都市",
+  "mmLocationInputTypeEnumStateLabel": "州",
+  "mmLocationInputTypeEnumCountryLabel": "国",
+  "mmLocationInputTypeEnumContinentLabel": "大陸",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "非公開",
+  "visibilityEnumPublicLabel": "公開",
+
+  "frequencyEnumWeeklyLabel": "週次",
+  "frequencyEnumBiWeeklyLabel": "隔週",
+  "frequencyEnumMonthlyLabel": "月次",
+  "frequencyEnumYearlyLabel": "年次",
+
+  "sportsEnumFootballLabel": "サッカー",
+  "sportsEnumFutsalLabel": "フットサル",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "バレーボール",
+
+  "gameDetailsScreenBodyErrorStateTitle": "ゲームの詳細を取得できませんでした！",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "プレイヤー",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "プレイヤー",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "ランキング",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "ゲームの取得中にエラーが発生しました！",
+  "gameListingScreenBodySuccessStateEmptyTitle": "ゲームが見つかりませんでした！",
+  "gameListingScreenNewGameButtonText": "ゲームを作成",
+
+  "gameCreationScreenAppBarTitle": "ゲームを作成",
+  "gameCreationScreenNameScreenTitle": "名前",
+  "gameCreationScreenNameScreenNameInputLabel": "名前",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "例：週次サッカーゲーム",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "名前は空にできません。",
+  "gameCreationScreenSportScreenTitle": "スポーツ",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "頻度と日時",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "頻度",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "開始",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "終了",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "開始時刻は空にできません。",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "終了時刻は空にできません。",
+  "gameCreationScreenPriceScreenTitle": "価格",
+  "gameCreationScreenPriceScreenMemberLabel": "メンバー: ",
+  "gameCreationScreenPriceScreenDropInLabel": "ドロップイン: ",
+  "gameCreationScreenAgeRangeScreenTitle": "年齢範囲",
+  "gameCreationScreenLocationScreenTitle": "場所",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "場所を選択してください。",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "公開設定と画像",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "プロフィール写真",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "バナー",
+  "gameCreationScreenButtonPreviousText": "前へ",
+  "gameCreationScreenButtonNextText": "次へ",
+  "gameCreationScreenButtonFinishText": "完了",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "ユーザー名/メールアドレス",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "パスワード",
+  "loginSignupScreenLoginLoginButton": "ログイン",
+  "loginSignupScreenLoginForgotPasswordButton": "パスワードをお忘れですか？",
+  "loginSignupScreenSignupNameInputPlaceholder": "名前",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "ユーザー名",
+  "loginSignupScreenSignupEmailInputPlaceholder": "メールアドレス",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "パスワード",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "パスワード",
+  "loginSignupScreenSignupSignupButton": "登録",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchupが初めてですか？登録してください！",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "既に登録済みですか？ログインしてください！",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "ユーザー名/メールアドレスは空にできません。",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "パスワードは空にできません。",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "名前は空にできません。",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "ユーザー名は空にできません。",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "メールアドレスは空にできません。",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "パスワードフィールドは空にできません。",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "パスワードが一致しません。",
+
+  "mmAppBarMenuDrawerTitle": "メニュー",
+  "mmAppBarMenuDrawerUserScreenText": "ユーザー画面",
+  "mmAppBarMenuDrawerCreateGameText": "ゲームを作成"
+}
+

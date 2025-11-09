@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "无法连接到服务器，请检查您的网络连接后重试。",
+  
+  "mmErrorFeedbackSubtitle": "请检查您的连接后重试！",
+  "mmErrorFeedbackActionButtonText": "重试",
+
+  "mmLocationInputTypeEnumPlaceLabel": "地点",
+  "mmLocationInputTypeEnumCityLabel": "城市",
+  "mmLocationInputTypeEnumStateLabel": "州/省",
+  "mmLocationInputTypeEnumCountryLabel": "国家",
+  "mmLocationInputTypeEnumContinentLabel": "大洲",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "私密",
+  "visibilityEnumPublicLabel": "公开",
+
+  "frequencyEnumWeeklyLabel": "每周",
+  "frequencyEnumBiWeeklyLabel": "每两周",
+  "frequencyEnumMonthlyLabel": "每月",
+  "frequencyEnumYearlyLabel": "每年",
+
+  "sportsEnumFootballLabel": "足球",
+  "sportsEnumFutsalLabel": "五人制足球",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "排球",
+
+  "gameDetailsScreenBodyErrorStateTitle": "无法获取游戏详情！",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "玩家",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "玩家",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "排名",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "获取游戏时出错！",
+  "gameListingScreenBodySuccessStateEmptyTitle": "未找到游戏！",
+  "gameListingScreenNewGameButtonText": "创建游戏",
+
+  "gameCreationScreenAppBarTitle": "创建游戏",
+  "gameCreationScreenNameScreenTitle": "名称",
+  "gameCreationScreenNameScreenNameInputLabel": "名称",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "例如：每周足球赛",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "名称不能为空。",
+  "gameCreationScreenSportScreenTitle": "运动",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "频率和日期/时间",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "频率",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "开始",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "结束",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "开始时间不能为空。",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "结束时间不能为空。",
+  "gameCreationScreenPriceScreenTitle": "价格",
+  "gameCreationScreenPriceScreenMemberLabel": "会员: ",
+  "gameCreationScreenPriceScreenDropInLabel": "临时: ",
+  "gameCreationScreenAgeRangeScreenTitle": "年龄范围",
+  "gameCreationScreenLocationScreenTitle": "位置",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "请选择一个位置。",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "可见性和图片",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "头像",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "横幅",
+  "gameCreationScreenButtonPreviousText": "上一步",
+  "gameCreationScreenButtonNextText": "下一步",
+  "gameCreationScreenButtonFinishText": "完成",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "用户名/邮箱",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "密码",
+  "loginSignupScreenLoginLoginButton": "登录",
+  "loginSignupScreenLoginForgotPasswordButton": "忘记密码？",
+  "loginSignupScreenSignupNameInputPlaceholder": "姓名",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "用户名",
+  "loginSignupScreenSignupEmailInputPlaceholder": "邮箱",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "密码",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "密码",
+  "loginSignupScreenSignupSignupButton": "注册",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "新用户？注册！",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "已有账号？登录！",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "用户名/邮箱不能为空。",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "密码不能为空。",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "姓名不能为空。",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "用户名不能为空。",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "邮箱不能为空。",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "密码字段不能为空。",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "密码不匹配。",
+
+  "mmAppBarMenuDrawerTitle": "菜单",
+  "mmAppBarMenuDrawerUserScreenText": "用户界面",
+  "mmAppBarMenuDrawerCreateGameText": "创建游戏"
+}
+

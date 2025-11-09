@@ -21,15 +21,31 @@ part '_widget/_price_screen_input.dart';
 part '_widget/_visibility_and_image_screen_visibility_field.dart';
 part '_widget/_visibility_and_image_screen_profile_picture_image_field.dart';
 part '_widget/_visibility_and_image_screen_banner_image_field.dart';
+part '_widget/_frequency_day_time_screen_bi_weekly_day_field.dart';
+part '_widget/_day_button_row.dart';
+part '_widget/_image_picker.dart';
 
 /// Screen to create a new [Game].
 final class GameCreationScreen extends StatelessWidget {
+  /// Screens.
+  static final screens = [
+    _NameScreen(),
+    _SportScreen(),
+    _FrequencyDayTimeScreen(),
+    _LocationScreen(),
+    _PriceScreen(),
+    _AgeRangeScreen(),
+    _VisibilityAndImageScreen(),
+  ];
+
+  /// Default constructor.
   const GameCreationScreen({super.key});
 
+  /// Build function.
   @override
   Widget build(_) {
     return InheritedProvider(
-      create: (_) => GameCreationScreenViewModel(),
+      create: (_) => getIt<GameCreationScreenViewModel>(),
       child: MyoroScreen(appBar: _AppBar(), body: const _Body()),
     );
   }

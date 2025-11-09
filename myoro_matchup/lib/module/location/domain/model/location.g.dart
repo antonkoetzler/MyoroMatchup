@@ -6,13 +6,16 @@ part of 'location.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Location _$LocationFromJson(Map<String, dynamic> json) =>
-    Location(name: json['name'] as String, city: json['city'] as String, country: json['country'] as String);
+Location _$LocationFromJson(Map<String, dynamic> json) => Location(
+  name: json['name'] as String? ?? '',
+  city: json['city'] as String? ?? '',
+  country: Location._countryFromJson(json['country']),
+);
 
 Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
   'name': instance.name,
   'city': instance.city,
-  'country': instance.country,
+  'country': Location._countryToJson(instance.country),
 };
 
 // **************************************************************************
@@ -29,8 +32,17 @@ Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
 mixin _$LocationMixin {
   Location get self => this as Location;
 
-  Location copyWith({String? name, String? city, String? country}) {
-    return Location(name: name ?? self.name, city: city ?? self.city, country: country ?? self.country);
+  Location copyWith({
+    String? name,
+    String? city,
+    MyoroCountryEnum? country,
+    bool countryProvided = true,
+  }) {
+    return Location(
+      name: name ?? self.name,
+      city: city ?? self.city,
+      country: countryProvided ? (country ?? self.country) : null,
+    );
   }
 
   @override

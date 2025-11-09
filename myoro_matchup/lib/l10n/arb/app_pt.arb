@@ -9,6 +9,20 @@
   "mmLocationInputTypeEnumStateLabel": "Estado",
   "mmLocationInputTypeEnumCountryLabel": "País",
   "mmLocationInputTypeEnumContinentLabel": "Continente",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
 
   "visibilityEnumPrivateLabel": "Privado",
   "visibilityEnumPublicLabel": "Público",
@@ -35,18 +49,39 @@
 
   "gameCreationScreenAppBarTitle": "Criar jogo",
   "gameCreationScreenNameScreenTitle": "Nome",
+  "gameCreationScreenNameScreenNameInputLabel": "Nome",
   "gameCreationScreenNameScreenNameInputPlaceholder": "i.e., Partida Semanal de Futebol",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "O nome não pode estar vazio.",
   "gameCreationScreenSportScreenTitle": "Esporte",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Frequência e Data/Hora",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frequência",
   "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "Início",
   "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "Fim",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "O horário de início não pode estar vazio.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "O horário de término não pode estar vazio.",
   "gameCreationScreenPriceScreenTitle": "Preço",
   "gameCreationScreenPriceScreenMemberLabel": "Membro: ",
   "gameCreationScreenPriceScreenDropInLabel": "Visitante: ",
   "gameCreationScreenAgeRangeScreenTitle": "Faixa Etária",
   "gameCreationScreenLocationScreenTitle": "Localização",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "Por favor, selecione uma localização.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
   "gameCreationScreenVisibilityAndImageScreenTitle": "Visibilidade e Imagem",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "Foto de Perfil",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "Banner",
   "gameCreationScreenButtonPreviousText": "Anterior",
   "gameCreationScreenButtonNextText": "Próximo",
   "gameCreationScreenButtonFinishText": "Finalizar",
@@ -70,14 +105,6 @@
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "O e-mail não pode estar vazio.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Os campos de senha não podem estar vazios.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "As senhas não coincidem.",
-
-  "mmDayEnumMondayLabel": "Segunda-feira",
-  "mmDayEnumTuesdayLabel": "Terça-feira",
-  "mmDayEnumWednesdayLabel": "Quarta-feira",
-  "mmDayEnumThursdayLabel": "Quinta-feira",
-  "mmDayEnumFridayLabel": "Sexta-feira",
-  "mmDayEnumSaturdayLabel": "Sábado",
-  "mmDayEnumSundayLabel": "Domingo",
 
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerUserScreenText": "Tela do Usuário",

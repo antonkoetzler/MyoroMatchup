@@ -4,7 +4,7 @@ part of '../game_card.dart';
 final class _GameName extends StatelessWidget {
   const _GameName(this._game);
 
-  final Game _game;
+  final GameResponseDto _game;
 
   @override
   Widget build(context) {

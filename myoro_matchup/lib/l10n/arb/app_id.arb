@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "Tidak dapat terhubung ke server, harap periksa koneksi internet Anda dan coba lagi.",
+  
+  "mmErrorFeedbackSubtitle": "Harap verifikasi koneksi Anda dan coba lagi!",
+  "mmErrorFeedbackActionButtonText": "Coba Lagi",
+
+  "mmLocationInputTypeEnumPlaceLabel": "Tempat",
+  "mmLocationInputTypeEnumCityLabel": "Kota",
+  "mmLocationInputTypeEnumStateLabel": "Provinsi",
+  "mmLocationInputTypeEnumCountryLabel": "Negara",
+  "mmLocationInputTypeEnumContinentLabel": "Benua",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "Pribadi",
+  "visibilityEnumPublicLabel": "Publik",
+
+  "frequencyEnumWeeklyLabel": "Mingguan",
+  "frequencyEnumBiWeeklyLabel": "Dua Mingguan",
+  "frequencyEnumMonthlyLabel": "Bulanan",
+  "frequencyEnumYearlyLabel": "Tahunan",
+
+  "sportsEnumFootballLabel": "Sepak Bola",
+  "sportsEnumFutsalLabel": "Futsal",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Bola Voli",
+
+  "gameDetailsScreenBodyErrorStateTitle": "Gagal mengambil detail permainan!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Pemain",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Pemain",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Peringkat",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "Kesalahan saat mengambil permainan!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "Tidak ada permainan ditemukan!",
+  "gameListingScreenNewGameButtonText": "Buat permainan",
+
+  "gameCreationScreenAppBarTitle": "Buat permainan",
+  "gameCreationScreenNameScreenTitle": "Nama",
+  "gameCreationScreenNameScreenNameInputLabel": "Nama",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "mis. Permainan Sepak Bola Mingguan",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "Nama tidak boleh kosong.",
+  "gameCreationScreenSportScreenTitle": "Olahraga",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Frekuensi dan Tanggal/Waktu",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frekuensi",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "Mulai",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "Selesai",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "Waktu mulai tidak boleh kosong.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "Waktu selesai tidak boleh kosong.",
+  "gameCreationScreenPriceScreenTitle": "Harga",
+  "gameCreationScreenPriceScreenMemberLabel": "Anggota: ",
+  "gameCreationScreenPriceScreenDropInLabel": "Tamu: ",
+  "gameCreationScreenAgeRangeScreenTitle": "Rentang Usia",
+  "gameCreationScreenLocationScreenTitle": "Lokasi",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "Silakan pilih lokasi.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "Visibilitas dan Gambar",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "Foto Profil",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "Banner",
+  "gameCreationScreenButtonPreviousText": "Sebelumnya",
+  "gameCreationScreenButtonNextText": "Selanjutnya",
+  "gameCreationScreenButtonFinishText": "Selesai",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nama pengguna/email",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "Kata sandi",
+  "loginSignupScreenLoginLoginButton": "Masuk",
+  "loginSignupScreenLoginForgotPasswordButton": "Lupa kata sandi?",
+  "loginSignupScreenSignupNameInputPlaceholder": "Nama",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "Nama pengguna",
+  "loginSignupScreenSignupEmailInputPlaceholder": "Email",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "Kata sandi",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Kata sandi",
+  "loginSignupScreenSignupSignupButton": "Daftar",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Baru di MyoroMatchup? Daftar!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Sudah terdaftar? Masuk!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Nama pengguna/email tidak boleh kosong.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Kata sandi tidak boleh kosong.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Nama tidak boleh kosong.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Nama pengguna tidak boleh kosong.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email tidak boleh kosong.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Bidang kata sandi tidak boleh kosong.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Kata sandi tidak cocok.",
+
+  "mmAppBarMenuDrawerTitle": "Menu",
+  "mmAppBarMenuDrawerUserScreenText": "Layar Pengguna",
+  "mmAppBarMenuDrawerCreateGameText": "Buat Permainan"
+}
+

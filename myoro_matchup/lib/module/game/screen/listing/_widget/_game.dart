@@ -5,7 +5,7 @@ final class _Game extends StatelessWidget {
   const _Game(this._isFirstGame, this._game);
 
   final bool _isFirstGame;
-  final Game _game;
+  final GameResponseDto _game;
 
   @override
   Widget build(context) {

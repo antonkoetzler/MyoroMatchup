@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+  
+  "mmErrorFeedbackSubtitle": "연결을 확인하고 다시 시도하세요!",
+  "mmErrorFeedbackActionButtonText": "다시 시도",
+
+  "mmLocationInputTypeEnumPlaceLabel": "장소",
+  "mmLocationInputTypeEnumCityLabel": "도시",
+  "mmLocationInputTypeEnumStateLabel": "주",
+  "mmLocationInputTypeEnumCountryLabel": "국가",
+  "mmLocationInputTypeEnumContinentLabel": "대륙",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "비공개",
+  "visibilityEnumPublicLabel": "공개",
+
+  "frequencyEnumWeeklyLabel": "주간",
+  "frequencyEnumBiWeeklyLabel": "격주",
+  "frequencyEnumMonthlyLabel": "월간",
+  "frequencyEnumYearlyLabel": "연간",
+
+  "sportsEnumFootballLabel": "축구",
+  "sportsEnumFutsalLabel": "풋살",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "배구",
+
+  "gameDetailsScreenBodyErrorStateTitle": "게임 세부 정보를 가져오지 못했습니다!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "플레이어",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "플레이어",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "순위",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "게임을 가져오는 중 오류가 발생했습니다!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "게임을 찾을 수 없습니다!",
+  "gameListingScreenNewGameButtonText": "게임 만들기",
+
+  "gameCreationScreenAppBarTitle": "게임 만들기",
+  "gameCreationScreenNameScreenTitle": "이름",
+  "gameCreationScreenNameScreenNameInputLabel": "이름",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "예: 주간 축구 게임",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "이름은 비어 있을 수 없습니다.",
+  "gameCreationScreenSportScreenTitle": "스포츠",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "빈도 및 날짜/시간",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "빈도",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "시작",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "종료",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "시작 시간은 비어 있을 수 없습니다.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "종료 시간은 비어 있을 수 없습니다.",
+  "gameCreationScreenPriceScreenTitle": "가격",
+  "gameCreationScreenPriceScreenMemberLabel": "회원: ",
+  "gameCreationScreenPriceScreenDropInLabel": "드롭인: ",
+  "gameCreationScreenAgeRangeScreenTitle": "연령 범위",
+  "gameCreationScreenLocationScreenTitle": "위치",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "위치를 선택해주세요.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "공개 설정 및 이미지",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "프로필 사진",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "배너",
+  "gameCreationScreenButtonPreviousText": "이전",
+  "gameCreationScreenButtonNextText": "다음",
+  "gameCreationScreenButtonFinishText": "완료",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "사용자 이름/이메일",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "비밀번호",
+  "loginSignupScreenLoginLoginButton": "로그인",
+  "loginSignupScreenLoginForgotPasswordButton": "비밀번호를 잊으셨나요?",
+  "loginSignupScreenSignupNameInputPlaceholder": "이름",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "사용자 이름",
+  "loginSignupScreenSignupEmailInputPlaceholder": "이메일",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "비밀번호",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "비밀번호",
+  "loginSignupScreenSignupSignupButton": "가입",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchup이 처음이신가요? 가입하세요!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "이미 가입하셨나요? 로그인하세요!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "사용자 이름/이메일은 비어 있을 수 없습니다.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "비밀번호는 비어 있을 수 없습니다.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "이름은 비어 있을 수 없습니다.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "사용자 이름은 비어 있을 수 없습니다.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "이메일은 비어 있을 수 없습니다.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "비밀번호 필드는 비어 있을 수 없습니다.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "비밀번호가 일치하지 않습니다.",
+
+  "mmAppBarMenuDrawerTitle": "메뉴",
+  "mmAppBarMenuDrawerUserScreenText": "사용자 화면",
+  "mmAppBarMenuDrawerCreateGameText": "게임 만들기"
+}
+

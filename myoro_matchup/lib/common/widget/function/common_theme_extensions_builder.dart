@@ -12,6 +12,6 @@ List<ThemeExtension> commonThemeExtensionsBuilder(bool isDarkMode, ColorScheme c
     const MmErrorFeedbackThemeExtension.builder(),
 
     // Inputs
-    const MmLocationInputThemeExtension.builder(),
+    MmLocationInputThemeExtension.builder(textTheme),
   ];
 }

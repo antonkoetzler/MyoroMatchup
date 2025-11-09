@@ -6,16 +6,6 @@ final class _Body extends StatelessWidget {
 
   @override
   Widget build(context) {
-    const screens = [
-      _NameScreen(),
-      _SportScreen(),
-      _FrequencyDayTimeScreen(),
-      _PriceScreen(),
-      _AgeRangeScreen(),
-      _LocationScreen(),
-      _VisibilityAndImageScreen(),
-    ];
-
     final viewModel = context.read<GameCreationScreenViewModel>();
     final state = viewModel.state;
     final selectedIndexController = state.selectedIndexController;
@@ -35,7 +25,7 @@ final class _Body extends StatelessWidget {
       valueListenable: selectedIndexController,
       builder: (_, selectedIndex, _) {
         final isFirstScreen = selectedIndex == 0;
-        final isLastScreen = selectedIndex == screens.length - 1;
+        final isLastScreen = selectedIndex == GameCreationScreen.screens.length - 1;
 
         return Padding(
           padding: bodyPadding,
@@ -43,7 +33,7 @@ final class _Body extends StatelessWidget {
             spacing: spacing,
             children: [
               Expanded(
-                child: MyoroIndexedStack(index: selectedIndex, children: screens),
+                child: MyoroIndexedStack(index: selectedIndex, children: GameCreationScreen.screens),
               ),
               Row(
                 spacing: spacing,
@@ -53,7 +43,7 @@ final class _Body extends StatelessWidget {
                   Expanded(
                     child: _Button(
                       isLastScreen ? gameCreationScreenButtonFinishText : gameCreationScreenButtonNextText,
-                      () => isLastScreen ? onFinish() : onNext(selectedIndex),
+                      () => isLastScreen ? onFinish() : onNext(),
                     ),
                   ),
                 ],

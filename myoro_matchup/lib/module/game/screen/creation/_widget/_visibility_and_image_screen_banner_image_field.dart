@@ -6,9 +6,15 @@ final class _VisibilityAndImageScreenBannerImageField extends StatelessWidget {
 
   @override
   Widget build(context) {
+    final gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =
+        localization.gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle;
+
     final viewModel = context.read<GameCreationScreenViewModel>();
     final onBannerImageChanged = viewModel.onBannerImageChanged;
 
-    return MyoroImagePicker(onChanged: (image) => onBannerImageChanged(image ?? kMyoroEmptyString));
+    return _ImagePicker(
+      gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle,
+      (image) => onBannerImageChanged(image ?? kMyoroEmptyString),
+    );
   }
 }

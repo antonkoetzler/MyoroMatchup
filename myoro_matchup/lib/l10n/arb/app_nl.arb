@@ -1,0 +1,113 @@
+{
+  "httpClientConnectionExceptionMessage": "Kan niet verbinden met de server, controleer uw internetverbinding en probeer het opnieuw.",
+  
+  "mmErrorFeedbackSubtitle": "Controleer uw verbinding en probeer het opnieuw!",
+  "mmErrorFeedbackActionButtonText": "Opnieuw proberen",
+
+  "mmLocationInputTypeEnumPlaceLabel": "Plaats",
+  "mmLocationInputTypeEnumCityLabel": "Stad",
+  "mmLocationInputTypeEnumStateLabel": "Staat",
+  "mmLocationInputTypeEnumCountryLabel": "Land",
+  "mmLocationInputTypeEnumContinentLabel": "Continent",
+  "mmLocationInputItemCityCountryText": "{city}, {emoji} {countryName}",
+  "@mmLocationInputItemCityCountryText": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "emoji": {
+        "type": "String"
+      },
+      "countryName": {
+        "type": "String"
+      }
+    }
+  },
+
+  "visibilityEnumPrivateLabel": "Privé",
+  "visibilityEnumPublicLabel": "Openbaar",
+
+  "frequencyEnumWeeklyLabel": "Wekelijks",
+  "frequencyEnumBiWeeklyLabel": "Tweewekelijks",
+  "frequencyEnumMonthlyLabel": "Maandelijks",
+  "frequencyEnumYearlyLabel": "Jaarlijks",
+
+  "sportsEnumFootballLabel": "Voetbal",
+  "sportsEnumFutsalLabel": "Futsal",
+  "sportsEnumFut7Label": "Fut7",
+  "sportsEnumVolleyballLabel": "Volleybal",
+
+  "gameDetailsScreenBodyErrorStateTitle": "Kon speldetails niet ophalen!",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Spelers",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Spelers",
+  "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Ranglijsten",
+
+  "gameListingScreenAppBarTitle": "Myoro Matchup",
+  "gameListingScreenBodyErrorStateTitle": "Fout bij het ophalen van spellen!",
+  "gameListingScreenBodySuccessStateEmptyTitle": "Geen spellen gevonden!",
+  "gameListingScreenNewGameButtonText": "Spel maken",
+
+  "gameCreationScreenAppBarTitle": "Spel maken",
+  "gameCreationScreenNameScreenTitle": "Naam",
+  "gameCreationScreenNameScreenNameInputLabel": "Naam",
+  "gameCreationScreenNameScreenNameInputPlaceholder": "bijv. Wekelijkse voetbalwedstrijd",
+  "gameCreationScreenNameScreenNameInputEmptyMessage": "Naam mag niet leeg zijn.",
+  "gameCreationScreenSportScreenTitle": "Sport",
+  "gameCreationScreenFrequencyDayTimeScreenTitle": "Frequentie en Datum/Tijd",
+  "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frequentie",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel": "Start",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel": "Einde",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage": "Starttijd mag niet leeg zijn.",
+  "gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage": "Eindtijd mag niet leeg zijn.",
+  "gameCreationScreenPriceScreenTitle": "Prijs",
+  "gameCreationScreenPriceScreenMemberLabel": "Lid: ",
+  "gameCreationScreenPriceScreenDropInLabel": "Gast: ",
+  "gameCreationScreenAgeRangeScreenTitle": "Leeftijdsbereik",
+  "gameCreationScreenLocationScreenTitle": "Locatie",
+  "gameCreationScreenLocationScreenLocationValidationMessage": "Selecteer alstublieft een locatie.",
+  "gameCreationScreenLocationScreenCurrencyNotificationText": "{emoji} {locationName} selected, {currencySymbol} will be used as the currency.",
+  "@gameCreationScreenLocationScreenCurrencyNotificationText": {
+    "placeholders": {
+      "emoji": {
+        "type": "String"
+      },
+      "locationName": {
+        "type": "String"
+      },
+      "currencySymbol": {
+        "type": "String"
+      }
+    }
+  },
+  "gameCreationScreenVisibilityAndImageScreenTitle": "Zichtbaarheid en Afbeelding",
+  "gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle": "Profielfoto",
+  "gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle": "Banner",
+  "gameCreationScreenButtonPreviousText": "Vorige",
+  "gameCreationScreenButtonNextText": "Volgende",
+  "gameCreationScreenButtonFinishText": "Voltooien",
+
+  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Gebruikersnaam/e-mail",
+  "loginSignupScreenLoginPasswordInputPlaceholder": "Wachtwoord",
+  "loginSignupScreenLoginLoginButton": "Inloggen",
+  "loginSignupScreenLoginForgotPasswordButton": "Wachtwoord vergeten?",
+  "loginSignupScreenSignupNameInputPlaceholder": "Naam",
+  "loginSignupScreenSignupUsernameInputPlaceholder": "Gebruikersnaam",
+  "loginSignupScreenSignupEmailInputPlaceholder": "E-mail",
+  "loginSignupScreenSignupPasswordInputPlaceholder": "Wachtwoord",
+  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Wachtwoord",
+  "loginSignupScreenSignupSignupButton": "Registreren",
+  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Nieuw bij MyoroMatchup? Registreer!",
+  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Al geregistreerd? Log in!",
+  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Gebruikersnaam/e-mail mag niet leeg zijn.",
+  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Wachtwoord mag niet leeg zijn.",
+  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Naam mag niet leeg zijn.",
+  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Gebruikersnaam mag niet leeg zijn.",
+  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "E-mail mag niet leeg zijn.",
+  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Wachtwoordvelden mogen niet leeg zijn.",
+  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Wachtwoorden komen niet overeen.",
+
+  "mmAppBarMenuDrawerTitle": "Menu",
+  "mmAppBarMenuDrawerUserScreenText": "Gebruikersscherm",
+  "mmAppBarMenuDrawerCreateGameText": "Spel maken"
+}
+

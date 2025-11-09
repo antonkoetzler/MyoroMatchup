@@ -28,10 +28,13 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
     return MmAppBarThemeExtension(
       bordered: bordered ?? self.bordered,
       titleTextStyle: titleTextStyle ?? self.titleTextStyle,
-      backButtonIconConfiguration: backButtonIconConfiguration ?? self.backButtonIconConfiguration,
-      menuButtonIconConfiguration: menuButtonIconConfiguration ?? self.menuButtonIconConfiguration,
+      backButtonIconConfiguration:
+          backButtonIconConfiguration ?? self.backButtonIconConfiguration,
+      menuButtonIconConfiguration:
+          menuButtonIconConfiguration ?? self.menuButtonIconConfiguration,
       menuDrawerSpacing: menuDrawerSpacing ?? self.menuDrawerSpacing,
-      menuDrawerContentPadding: menuDrawerContentPadding ?? self.menuDrawerContentPadding,
+      menuDrawerContentPadding:
+          menuDrawerContentPadding ?? self.menuDrawerContentPadding,
     );
   }
 
