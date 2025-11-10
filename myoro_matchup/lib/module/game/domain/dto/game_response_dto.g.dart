@@ -6,37 +6,31 @@ part of 'game_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GameResponseDto _$GameResponseDtoFromJson(Map<String, dynamic> json) =>
-    GameResponseDto(
-      name: json['name'] as String,
-      sport: $enumDecode(_$SportsEnumEnumMap, json['sport']),
-      frequencyDayTime: GameFrequencyDayTimeDto.fromJson(
-        json['frequencyDayTime'] as Map<String, dynamic>,
-      ),
-      location: Location.fromJson(json['location'] as Map<String, dynamic>),
-      price: GamePriceDto.fromJson(json['price'] as Map<String, dynamic>),
-      ageRange: GameAgeRangeModel.fromJson(
-        json['ageRange'] as Map<String, dynamic>,
-      ),
-      visibility: $enumDecode(_$VisibilityEnumEnumMap, json['visibility']),
-      profilePicture: json['profilePicture'] as String?,
-      banner: json['banner'] as String?,
-      id: (json['id'] as num).toInt(),
-    );
+GameResponseDto _$GameResponseDtoFromJson(Map<String, dynamic> json) => GameResponseDto(
+  name: json['name'] as String,
+  sport: $enumDecode(_$SportsEnumEnumMap, json['sport']),
+  frequencyDayTime: GameFrequencyDayTimeDto.fromJson(json['frequencyDayTime'] as Map<String, dynamic>),
+  location: Location.fromJson(json['location'] as Map<String, dynamic>),
+  price: GamePriceDto.fromJson(json['price'] as Map<String, dynamic>),
+  ageRange: GameAgeRangeModel.fromJson(json['ageRange'] as Map<String, dynamic>),
+  visibility: $enumDecode(_$VisibilityEnumEnumMap, json['visibility']),
+  profilePicture: json['profilePicture'] as String?,
+  banner: json['banner'] as String?,
+  id: (json['id'] as num).toInt(),
+);
 
-Map<String, dynamic> _$GameResponseDtoToJson(GameResponseDto instance) =>
-    <String, dynamic>{
-      'name': instance.name,
-      'sport': _$SportsEnumEnumMap[instance.sport]!,
-      'frequencyDayTime': instance.frequencyDayTime,
-      'location': instance.location,
-      'price': instance.price,
-      'ageRange': instance.ageRange,
-      'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
-      'profilePicture': instance.profilePicture,
-      'banner': instance.banner,
-      'id': instance.id,
-    };
+Map<String, dynamic> _$GameResponseDtoToJson(GameResponseDto instance) => <String, dynamic>{
+  'name': instance.name,
+  'sport': _$SportsEnumEnumMap[instance.sport]!,
+  'frequencyDayTime': instance.frequencyDayTime,
+  'location': instance.location,
+  'price': instance.price,
+  'ageRange': instance.ageRange,
+  'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
+  'profilePicture': instance.profilePicture,
+  'banner': instance.banner,
+  'id': instance.id,
+};
 
 const _$SportsEnumEnumMap = {
   SportsEnum.football: 'FOOTBALL',
@@ -45,10 +39,7 @@ const _$SportsEnumEnumMap = {
   SportsEnum.volleyball: 'VOLLEYBALL',
 };
 
-const _$VisibilityEnumEnumMap = {
-  VisibilityEnum.private: 'private',
-  VisibilityEnum.public: 'public',
-};
+const _$VisibilityEnumEnumMap = {VisibilityEnum.private: 'private', VisibilityEnum.public: 'public'};
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -87,9 +78,7 @@ mixin _$GameResponseDtoMixin {
       price: price ?? self.price,
       ageRange: ageRange ?? self.ageRange,
       visibility: visibility ?? self.visibility,
-      profilePicture: profilePictureProvided
-          ? (profilePicture ?? self.profilePicture)
-          : null,
+      profilePicture: profilePictureProvided ? (profilePicture ?? self.profilePicture) : null,
       banner: bannerProvided ? (banner ?? self.banner) : null,
     );
   }

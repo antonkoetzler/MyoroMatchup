@@ -16,7 +16,11 @@ final class GameFrequencyDayTimeDto with _$GameFrequencyDayTimeDtoMixin {
 
   /// Fake constructor.
   factory GameFrequencyDayTimeDto.fake() {
-    return GameFrequencyDayTimeDto(frequency: FrequencyEnum.fake(), days: MyoroDayEnum.values.toList(), times: GameFrequencyDayTimeTimeDto.fake());
+    return GameFrequencyDayTimeDto(
+      frequency: FrequencyEnum.fake(),
+      days: MyoroDayEnum.values.toList(),
+      times: GameFrequencyDayTimeTimeDto.fake(),
+    );
   }
 
   /// From JSON.

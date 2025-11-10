@@ -46,7 +46,9 @@ final class GameCreationScreenViewModel {
   /// On start time validation.
   String? startTimeValidation(_) {
     final startTime = _state.startTime;
-    return startTime == null ? localization.gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage : null;
+    return startTime == null
+        ? localization.gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage
+        : null;
   }
 
   /// On start time changed.
@@ -67,7 +69,8 @@ final class GameCreationScreenViewModel {
 
   /// On location validation.
   String? locationValidation(_) {
-    final gameCreationScreenLocationScreenLocationValidationMessage = localization.gameCreationScreenLocationScreenLocationValidationMessage;
+    final gameCreationScreenLocationScreenLocationValidationMessage =
+        localization.gameCreationScreenLocationScreenLocationValidationMessage;
     return _state.location != null ? null : gameCreationScreenLocationScreenLocationValidationMessage;
   }
 
@@ -137,7 +140,11 @@ final class GameCreationScreenViewModel {
       final startTime = _state.startTime;
       final endTime = _state.endTime;
       final times = GameFrequencyDayTimeTimeDto(startTime: startTime!, endTime: endTime!);
-      final frequencyDayTime = GameFrequencyDayTimeDto(frequency: _state.frequency, days: [day, if (frequency.isBiWeekly) biWeeklyDay], times: times);
+      final frequencyDayTime = GameFrequencyDayTimeDto(
+        frequency: _state.frequency,
+        days: [day, if (frequency.isBiWeekly) biWeeklyDay],
+        times: times,
+      );
       final location = _state.location;
       final price = GamePriceDto(memberPrice: _state.memberPrice, dropInPrice: _state.dropInPrice);
       final ageRange = _state.ageRange;

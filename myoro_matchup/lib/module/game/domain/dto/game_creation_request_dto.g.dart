@@ -6,9 +6,7 @@ part of 'game_creation_request_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$GameCreationRequestDtoToJson(
-  GameCreationRequestDto instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$GameCreationRequestDtoToJson(GameCreationRequestDto instance) => <String, dynamic>{
   'name': instance.name,
   'sport': _$SportsEnumEnumMap[instance.sport]!,
   'frequencyDayTime': instance.frequencyDayTime.toJson(),
@@ -27,10 +25,7 @@ const _$SportsEnumEnumMap = {
   SportsEnum.volleyball: 'VOLLEYBALL',
 };
 
-const _$VisibilityEnumEnumMap = {
-  VisibilityEnum.private: 'private',
-  VisibilityEnum.public: 'public',
-};
+const _$VisibilityEnumEnumMap = {VisibilityEnum.private: 'private', VisibilityEnum.public: 'public'};
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -67,9 +62,7 @@ mixin _$GameCreationRequestDtoMixin {
       price: price ?? self.price,
       ageRange: ageRange ?? self.ageRange,
       visibility: visibility ?? self.visibility,
-      profilePicture: profilePictureProvided
-          ? (profilePicture ?? self.profilePicture)
-          : null,
+      profilePicture: profilePictureProvided ? (profilePicture ?? self.profilePicture) : null,
       banner: bannerProvided ? (banner ?? self.banner) : null,
     );
   }

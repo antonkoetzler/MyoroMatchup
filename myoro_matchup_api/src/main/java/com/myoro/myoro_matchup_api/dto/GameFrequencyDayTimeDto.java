@@ -1,12 +1,11 @@
 package com.myoro.myoro_matchup_api.dto;
 
 import java.time.LocalTime;
-import java.util.List;
 
 import com.myoro.myoro_matchup_api.enums.DayEnum;
 import com.myoro.myoro_matchup_api.enums.GameFrequencyEnum;
 
-import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.AssertTrue;
 import jakarta.validation.constraints.NotNull;
 
 /** Game frequency day time DTO. */
@@ -15,29 +14,52 @@ public class GameFrequencyDayTimeDto {
   @NotNull(message = "{validation.game.frequency.required}")
   private GameFrequencyEnum frequency;
 
-  /** Day of the game. */
-  @NotNull(message = "{validation.game.days.required}")
-  @NotEmpty(message = "{validation.game.days.not.empty}")
-  make their
-  own dto
-  private List<DayEnum> days;
+  /** Primary day of the game. */
+  @NotNull(message = "{validation.game.primary.day.required}")
+  private DayEnum primaryDay;
 
-  /** Time of the game. */
-  @NotNull(message = "{validation.game.times.required}")
-  @NotEmpty(message = "{validation.game.times.not.empty}")
-  make their
-  own dto
-  private List<LocalTime> times;
+  /** Bi-weekly day of the game. Required only when frequency is BI_WEEKLY. */
+  private DayEnum biWeeklyDay;
+
+  /** Primary time of the game. */
+  @NotNull(message = "{validation.game.primary.time.required}")
+  private LocalTime primaryTime;
+
+  /** Bi-weekly time of the game. Required only when frequency is BI_WEEKLY. */
+  private LocalTime biWeeklyTime;
 
   /** Default constructor. */
   public GameFrequencyDayTimeDto() {
   }
 
   /** Constructor with all fields. */
-  public GameFrequencyDayTimeDto(GameFrequencyEnum frequency, List<DayEnum> days, List<LocalTime> times) {
+  public GameFrequencyDayTimeDto(GameFrequencyEnum frequency, DayEnum primaryDay, DayEnum biWeeklyDay,
+      LocalTime primaryTime, LocalTime biWeeklyTime) {
     this.frequency = frequency;
-    this.days = days;
-    this.times = times;
+    this.primaryDay = primaryDay;
+    this.biWeeklyDay = biWeeklyDay;
+    this.primaryTime = primaryTime;
+    this.biWeeklyTime = biWeeklyTime;
+  }
+
+  /**
+   * Validates that biWeeklyDay is provided when frequency is BI_WEEKLY.
+   * 
+   * @return true if validation passes
+   */
+  @AssertTrue(message = "{validation.game.bi.weekly.day.required}")
+  public boolean isBiWeeklyDayValid() {
+    return frequency == GameFrequencyEnum.BI_WEEKLY ? biWeeklyDay != null : true;
+  }
+
+  /**
+   * Validates that biWeeklyTime is provided when frequency is BI_WEEKLY.
+   * 
+   * @return true if validation passes
+   */
+  @AssertTrue(message = "{validation.game.bi.weekly.time.required}")
+  public boolean isBiWeeklyTimeValid() {
+    return frequency == GameFrequencyEnum.BI_WEEKLY ? biWeeklyTime != null : true;
   }
 
   /**
@@ -50,21 +72,39 @@ public class GameFrequencyDayTimeDto {
   }
 
   /**
-   * Getter for days
+   * Getter for primaryDay
    * 
-   * @return the days of the game
+   * @return the primary day of the game
    */
-  public List<DayEnum> getDays() {
-    return days;
+  public DayEnum getPrimaryDay() {
+    return primaryDay;
   }
 
   /**
-   * Getter for times
+   * Getter for biWeeklyDay
    * 
-   * @return the times of the game
+   * @return the bi-weekly day of the game
    */
-  public List<LocalTime> getTimes() {
-    return times;
+  public DayEnum getBiWeeklyDay() {
+    return biWeeklyDay;
+  }
+
+  /**
+   * Getter for primaryTime
+   * 
+   * @return the primary time of the game
+   */
+  public LocalTime getPrimaryTime() {
+    return primaryTime;
+  }
+
+  /**
+   * Getter for biWeeklyTime
+   * 
+   * @return the bi-weekly time of the game
+   */
+  public LocalTime getBiWeeklyTime() {
+    return biWeeklyTime;
   }
 
   /**
@@ -77,20 +117,38 @@ public class GameFrequencyDayTimeDto {
   }
 
   /**
-   * Setter for days
+   * Setter for primaryDay
    * 
-   * @param days the days of the game
+   * @param primaryDay the primary day of the game
    */
-  public void setDays(List<DayEnum> days) {
-    this.days = days;
+  public void setPrimaryDay(DayEnum primaryDay) {
+    this.primaryDay = primaryDay;
   }
 
   /**
-   * Setter for times
+   * Setter for biWeeklyDay
    * 
-   * @param times the times of the game
+   * @param biWeeklyDay the bi-weekly day of the game
    */
-  public void setTimes(List<LocalTime> times) {
-    this.times = times;
+  public void setBiWeeklyDay(DayEnum biWeeklyDay) {
+    this.biWeeklyDay = biWeeklyDay;
+  }
+
+  /**
+   * Setter for primaryTime
+   * 
+   * @param primaryTime the primary time of the game
+   */
+  public void setPrimaryTime(LocalTime primaryTime) {
+    this.primaryTime = primaryTime;
+  }
+
+  /**
+   * Setter for biWeeklyTime
+   * 
+   * @param biWeeklyTime the bi-weekly time of the game
+   */
+  public void setBiWeeklyTime(LocalTime biWeeklyTime) {
+    this.biWeeklyTime = biWeeklyTime;
   }
 }

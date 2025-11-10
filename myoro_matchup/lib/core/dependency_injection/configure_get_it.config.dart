@@ -78,11 +78,11 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i1006.GameRepository>(
       () => _i1006.GameRepository(gh<_i460.HttpClient>()),
     );
-    gh.factory<_i606.GameCreationScreenViewModel>(
-      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
-    );
     gh.factory<_i17.GameDetailsScreenViewModel>(
       () => _i17.GameDetailsScreenViewModel(gh<_i460.GameRepository>()),
+    );
+    gh.factory<_i606.GameCreationScreenViewModel>(
+      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
     );
     gh.factory<_i512.GameListingScreenViewModel>(
       () => _i512.GameListingScreenViewModel(gh<_i460.GameRepository>()),

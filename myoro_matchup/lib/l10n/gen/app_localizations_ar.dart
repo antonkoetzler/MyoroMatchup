@@ -13,8 +13,7 @@ class AppLocalizationsAr extends AppLocalizations {
       'تعذر الاتصال بالخادم، يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.';
 
   @override
-  String get mmErrorFeedbackSubtitle =>
-      'يرجى التحقق من اتصالك والمحاولة مرة أخرى!';
+  String get mmErrorFeedbackSubtitle => 'يرجى التحقق من اتصالك والمحاولة مرة أخرى!';
 
   @override
   String get mmErrorFeedbackActionButtonText => 'إعادة المحاولة';
@@ -35,11 +34,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'قارة';
 
   @override
-  String mmLocationInputItemCityCountryText(
-    String city,
-    String emoji,
-    String countryName,
-  ) {
+  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
     return '$city, $emoji $countryName';
   }
 
@@ -74,19 +69,16 @@ class AppLocalizationsAr extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'الكرة الطائرة';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle =>
-      'فشل في استرداد تفاصيل اللعبة!';
+  String get gameDetailsScreenBodyErrorStateTitle => 'فشل في استرداد تفاصيل اللعبة!';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'اللاعبون';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText =>
-      'اللاعبون';
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'اللاعبون';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
-      'التصنيفات';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'التصنيفات';
 
   @override
   String get gameListingScreenAppBarTitle => 'Myoro Matchup';
@@ -95,8 +87,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get gameListingScreenBodyErrorStateTitle => 'خطأ في استرداد الألعاب!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle =>
-      'لم يتم العثور على ألعاب!';
+  String get gameListingScreenBodySuccessStateEmptyTitle => 'لم يتم العثور على ألعاب!';
 
   @override
   String get gameListingScreenNewGameButtonText => 'إنشاء لعبة';
@@ -111,40 +102,32 @@ class AppLocalizationsAr extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputLabel => 'الاسم';
 
   @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder =>
-      'مثال: مباراة كرة قدم أسبوعية';
+  String get gameCreationScreenNameScreenNameInputPlaceholder => 'مثال: مباراة كرة قدم أسبوعية';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
-      'لا يمكن أن يكون الاسم فارغًا.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'لا يمكن أن يكون الاسم فارغًا.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'الرياضة';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
-      'التكرار والتاريخ/الوقت';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'التكرار والتاريخ/الوقت';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
-      'التكرار';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'التكرار';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
-      'البداية';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'البداية';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
-      'النهاية';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'النهاية';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
       'لا يمكن أن يكون وقت البداية فارغًا.';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
       'لا يمكن أن يكون وقت النهاية فارغًا.';
 
   @override
@@ -163,8 +146,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'الموقع';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage =>
-      'يرجى تحديد موقع.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage => 'يرجى تحديد موقع.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -176,17 +158,13 @@ class AppLocalizationsAr extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle =>
-      'الرؤية والصورة';
+  String get gameCreationScreenVisibilityAndImageScreenTitle => 'الرؤية والصورة';
 
   @override
-  String
-  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
-      'صورة الملف الشخصي';
+  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'صورة الملف الشخصي';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
-      'لافتة';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'لافتة';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'السابق';
@@ -198,8 +176,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'إنهاء';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
-      'اسم المستخدم/البريد الإلكتروني';
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'اسم المستخدم/البريد الإلكتروني';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'كلمة المرور';
@@ -217,54 +194,44 @@ class AppLocalizationsAr extends AppLocalizations {
   String get loginSignupScreenSignupUsernameInputPlaceholder => 'اسم المستخدم';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder =>
-      'البريد الإلكتروني';
+  String get loginSignupScreenSignupEmailInputPlaceholder => 'البريد الإلكتروني';
 
   @override
   String get loginSignupScreenSignupPasswordInputPlaceholder => 'كلمة المرور';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'كلمة المرور';
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'كلمة المرور';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'التسجيل';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
-      'جديد في MyoroMatchup؟ سجل!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'جديد في MyoroMatchup؟ سجل!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
-      'مسجل بالفعل؟ سجل الدخول!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'مسجل بالفعل؟ سجل الدخول!';
 
   @override
   String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
       'لا يمكن أن يكون اسم المستخدم/البريد الإلكتروني فارغًا.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
-      'لا يمكن أن تكون كلمة المرور فارغة.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'لا يمكن أن تكون كلمة المرور فارغة.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
-      'لا يمكن أن يكون الاسم فارغًا.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'لا يمكن أن يكون الاسم فارغًا.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
-      'لا يمكن أن يكون اسم المستخدم فارغًا.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'لا يمكن أن يكون اسم المستخدم فارغًا.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
-      'لا يمكن أن يكون البريد الإلكتروني فارغًا.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'لا يمكن أن يكون البريد الإلكتروني فارغًا.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
-      'لا يمكن أن تكون حقول كلمة المرور فارغة.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'لا يمكن أن تكون حقول كلمة المرور فارغة.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
-      'كلمات المرور غير متطابقة.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'كلمات المرور غير متطابقة.';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'القائمة';

@@ -13,10 +13,8 @@ part of 'mm_location_input_theme_extension.dart';
 /// ```dart
 /// class MmLocationInputThemeExtension with _$MmLocationInputThemeExtensionMixin {}
 /// ```
-mixin _$MmLocationInputThemeExtensionMixin
-    on ThemeExtension<MmLocationInputThemeExtension> {
-  MmLocationInputThemeExtension get self =>
-      this as MmLocationInputThemeExtension;
+mixin _$MmLocationInputThemeExtensionMixin on ThemeExtension<MmLocationInputThemeExtension> {
+  MmLocationInputThemeExtension get self => this as MmLocationInputThemeExtension;
 
   @override
   MmLocationInputThemeExtension copyWith({
@@ -26,9 +24,7 @@ mixin _$MmLocationInputThemeExtensionMixin
     bool itemCityCountryTextStyleProvided = true,
   }) {
     return MmLocationInputThemeExtension(
-      itemNameTextStyle: itemNameTextStyleProvided
-          ? (itemNameTextStyle ?? self.itemNameTextStyle)
-          : null,
+      itemNameTextStyle: itemNameTextStyleProvided ? (itemNameTextStyle ?? self.itemNameTextStyle) : null,
       itemCityCountryTextStyle: itemCityCountryTextStyleProvided
           ? (itemCityCountryTextStyle ?? self.itemCityCountryTextStyle)
           : null,

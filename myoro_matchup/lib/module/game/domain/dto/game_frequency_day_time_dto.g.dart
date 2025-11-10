@@ -6,21 +6,13 @@ part of 'game_frequency_day_time_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GameFrequencyDayTimeDto _$GameFrequencyDayTimeDtoFromJson(
-  Map<String, dynamic> json,
-) => GameFrequencyDayTimeDto(
+GameFrequencyDayTimeDto _$GameFrequencyDayTimeDtoFromJson(Map<String, dynamic> json) => GameFrequencyDayTimeDto(
   frequency: $enumDecode(_$FrequencyEnumEnumMap, json['frequency']),
-  days: (json['days'] as List<dynamic>)
-      .map((e) => $enumDecode(_$MyoroDayEnumEnumMap, e))
-      .toList(),
-  times: GameFrequencyDayTimeTimeDto.fromJson(
-    json['times'] as Map<String, dynamic>,
-  ),
+  days: (json['days'] as List<dynamic>).map((e) => $enumDecode(_$MyoroDayEnumEnumMap, e)).toList(),
+  times: GameFrequencyDayTimeTimeDto.fromJson(json['times'] as Map<String, dynamic>),
 );
 
-Map<String, dynamic> _$GameFrequencyDayTimeDtoToJson(
-  GameFrequencyDayTimeDto instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$GameFrequencyDayTimeDtoToJson(GameFrequencyDayTimeDto instance) => <String, dynamic>{
   'frequency': _$FrequencyEnumEnumMap[instance.frequency]!,
   'days': instance.days.map((e) => _$MyoroDayEnumEnumMap[e]!).toList(),
   'times': instance.times,

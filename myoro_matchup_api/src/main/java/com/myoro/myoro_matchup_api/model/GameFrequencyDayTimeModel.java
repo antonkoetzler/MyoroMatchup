@@ -1,16 +1,12 @@
 package com.myoro.myoro_matchup_api.model;
 
 import java.time.LocalTime;
-import java.util.List;
 
 import com.myoro.myoro_matchup_api.enums.DayEnum;
 import com.myoro.myoro_matchup_api.enums.GameFrequencyEnum;
-import com.myoro.myoro_matchup_api.service.MessageService;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.Transient;
 
 /** Game frequency model. */
 @Embeddable
@@ -19,28 +15,34 @@ public class GameFrequencyDayTimeModel {
   @Column(name = "frequency", nullable = false)
   private GameFrequencyEnum frequency;
 
-  /** Day of the game. */
-  @ElementCollection
-  private List<DayEnum> days;
+  /** Primary day of the game. */
+  @Column(name = "primary_day", nullable = false)
+  private DayEnum primaryDay;
 
-  /** Time of the game. */
-  @ElementCollection
-  private List<LocalTime> times;
+  /** Bi-weekly day of the game. Required only when frequency is BI_WEEKLY. */
+  @Column(name = "bi_weekly_day", nullable = true)
+  private DayEnum biWeeklyDay;
 
-  /** Message service for localization. */
-  @Transient
-  private MessageService messageService;
+  /** Primary time of the game. */
+  @Column(name = "primary_time", nullable = false)
+  private LocalTime primaryTime;
+
+  /** Bi-weekly time of the game. Required only when frequency is BI_WEEKLY. */
+  @Column(name = "bi_weekly_time", nullable = true)
+  private LocalTime biWeeklyTime;
 
   /** Default constructor. */
   public GameFrequencyDayTimeModel() {
   }
 
   /** Constructor with all fields. */
-  public GameFrequencyDayTimeModel(GameFrequencyEnum frequency, List<DayEnum> days, List<LocalTime> times) {
+  public GameFrequencyDayTimeModel(GameFrequencyEnum frequency, DayEnum primaryDay, DayEnum biWeeklyDay,
+      LocalTime primaryTime, LocalTime biWeeklyTime) {
     this.frequency = frequency;
-    this.days = days;
-    this.times = times;
-    validate();
+    this.primaryDay = primaryDay;
+    this.biWeeklyDay = biWeeklyDay;
+    this.primaryTime = primaryTime;
+    this.biWeeklyTime = biWeeklyTime;
   }
 
   /**
@@ -53,21 +55,39 @@ public class GameFrequencyDayTimeModel {
   }
 
   /**
-   * Getter for days
+   * Getter for primaryDay
    * 
-   * @return the days of the game
+   * @return the primary day of the game
    */
-  public List<DayEnum> getDays() {
-    return days;
+  public DayEnum getPrimaryDay() {
+    return primaryDay;
   }
 
   /**
-   * Getter for times
+   * Getter for biWeeklyDay
    * 
-   * @return the times of the game
+   * @return the bi-weekly day of the game
    */
-  public List<LocalTime> getTimes() {
-    return times;
+  public DayEnum getBiWeeklyDay() {
+    return biWeeklyDay;
+  }
+
+  /**
+   * Getter for primaryTime
+   * 
+   * @return the primary time of the game
+   */
+  public LocalTime getPrimaryTime() {
+    return primaryTime;
+  }
+
+  /**
+   * Getter for biWeeklyTime
+   * 
+   * @return the bi-weekly time of the game
+   */
+  public LocalTime getBiWeeklyTime() {
+    return biWeeklyTime;
   }
 
   /**
@@ -77,62 +97,41 @@ public class GameFrequencyDayTimeModel {
    */
   public void setFrequency(GameFrequencyEnum frequency) {
     this.frequency = frequency;
-    validate();
   }
 
   /**
-   * Setter for days
+   * Setter for primaryDay
    * 
-   * @param days the days of the game
+   * @param primaryDay the primary day of the game
    */
-  public void setDays(List<DayEnum> days) {
-    this.days = days;
-    validate();
+  public void setPrimaryDay(DayEnum primaryDay) {
+    this.primaryDay = primaryDay;
   }
 
   /**
-   * Setter for times
+   * Setter for biWeeklyDay
    * 
-   * @param times the times of the game
+   * @param biWeeklyDay the bi-weekly day of the game
    */
-  public void setTimes(List<LocalTime> times) {
-    this.times = times;
-    validate();
+  public void setBiWeeklyDay(DayEnum biWeeklyDay) {
+    this.biWeeklyDay = biWeeklyDay;
   }
 
   /**
-   * Setter for messageService
+   * Setter for primaryTime
    * 
-   * @param messageService the message service for localization
+   * @param primaryTime the primary time of the game
    */
-  public void setMessageService(MessageService messageService) {
-    this.messageService = messageService;
+  public void setPrimaryTime(LocalTime primaryTime) {
+    this.primaryTime = primaryTime;
   }
 
-  /** Validates the model constraints. */
-  private void validate() {
-    if (frequency == null || days == null || times == null) {
-      return; // Skip validation if fields are not set yet
-    }
-
-    int expectedSize = frequency == GameFrequencyEnum.BI_WEEKLY ? 2 : 1;
-
-    if (days.size() != expectedSize) {
-      if (messageService == null) {
-        throw new IllegalStateException("MessageService must be set before validation.");
-      }
-      String message = messageService.getMessage("validation.game.frequency.days.size.mismatch",
-          frequency.toString(), String.valueOf(expectedSize), String.valueOf(days.size()));
-      throw new IllegalArgumentException(message);
-    }
-
-    if (times.size() != expectedSize) {
-      if (messageService == null) {
-        throw new IllegalStateException("MessageService must be set before validation.");
-      }
-      String message = messageService.getMessage("validation.game.frequency.times.size.mismatch",
-          frequency.toString(), String.valueOf(expectedSize), String.valueOf(times.size()));
-      throw new IllegalArgumentException(message);
-    }
+  /**
+   * Setter for biWeeklyTime
+   * 
+   * @param biWeeklyTime the bi-weekly time of the game
+   */
+  public void setBiWeeklyTime(LocalTime biWeeklyTime) {
+    this.biWeeklyTime = biWeeklyTime;
   }
 }

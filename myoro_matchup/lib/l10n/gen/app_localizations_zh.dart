@@ -33,11 +33,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => '大洲';
 
   @override
-  String mmLocationInputItemCityCountryText(
-    String city,
-    String emoji,
-    String countryName,
-  ) {
+  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
     return '$city, $emoji $countryName';
   }
 
@@ -117,25 +113,19 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameCreationScreenFrequencyDayTimeScreenTitle => '频率和日期/时间';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
-      '频率';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => '频率';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
-      '开始';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => '开始';
 
   @override
   String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => '结束';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
-      '开始时间不能为空。';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage => '开始时间不能为空。';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
-      '结束时间不能为空。';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage => '结束时间不能为空。';
 
   @override
   String get gameCreationScreenPriceScreenTitle => '价格';
@@ -153,8 +143,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => '位置';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage =>
-      '请选择一个位置。';
+  String get gameCreationScreenLocationScreenLocationValidationMessage => '请选择一个位置。';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -169,13 +158,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameCreationScreenVisibilityAndImageScreenTitle => '可见性和图片';
 
   @override
-  String
-  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
-      '头像';
+  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => '头像';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
-      '横幅';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => '横幅';
 
   @override
   String get gameCreationScreenButtonPreviousText => '上一步';
@@ -223,8 +209,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get loginSignupScreenFormTypeSwitcherButtonSignupText => '已有账号？登录！';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
-      '用户名/邮箱不能为空。';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => '用户名/邮箱不能为空。';
 
   @override
   String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => '密码不能为空。';
@@ -239,12 +224,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage => '邮箱不能为空。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
-      '密码字段不能为空。';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => '密码字段不能为空。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
-      '密码不匹配。';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => '密码不匹配。';
 
   @override
   String get mmAppBarMenuDrawerTitle => '菜单';
@@ -285,11 +268,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get mmLocationInputTypeEnumContinentLabel => '大洲';
 
   @override
-  String mmLocationInputItemCityCountryText(
-    String city,
-    String emoji,
-    String countryName,
-  ) {
+  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
     return '$city, $emoji $countryName';
   }
 
@@ -369,25 +348,19 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenFrequencyDayTimeScreenTitle => '頻率和日期/時間';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
-      '頻率';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => '頻率';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
-      '開始';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => '開始';
 
   @override
   String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => '結束';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
-      '開始時間不能為空。';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage => '開始時間不能為空。';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
-      '結束時間不能為空。';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage => '結束時間不能為空。';
 
   @override
   String get gameCreationScreenPriceScreenTitle => '價格';
@@ -405,8 +378,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenLocationScreenTitle => '位置';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage =>
-      '請選擇一個位置。';
+  String get gameCreationScreenLocationScreenLocationValidationMessage => '請選擇一個位置。';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -421,13 +393,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenVisibilityAndImageScreenTitle => '可見性和圖片';
 
   @override
-  String
-  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
-      '頭像';
+  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => '頭像';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
-      '橫幅';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => '橫幅';
 
   @override
   String get gameCreationScreenButtonPreviousText => '上一步';
@@ -439,8 +408,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenButtonFinishText => '完成';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
-      '使用者名稱/電子郵件';
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => '使用者名稱/電子郵件';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => '密碼';
@@ -476,8 +444,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get loginSignupScreenFormTypeSwitcherButtonSignupText => '已有帳號？登入！';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
-      '使用者名稱/電子郵件不能為空。';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => '使用者名稱/電子郵件不能為空。';
 
   @override
   String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => '密碼不能為空。';
@@ -486,19 +453,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get loginSignupScreenSignupFormNameFieldEmptyMessage => '姓名不能為空。';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
-      '使用者名稱不能為空。';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => '使用者名稱不能為空。';
 
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage => '電子郵件不能為空。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
-      '密碼欄位不能為空。';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => '密碼欄位不能為空。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
-      '密碼不相符。';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => '密碼不相符。';
 
   @override
   String get mmAppBarMenuDrawerTitle => '選單';

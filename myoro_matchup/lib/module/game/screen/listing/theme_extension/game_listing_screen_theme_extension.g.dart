@@ -13,10 +13,8 @@ part of 'game_listing_screen_theme_extension.dart';
 /// ```dart
 /// class GameListingScreenThemeExtension with _$GameListingScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameListingScreenThemeExtensionMixin
-    on ThemeExtension<GameListingScreenThemeExtension> {
-  GameListingScreenThemeExtension get self =>
-      this as GameListingScreenThemeExtension;
+mixin _$GameListingScreenThemeExtensionMixin on ThemeExtension<GameListingScreenThemeExtension> {
+  GameListingScreenThemeExtension get self => this as GameListingScreenThemeExtension;
 
   @override
   GameListingScreenThemeExtension copyWith({
@@ -25,8 +23,7 @@ mixin _$GameListingScreenThemeExtensionMixin
     BorderRadius? gameBorderRadius,
   }) {
     return GameListingScreenThemeExtension(
-      bodySuccessStateMargin:
-          bodySuccessStateMargin ?? self.bodySuccessStateMargin,
+      bodySuccessStateMargin: bodySuccessStateMargin ?? self.bodySuccessStateMargin,
       gameMargin: gameMargin ?? self.gameMargin,
       gameBorderRadius: gameBorderRadius ?? self.gameBorderRadius,
     );
@@ -43,11 +40,7 @@ mixin _$GameListingScreenThemeExtensionMixin
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.bodySuccessStateMargin,
-      self.gameMargin,
-      self.gameBorderRadius,
-    );
+    return Object.hash(self.bodySuccessStateMargin, self.gameMargin, self.gameBorderRadius);
   }
 
   @override

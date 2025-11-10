@@ -13,10 +13,8 @@ part of 'login_signup_screen_theme_extension.dart';
 /// ```dart
 /// class LoginSignupScreenThemeExtension with _$LoginSignupScreenThemeExtensionMixin {}
 /// ```
-mixin _$LoginSignupScreenThemeExtensionMixin
-    on ThemeExtension<LoginSignupScreenThemeExtension> {
-  LoginSignupScreenThemeExtension get self =>
-      this as LoginSignupScreenThemeExtension;
+mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreenThemeExtension> {
+  LoginSignupScreenThemeExtension get self => this as LoginSignupScreenThemeExtension;
 
   @override
   LoginSignupScreenThemeExtension copyWith({
@@ -37,18 +35,12 @@ mixin _$LoginSignupScreenThemeExtensionMixin
       inputTextStyle: inputTextStyle ?? self.inputTextStyle,
       buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
       buttonsSpacing: buttonsSpacing ?? self.buttonsSpacing,
-      formTypeSwitcherButtonTextStyle:
-          formTypeSwitcherButtonTextStyle ??
-          self.formTypeSwitcherButtonTextStyle,
-      formTypeSwitcherButtonIdleColor:
-          formTypeSwitcherButtonIdleColor ??
-          self.formTypeSwitcherButtonIdleColor,
+      formTypeSwitcherButtonTextStyle: formTypeSwitcherButtonTextStyle ?? self.formTypeSwitcherButtonTextStyle,
+      formTypeSwitcherButtonIdleColor: formTypeSwitcherButtonIdleColor ?? self.formTypeSwitcherButtonIdleColor,
       logoInputsSpacing: logoInputsSpacing ?? self.logoInputsSpacing,
-      formTypeSwitcherButtonTapColor:
-          formTypeSwitcherButtonTapColor ?? self.formTypeSwitcherButtonTapColor,
+      formTypeSwitcherButtonTapColor: formTypeSwitcherButtonTapColor ?? self.formTypeSwitcherButtonTapColor,
       inputsFormTypeSwitcherButtonSpacing:
-          inputsFormTypeSwitcherButtonSpacing ??
-          self.inputsFormTypeSwitcherButtonSpacing,
+          inputsFormTypeSwitcherButtonSpacing ?? self.inputsFormTypeSwitcherButtonSpacing,
     );
   }
 
@@ -61,15 +53,11 @@ mixin _$LoginSignupScreenThemeExtensionMixin
         other.inputTextStyle == self.inputTextStyle &&
         other.buttonTextStyle == self.buttonTextStyle &&
         other.buttonsSpacing == self.buttonsSpacing &&
-        other.formTypeSwitcherButtonTextStyle ==
-            self.formTypeSwitcherButtonTextStyle &&
-        other.formTypeSwitcherButtonIdleColor ==
-            self.formTypeSwitcherButtonIdleColor &&
+        other.formTypeSwitcherButtonTextStyle == self.formTypeSwitcherButtonTextStyle &&
+        other.formTypeSwitcherButtonIdleColor == self.formTypeSwitcherButtonIdleColor &&
         other.logoInputsSpacing == self.logoInputsSpacing &&
-        other.formTypeSwitcherButtonTapColor ==
-            self.formTypeSwitcherButtonTapColor &&
-        other.inputsFormTypeSwitcherButtonSpacing ==
-            self.inputsFormTypeSwitcherButtonSpacing;
+        other.formTypeSwitcherButtonTapColor == self.formTypeSwitcherButtonTapColor &&
+        other.inputsFormTypeSwitcherButtonSpacing == self.inputsFormTypeSwitcherButtonSpacing;
   }
 
   @override

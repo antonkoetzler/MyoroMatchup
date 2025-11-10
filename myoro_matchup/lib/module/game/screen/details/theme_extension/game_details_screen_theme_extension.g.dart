@@ -13,16 +13,12 @@ part of 'game_details_screen_theme_extension.dart';
 /// ```dart
 /// class GameDetailsScreenThemeExtension with _$GameDetailsScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameDetailsScreenThemeExtensionMixin
-    on ThemeExtension<GameDetailsScreenThemeExtension> {
-  GameDetailsScreenThemeExtension get self =>
-      this as GameDetailsScreenThemeExtension;
+mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreenThemeExtension> {
+  GameDetailsScreenThemeExtension get self => this as GameDetailsScreenThemeExtension;
 
   @override
   GameDetailsScreenThemeExtension copyWith({EdgeInsets? errorStatePadding}) {
-    return GameDetailsScreenThemeExtension(
-      errorStatePadding: errorStatePadding ?? self.errorStatePadding,
-    );
+    return GameDetailsScreenThemeExtension(errorStatePadding: errorStatePadding ?? self.errorStatePadding);
   }
 
   @override

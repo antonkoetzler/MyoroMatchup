@@ -38,10 +38,11 @@ public class GameService {
     ageRangeModel.setMaxAge(request.getAgeRange().getMaxAge());
     game.setAgeRange(ageRangeModel);
     GameFrequencyDayTimeModel frequencyModel = new GameFrequencyDayTimeModel();
-    frequencyModel.setMessageService(messageService);
     frequencyModel.setFrequency(request.getFrequencyDayTime().getFrequency());
-    frequencyModel.setDays(request.getFrequencyDayTime().getDays());
-    frequencyModel.setTimes(request.getFrequencyDayTime().getTimes());
+    frequencyModel.setPrimaryDay(request.getFrequencyDayTime().getPrimaryDay());
+    frequencyModel.setBiWeeklyDay(request.getFrequencyDayTime().getBiWeeklyDay());
+    frequencyModel.setPrimaryTime(request.getFrequencyDayTime().getPrimaryTime());
+    frequencyModel.setBiWeeklyTime(request.getFrequencyDayTime().getBiWeeklyTime());
     game.setFrequencyDayTime(frequencyModel);
     game.setVisibility(request.getVisibility());
     game.setProfilePicture(request.getProfilePicture());

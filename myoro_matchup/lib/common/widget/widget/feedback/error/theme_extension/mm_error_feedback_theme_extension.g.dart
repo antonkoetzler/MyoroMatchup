@@ -13,10 +13,8 @@ part of 'mm_error_feedback_theme_extension.dart';
 /// ```dart
 /// class MmErrorFeedbackThemeExtension with _$MmErrorFeedbackThemeExtensionMixin {}
 /// ```
-mixin _$MmErrorFeedbackThemeExtensionMixin
-    on ThemeExtension<MmErrorFeedbackThemeExtension> {
-  MmErrorFeedbackThemeExtension get self =>
-      this as MmErrorFeedbackThemeExtension;
+mixin _$MmErrorFeedbackThemeExtensionMixin on ThemeExtension<MmErrorFeedbackThemeExtension> {
+  MmErrorFeedbackThemeExtension get self => this as MmErrorFeedbackThemeExtension;
 
   @override
   MmErrorFeedbackThemeExtension copyWith() {
@@ -25,8 +23,7 @@ mixin _$MmErrorFeedbackThemeExtensionMixin
 
   @override
   bool operator ==(Object other) {
-    return other is MmErrorFeedbackThemeExtension &&
-        other.runtimeType == runtimeType;
+    return other is MmErrorFeedbackThemeExtension && other.runtimeType == runtimeType;
   }
 
   @override

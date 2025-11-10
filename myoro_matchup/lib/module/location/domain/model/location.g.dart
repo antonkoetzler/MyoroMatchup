@@ -32,12 +32,7 @@ Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
 mixin _$LocationMixin {
   Location get self => this as Location;
 
-  Location copyWith({
-    String? name,
-    String? city,
-    MyoroCountryEnum? country,
-    bool countryProvided = true,
-  }) {
+  Location copyWith({String? name, String? city, MyoroCountryEnum? country, bool countryProvided = true}) {
     return Location(
       name: name ?? self.name,
       city: city ?? self.city,

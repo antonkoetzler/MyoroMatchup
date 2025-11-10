@@ -24,7 +24,10 @@ final class GameFrequencyDayTimeTimeDto with _$GameFrequencyDayTimeTimeDtoMixin 
 
   /// Fake constructor.
   factory GameFrequencyDayTimeTimeDto.fake() {
-    return const GameFrequencyDayTimeTimeDto(startTime: TimeOfDay(hour: 10, minute: 0), endTime: TimeOfDay(hour: 11, minute: 0));
+    return const GameFrequencyDayTimeTimeDto(
+      startTime: TimeOfDay(hour: 10, minute: 0),
+      endTime: TimeOfDay(hour: 11, minute: 0),
+    );
   }
 
   /// From JSON.
