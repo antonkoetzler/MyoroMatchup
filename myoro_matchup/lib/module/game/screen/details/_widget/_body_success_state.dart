@@ -1,4 +1,4 @@
-part of '../game_details_screen.dart';
+part of '../widget/game_details_screen.dart';
 
 /// Success body of [GameDetailsScreen].
 final class _BodySuccessState extends StatelessWidget {

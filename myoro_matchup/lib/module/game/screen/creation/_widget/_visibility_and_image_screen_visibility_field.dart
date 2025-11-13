@@ -13,7 +13,7 @@ final class _VisibilityAndImageScreenVisibilityField extends StatelessWidget {
 
     return MyoroSingleSelectionDropdown<GameVisibilityEnum>(
       selectedItem: visibility,
-      itemBuilder: (item) => MyoroMenuIconTextButtonItem(
+      itemBuilder: (item, isLast) => MyoroMenuIconTextButtonItem(
         iconConfiguration: MyoroIconConfiguration(
           icon: switch (item) {
             GameVisibilityEnum.private => Icons.lock,

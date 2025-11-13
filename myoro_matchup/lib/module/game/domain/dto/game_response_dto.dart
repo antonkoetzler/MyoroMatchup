@@ -18,8 +18,8 @@ final class GameResponseDto extends GameAbstract with _$GameResponseDtoMixin {
     required super.price,
     required super.ageRange,
     required super.visibility,
-    super.profilePicture,
-    super.banner,
+    required super.profilePicture,
+    required super.banner,
     required this.id,
   });
 
@@ -33,12 +33,8 @@ final class GameResponseDto extends GameAbstract with _$GameResponseDtoMixin {
       price: GamePriceDto.fake(),
       ageRange: GameAgeRangeModel.fake(),
       visibility: GameVisibilityEnum.fake(),
-      profilePicture: faker.randomGenerator.boolean()
-          ? kTestProfilePictures[faker.randomGenerator.integer(kTestProfilePictures.length - 1)]
-          : null,
-      banner: faker.randomGenerator.boolean()
-          ? kTestBanners[faker.randomGenerator.integer(kTestBanners.length - 1)]
-          : null,
+      profilePicture: kTestProfilePictures[faker.randomGenerator.integer(kTestProfilePictures.length - 1)],
+      banner: kTestBanners[faker.randomGenerator.integer(kTestBanners.length - 1)],
       id: faker.randomGenerator.integer(1000000),
     );
   }

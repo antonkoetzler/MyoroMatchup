@@ -25,6 +25,9 @@ final class _LocationScreen extends _Screen {
           return ValueListenableBuilder(
             valueListenable: locationController,
             builder: (_, location, _) {
+              final address = location?.address;
+              final country = address?.country;
+
               return Column(
                 mainAxisSize: MainAxisSize.min,
                 spacing: spacing,
@@ -38,7 +41,7 @@ final class _LocationScreen extends _Screen {
                       onFieldSubmitted: (_) => onNext(),
                     ),
                   ),
-                  if (location != null && location.country != null)
+                  if (location != null && country != null)
                     TweenAnimationBuilder<double>(
                       tween: Tween(begin: 0.0, end: 1.0),
                       duration: const Duration(milliseconds: 300),
@@ -46,10 +49,11 @@ final class _LocationScreen extends _Screen {
                         opacity: opacity,
                         child: Text(
                           localization.gameCreationScreenLocationScreenCurrencyNotificationText(
-                            location.country!.emoji,
+                            country.emoji,
                             location.name,
-                            location.country!.currency.longSymbol,
+                            country.currency.longSymbol,
                           ),
+                          textAlign: TextAlign.center,
                           style: locationScreenCurrencyNotificationTextStyle,
                         ),
                       ),

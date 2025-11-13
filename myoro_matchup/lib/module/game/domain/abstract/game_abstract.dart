@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Model representing a game.
@@ -14,8 +15,8 @@ abstract class GameAbstract {
     required this.price,
     required this.ageRange,
     required this.visibility,
-    this.profilePicture,
-    this.banner,
+    required this.profilePicture,
+    required this.banner,
   });
 
   /// Name of the [Game].
@@ -40,10 +41,10 @@ abstract class GameAbstract {
   final GameVisibilityEnum visibility;
 
   /// Profile picture of the [Game].
-  @JsonKey(includeIfNull: false)
-  final String? profilePicture;
+  @JsonKey(defaultValue: kMyoroEmptyString)
+  final String profilePicture;
 
   /// Banner of the [Game].
-  @JsonKey(includeIfNull: false)
-  final String? banner;
+  @JsonKey(defaultValue: kMyoroEmptyString)
+  final String banner;
 }

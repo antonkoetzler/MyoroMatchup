@@ -19,15 +19,13 @@ mixin _$MmLocationInputThemeExtensionMixin on ThemeExtension<MmLocationInputThem
   @override
   MmLocationInputThemeExtension copyWith({
     TextStyle? itemNameTextStyle,
-    bool itemNameTextStyleProvided = true,
     TextStyle? itemCityCountryTextStyle,
-    bool itemCityCountryTextStyleProvided = true,
+    EdgeInsets? itemDividerPadding,
   }) {
     return MmLocationInputThemeExtension(
-      itemNameTextStyle: itemNameTextStyleProvided ? (itemNameTextStyle ?? self.itemNameTextStyle) : null,
-      itemCityCountryTextStyle: itemCityCountryTextStyleProvided
-          ? (itemCityCountryTextStyle ?? self.itemCityCountryTextStyle)
-          : null,
+      itemNameTextStyle: itemNameTextStyle ?? self.itemNameTextStyle,
+      itemCityCountryTextStyle: itemCityCountryTextStyle ?? self.itemCityCountryTextStyle,
+      itemDividerPadding: itemDividerPadding ?? self.itemDividerPadding,
     );
   }
 
@@ -36,12 +34,13 @@ mixin _$MmLocationInputThemeExtensionMixin on ThemeExtension<MmLocationInputThem
     return other is MmLocationInputThemeExtension &&
         other.runtimeType == runtimeType &&
         other.itemNameTextStyle == self.itemNameTextStyle &&
-        other.itemCityCountryTextStyle == self.itemCityCountryTextStyle;
+        other.itemCityCountryTextStyle == self.itemCityCountryTextStyle &&
+        other.itemDividerPadding == self.itemDividerPadding;
   }
 
   @override
   int get hashCode {
-    return Object.hash(self.itemNameTextStyle, self.itemCityCountryTextStyle);
+    return Object.hash(self.itemNameTextStyle, self.itemCityCountryTextStyle, self.itemDividerPadding);
   }
 
   @override
@@ -49,5 +48,6 @@ mixin _$MmLocationInputThemeExtensionMixin on ThemeExtension<MmLocationInputThem
       'MmLocationInputThemeExtension(\n'
       '  itemNameTextStyle: ${self.itemNameTextStyle},\n'
       '  itemCityCountryTextStyle: ${self.itemCityCountryTextStyle},\n'
+      '  itemDividerPadding: ${self.itemDividerPadding},\n'
       ');';
 }

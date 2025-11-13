@@ -1,6 +1,8 @@
 package com.myoro.myoro_matchup_api.dto;
 
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 /** Location DTO. */
 public class LocationDto {
@@ -8,22 +10,19 @@ public class LocationDto {
   @NotBlank(message = "{validation.game.location.name.required}")
   private String name;
 
-  /** City that the location resides in. */
-  @NotBlank(message = "{validation.game.location.city.required}")
-  private String city;
-
-  /** Country that the location resides in. */
-  private String country;
+  /** Address of the location. */
+  @NotNull(message = "{validation.game.location.address.required}")
+  @Valid
+  private LocationAddressDto address;
 
   /** Default constructor. */
   public LocationDto() {
   }
 
   /** Constructor with all fields. */
-  public LocationDto(String name, String city, String country) {
+  public LocationDto(String name, LocationAddressDto address) {
     this.name = name;
-    this.city = city;
-    this.country = country;
+    this.address = address;
   }
 
   /**
@@ -36,21 +35,12 @@ public class LocationDto {
   }
 
   /**
-   * Getter for city
+   * Getter for address
    * 
-   * @return the city that the location resides in
+   * @return the address of the location
    */
-  public String getCity() {
-    return city;
-  }
-
-  /**
-   * Getter for country
-   * 
-   * @return the country that the location resides in
-   */
-  public String getCountry() {
-    return country;
+  public LocationAddressDto getAddress() {
+    return address;
   }
 
   /**
@@ -63,20 +53,11 @@ public class LocationDto {
   }
 
   /**
-   * Setter for city
+   * Setter for address
    * 
-   * @param city the city that the location resides in
+   * @param address the address of the location
    */
-  public void setCity(String city) {
-    this.city = city;
-  }
-
-  /**
-   * Setter for country
-   * 
-   * @param country the country that the location resides in
-   */
-  public void setCountry(String country) {
-    this.country = country;
+  public void setAddress(LocationAddressDto address) {
+    this.address = address;
   }
 }

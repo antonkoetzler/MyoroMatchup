@@ -14,8 +14,8 @@ Map<String, dynamic> _$GameCreationRequestDtoToJson(GameCreationRequestDto insta
   'price': instance.price.toJson(),
   'ageRange': instance.ageRange.toJson(),
   'visibility': _$GameVisibilityEnumEnumMap[instance.visibility]!,
-  'profilePicture': ?instance.profilePicture,
-  'banner': ?instance.banner,
+  'profilePicture': instance.profilePicture,
+  'banner': instance.banner,
 };
 
 const _$SportsEnumEnumMap = {
@@ -50,9 +50,7 @@ mixin _$GameCreationRequestDtoMixin {
     GameAgeRangeModel? ageRange,
     GameVisibilityEnum? visibility,
     String? profilePicture,
-    bool profilePictureProvided = true,
     String? banner,
-    bool bannerProvided = true,
   }) {
     return GameCreationRequestDto(
       name: name ?? self.name,
@@ -62,8 +60,8 @@ mixin _$GameCreationRequestDtoMixin {
       price: price ?? self.price,
       ageRange: ageRange ?? self.ageRange,
       visibility: visibility ?? self.visibility,
-      profilePicture: profilePictureProvided ? (profilePicture ?? self.profilePicture) : null,
-      banner: bannerProvided ? (banner ?? self.banner) : null,
+      profilePicture: profilePicture ?? self.profilePicture,
+      banner: banner ?? self.banner,
     );
   }
 

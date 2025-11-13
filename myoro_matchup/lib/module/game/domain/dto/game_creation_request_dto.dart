@@ -17,8 +17,8 @@ final class GameCreationRequestDto extends GameAbstract with _$GameCreationReque
     required super.price,
     required super.ageRange,
     required super.visibility,
-    super.profilePicture,
-    super.banner,
+    required super.profilePicture,
+    required super.banner,
   });
 
   /// To JSON.

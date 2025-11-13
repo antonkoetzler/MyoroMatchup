@@ -11,23 +11,32 @@ part 'mm_location_input_theme_extension.g.dart';
 final class MmLocationInputThemeExtension extends ThemeExtension<MmLocationInputThemeExtension>
     with _$MmLocationInputThemeExtensionMixin {
   /// Default constructor.
-  const MmLocationInputThemeExtension({required this.itemNameTextStyle, required this.itemCityCountryTextStyle});
+  const MmLocationInputThemeExtension({
+    required this.itemNameTextStyle,
+    required this.itemCityCountryTextStyle,
+    required this.itemDividerPadding,
+  });
 
   /// Fake constructor.
   MmLocationInputThemeExtension.fake()
-    : itemNameTextStyle = myoroNullableFake<TextStyle>(),
-      itemCityCountryTextStyle = myoroNullableFake<TextStyle>();
+    : itemNameTextStyle = myoroFake<TextStyle>(),
+      itemCityCountryTextStyle = myoroFake<TextStyle>(),
+      itemDividerPadding = myoroFake<EdgeInsets>();
 
   /// Builder constructor.
   MmLocationInputThemeExtension.builder(TextTheme textTheme)
-    : itemNameTextStyle = textTheme.titleSmall,
-      itemCityCountryTextStyle = textTheme.bodySmall;
+    : itemNameTextStyle = textTheme.titleSmall!,
+      itemCityCountryTextStyle = textTheme.bodySmall!,
+      itemDividerPadding = const EdgeInsets.symmetric(horizontal: kMyoroMultiplier);
 
   /// [TextStyle] of the item name.
-  final TextStyle? itemNameTextStyle;
+  final TextStyle itemNameTextStyle;
 
   /// [TextStyle] of the item city and country.
-  final TextStyle? itemCityCountryTextStyle;
+  final TextStyle itemCityCountryTextStyle;
+
+  /// [EdgeInsets] of the divider.
+  final EdgeInsets itemDividerPadding;
 
   /// Lerp function.
   @override
@@ -36,6 +45,7 @@ final class MmLocationInputThemeExtension extends ThemeExtension<MmLocationInput
     return copyWith(
       itemNameTextStyle: TextStyle.lerp(itemNameTextStyle, other.itemNameTextStyle, t),
       itemCityCountryTextStyle: TextStyle.lerp(itemCityCountryTextStyle, other.itemCityCountryTextStyle, t),
+      itemDividerPadding: EdgeInsets.lerp(itemDividerPadding, other.itemDividerPadding, t),
     );
   }
 }

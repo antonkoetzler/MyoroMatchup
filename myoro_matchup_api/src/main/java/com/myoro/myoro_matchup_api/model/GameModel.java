@@ -50,8 +50,8 @@ public class GameModel {
   @Embedded
   @AttributeOverrides({
       @AttributeOverride(name = "name", column = @Column(name = "location_name", nullable = false)),
-      @AttributeOverride(name = "city", column = @Column(name = "location_city", nullable = false)),
-      @AttributeOverride(name = "country", column = @Column(name = "location_country", nullable = true))
+      @AttributeOverride(name = "address.city", column = @Column(name = "location_city", nullable = false)),
+      @AttributeOverride(name = "address.country", column = @Column(name = "location_country", nullable = true))
   })
   private LocationModel location;
 

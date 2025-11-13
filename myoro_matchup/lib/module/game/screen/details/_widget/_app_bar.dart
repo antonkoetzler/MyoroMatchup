@@ -1,4 +1,4 @@
-part of '../game_details_screen.dart';
+part of '../widget/game_details_screen.dart';
 
 /// App bar of [GameDetailsScreen].
 final class _AppBar extends MmAppBar {

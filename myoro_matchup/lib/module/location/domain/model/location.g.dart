@@ -8,14 +8,12 @@ part of 'location.dart';
 
 Location _$LocationFromJson(Map<String, dynamic> json) => Location(
   name: json['name'] as String? ?? '',
-  city: json['city'] as String? ?? '',
-  country: Location._countryFromJson(json['country']),
+  address: LocationAddress.fromJson(json['address'] as Map<String, dynamic>),
 );
 
 Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
   'name': instance.name,
-  'city': instance.city,
-  'country': ?Location._countryToJson(instance.country),
+  'address': instance.address,
 };
 
 // **************************************************************************
@@ -32,12 +30,8 @@ Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
 mixin _$LocationMixin {
   Location get self => this as Location;
 
-  Location copyWith({String? name, String? city, MyoroCountryEnum? country, bool countryProvided = true}) {
-    return Location(
-      name: name ?? self.name,
-      city: city ?? self.city,
-      country: countryProvided ? (country ?? self.country) : null,
-    );
+  Location copyWith({String? name, LocationAddress? address}) {
+    return Location(name: name ?? self.name, address: address ?? self.address);
   }
 
   @override
@@ -45,20 +39,18 @@ mixin _$LocationMixin {
     return other is Location &&
         other.runtimeType == runtimeType &&
         other.name == self.name &&
-        other.city == self.city &&
-        other.country == self.country;
+        other.address == self.address;
   }
 
   @override
   int get hashCode {
-    return Object.hash(self.name, self.city, self.country);
+    return Object.hash(self.name, self.address);
   }
 
   @override
   String toString() =>
       'Location(\n'
       '  name: ${self.name},\n'
-      '  city: ${self.city},\n'
-      '  country: ${self.country},\n'
+      '  address: ${self.address},\n'
       ');';
 }

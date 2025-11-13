@@ -1,4 +1,4 @@
-part of '../game_details_screen.dart';
+part of '../widget/game_details_screen.dart';
 
 /// [MyoroRequestEnum.error] state of [GameDetailsScreen].
 final class _ErrorState extends StatelessWidget {

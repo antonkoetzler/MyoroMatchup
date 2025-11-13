@@ -11,12 +11,14 @@ import com.myoro.myoro_matchup_api.dto.GameCreationRequestDto;
 import com.myoro.myoro_matchup_api.dto.GameFrequencyDayTimeDto;
 import com.myoro.myoro_matchup_api.dto.GamePriceDto;
 import com.myoro.myoro_matchup_api.dto.GameResponseDto;
+import com.myoro.myoro_matchup_api.dto.LocationAddressDto;
 import com.myoro.myoro_matchup_api.dto.LocationDto;
 import com.myoro.myoro_matchup_api.model.GameModel;
 import com.myoro.myoro_matchup_api.repository.GameRepository;
 import com.myoro.myoro_matchup_api.model.GamePriceModel;
 import com.myoro.myoro_matchup_api.model.GameAgeRangeModel;
 import com.myoro.myoro_matchup_api.model.GameFrequencyDayTimeModel;
+import com.myoro.myoro_matchup_api.model.LocationAddressModel;
 import com.myoro.myoro_matchup_api.model.LocationModel;
 
 /** Game service. */
@@ -46,8 +48,10 @@ public class GameService {
     game.setAgeRange(ageRangeModel);
     LocationModel locationModel = new LocationModel();
     locationModel.setName(request.getLocation().getName());
-    locationModel.setCity(request.getLocation().getCity());
-    locationModel.setCountry(request.getLocation().getCountry());
+    LocationAddressModel addressModel = new LocationAddressModel();
+    addressModel.setCity(request.getLocation().getAddress().getCity());
+    addressModel.setCountry(request.getLocation().getAddress().getCountry());
+    locationModel.setAddress(addressModel);
     game.setLocation(locationModel);
     GameFrequencyDayTimeModel frequencyModel = new GameFrequencyDayTimeModel();
     frequencyModel.setFrequency(request.getFrequencyDayTime().getFrequency());
@@ -127,8 +131,12 @@ public class GameService {
       LocationModel location = game.getLocation();
       LocationDto locationDto = new LocationDto();
       locationDto.setName(location.getName());
-      locationDto.setCity(location.getCity());
-      locationDto.setCountry(location.getCountry());
+      if (location.getAddress() != null) {
+        LocationAddressDto addressDto = new LocationAddressDto();
+        addressDto.setCity(location.getAddress().getCity());
+        addressDto.setCountry(location.getAddress().getCountry());
+        locationDto.setAddress(addressDto);
+      }
       dto.setLocation(locationDto);
     }
 

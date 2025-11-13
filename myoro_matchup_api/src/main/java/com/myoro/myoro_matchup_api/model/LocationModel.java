@@ -1,6 +1,7 @@
 package com.myoro.myoro_matchup_api.model;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Embeddable;
 
 /** Location model. */
@@ -10,23 +11,18 @@ public class LocationModel {
   @Column(nullable = false)
   private String name;
 
-  /** City that the location resides in. */
-  @Column(nullable = false)
-  private String city;
-
-  /** Country that the location resides in. */
-  @Column(nullable = true)
-  private String country;
+  /** Address of the location. */
+  @Embedded
+  private LocationAddressModel address;
 
   /** Default constructor. */
   public LocationModel() {
   }
 
   /** Constructor with all fields. */
-  public LocationModel(String name, String city, String country) {
+  public LocationModel(String name, LocationAddressModel address) {
     this.name = name;
-    this.city = city;
-    this.country = country;
+    this.address = address;
   }
 
   /**
@@ -39,21 +35,12 @@ public class LocationModel {
   }
 
   /**
-   * Getter for city
+   * Getter for address
    * 
-   * @return the city that the location resides in
+   * @return the address of the location
    */
-  public String getCity() {
-    return city;
-  }
-
-  /**
-   * Getter for country
-   * 
-   * @return the country that the location resides in
-   */
-  public String getCountry() {
-    return country;
+  public LocationAddressModel getAddress() {
+    return address;
   }
 
   /**
@@ -66,20 +53,11 @@ public class LocationModel {
   }
 
   /**
-   * Setter for city
+   * Setter for address
    * 
-   * @param city the city that the location resides in
+   * @param address the address of the location
    */
-  public void setCity(String city) {
-    this.city = city;
-  }
-
-  /**
-   * Setter for country
-   * 
-   * @param country the country that the location resides in
-   */
-  public void setCountry(String country) {
-    this.country = country;
+  public void setAddress(LocationAddressModel address) {
+    this.address = address;
   }
 }

@@ -43,7 +43,7 @@ final class _PriceScreen extends _Screen {
           return ValueListenableBuilder(
             valueListenable: locationController,
             builder: (_, location, _) {
-              final currency = location?.country?.currency ?? MyoroCurrencyEnum.usd;
+              final currency = location?.address.country?.currency ?? MyoroCurrencyEnum.usd;
 
               return Column(
                 spacing: spacing,

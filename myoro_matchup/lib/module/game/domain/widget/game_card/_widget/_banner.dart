@@ -9,6 +9,9 @@ final class _Banner extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameCardThemeExtension>();
+    final bannerDecoration = themeExtension.bannerDecoration;
+
+    final banner = _game.banner;
 
     return SizedBox(
       height: themeExtension.bannerMaxHeight,
@@ -16,11 +19,8 @@ final class _Banner extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          _game.banner != null
-              ? Image.asset(_game.banner!, fit: BoxFit.cover)
-              // TODO
-              : Container(color: Colors.pink.shade200),
-          Container(decoration: themeExtension.bannerDecoration),
+          banner.isNotEmpty ? Image.asset(banner, fit: BoxFit.cover) : Container(color: MyoroColors.transparent),
+          Container(decoration: bannerDecoration),
         ],
       ),
     );
