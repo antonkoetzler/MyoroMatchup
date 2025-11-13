@@ -13,10 +13,17 @@ class AppLocalizationsRu extends AppLocalizations {
       'Не удалось подключиться к серверу, проверьте подключение к интернету и попробуйте снова.';
 
   @override
-  String get mmErrorFeedbackSubtitle => 'Пожалуйста, проверьте ваше подключение и попробуйте снова!';
+  String get mmErrorFeedbackSubtitle =>
+      'Пожалуйста, проверьте ваше подключение и попробуйте снова!';
 
   @override
   String get mmErrorFeedbackActionButtonText => 'Повторить';
+
+  @override
+  String get mmSuccessFeedbackSubtitle => 'Операция успешно завершена!';
+
+  @override
+  String get mmSuccessFeedbackActionButtonText => 'Готово';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => 'Место';
@@ -34,7 +41,11 @@ class AppLocalizationsRu extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'Континент';
 
   @override
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
     return '$city, $emoji $countryName';
   }
 
@@ -69,7 +80,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Волейбол';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle => 'Не удалось получить детали игры!';
+  String get gameDetailsScreenBodyErrorStateTitle =>
+      'Не удалось получить детали игры!';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Игроки';
@@ -78,13 +90,15 @@ class AppLocalizationsRu extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Игроки';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Рейтинги';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
+      'Рейтинги';
 
   @override
   String get gameListingScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'Ошибка при получении игр!';
+  String get gameListingScreenBodyErrorStateTitle =>
+      'Ошибка при получении игр!';
 
   @override
   String get gameListingScreenBodySuccessStateEmptyTitle => 'Игры не найдены!';
@@ -102,32 +116,44 @@ class AppLocalizationsRu extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputLabel => 'Название';
 
   @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder => 'например, Еженедельная футбольная игра';
+  String get gameCreationScreenNameScreenNameInputPlaceholder =>
+      'например, Еженедельная футбольная игра';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'Название не может быть пустым.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
+      'Название не может быть пустым.';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputLengthMessage =>
+      'Название должно содержать не менее 3 символов.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Спорт';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Частота и Дата/Время';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
+      'Частота и Дата/Время';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Частота';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      'Частота';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'Начало';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      'Начало';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'Конец';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
+      'Конец';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
       'Время начала не может быть пустым.';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
       'Время окончания не может быть пустым.';
 
   @override
@@ -146,7 +172,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Местоположение';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage => 'Пожалуйста, выберите местоположение.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      'Пожалуйста, выберите местоположение.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -158,13 +185,17 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle => 'Видимость и Изображение';
+  String get gameCreationScreenVisibilityAndImageScreenTitle =>
+      'Видимость и Изображение';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'Фото профиля';
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      'Фото профиля';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'Баннер';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      'Баннер';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Назад';
@@ -176,7 +207,12 @@ class AppLocalizationsRu extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'Завершить';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'Имя пользователя/email';
+  String get gameCreationScreenGameCreationSuccessMessage =>
+      'Игра успешно создана!';
+
+  @override
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+      'Имя пользователя/email';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'Пароль';
@@ -191,7 +227,8 @@ class AppLocalizationsRu extends AppLocalizations {
   String get loginSignupScreenSignupNameInputPlaceholder => 'Имя';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder => 'Имя пользователя';
+  String get loginSignupScreenSignupUsernameInputPlaceholder =>
+      'Имя пользователя';
 
   @override
   String get loginSignupScreenSignupEmailInputPlaceholder => 'Email';
@@ -206,31 +243,40 @@ class AppLocalizationsRu extends AppLocalizations {
   String get loginSignupScreenSignupSignupButton => 'Зарегистрироваться';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'Новичок в MyoroMatchup? Зарегистрируйтесь!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'Новичок в MyoroMatchup? Зарегистрируйтесь!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'Уже зарегистрированы? Войдите!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      'Уже зарегистрированы? Войдите!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'Имя пользователя/email не может быть пустым.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'Имя пользователя/email не может быть пустым.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'Пароль не может быть пустым.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'Пароль не может быть пустым.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'Имя не может быть пустым.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      'Имя не может быть пустым.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'Имя пользователя не может быть пустым.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'Имя пользователя не может быть пустым.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'Email не может быть пустым.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'Email не может быть пустым.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'Поля пароля не могут быть пустыми.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'Поля пароля не могут быть пустыми.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Пароли не совпадают.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      'Пароли не совпадают.';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Меню';

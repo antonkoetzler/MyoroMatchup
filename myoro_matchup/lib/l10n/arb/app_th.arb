@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "โปรดตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้ง!",
   "mmErrorFeedbackActionButtonText": "ลองอีกครั้ง",
 
+  "mmSuccessFeedbackSubtitle": "ดำเนินการเสร็จสมบูรณ์แล้ว!",
+  "mmSuccessFeedbackActionButtonText": "เสร็จสิ้น",
+
   "mmLocationInputTypeEnumPlaceLabel": "สถานที่",
   "mmLocationInputTypeEnumCityLabel": "เมือง",
   "mmLocationInputTypeEnumStateLabel": "รัฐ",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "ชื่อ",
   "gameCreationScreenNameScreenNameInputPlaceholder": "เช่น เกมฟุตบอลรายสัปดาห์",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "ชื่อไม่สามารถว่างได้",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "ชื่อต้องมีอย่างน้อย 3 ตัวอักษร",
   "gameCreationScreenSportScreenTitle": "กีฬา",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "ความถี่และวันที่/เวลา",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "ความถี่",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "ก่อนหน้า",
   "gameCreationScreenButtonNextText": "ถัดไป",
   "gameCreationScreenButtonFinishText": "เสร็จสิ้น",
+  "gameCreationScreenGameCreationSuccessMessage": "สร้างเกมสำเร็จแล้ว!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "ชื่อผู้ใช้/อีเมล",
   "loginSignupScreenLoginPasswordInputPlaceholder": "รหัสผ่าน",

@@ -13,10 +13,17 @@ class AppLocalizationsIt extends AppLocalizations {
       'Impossibile connettersi al server, controlla la tua connessione Internet e riprova.';
 
   @override
-  String get mmErrorFeedbackSubtitle => 'Verifica la tua connessione e riprova!';
+  String get mmErrorFeedbackSubtitle =>
+      'Verifica la tua connessione e riprova!';
 
   @override
   String get mmErrorFeedbackActionButtonText => 'Riprova';
+
+  @override
+  String get mmSuccessFeedbackSubtitle => 'Operazione completata con successo!';
+
+  @override
+  String get mmSuccessFeedbackActionButtonText => 'Fatto';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => 'Luogo';
@@ -34,7 +41,11 @@ class AppLocalizationsIt extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'Continente';
 
   @override
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
     return '$city, $emoji $countryName';
   }
 
@@ -69,25 +80,30 @@ class AppLocalizationsIt extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Pallavolo';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle => 'Impossibile recuperare i dettagli del gioco!';
+  String get gameDetailsScreenBodyErrorStateTitle =>
+      'Impossibile recuperare i dettagli del gioco!';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Giocatori';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Giocatori';
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText =>
+      'Giocatori';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Classifiche';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
+      'Classifiche';
 
   @override
   String get gameListingScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'Errore nel recupero dei giochi!';
+  String get gameListingScreenBodyErrorStateTitle =>
+      'Errore nel recupero dei giochi!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => 'Nessun gioco trovato!';
+  String get gameListingScreenBodySuccessStateEmptyTitle =>
+      'Nessun gioco trovato!';
 
   @override
   String get gameListingScreenNewGameButtonText => 'Crea gioco';
@@ -102,32 +118,44 @@ class AppLocalizationsIt extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputLabel => 'Nome';
 
   @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder => 'es. Partita di calcio settimanale';
+  String get gameCreationScreenNameScreenNameInputPlaceholder =>
+      'es. Partita di calcio settimanale';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'Il nome non può essere vuoto.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
+      'Il nome non può essere vuoto.';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputLengthMessage =>
+      'Il nome deve contenere almeno 3 caratteri.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Sport';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Frequenza e Data/Ora';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
+      'Frequenza e Data/Ora';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Frequenza';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      'Frequenza';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'Inizio';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      'Inizio';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'Fine';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
+      'Fine';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
       'L\'ora di inizio non può essere vuota.';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
       'L\'ora di fine non può essere vuota.';
 
   @override
@@ -146,7 +174,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Posizione';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage => 'Si prega di selezionare una posizione.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      'Si prega di selezionare una posizione.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -158,13 +187,17 @@ class AppLocalizationsIt extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle => 'Visibilità e Immagine';
+  String get gameCreationScreenVisibilityAndImageScreenTitle =>
+      'Visibilità e Immagine';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'Foto del profilo';
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      'Foto del profilo';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'Banner';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      'Banner';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Precedente';
@@ -176,7 +209,12 @@ class AppLocalizationsIt extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'Termina';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'Nome utente/email';
+  String get gameCreationScreenGameCreationSuccessMessage =>
+      'Gioco creato con successo!';
+
+  @override
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+      'Nome utente/email';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'Password';
@@ -185,7 +223,8 @@ class AppLocalizationsIt extends AppLocalizations {
   String get loginSignupScreenLoginLoginButton => 'Accedi';
 
   @override
-  String get loginSignupScreenLoginForgotPasswordButton => 'Password dimenticata?';
+  String get loginSignupScreenLoginForgotPasswordButton =>
+      'Password dimenticata?';
 
   @override
   String get loginSignupScreenSignupNameInputPlaceholder => 'Nome';
@@ -200,37 +239,47 @@ class AppLocalizationsIt extends AppLocalizations {
   String get loginSignupScreenSignupPasswordInputPlaceholder => 'Password';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'Password';
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
+      'Password';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Registrati';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'Nuovo su MyoroMatchup? Registrati!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'Nuovo su MyoroMatchup? Registrati!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'Già registrato? Accedi!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      'Già registrato? Accedi!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'Nome utente/email non può essere vuoto.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'Nome utente/email non può essere vuoto.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'La password non può essere vuota.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'La password non può essere vuota.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'Il nome non può essere vuoto.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      'Il nome non può essere vuoto.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'Il nome utente non può essere vuoto.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'Il nome utente non può essere vuoto.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'L\'email non può essere vuota.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'L\'email non può essere vuota.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'I campi password non possono essere vuoti.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'I campi password non possono essere vuoti.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Le password non corrispondono.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      'Le password non corrispondono.';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Menu';

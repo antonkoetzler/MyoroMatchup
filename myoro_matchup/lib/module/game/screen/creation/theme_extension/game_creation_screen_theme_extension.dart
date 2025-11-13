@@ -39,9 +39,9 @@ final class GameCreationScreenThemeExtension extends ThemeExtension<GameCreation
       titleTextStyle = textTheme.titleMedium!,
       bodyPadding = const EdgeInsets.fromLTRB(
         kMyoroMultiplier * 3,
-        kMyoroMultiplier * 2,
         kMyoroMultiplier * 3,
-        kMyoroMultiplier * 2,
+        kMyoroMultiplier * 3,
+        kMyoroMultiplier * 3,
       ),
       buttonTextStyle = textTheme.bodyMedium!,
       priceScreenInputLabelTextStyle = textTheme.titleLarge!,

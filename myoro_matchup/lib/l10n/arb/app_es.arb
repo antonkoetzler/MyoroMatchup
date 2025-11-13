@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "Por favor, verifica tu conexión e inténtalo de nuevo.",
   "mmErrorFeedbackActionButtonText": "Reintentar",
 
+  "mmSuccessFeedbackSubtitle": "¡Operación completada con éxito!",
+  "mmSuccessFeedbackActionButtonText": "Hecho",
+
   "mmLocationInputTypeEnumPlaceLabel": "Lugar",
   "mmLocationInputTypeEnumCityLabel": "Ciudad",
   "mmLocationInputTypeEnumStateLabel": "Estado",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "Nombre",
   "gameCreationScreenNameScreenNameInputPlaceholder": "i.e., Partido Semanal de Fútbol",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "El nombre no puede estar vacío.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "El nombre debe tener al menos 3 caracteres.",
   "gameCreationScreenSportScreenTitle": "Deporte",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Frecuencia y Fecha/Hora",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frecuencia",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "Anterior",
   "gameCreationScreenButtonNextText": "Siguiente",
   "gameCreationScreenButtonFinishText": "Finalizar",
+  "gameCreationScreenGameCreationSuccessMessage": "¡Juego creado exitosamente!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nombre de usuario o email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Contraseña",

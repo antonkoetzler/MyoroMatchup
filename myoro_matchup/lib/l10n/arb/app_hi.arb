@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "कृपया अपना कनेक्शन सत्यापित करें और पुनः प्रयास करें!",
   "mmErrorFeedbackActionButtonText": "पुनः प्रयास करें",
 
+  "mmSuccessFeedbackSubtitle": "ऑपरेशन सफलतापूर्वक पूर्ण हुआ!",
+  "mmSuccessFeedbackActionButtonText": "पूर्ण",
+
   "mmLocationInputTypeEnumPlaceLabel": "स्थान",
   "mmLocationInputTypeEnumCityLabel": "शहर",
   "mmLocationInputTypeEnumStateLabel": "राज्य",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "नाम",
   "gameCreationScreenNameScreenNameInputPlaceholder": "उदाहरण: साप्ताहिक फुटबॉल गेम",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "नाम खाली नहीं हो सकता।",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "नाम कम से कम 3 अक्षर का होना चाहिए।",
   "gameCreationScreenSportScreenTitle": "खेल",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "आवृत्ति और तारीख/समय",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "आवृत्ति",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "पिछला",
   "gameCreationScreenButtonNextText": "अगला",
   "gameCreationScreenButtonFinishText": "समाप्त करें",
+  "gameCreationScreenGameCreationSuccessMessage": "गेम सफलतापूर्वक बनाया गया!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "उपयोगकर्ता नाम/ईमेल",
   "loginSignupScreenLoginPasswordInputPlaceholder": "पासवर्ड",

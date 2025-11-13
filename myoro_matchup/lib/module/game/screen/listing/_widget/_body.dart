@@ -7,13 +7,15 @@ final class _Body extends StatelessWidget {
   @override
   Widget build(context) {
     final viewModel = context.read<GameListingScreenViewModel>();
+    final state = viewModel.state;
+    final requestController = state.requestController;
 
     return ValueListenableBuilder(
-      valueListenable: viewModel.state.gamesRequestNotifier,
-      builder: (_, gamesRequest, _) => switch (gamesRequest.status) {
+      valueListenable: requestController,
+      builder: (_, request, _) => switch (request.status) {
         MyoroRequestEnum.idle => const _BodyLoader(),
         MyoroRequestEnum.loading => const _BodyLoader(),
-        MyoroRequestEnum.success => _BodySuccessState(gamesRequest.data!),
+        MyoroRequestEnum.success => _BodySuccessState(request.data!),
         MyoroRequestEnum.error => const _BodyErrorState(),
       },
     );

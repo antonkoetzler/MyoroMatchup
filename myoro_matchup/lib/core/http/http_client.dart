@@ -11,6 +11,12 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 /// Http client for the API.
 @singleton
 final class HttpClient {
+  /// Default constructor.
+  HttpClient(this._sharedPreferencesService);
+
+  /// Shared preferences service.
+  final SharedPreferencesService _sharedPreferencesService;
+
   /// Timeout for the requests.
   static const timeoutDuration = Duration(seconds: 10);
 
@@ -68,11 +74,13 @@ final class HttpClient {
 
   /// Base headers.
   Map<String, String> get _baseHeaders {
+    final loggedInUser = _sharedPreferencesService.getJson(SharedPreferencesEnum.loggedInUser);
     return {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Accept-Language': Localizations.localeOf(navigatorKey.currentContext!).languageCode,
       'User-Agent': 'MyoroMatchup/0.1.0 (com.myoro.myoro_matchup)',
+      if (loggedInUser != null) 'Authorization': 'Bearer ${loggedInUser['token']}',
     };
   }
 }

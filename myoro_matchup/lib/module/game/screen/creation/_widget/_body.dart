@@ -12,6 +12,8 @@ final class _Body extends StatelessWidget {
     final onPrevious = viewModel.onPrevious;
     final onNext = viewModel.onNext;
     final onFinish = viewModel.onFinish;
+    final setFooterButtonsHeight = viewModel.setFooterButtonsHeight;
+    final requestController = state.requestController;
 
     final gameCreationScreenButtonPreviousText = localization.gameCreationScreenButtonPreviousText;
     final gameCreationScreenButtonNextText = localization.gameCreationScreenButtonNextText;
@@ -35,18 +37,30 @@ final class _Body extends StatelessWidget {
               Expanded(
                 child: MyoroIndexedStack(index: selectedIndex, children: GameCreationScreen.screens),
               ),
-              Row(
-                spacing: spacing,
-                children: [
-                  if (!isFirstScreen)
-                    Expanded(child: _Button(gameCreationScreenButtonPreviousText, () => onPrevious())),
-                  Expanded(
-                    child: _Button(
-                      isLastScreen ? gameCreationScreenButtonFinishText : gameCreationScreenButtonNextText,
-                      () => isLastScreen ? onFinish() : onNext(),
-                    ),
-                  ),
-                ],
+              ValueListenableBuilder(
+                valueListenable: requestController,
+                builder: (_, request, _) {
+                  if (request.status.isLoading) {
+                    return SizedBox(height: state.footerButtonsHeight, child: const MyoroCircularLoader());
+                  } else {
+                    setFooterButtonsHeight();
+                    return Row(
+                      spacing: spacing,
+                      children: [
+                        if (!isFirstScreen)
+                          Expanded(
+                            child: _Button(text: gameCreationScreenButtonPreviousText, onTapUp: () => onPrevious()),
+                          ),
+                        Expanded(
+                          child: _Button(
+                            text: isLastScreen ? gameCreationScreenButtonFinishText : gameCreationScreenButtonNextText,
+                            onTapUp: () => isLastScreen ? onFinish() : onNext(),
+                          ),
+                        ),
+                      ],
+                    );
+                  }
+                },
               ),
             ],
           ),

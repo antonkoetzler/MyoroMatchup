@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "يرجى التحقق من اتصالك والمحاولة مرة أخرى!",
   "mmErrorFeedbackActionButtonText": "إعادة المحاولة",
 
+  "mmSuccessFeedbackSubtitle": "تمت العملية بنجاح!",
+  "mmSuccessFeedbackActionButtonText": "تم",
+
   "mmLocationInputTypeEnumPlaceLabel": "مكان",
   "mmLocationInputTypeEnumCityLabel": "مدينة",
   "mmLocationInputTypeEnumStateLabel": "ولاية",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "الاسم",
   "gameCreationScreenNameScreenNameInputPlaceholder": "مثال: مباراة كرة قدم أسبوعية",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "لا يمكن أن يكون الاسم فارغًا.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "يجب أن يكون الاسم 3 أحرف على الأقل.",
   "gameCreationScreenSportScreenTitle": "الرياضة",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "التكرار والتاريخ/الوقت",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "التكرار",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "السابق",
   "gameCreationScreenButtonNextText": "التالي",
   "gameCreationScreenButtonFinishText": "إنهاء",
+  "gameCreationScreenGameCreationSuccessMessage": "تم إنشاء اللعبة بنجاح!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "اسم المستخدم/البريد الإلكتروني",
   "loginSignupScreenLoginPasswordInputPlaceholder": "كلمة المرور",

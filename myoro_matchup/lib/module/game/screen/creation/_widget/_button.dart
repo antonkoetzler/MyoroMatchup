@@ -2,11 +2,11 @@ part of '../game_creation_screen.dart';
 
 /// Generic button of [GameCreationScreen].
 final class _Button extends StatelessWidget {
-  const _Button(this._text, this._onTapUp, [this._isSecondary = true]);
+  const _Button({required this.text, required this.onTapUp, this.isSecondary = true});
 
-  final String _text;
-  final VoidCallback _onTapUp;
-  final bool _isSecondary;
+  final String text;
+  final VoidCallback onTapUp;
+  final bool isSecondary;
 
   @override
   Widget build(context) {
@@ -14,11 +14,11 @@ final class _Button extends StatelessWidget {
     final buttonTextStyle = themeExtension.buttonTextStyle;
 
     return MyoroIconTextButton(
-      style: _isSecondary
+      style: isSecondary
           ? const MyoroIconTextButtonStyle().secondary(context)
           : const MyoroIconTextButtonStyle().bordered(context),
-      textConfiguration: MyoroTextConfiguration(text: _text, style: buttonTextStyle),
-      onTapUp: (_) => _onTapUp(),
+      textConfiguration: MyoroTextConfiguration(text: text, style: buttonTextStyle),
+      onTapUp: (_) => onTapUp(),
     );
   }
 }

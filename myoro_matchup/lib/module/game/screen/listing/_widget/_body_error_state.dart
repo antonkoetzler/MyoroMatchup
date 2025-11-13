@@ -6,10 +6,17 @@ final class _BodyErrorState extends StatelessWidget {
 
   @override
   Widget build(context) {
+    final themeExtension = context.resolveThemeExtension<GameListingScreenThemeExtension>();
+    final errorStatePadding = themeExtension.errorStatePadding;
+
     final viewModel = context.read<GameListingScreenViewModel>();
+    final fetch = viewModel.fetch;
 
     return Center(
-      child: MmErrorFeedback(title: localization.gameListingScreenBodyErrorStateTitle, onRetry: viewModel.fetchGames),
+      child: Padding(
+        padding: errorStatePadding,
+        child: MmErrorFeedback(title: localization.gameListingScreenBodyErrorStateTitle, onRetry: fetch),
+      ),
     );
   }
 }

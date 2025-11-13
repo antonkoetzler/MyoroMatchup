@@ -18,7 +18,7 @@ final class GameListingScreen extends StatelessWidget {
   @override
   Widget build(_) {
     return InheritedProvider(
-      create: (_) => getIt<GameListingScreenViewModel>()..fetchGames(),
+      create: (_) => getIt<GameListingScreenViewModel>(),
       child: MyoroScreen(appBar: _AppBar(), body: const _Body()),
     );
   }

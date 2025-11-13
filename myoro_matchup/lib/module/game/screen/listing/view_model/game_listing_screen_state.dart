@@ -2,14 +2,30 @@ part of 'game_listing_screen_view_model.dart';
 
 /// State of [GameScreenViewModel].
 final class GameListingScreenState {
-  /// [ValueNotifier] of the [MyoroRequest] of the [Game]s being fetched.
-  final _gamesRequestNotifier = ValueNotifier(const MyoroRequest<Set<GameResponseDto>>());
-  ValueNotifier<MyoroRequest<Set<GameResponseDto>>> get gamesRequestNotifier => _gamesRequestNotifier;
-  MyoroRequest<Set<GameResponseDto>> get gamesRequest => _gamesRequestNotifier.value;
-  set gamesRequest(MyoroRequest<Set<GameResponseDto>> gamesRequest) => _gamesRequestNotifier.value = gamesRequest;
+  /// Default constructor.
+  GameListingScreenState(MyoroRequestControllerRequest<Set<GameResponseDto>> requestCallback)
+    : _requestController = MyoroRequestController(requestCallback: requestCallback);
+
+  /// Request controller.
+  final MyoroRequestController<Set<GameResponseDto>> _requestController;
 
   /// Dispose function.
   void dispose() {
-    _gamesRequestNotifier.dispose();
+    _requestController.dispose();
+  }
+
+  /// [_requestController] getter.
+  MyoroRequestController<Set<GameResponseDto>> get requestController {
+    return _requestController;
+  }
+
+  /// Getter of [_requestController]'s value.
+  MyoroRequest<Set<GameResponseDto>> get request {
+    return _requestController.value;
+  }
+
+  /// Setter of [_requestController]'s value.
+  set request(MyoroRequest<Set<GameResponseDto>> request) {
+    _requestController.value = request;
   }
 }

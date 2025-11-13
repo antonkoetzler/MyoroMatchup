@@ -18,7 +18,7 @@ import com.myoro.myoro_matchup_api.service.JwtService;
 import jakarta.servlet.http.HttpServletRequest;
 
 import com.myoro.myoro_matchup_api.dto.GameCreationRequestDto;
-import com.myoro.myoro_matchup_api.model.GameModel;
+import com.myoro.myoro_matchup_api.dto.GameResponseDto;
 import com.myoro.myoro_matchup_api.service.GameService;
 import com.myoro.myoro_matchup_api.service.MessageService;
 
@@ -62,10 +62,10 @@ public class GameController {
     final String token = jwtService.extractTokenFromHeader(authHeader);
     final Long userId = jwtService.validateTokenAndGetUserId(token);
 
-    final GameModel response = gameService.create(request, userId);
+    final Long response = gameService.create(request, userId);
     Map<String, Object> responseBody = new HashMap<>();
     responseBody.put("message", messageService.getMessage("game.create.success"));
-    responseBody.put("game", response);
+    responseBody.put("id", response);
     return ResponseEntity.ok(responseBody);
   }
 
@@ -76,7 +76,7 @@ public class GameController {
       @ApiResponse(responseCode = "200", description = "Games retrieved successfully."),
       @ApiResponse(responseCode = "400", description = "Invalid request data."),
   })
-  public ResponseEntity<List<GameModel>> select() {
+  public ResponseEntity<List<GameResponseDto>> select() {
     return ResponseEntity.ok(gameService.getAll());
   }
 
@@ -87,7 +87,7 @@ public class GameController {
       @ApiResponse(responseCode = "200", description = "Game retrieved successfully."),
       @ApiResponse(responseCode = "400", description = "Invalid request data."),
   })
-  public ResponseEntity<GameModel> selectById(@PathVariable Long id) {
+  public ResponseEntity<GameResponseDto> selectById(@PathVariable Long id) {
     return ResponseEntity.ok(gameService.getById(id));
   }
 }

@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "Lütfen bağlantınızı doğrulayın ve tekrar deneyin!",
   "mmErrorFeedbackActionButtonText": "Yeniden Dene",
 
+  "mmSuccessFeedbackSubtitle": "İşlem başarıyla tamamlandı!",
+  "mmSuccessFeedbackActionButtonText": "Tamamlandı",
+
   "mmLocationInputTypeEnumPlaceLabel": "Yer",
   "mmLocationInputTypeEnumCityLabel": "Şehir",
   "mmLocationInputTypeEnumStateLabel": "Eyalet",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "İsim",
   "gameCreationScreenNameScreenNameInputPlaceholder": "örn. Haftalık Futbol Maçı",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "İsim boş olamaz.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "İsim en az 3 karakter uzunluğunda olmalıdır.",
   "gameCreationScreenSportScreenTitle": "Spor",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Sıklık ve Tarih/Saat",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Sıklık",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "Önceki",
   "gameCreationScreenButtonNextText": "Sonraki",
   "gameCreationScreenButtonFinishText": "Bitir",
+  "gameCreationScreenGameCreationSuccessMessage": "Oyun başarıyla oluşturuldu!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Kullanıcı adı/e-posta",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Şifre",

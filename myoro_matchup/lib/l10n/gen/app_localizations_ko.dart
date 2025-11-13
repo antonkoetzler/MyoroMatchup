@@ -9,13 +9,20 @@ class AppLocalizationsKo extends AppLocalizations {
   AppLocalizationsKo([String locale = 'ko']) : super(locale);
 
   @override
-  String get httpClientConnectionExceptionMessage => '서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.';
+  String get httpClientConnectionExceptionMessage =>
+      '서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.';
 
   @override
   String get mmErrorFeedbackSubtitle => '연결을 확인하고 다시 시도하세요!';
 
   @override
   String get mmErrorFeedbackActionButtonText => '다시 시도';
+
+  @override
+  String get mmSuccessFeedbackSubtitle => '작업이 성공적으로 완료되었습니다!';
+
+  @override
+  String get mmSuccessFeedbackActionButtonText => '완료';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => '장소';
@@ -33,7 +40,11 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => '대륙';
 
   @override
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
     return '$city, $emoji $countryName';
   }
 
@@ -104,7 +115,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputPlaceholder => '예: 주간 축구 게임';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage => '이름은 비어 있을 수 없습니다.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
+      '이름은 비어 있을 수 없습니다.';
+
+  @override
+  String get gameCreationScreenNameScreenNameInputLengthMessage =>
+      '이름은 최소 3자 이상이어야 합니다.';
 
   @override
   String get gameCreationScreenSportScreenTitle => '스포츠';
@@ -113,19 +129,25 @@ class AppLocalizationsKo extends AppLocalizations {
   String get gameCreationScreenFrequencyDayTimeScreenTitle => '빈도 및 날짜/시간';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => '빈도';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      '빈도';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => '시작';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      '시작';
 
   @override
   String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => '종료';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage => '시작 시간은 비어 있을 수 없습니다.';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+      '시작 시간은 비어 있을 수 없습니다.';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage => '종료 시간은 비어 있을 수 없습니다.';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+      '종료 시간은 비어 있을 수 없습니다.';
 
   @override
   String get gameCreationScreenPriceScreenTitle => '가격';
@@ -143,7 +165,8 @@ class AppLocalizationsKo extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => '위치';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage => '위치를 선택해주세요.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      '위치를 선택해주세요.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -158,10 +181,13 @@ class AppLocalizationsKo extends AppLocalizations {
   String get gameCreationScreenVisibilityAndImageScreenTitle => '공개 설정 및 이미지';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => '프로필 사진';
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      '프로필 사진';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => '배너';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      '배너';
 
   @override
   String get gameCreationScreenButtonPreviousText => '이전';
@@ -173,7 +199,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => '완료';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => '사용자 이름/이메일';
+  String get gameCreationScreenGameCreationSuccessMessage =>
+      '게임이 성공적으로 생성되었습니다!';
+
+  @override
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+      '사용자 이름/이메일';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => '비밀번호';
@@ -203,31 +234,40 @@ class AppLocalizationsKo extends AppLocalizations {
   String get loginSignupScreenSignupSignupButton => '가입';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'MyoroMatchup이 처음이신가요? 가입하세요!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'MyoroMatchup이 처음이신가요? 가입하세요!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText => '이미 가입하셨나요? 로그인하세요!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      '이미 가입하셨나요? 로그인하세요!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => '사용자 이름/이메일은 비어 있을 수 없습니다.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      '사용자 이름/이메일은 비어 있을 수 없습니다.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => '비밀번호는 비어 있을 수 없습니다.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      '비밀번호는 비어 있을 수 없습니다.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage => '이름은 비어 있을 수 없습니다.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      '이름은 비어 있을 수 없습니다.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => '사용자 이름은 비어 있을 수 없습니다.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      '사용자 이름은 비어 있을 수 없습니다.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => '이메일은 비어 있을 수 없습니다.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      '이메일은 비어 있을 수 없습니다.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => '비밀번호 필드는 비어 있을 수 없습니다.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      '비밀번호 필드는 비어 있을 수 없습니다.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => '비밀번호가 일치하지 않습니다.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      '비밀번호가 일치하지 않습니다.';
 
   @override
   String get mmAppBarMenuDrawerTitle => '메뉴';

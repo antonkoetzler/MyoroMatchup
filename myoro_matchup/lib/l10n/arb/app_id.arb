@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "Harap verifikasi koneksi Anda dan coba lagi!",
   "mmErrorFeedbackActionButtonText": "Coba Lagi",
 
+  "mmSuccessFeedbackSubtitle": "Operasi berhasil diselesaikan!",
+  "mmSuccessFeedbackActionButtonText": "Selesai",
+
   "mmLocationInputTypeEnumPlaceLabel": "Tempat",
   "mmLocationInputTypeEnumCityLabel": "Kota",
   "mmLocationInputTypeEnumStateLabel": "Provinsi",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "Nama",
   "gameCreationScreenNameScreenNameInputPlaceholder": "mis. Permainan Sepak Bola Mingguan",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Nama tidak boleh kosong.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "Nama harus memiliki setidaknya 3 karakter.",
   "gameCreationScreenSportScreenTitle": "Olahraga",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Frekuensi dan Tanggal/Waktu",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frekuensi",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "Sebelumnya",
   "gameCreationScreenButtonNextText": "Selanjutnya",
   "gameCreationScreenButtonFinishText": "Selesai",
+  "gameCreationScreenGameCreationSuccessMessage": "Permainan berhasil dibuat!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nama pengguna/email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Kata sandi",

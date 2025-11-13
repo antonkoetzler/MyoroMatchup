@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "Controleer uw verbinding en probeer het opnieuw!",
   "mmErrorFeedbackActionButtonText": "Opnieuw proberen",
 
+  "mmSuccessFeedbackSubtitle": "Bewerking succesvol voltooid!",
+  "mmSuccessFeedbackActionButtonText": "Klaar",
+
   "mmLocationInputTypeEnumPlaceLabel": "Plaats",
   "mmLocationInputTypeEnumCityLabel": "Stad",
   "mmLocationInputTypeEnumStateLabel": "Staat",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "Naam",
   "gameCreationScreenNameScreenNameInputPlaceholder": "bijv. Wekelijkse voetbalwedstrijd",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Naam mag niet leeg zijn.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "Naam moet minimaal 3 tekens lang zijn.",
   "gameCreationScreenSportScreenTitle": "Sport",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Frequentie en Datum/Tijd",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frequentie",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "Vorige",
   "gameCreationScreenButtonNextText": "Volgende",
   "gameCreationScreenButtonFinishText": "Voltooien",
+  "gameCreationScreenGameCreationSuccessMessage": "Spel succesvol aangemaakt!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Gebruikersnaam/e-mail",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Wachtwoord",

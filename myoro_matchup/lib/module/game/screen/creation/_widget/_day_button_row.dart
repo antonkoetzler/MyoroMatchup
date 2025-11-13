@@ -20,7 +20,13 @@ final class _DayButtonRow extends StatelessWidget {
           spacing: spacing,
           children: MyoroDayEnum.values.map((item) {
             final isSelected = item == selectedDay;
-            return Expanded(child: _Button(item.getFirstLetter(context), () => _controller.value = item, isSelected));
+            return Expanded(
+              child: _Button(
+                text: item.getFirstLetter(context),
+                onTapUp: () => _controller.value = item,
+                isSecondary: isSelected,
+              ),
+            );
           }).toList(),
         );
       },

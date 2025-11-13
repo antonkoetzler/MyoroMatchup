@@ -1,15 +1,19 @@
 import 'package:faker/faker.dart';
+import 'package:json_annotation/json_annotation.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Enum encapsulating all visibility options of an item.
-enum VisibilityEnum {
+@JsonEnum()
+enum GameVisibilityEnum {
   /// Private; link-only.
+  @JsonValue('PUBLIC')
   private,
 
   /// Public; everyone can see.
+  @JsonValue('PUBLIC')
   public;
 
-  factory VisibilityEnum.fake() {
+  factory GameVisibilityEnum.fake() {
     return values[faker.randomGenerator.integer(values.length)];
   }
 

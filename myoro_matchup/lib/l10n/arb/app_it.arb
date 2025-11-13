@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "Verifica la tua connessione e riprova!",
   "mmErrorFeedbackActionButtonText": "Riprova",
 
+  "mmSuccessFeedbackSubtitle": "Operazione completata con successo!",
+  "mmSuccessFeedbackActionButtonText": "Fatto",
+
   "mmLocationInputTypeEnumPlaceLabel": "Luogo",
   "mmLocationInputTypeEnumCityLabel": "Città",
   "mmLocationInputTypeEnumStateLabel": "Stato",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "Nome",
   "gameCreationScreenNameScreenNameInputPlaceholder": "es. Partita di calcio settimanale",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Il nome non può essere vuoto.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "Il nome deve contenere almeno 3 caratteri.",
   "gameCreationScreenSportScreenTitle": "Sport",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Frequenza e Data/Ora",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Frequenza",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "Precedente",
   "gameCreationScreenButtonNextText": "Successivo",
   "gameCreationScreenButtonFinishText": "Termina",
+  "gameCreationScreenGameCreationSuccessMessage": "Gioco creato con successo!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nome utente/email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Password",

@@ -13,9 +13,9 @@ Map<String, dynamic> _$GameCreationRequestDtoToJson(GameCreationRequestDto insta
   'location': instance.location.toJson(),
   'price': instance.price.toJson(),
   'ageRange': instance.ageRange.toJson(),
-  'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
-  'profilePicture': instance.profilePicture,
-  'banner': instance.banner,
+  'visibility': _$GameVisibilityEnumEnumMap[instance.visibility]!,
+  'profilePicture': ?instance.profilePicture,
+  'banner': ?instance.banner,
 };
 
 const _$SportsEnumEnumMap = {
@@ -25,7 +25,7 @@ const _$SportsEnumEnumMap = {
   SportsEnum.volleyball: 'VOLLEYBALL',
 };
 
-const _$VisibilityEnumEnumMap = {VisibilityEnum.private: 'private', VisibilityEnum.public: 'public'};
+const _$GameVisibilityEnumEnumMap = {GameVisibilityEnum.private: 'PUBLIC', GameVisibilityEnum.public: 'PUBLIC'};
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -48,7 +48,7 @@ mixin _$GameCreationRequestDtoMixin {
     Location? location,
     GamePriceDto? price,
     GameAgeRangeModel? ageRange,
-    VisibilityEnum? visibility,
+    GameVisibilityEnum? visibility,
     String? profilePicture,
     bool profilePictureProvided = true,
     String? banner,

@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "Vui lòng xác minh kết nối của bạn và thử lại!",
   "mmErrorFeedbackActionButtonText": "Thử lại",
 
+  "mmSuccessFeedbackSubtitle": "Thao tác hoàn tất thành công!",
+  "mmSuccessFeedbackActionButtonText": "Hoàn thành",
+
   "mmLocationInputTypeEnumPlaceLabel": "Địa điểm",
   "mmLocationInputTypeEnumCityLabel": "Thành phố",
   "mmLocationInputTypeEnumStateLabel": "Bang",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "Tên",
   "gameCreationScreenNameScreenNameInputPlaceholder": "ví dụ: Trận bóng đá hàng tuần",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Tên không thể để trống.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "Tên phải có ít nhất 3 ký tự.",
   "gameCreationScreenSportScreenTitle": "Môn thể thao",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Tần suất và Ngày/Giờ",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Tần suất",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "Trước",
   "gameCreationScreenButtonNextText": "Tiếp",
   "gameCreationScreenButtonFinishText": "Hoàn thành",
+  "gameCreationScreenGameCreationSuccessMessage": "Trò chơi đã được tạo thành công!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Tên người dùng/email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Mật khẩu",

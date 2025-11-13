@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "Пожалуйста, проверьте ваше подключение и попробуйте снова!",
   "mmErrorFeedbackActionButtonText": "Повторить",
 
+  "mmSuccessFeedbackSubtitle": "Операция успешно завершена!",
+  "mmSuccessFeedbackActionButtonText": "Готово",
+
   "mmLocationInputTypeEnumPlaceLabel": "Место",
   "mmLocationInputTypeEnumCityLabel": "Город",
   "mmLocationInputTypeEnumStateLabel": "Штат",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "Название",
   "gameCreationScreenNameScreenNameInputPlaceholder": "например, Еженедельная футбольная игра",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Название не может быть пустым.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "Название должно содержать не менее 3 символов.",
   "gameCreationScreenSportScreenTitle": "Спорт",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "Частота и Дата/Время",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "Частота",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "Назад",
   "gameCreationScreenButtonNextText": "Далее",
   "gameCreationScreenButtonFinishText": "Завершить",
+  "gameCreationScreenGameCreationSuccessMessage": "Игра успешно создана!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Имя пользователя/email",
   "loginSignupScreenLoginPasswordInputPlaceholder": "Пароль",

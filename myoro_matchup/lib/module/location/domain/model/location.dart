@@ -40,7 +40,7 @@ final class Location with _$LocationMixin {
   final String city;
 
   /// Country that [name] resides in.
-  @JsonKey(fromJson: _countryFromJson, toJson: _countryToJson)
+  @JsonKey(fromJson: _countryFromJson, toJson: _countryToJson, includeIfNull: false)
   final MyoroCountryEnum? country;
 
   Map<String, dynamic> toJson() => _$LocationToJson(this);

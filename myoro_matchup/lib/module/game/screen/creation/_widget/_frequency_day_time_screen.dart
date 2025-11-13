@@ -16,6 +16,8 @@ final class _FrequencyDayTimeScreen extends _Screen {
           return ValueListenableBuilder(
             valueListenable: frequencyController,
             builder: (_, frequency, _) {
+              final isBiWeekly = frequency.isBiWeekly;
+
               return Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -24,9 +26,11 @@ final class _FrequencyDayTimeScreen extends _Screen {
                   const _FrequencyDayTimeScreenTimeField(),
                   SizedBox(height: spacing),
                   const _FrequencyDayTimeScreenDayField(),
-                  if (frequency == FrequencyEnum.biWeekly) ...[
+                  if (isBiWeekly) ...[
                     SizedBox(height: spacing),
                     const _FrequencyDayTimeScreenBiWeeklyDayField(),
+                    SizedBox(height: spacing),
+                    const _FrequencyDayTimeScreenBiWeeklyTimeField(),
                   ],
                 ],
               );

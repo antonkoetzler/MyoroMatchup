@@ -17,9 +17,9 @@ final class _FrequencyDayTimeScreenFrequencyField extends StatelessWidget {
     final frequencyDayTimeScreenFrequencyFieldLabel =
         localization.gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel;
 
-    return MyoroSingleSelectionDropdown<FrequencyEnum>(
+    return MyoroSingleSelectionDropdown<GameFrequencyEnum>(
       label: frequencyDayTimeScreenFrequencyFieldLabel,
-      items: FrequencyEnum.values.toSet(),
+      items: GameFrequencyEnum.values.toSet(),
       itemBuilder: frequencyDayTimeScreenFrequencyFieldItemBuilder,
       selectedItem: frequency,
       onChanged: (f) => onFrequencyChanged(f!),

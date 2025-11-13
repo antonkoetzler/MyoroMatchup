@@ -1,6 +1,3 @@
-import 'dart:convert';
-
-import 'package:faker/faker.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
@@ -8,33 +5,33 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 @injectable
 final class GameRepository {
   /// Default constructor.
-  GameRepository(this.httpClient);
+  GameRepository(this._httpClient);
 
   /// HTTP client.
-  final HttpClient httpClient;
+  final HttpClient _httpClient;
 
   /// Gets a [Game]
   ///
   /// TODO: Mocked.
   Future<GameResponseDto>? get(int id) async {
-    await Future.delayed(const Duration(milliseconds: 500));
-    return GameResponseDto.fake();
+    final response = await _httpClient.get('/games/$id');
+    final game = GameResponseDto.fromJson(response.data);
+    return game;
   }
 
   /// Gets all [Game]s.
   ///
   /// TODO: Mocked.
   Future<Set<GameResponseDto>> select() async {
-    await Future.delayed(const Duration(seconds: 2));
-    return List.generate(faker.randomGenerator.integer(10), (_) => GameResponseDto.fake()).toSet();
+    final response = await _httpClient.get('/games');
+    final games = response.data.map<GameResponseDto>(GameResponseDto.fromJson).toSet();
+    return games;
   }
 
-  /// Creates a [Game].
-  Future<GameResponseDto> create(GameCreationRequestDto game) async {
-    // final response = await httpClient.post('/games', data: game.toJson());
-    // return GameResponseDto.fromJson(response.data);
-    print(const JsonEncoder.withIndent('  ').convert(game.toJson()));
-    await Future.delayed(const Duration(seconds: 2));
-    return GameResponseDto.fake();
+  /// Creates a game.
+  Future<int> create(GameCreationRequestDto game) async {
+    final response = await _httpClient.post('/games', data: game.toJson());
+    final id = response.data['id'];
+    return id;
   }
 }

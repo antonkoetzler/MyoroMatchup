@@ -21,7 +21,11 @@ final class _SportScreen extends _Screen {
                 spacing: spacing,
                 children: SportsEnum.values.map((item) {
                   final isSelected = item == sport;
-                  return _Button(item.formattedName, () => onSportChanged(item), isSelected);
+                  return _Button(
+                    text: item.formattedName,
+                    onTapUp: () => onSportChanged(item),
+                    isSecondary: isSelected,
+                  );
                 }).toList(),
               );
             },

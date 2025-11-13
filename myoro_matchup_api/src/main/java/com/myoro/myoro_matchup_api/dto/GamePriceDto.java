@@ -5,10 +5,10 @@ import jakarta.validation.constraints.NotNull;
 
 /** Game price DTO. */
 public class GamePriceDto {
-  /** Monthly price. */
-  @NotNull(message = "{validation.game.monthly.price.required}")
-  @DecimalMin(value = "0.0", inclusive = true, message = "{validation.game.monthly.price.min}")
-  private Double monthlyPrice;
+  /** Member price. */
+  @NotNull(message = "{validation.game.member.price.required}")
+  @DecimalMin(value = "0.0", inclusive = true, message = "{validation.game.member.price.min}")
+  private Double memberPrice;
 
   /** Drop in price. */
   @NotNull(message = "{validation.game.drop.in.price.required}")
@@ -20,18 +20,18 @@ public class GamePriceDto {
   }
 
   /** Constructor with all fields. */
-  public GamePriceDto(Double monthlyPrice, Double dropInPrice) {
-    this.monthlyPrice = monthlyPrice;
+  public GamePriceDto(Double memberPrice, Double dropInPrice) {
+    this.memberPrice = memberPrice;
     this.dropInPrice = dropInPrice;
   }
 
   /**
-   * Getter for monthlyPrice
+   * Getter for memberPrice
    * 
-   * @return the monthly price
+   * @return the member price
    */
-  public Double getMonthlyPrice() {
-    return monthlyPrice;
+  public Double getMemberPrice() {
+    return memberPrice;
   }
 
   /**
@@ -44,12 +44,12 @@ public class GamePriceDto {
   }
 
   /**
-   * Setter for monthlyPrice
+   * Setter for memberPrice
    * 
-   * @param monthlyPrice the monthly price
+   * @param memberPrice the member price
    */
-  public void setMonthlyPrice(Double monthlyPrice) {
-    this.monthlyPrice = monthlyPrice;
+  public void setMemberPrice(Double memberPrice) {
+    this.memberPrice = memberPrice;
   }
 
   /**
@@ -61,4 +61,3 @@ public class GamePriceDto {
     this.dropInPrice = dropInPrice;
   }
 }
-

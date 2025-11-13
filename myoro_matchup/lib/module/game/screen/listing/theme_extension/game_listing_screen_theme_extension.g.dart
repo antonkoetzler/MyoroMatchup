@@ -21,11 +21,13 @@ mixin _$GameListingScreenThemeExtensionMixin on ThemeExtension<GameListingScreen
     EdgeInsets? bodySuccessStateMargin,
     EdgeInsets? gameMargin,
     BorderRadius? gameBorderRadius,
+    EdgeInsets? errorStatePadding,
   }) {
     return GameListingScreenThemeExtension(
       bodySuccessStateMargin: bodySuccessStateMargin ?? self.bodySuccessStateMargin,
       gameMargin: gameMargin ?? self.gameMargin,
       gameBorderRadius: gameBorderRadius ?? self.gameBorderRadius,
+      errorStatePadding: errorStatePadding ?? self.errorStatePadding,
     );
   }
 
@@ -35,12 +37,13 @@ mixin _$GameListingScreenThemeExtensionMixin on ThemeExtension<GameListingScreen
         other.runtimeType == runtimeType &&
         other.bodySuccessStateMargin == self.bodySuccessStateMargin &&
         other.gameMargin == self.gameMargin &&
-        other.gameBorderRadius == self.gameBorderRadius;
+        other.gameBorderRadius == self.gameBorderRadius &&
+        other.errorStatePadding == self.errorStatePadding;
   }
 
   @override
   int get hashCode {
-    return Object.hash(self.bodySuccessStateMargin, self.gameMargin, self.gameBorderRadius);
+    return Object.hash(self.bodySuccessStateMargin, self.gameMargin, self.gameBorderRadius, self.errorStatePadding);
   }
 
   @override
@@ -49,5 +52,6 @@ mixin _$GameListingScreenThemeExtensionMixin on ThemeExtension<GameListingScreen
       '  bodySuccessStateMargin: ${self.bodySuccessStateMargin},\n'
       '  gameMargin: ${self.gameMargin},\n'
       '  gameBorderRadius: ${self.gameBorderRadius},\n'
+      '  errorStatePadding: ${self.errorStatePadding},\n'
       ');';
 }

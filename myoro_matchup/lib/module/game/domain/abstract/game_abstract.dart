@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:json_annotation/json_annotation.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Model representing a game.
@@ -36,11 +37,13 @@ abstract class GameAbstract {
   final GameAgeRangeModel ageRange;
 
   /// Visibility of the [Game].
-  final VisibilityEnum visibility;
+  final GameVisibilityEnum visibility;
 
   /// Profile picture of the [Game].
+  @JsonKey(includeIfNull: false)
   final String? profilePicture;
 
   /// Banner of the [Game].
+  @JsonKey(includeIfNull: false)
   final String? banner;
 }

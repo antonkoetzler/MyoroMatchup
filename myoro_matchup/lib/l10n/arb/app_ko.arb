@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "연결을 확인하고 다시 시도하세요!",
   "mmErrorFeedbackActionButtonText": "다시 시도",
 
+  "mmSuccessFeedbackSubtitle": "작업이 성공적으로 완료되었습니다!",
+  "mmSuccessFeedbackActionButtonText": "완료",
+
   "mmLocationInputTypeEnumPlaceLabel": "장소",
   "mmLocationInputTypeEnumCityLabel": "도시",
   "mmLocationInputTypeEnumStateLabel": "주",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "이름",
   "gameCreationScreenNameScreenNameInputPlaceholder": "예: 주간 축구 게임",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "이름은 비어 있을 수 없습니다.",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "이름은 최소 3자 이상이어야 합니다.",
   "gameCreationScreenSportScreenTitle": "스포츠",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "빈도 및 날짜/시간",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "빈도",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "이전",
   "gameCreationScreenButtonNextText": "다음",
   "gameCreationScreenButtonFinishText": "완료",
+  "gameCreationScreenGameCreationSuccessMessage": "게임이 성공적으로 생성되었습니다!",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "사용자 이름/이메일",
   "loginSignupScreenLoginPasswordInputPlaceholder": "비밀번호",

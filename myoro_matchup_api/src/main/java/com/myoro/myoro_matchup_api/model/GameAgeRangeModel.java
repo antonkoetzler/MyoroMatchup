@@ -7,11 +7,11 @@ import jakarta.persistence.Embeddable;
 @Embeddable
 public class GameAgeRangeModel {
   /** Minimum age. */
-  @Column(name = "min_age", nullable = false)
+  @Column(nullable = false)
   private Integer minAge;
 
   /** Maximum age. */
-  @Column(name = "max_age", nullable = false)
+  @Column(nullable = false)
   private Integer maxAge;
 
   /** Default constructor. */

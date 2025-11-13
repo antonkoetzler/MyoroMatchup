@@ -5,6 +5,12 @@ final class GameCreationScreenState {
   /// [ValueNotifier] of the selected index.
   final _selectedIndexController = ValueNotifier(0);
 
+  /// [GlobalKey] of the footer buttons to get it's height to set in the loading state.
+  final _footerButtonsGlobalKey = GlobalKey();
+
+  /// Height of the footer buttons.
+  double? footerButtonsHeight;
+
   /// Name field.
   String name = kMyoroEmptyString;
 
@@ -12,13 +18,19 @@ final class GameCreationScreenState {
   final _sportController = ValueNotifier(SportsEnum.football);
 
   /// Frequency field.
-  final _frequencyController = ValueNotifier(FrequencyEnum.weekly);
+  final _frequencyController = ValueNotifier(GameFrequencyEnum.weekly);
 
   /// Time field.
   TimeOfDay? startTime;
 
   /// End time field.
   TimeOfDay? endTime;
+
+  /// Bi-weekly start time field.
+  TimeOfDay? biWeeklyStartTime;
+
+  /// Bi-weekly end time field.
+  TimeOfDay? biWeeklyEndTime;
 
   /// Day field.
   final _dayController = ValueNotifier(MyoroDayEnum.monday);
@@ -48,13 +60,19 @@ final class GameCreationScreenState {
   final _ageRangeController = ValueNotifier(const RangeValues(0, 100));
 
   /// Visibility field.
-  var visibility = VisibilityEnum.public;
+  var visibility = GameVisibilityEnum.public;
 
   /// Profile picture image field.
   String profilePictureImage = kMyoroEmptyString;
 
   /// Banner image field.
   String bannerImage = kMyoroEmptyString;
+
+  /// [ValueNotifier] of the status of the request.
+  final _requestController = ValueNotifier(const MyoroRequest<int?>());
+
+  /// Name field [FocusNode].
+  final _nameScreenNameFocusNode = FocusNode();
 
   /// Dispose function.
   void dispose() {
@@ -67,6 +85,8 @@ final class GameCreationScreenState {
     _memberPriceFocusNode.dispose();
     _dropInPriceFocusNode.dispose();
     _ageRangeController.dispose();
+    _requestController.dispose();
+    _nameScreenNameFocusNode.dispose();
   }
 
   /// [_selectedIndexController] getter.
@@ -77,6 +97,11 @@ final class GameCreationScreenState {
   /// Getter of [_selectedIndexController]'s value.
   int get selectedIndex {
     return _selectedIndexController.value;
+  }
+
+  /// [_footerButtonsGlobalKey] getter.
+  GlobalKey get footerButtonsGlobalKey {
+    return _footerButtonsGlobalKey;
   }
 
   /// [_sportController] getter.
@@ -90,12 +115,12 @@ final class GameCreationScreenState {
   }
 
   /// [_frequencyController] getter.
-  ValueNotifier<FrequencyEnum> get frequencyController {
+  ValueNotifier<GameFrequencyEnum> get frequencyController {
     return _frequencyController;
   }
 
   /// Getter of [_frequencyController]'s value.
-  FrequencyEnum get frequency {
+  GameFrequencyEnum get frequency {
     return _frequencyController.value;
   }
 
@@ -154,6 +179,21 @@ final class GameCreationScreenState {
     return _ageRangeController.value;
   }
 
+  /// [_requestController] getter.
+  ValueNotifier<MyoroRequest<int?>> get requestController {
+    return _requestController;
+  }
+
+  /// Getter of [_requestController]'s value.
+  MyoroRequest<int?> get request {
+    return _requestController.value;
+  }
+
+  /// [_nameScreenNameFocusNode] getter.
+  FocusNode get nameScreenNameFocusNode {
+    return _nameScreenNameFocusNode;
+  }
+
   /// Setter of [_selectedIndexController]'s value.
   set selectedIndex(int value) {
     _selectedIndexController.value = value;
@@ -165,7 +205,7 @@ final class GameCreationScreenState {
   }
 
   /// Setter of [_frequencyController]'s value.
-  set frequency(FrequencyEnum value) {
+  set frequency(GameFrequencyEnum value) {
     _frequencyController.value = value;
   }
 
@@ -187,5 +227,10 @@ final class GameCreationScreenState {
   /// Setter of [_ageRangeController]'s value.
   set ageRange(RangeValues value) {
     _ageRangeController.value = value;
+  }
+
+  /// Setter of [_requestController]'s value.
+  set request(MyoroRequest<int?> value) {
+    _requestController.value = value;
   }
 }

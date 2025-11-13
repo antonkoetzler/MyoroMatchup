@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "请检查您的连接后重试！",
   "mmErrorFeedbackActionButtonText": "重试",
 
+  "mmSuccessFeedbackSubtitle": "操作成功完成！",
+  "mmSuccessFeedbackActionButtonText": "完成",
+
   "mmLocationInputTypeEnumPlaceLabel": "地点",
   "mmLocationInputTypeEnumCityLabel": "城市",
   "mmLocationInputTypeEnumStateLabel": "州/省",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "名称",
   "gameCreationScreenNameScreenNameInputPlaceholder": "例如：每周足球赛",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "名称不能为空。",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "名称必须至少包含3个字符。",
   "gameCreationScreenSportScreenTitle": "运动",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "频率和日期/时间",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "频率",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "上一步",
   "gameCreationScreenButtonNextText": "下一步",
   "gameCreationScreenButtonFinishText": "完成",
+  "gameCreationScreenGameCreationSuccessMessage": "游戏创建成功！",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "用户名/邮箱",
   "loginSignupScreenLoginPasswordInputPlaceholder": "密码",

@@ -14,17 +14,20 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
     required this.bodySuccessStateMargin,
     required this.gameMargin,
     required this.gameBorderRadius,
+    required this.errorStatePadding,
   });
 
   GameListingScreenThemeExtension.fake()
     : bodySuccessStateMargin = myoroFake<EdgeInsets>(),
       gameMargin = myoroFake<EdgeInsets>(),
-      gameBorderRadius = myoroFake<BorderRadius>();
+      gameBorderRadius = myoroFake<BorderRadius>(),
+      errorStatePadding = myoroFake<EdgeInsets>();
 
   GameListingScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
     : bodySuccessStateMargin = const EdgeInsets.symmetric(horizontal: kEdgeInsetsLength),
       gameMargin = const EdgeInsets.only(bottom: kEdgeInsetsLength),
-      gameBorderRadius = BorderRadius.circular(kMyoroBorderRadius);
+      gameBorderRadius = BorderRadius.circular(kMyoroBorderRadius),
+      errorStatePadding = const EdgeInsets.all(kEdgeInsetsLength * 4);
 
   /// [EdgeInsets] margin of the [Game] listing.
   final EdgeInsets bodySuccessStateMargin;
@@ -35,6 +38,9 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
   /// [BorderRadius] of a [Game] item.
   final BorderRadius gameBorderRadius;
 
+  /// [EdgeInsets] padding of the error state's content.
+  final EdgeInsets errorStatePadding;
+
   @override
   GameListingScreenThemeExtension lerp(covariant ThemeExtension<GameListingScreenThemeExtension>? other, double t) {
     if (other is! GameListingScreenThemeExtension) return this;
@@ -42,6 +48,7 @@ final class GameListingScreenThemeExtension extends ThemeExtension<GameListingSc
       bodySuccessStateMargin: EdgeInsets.lerp(bodySuccessStateMargin, other.bodySuccessStateMargin, t),
       gameMargin: EdgeInsets.lerp(gameMargin, other.gameMargin, t),
       gameBorderRadius: BorderRadius.lerp(gameBorderRadius, other.gameBorderRadius, t),
+      errorStatePadding: EdgeInsets.lerp(errorStatePadding, other.errorStatePadding, t),
     );
   }
 }

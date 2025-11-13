@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
@@ -9,7 +10,9 @@ part 'game_creation_screen_state.dart';
 @injectable
 final class GameCreationScreenViewModel {
   /// Default constructor.
-  GameCreationScreenViewModel(this._gameRepository);
+  GameCreationScreenViewModel(this._gameRepository) {
+    _state.requestController.addListener(_onRequestControllerListener);
+  }
 
   /// [GameRepository] to get the games.
   final GameRepository _gameRepository;
@@ -24,8 +27,14 @@ final class GameCreationScreenViewModel {
 
   /// Name input validation.
   String? nameValidation(_) {
+    final gameCreationScreenNameScreenNameInputEmptyMessage =
+        localization.gameCreationScreenNameScreenNameInputEmptyMessage;
+    final gameCreationScreenNameScreenNameInputLengthMessage =
+        localization.gameCreationScreenNameScreenNameInputLengthMessage;
     final name = _state.name;
-    return name.isEmpty ? localization.gameCreationScreenNameScreenNameInputEmptyMessage : null;
+    if (name.isEmpty) return gameCreationScreenNameScreenNameInputEmptyMessage;
+    if (name.length < kGameMinNameLength) return gameCreationScreenNameScreenNameInputLengthMessage;
+    return null;
   }
 
   /// On name changed.
@@ -39,7 +48,7 @@ final class GameCreationScreenViewModel {
   }
 
   /// On frequency changed.
-  void onFrequencyChanged(FrequencyEnum frequency) {
+  void onFrequencyChanged(GameFrequencyEnum frequency) {
     _state.frequency = frequency;
   }
 
@@ -65,6 +74,40 @@ final class GameCreationScreenViewModel {
   /// On end time changed.
   void onEndTimeChanged(TimeOfDay? endTime) {
     _state.endTime = endTime;
+  }
+
+  /// On bi-weekly start time validation.
+  String? biWeeklyStartTimeValidation(_) {
+    final frequency = _state.frequency;
+    if (!frequency.isBiWeekly) {
+      return null;
+    }
+    final biWeeklyStartTime = _state.biWeeklyStartTime;
+    return biWeeklyStartTime == null
+        ? localization.gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage
+        : null;
+  }
+
+  /// On bi-weekly start time changed.
+  void onBiWeeklyStartTimeChanged(TimeOfDay? biWeeklyStartTime) {
+    _state.biWeeklyStartTime = biWeeklyStartTime;
+  }
+
+  /// On bi-weekly end time validation.
+  String? biWeeklyEndTimeValidation(_) {
+    final frequency = _state.frequency;
+    if (!frequency.isBiWeekly) {
+      return null;
+    }
+    final biWeeklyEndTime = _state.biWeeklyEndTime;
+    return biWeeklyEndTime == null
+        ? localization.gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage
+        : null;
+  }
+
+  /// On bi-weekly end time changed.
+  void onBiWeeklyEndTimeChanged(TimeOfDay? biWeeklyEndTime) {
+    _state.biWeeklyEndTime = biWeeklyEndTime;
   }
 
   /// On location validation.
@@ -95,7 +138,7 @@ final class GameCreationScreenViewModel {
   }
 
   /// On visibility changed.
-  void onVisibilityChanged(VisibilityEnum visibility) {
+  void onVisibilityChanged(GameVisibilityEnum visibility) {
     _state.visibility = visibility;
   }
 
@@ -111,21 +154,15 @@ final class GameCreationScreenViewModel {
 
   /// On previous.
   void onPrevious() {
-    _state.selectedIndex = state.selectedIndex - 1;
+    if (!_triggerValidation()) return;
+    _state.selectedIndex = _state.selectedIndex - 1;
+    GameCreationScreen.screens[_state.selectedIndex].onInit?.call(this);
   }
 
   /// On next.
   void onNext() {
-    final index = state.selectedIndex;
-    final selectedScreen = GameCreationScreen.screens[index];
-    final selectedScreenFormKey = selectedScreen.formKey;
-
-    final selectedScreenFormKeyResults = selectedScreenFormKey.currentState!.validate();
-    if (!selectedScreenFormKeyResults) {
-      return;
-    }
-
-    _state.selectedIndex = index + 1;
+    if (!_triggerValidation()) return;
+    _state.selectedIndex = _state.selectedIndex + 1;
     GameCreationScreen.screens[_state.selectedIndex].onInit?.call(this);
   }
 
@@ -139,11 +176,16 @@ final class GameCreationScreenViewModel {
       final frequency = _state.frequency;
       final startTime = _state.startTime;
       final endTime = _state.endTime;
-      final times = GameFrequencyDayTimeTimeDto(startTime: startTime!, endTime: endTime!);
+      final biWeeklyStartTime = _state.biWeeklyStartTime;
+      final biWeeklyEndTime = _state.biWeeklyEndTime;
       final frequencyDayTime = GameFrequencyDayTimeDto(
         frequency: _state.frequency,
-        days: [day, if (frequency.isBiWeekly) biWeeklyDay],
-        times: times,
+        primaryDay: day,
+        biWeeklyDay: frequency.isBiWeekly ? biWeeklyDay : null,
+        primaryStartTime: startTime!,
+        primaryEndTime: endTime!,
+        biWeeklyStartTime: frequency.isBiWeekly ? biWeeklyStartTime : null,
+        biWeeklyEndTime: frequency.isBiWeekly ? biWeeklyEndTime : null,
       );
       final location = _state.location;
       final price = GamePriceDto(memberPrice: _state.memberPrice, dropInPrice: _state.dropInPrice);
@@ -153,7 +195,9 @@ final class GameCreationScreenViewModel {
       final profilePictureImage = _state.profilePictureImage;
       final bannerImage = _state.bannerImage;
 
-      await _gameRepository.create(
+      _state.request = _state.request.createLoadingState();
+
+      final id = await _gameRepository.create(
         GameCreationRequestDto(
           name: name,
           sport: sport,
@@ -166,19 +210,75 @@ final class GameCreationScreenViewModel {
           banner: bannerImage,
         ),
       );
-    } catch (_) {
-      // TODO: Gotta handle this.
+
+      _state.request = _state.request.createSuccessState(id);
+    } catch (e, s) {
+      if (kDebugMode) {
+        print('[GameCreationScreenViewModel.onFinish]: Error: $e');
+        print('[GameCreationScreenViewModel.onFinish]: Stack trace:\n$s');
+      }
+
+      _state.request = _state.request.createErrorState(e.toString());
     }
   }
 
+  /// Gets the height of the footer buttons.
+  void setFooterButtonsHeight() {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      final footerButtonsGlobalKey = _state.footerButtonsGlobalKey;
+      final renderBox = footerButtonsGlobalKey.currentContext?.findRenderObject() as RenderBox?;
+      final height = renderBox?.size.height;
+      _state.footerButtonsHeight = height;
+    });
+  }
+
   /// Item builder of the frequency field.
-  MyoroMenuItem frequencyDayTimeScreenFrequencyFieldItemBuilder(FrequencyEnum frequency) {
+  MyoroMenuItem frequencyDayTimeScreenFrequencyFieldItemBuilder(GameFrequencyEnum frequency) {
     return MyoroMenuIconTextButtonItem(textConfiguration: MyoroTextConfiguration(text: frequency.label));
   }
 
   /// Selected item builder of the frequency field.
-  String frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder(FrequencyEnum frequency) {
+  String frequencyDayTimeScreenFrequencyFieldSelectedItemBuilder(GameFrequencyEnum frequency) {
     return frequency.label;
+  }
+
+  /// Helper function to trigger the validation.
+  bool _triggerValidation() {
+    final selectedScreen = GameCreationScreen.screens[state.selectedIndex];
+    final selectedScreenFormKey = selectedScreen.formKey;
+    final onValidationFailed = selectedScreen.onValidationFailed;
+    final result = selectedScreenFormKey.currentState!.validate();
+    if (!result) onValidationFailed?.call(this);
+    return result;
+  }
+
+  /// On request controller listener.
+  void _onRequestControllerListener() {
+    final request = _state.request;
+    final status = request.status;
+    final gameCreationScreenGameCreationSuccessMessage = localization.gameCreationScreenGameCreationSuccessMessage;
+
+    switch (status) {
+      case MyoroRequestEnum.success:
+        MmSnackBarHelper.showSnackBar(
+          snackBar: MyoroSnackBar(
+            snackBarType: MyoroSnackBarTypeEnum.success,
+            message: gameCreationScreenGameCreationSuccessMessage,
+          ),
+        );
+        Future.delayed(const Duration(seconds: 1)).then((_) {
+          AppRouter.pop();
+          AppRouter.push(Routes.gameRoutes.gameDetailsScreen.navigate(request.data!));
+        });
+        break;
+      case MyoroRequestEnum.error:
+        MmSnackBarHelper.showSnackBar(
+          snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: request.errorMessage!),
+        );
+        break;
+      default:
+        break;
+    }
   }
 
   /// Selected screen form key.

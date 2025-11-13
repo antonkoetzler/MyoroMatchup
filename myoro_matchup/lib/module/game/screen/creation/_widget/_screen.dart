@@ -3,13 +3,16 @@ part of '../game_creation_screen.dart';
 /// Generic screen of [GameCreationScreen].
 abstract class _Screen extends StatelessWidget {
   /// Default constructor.
-  _Screen({this.onInit, required this.title, required this.builder});
+  _Screen({this.onInit, this.onValidationFailed, required this.title, required this.builder});
 
   /// Form key.
   final formKey = GlobalKey<FormState>();
 
   /// On init.
   final void Function(GameCreationScreenViewModel)? onInit;
+
+  /// Callback executed when validation fails.
+  final void Function(GameCreationScreenViewModel)? onValidationFailed;
 
   /// Title.
   final String title;

@@ -35,6 +35,11 @@ public class GameCreationRequestDto {
   @Valid
   private GameAgeRangeDto ageRange;
 
+  /** Location of the game. */
+  @NotNull(message = "{validation.game.location.required}")
+  @Valid
+  private LocationDto location;
+
   /** Visibility of the game. */
   @NotNull(message = "{validation.game.visibility.required}")
   private GameVisibilityEnum visibility;
@@ -51,13 +56,14 @@ public class GameCreationRequestDto {
 
   /** Constructor with all fields. */
   public GameCreationRequestDto(String name, SportsEnum sport, GameFrequencyDayTimeDto frequencyDayTime,
-      GamePriceDto price, GameAgeRangeDto ageRange, GameVisibilityEnum visibility, String profilePicture,
-      String banner) {
+      GamePriceDto price, GameAgeRangeDto ageRange, LocationDto location, GameVisibilityEnum visibility,
+      String profilePicture, String banner) {
     this.name = name;
     this.sport = sport;
     this.frequencyDayTime = frequencyDayTime;
     this.price = price;
     this.ageRange = ageRange;
+    this.location = location;
     this.visibility = visibility;
     this.profilePicture = profilePicture;
     this.banner = banner;
@@ -106,6 +112,15 @@ public class GameCreationRequestDto {
    */
   public GameAgeRangeDto getAgeRange() {
     return ageRange;
+  }
+
+  /**
+   * Getter for location
+   * 
+   * @return the location of the game
+   */
+  public LocationDto getLocation() {
+    return location;
   }
 
   /**
@@ -178,6 +193,15 @@ public class GameCreationRequestDto {
    */
   public void setAgeRange(GameAgeRangeDto ageRange) {
     this.ageRange = ageRange;
+  }
+
+  /**
+   * Setter for location
+   * 
+   * @param location the location of the game
+   */
+  public void setLocation(LocationDto location) {
+    this.location = location;
   }
 
   /**

@@ -13,7 +13,7 @@ GameResponseDto _$GameResponseDtoFromJson(Map<String, dynamic> json) => GameResp
   location: Location.fromJson(json['location'] as Map<String, dynamic>),
   price: GamePriceDto.fromJson(json['price'] as Map<String, dynamic>),
   ageRange: GameAgeRangeModel.fromJson(json['ageRange'] as Map<String, dynamic>),
-  visibility: $enumDecode(_$VisibilityEnumEnumMap, json['visibility']),
+  visibility: $enumDecode(_$GameVisibilityEnumEnumMap, json['visibility']),
   profilePicture: json['profilePicture'] as String?,
   banner: json['banner'] as String?,
   id: (json['id'] as num).toInt(),
@@ -26,9 +26,9 @@ Map<String, dynamic> _$GameResponseDtoToJson(GameResponseDto instance) => <Strin
   'location': instance.location,
   'price': instance.price,
   'ageRange': instance.ageRange,
-  'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
-  'profilePicture': instance.profilePicture,
-  'banner': instance.banner,
+  'visibility': _$GameVisibilityEnumEnumMap[instance.visibility]!,
+  'profilePicture': ?instance.profilePicture,
+  'banner': ?instance.banner,
   'id': instance.id,
 };
 
@@ -39,7 +39,7 @@ const _$SportsEnumEnumMap = {
   SportsEnum.volleyball: 'VOLLEYBALL',
 };
 
-const _$VisibilityEnumEnumMap = {VisibilityEnum.private: 'private', VisibilityEnum.public: 'public'};
+const _$GameVisibilityEnumEnumMap = {GameVisibilityEnum.private: 'PUBLIC', GameVisibilityEnum.public: 'PUBLIC'};
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -63,7 +63,7 @@ mixin _$GameResponseDtoMixin {
     Location? location,
     GamePriceDto? price,
     GameAgeRangeModel? ageRange,
-    VisibilityEnum? visibility,
+    GameVisibilityEnum? visibility,
     String? profilePicture,
     bool profilePictureProvided = true,
     String? banner,

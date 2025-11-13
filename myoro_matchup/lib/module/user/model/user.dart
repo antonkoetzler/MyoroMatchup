@@ -28,6 +28,7 @@ final class User with _$UserMixin {
   final int id;
 
   /// Token.
+  @JsonKey(includeIfNull: false)
   final String? token;
 
   /// Username.

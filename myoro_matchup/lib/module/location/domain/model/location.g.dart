@@ -15,7 +15,7 @@ Location _$LocationFromJson(Map<String, dynamic> json) => Location(
 Map<String, dynamic> _$LocationToJson(Location instance) => <String, dynamic>{
   'name': instance.name,
   'city': instance.city,
-  'country': Location._countryToJson(instance.country),
+  'country': ?Location._countryToJson(instance.country),
 };
 
 // **************************************************************************

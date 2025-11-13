@@ -52,13 +52,24 @@ extension GetItInjectableX on _i174.GetIt {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final sharedPreferencesModule = _$SharedPreferencesModule();
     final appRouterModule = _$AppRouterModule();
-    gh.singleton<_i126.HttpClient>(() => _i126.HttpClient());
     await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.sharedPreferences,
       preResolve: true,
     );
+    gh.singleton<_i980.SharedPreferencesService>(
+      () => _i980.SharedPreferencesService(gh<_i460.SharedPreferences>()),
+    );
+    gh.singleton<_i126.HttpClient>(
+      () => _i126.HttpClient(gh<_i460.SharedPreferencesService>()),
+    );
+    gh.singleton<_i782.UserService>(
+      () => _i782.UserService(gh<_i460.SharedPreferencesService>()),
+    );
     gh.factory<_i643.AuthRepository>(
       () => _i643.AuthRepository(gh<_i460.HttpClient>()),
+    );
+    gh.factory<_i1006.GameRepository>(
+      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
     );
     gh.factory<_i143.LocationRepository>(
       () => _i143.LocationRepository(gh<_i460.HttpClient>()),
@@ -66,8 +77,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i624.UserRepository>(
       () => _i624.UserRepository(gh<_i460.HttpClient>()),
     );
-    gh.singleton<_i980.SharedPreferencesService>(
-      () => _i980.SharedPreferencesService(gh<_i460.SharedPreferences>()),
+    await gh.singletonAsync<_i460.AppRouter>(
+      () => appRouterModule.appRouter(gh<_i460.UserService>()),
+      preResolve: true,
     );
     gh.factory<_i206.AuthService>(
       () => _i206.AuthService(
@@ -75,36 +87,26 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.AuthRepository>(),
       ),
     );
-    gh.factory<_i1006.GameRepository>(
-      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
-    );
-    gh.factory<_i17.GameDetailsScreenViewModel>(
-      () => _i17.GameDetailsScreenViewModel(gh<_i460.GameRepository>()),
-    );
-    gh.factory<_i606.GameCreationScreenViewModel>(
-      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
-    );
     gh.factory<_i512.GameListingScreenViewModel>(
       () => _i512.GameListingScreenViewModel(gh<_i460.GameRepository>()),
-    );
-    gh.factory<_i789.MmLocationInputViewModel>(
-      () => _i789.MmLocationInputViewModel(gh<_i460.LocationRepository>()),
-    );
-    gh.singleton<_i782.UserService>(
-      () => _i782.UserService(gh<_i460.SharedPreferencesService>()),
-    );
-    await gh.singletonAsync<_i460.AppRouter>(
-      () => appRouterModule.appRouter(gh<_i460.UserService>()),
-      preResolve: true,
-    );
-    gh.factory<_i205.LoginSignupScreenViewModel>(
-      () => _i205.LoginSignupScreenViewModel(gh<_i460.AuthService>()),
     );
     gh.factory<_i46.UserScreenViewModel>(
       () => _i46.UserScreenViewModel(
         gh<_i460.UserService>(),
         gh<_i460.UserRepository>(),
       ),
+    );
+    gh.factory<_i606.GameCreationScreenViewModel>(
+      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
+    );
+    gh.factory<_i17.GameDetailsScreenViewModel>(
+      () => _i17.GameDetailsScreenViewModel(gh<_i460.GameRepository>()),
+    );
+    gh.factory<_i789.MmLocationInputViewModel>(
+      () => _i789.MmLocationInputViewModel(gh<_i460.LocationRepository>()),
+    );
+    gh.factory<_i205.LoginSignupScreenViewModel>(
+      () => _i205.LoginSignupScreenViewModel(gh<_i460.AuthService>()),
     );
     return this;
   }

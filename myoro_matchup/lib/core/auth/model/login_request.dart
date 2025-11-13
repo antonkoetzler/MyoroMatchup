@@ -14,9 +14,11 @@ class LoginRequest with _$LoginRequestMixin {
     : assert((username != null) ^ (email != null), '[LoginRequest]: [username] (x)or [email] cannot be null.');
 
   /// Username.
+  @JsonKey(includeIfNull: false)
   final String? username;
 
   /// Email.
+  @JsonKey(includeIfNull: false)
   final String? email;
 
   /// Password.

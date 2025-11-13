@@ -1,21 +1,27 @@
 import 'package:faker/faker.dart';
+import 'package:json_annotation/json_annotation.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Enum encapsulating the frequency of which a [Game] is played.
-enum FrequencyEnum {
+@JsonEnum()
+enum GameFrequencyEnum {
   /// Weekly.
+  @JsonValue('WEEKLY')
   weekly,
 
   /// Bi-weekly.
+  @JsonValue('BI_WEEKLY')
   biWeekly,
 
   /// Monthly.
+  @JsonValue('MONTHLY')
   monthly,
 
   /// Yearly.
+  @JsonValue('YEARLY')
   yearly;
 
-  factory FrequencyEnum.fake() {
+  factory GameFrequencyEnum.fake() {
     return values[faker.randomGenerator.integer(values.length)];
   }
 

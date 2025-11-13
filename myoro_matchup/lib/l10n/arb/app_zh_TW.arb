@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "請檢查您的連線後重試！",
   "mmErrorFeedbackActionButtonText": "重試",
 
+  "mmSuccessFeedbackSubtitle": "操作成功完成！",
+  "mmSuccessFeedbackActionButtonText": "完成",
+
   "mmLocationInputTypeEnumPlaceLabel": "地點",
   "mmLocationInputTypeEnumCityLabel": "城市",
   "mmLocationInputTypeEnumStateLabel": "州/省",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "名稱",
   "gameCreationScreenNameScreenNameInputPlaceholder": "例如：每週足球賽",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "名稱不能為空。",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "名稱必須至少包含3個字元。",
   "gameCreationScreenSportScreenTitle": "運動",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "頻率和日期/時間",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "頻率",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "上一步",
   "gameCreationScreenButtonNextText": "下一步",
   "gameCreationScreenButtonFinishText": "完成",
+  "gameCreationScreenGameCreationSuccessMessage": "遊戲建立成功！",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "使用者名稱/電子郵件",
   "loginSignupScreenLoginPasswordInputPlaceholder": "密碼",

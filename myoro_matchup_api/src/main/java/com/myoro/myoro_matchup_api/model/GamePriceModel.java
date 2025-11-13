@@ -7,11 +7,11 @@ import jakarta.persistence.Embeddable;
 @Embeddable
 public class GamePriceModel {
   /** Monthly price. */
-  @Column(name = "monthly_price", nullable = false)
+  @Column(nullable = false)
   private Double monthlyPrice;
 
   /** Drop in price. */
-  @Column(name = "drop_in_price", nullable = false)
+  @Column(nullable = false)
   private Double dropInPrice;
 
   /** Default constructor. */

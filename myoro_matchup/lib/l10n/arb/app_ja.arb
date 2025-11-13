@@ -4,6 +4,9 @@
   "mmErrorFeedbackSubtitle": "接続を確認して、もう一度お試しください！",
   "mmErrorFeedbackActionButtonText": "再試行",
 
+  "mmSuccessFeedbackSubtitle": "操作が正常に完了しました！",
+  "mmSuccessFeedbackActionButtonText": "完了",
+
   "mmLocationInputTypeEnumPlaceLabel": "場所",
   "mmLocationInputTypeEnumCityLabel": "都市",
   "mmLocationInputTypeEnumStateLabel": "州",
@@ -52,6 +55,7 @@
   "gameCreationScreenNameScreenNameInputLabel": "名前",
   "gameCreationScreenNameScreenNameInputPlaceholder": "例：週次サッカーゲーム",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "名前は空にできません。",
+  "gameCreationScreenNameScreenNameInputLengthMessage": "名前は少なくとも3文字である必要があります。",
   "gameCreationScreenSportScreenTitle": "スポーツ",
   "gameCreationScreenFrequencyDayTimeScreenTitle": "頻度と日時",
   "gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel": "頻度",
@@ -85,6 +89,7 @@
   "gameCreationScreenButtonPreviousText": "前へ",
   "gameCreationScreenButtonNextText": "次へ",
   "gameCreationScreenButtonFinishText": "完了",
+  "gameCreationScreenGameCreationSuccessMessage": "ゲームが正常に作成されました！",
 
   "loginSignupScreenLoginUsernameEmailInputPlaceholder": "ユーザー名/メールアドレス",
   "loginSignupScreenLoginPasswordInputPlaceholder": "パスワード",

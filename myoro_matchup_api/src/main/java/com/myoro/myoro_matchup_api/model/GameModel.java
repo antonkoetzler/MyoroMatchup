@@ -3,6 +3,8 @@ package com.myoro.myoro_matchup_api.model;
 import com.myoro.myoro_matchup_api.enums.GameVisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
 
+import jakarta.persistence.AttributeOverride;
+import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
@@ -21,7 +23,7 @@ public class GameModel {
   private Long id;
 
   /** ID of the user that owns the game. */
-  @Column(name = "user_id", nullable = false)
+  @Column(nullable = false)
   private Long userId;
 
   /** Game name. */
@@ -43,6 +45,15 @@ public class GameModel {
   /** Age range of the game. */
   @Embedded
   private GameAgeRangeModel ageRange;
+
+  /** Location of the game. */
+  @Embedded
+  @AttributeOverrides({
+      @AttributeOverride(name = "name", column = @Column(name = "location_name", nullable = false)),
+      @AttributeOverride(name = "city", column = @Column(name = "location_city", nullable = false)),
+      @AttributeOverride(name = "country", column = @Column(name = "location_country", nullable = true))
+  })
+  private LocationModel location;
 
   /** Visibility of the game. */
   @Column(nullable = false)
@@ -128,6 +139,15 @@ public class GameModel {
    */
   public GameAgeRangeModel getAgeRange() {
     return ageRange;
+  }
+
+  /**
+   * Getter for location
+   * 
+   * @return the location of the game
+   */
+  public LocationModel getLocation() {
+    return location;
   }
 
   /**
@@ -218,6 +238,15 @@ public class GameModel {
    */
   public void setAgeRange(GameAgeRangeModel ageRange) {
     this.ageRange = ageRange;
+  }
+
+  /**
+   * Setter for location
+   * 
+   * @param location the location of the game
+   */
+  public void setLocation(LocationModel location) {
+    this.location = location;
   }
 
   /**

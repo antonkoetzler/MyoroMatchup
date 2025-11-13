@@ -32,9 +32,13 @@ final class GameResponseDto extends GameAbstract with _$GameResponseDtoMixin {
       location: Location.fake(),
       price: GamePriceDto.fake(),
       ageRange: GameAgeRangeModel.fake(),
-      visibility: VisibilityEnum.fake(),
-      profilePicture: faker.image.image(width: 100, height: 100),
-      banner: faker.image.image(width: 100, height: 100),
+      visibility: GameVisibilityEnum.fake(),
+      profilePicture: faker.randomGenerator.boolean()
+          ? kTestProfilePictures[faker.randomGenerator.integer(kTestProfilePictures.length - 1)]
+          : null,
+      banner: faker.randomGenerator.boolean()
+          ? kTestBanners[faker.randomGenerator.integer(kTestBanners.length - 1)]
+          : null,
       id: faker.randomGenerator.integer(1000000),
     );
   }

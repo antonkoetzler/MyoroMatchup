@@ -10,6 +10,7 @@ part '_widget/_button.dart';
 part '_widget/_frequency_day_time_screen_frequency_field.dart';
 part '_widget/_frequency_day_time_screen_day_field.dart';
 part '_widget/_frequency_day_time_screen_time_field.dart';
+part '_widget/_frequency_day_time_screen_bi_weekly_time_field.dart';
 part '_widget/_frequency_day_time_screen.dart';
 part '_widget/_location_screen.dart';
 part '_widget/_name_screen.dart';

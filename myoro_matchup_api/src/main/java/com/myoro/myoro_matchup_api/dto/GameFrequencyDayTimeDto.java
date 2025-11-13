@@ -21,12 +21,23 @@ public class GameFrequencyDayTimeDto {
   /** Bi-weekly day of the game. Required only when frequency is BI_WEEKLY. */
   private DayEnum biWeeklyDay;
 
-  /** Primary time of the game. */
-  @NotNull(message = "{validation.game.primary.time.required}")
-  private LocalTime primaryTime;
+  /** Primary start time of the game. */
+  @NotNull(message = "{validation.game.primary.start.time.required}")
+  private LocalTime primaryStartTime;
 
-  /** Bi-weekly time of the game. Required only when frequency is BI_WEEKLY. */
-  private LocalTime biWeeklyTime;
+  /** Primary end time of the game. */
+  @NotNull(message = "{validation.game.primary.end.time.required}")
+  private LocalTime primaryEndTime;
+
+  /**
+   * Bi-weekly start time of the game. Required only when frequency is BI_WEEKLY.
+   */
+  private LocalTime biWeeklyStartTime;
+
+  /**
+   * Bi-weekly end time of the game. Required only when frequency is BI_WEEKLY.
+   */
+  private LocalTime biWeeklyEndTime;
 
   /** Default constructor. */
   public GameFrequencyDayTimeDto() {
@@ -34,12 +45,14 @@ public class GameFrequencyDayTimeDto {
 
   /** Constructor with all fields. */
   public GameFrequencyDayTimeDto(GameFrequencyEnum frequency, DayEnum primaryDay, DayEnum biWeeklyDay,
-      LocalTime primaryTime, LocalTime biWeeklyTime) {
+      LocalTime primaryStartTime, LocalTime primaryEndTime, LocalTime biWeeklyStartTime, LocalTime biWeeklyEndTime) {
     this.frequency = frequency;
     this.primaryDay = primaryDay;
     this.biWeeklyDay = biWeeklyDay;
-    this.primaryTime = primaryTime;
-    this.biWeeklyTime = biWeeklyTime;
+    this.primaryStartTime = primaryStartTime;
+    this.primaryEndTime = primaryEndTime;
+    this.biWeeklyStartTime = biWeeklyStartTime;
+    this.biWeeklyEndTime = biWeeklyEndTime;
   }
 
   /**
@@ -53,13 +66,45 @@ public class GameFrequencyDayTimeDto {
   }
 
   /**
-   * Validates that biWeeklyTime is provided when frequency is BI_WEEKLY.
+   * Validates that biWeeklyStartTime and biWeeklyEndTime are provided when
+   * frequency is BI_WEEKLY.
    * 
    * @return true if validation passes
    */
-  @AssertTrue(message = "{validation.game.bi.weekly.time.required}")
-  public boolean isBiWeeklyTimeValid() {
-    return frequency == GameFrequencyEnum.BI_WEEKLY ? biWeeklyTime != null : true;
+  @AssertTrue(message = "{validation.game.bi.weekly.start.time.required}")
+  public boolean isBiWeeklyStartTimeValid() {
+    return frequency == GameFrequencyEnum.BI_WEEKLY ? biWeeklyStartTime != null : true;
+  }
+
+  /**
+   * Validates that biWeeklyEndTime is provided when biWeeklyStartTime is
+   * provided.
+   * 
+   * @return true if validation passes
+   */
+  @AssertTrue(message = "{validation.game.bi.weekly.end.time.required}")
+  public boolean isBiWeeklyEndTimeValid() {
+    return biWeeklyStartTime != null ? biWeeklyEndTime != null : true;
+  }
+
+  /**
+   * Validates that primaryEndTime is provided when primaryStartTime is provided.
+   * 
+   * @return true if validation passes
+   */
+  @AssertTrue(message = "{validation.game.primary.end.time.required}")
+  public boolean isPrimaryEndTimeValid() {
+    return primaryStartTime != null ? primaryEndTime != null : true;
+  }
+
+  /**
+   * Validates that primaryStartTime is provided when primaryEndTime is provided.
+   * 
+   * @return true if validation passes
+   */
+  @AssertTrue(message = "{validation.game.primary.start.time.required}")
+  public boolean isPrimaryStartTimeValid() {
+    return primaryEndTime != null ? primaryStartTime != null : true;
   }
 
   /**
@@ -90,21 +135,39 @@ public class GameFrequencyDayTimeDto {
   }
 
   /**
-   * Getter for primaryTime
+   * Getter for primaryStartTime
    * 
-   * @return the primary time of the game
+   * @return the primary start time of the game
    */
-  public LocalTime getPrimaryTime() {
-    return primaryTime;
+  public LocalTime getPrimaryStartTime() {
+    return primaryStartTime;
   }
 
   /**
-   * Getter for biWeeklyTime
+   * Getter for primaryEndTime
    * 
-   * @return the bi-weekly time of the game
+   * @return the primary end time of the game
    */
-  public LocalTime getBiWeeklyTime() {
-    return biWeeklyTime;
+  public LocalTime getPrimaryEndTime() {
+    return primaryEndTime;
+  }
+
+  /**
+   * Getter for biWeeklyStartTime
+   * 
+   * @return the bi-weekly start time of the game
+   */
+  public LocalTime getBiWeeklyStartTime() {
+    return biWeeklyStartTime;
+  }
+
+  /**
+   * Getter for biWeeklyEndTime
+   * 
+   * @return the bi-weekly end time of the game
+   */
+  public LocalTime getBiWeeklyEndTime() {
+    return biWeeklyEndTime;
   }
 
   /**
@@ -135,20 +198,38 @@ public class GameFrequencyDayTimeDto {
   }
 
   /**
-   * Setter for primaryTime
+   * Setter for primaryStartTime
    * 
-   * @param primaryTime the primary time of the game
+   * @param primaryStartTime the primary start time of the game
    */
-  public void setPrimaryTime(LocalTime primaryTime) {
-    this.primaryTime = primaryTime;
+  public void setPrimaryStartTime(LocalTime primaryStartTime) {
+    this.primaryStartTime = primaryStartTime;
   }
 
   /**
-   * Setter for biWeeklyTime
+   * Setter for primaryEndTime
    * 
-   * @param biWeeklyTime the bi-weekly time of the game
+   * @param primaryEndTime the primary end time of the game
    */
-  public void setBiWeeklyTime(LocalTime biWeeklyTime) {
-    this.biWeeklyTime = biWeeklyTime;
+  public void setPrimaryEndTime(LocalTime primaryEndTime) {
+    this.primaryEndTime = primaryEndTime;
+  }
+
+  /**
+   * Setter for biWeeklyStartTime
+   * 
+   * @param biWeeklyStartTime the bi-weekly start time of the game
+   */
+  public void setBiWeeklyStartTime(LocalTime biWeeklyStartTime) {
+    this.biWeeklyStartTime = biWeeklyStartTime;
+  }
+
+  /**
+   * Setter for biWeeklyEndTime
+   * 
+   * @param biWeeklyEndTime the bi-weekly end time of the game
+   */
+  public void setBiWeeklyEndTime(LocalTime biWeeklyEndTime) {
+    this.biWeeklyEndTime = biWeeklyEndTime;
   }
 }
