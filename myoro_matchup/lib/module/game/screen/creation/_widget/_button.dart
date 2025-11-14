@@ -17,7 +17,8 @@ final class _Button extends StatelessWidget {
       style: isSecondary
           ? const MyoroIconTextButtonStyle().secondary(context)
           : const MyoroIconTextButtonStyle().bordered(context),
-      textConfiguration: MyoroTextConfiguration(text: text, style: buttonTextStyle),
+      text: text,
+      textConfiguration: MyoroTextConfiguration(style: buttonTextStyle),
       onTapUp: (_) => onTapUp(),
     );
   }

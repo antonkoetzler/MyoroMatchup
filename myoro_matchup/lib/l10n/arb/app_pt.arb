@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "Vôlei",
 
   "gameDetailsScreenBodyErrorStateTitle": "Falha ao obter os detalhes do jogo!",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Jogadores",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Jogadores",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Classificações",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Frequência",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Dia Principal",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "Horários Principais",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "Dia Quinzenal",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "Horários Quinzenais",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "Preço de Membro",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "Preço de Visitante",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "Faixa Etária",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge} a {maxAge}",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Visibilidade",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "Erro ao recuperar os jogos!",

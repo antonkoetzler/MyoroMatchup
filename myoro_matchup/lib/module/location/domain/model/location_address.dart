@@ -23,9 +23,7 @@ final class LocationAddress with _$LocationAddressMixin {
   /// Fake constructor.
   LocationAddress.fake()
     : city = faker.randomGenerator.boolean() ? faker.address.city() : kMyoroEmptyString,
-      country = faker.randomGenerator.boolean()
-          ? MyoroCountryEnum.values[faker.randomGenerator.integer(MyoroCountryEnum.values.length)]
-          : null;
+      country = MyoroCountryEnum.values[faker.randomGenerator.integer(MyoroCountryEnum.values.length)];
 
   /// City.
   @JsonKey(defaultValue: kMyoroEmptyString)
@@ -33,7 +31,7 @@ final class LocationAddress with _$LocationAddressMixin {
 
   /// Country of the address.
   @JsonKey(name: 'country_code')
-  final MyoroCountryEnum? country;
+  final MyoroCountryEnum country;
 
   /// To JSON constructor.
   Map<String, dynamic> toJson() {

@@ -13,8 +13,7 @@ class AppLocalizationsId extends AppLocalizations {
       'Tidak dapat terhubung ke server, harap periksa koneksi internet Anda dan coba lagi.';
 
   @override
-  String get mmErrorFeedbackSubtitle =>
-      'Harap verifikasi koneksi Anda dan coba lagi!';
+  String get mmErrorFeedbackSubtitle => 'Harap verifikasi koneksi Anda dan coba lagi!';
 
   @override
   String get mmErrorFeedbackActionButtonText => 'Coba Lagi';
@@ -41,11 +40,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'Benua';
 
   @override
-  String mmLocationInputItemCityCountryText(
-    String city,
-    String emoji,
-    String countryName,
-  ) {
+  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
     return '$city, $emoji $countryName';
   }
 
@@ -80,29 +75,59 @@ class AppLocalizationsId extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Bola Voli';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle =>
-      'Gagal mengambil detail permainan!';
+  String get gameDetailsScreenBodyErrorStateTitle => 'Gagal mengambil detail permainan!';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Pemain';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Info';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Pemain';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
-      'Peringkat';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Peringkat';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => 'Frekuensi';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => 'Hari Utama';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel => 'Waktu Utama';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+      'Hari Dua Mingguan';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+      'Waktu Dua Mingguan';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => 'Harga Anggota';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => 'Harga Tamu';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => 'Rentang Usia';
+
+  @override
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
+    return '$minAge hingga $maxAge';
+  }
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Visibilitas';
 
   @override
   String get gameListingScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle =>
-      'Kesalahan saat mengambil permainan!';
+  String get gameListingScreenBodyErrorStateTitle => 'Kesalahan saat mengambil permainan!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle =>
-      'Tidak ada permainan ditemukan!';
+  String get gameListingScreenBodySuccessStateEmptyTitle => 'Tidak ada permainan ditemukan!';
 
   @override
   String get gameListingScreenNewGameButtonText => 'Buat permainan';
@@ -117,44 +142,35 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputLabel => 'Nama';
 
   @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder =>
-      'mis. Permainan Sepak Bola Mingguan';
+  String get gameCreationScreenNameScreenNameInputPlaceholder => 'mis. Permainan Sepak Bola Mingguan';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
-      'Nama tidak boleh kosong.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'Nama tidak boleh kosong.';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage =>
-      'Nama harus memiliki setidaknya 3 karakter.';
+  String get gameCreationScreenNameScreenNameInputLengthMessage => 'Nama harus memiliki setidaknya 3 karakter.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Olahraga';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
-      'Frekuensi dan Tanggal/Waktu';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Frekuensi dan Tanggal/Waktu';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
-      'Frekuensi';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Frekuensi';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
-      'Mulai';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'Mulai';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
-      'Selesai';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'Selesai';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
       'Waktu mulai tidak boleh kosong.';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
       'Waktu selesai tidak boleh kosong.';
 
   @override
@@ -173,8 +189,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Lokasi';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage =>
-      'Silakan pilih lokasi.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage => 'Silakan pilih lokasi.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -186,17 +201,13 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle =>
-      'Visibilitas dan Gambar';
+  String get gameCreationScreenVisibilityAndImageScreenTitle => 'Visibilitas dan Gambar';
 
   @override
-  String
-  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
-      'Foto Profil';
+  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'Foto Profil';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
-      'Banner';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'Banner';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Sebelumnya';
@@ -208,12 +219,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'Selesai';
 
   @override
-  String get gameCreationScreenGameCreationSuccessMessage =>
-      'Permainan berhasil dibuat!';
+  String get gameCreationScreenGameCreationSuccessMessage => 'Permainan berhasil dibuat!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
-      'Nama pengguna/email';
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'Nama pengguna/email';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'Kata sandi';
@@ -237,47 +246,37 @@ class AppLocalizationsId extends AppLocalizations {
   String get loginSignupScreenSignupPasswordInputPlaceholder => 'Kata sandi';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'Kata sandi';
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'Kata sandi';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Daftar';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
-      'Baru di MyoroMatchup? Daftar!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'Baru di MyoroMatchup? Daftar!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
-      'Sudah terdaftar? Masuk!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'Sudah terdaftar? Masuk!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
-      'Nama pengguna/email tidak boleh kosong.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'Nama pengguna/email tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
-      'Kata sandi tidak boleh kosong.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'Kata sandi tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
-      'Nama tidak boleh kosong.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'Nama tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
-      'Nama pengguna tidak boleh kosong.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'Nama pengguna tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
-      'Email tidak boleh kosong.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'Email tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
-      'Bidang kata sandi tidak boleh kosong.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'Bidang kata sandi tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
-      'Kata sandi tidak cocok.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Kata sandi tidak cocok.';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Menu';

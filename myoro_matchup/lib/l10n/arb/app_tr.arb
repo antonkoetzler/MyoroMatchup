@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "Voleybol",
 
   "gameDetailsScreenBodyErrorStateTitle": "Oyun detayları alınamadı!",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Oyuncular",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Bilgi",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Oyuncular",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Sıralamalar",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Sıklık",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Ana Gün",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "Ana Zamanlar",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "İki Haftada Bir Gün",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "İki Haftada Bir Zamanlar",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "Üye Fiyatı",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "Misafir Fiyatı",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "Yaş Aralığı",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge} - {maxAge}",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Görünürlük",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "Oyunlar alınırken hata oluştu!",

@@ -8,12 +8,12 @@ part of 'location_address.dart';
 
 LocationAddress _$LocationAddressFromJson(Map<String, dynamic> json) => LocationAddress(
   city: json['city'] as String? ?? '',
-  country: $enumDecodeNullable(_$MyoroCountryEnumEnumMap, json['country_code']),
+  country: $enumDecode(_$MyoroCountryEnumEnumMap, json['country_code']),
 );
 
 Map<String, dynamic> _$LocationAddressToJson(LocationAddress instance) => <String, dynamic>{
   'city': instance.city,
-  'country_code': _$MyoroCountryEnumEnumMap[instance.country],
+  'country_code': _$MyoroCountryEnumEnumMap[instance.country]!,
 };
 
 const _$MyoroCountryEnumEnumMap = {
@@ -230,8 +230,8 @@ const _$MyoroCountryEnumEnumMap = {
 mixin _$LocationAddressMixin {
   LocationAddress get self => this as LocationAddress;
 
-  LocationAddress copyWith({String? city, MyoroCountryEnum? country, bool countryProvided = true}) {
-    return LocationAddress(city: city ?? self.city, country: countryProvided ? (country ?? self.country) : null);
+  LocationAddress copyWith({String? city, MyoroCountryEnum? country}) {
+    return LocationAddress(city: city ?? self.city, country: country ?? self.country);
   }
 
   @override

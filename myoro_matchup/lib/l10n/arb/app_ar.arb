@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "الكرة الطائرة",
 
   "gameDetailsScreenBodyErrorStateTitle": "فشل في استرداد تفاصيل اللعبة!",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "اللاعبون",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "معلومات",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "اللاعبون",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "التصنيفات",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "التكرار",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "اليوم الأساسي",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "الأوقات الأساسية",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "يوم كل أسبوعين",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "أوقات كل أسبوعين",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "سعر العضو",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "سعر الدخول",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "النطاق العمري",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge} إلى {maxAge}",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "الرؤية",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "خطأ في استرداد الألعاب!",

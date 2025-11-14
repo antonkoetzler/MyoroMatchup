@@ -2,14 +2,24 @@ part of '../widget/game_details_screen.dart';
 
 /// State of [GameDetailsScreen].
 final class _GameDetailsScreenState extends State<GameDetailsScreen> {
-  late final _viewModel = getIt<GameDetailsScreenViewModel>()..init(widget.gameId);
+  /// View model.
+  late final GameDetailsScreenViewModel _viewModel;
 
+  /// Initialization function.
+  @override
+  void initState() {
+    super.initState();
+    _viewModel = getIt<GameDetailsScreenViewModel>()..init(widget.gameId);
+  }
+
+  /// Dispose function.
   @override
   void dispose() {
     _viewModel.dispose();
     super.dispose();
   }
 
+  /// Build function.
   @override
   Widget build(_) {
     return InheritedProvider.value(

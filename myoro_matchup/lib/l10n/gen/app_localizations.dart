@@ -78,8 +78,7 @@ import 'app_localizations_zh.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -87,8 +86,7 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -100,13 +98,12 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
-      <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
@@ -195,11 +192,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{city}, {emoji} {countryName}'**
-  String mmLocationInputItemCityCountryText(
-    String city,
-    String emoji,
-    String countryName,
-  );
+  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName);
 
   /// No description provided for @visibilityEnumPrivateLabel.
   ///
@@ -270,7 +263,7 @@ abstract class AppLocalizations {
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabText.
   ///
   /// In en, this message translates to:
-  /// **'Players'**
+  /// **'Info'**
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewPlayersTabText.
@@ -284,6 +277,66 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Rankings'**
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Frequency'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Primary Day'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Primary Times'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Bi-weekly Day'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Bi-weekly Times'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Member Price'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Drop-in Price'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Age Range'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData.
+  ///
+  /// In en, this message translates to:
+  /// **'{minAge} to {maxAge}'**
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge);
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Visibility'**
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel;
 
   /// No description provided for @gameListingScreenAppBarTitle.
   ///
@@ -379,15 +432,13 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Start time cannot be empty.'**
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage;
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage;
 
   /// No description provided for @gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage.
   ///
   /// In en, this message translates to:
   /// **'End time cannot be empty.'**
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage;
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage;
 
   /// No description provided for @gameCreationScreenPriceScreenTitle.
   ///
@@ -445,8 +496,7 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Profile Picture'**
-  String
-  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle;
+  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle;
 
   /// No description provided for @gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle.
   ///
@@ -611,8 +661,7 @@ abstract class AppLocalizations {
   String get mmAppBarMenuDrawerCreateGameText;
 }
 
-class _AppLocalizationsDelegate
-    extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override

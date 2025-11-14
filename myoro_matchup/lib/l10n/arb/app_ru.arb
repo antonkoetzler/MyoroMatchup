@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "Волейбол",
 
   "gameDetailsScreenBodyErrorStateTitle": "Не удалось получить детали игры!",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Игроки",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Инфо",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Игроки",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Рейтинги",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Частота",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Основной День",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "Основное Время",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "День Раз в Две Недели",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "Время Раз в Две Недели",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "Цена для Члена",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "Цена для Гостя",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "Возрастной диапазон",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge} до {maxAge}",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Видимость",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "Ошибка при получении игр!",

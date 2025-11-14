@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "วอลเลย์บอล",
 
   "gameDetailsScreenBodyErrorStateTitle": "ไม่สามารถดึงรายละเอียดเกมได้!",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "ผู้เล่น",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "ข้อมูล",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "ผู้เล่น",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "อันดับ",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "ความถี่",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "วันหลัก",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "เวลาหลัก",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "วันทุกสองสัปดาห์",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "เวลาทุกสองสัปดาห์",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "ราคาสมาชิก",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "ราคาแขก",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "ช่วงอายุ",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge} ถึง {maxAge}",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "การมองเห็น",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "เกิดข้อผิดพลาดในการดึงเกม!",

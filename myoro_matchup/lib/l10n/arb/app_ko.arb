@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "배구",
 
   "gameDetailsScreenBodyErrorStateTitle": "게임 세부 정보를 가져오지 못했습니다!",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "플레이어",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "정보",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "플레이어",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "순위",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "빈도",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "주요 일",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "주요 시간",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "격주 일",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "격주 시간",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "회원 가격",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "드롭인 가격",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "연령 범위",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge}세부터 {maxAge}세까지",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "공개 설정",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "게임을 가져오는 중 오류가 발생했습니다!",

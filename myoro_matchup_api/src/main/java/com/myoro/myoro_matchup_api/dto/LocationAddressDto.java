@@ -9,6 +9,7 @@ public class LocationAddressDto {
   private String city;
 
   /** Country of the address. */
+  @NotBlank(message = "{validation.game.location.country.required}")
   private String country;
 
   /** Default constructor. */
@@ -57,4 +58,3 @@ public class LocationAddressDto {
     this.country = country;
   }
 }
-

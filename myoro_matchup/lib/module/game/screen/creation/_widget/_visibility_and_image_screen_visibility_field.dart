@@ -20,7 +20,7 @@ final class _VisibilityAndImageScreenVisibilityField extends StatelessWidget {
             GameVisibilityEnum.public => Icons.public,
           },
         ),
-        textConfiguration: MyoroTextConfiguration(text: item.label),
+        text: item.label,
       ),
       selectedItemBuilder: (item) => item.label,
       allowDeselection: false,

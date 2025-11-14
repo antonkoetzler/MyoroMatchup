@@ -3,25 +3,30 @@ import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 
 /// Empty feedback variant of [MyoroFeedback].
 final class MmEmptyFeedback extends MyoroFeedback {
+  /// Default value of [subtitle].
+  static const subtitleDefaultValue = kMyoroEmptyString;
+
+  /// Default value of [actionButtonText].
+  static const actionButtonTextDefaultValue = kMyoroEmptyString;
+
+  /// Default constructor.
   MmEmptyFeedback({
     super.key,
     required String title,
-    String? subtitle,
-    String? actionButtonText,
+    String subtitle = subtitleDefaultValue,
+    String actionButtonText = actionButtonTextDefaultValue,
     VoidCallback? actionButtonCallback,
   }) : assert(
-         !((actionButtonText != null) ^ (actionButtonCallback != null)),
+         !(actionButtonText.isNotEmpty ^ (actionButtonCallback != null)),
          '[MmEmptyFeedbackConfiguration]: If [actionButtonText] is provided, [actionButtonCallback], vice versa.',
        ),
        super(
          iconConfiguration: const MyoroIconConfiguration(icon: Icons.hourglass_empty),
-         titleConfiguration: MyoroTextConfiguration(text: title),
-         subtitleConfiguration: subtitle != null ? MyoroTextConfiguration(text: subtitle) : null,
-         actionButtonConfiguration: actionButtonText != null
-             ? MyoroFeedbackActionButtonConfiguration(
-                 textConfiguration: MyoroTextConfiguration(text: actionButtonText),
-                 onTapUp: (_) => actionButtonCallback!(),
-               )
+         title: title,
+         subtitle: subtitle,
+         actionButtonText: actionButtonText,
+         actionButtonConfiguration: actionButtonText.isNotEmpty
+             ? MyoroFeedbackActionButtonConfiguration(onTapUp: (_) => actionButtonCallback!())
              : null,
        );
 }

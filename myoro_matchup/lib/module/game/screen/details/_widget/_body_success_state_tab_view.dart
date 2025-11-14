@@ -2,26 +2,33 @@ part of '../widget/game_details_screen.dart';
 
 /// Tab view of [GameDetailsScreen].
 final class _BodySuccessStateTabView extends StatelessWidget {
+  /// Default constructor.
   const _BodySuccessStateTabView(this._game);
 
-  // TODO
-  // ignore: unused_field
+  /// Game.
   final GameResponseDto _game;
 
   @override
   Widget build(_) {
+    final gameDetailsScreenBodySuccessStateTabViewInfoTabText =
+        localization.gameDetailsScreenBodySuccessStateTabViewInfoTabText;
+    final gameDetailsScreenBodySuccessStateTabViewPlayersTabText =
+        localization.gameDetailsScreenBodySuccessStateTabViewPlayersTabText;
+    final gameDetailsScreenBodySuccessStateTabViewRankingsTabText =
+        localization.gameDetailsScreenBodySuccessStateTabViewRankingsTabText;
+
     return MyoroTabView(
       tabs: [
         MyoroTabViewTab(
-          text: localization.gameDetailsScreenBodySuccessStateTabViewInfoTabText,
-          content: const _BodySuccessStateTabViewInfoTab(),
+          text: gameDetailsScreenBodySuccessStateTabViewInfoTabText,
+          content: _BodySuccessStateTabViewInfoTab(_game),
         ),
         MyoroTabViewTab(
-          text: localization.gameDetailsScreenBodySuccessStateTabViewPlayersTabText,
+          text: gameDetailsScreenBodySuccessStateTabViewPlayersTabText,
           content: const _BodySuccessStateTabViewPlayersTab(),
         ),
         MyoroTabViewTab(
-          text: localization.gameDetailsScreenBodySuccessStateTabViewRankingsTabText,
+          text: gameDetailsScreenBodySuccessStateTabViewRankingsTabText,
           content: const _BodySuccessStateTabViewRankingsTab(),
         ),
       ],

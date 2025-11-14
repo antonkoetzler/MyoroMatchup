@@ -9,6 +9,11 @@ final class _SportName extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameCardThemeExtension>();
-    return Text(_game.sport.name, style: themeExtension.sportNameTextStyle);
+    final sportNameTextStyle = themeExtension.sportNameTextStyle;
+
+    final sport = _game.sport;
+    final formattedName = sport.formattedName;
+
+    return Text(formattedName, style: sportNameTextStyle);
   }
 }

@@ -13,7 +13,7 @@ final class _MenuModalItem extends StatelessWidget {
     return MyoroIconTextButton(
       style: const MyoroIconTextButtonStyle().secondary(context),
       iconConfiguration: MyoroIconConfiguration(icon: _icon),
-      textConfiguration: MyoroTextConfiguration(text: _text),
+      text: _text,
       onTapUp: (_) {
         AppRouter.pop();
         AppRouter.push(_navigation);

@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "वॉलीबॉल",
 
   "gameDetailsScreenBodyErrorStateTitle": "गेम विवरण प्राप्त करने में विफल!",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "खिलाड़ी",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "जानकारी",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "खिलाड़ी",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "रैंकिंग",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "आवृत्ति",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "प्राथमिक दिन",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "प्राथमिक समय",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "द्वि-साप्ताहिक दिन",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "द्वि-साप्ताहिक समय",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "सदस्य मूल्य",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "ड्रॉप-इन मूल्य",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "आयु सीमा",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge} से {maxAge}",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "दृश्यता",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "गेम प्राप्त करने में त्रुटि!",

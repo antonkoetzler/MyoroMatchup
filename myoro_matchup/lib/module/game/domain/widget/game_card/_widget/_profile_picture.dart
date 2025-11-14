@@ -10,16 +10,29 @@ final class _ProfilePicture extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameCardThemeExtension>();
     final profilePictureBorderRadius = themeExtension.profilePictureBorderRadius;
+    final profilePictureSize = themeExtension.profilePictureSize;
+    final logoPadding = themeExtension.logoPadding;
+    final logoSize = themeExtension.logoSize;
 
     final profilePicture = _game.profilePicture;
 
     final assetPath = profilePicture.isNotEmpty ? profilePicture : MmImages.svgs.logo;
 
     return Container(
-      decoration: BoxDecoration(border: themeExtension.profilePictureBorder, borderRadius: themeExtension.profilePictureBorderRadius),
+      decoration: BoxDecoration(
+        border: themeExtension.profilePictureBorder,
+        borderRadius: themeExtension.profilePictureBorderRadius,
+      ),
       child: ClipRRect(
         borderRadius: profilePictureBorderRadius,
-        child: Image.asset(assetPath, width: themeExtension.profilePictureSize, fit: BoxFit.contain),
+        child: Padding(
+          padding: logoPadding,
+          child: MyoroImage(
+            path: assetPath,
+            width: profilePicture.isNotEmpty ? profilePictureSize : logoSize,
+            fit: BoxFit.contain,
+          ),
+        ),
       ),
     );
   }

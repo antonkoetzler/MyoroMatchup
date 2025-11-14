@@ -13,8 +13,7 @@ class AppLocalizationsTh extends AppLocalizations {
       'ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณและลองอีกครั้ง';
 
   @override
-  String get mmErrorFeedbackSubtitle =>
-      'โปรดตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้ง!';
+  String get mmErrorFeedbackSubtitle => 'โปรดตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้ง!';
 
   @override
   String get mmErrorFeedbackActionButtonText => 'ลองอีกครั้ง';
@@ -41,11 +40,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'ทวีป';
 
   @override
-  String mmLocationInputItemCityCountryText(
-    String city,
-    String emoji,
-    String countryName,
-  ) {
+  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
     return '$city, $emoji $countryName';
   }
 
@@ -80,26 +75,56 @@ class AppLocalizationsTh extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'วอลเลย์บอล';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle =>
-      'ไม่สามารถดึงรายละเอียดเกมได้!';
+  String get gameDetailsScreenBodyErrorStateTitle => 'ไม่สามารถดึงรายละเอียดเกมได้!';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'ผู้เล่น';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'ข้อมูล';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText =>
-      'ผู้เล่น';
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'ผู้เล่น';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
-      'อันดับ';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'อันดับ';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => 'ความถี่';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => 'วันหลัก';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel => 'เวลาหลัก';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+      'วันทุกสองสัปดาห์';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+      'เวลาทุกสองสัปดาห์';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => 'ราคาสมาชิก';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => 'ราคาแขก';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => 'ช่วงอายุ';
+
+  @override
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
+    return '$minAge ถึง $maxAge';
+  }
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'การมองเห็น';
 
   @override
   String get gameListingScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle =>
-      'เกิดข้อผิดพลาดในการดึงเกม!';
+  String get gameListingScreenBodyErrorStateTitle => 'เกิดข้อผิดพลาดในการดึงเกม!';
 
   @override
   String get gameListingScreenBodySuccessStateEmptyTitle => 'ไม่พบเกม!';
@@ -117,45 +142,34 @@ class AppLocalizationsTh extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputLabel => 'ชื่อ';
 
   @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder =>
-      'เช่น เกมฟุตบอลรายสัปดาห์';
+  String get gameCreationScreenNameScreenNameInputPlaceholder => 'เช่น เกมฟุตบอลรายสัปดาห์';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
-      'ชื่อไม่สามารถว่างได้';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'ชื่อไม่สามารถว่างได้';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage =>
-      'ชื่อต้องมีอย่างน้อย 3 ตัวอักษร';
+  String get gameCreationScreenNameScreenNameInputLengthMessage => 'ชื่อต้องมีอย่างน้อย 3 ตัวอักษร';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'กีฬา';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
-      'ความถี่และวันที่/เวลา';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'ความถี่และวันที่/เวลา';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
-      'ความถี่';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'ความถี่';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
-      'เริ่มต้น';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'เริ่มต้น';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
-      'สิ้นสุด';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'สิ้นสุด';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
-      'เวลาเริ่มต้นไม่สามารถว่างได้';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage => 'เวลาเริ่มต้นไม่สามารถว่างได้';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
-      'เวลาสิ้นสุดไม่สามารถว่างได้';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage => 'เวลาสิ้นสุดไม่สามารถว่างได้';
 
   @override
   String get gameCreationScreenPriceScreenTitle => 'ราคา';
@@ -173,8 +187,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'ตำแหน่ง';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage =>
-      'กรุณาเลือกตำแหน่ง';
+  String get gameCreationScreenLocationScreenLocationValidationMessage => 'กรุณาเลือกตำแหน่ง';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -186,17 +199,13 @@ class AppLocalizationsTh extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle =>
-      'การมองเห็นและรูปภาพ';
+  String get gameCreationScreenVisibilityAndImageScreenTitle => 'การมองเห็นและรูปภาพ';
 
   @override
-  String
-  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
-      'รูปโปรไฟล์';
+  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'รูปโปรไฟล์';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
-      'แบนเนอร์';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'แบนเนอร์';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'ก่อนหน้า';
@@ -208,12 +217,10 @@ class AppLocalizationsTh extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'เสร็จสิ้น';
 
   @override
-  String get gameCreationScreenGameCreationSuccessMessage =>
-      'สร้างเกมสำเร็จแล้ว!';
+  String get gameCreationScreenGameCreationSuccessMessage => 'สร้างเกมสำเร็จแล้ว!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
-      'ชื่อผู้ใช้/อีเมล';
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'ชื่อผู้ใช้/อีเมล';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'รหัสผ่าน';
@@ -237,47 +244,37 @@ class AppLocalizationsTh extends AppLocalizations {
   String get loginSignupScreenSignupPasswordInputPlaceholder => 'รหัสผ่าน';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'รหัสผ่าน';
+  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'รหัสผ่าน';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'สมัครสมาชิก';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
-      'ใหม่ใน MyoroMatchup? สมัครสมาชิก!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'ใหม่ใน MyoroMatchup? สมัครสมาชิก!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
-      'ลงทะเบียนแล้ว? เข้าสู่ระบบ!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'ลงทะเบียนแล้ว? เข้าสู่ระบบ!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
-      'ชื่อผู้ใช้/อีเมลไม่สามารถว่างได้';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'ชื่อผู้ใช้/อีเมลไม่สามารถว่างได้';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
-      'รหัสผ่านไม่สามารถว่างได้';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'รหัสผ่านไม่สามารถว่างได้';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
-      'ชื่อไม่สามารถว่างได้';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'ชื่อไม่สามารถว่างได้';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
-      'ชื่อผู้ใช้ไม่สามารถว่างได้';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'ชื่อผู้ใช้ไม่สามารถว่างได้';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
-      'อีเมลไม่สามารถว่างได้';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'อีเมลไม่สามารถว่างได้';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
-      'ฟิลด์รหัสผ่านไม่สามารถว่างได้';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'ฟิลด์รหัสผ่านไม่สามารถว่างได้';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
-      'รหัสผ่านไม่ตรงกัน';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'รหัสผ่านไม่ตรงกัน';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'เมนู';

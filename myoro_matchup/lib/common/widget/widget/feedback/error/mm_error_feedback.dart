@@ -4,14 +4,13 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Error feedback variant of [MmFeedback].
 final class MmErrorFeedback extends MyoroFeedback {
+  /// Default constructor.
   MmErrorFeedback({super.key, required String title, String? subtitle, required VoidCallback onRetry})
     : super(
         iconConfiguration: const MyoroIconConfiguration(icon: Icons.error),
-        titleConfiguration: MyoroTextConfiguration(text: title),
-        subtitleConfiguration: MyoroTextConfiguration(text: subtitle ?? localization.mmErrorFeedbackSubtitle),
-        actionButtonConfiguration: MyoroFeedbackActionButtonConfiguration(
-          textConfiguration: MyoroTextConfiguration(text: localization.mmErrorFeedbackActionButtonText),
-          onTapUp: (_) => onRetry(),
-        ),
+        title: title,
+        subtitle: subtitle ?? localization.mmErrorFeedbackSubtitle,
+        actionButtonText: localization.mmErrorFeedbackActionButtonText,
+        actionButtonConfiguration: MyoroFeedbackActionButtonConfiguration(onTapUp: (_) => onRetry()),
       );
 }

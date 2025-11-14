@@ -68,14 +68,14 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i643.AuthRepository>(
       () => _i643.AuthRepository(gh<_i460.HttpClient>()),
     );
-    gh.factory<_i1006.GameRepository>(
-      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
-    );
     gh.factory<_i143.LocationRepository>(
       () => _i143.LocationRepository(gh<_i460.HttpClient>()),
     );
     gh.factory<_i624.UserRepository>(
       () => _i624.UserRepository(gh<_i460.HttpClient>()),
+    );
+    gh.factory<_i1006.GameRepository>(
+      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
     );
     await gh.singletonAsync<_i460.AppRouter>(
       () => appRouterModule.appRouter(gh<_i460.UserService>()),
@@ -96,11 +96,11 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.UserRepository>(),
       ),
     );
-    gh.factory<_i606.GameCreationScreenViewModel>(
-      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
-    );
     gh.factory<_i17.GameDetailsScreenViewModel>(
       () => _i17.GameDetailsScreenViewModel(gh<_i460.GameRepository>()),
+    );
+    gh.factory<_i606.GameCreationScreenViewModel>(
+      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
     );
     gh.factory<_i789.MmLocationInputViewModel>(
       () => _i789.MmLocationInputViewModel(gh<_i460.LocationRepository>()),

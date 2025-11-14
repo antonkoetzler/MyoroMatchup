@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "Bóng chuyền",
 
   "gameDetailsScreenBodyErrorStateTitle": "Không thể lấy chi tiết trò chơi!",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Người chơi",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Thông tin",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Người chơi",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Bảng xếp hạng",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Tần suất",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Ngày Chính",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "Thời Gian Chính",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "Ngày Hai Tuần Một Lần",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "Thời Gian Hai Tuần Một Lần",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "Giá Thành Viên",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "Giá Khách",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "Độ tuổi",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge} đến {maxAge}",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Tính hiển thị",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "Lỗi khi lấy trò chơi!",

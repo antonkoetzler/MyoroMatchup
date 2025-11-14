@@ -41,9 +41,29 @@
   "sportsEnumVolleyballLabel": "バレーボール",
 
   "gameDetailsScreenBodyErrorStateTitle": "ゲームの詳細を取得できませんでした！",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "プレイヤー",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "情報",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "プレイヤー",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "ランキング",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "頻度",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "主要日",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel": "主要時間",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel": "隔週日",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel": "隔週時間",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel": "メンバー価格",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel": "ドロップイン価格",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel": "年齢範囲",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": "{minAge}から{maxAge}まで",
+  "@gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData": {
+    "placeholders": {
+      "minAge": {
+        "type": "int"
+      },
+      "maxAge": {
+        "type": "int"
+      }
+    }
+  },
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "公開設定",
 
   "gameListingScreenAppBarTitle": "Myoro Matchup",
   "gameListingScreenBodyErrorStateTitle": "ゲームの取得中にエラーが発生しました！",

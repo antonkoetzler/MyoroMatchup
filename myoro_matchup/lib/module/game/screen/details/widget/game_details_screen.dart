@@ -12,6 +12,11 @@ part '../_widget/_body_success_state_tab_view_info_tab.dart';
 part '../_widget/_body_success_state_tab_view_players_tab.dart';
 part '../_widget/_body_success_state_tab_view_rankings_tab.dart';
 part '../_widget/_game_details_screen_state.dart';
+part '../_widget/_body_success_state_tab_view_info_tab_frequency_day_time_section.dart';
+part '../_widget/_body_success_state_tab_view_info_tab_location_section.dart';
+part '../_widget/_body_success_state_tab_view_info_tab_price_section.dart';
+part '../_widget/_body_success_state_tab_view_info_tab_age_range_section.dart';
+part '../_widget/_body_success_state_tab_view_info_tab_visibility_section.dart';
 
 /// Game details screen.
 final class GameDetailsScreen extends StatefulWidget {
