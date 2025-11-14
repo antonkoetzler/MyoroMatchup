@@ -45,6 +45,17 @@
         "panel": "shared"
       }
     },
+    {
+      "label": "Generate icon",
+      "type": "shell",
+      "command": "cd myoro_matchup && bash tool/generate_icon.sh",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
   ],
   "inputs": [
     {

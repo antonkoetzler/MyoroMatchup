@@ -6,7 +6,6 @@ final class _Logo extends StatelessWidget {
 
   @override
   Widget build(_) {
-    // TODO
-    return Image.asset(kTestProfilePictures[faker.randomGenerator.integer(kTestProfilePictures.length)]);
+    return MyoroImage(path: MmImages.svgs.logo, width: 200, height: 200);
   }
 }

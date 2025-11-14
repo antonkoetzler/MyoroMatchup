@@ -13,15 +13,13 @@ final class _ProfilePicture extends StatelessWidget {
 
     final profilePicture = _game.profilePicture;
 
+    final assetPath = profilePicture.isNotEmpty ? profilePicture : MmImages.svgs.logo;
+
     return Container(
       decoration: BoxDecoration(border: themeExtension.profilePictureBorder, borderRadius: themeExtension.profilePictureBorderRadius),
       child: ClipRRect(
         borderRadius: profilePictureBorderRadius,
-        child: Image.asset(
-          profilePicture.isNotEmpty ? profilePicture : LOGO HERE,
-          width: themeExtension.profilePictureSize,
-          fit: BoxFit.contain,
-        ),
+        child: Image.asset(assetPath, width: themeExtension.profilePictureSize, fit: BoxFit.contain),
       ),
     );
   }

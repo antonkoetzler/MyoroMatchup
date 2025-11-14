@@ -4,3 +4,4 @@
 flutter clean
 flutter pub get
 bash tool/generate_code.sh
+bash tool/generate_icon.sh
