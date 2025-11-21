@@ -23,7 +23,6 @@ When in doubt if a certain specific Java code standard is not enforced in the pr
 
 1. All `class`s, fields, and methods must have documentation comments;
 1. Methods should always have `@param` and `@return` tags;
-1. All controllers must have Swagger documentation.
 
 #### Requests and Responses
 

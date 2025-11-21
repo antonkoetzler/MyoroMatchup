@@ -5,15 +5,39 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 /// Enum containing all of the supported sports in MyoroMatchup.
 @JsonEnum()
 enum SportsEnum {
-  @JsonValue('FOOTBALL')
+  @JsonValue(footballJsonKey)
   football,
-  @JsonValue('FUTSAL')
+  @JsonValue(futsalJsonKey)
   futsal,
-  @JsonValue('FUT7')
+  @JsonValue(fut7JsonKey)
   fut7,
-  @JsonValue('VOLLEYBALL')
+  @JsonValue(volleyballJsonKey)
   volleyball;
 
+  /// [football]'s JSON key.
+  static const footballJsonKey = 'FOOTBALL';
+
+  /// [futsal]'s JSON key.
+  static const futsalJsonKey = 'FUTSAL';
+
+  /// [fut7]'s JSON key.
+  static const fut7JsonKey = 'FUT7';
+
+  /// [volleyball]'s JSON key.
+  static const volleyballJsonKey = 'VOLLEYBALL';
+
+  /// From JSON key.
+  static SportsEnum? tryFromJsonKey(String jsonKey) {
+    return switch (jsonKey) {
+      footballJsonKey => football,
+      futsalJsonKey => futsal,
+      fut7JsonKey => fut7,
+      volleyballJsonKey => volleyball,
+      _ => null,
+    };
+  }
+
+  /// Fake constructor.
   factory SportsEnum.fake() {
     return values[faker.randomGenerator.integer(values.length)];
   }
@@ -38,7 +62,18 @@ enum SportsEnum {
     };
   }
 
-  bool get isFootball => this == football;
-  bool get isFutsal => this == futsal;
-  bool get isVolleyball => this == volleyball;
+  /// Is football.
+  bool get isFootball {
+    return this == football;
+  }
+
+  /// Is futsal.
+  bool get isFutsal {
+    return this == futsal;
+  }
+
+  /// Is fut7.
+  bool get isVolleyball {
+    return this == volleyball;
+  }
 }

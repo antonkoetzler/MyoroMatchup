@@ -1,1 +1,1 @@
-export 'location_repository.dart';
+export 'open_street_map_location_repository.dart';

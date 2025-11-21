@@ -24,6 +24,7 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
     required this.profilePictureBorder,
     required this.logoPadding,
     required this.logoSize,
+    required this.bannerlessGameContentPadding,
   });
 
   GameCardThemeExtension.fake()
@@ -37,7 +38,8 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
       sportNameTextStyle = myoroFake<TextStyle>(),
       profilePictureBorder = myoroFake<Border>(),
       logoPadding = myoroFake<EdgeInsets>(),
-      logoSize = faker.randomGenerator.decimal(scale: 100, min: 10);
+      logoSize = faker.randomGenerator.decimal(scale: 100, min: 10),
+      bannerlessGameContentPadding = myoroFake<EdgeInsets>();
 
   GameCardThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
     : bannerMaxHeight = kMyoroMultiplier * 24,
@@ -62,7 +64,8 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
       sportNameTextStyle = textTheme.labelSmall!,
       profilePictureBorder = Border.all(color: colorScheme.primary, width: kMyoroBorderWidth),
       logoPadding = const EdgeInsets.all(kMyoroMultiplier),
-      logoSize = kMyoroMultiplier * 11;
+      logoSize = kMyoroMultiplier * 11,
+      bannerlessGameContentPadding = const EdgeInsets.all(kMyoroMultiplier * 3);
 
   /// Banner's max height.
   final double bannerMaxHeight;
@@ -97,6 +100,9 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
   /// Size of the logo.
   final double logoSize;
 
+  /// Content padding of the bannerless game that just displays the logo.
+  final EdgeInsets bannerlessGameContentPadding;
+
   @override
   GameCardThemeExtension lerp(covariant ThemeExtension<GameCardThemeExtension>? other, double t) {
     if (other is! GameCardThemeExtension) return this;
@@ -112,6 +118,11 @@ final class GameCardThemeExtension extends ThemeExtension<GameCardThemeExtension
       profilePictureBorder: Border.lerp(profilePictureBorder, other.profilePictureBorder, t),
       logoPadding: EdgeInsets.lerp(logoPadding, other.logoPadding, t),
       logoSize: lerpDouble(logoSize, other.logoSize, t),
+      bannerlessGameContentPadding: EdgeInsets.lerp(
+        bannerlessGameContentPadding,
+        other.bannerlessGameContentPadding,
+        t,
+      ),
     );
   }
 }

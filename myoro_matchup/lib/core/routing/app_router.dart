@@ -2,9 +2,9 @@ import 'package:go_router/go_router.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 final class AppRouter {
+  static const gameModuleRoute = 'game';
+  static const invitationModuleRoute = 'invitation';
   static const loginModuleRoute = 'login_signup';
-  static const gameModuleRoute = '/game';
-  static const userModuleRoute = 'user';
 
   /// Navigates to a route.
   ///
@@ -41,22 +41,26 @@ final class AppRouter {
 
   /// Initialization function.
   Future<void> init() async {
+    final homeRoutes = Routes.homeRoutes;
+    final homeScreen = homeRoutes.homeScreen;
+    final homeScreenLocation = homeScreen.location;
+
+    final loginSignupRoutes = Routes.loginSignupRoutes;
+    final loginSignupScreen = loginSignupRoutes.loginSignupScreen;
+    final loginSignupScreenLocation = loginSignupScreen.location;
+
+    final gameRoutes = Routes.gameRoutes;
+    final gameDetailsScreen = gameRoutes.gameDetailsScreen;
+    final gameCreationScreen = gameRoutes.gameCreationScreen;
+
     _router = GoRouter(
       navigatorKey: navigatorKey,
-      initialLocation: _userService.isLoggedIn
-          ? Routes.gameRoutes.gameListingScreen.location
-          : Routes.loginSignupRoutes.loginSignupScreen.location,
+      initialLocation: _userService.isLoggedIn ? homeScreenLocation : loginSignupScreenLocation,
       routes: [
-        RedirectRoute(
-          name: gameModuleRoute,
-          routes: [
-            Routes.gameRoutes.gameListingScreen,
-            Routes.gameRoutes.gameDetailsScreen,
-            Routes.gameRoutes.gameCreationScreen,
-          ],
-        ).goRoute,
+        RedirectRoute(name: gameModuleRoute, routes: [gameDetailsScreen, gameCreationScreen]).goRoute,
+        Routes.homeRoutes.homeScreen.goRoute,
+        Routes.invitationRoutes.invitationListingScreen.goRoute,
         Routes.loginSignupRoutes.loginSignupScreen.goRoute,
-        Routes.userRoutes.userScreen.goRoute,
       ],
     );
   }

@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "Volleyball",
 
   "gameDetailsScreenBodyErrorStateTitle": "Failed to retrieve game details!",
+  "invitationListingScreenBodyErrorStateTitle": "Failed to retrieve invitations!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "No invitations found!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Players",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Invite Player",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "Invite Player",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Search users...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Message",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Cancel",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Send",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Rankings",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Frequency",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Primary Day",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Visibility",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "Error retrieving games!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "No games found!",
-  "gameListingScreenNewGameButtonText": "Create game",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "Error retrieving games!",
+  "homeScreenBodySuccessStateEmptyTitle": "No games found!",
+  "homeScreenNewGameButtonText": "Create game",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "Failed to retrieve user sport stats!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "Failed to retrieve your games!",
+  "homeScreenBodyUserGameListingEmptyTitle": "You haven't joined any games yet!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "Create game",
   "gameCreationScreenNameScreenTitle": "Name",
@@ -132,6 +170,5 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwords do not match.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerUserScreenText": "User Screen",
   "mmAppBarMenuDrawerCreateGameText": "Create Game"
 }

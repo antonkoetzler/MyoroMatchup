@@ -1,4 +1,4 @@
-part of '../mm_app_bar.dart';
+part of '../widget/mm_app_bar.dart';
 
 /// Back button of [MmAppBar].
 final class _BackButton extends StatelessWidget {
@@ -12,7 +12,7 @@ final class _BackButton extends StatelessWidget {
 
     return MyoroIconTextButton(
       iconConfiguration: themeExtension.backButtonIconConfiguration,
-      onTapUp: (_) {
+      onTapUp: (_, _) {
         _onBack?.call();
         AppRouter.pop();
       },

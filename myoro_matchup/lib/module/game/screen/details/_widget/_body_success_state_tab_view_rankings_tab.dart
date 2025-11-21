@@ -6,6 +6,6 @@ final class _BodySuccessStateTabViewRankingsTab extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const Text('Rankings');
+    return const _BodySuccessStateTabViewTab(Text('Rankings'));
   }
 }

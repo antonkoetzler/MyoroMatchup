@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "Volleybal",
 
   "gameDetailsScreenBodyErrorStateTitle": "Kon speldetails niet ophalen!",
+  "invitationListingScreenBodyErrorStateTitle": "Kon uitnodigingen niet ophalen!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "Geen uitnodigingen gevonden!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Spelers",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Speler uitnodigen",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "Speler uitnodigen",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Zoek gebruikers...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Bericht",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Annuleren",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Verzenden",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Ranglijsten",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Frequentie",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Primaire Dag",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Zichtbaarheid",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "Fout bij het ophalen van spellen!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "Geen spellen gevonden!",
-  "gameListingScreenNewGameButtonText": "Spel maken",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "Fout bij het ophalen van spellen!",
+  "homeScreenBodySuccessStateEmptyTitle": "Geen spellen gevonden!",
+  "homeScreenNewGameButtonText": "Spel maken",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "Kon gebruikerssportstatistieken niet ophalen!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "Kon uw spellen niet ophalen!",
+  "homeScreenBodyUserGameListingEmptyTitle": "U bent nog niet bij een spel aangesloten!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "Spel maken",
   "gameCreationScreenNameScreenTitle": "Naam",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Wachtwoorden komen niet overeen.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerUserScreenText": "Gebruikersscherm",
   "mmAppBarMenuDrawerCreateGameText": "Spel maken"
 }
 

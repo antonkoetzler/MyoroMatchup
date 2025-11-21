@@ -6,6 +6,13 @@ final class _BodySuccessStateTabViewPlayersTab extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return const Text('Players');
+    return const _BodySuccessStateTabViewTab(
+      Column(
+        children: [
+          Expanded(child: _BodySuccessStateTabViewPlayersTabContent()),
+          _BodySuccessStateTabViewPlayersTabActionButton(),
+        ],
+      ),
+    );
   }
 }

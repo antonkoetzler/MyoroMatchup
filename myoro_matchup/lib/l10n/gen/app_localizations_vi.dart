@@ -78,10 +78,39 @@ class AppLocalizationsVi extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => 'Không thể lấy chi tiết trò chơi!';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => 'Không thể lấy lời mời!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => 'Không tìm thấy lời mời!';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Thông tin';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Người chơi';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'Mời người chơi';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => 'Mời người chơi';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'Tìm kiếm người dùng...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'Tin nhắn';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'Hủy';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'Gửi';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Bảng xếp hạng';
@@ -122,16 +151,73 @@ class AppLocalizationsVi extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Tính hiển thị';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'Lỗi khi lấy trò chơi!';
+  String get homeScreenBodyErrorStateTitle => 'Lỗi khi lấy trò chơi!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => 'Không tìm thấy trò chơi!';
+  String get homeScreenBodySuccessStateEmptyTitle => 'Không tìm thấy trò chơi!';
 
   @override
-  String get gameListingScreenNewGameButtonText => 'Tạo trò chơi';
+  String get homeScreenNewGameButtonText => 'Tạo trò chơi';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => 'Không thể lấy thống kê thể thao của người dùng!';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => 'Không thể lấy trò chơi của bạn!';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => 'Bạn chưa tham gia trò chơi nào!';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => 'Tạo trò chơi';
@@ -281,9 +367,6 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Menu';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => 'Màn hình người dùng';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Tạo trò chơi';

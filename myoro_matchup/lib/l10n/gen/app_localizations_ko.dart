@@ -77,10 +77,39 @@ class AppLocalizationsKo extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => '게임 세부 정보를 가져오지 못했습니다!';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => '초대를 가져오지 못했습니다!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => '초대를 찾을 수 없습니다!';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '정보';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => '플레이어';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => '플레이어 초대';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => '플레이어 초대';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => '사용자 검색...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => '메시지';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => '취소';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '보내기';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => '순위';
@@ -118,16 +147,73 @@ class AppLocalizationsKo extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => '공개 설정';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => '게임을 가져오는 중 오류가 발생했습니다!';
+  String get homeScreenBodyErrorStateTitle => '게임을 가져오는 중 오류가 발생했습니다!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => '게임을 찾을 수 없습니다!';
+  String get homeScreenBodySuccessStateEmptyTitle => '게임을 찾을 수 없습니다!';
 
   @override
-  String get gameListingScreenNewGameButtonText => '게임 만들기';
+  String get homeScreenNewGameButtonText => '게임 만들기';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => '사용자 스포츠 통계를 가져오지 못했습니다!';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => '게임을 가져오지 못했습니다!';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => '아직 어떤 게임에도 참여하지 않았습니다!';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => '게임 만들기';
@@ -275,9 +361,6 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerTitle => '메뉴';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => '사용자 화면';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => '게임 만들기';

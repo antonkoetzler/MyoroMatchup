@@ -11,15 +11,17 @@ import com.myoro.myoro_matchup_api.dto.GameCreationRequestDto;
 import com.myoro.myoro_matchup_api.dto.GameFrequencyDayTimeDto;
 import com.myoro.myoro_matchup_api.dto.GamePriceDto;
 import com.myoro.myoro_matchup_api.dto.GameResponseDto;
-import com.myoro.myoro_matchup_api.dto.LocationAddressDto;
 import com.myoro.myoro_matchup_api.dto.LocationDto;
+import com.myoro.myoro_matchup_api.dto.UserResponseDto;
 import com.myoro.myoro_matchup_api.model.GameModel;
 import com.myoro.myoro_matchup_api.repository.GameRepository;
+import com.myoro.myoro_matchup_api.repository.UserRepository;
 import com.myoro.myoro_matchup_api.model.GamePriceModel;
 import com.myoro.myoro_matchup_api.model.GameAgeRangeModel;
 import com.myoro.myoro_matchup_api.model.GameFrequencyDayTimeModel;
-import com.myoro.myoro_matchup_api.model.LocationAddressModel;
 import com.myoro.myoro_matchup_api.model.LocationModel;
+import com.myoro.myoro_matchup_api.model.UserModel;
+import com.myoro.myoro_matchup_api.util.DtoMapper;
 
 /** Game service. */
 @Service
@@ -32,12 +34,19 @@ public class GameService {
   @Autowired
   private MessageService messageService;
 
+  /** User repository. */
+  @Autowired
+  private UserRepository userRepository;
+
   /** Creates a game. */
   public Long create(GameCreationRequestDto request, Long userId) {
+    UserModel owner = userRepository.findById(userId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    
     GameModel game = new GameModel();
     game.setName(request.getName());
     game.setSport(request.getSport());
-    game.setUserId(userId);
+    game.setOwner(owner);
     GamePriceModel priceModel = new GamePriceModel();
     priceModel.setMonthlyPrice(request.getPrice().getMemberPrice());
     priceModel.setDropInPrice(request.getPrice().getDropInPrice());
@@ -48,10 +57,9 @@ public class GameService {
     game.setAgeRange(ageRangeModel);
     LocationModel locationModel = new LocationModel();
     locationModel.setName(request.getLocation().getName());
-    LocationAddressModel addressModel = new LocationAddressModel();
-    addressModel.setCity(request.getLocation().getAddress().getCity());
-    addressModel.setCountry(request.getLocation().getAddress().getCountry());
-    locationModel.setAddress(addressModel);
+    locationModel.setCity(request.getLocation().getCity());
+    locationModel.setState(request.getLocation().getState());
+    locationModel.setCountry(request.getLocation().getCountry());
     game.setLocation(locationModel);
     GameFrequencyDayTimeModel frequencyModel = new GameFrequencyDayTimeModel();
     frequencyModel.setFrequency(request.getFrequencyDayTime().getFrequency());
@@ -82,6 +90,20 @@ public class GameService {
     return toDto(game);
   }
 
+  /** Get players of a game by game id. */
+  public List<UserResponseDto> getPlayersByGameId(Long id) {
+    GameModel game = gameRepository.findById(id)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+
+    if (game.getPlayers() == null) {
+      return List.of();
+    }
+
+    return game.getPlayers().stream()
+        .map(DtoMapper::userToDto)
+        .collect(Collectors.toList());
+  }
+
   /**
    * Converts GameModel to GameResponseDto.
    * 
@@ -91,7 +113,7 @@ public class GameService {
   private GameResponseDto toDto(GameModel game) {
     GameResponseDto dto = new GameResponseDto();
     dto.setId(game.getId());
-    dto.setUserId(game.getUserId());
+    dto.setUserId(game.getOwner().getId());
     dto.setName(game.getName());
     dto.setSport(game.getSport());
     dto.setVisibility(game.getVisibility());
@@ -131,12 +153,9 @@ public class GameService {
       LocationModel location = game.getLocation();
       LocationDto locationDto = new LocationDto();
       locationDto.setName(location.getName());
-      if (location.getAddress() != null) {
-        LocationAddressDto addressDto = new LocationAddressDto();
-        addressDto.setCity(location.getAddress().getCity());
-        addressDto.setCountry(location.getAddress().getCountry());
-        locationDto.setAddress(addressDto);
-      }
+      locationDto.setCity(location.getCity());
+      locationDto.setState(location.getState());
+      locationDto.setCountry(location.getCountry());
       dto.setLocation(locationDto);
     }
 

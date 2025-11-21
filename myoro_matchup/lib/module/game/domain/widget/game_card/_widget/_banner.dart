@@ -10,8 +10,10 @@ final class _Banner extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameCardThemeExtension>();
     final bannerDecoration = themeExtension.bannerDecoration;
+    final bannerlessGameContentPadding = themeExtension.bannerlessGameContentPadding;
 
     final banner = _game.banner;
+    final bannerIsNotEmpty = banner.isNotEmpty;
 
     return SizedBox(
       height: themeExtension.bannerMaxHeight,
@@ -19,7 +21,10 @@ final class _Banner extends StatelessWidget {
       child: Stack(
         fit: StackFit.expand,
         children: [
-          banner.isNotEmpty ? Image.asset(banner, fit: BoxFit.cover) : Container(color: MyoroColors.transparent),
+          Padding(
+            padding: bannerIsNotEmpty ? EdgeInsets.zero : bannerlessGameContentPadding,
+            child: MyoroImage(path: bannerIsNotEmpty ? banner : MmImages.svgs.logo, fit: BoxFit.contain),
+          ),
           Container(decoration: bannerDecoration),
         ],
       ),

@@ -1,4 +1,4 @@
-part of '../mm_app_bar.dart';
+part of '../widget/mm_app_bar.dart';
 
 /// Item of the menu drawer of [MmAppBar].
 final class _MenuModalItem extends StatelessWidget {
@@ -14,7 +14,7 @@ final class _MenuModalItem extends StatelessWidget {
       style: const MyoroIconTextButtonStyle().secondary(context),
       iconConfiguration: MyoroIconConfiguration(icon: _icon),
       text: _text,
-      onTapUp: (_) {
+      onTapUp: (_, _) {
         AppRouter.pop();
         AppRouter.push(_navigation);
       },

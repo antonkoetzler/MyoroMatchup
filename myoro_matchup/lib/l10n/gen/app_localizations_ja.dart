@@ -77,10 +77,39 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => 'ゲームの詳細を取得できませんでした！';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => '招待を取得できませんでした！';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => '招待が見つかりませんでした！';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '情報';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'プレイヤー';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'プレイヤーを招待';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => 'プレイヤーを招待';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'ユーザーを検索...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'メッセージ';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'キャンセル';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '送信';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'ランキング';
@@ -118,16 +147,73 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => '公開設定';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'ゲームの取得中にエラーが発生しました！';
+  String get homeScreenBodyErrorStateTitle => 'ゲームの取得中にエラーが発生しました！';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => 'ゲームが見つかりませんでした！';
+  String get homeScreenBodySuccessStateEmptyTitle => 'ゲームが見つかりませんでした！';
 
   @override
-  String get gameListingScreenNewGameButtonText => 'ゲームを作成';
+  String get homeScreenNewGameButtonText => 'ゲームを作成';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => 'ユーザーのスポーツ統計を取得できませんでした！';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => 'あなたのゲームを取得できませんでした！';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => 'まだどのゲームにも参加していません！';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => 'ゲームを作成';
@@ -275,9 +361,6 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerTitle => 'メニュー';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => 'ユーザー画面';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'ゲームを作成';

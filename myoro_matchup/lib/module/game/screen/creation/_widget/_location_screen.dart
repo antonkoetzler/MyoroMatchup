@@ -25,8 +25,7 @@ final class _LocationScreen extends _Screen {
           return ValueListenableBuilder(
             valueListenable: locationController,
             builder: (_, location, _) {
-              final address = location?.address;
-              final country = address?.country;
+              final country = location?.country;
 
               return Column(
                 mainAxisSize: MainAxisSize.min,

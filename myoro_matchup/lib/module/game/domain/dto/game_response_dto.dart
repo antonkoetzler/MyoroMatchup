@@ -8,7 +8,7 @@ part 'game_response_dto.g.dart';
 /// DTO representing a game response.
 @myoroModel
 @JsonSerializable()
-final class GameResponseDto extends GameAbstract with _$GameResponseDtoMixin {
+final class GameResponseDto extends GameModel with _$GameResponseDtoMixin {
   /// Default constructor.
   const GameResponseDto({
     required super.name,
@@ -29,7 +29,7 @@ final class GameResponseDto extends GameAbstract with _$GameResponseDtoMixin {
       name: faker.lorem.word(),
       sport: faker.randomGenerator.element(SportsEnum.values),
       frequencyDayTime: GameFrequencyDayTimeDto.fake(),
-      location: Location.fake(),
+      location: LocationResponseDto.fake(),
       price: GamePriceDto.fake(),
       ageRange: GameAgeRangeModel.fake(),
       visibility: GameVisibilityEnum.fake(),

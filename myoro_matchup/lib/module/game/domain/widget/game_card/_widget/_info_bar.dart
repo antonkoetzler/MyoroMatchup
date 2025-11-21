@@ -9,16 +9,18 @@ final class _InfoBar extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameCardThemeExtension>();
+    final infoBarSpacing = themeExtension.infoBarSpacing;
+    final infoBarPadding = themeExtension.infoBarPadding;
 
     return Padding(
-      padding: themeExtension.infoBarPadding,
+      padding: infoBarPadding,
       child: Row(
-        spacing: themeExtension.infoBarSpacing,
+        spacing: infoBarSpacing,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Flexible(
             child: Row(
-              spacing: themeExtension.infoBarSpacing,
+              spacing: infoBarSpacing,
               mainAxisSize: MainAxisSize.min,
               children: [
                 _ProfilePicture(_game),

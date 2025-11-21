@@ -24,7 +24,7 @@ final class _FormTypeSwitcherButton extends StatelessWidget {
       },
 
       textConfiguration: MyoroTextConfiguration(style: themeExtension.formTypeSwitcherButtonTextStyle),
-      onTapUp: (_) => viewModel.formTypeSwitcherButtonOnTapUp(),
+      onTapUp: (_, _) => viewModel.formTypeSwitcherButtonOnTapUp(),
     );
   }
 }

@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "배구",
 
   "gameDetailsScreenBodyErrorStateTitle": "게임 세부 정보를 가져오지 못했습니다!",
+  "invitationListingScreenBodyErrorStateTitle": "초대를 가져오지 못했습니다!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "초대를 찾을 수 없습니다!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "정보",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "플레이어",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "플레이어 초대",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "플레이어 초대",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "사용자 검색...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "메시지",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "취소",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "보내기",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "순위",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "빈도",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "주요 일",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "공개 설정",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "게임을 가져오는 중 오류가 발생했습니다!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "게임을 찾을 수 없습니다!",
-  "gameListingScreenNewGameButtonText": "게임 만들기",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "게임을 가져오는 중 오류가 발생했습니다!",
+  "homeScreenBodySuccessStateEmptyTitle": "게임을 찾을 수 없습니다!",
+  "homeScreenNewGameButtonText": "게임 만들기",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "사용자 스포츠 통계를 가져오지 못했습니다!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "게임을 가져오지 못했습니다!",
+  "homeScreenBodyUserGameListingEmptyTitle": "아직 어떤 게임에도 참여하지 않았습니다!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "게임 만들기",
   "gameCreationScreenNameScreenTitle": "이름",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "비밀번호가 일치하지 않습니다.",
 
   "mmAppBarMenuDrawerTitle": "메뉴",
-  "mmAppBarMenuDrawerUserScreenText": "사용자 화면",
   "mmAppBarMenuDrawerCreateGameText": "게임 만들기"
 }
 

@@ -260,6 +260,18 @@ abstract class AppLocalizations {
   /// **'Failed to retrieve game details!'**
   String get gameDetailsScreenBodyErrorStateTitle;
 
+  /// No description provided for @invitationListingScreenBodyErrorStateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to retrieve invitations!'**
+  String get invitationListingScreenBodyErrorStateTitle;
+
+  /// No description provided for @invitationListingScreenBodySuccessStateEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'No invitations found!'**
+  String get invitationListingScreenBodySuccessStateEmptyTitle;
+
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabText.
   ///
   /// In en, this message translates to:
@@ -271,6 +283,48 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Players'**
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite Player'**
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText;
+
+  /// No description provided for @gameDetailsScreenInvitationBottomSheetTitleText.
+  ///
+  /// In en, this message translates to:
+  /// **'Invite Player'**
+  String get gameDetailsScreenInvitationBottomSheetTitleText;
+
+  /// No description provided for @gameDetailsScreenInvitationBottomSheetUserSearchInputItemText.
+  ///
+  /// In en, this message translates to:
+  /// **'{username} ({name})'**
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name);
+
+  /// No description provided for @gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder.
+  ///
+  /// In en, this message translates to:
+  /// **'Search users...'**
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder;
+
+  /// No description provided for @gameDetailsScreenInvitationBottomSheetMessageInputLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel;
+
+  /// No description provided for @gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText;
+
+  /// No description provided for @gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Send'**
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewRankingsTabText.
   ///
@@ -338,29 +392,143 @@ abstract class AppLocalizations {
   /// **'Visibility'**
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel;
 
-  /// No description provided for @gameListingScreenAppBarTitle.
+  /// No description provided for @homeScreenAppBarTitle.
   ///
   /// In en, this message translates to:
   /// **'Myoro Matchup'**
-  String get gameListingScreenAppBarTitle;
+  String get homeScreenAppBarTitle;
 
-  /// No description provided for @gameListingScreenBodyErrorStateTitle.
+  /// No description provided for @homeScreenBodyErrorStateTitle.
   ///
   /// In en, this message translates to:
   /// **'Error retrieving games!'**
-  String get gameListingScreenBodyErrorStateTitle;
+  String get homeScreenBodyErrorStateTitle;
 
-  /// No description provided for @gameListingScreenBodySuccessStateEmptyTitle.
+  /// No description provided for @homeScreenBodySuccessStateEmptyTitle.
   ///
   /// In en, this message translates to:
   /// **'No games found!'**
-  String get gameListingScreenBodySuccessStateEmptyTitle;
+  String get homeScreenBodySuccessStateEmptyTitle;
 
-  /// No description provided for @gameListingScreenNewGameButtonText.
+  /// No description provided for @homeScreenNewGameButtonText.
   ///
   /// In en, this message translates to:
   /// **'Create game'**
-  String get gameListingScreenNewGameButtonText;
+  String get homeScreenNewGameButtonText;
+
+  /// No description provided for @homeScreenBodyUserSportStatsErrorStateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to retrieve user sport stats!'**
+  String get homeScreenBodyUserSportStatsErrorStateTitle;
+
+  /// No description provided for @homeScreenBodyUserGameListingErrorStateTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to retrieve your games!'**
+  String get homeScreenBodyUserGameListingErrorStateTitle;
+
+  /// No description provided for @homeScreenBodyUserGameListingEmptyTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'You haven\'t joined any games yet!'**
+  String get homeScreenBodyUserGameListingEmptyTitle;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFootballAttackLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'ATK'**
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFootballDefenseLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'DEF'**
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFootballStrikingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'STR'**
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFootballSkillsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'SKL'**
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFut7AttackLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'ATK'**
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFut7DefenseLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'DEF'**
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFut7StrikingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'STR'**
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFut7SkillsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'SKL'**
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFutsalAttackLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'ATK'**
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFutsalDefenseLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'DEF'**
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFutsalStrikingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'STR'**
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsFutsalSkillsLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'SKL'**
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsVolleyballAttackLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'ATK'**
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'BLK'**
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsVolleyballServingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'SRV'**
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel;
+
+  /// No description provided for @homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'REC'**
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel;
 
   /// No description provided for @gameCreationScreenAppBarTitle.
   ///
@@ -647,12 +815,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Menu'**
   String get mmAppBarMenuDrawerTitle;
-
-  /// No description provided for @mmAppBarMenuDrawerUserScreenText.
-  ///
-  /// In en, this message translates to:
-  /// **'User Screen'**
-  String get mmAppBarMenuDrawerUserScreenText;
 
   /// No description provided for @mmAppBarMenuDrawerCreateGameText.
   ///

@@ -21,6 +21,8 @@ import 'package:myoro_matchup/core/routing/module/app_router_module.dart'
     as _i436;
 import 'package:myoro_matchup/core/shared_preferences/module/shared_preferences_module.dart'
     as _i407;
+import 'package:myoro_matchup/core/shared_preferences/repository/shared_preferences_repository.dart'
+    as _i558;
 import 'package:myoro_matchup/core/shared_preferences/service/shared_preferences_service.dart'
     as _i980;
 import 'package:myoro_matchup/module/game/domain/repository/game_repository.dart'
@@ -29,16 +31,18 @@ import 'package:myoro_matchup/module/game/screen/creation/view_model/game_creati
     as _i606;
 import 'package:myoro_matchup/module/game/screen/details/view_model/game_details_screen_view_model.dart'
     as _i17;
-import 'package:myoro_matchup/module/game/screen/listing/view_model/game_listing_screen_view_model.dart'
-    as _i512;
-import 'package:myoro_matchup/module/location/domain/repository/location_repository.dart'
-    as _i143;
+import 'package:myoro_matchup/module/home/screen/listing/view_model/home_screen_view_model.dart'
+    as _i1009;
+import 'package:myoro_matchup/module/invitation/repository/invitation_repository.dart'
+    as _i509;
+import 'package:myoro_matchup/module/invitation/screen/listing/view_model/invitation_listing_screen_view_model.dart'
+    as _i296;
+import 'package:myoro_matchup/module/location/domain/repository/open_street_map_location_repository.dart'
+    as _i423;
 import 'package:myoro_matchup/module/login_signup/screen/login_signup/view_model/login_signup_screen_view_model.dart'
     as _i205;
 import 'package:myoro_matchup/module/user/repository/user_repository.dart'
     as _i624;
-import 'package:myoro_matchup/module/user/screen/user/view_model/user_screen_view_model.dart'
-    as _i46;
 import 'package:myoro_matchup/module/user/service/user_service.dart' as _i782;
 import 'package:myoro_matchup/myoro_matchup.dart' as _i460;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
@@ -56,8 +60,13 @@ extension GetItInjectableX on _i174.GetIt {
       () => sharedPreferencesModule.sharedPreferences,
       preResolve: true,
     );
-    gh.singleton<_i980.SharedPreferencesService>(
-      () => _i980.SharedPreferencesService(gh<_i460.SharedPreferences>()),
+    gh.singleton<_i558.SharedPreferencesRepository>(
+      () => _i558.SharedPreferencesRepository(gh<_i460.SharedPreferences>()),
+    );
+    gh.factory<_i980.SharedPreferencesService>(
+      () => _i980.SharedPreferencesService(
+        gh<_i460.SharedPreferencesRepository>(),
+      ),
     );
     gh.singleton<_i126.HttpClient>(
       () => _i126.HttpClient(gh<_i460.SharedPreferencesService>()),
@@ -68,14 +77,22 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i643.AuthRepository>(
       () => _i643.AuthRepository(gh<_i460.HttpClient>()),
     );
-    gh.factory<_i143.LocationRepository>(
-      () => _i143.LocationRepository(gh<_i460.HttpClient>()),
+    gh.factory<_i1006.GameRepository>(
+      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
+    );
+    gh.factory<_i509.InvitationRepository>(
+      () => _i509.InvitationRepository(gh<_i460.HttpClient>()),
+    );
+    gh.factory<_i423.OpenStreetMapLocationRepository>(
+      () => _i423.OpenStreetMapLocationRepository(gh<_i460.HttpClient>()),
     );
     gh.factory<_i624.UserRepository>(
       () => _i624.UserRepository(gh<_i460.HttpClient>()),
     );
-    gh.factory<_i1006.GameRepository>(
-      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
+    gh.factory<_i789.MmLocationInputViewModel>(
+      () => _i789.MmLocationInputViewModel(
+        gh<_i460.OpenStreetMapLocationRepository>(),
+      ),
     );
     await gh.singletonAsync<_i460.AppRouter>(
       () => appRouterModule.appRouter(gh<_i460.UserService>()),
@@ -87,23 +104,28 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.AuthRepository>(),
       ),
     );
-    gh.factory<_i512.GameListingScreenViewModel>(
-      () => _i512.GameListingScreenViewModel(gh<_i460.GameRepository>()),
-    );
-    gh.factory<_i46.UserScreenViewModel>(
-      () => _i46.UserScreenViewModel(
-        gh<_i460.UserService>(),
-        gh<_i460.UserRepository>(),
+    gh.factory<_i296.InvitationListingScreenViewModel>(
+      () => _i296.InvitationListingScreenViewModel(
+        gh<_i460.InvitationRepository>(),
       ),
-    );
-    gh.factory<_i17.GameDetailsScreenViewModel>(
-      () => _i17.GameDetailsScreenViewModel(gh<_i460.GameRepository>()),
     );
     gh.factory<_i606.GameCreationScreenViewModel>(
       () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
     );
-    gh.factory<_i789.MmLocationInputViewModel>(
-      () => _i789.MmLocationInputViewModel(gh<_i460.LocationRepository>()),
+    gh.factory<_i1009.HomeScreenViewModel>(
+      () => _i1009.HomeScreenViewModel(
+        gh<_i460.SharedPreferencesService>(),
+        gh<_i460.UserRepository>(),
+        gh<_i460.GameRepository>(),
+      ),
+    );
+    gh.factoryParam<_i17.GameDetailsScreenViewModel, int, dynamic>(
+      (gameId, _) => _i17.GameDetailsScreenViewModel(
+        gh<_i460.GameRepository>(),
+        gh<_i460.UserRepository>(),
+        gh<_i460.InvitationRepository>(),
+        gameId,
+      ),
     );
     gh.factory<_i205.LoginSignupScreenViewModel>(
       () => _i205.LoginSignupScreenViewModel(gh<_i460.AuthService>()),

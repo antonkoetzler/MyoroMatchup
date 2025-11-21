@@ -43,12 +43,12 @@ final class _MmLocationInputState extends State<MmLocationInput> {
 
     return InheritedProvider.value(
       value: _viewModel,
-      child: MyoroSearchInput<Location>(
+      child: MyoroSearchInput<LocationResponseDto>(
         label: label,
         requestCallback: requestCallback,
         onChanged: onChanged,
         dropdownType: MyoroSearchInputDropdownTypeEnum.expanding,
-        itemBuilder: (item, isLast) => MyoroMenuButtonItem(builder: (_, _) => _Item(item), onTapUp: (_) {}),
+        itemBuilder: (item, isLast) => MyoroMenuButtonItem(builder: (_, _) => _Item(item), onTapUp: (_, _) {}),
         selectedItemBuilder: (item) => item.name,
         validation: validation,
         focusNode: focusNode,

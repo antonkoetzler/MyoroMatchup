@@ -78,10 +78,39 @@ class AppLocalizationsIt extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => 'Impossibile recuperare i dettagli del gioco!';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => 'Impossibile recuperare gli inviti!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => 'Nessun invito trovato!';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Info';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Giocatori';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'Invita Giocatore';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => 'Invita Giocatore';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'Cerca utenti...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'Messaggio';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'Annulla';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'Invia';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Classifiche';
@@ -123,16 +152,74 @@ class AppLocalizationsIt extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Visibilità';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'Errore nel recupero dei giochi!';
+  String get homeScreenBodyErrorStateTitle => 'Errore nel recupero dei giochi!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => 'Nessun gioco trovato!';
+  String get homeScreenBodySuccessStateEmptyTitle => 'Nessun gioco trovato!';
 
   @override
-  String get gameListingScreenNewGameButtonText => 'Crea gioco';
+  String get homeScreenNewGameButtonText => 'Crea gioco';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle =>
+      'Impossibile recuperare le statistiche sportive dell\'utente!';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => 'Impossibile recuperare i tuoi giochi!';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => 'Non ti sei ancora unito a nessun gioco!';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => 'Crea gioco';
@@ -282,9 +369,6 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Menu';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => 'Schermata utente';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Crea gioco';

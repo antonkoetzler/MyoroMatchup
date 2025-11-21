@@ -1,4 +1,4 @@
-part of '../mm_app_bar.dart';
+part of '../widget/mm_app_bar.dart';
 
 /// Menu drawer of [MmAppBar].
 final class _MenuModal extends StatelessWidget {
@@ -13,7 +13,6 @@ final class _MenuModal extends StatelessWidget {
   /// Build function.
   @override
   Widget build(context) {
-    final mmAppBarMenuDrawerUserScreenText = localization.mmAppBarMenuDrawerUserScreenText;
     final mmAppBarMenuDrawerCreateGameText = localization.mmAppBarMenuDrawerCreateGameText;
 
     final themeExtension = context.resolveThemeExtension<MmAppBarThemeExtension>();
@@ -27,7 +26,11 @@ final class _MenuModal extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           _MenuModalItem(Icons.add, mmAppBarMenuDrawerCreateGameText, Routes.gameRoutes.gameCreationScreen.navigate()),
-          _MenuModalItem(Icons.person, mmAppBarMenuDrawerUserScreenText, Routes.userRoutes.userScreen.navigate()),
+          _MenuModalItem(
+            Icons.insert_invitation,
+            mmAppBarMenuDrawerCreateGameText,
+            Routes.invitationRoutes.invitationListingScreen.navigate(),
+          ),
         ],
       ),
     );

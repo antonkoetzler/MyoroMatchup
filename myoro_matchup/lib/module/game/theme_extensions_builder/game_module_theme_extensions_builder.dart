@@ -9,7 +9,6 @@ List<ThemeExtension> gameModuleThemeExtensionsBuilder(bool isDarkMode, ColorSche
 
     // Screens
     GameCreationScreenThemeExtension.builder(textTheme),
-    const GameDetailsScreenThemeExtension.builder(),
-    GameListingScreenThemeExtension.builder(colorScheme, textTheme),
+    GameDetailsScreenThemeExtension.builder(textTheme),
   ];
 }

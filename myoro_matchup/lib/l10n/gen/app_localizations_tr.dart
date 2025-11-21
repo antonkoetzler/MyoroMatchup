@@ -78,10 +78,39 @@ class AppLocalizationsTr extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => 'Oyun detayları alınamadı!';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => 'Davetiyeler alınamadı!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => 'Davetiye bulunamadı!';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Bilgi';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Oyuncular';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'Oyuncu Davet Et';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => 'Oyuncu Davet Et';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'Kullanıcı ara...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'Mesaj';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'İptal';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'Gönder';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Sıralamalar';
@@ -121,16 +150,73 @@ class AppLocalizationsTr extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Görünürlük';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'Oyunlar alınırken hata oluştu!';
+  String get homeScreenBodyErrorStateTitle => 'Oyunlar alınırken hata oluştu!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => 'Oyun bulunamadı!';
+  String get homeScreenBodySuccessStateEmptyTitle => 'Oyun bulunamadı!';
 
   @override
-  String get gameListingScreenNewGameButtonText => 'Oyun oluştur';
+  String get homeScreenNewGameButtonText => 'Oyun oluştur';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => 'Kullanıcı spor istatistikleri alınamadı!';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => 'Oyunlarınız alınamadı!';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => 'Henüz hiçbir oyuna katılmadınız!';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => 'Oyun oluştur';
@@ -278,9 +364,6 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Menü';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => 'Kullanıcı Ekranı';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Oyun Oluştur';

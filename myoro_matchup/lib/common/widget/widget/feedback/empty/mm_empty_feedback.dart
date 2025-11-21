@@ -26,7 +26,7 @@ final class MmEmptyFeedback extends MyoroFeedback {
          subtitle: subtitle,
          actionButtonText: actionButtonText,
          actionButtonConfiguration: actionButtonText.isNotEmpty
-             ? MyoroFeedbackActionButtonConfiguration(onTapUp: (_) => actionButtonCallback!())
+             ? MyoroFeedbackActionButtonConfiguration(onTapUp: (_, _) => actionButtonCallback!())
              : null,
        );
 }

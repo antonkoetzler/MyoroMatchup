@@ -74,13 +74,13 @@ final class HttpClient {
 
   /// Base headers.
   Map<String, String> get _baseHeaders {
-    final loggedInUser = _sharedPreferencesService.getJson(SharedPreferencesEnum.loggedInUser);
+    final loggedInUser = _sharedPreferencesService.loggedInUser;
     return {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Accept-Language': Localizations.localeOf(navigatorKey.currentContext!).languageCode,
       'User-Agent': 'MyoroMatchup/0.1.0 (com.myoro.myoro_matchup)',
-      if (loggedInUser != null) 'Authorization': 'Bearer ${loggedInUser['token']}',
+      if (loggedInUser != null) 'Authorization': 'Bearer ${loggedInUser.token}',
     };
   }
 }

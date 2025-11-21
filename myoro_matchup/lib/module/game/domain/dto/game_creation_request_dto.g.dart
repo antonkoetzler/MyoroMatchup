@@ -45,7 +45,7 @@ mixin _$GameCreationRequestDtoMixin {
     String? name,
     SportsEnum? sport,
     GameFrequencyDayTimeDto? frequencyDayTime,
-    Location? location,
+    LocationResponseDto? location,
     GamePriceDto? price,
     GameAgeRangeModel? ageRange,
     GameVisibilityEnum? visibility,

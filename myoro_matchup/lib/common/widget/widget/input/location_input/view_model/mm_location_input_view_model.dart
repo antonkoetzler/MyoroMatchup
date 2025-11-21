@@ -12,15 +12,15 @@ final class MmLocationInputViewModel {
   MmLocationInputViewModel(this._locationRepository);
 
   /// [LocationRepository] to search for places.
-  final LocationRepository _locationRepository;
+  final OpenStreetMapLocationRepository _locationRepository;
 
   /// State.
   final _state = MmLocationInputState();
 
   /// [MyoroSearchInput.requestCallback] of the [MmLocationInput].
-  Future<Set<Location>> requestCallback(String query) async {
+  Future<Set<LocationResponseDto>> requestCallback(String query) async {
     final response = await _locationRepository.select(query);
-    return response;
+    return response.map<LocationResponseDto>(openStreetMapLocationResponseDtoToLocationResponseDto).toSet();
   }
 
   /// [_state] getter.

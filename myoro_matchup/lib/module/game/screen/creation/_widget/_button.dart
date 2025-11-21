@@ -19,7 +19,7 @@ final class _Button extends StatelessWidget {
           : const MyoroIconTextButtonStyle().bordered(context),
       text: text,
       textConfiguration: MyoroTextConfiguration(style: buttonTextStyle),
-      onTapUp: (_) => onTapUp(),
+      onTapUp: (_, _) => onTapUp(),
     );
   }
 }

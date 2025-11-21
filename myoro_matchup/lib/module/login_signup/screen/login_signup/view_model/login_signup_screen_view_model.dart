@@ -120,7 +120,7 @@ final class LoginSignupScreenViewModel {
       );
     }
     if (status.isSuccess) {
-      AppRouter.replace(Routes.gameRoutes.gameListingScreen.navigate());
+      AppRouter.replace(Routes.homeRoutes.homeScreen.navigate());
     }
   }
 

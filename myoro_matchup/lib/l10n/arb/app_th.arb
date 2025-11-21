@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "วอลเลย์บอล",
 
   "gameDetailsScreenBodyErrorStateTitle": "ไม่สามารถดึงรายละเอียดเกมได้!",
+  "invitationListingScreenBodyErrorStateTitle": "ไม่สามารถดึงคำเชิญได้!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "ไม่พบคำเชิญ!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "ข้อมูล",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "ผู้เล่น",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "เชิญผู้เล่น",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "เชิญผู้เล่น",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "ค้นหาผู้ใช้...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "ข้อความ",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "ยกเลิก",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "ส่ง",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "อันดับ",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "ความถี่",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "วันหลัก",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "การมองเห็น",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "เกิดข้อผิดพลาดในการดึงเกม!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "ไม่พบเกม!",
-  "gameListingScreenNewGameButtonText": "สร้างเกม",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "เกิดข้อผิดพลาดในการดึงเกม!",
+  "homeScreenBodySuccessStateEmptyTitle": "ไม่พบเกม!",
+  "homeScreenNewGameButtonText": "สร้างเกม",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "ไม่สามารถดึงสถิติกีฬาของผู้ใช้ได้!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "ไม่สามารถดึงเกมของคุณได้!",
+  "homeScreenBodyUserGameListingEmptyTitle": "คุณยังไม่ได้เข้าร่วมเกมใดเลย!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "สร้างเกม",
   "gameCreationScreenNameScreenTitle": "ชื่อ",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "รหัสผ่านไม่ตรงกัน",
 
   "mmAppBarMenuDrawerTitle": "เมนู",
-  "mmAppBarMenuDrawerUserScreenText": "หน้าจอผู้ใช้",
   "mmAppBarMenuDrawerCreateGameText": "สร้างเกม"
 }
 

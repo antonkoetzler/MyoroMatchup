@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "排球",
 
   "gameDetailsScreenBodyErrorStateTitle": "无法获取游戏详情！",
+  "invitationListingScreenBodyErrorStateTitle": "无法获取邀请！",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "未找到邀请！",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "信息",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "玩家",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "邀请玩家",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "邀请玩家",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "搜索用户...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "消息",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "取消",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "发送",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "排名",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "频率",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "主要日期",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "可见性",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "获取游戏时出错！",
-  "gameListingScreenBodySuccessStateEmptyTitle": "未找到游戏！",
-  "gameListingScreenNewGameButtonText": "创建游戏",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "获取游戏时出错！",
+  "homeScreenBodySuccessStateEmptyTitle": "未找到游戏！",
+  "homeScreenNewGameButtonText": "创建游戏",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "无法获取用户运动统计数据！",
+  "homeScreenBodyUserGameListingErrorStateTitle": "无法获取您的游戏！",
+  "homeScreenBodyUserGameListingEmptyTitle": "您还没有加入任何游戏！",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "创建游戏",
   "gameCreationScreenNameScreenTitle": "名称",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "密码不匹配。",
 
   "mmAppBarMenuDrawerTitle": "菜单",
-  "mmAppBarMenuDrawerUserScreenText": "用户界面",
   "mmAppBarMenuDrawerCreateGameText": "创建游戏"
 }
 

@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "Voleybol",
 
   "gameDetailsScreenBodyErrorStateTitle": "Oyun detayları alınamadı!",
+  "invitationListingScreenBodyErrorStateTitle": "Davetiyeler alınamadı!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "Davetiye bulunamadı!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Bilgi",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Oyuncular",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Oyuncu Davet Et",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "Oyuncu Davet Et",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Kullanıcı ara...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Mesaj",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "İptal",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Gönder",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Sıralamalar",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Sıklık",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Ana Gün",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Görünürlük",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "Oyunlar alınırken hata oluştu!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "Oyun bulunamadı!",
-  "gameListingScreenNewGameButtonText": "Oyun oluştur",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "Oyunlar alınırken hata oluştu!",
+  "homeScreenBodySuccessStateEmptyTitle": "Oyun bulunamadı!",
+  "homeScreenNewGameButtonText": "Oyun oluştur",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "Kullanıcı spor istatistikleri alınamadı!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "Oyunlarınız alınamadı!",
+  "homeScreenBodyUserGameListingEmptyTitle": "Henüz hiçbir oyuna katılmadınız!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "Oyun oluştur",
   "gameCreationScreenNameScreenTitle": "İsim",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Şifreler eşleşmiyor.",
 
   "mmAppBarMenuDrawerTitle": "Menü",
-  "mmAppBarMenuDrawerUserScreenText": "Kullanıcı Ekranı",
   "mmAppBarMenuDrawerCreateGameText": "Oyun Oluştur"
 }
 

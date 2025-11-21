@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "वॉलीबॉल",
 
   "gameDetailsScreenBodyErrorStateTitle": "गेम विवरण प्राप्त करने में विफल!",
+  "invitationListingScreenBodyErrorStateTitle": "आमंत्रण प्राप्त करने में विफल!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "कोई आमंत्रण नहीं मिला!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "जानकारी",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "खिलाड़ी",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "खिलाड़ी को आमंत्रित करें",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "खिलाड़ी को आमंत्रित करें",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "उपयोगकर्ताओं को खोजें...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "संदेश",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "रद्द करें",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "भेजें",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "रैंकिंग",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "आवृत्ति",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "प्राथमिक दिन",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "दृश्यता",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "गेम प्राप्त करने में त्रुटि!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "कोई गेम नहीं मिला!",
-  "gameListingScreenNewGameButtonText": "गेम बनाएं",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "गेम प्राप्त करने में त्रुटि!",
+  "homeScreenBodySuccessStateEmptyTitle": "कोई गेम नहीं मिला!",
+  "homeScreenNewGameButtonText": "गेम बनाएं",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "उपयोगकर्ता खेल आंकड़े प्राप्त करने में विफल!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "आपके गेम प्राप्त करने में विफल!",
+  "homeScreenBodyUserGameListingEmptyTitle": "आपने अभी तक कोई गेम में शामिल नहीं हुए हैं!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "गेम बनाएं",
   "gameCreationScreenNameScreenTitle": "नाम",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "पासवर्ड मेल नहीं खाते।",
 
   "mmAppBarMenuDrawerTitle": "मेनू",
-  "mmAppBarMenuDrawerUserScreenText": "उपयोगकर्ता स्क्रीन",
   "mmAppBarMenuDrawerCreateGameText": "गेम बनाएं"
 }
 

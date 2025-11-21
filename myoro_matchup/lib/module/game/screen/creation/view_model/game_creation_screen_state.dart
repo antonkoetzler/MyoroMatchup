@@ -39,7 +39,7 @@ final class GameCreationScreenState {
   final _biWeeklyDayController = ValueNotifier(MyoroDayEnum.monday);
 
   /// Location field.
-  final _locationController = ValueNotifier<Location?>(null);
+  final _locationController = ValueNotifier<LocationResponseDto?>(null);
 
   /// Location field [FocusNode].
   final _locationFocusNode = FocusNode();
@@ -145,12 +145,12 @@ final class GameCreationScreenState {
   }
 
   /// [_locationController] getter.
-  ValueNotifier<Location?> get locationController {
+  ValueNotifier<LocationResponseDto?> get locationController {
     return _locationController;
   }
 
   /// Getter of [_locationController]'s value.
-  Location? get location {
+  LocationResponseDto? get location {
     return _locationController.value;
   }
 
@@ -220,7 +220,7 @@ final class GameCreationScreenState {
   }
 
   /// Setter of [_locationController]'s value.
-  set location(Location? value) {
+  set location(LocationResponseDto? value) {
     _locationController.value = value;
   }
 

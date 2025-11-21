@@ -11,7 +11,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+
+import java.util.List;
 
 /** Game model. */
 @Entity
@@ -22,9 +28,10 @@ public class GameModel {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
-  /** ID of the user that owns the game. */
-  @Column(nullable = false)
-  private Long userId;
+  /** User that owns the game. */
+  @ManyToOne
+  @JoinColumn(name = "user_id", nullable = false)
+  private UserModel owner;
 
   /** Game name. */
   @Column(nullable = false)
@@ -67,6 +74,11 @@ public class GameModel {
   @Column(nullable = true)
   private String banner;
 
+  /** Players in the game. */
+  @ManyToMany
+  @JoinTable(name = "game_players", joinColumns = @JoinColumn(name = "game_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+  private List<UserModel> players;
+
   /** Default constructor. */
   public GameModel() {
   }
@@ -88,12 +100,12 @@ public class GameModel {
   }
 
   /**
-   * Getter for userId
+   * Getter for owner
    * 
-   * @return the ID of the user that owns the game
+   * @return the user that owns the game
    */
-  public Long getUserId() {
-    return userId;
+  public UserModel getOwner() {
+    return owner;
   }
 
   /**
@@ -178,6 +190,15 @@ public class GameModel {
   }
 
   /**
+   * Getter for players
+   * 
+   * @return the players in the game
+   */
+  public List<UserModel> getPlayers() {
+    return players;
+  }
+
+  /**
    * Setter for id
    * 
    * @param id the game ID
@@ -187,12 +208,12 @@ public class GameModel {
   }
 
   /**
-   * Setter for userId
+   * Setter for owner
    * 
-   * @param userId the ID of the user that owns the game
+   * @param owner the user that owns the game
    */
-  public void setUserId(Long userId) {
-    this.userId = userId;
+  public void setOwner(UserModel owner) {
+    this.owner = owner;
   }
 
   /**
@@ -274,5 +295,14 @@ public class GameModel {
    */
   public void setBanner(String banner) {
     this.banner = banner;
+  }
+
+  /**
+   * Setter for players
+   * 
+   * @param players the players in the game
+   */
+  public void setPlayers(List<UserModel> players) {
+    this.players = players;
   }
 }

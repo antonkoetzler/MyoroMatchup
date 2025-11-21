@@ -1,4 +1,4 @@
-part of '../mm_app_bar.dart';
+part of '../widget/mm_app_bar.dart';
 
 /// Title of [MmAppBar].
 final class _Title extends StatelessWidget {

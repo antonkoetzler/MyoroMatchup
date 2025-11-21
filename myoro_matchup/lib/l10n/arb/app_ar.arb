@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "الكرة الطائرة",
 
   "gameDetailsScreenBodyErrorStateTitle": "فشل في استرداد تفاصيل اللعبة!",
+  "invitationListingScreenBodyErrorStateTitle": "فشل في استرداد الدعوات!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "لم يتم العثور على دعوات!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "معلومات",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "اللاعبون",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "دعوة لاعب",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "دعوة لاعب",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "البحث عن المستخدمين...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "الرسالة",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "إلغاء",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "إرسال",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "التصنيفات",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "التكرار",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "اليوم الأساسي",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "الرؤية",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "خطأ في استرداد الألعاب!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "لم يتم العثور على ألعاب!",
-  "gameListingScreenNewGameButtonText": "إنشاء لعبة",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "خطأ في استرداد الألعاب!",
+  "homeScreenBodySuccessStateEmptyTitle": "لم يتم العثور على ألعاب!",
+  "homeScreenNewGameButtonText": "إنشاء لعبة",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "فشل في استرداد إحصائيات المستخدم الرياضية!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "فشل في استرداد ألعابك!",
+  "homeScreenBodyUserGameListingEmptyTitle": "لم تنضم إلى أي ألعاب بعد!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "إنشاء لعبة",
   "gameCreationScreenNameScreenTitle": "الاسم",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "كلمات المرور غير متطابقة.",
 
   "mmAppBarMenuDrawerTitle": "القائمة",
-  "mmAppBarMenuDrawerUserScreenText": "شاشة المستخدم",
   "mmAppBarMenuDrawerCreateGameText": "إنشاء لعبة"
 }
 

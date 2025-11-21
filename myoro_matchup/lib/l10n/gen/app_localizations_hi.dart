@@ -78,10 +78,39 @@ class AppLocalizationsHi extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => 'गेम विवरण प्राप्त करने में विफल!';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => 'आमंत्रण प्राप्त करने में विफल!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => 'कोई आमंत्रण नहीं मिला!';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'जानकारी';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'खिलाड़ी';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'खिलाड़ी को आमंत्रित करें';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => 'खिलाड़ी को आमंत्रित करें';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'उपयोगकर्ताओं को खोजें...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'संदेश';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'रद्द करें';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'भेजें';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'रैंकिंग';
@@ -121,16 +150,73 @@ class AppLocalizationsHi extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'दृश्यता';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'गेम प्राप्त करने में त्रुटि!';
+  String get homeScreenBodyErrorStateTitle => 'गेम प्राप्त करने में त्रुटि!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => 'कोई गेम नहीं मिला!';
+  String get homeScreenBodySuccessStateEmptyTitle => 'कोई गेम नहीं मिला!';
 
   @override
-  String get gameListingScreenNewGameButtonText => 'गेम बनाएं';
+  String get homeScreenNewGameButtonText => 'गेम बनाएं';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => 'उपयोगकर्ता खेल आंकड़े प्राप्त करने में विफल!';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => 'आपके गेम प्राप्त करने में विफल!';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => 'आपने अभी तक कोई गेम में शामिल नहीं हुए हैं!';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => 'गेम बनाएं';
@@ -280,9 +366,6 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerTitle => 'मेनू';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => 'उपयोगकर्ता स्क्रीन';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'गेम बनाएं';

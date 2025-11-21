@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "Bola Voli",
 
   "gameDetailsScreenBodyErrorStateTitle": "Gagal mengambil detail permainan!",
+  "invitationListingScreenBodyErrorStateTitle": "Gagal mengambil undangan!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "Tidak ada undangan ditemukan!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Pemain",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Undang Pemain",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "Undang Pemain",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Cari pengguna...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Pesan",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Batal",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Kirim",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Peringkat",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Frekuensi",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Hari Utama",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Visibilitas",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "Kesalahan saat mengambil permainan!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "Tidak ada permainan ditemukan!",
-  "gameListingScreenNewGameButtonText": "Buat permainan",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "Kesalahan saat mengambil permainan!",
+  "homeScreenBodySuccessStateEmptyTitle": "Tidak ada permainan ditemukan!",
+  "homeScreenNewGameButtonText": "Buat permainan",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "Gagal mengambil statistik olahraga pengguna!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "Gagal mengambil permainan Anda!",
+  "homeScreenBodyUserGameListingEmptyTitle": "Anda belum bergabung dengan permainan apa pun!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "Buat permainan",
   "gameCreationScreenNameScreenTitle": "Nama",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Kata sandi tidak cocok.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerUserScreenText": "Layar Pengguna",
   "mmAppBarMenuDrawerCreateGameText": "Buat Permainan"
 }
 

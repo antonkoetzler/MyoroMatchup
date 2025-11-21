@@ -9,7 +9,7 @@ final class _GameDetailsScreenState extends State<GameDetailsScreen> {
   @override
   void initState() {
     super.initState();
-    _viewModel = getIt<GameDetailsScreenViewModel>()..init(widget.gameId);
+    _viewModel = getIt<GameDetailsScreenViewModel>(param1: widget.gameId);
   }
 
   /// Dispose function.

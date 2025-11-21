@@ -21,6 +21,9 @@ final class _BodySuccessStateTabViewInfoTabFrequencyDayTimeSection extends State
     final gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =
         localization.gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel;
 
+    final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
+    final spacing = themeExtension.spacing;
+
     final frequencyDayTime = _game.frequencyDayTime;
     final frequency = frequencyDayTime.frequency;
     final isBiWeekly = frequency.isBiWeekly;
@@ -37,26 +40,45 @@ final class _BodySuccessStateTabViewInfoTabFrequencyDayTimeSection extends State
     final biWeeklyTimes = '${biWeeklyStartTime?.format(context)} - ${biWeeklyEndTime?.format(context)}';
 
     return Column(
+      spacing: spacing,
       mainAxisSize: MainAxisSize.min,
       children: [
-        MyoroField(
-          label: gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel,
-          data: frequencyLabel,
-        ),
-        MyoroField(
-          label: gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel,
-          data: primaryDayLabel,
-        ),
-        MyoroField(
-          label: gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel,
-          data: primaryTimes,
+        Row(
+          spacing: spacing,
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Expanded(
+              child: MyoroField(
+                direction: Axis.vertical,
+                label: gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel,
+                data: frequencyLabel,
+              ),
+            ),
+            Expanded(
+              flex: 2,
+              child: MyoroField(
+                direction: Axis.vertical,
+                label: gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel,
+                data: primaryTimes,
+              ),
+            ),
+            Expanded(
+              child: MyoroField(
+                direction: Axis.vertical,
+                label: gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel,
+                data: primaryDayLabel,
+              ),
+            ),
+          ],
         ),
         if (isBiWeekly) ...[
           MyoroField(
+            direction: Axis.vertical,
             label: gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel,
             data: biWeeklyDayLabel,
           ),
           MyoroField(
+            direction: Axis.vertical,
             label: gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel,
             data: biWeeklyTimes,
           ),

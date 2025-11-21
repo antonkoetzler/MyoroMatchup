@@ -9,18 +9,22 @@ final class _BodySuccessStateTabViewInfoTabPriceSection extends StatelessWidget 
   final GameResponseDto _game;
 
   @override
-  Widget build(_) {
+  Widget build(context) {
     final gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel =
         localization.gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel;
     final gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel =
         localization.gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel;
 
+    final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
+    final spacing = themeExtension.spacing;
+
     final price = _game.price;
     final memberPrice = price.memberPrice;
     final dropInPrice = price.dropInPrice;
-    final currency = _game.location.address.country.currency ?? MyoroCurrencyEnum.usd;
+    final currency = _game.location.country?.currency ?? MyoroCurrencyEnum.usd;
 
     return Row(
+      spacing: spacing,
       children: [
         Expanded(
           child: MyoroField(

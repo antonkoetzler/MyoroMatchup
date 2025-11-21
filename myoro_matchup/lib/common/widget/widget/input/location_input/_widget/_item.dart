@@ -5,7 +5,7 @@ final class _Item extends StatelessWidget {
   const _Item(this._item);
 
   /// Item.
-  final Location _item;
+  final LocationResponseDto _item;
 
   @override
   Widget build(context) {
@@ -14,13 +14,10 @@ final class _Item extends StatelessWidget {
     final itemCityCountryTextStyle = themeExtension.itemCityCountryTextStyle;
 
     final name = _item.name;
-    final address = _item.address;
-    final city = address.city;
-    final country = address.country;
+    final city = _item.city;
+    final country = _item.country;
 
     final nameProvided = name.isNotEmpty;
-    final cityProvided = city.isNotEmpty;
-    final countryProvided = country != null;
 
     final mmLocationInputItemCityCountryText = localization.mmLocationInputItemCityCountryText;
 
@@ -28,7 +25,7 @@ final class _Item extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         if (nameProvided) Text(name, style: itemNameTextStyle),
-        if (cityProvided && countryProvided)
+        if (city.isNotEmpty && country != null)
           Text(
             mmLocationInputItemCityCountryText(city, country.emoji, country.name(context)),
             style: itemCityCountryTextStyle,

@@ -17,6 +17,7 @@ final class App extends StatelessWidget {
       themeExtensionsBuilder: (isDarkMode, colorScheme, textTheme) => [
         ...commonThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
         ...gameModuleThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
+        ...homeModuleThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
         ...loginSignupModuleThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
       ],
     );

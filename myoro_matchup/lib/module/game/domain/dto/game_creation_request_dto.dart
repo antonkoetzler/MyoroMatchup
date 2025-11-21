@@ -7,7 +7,7 @@ part 'game_creation_request_dto.g.dart';
 /// DTO representing a game creation request.
 @myoroModel
 @JsonSerializable(createFactory: false, explicitToJson: true)
-final class GameCreationRequestDto extends GameAbstract with _$GameCreationRequestDtoMixin {
+final class GameCreationRequestDto extends GameModel with _$GameCreationRequestDtoMixin {
   /// Default constructor.
   const GameCreationRequestDto({
     required super.name,

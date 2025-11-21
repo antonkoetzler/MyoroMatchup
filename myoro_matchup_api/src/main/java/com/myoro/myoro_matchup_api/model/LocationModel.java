@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.model;
 
 import jakarta.persistence.Column;
-import jakarta.persistence.Embedded;
 import jakarta.persistence.Embeddable;
 
 /** Location model. */
@@ -11,18 +10,28 @@ public class LocationModel {
   @Column(nullable = false)
   private String name;
 
-  /** Address of the location. */
-  @Embedded
-  private LocationAddressModel address;
+  /** City of the location. */
+  @Column(nullable = false)
+  private String city;
+
+  /** State of the location. */
+  @Column(nullable = true)
+  private String state;
+
+  /** Country of the location. */
+  @Column(nullable = true)
+  private String country;
 
   /** Default constructor. */
   public LocationModel() {
   }
 
   /** Constructor with all fields. */
-  public LocationModel(String name, LocationAddressModel address) {
+  public LocationModel(String name, String city, String state, String country) {
     this.name = name;
-    this.address = address;
+    this.city = city;
+    this.state = state;
+    this.country = country;
   }
 
   /**
@@ -35,12 +44,30 @@ public class LocationModel {
   }
 
   /**
-   * Getter for address
+   * Getter for city
    * 
-   * @return the address of the location
+   * @return the city of the location
    */
-  public LocationAddressModel getAddress() {
-    return address;
+  public String getCity() {
+    return city;
+  }
+
+  /**
+   * Getter for state
+   * 
+   * @return the state of the location
+   */
+  public String getState() {
+    return state;
+  }
+
+  /**
+   * Getter for country
+   * 
+   * @return the country of the location
+   */
+  public String getCountry() {
+    return country;
   }
 
   /**
@@ -53,11 +80,29 @@ public class LocationModel {
   }
 
   /**
-   * Setter for address
+   * Setter for city
    * 
-   * @param address the address of the location
+   * @param city the city of the location
    */
-  public void setAddress(LocationAddressModel address) {
-    this.address = address;
+  public void setCity(String city) {
+    this.city = city;
+  }
+
+  /**
+   * Setter for state
+   * 
+   * @param state the state of the location
+   */
+  public void setState(String state) {
+    this.state = state;
+  }
+
+  /**
+   * Setter for country
+   * 
+   * @param country the country of the location
+   */
+  public void setCountry(String country) {
+    this.country = country;
   }
 }

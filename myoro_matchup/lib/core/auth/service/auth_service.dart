@@ -7,7 +7,7 @@ final class AuthService {
   /// Default constructor.
   AuthService(this._sharedPreferencesService, this._authRepository);
 
-  /// Shared preferences.
+  /// Shared preferences service.
   final SharedPreferencesService _sharedPreferencesService;
 
   /// Auth repository.
@@ -16,12 +16,12 @@ final class AuthService {
   /// Signup function.
   Future<void> signup(SignupRequest request) async {
     final loggedInUser = await _authRepository.signup(request);
-    await _sharedPreferencesService.setJson(SharedPreferencesEnum.loggedInUser, loggedInUser.toJson());
+    await _sharedPreferencesService.setLoggedInUser(loggedInUser);
   }
 
   /// Login function.
   Future<void> login(LoginRequest request) async {
     final loggedInUser = await _authRepository.login(request);
-    await _sharedPreferencesService.setJson(SharedPreferencesEnum.loggedInUser, loggedInUser.toJson());
+    await _sharedPreferencesService.setLoggedInUser(loggedInUser);
   }
 }

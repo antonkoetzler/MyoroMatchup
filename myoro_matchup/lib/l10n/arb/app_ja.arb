@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "バレーボール",
 
   "gameDetailsScreenBodyErrorStateTitle": "ゲームの詳細を取得できませんでした！",
+  "invitationListingScreenBodyErrorStateTitle": "招待を取得できませんでした！",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "招待が見つかりませんでした！",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "情報",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "プレイヤー",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "プレイヤーを招待",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "プレイヤーを招待",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "ユーザーを検索...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "メッセージ",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "キャンセル",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "送信",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "ランキング",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "頻度",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "主要日",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "公開設定",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "ゲームの取得中にエラーが発生しました！",
-  "gameListingScreenBodySuccessStateEmptyTitle": "ゲームが見つかりませんでした！",
-  "gameListingScreenNewGameButtonText": "ゲームを作成",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "ゲームの取得中にエラーが発生しました！",
+  "homeScreenBodySuccessStateEmptyTitle": "ゲームが見つかりませんでした！",
+  "homeScreenNewGameButtonText": "ゲームを作成",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "ユーザーのスポーツ統計を取得できませんでした！",
+  "homeScreenBodyUserGameListingErrorStateTitle": "あなたのゲームを取得できませんでした！",
+  "homeScreenBodyUserGameListingEmptyTitle": "まだどのゲームにも参加していません！",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "ゲームを作成",
   "gameCreationScreenNameScreenTitle": "名前",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "パスワードが一致しません。",
 
   "mmAppBarMenuDrawerTitle": "メニュー",
-  "mmAppBarMenuDrawerUserScreenText": "ユーザー画面",
   "mmAppBarMenuDrawerCreateGameText": "ゲームを作成"
 }
 

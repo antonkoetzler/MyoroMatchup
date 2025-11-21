@@ -10,6 +10,6 @@ final class MmSuccessFeedback extends MyoroFeedback {
         title: title,
         subtitle: subtitle ?? localization.mmSuccessFeedbackSubtitle,
         actionButtonText: localization.mmSuccessFeedbackActionButtonText,
-        actionButtonConfiguration: MyoroFeedbackActionButtonConfiguration(onTapUp: (_) => onFinishButtonTapped()),
+        actionButtonConfiguration: MyoroFeedbackActionButtonConfiguration(onTapUp: (_, _) => onFinishButtonTapped()),
       );
 }

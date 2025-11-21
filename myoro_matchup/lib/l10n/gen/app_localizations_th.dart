@@ -78,10 +78,39 @@ class AppLocalizationsTh extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => 'ไม่สามารถดึงรายละเอียดเกมได้!';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => 'ไม่สามารถดึงคำเชิญได้!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => 'ไม่พบคำเชิญ!';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'ข้อมูล';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'ผู้เล่น';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'เชิญผู้เล่น';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => 'เชิญผู้เล่น';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'ค้นหาผู้ใช้...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'ข้อความ';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'ยกเลิก';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'ส่ง';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'อันดับ';
@@ -121,16 +150,73 @@ class AppLocalizationsTh extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'การมองเห็น';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'เกิดข้อผิดพลาดในการดึงเกม!';
+  String get homeScreenBodyErrorStateTitle => 'เกิดข้อผิดพลาดในการดึงเกม!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => 'ไม่พบเกม!';
+  String get homeScreenBodySuccessStateEmptyTitle => 'ไม่พบเกม!';
 
   @override
-  String get gameListingScreenNewGameButtonText => 'สร้างเกม';
+  String get homeScreenNewGameButtonText => 'สร้างเกม';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => 'ไม่สามารถดึงสถิติกีฬาของผู้ใช้ได้!';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => 'ไม่สามารถดึงเกมของคุณได้!';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => 'คุณยังไม่ได้เข้าร่วมเกมใดเลย!';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => 'สร้างเกม';
@@ -278,9 +364,6 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerTitle => 'เมนู';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => 'หน้าจอผู้ใช้';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'สร้างเกม';

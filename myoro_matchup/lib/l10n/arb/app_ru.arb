@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "Волейбол",
 
   "gameDetailsScreenBodyErrorStateTitle": "Не удалось получить детали игры!",
+  "invitationListingScreenBodyErrorStateTitle": "Не удалось получить приглашения!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "Приглашения не найдены!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Инфо",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Игроки",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Пригласить игрока",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "Пригласить игрока",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Поиск пользователей...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Сообщение",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Отмена",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Отправить",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Рейтинги",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Частота",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Основной День",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Видимость",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "Ошибка при получении игр!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "Игры не найдены!",
-  "gameListingScreenNewGameButtonText": "Создать игру",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "Ошибка при получении игр!",
+  "homeScreenBodySuccessStateEmptyTitle": "Игры не найдены!",
+  "homeScreenNewGameButtonText": "Создать игру",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "Не удалось получить спортивную статистику пользователя!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "Не удалось получить ваши игры!",
+  "homeScreenBodyUserGameListingEmptyTitle": "Вы еще не присоединились ни к одной игре!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "Создать игру",
   "gameCreationScreenNameScreenTitle": "Название",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Пароли не совпадают.",
 
   "mmAppBarMenuDrawerTitle": "Меню",
-  "mmAppBarMenuDrawerUserScreenText": "Экран пользователя",
   "mmAppBarMenuDrawerCreateGameText": "Создать игру"
 }
 

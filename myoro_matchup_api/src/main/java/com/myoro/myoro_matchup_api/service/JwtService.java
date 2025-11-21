@@ -9,6 +9,8 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 
+import jakarta.servlet.http.HttpServletRequest;
+
 @Service
 public final class JwtService {
   /** Secret key for JWT signing and validation */
@@ -93,5 +95,22 @@ public final class JwtService {
     } catch (final Exception e) {
       throw new RuntimeException(messageService.getMessage("error.jwt.invalid"), e);
     }
+  }
+
+  /**
+   * Extracts and validates the bearer token from the request and returns the user
+   * ID.
+   * 
+   * @param request the HTTP request containing the Authorization header
+   * @return the user ID from the token
+   * @throws RuntimeException if the token is missing, invalid, or expired
+   */
+  public Long getUserIdFromRequest(final HttpServletRequest request) {
+    final String authHeader = request.getHeader("Authorization");
+    final String token = extractTokenFromHeader(authHeader);
+    if (token == null) {
+      throw new RuntimeException(messageService.getMessage("error.jwt.invalid"));
+    }
+    return validateTokenAndGetUserId(token);
   }
 }

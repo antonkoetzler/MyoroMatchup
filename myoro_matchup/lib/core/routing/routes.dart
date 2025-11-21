@@ -4,12 +4,15 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 ///
 /// Every static field of [Routes] is a module.
 final class Routes {
-  /// [GameRoutes]
+  /// [GameRoutes].
   static final gameRoutes = GameRoutes();
 
-  /// [LoginSignupRoutes]
-  static final loginSignupRoutes = LoginSignupRoutes();
+  /// [HomeRoutes].
+  static final homeRoutes = HomeRoutes();
 
-  /// [UserRoutes]
-  static final userRoutes = UserRoutes();
+  /// [InvitationRoutes].
+  static final invitationRoutes = InvitationRoutes();
+
+  /// [LoginSignupRoutes].
+  static final loginSignupRoutes = LoginSignupRoutes();
 }

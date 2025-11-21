@@ -9,16 +9,26 @@ final class _BodySuccessStateTabViewInfoTab extends StatelessWidget {
   final GameResponseDto _game;
 
   @override
-  Widget build(_) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        _BodySuccessStateTabViewInfoTabFrequencyDayTimeSection(_game),
-        _BodySuccessStateTabViewInfoTabLocationSection(_game),
-        _BodySuccessStateTabViewInfoTabPriceSection(_game),
-        _BodySuccessStateTabViewInfoTabAgeRangeSection(_game),
-        _BodySuccessStateTabViewInfoTabVisibilitySection(_game),
-      ],
+  Widget build(context) {
+    final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
+    final spacing = themeExtension.spacing;
+
+    return _BodySuccessStateTabViewTab(
+      Column(
+        spacing: spacing,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          _BodySuccessStateTabViewInfoTabFrequencyDayTimeSection(_game),
+          _BodySuccessStateTabViewInfoTabPriceSection(_game),
+          Row(
+            spacing: spacing,
+            children: [
+              Expanded(child: _BodySuccessStateTabViewInfoTabAgeRangeSection(_game)),
+              Expanded(child: _BodySuccessStateTabViewInfoTabVisibilitySection(_game)),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

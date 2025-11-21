@@ -77,10 +77,39 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => '无法获取游戏详情！';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => '无法获取邀请！';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => '未找到邀请！';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '信息';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => '玩家';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => '邀请玩家';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => '邀请玩家';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => '搜索用户...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => '消息';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => '取消';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '发送';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => '排名';
@@ -118,16 +147,73 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => '可见性';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => '获取游戏时出错！';
+  String get homeScreenBodyErrorStateTitle => '获取游戏时出错！';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => '未找到游戏！';
+  String get homeScreenBodySuccessStateEmptyTitle => '未找到游戏！';
 
   @override
-  String get gameListingScreenNewGameButtonText => '创建游戏';
+  String get homeScreenNewGameButtonText => '创建游戏';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => '无法获取用户运动统计数据！';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => '无法获取您的游戏！';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => '您还没有加入任何游戏！';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => '创建游戏';
@@ -277,9 +363,6 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mmAppBarMenuDrawerTitle => '菜单';
 
   @override
-  String get mmAppBarMenuDrawerUserScreenText => '用户界面';
-
-  @override
   String get mmAppBarMenuDrawerCreateGameText => '创建游戏';
 }
 
@@ -356,10 +439,39 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameDetailsScreenBodyErrorStateTitle => '無法取得遊戲詳情！';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => '無法取得邀請！';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => '找不到邀請！';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '資訊';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => '玩家';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => '邀請玩家';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => '邀請玩家';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => '搜尋使用者...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => '訊息';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => '取消';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '傳送';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => '排名';
@@ -397,16 +509,73 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => '可見性';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => '取得遊戲時發生錯誤！';
+  String get homeScreenBodyErrorStateTitle => '取得遊戲時發生錯誤！';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => '找不到遊戲！';
+  String get homeScreenBodySuccessStateEmptyTitle => '找不到遊戲！';
 
   @override
-  String get gameListingScreenNewGameButtonText => '建立遊戲';
+  String get homeScreenNewGameButtonText => '建立遊戲';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => '無法取得使用者運動統計資料！';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => '無法取得您的遊戲！';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => '您還沒有加入任何遊戲！';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => '建立遊戲';
@@ -554,9 +723,6 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get mmAppBarMenuDrawerTitle => '選單';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => '使用者畫面';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => '建立遊戲';

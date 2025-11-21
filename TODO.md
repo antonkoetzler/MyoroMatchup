@@ -2,10 +2,13 @@
 
 ## What are we currently doing?
 
-1. Documentation of both the frontend and backend
+game flow (inviting players, invitations screen, whatsapp api)
+
+- (**IN PROGRESS**) Inviting players and the invitation listing
+  - SELECT endpoint for the invitations listing screen
 
 ## List
 
 1. `STAGELOG.md`/`CHANGELOG.md` and deploy script
 1. Formatter and linting in Java
-1. WhatsApp API integration to managing the lists that hard copy pasted
+1. Sentry

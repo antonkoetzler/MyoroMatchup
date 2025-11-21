@@ -41,8 +41,27 @@
   "sportsEnumVolleyballLabel": "Bóng chuyền",
 
   "gameDetailsScreenBodyErrorStateTitle": "Không thể lấy chi tiết trò chơi!",
+  "invitationListingScreenBodyErrorStateTitle": "Không thể lấy lời mời!",
+  "invitationListingScreenBodySuccessStateEmptyTitle": "Không tìm thấy lời mời!",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Thông tin",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Người chơi",
+  "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Mời người chơi",
+  "gameDetailsScreenInvitationBottomSheetTitleText": "Mời người chơi",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
+  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
+    "placeholders": {
+      "username": {
+        "type": "String"
+      },
+      "name": {
+        "type": "String"
+      }
+    }
+  },
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Tìm kiếm người dùng...",
+  "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Tin nhắn",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Hủy",
+  "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Gửi",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Bảng xếp hạng",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Tần suất",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Ngày Chính",
@@ -65,10 +84,29 @@
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Tính hiển thị",
 
-  "gameListingScreenAppBarTitle": "Myoro Matchup",
-  "gameListingScreenBodyErrorStateTitle": "Lỗi khi lấy trò chơi!",
-  "gameListingScreenBodySuccessStateEmptyTitle": "Không tìm thấy trò chơi!",
-  "gameListingScreenNewGameButtonText": "Tạo trò chơi",
+  "homeScreenAppBarTitle": "Myoro Matchup",
+  "homeScreenBodyErrorStateTitle": "Lỗi khi lấy trò chơi!",
+  "homeScreenBodySuccessStateEmptyTitle": "Không tìm thấy trò chơi!",
+  "homeScreenNewGameButtonText": "Tạo trò chơi",
+  "homeScreenBodyUserSportStatsErrorStateTitle": "Không thể lấy thống kê thể thao của người dùng!",
+  "homeScreenBodyUserGameListingErrorStateTitle": "Không thể lấy trò chơi của bạn!",
+  "homeScreenBodyUserGameListingEmptyTitle": "Bạn chưa tham gia trò chơi nào!",
+  "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFootballStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFootballSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFut7AttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFut7DefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFut7StrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFut7SkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsFutsalAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsFutsalDefenseLabel": "DEF",
+  "homeScreenBodyUserSportStatsStatsFutsalStrikingLabel": "STR",
+  "homeScreenBodyUserSportStatsStatsFutsalSkillsLabel": "SKL",
+  "homeScreenBodyUserSportStatsStatsVolleyballAttackLabel": "ATK",
+  "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
+  "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
+  "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
 
   "gameCreationScreenAppBarTitle": "Tạo trò chơi",
   "gameCreationScreenNameScreenTitle": "Tên",
@@ -132,7 +170,6 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Mật khẩu không khớp.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerUserScreenText": "Màn hình người dùng",
   "mmAppBarMenuDrawerCreateGameText": "Tạo trò chơi"
 }
 

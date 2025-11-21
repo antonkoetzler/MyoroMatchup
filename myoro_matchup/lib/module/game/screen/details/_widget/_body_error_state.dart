@@ -8,11 +8,12 @@ final class _ErrorState extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
     final viewModel = context.read<GameDetailsScreenViewModel>();
+    final fetch = viewModel.fetch;
 
     return Center(
       child: Padding(
         padding: themeExtension.errorStatePadding,
-        child: MmErrorFeedback(title: localization.gameDetailsScreenBodyErrorStateTitle, onRetry: viewModel.fetch),
+        child: MmErrorFeedback(title: localization.gameDetailsScreenBodyErrorStateTitle, onRetry: (_) => fetch()),
       ),
     );
   }

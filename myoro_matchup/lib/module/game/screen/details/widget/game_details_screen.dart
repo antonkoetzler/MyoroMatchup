@@ -13,10 +13,18 @@ part '../_widget/_body_success_state_tab_view_players_tab.dart';
 part '../_widget/_body_success_state_tab_view_rankings_tab.dart';
 part '../_widget/_game_details_screen_state.dart';
 part '../_widget/_body_success_state_tab_view_info_tab_frequency_day_time_section.dart';
-part '../_widget/_body_success_state_tab_view_info_tab_location_section.dart';
 part '../_widget/_body_success_state_tab_view_info_tab_price_section.dart';
 part '../_widget/_body_success_state_tab_view_info_tab_age_range_section.dart';
 part '../_widget/_body_success_state_tab_view_info_tab_visibility_section.dart';
+part '../_widget/_body_success_state_tab_view_tab.dart';
+part '../_widget/_body_success_state_tab_view_players_tab_content.dart';
+part '../_widget/_body_success_state_tab_view_players_tab_action_button.dart';
+part '../_widget/_invitation_bottom_sheet.dart';
+part '../_widget/_invitation_bottom_sheet_title.dart';
+part '../_widget/_invitation_bottom_sheet_user_search_input.dart';
+part '../_widget/_invitation_bottom_sheet_message_input.dart';
+part '../_widget/_invitation_bottom_sheet_action_buttons.dart';
+part '../_widget/_invitation_bottom_sheet_action_button.dart';
 
 /// Game details screen.
 final class GameDetailsScreen extends StatefulWidget {

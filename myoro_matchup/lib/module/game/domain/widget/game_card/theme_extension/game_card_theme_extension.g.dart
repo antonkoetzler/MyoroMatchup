@@ -29,6 +29,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
     Border? profilePictureBorder,
     EdgeInsets? logoPadding,
     double? logoSize,
+    EdgeInsets? bannerlessGameContentPadding,
   }) {
     return GameCardThemeExtension(
       bannerMaxHeight: bannerMaxHeight ?? self.bannerMaxHeight,
@@ -42,6 +43,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
       profilePictureBorder: profilePictureBorder ?? self.profilePictureBorder,
       logoPadding: logoPadding ?? self.logoPadding,
       logoSize: logoSize ?? self.logoSize,
+      bannerlessGameContentPadding: bannerlessGameContentPadding ?? self.bannerlessGameContentPadding,
     );
   }
 
@@ -59,7 +61,8 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
         other.sportNameTextStyle == self.sportNameTextStyle &&
         other.profilePictureBorder == self.profilePictureBorder &&
         other.logoPadding == self.logoPadding &&
-        other.logoSize == self.logoSize;
+        other.logoSize == self.logoSize &&
+        other.bannerlessGameContentPadding == self.bannerlessGameContentPadding;
   }
 
   @override
@@ -76,6 +79,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
       self.profilePictureBorder,
       self.logoPadding,
       self.logoSize,
+      self.bannerlessGameContentPadding,
     );
   }
 
@@ -93,5 +97,6 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
       '  profilePictureBorder: ${self.profilePictureBorder},\n'
       '  logoPadding: ${self.logoPadding},\n'
       '  logoSize: ${self.logoSize},\n'
+      '  bannerlessGameContentPadding: ${self.bannerlessGameContentPadding},\n'
       ');';
 }

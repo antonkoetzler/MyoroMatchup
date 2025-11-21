@@ -78,10 +78,39 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameDetailsScreenBodyErrorStateTitle => 'Gagal mengambil detail permainan!';
 
   @override
+  String get invitationListingScreenBodyErrorStateTitle => 'Gagal mengambil undangan!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateEmptyTitle => 'Tidak ada undangan ditemukan!';
+
+  @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Info';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Pemain';
+
+  @override
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'Undang Pemain';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetTitleText => 'Undang Pemain';
+
+  @override
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+    return '$username ($name)';
+  }
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'Cari pengguna...';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'Pesan';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'Batal';
+
+  @override
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'Kirim';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Peringkat';
@@ -121,16 +150,73 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Visibilitas';
 
   @override
-  String get gameListingScreenAppBarTitle => 'Myoro Matchup';
+  String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get gameListingScreenBodyErrorStateTitle => 'Kesalahan saat mengambil permainan!';
+  String get homeScreenBodyErrorStateTitle => 'Kesalahan saat mengambil permainan!';
 
   @override
-  String get gameListingScreenBodySuccessStateEmptyTitle => 'Tidak ada permainan ditemukan!';
+  String get homeScreenBodySuccessStateEmptyTitle => 'Tidak ada permainan ditemukan!';
 
   @override
-  String get gameListingScreenNewGameButtonText => 'Buat permainan';
+  String get homeScreenNewGameButtonText => 'Buat permainan';
+
+  @override
+  String get homeScreenBodyUserSportStatsErrorStateTitle => 'Gagal mengambil statistik olahraga pengguna!';
+
+  @override
+  String get homeScreenBodyUserGameListingErrorStateTitle => 'Gagal mengambil permainan Anda!';
+
+  @override
+  String get homeScreenBodyUserGameListingEmptyTitle => 'Anda belum bergabung dengan permainan apa pun!';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFootballSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7AttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7DefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7StrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFut7SkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalDefenseLabel => 'DEF';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalStrikingLabel => 'STR';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsFutsalSkillsLabel => 'SKL';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballAttackLabel => 'ATK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel => 'BLK';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballServingLabel => 'SRV';
+
+  @override
+  String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
   String get gameCreationScreenAppBarTitle => 'Buat permainan';
@@ -280,9 +366,6 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Menu';
-
-  @override
-  String get mmAppBarMenuDrawerUserScreenText => 'Layar Pengguna';
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Buat Permainan';

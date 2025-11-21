@@ -118,7 +118,7 @@ final class GameCreationScreenViewModel {
   }
 
   /// On location changed.
-  void onLocationChanged(Location? location) {
+  void onLocationChanged(LocationResponseDto? location) {
     _state.location = location;
   }
 
@@ -266,7 +266,7 @@ final class GameCreationScreenViewModel {
             message: gameCreationScreenGameCreationSuccessMessage,
           ),
         );
-        Future.delayed(const Duration(seconds: 1)).then((_) {
+        Future.delayed(kSuccessNavigationDelayDuration).then((_) {
           AppRouter.pop();
           AppRouter.push(Routes.gameRoutes.gameDetailsScreen.navigate(request.data!));
         });
