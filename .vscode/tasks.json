@@ -55,6 +55,15 @@
         "reveal": "always",
         "panel": "shared"
       }
+    },
+    {
+      "label": "Start PostgreSQL container",
+      "type": "shell",
+      "command": "docker-compose up -d",
+      "options": {
+        "cwd": "${workspaceFolder}/MyoroMatchup/myoro_matchup_api"
+      },
+      "problemMatcher": []
     }
   ],
   "inputs": [

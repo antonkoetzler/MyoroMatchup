@@ -39,7 +39,7 @@ const _$SportsEnumEnumMap = {
   SportsEnum.volleyball: 'VOLLEYBALL',
 };
 
-const _$GameVisibilityEnumEnumMap = {GameVisibilityEnum.private: 'PUBLIC', GameVisibilityEnum.public: 'PUBLIC'};
+const _$GameVisibilityEnumEnumMap = {GameVisibilityEnum.private: 'PRIVATE', GameVisibilityEnum.public: 'PUBLIC'};
 
 // **************************************************************************
 // MyoroModelGenerator

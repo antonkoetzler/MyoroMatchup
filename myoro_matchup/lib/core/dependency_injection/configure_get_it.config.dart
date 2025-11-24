@@ -104,13 +104,13 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.AuthRepository>(),
       ),
     );
+    gh.factory<_i606.GameCreationScreenViewModel>(
+      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
+    );
     gh.factory<_i296.InvitationListingScreenViewModel>(
       () => _i296.InvitationListingScreenViewModel(
         gh<_i460.InvitationRepository>(),
       ),
-    );
-    gh.factory<_i606.GameCreationScreenViewModel>(
-      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
     );
     gh.factory<_i1009.HomeScreenViewModel>(
       () => _i1009.HomeScreenViewModel(

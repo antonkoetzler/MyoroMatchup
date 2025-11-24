@@ -19,6 +19,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'ลองอีกครั้ง';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'รีเฟรช';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'ดำเนินการเสร็จสมบูรณ์แล้ว!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsTh extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'วอลเลย์บอล';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'รอดำเนินการ';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'ยอมรับแล้ว';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'ปฏิเสธแล้ว';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'หมดอายุ';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'ยกเลิกแล้ว';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'ไม่สามารถดึงรายละเอียดเกมได้!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'คำเชิญ';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'ไม่สามารถดึงคำเชิญได้!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'ไม่พบคำเชิญ!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'ข้อความ';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'สถานะ';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'ยอมรับ';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'ปฏิเสธ';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'ข้อมูล';
@@ -367,4 +400,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'สร้างเกม';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'เพื่อน';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'คำเชิญ';
 }

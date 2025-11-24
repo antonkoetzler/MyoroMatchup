@@ -19,6 +19,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'إعادة المحاولة';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'تحديث';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'تمت العملية بنجاح!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsAr extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'الكرة الطائرة';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'قيد الانتظار';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'مقبول';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'مرفوض';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'منتهي الصلاحية';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'ملغي';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'فشل في استرداد تفاصيل اللعبة!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'الدعوات';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'فشل في استرداد الدعوات!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'لم يتم العثور على دعوات!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'رسالة';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'الحالة';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'قبول';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'رفض';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'معلومات';
@@ -370,4 +403,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'إنشاء لعبة';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'الأصدقاء';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'الدعوات';
 }

@@ -19,6 +19,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Thử lại';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'Làm mới';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'Thao tác hoàn tất thành công!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsVi extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Bóng chuyền';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'Đang chờ';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'Đã chấp nhận';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'Đã từ chối';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'Đã hết hạn';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'Đã hủy';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'Không thể lấy chi tiết trò chơi!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'Lời mời';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'Không thể lấy lời mời!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'Không tìm thấy lời mời!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Tin nhắn';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Trạng thái';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Chấp nhận';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Từ chối';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Thông tin';
@@ -370,4 +403,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Tạo trò chơi';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'Bạn bè';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'Lời mời';
 }

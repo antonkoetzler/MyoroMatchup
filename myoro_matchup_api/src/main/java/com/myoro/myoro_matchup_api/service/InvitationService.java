@@ -1,12 +1,12 @@
 package com.myoro.myoro_matchup_api.service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
-import java.util.stream.Collectors;
 
 import com.myoro.myoro_matchup_api.dto.InvitationGameResponseDto;
 import com.myoro.myoro_matchup_api.dto.InvitationResponseDto;
@@ -17,6 +17,9 @@ import com.myoro.myoro_matchup_api.model.UserModel;
 import com.myoro.myoro_matchup_api.repository.GameRepository;
 import com.myoro.myoro_matchup_api.repository.InvitationRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
+import com.myoro.myoro_matchup_api.specification.InvitationSpecifications;
+
+import org.springframework.data.jpa.domain.Specification;
 
 /** Invitation service. */
 @Service
@@ -95,27 +98,18 @@ public class InvitationService {
   }
 
   /**
-   * Gets all invitations for a user, optionally filtered by status.
+   * Gets all invitations for a user, optionally filtered by query and status.
    * 
    * @param userId the user ID
+   * @param query  optional search query to filter by game name, inviter name,
+   *               status, dates, or message
    * @param status optional status filter
    * @return list of invitation response DTOs
    */
-  public List<InvitationResponseDto> getInvitations(Long userId, InvitationStatusEnum status) {
-    List<InvitationModel> invitations;
-    
-    if (status != null) {
-      // Get invitations where user is invitee, filtered by status
-      invitations = invitationRepository.findByInviteeIdAndStatus(userId, status);
-      // Also get invitations where user is inviter, filtered by status
-      invitations.addAll(invitationRepository.findByInviterIdAndStatus(userId, status));
-    } else {
-      // Get all invitations where user is invitee
-      invitations = invitationRepository.findByInviteeId(userId);
-      // Also get all invitations where user is inviter
-      invitations.addAll(invitationRepository.findByInviterId(userId));
-    }
-    
+  public List<InvitationResponseDto> getInvitations(Long userId, String query, InvitationStatusEnum status) {
+    Specification<InvitationModel> spec = InvitationSpecifications.filter(userId, query, status);
+    List<InvitationModel> invitations = invitationRepository.findAll(spec);
+
     return invitations.stream()
         .map(this::toDto)
         .collect(Collectors.toList());
@@ -129,6 +123,7 @@ public class InvitationService {
    */
   private InvitationResponseDto toDto(InvitationModel invitation) {
     InvitationResponseDto dto = new InvitationResponseDto();
+    dto.setId(invitation.getId());
     dto.setStatus(invitation.getStatus());
     dto.setCreatedAt(invitation.getCreatedAt());
     dto.setExpiresAt(invitation.getExpiresAt());
@@ -145,5 +140,67 @@ public class InvitationService {
     dto.setInviterName(invitation.getInviter().getName());
 
     return dto;
+  }
+
+  /**
+   * Accepts an invitation for the current user.
+   * 
+   * @param invitationId the invitation ID
+   * @param userId       the authenticated user's ID
+   */
+  public void acceptInvitation(Long invitationId, Long userId) {
+    InvitationModel invitation = invitationRepository.findById(invitationId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.invitation.not.found")));
+
+    if (!invitation.getInvitee().getId().equals(userId)) {
+      throw new RuntimeException(messageService.getMessage("error.access.denied"));
+    }
+
+    if (invitation.getStatus() != InvitationStatusEnum.PENDING) {
+      throw new RuntimeException(messageService.getMessage("error.invitation.not.pending"));
+    }
+
+    GameModel game = invitation.getGame();
+    List<UserModel> players = game.getPlayers();
+    if (players == null) {
+      players = new ArrayList<>();
+    }
+
+    if (players.stream().anyMatch(player -> player.getId().equals(userId))) {
+      throw new RuntimeException(messageService.getMessage("error.invitation.user.already.player"));
+    }
+
+    players.add(invitation.getInvitee());
+    game.setPlayers(players);
+
+    invitation.setStatus(InvitationStatusEnum.ACCEPTED);
+    invitation.setRespondedAt(LocalDateTime.now());
+
+    gameRepository.save(game);
+    invitationRepository.save(invitation);
+  }
+
+  /**
+   * Declines an invitation for the current user.
+   * 
+   * @param invitationId the invitation ID
+   * @param userId       the authenticated user's ID
+   */
+  public void declineInvitation(Long invitationId, Long userId) {
+    InvitationModel invitation = invitationRepository.findById(invitationId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.invitation.not.found")));
+
+    if (!invitation.getInvitee().getId().equals(userId)) {
+      throw new RuntimeException(messageService.getMessage("error.access.denied"));
+    }
+
+    if (invitation.getStatus() != InvitationStatusEnum.PENDING) {
+      throw new RuntimeException(messageService.getMessage("error.invitation.not.pending"));
+    }
+
+    invitation.setStatus(InvitationStatusEnum.REJECTED);
+    invitation.setRespondedAt(LocalDateTime.now());
+
+    invitationRepository.save(invitation);
   }
 }

@@ -55,8 +55,10 @@ public class InvitationController {
 
   /**
    * Get all invitations for the authenticated user, optionally filtered by
-   * status.
+   * query and status.
    * 
+   * @param query       optional search query to filter by game name, inviter
+   *                    name, status, dates, or message
    * @param status      optional status filter (PENDING, ACCEPTED, REJECTED,
    *                    EXPIRED, CANCELLED)
    * @param httpRequest the HTTP request
@@ -64,9 +66,44 @@ public class InvitationController {
    */
   @GetMapping
   public ResponseEntity<List<InvitationResponseDto>> getInvitations(
+      @RequestParam(required = false) String query,
       @RequestParam(required = false) InvitationStatusEnum status,
       HttpServletRequest httpRequest) {
     final Long userId = jwtService.getUserIdFromRequest(httpRequest);
-    return ResponseEntity.ok(invitationService.getInvitations(userId, status));
+    return ResponseEntity.ok(invitationService.getInvitations(userId, query, status));
+  }
+
+  /**
+   * Accept an invitation for the authenticated user.
+   * 
+   * @param invitationId the invitation ID
+   * @param httpRequest  the HTTP request
+   * @return success message
+   */
+  @PostMapping("/{invitationId}/accept")
+  public ResponseEntity<Map<String, Object>> acceptInvitation(@PathVariable Long invitationId,
+      HttpServletRequest httpRequest) {
+    final Long userId = jwtService.getUserIdFromRequest(httpRequest);
+    invitationService.acceptInvitation(invitationId, userId);
+    Map<String, Object> responseBody = new HashMap<>();
+    responseBody.put("message", messageService.getMessage("invitation.accept.success"));
+    return ResponseEntity.ok(responseBody);
+  }
+
+  /**
+   * Decline an invitation for the authenticated user.
+   * 
+   * @param invitationId the invitation ID
+   * @param httpRequest  the HTTP request
+   * @return success message
+   */
+  @PostMapping("/{invitationId}/decline")
+  public ResponseEntity<Map<String, Object>> declineInvitation(@PathVariable Long invitationId,
+      HttpServletRequest httpRequest) {
+    final Long userId = jwtService.getUserIdFromRequest(httpRequest);
+    invitationService.declineInvitation(invitationId, userId);
+    Map<String, Object> responseBody = new HashMap<>();
+    responseBody.put("message", messageService.getMessage("invitation.decline.success"));
+    return ResponseEntity.ok(responseBody);
   }
 }

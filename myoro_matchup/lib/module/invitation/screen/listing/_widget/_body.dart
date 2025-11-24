@@ -5,6 +5,7 @@ final class _Body extends StatelessWidget {
   /// Default constructor.
   const _Body();
 
+  /// Build function.
   @override
   Widget build(context) {
     final viewModel = context.read<InvitationListingScreenViewModel>();

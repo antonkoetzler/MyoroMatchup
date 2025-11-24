@@ -28,6 +28,7 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
     required this.bodyUserSportStatsPlayerCardBeginnerCardStyle,
     required this.bodyUserSportStatsPlayerCardProCardStyle,
     required this.bodyUserSportStatsPlayerCardGoatCardStyle,
+    required this.bodyUserSportStatsLoaderPadding,
   });
 
   /// Fake constructor.
@@ -45,7 +46,8 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
       bodyUserSportStatsStatsSpacing = myoroFake<double>(),
       bodyUserSportStatsPlayerCardBeginnerCardStyle = myoroFake<MyoroCardStyle>(),
       bodyUserSportStatsPlayerCardProCardStyle = myoroFake<MyoroCardStyle>(),
-      bodyUserSportStatsPlayerCardGoatCardStyle = myoroFake<MyoroCardStyle>();
+      bodyUserSportStatsPlayerCardGoatCardStyle = myoroFake<MyoroCardStyle>(),
+      bodyUserSportStatsLoaderPadding = myoroFake<EdgeInsets>();
 
   /// Builder constructor.
   factory HomeScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme) {
@@ -59,13 +61,13 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
     );
 
     return HomeScreenThemeExtension(
-      gameMargin: const EdgeInsets.only(bottom: kEdgeInsetsLength),
+      gameMargin: const EdgeInsets.only(bottom: kEdgeInsetsLength, left: kEdgeInsetsLength, right: kEdgeInsetsLength),
       gameBorderRadius: BorderRadius.circular(kMyoroBorderRadius),
       bodyUserSportStatsErrorStatePadding: const EdgeInsets.only(
         top: kEdgeInsetsLength - kMyoroMultiplier,
-        bottom: kEdgeInsetsLength,
-        left: kEdgeInsetsLength,
-        right: kEdgeInsetsLength,
+        bottom: kEdgeInsetsLength * 1.5,
+        left: kEdgeInsetsLength * 1.5,
+        right: kEdgeInsetsLength * 1.5,
       ),
       bodyUserSportStatsPlayerCardNameTextStyle: textTheme.bodySmall!,
       bodyUserSportStatsPlayerCardRatingTextStyle: textTheme.titleSmall!,
@@ -90,6 +92,7 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
         backgroundColor: MyoroColors.gold1.withValues(alpha: 0.3),
         border: Border.all(width: kMyoroBorderWidth, color: MyoroColors.gold1),
       ),
+      bodyUserSportStatsLoaderPadding: const EdgeInsets.all(kEdgeInsetsLength * 2),
     );
   }
 
@@ -134,6 +137,9 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
 
   /// [MyoroCardStyle] of the goat player card.
   final MyoroCardStyle bodyUserSportStatsPlayerCardGoatCardStyle;
+
+  /// [EdgeInsets] of the [MyoroCircularLoader].
+  final EdgeInsets bodyUserSportStatsLoaderPadding;
 
   /// Lerp function.
   @override
@@ -200,6 +206,11 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
       bodyUserSportStatsPlayerCardGoatCardStyle: MyoroCardStyle.lerp(
         bodyUserSportStatsPlayerCardGoatCardStyle,
         other.bodyUserSportStatsPlayerCardGoatCardStyle,
+        t,
+      ),
+      bodyUserSportStatsLoaderPadding: EdgeInsets.lerp(
+        bodyUserSportStatsLoaderPadding,
+        other.bodyUserSportStatsLoaderPadding,
         t,
       ),
     );

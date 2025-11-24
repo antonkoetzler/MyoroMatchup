@@ -14,6 +14,8 @@ final class _MenuModal extends StatelessWidget {
   @override
   Widget build(context) {
     final mmAppBarMenuDrawerCreateGameText = localization.mmAppBarMenuDrawerCreateGameText;
+    final mmAppBarMenuDrawerFriendListingText = localization.mmAppBarMenuDrawerFriendListingText;
+    final mmAppBarMenuDrawerInvitationListingText = localization.mmAppBarMenuDrawerInvitationListingText;
 
     final themeExtension = context.resolveThemeExtension<MmAppBarThemeExtension>();
     final menuDrawerSpacing = themeExtension.menuDrawerSpacing;
@@ -27,8 +29,13 @@ final class _MenuModal extends StatelessWidget {
         children: [
           _MenuModalItem(Icons.add, mmAppBarMenuDrawerCreateGameText, Routes.gameRoutes.gameCreationScreen.navigate()),
           _MenuModalItem(
+            Icons.person,
+            mmAppBarMenuDrawerFriendListingText,
+            Routes.friendRoutes.friendListingScreen.navigate(),
+          ),
+          _MenuModalItem(
             Icons.insert_invitation,
-            mmAppBarMenuDrawerCreateGameText,
+            mmAppBarMenuDrawerInvitationListingText,
             Routes.invitationRoutes.invitationListingScreen.navigate(),
           ),
         ],

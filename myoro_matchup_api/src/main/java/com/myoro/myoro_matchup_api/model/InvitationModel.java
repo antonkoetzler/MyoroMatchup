@@ -42,6 +42,7 @@ public class InvitationModel {
 
   /** Status of the invitation. */
   @Column(nullable = false)
+  @jakarta.persistence.Enumerated(jakarta.persistence.EnumType.STRING)
   private InvitationStatusEnum status;
 
   /** When the invitation was created. */

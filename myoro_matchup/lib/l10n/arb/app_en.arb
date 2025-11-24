@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "Please verify your connection and try again!",
   "mmErrorFeedbackActionButtonText": "Retry",
 
+  "mmEmptyFeedbackActionButtonText": "Refresh",
+
   "mmSuccessFeedbackSubtitle": "Operation completed successfully!",
   "mmSuccessFeedbackActionButtonText": "Done",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "Volleyball",
 
+  "invitationStatusEnumPendingLabel": "Pending",
+  "invitationStatusEnumAcceptedLabel": "Accepted",
+  "invitationStatusEnumRejectedLabel": "Rejected",
+  "invitationStatusEnumExpiredLabel": "Expired",
+  "invitationStatusEnumCancelledLabel": "Cancelled",
+
   "gameDetailsScreenBodyErrorStateTitle": "Failed to retrieve game details!",
+  "invitationListingScreenAppBarTitle": "Invitations",
   "invitationListingScreenBodyErrorStateTitle": "Failed to retrieve invitations!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "No invitations found!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Message",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Accept",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Decline",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Players",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Invite Player",
@@ -170,5 +183,7 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwords do not match.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerCreateGameText": "Create Game"
+  "mmAppBarMenuDrawerCreateGameText": "Create Game",
+  "mmAppBarMenuDrawerFriendListingText": "Friends",
+  "mmAppBarMenuDrawerInvitationListingText": "Invitations"
 }

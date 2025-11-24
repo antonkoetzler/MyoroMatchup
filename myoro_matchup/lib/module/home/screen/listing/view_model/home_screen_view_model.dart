@@ -40,7 +40,7 @@ final class HomeScreenViewModel {
   }
 
   /// [MyoroSingleSelectionDropdown.itemBuilder] of the sport switcher.
-  MyoroMenuItem bodyUserSportStatsSportSwitcherItemBuilder(SportsEnum sport, _) {
+  MyoroMenuIconTextButtonItem bodyUserSportStatsSportSwitcherItemBuilder(_, SportsEnum sport) {
     return MyoroMenuIconTextButtonItem(text: bodyUserSportStatsSportSwitcherSelectedItemBuilder(sport));
   }
 

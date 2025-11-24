@@ -9,9 +9,12 @@ final class _BackButton extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<MmAppBarThemeExtension>();
+    final backButtonIcon = themeExtension.backButtonIcon;
+    final backButtonIconSize = themeExtension.backButtonIconSize;
 
     return MyoroIconTextButton(
-      iconConfiguration: themeExtension.backButtonIconConfiguration,
+      style: MyoroIconTextButtonStyle(iconSize: backButtonIconSize),
+      icon: backButtonIcon,
       onTapUp: (_, _) {
         _onBack?.call();
         AppRouter.pop();

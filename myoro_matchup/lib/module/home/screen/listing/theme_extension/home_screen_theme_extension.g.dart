@@ -32,6 +32,7 @@ mixin _$HomeScreenThemeExtensionMixin on ThemeExtension<HomeScreenThemeExtension
     MyoroCardStyle? bodyUserSportStatsPlayerCardBeginnerCardStyle,
     MyoroCardStyle? bodyUserSportStatsPlayerCardProCardStyle,
     MyoroCardStyle? bodyUserSportStatsPlayerCardGoatCardStyle,
+    EdgeInsets? bodyUserSportStatsLoaderPadding,
   }) {
     return HomeScreenThemeExtension(
       gameMargin: gameMargin ?? self.gameMargin,
@@ -59,6 +60,7 @@ mixin _$HomeScreenThemeExtensionMixin on ThemeExtension<HomeScreenThemeExtension
           bodyUserSportStatsPlayerCardProCardStyle ?? self.bodyUserSportStatsPlayerCardProCardStyle,
       bodyUserSportStatsPlayerCardGoatCardStyle:
           bodyUserSportStatsPlayerCardGoatCardStyle ?? self.bodyUserSportStatsPlayerCardGoatCardStyle,
+      bodyUserSportStatsLoaderPadding: bodyUserSportStatsLoaderPadding ?? self.bodyUserSportStatsLoaderPadding,
     );
   }
 
@@ -79,7 +81,8 @@ mixin _$HomeScreenThemeExtensionMixin on ThemeExtension<HomeScreenThemeExtension
         other.bodyUserSportStatsStatsSpacing == self.bodyUserSportStatsStatsSpacing &&
         other.bodyUserSportStatsPlayerCardBeginnerCardStyle == self.bodyUserSportStatsPlayerCardBeginnerCardStyle &&
         other.bodyUserSportStatsPlayerCardProCardStyle == self.bodyUserSportStatsPlayerCardProCardStyle &&
-        other.bodyUserSportStatsPlayerCardGoatCardStyle == self.bodyUserSportStatsPlayerCardGoatCardStyle;
+        other.bodyUserSportStatsPlayerCardGoatCardStyle == self.bodyUserSportStatsPlayerCardGoatCardStyle &&
+        other.bodyUserSportStatsLoaderPadding == self.bodyUserSportStatsLoaderPadding;
   }
 
   @override
@@ -99,6 +102,7 @@ mixin _$HomeScreenThemeExtensionMixin on ThemeExtension<HomeScreenThemeExtension
       self.bodyUserSportStatsPlayerCardBeginnerCardStyle,
       self.bodyUserSportStatsPlayerCardProCardStyle,
       self.bodyUserSportStatsPlayerCardGoatCardStyle,
+      self.bodyUserSportStatsLoaderPadding,
     );
   }
 
@@ -119,5 +123,6 @@ mixin _$HomeScreenThemeExtensionMixin on ThemeExtension<HomeScreenThemeExtension
       '  bodyUserSportStatsPlayerCardBeginnerCardStyle: ${self.bodyUserSportStatsPlayerCardBeginnerCardStyle},\n'
       '  bodyUserSportStatsPlayerCardProCardStyle: ${self.bodyUserSportStatsPlayerCardProCardStyle},\n'
       '  bodyUserSportStatsPlayerCardGoatCardStyle: ${self.bodyUserSportStatsPlayerCardGoatCardStyle},\n'
+      '  bodyUserSportStatsLoaderPadding: ${self.bodyUserSportStatsLoaderPadding},\n'
       ');';
 }

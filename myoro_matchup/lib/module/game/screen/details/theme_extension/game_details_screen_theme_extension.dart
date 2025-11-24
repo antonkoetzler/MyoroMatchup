@@ -18,7 +18,7 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
     required this.bodySuccessStateTabViewContentPadding,
     required this.spacing,
     required this.bodySuccessStateTabViewInfoTabContentPadding,
-    required this.bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration,
+    required this.bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
     required this.invitationBottomSheetTitleTextStyle,
     required this.invitationBottomSheetActionButtonsSpacing,
     required this.invitationBottomSheetSpacing,
@@ -30,7 +30,7 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
       bodySuccessStateTabViewContentPadding = myoroFake<EdgeInsets>(),
       spacing = myoroFake<double>(),
       bodySuccessStateTabViewInfoTabContentPadding = myoroFake<EdgeInsets>(),
-      bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration = myoroFake<MyoroTextConfiguration>(),
+      bodySuccessStateTabViewPlayersTabActionButtonTextStyle = myoroFake<MyoroTextStyle>(),
       invitationBottomSheetTitleTextStyle = myoroFake<TextStyle>(),
       invitationBottomSheetActionButtonsSpacing = myoroFake<double>(),
       invitationBottomSheetSpacing = myoroFake<double>();
@@ -41,9 +41,7 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
       bodySuccessStateTabViewContentPadding = const EdgeInsets.all(kMyoroMultiplier * 4),
       spacing = kMyoroMultiplier * 2,
       bodySuccessStateTabViewInfoTabContentPadding = const EdgeInsets.all(kMyoroMultiplier * 3),
-      bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration = const MyoroTextConfiguration(
-        alignment: TextAlign.center,
-      ),
+      bodySuccessStateTabViewPlayersTabActionButtonTextStyle = const MyoroTextStyle(alignment: TextAlign.center),
       invitationBottomSheetTitleTextStyle = textTheme.titleMedium!,
       invitationBottomSheetActionButtonsSpacing = kMyoroMultiplier * 2,
       invitationBottomSheetSpacing = kMyoroMultiplier * 2;
@@ -61,7 +59,7 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
   final EdgeInsets bodySuccessStateTabViewInfoTabContentPadding;
 
   /// Text configuration of the action button.
-  final MyoroTextConfiguration bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration;
+  final MyoroTextStyle bodySuccessStateTabViewPlayersTabActionButtonTextStyle;
 
   /// Text style of the invitation bottom sheet title.
   final TextStyle invitationBottomSheetTitleTextStyle;
@@ -92,9 +90,9 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
         other.bodySuccessStateTabViewInfoTabContentPadding,
         t,
       ),
-      bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration: MyoroTextConfiguration.lerp(
-        bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration,
-        other.bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration,
+      bodySuccessStateTabViewPlayersTabActionButtonTextStyle: MyoroTextStyle.lerp(
+        bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
+        other.bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
         t,
       ),
       invitationBottomSheetTitleTextStyle: TextStyle.lerp(

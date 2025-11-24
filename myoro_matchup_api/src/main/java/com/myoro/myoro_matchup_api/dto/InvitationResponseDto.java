@@ -6,6 +6,9 @@ import java.time.LocalDateTime;
 
 /** Invitation response DTO. */
 public class InvitationResponseDto {
+  /** Invitation ID. */
+  private Long id;
+
   /** Game being invited to. */
   private InvitationGameResponseDto game;
 
@@ -29,6 +32,15 @@ public class InvitationResponseDto {
 
   /** Default constructor. */
   public InvitationResponseDto() {
+  }
+
+  /**
+   * Getter for id
+   * 
+   * @return the invitation ID
+   */
+  public Long getId() {
+    return id;
   }
 
   /**
@@ -101,6 +113,15 @@ public class InvitationResponseDto {
    */
   public void setGame(InvitationGameResponseDto game) {
     this.game = game;
+  }
+
+  /**
+   * Setter for id
+   * 
+   * @param id the invitation ID
+   */
+  public void setId(Long id) {
+    this.id = id;
   }
 
   /**

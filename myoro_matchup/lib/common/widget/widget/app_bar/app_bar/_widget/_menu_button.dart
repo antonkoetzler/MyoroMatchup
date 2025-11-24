@@ -7,9 +7,11 @@ final class _MenuButton extends StatelessWidget {
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<MmAppBarThemeExtension>();
-    final menuButtonIconConfiguration = themeExtension.menuButtonIconConfiguration;
+    final menuButtonIcon = themeExtension.menuButtonIcon;
+    final menuButtonIconSize = themeExtension.menuButtonIconSize;
     return MyoroIconTextButton(
-      iconConfiguration: menuButtonIconConfiguration,
+      style: MyoroIconTextButtonStyle(iconSize: menuButtonIconSize),
+      icon: menuButtonIcon,
       onTapUp: (_, _) => _MenuModal._show(context),
     );
   }

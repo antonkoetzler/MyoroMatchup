@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "接続を確認して、もう一度お試しください！",
   "mmErrorFeedbackActionButtonText": "再試行",
 
+  "mmEmptyFeedbackActionButtonText": "更新",
+
   "mmSuccessFeedbackSubtitle": "操作が正常に完了しました！",
   "mmSuccessFeedbackActionButtonText": "完了",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "バレーボール",
 
+  "invitationStatusEnumPendingLabel": "保留中",
+  "invitationStatusEnumAcceptedLabel": "承認済み",
+  "invitationStatusEnumRejectedLabel": "拒否済み",
+  "invitationStatusEnumExpiredLabel": "期限切れ",
+  "invitationStatusEnumCancelledLabel": "キャンセル済み",
+
   "gameDetailsScreenBodyErrorStateTitle": "ゲームの詳細を取得できませんでした！",
+  "invitationListingScreenAppBarTitle": "招待",
   "invitationListingScreenBodyErrorStateTitle": "招待を取得できませんでした！",
   "invitationListingScreenBodySuccessStateEmptyTitle": "招待が見つかりませんでした！",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "メッセージ",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "ステータス",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "承諾",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "辞退",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "情報",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "プレイヤー",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "プレイヤーを招待",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "パスワードが一致しません。",
 
   "mmAppBarMenuDrawerTitle": "メニュー",
-  "mmAppBarMenuDrawerCreateGameText": "ゲームを作成"
+  "mmAppBarMenuDrawerCreateGameText": "ゲームを作成",
+  "mmAppBarMenuDrawerFriendListingText": "友達",
+  "mmAppBarMenuDrawerInvitationListingText": "招待"
 }
 

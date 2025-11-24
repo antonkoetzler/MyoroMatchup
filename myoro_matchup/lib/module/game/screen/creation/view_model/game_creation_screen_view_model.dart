@@ -233,7 +233,7 @@ final class GameCreationScreenViewModel {
   }
 
   /// Item builder of the frequency field.
-  MyoroMenuItem frequencyDayTimeScreenFrequencyFieldItemBuilder(GameFrequencyEnum frequency, _) {
+  MyoroMenuIconTextButtonItem frequencyDayTimeScreenFrequencyFieldItemBuilder(_, GameFrequencyEnum frequency) {
     return MyoroMenuIconTextButtonItem(text: frequency.label);
   }
 

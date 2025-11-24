@@ -16,7 +16,7 @@ final class _InvitationBottomSheetUserSearchInput extends StatelessWidget {
     final invitationBottomSheetUserSearchInputSelectedItemBuilder =
         viewModel.invitationBottomSheetUserSearchInputSelectedItemBuilder;
 
-    return MyoroSearchInput(
+    return MyoroSearchDropdown<UserResponseDto>(
       placeholder: gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder,
       requestCallback: invitationBottomSheetUserSearchInputRequestCallback,
       itemBuilder: invitationBottomSheetUserSearchInputItemBuilder,

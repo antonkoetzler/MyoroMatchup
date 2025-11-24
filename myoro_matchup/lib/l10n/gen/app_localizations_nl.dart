@@ -19,6 +19,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Opnieuw proberen';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'Vernieuwen';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'Bewerking succesvol voltooid!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsNl extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Volleybal';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'In afwachting';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'Geaccepteerd';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'Afgewezen';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'Verlopen';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'Geannuleerd';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'Kon speldetails niet ophalen!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'Uitnodigingen';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'Kon uitnodigingen niet ophalen!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'Geen uitnodigingen gevonden!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Bericht';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Status';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Accepteren';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Weigeren';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Info';
@@ -368,4 +401,10 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Spel maken';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'Vrienden';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'Uitnodigingen';
 }

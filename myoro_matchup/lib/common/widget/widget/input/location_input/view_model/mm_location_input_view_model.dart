@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
-import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 
 part 'mm_location_input_state.dart';
 

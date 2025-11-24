@@ -7,13 +7,14 @@ part of 'invitation_response_dto.dart';
 // **************************************************************************
 
 InvitationResponseDto _$InvitationResponseDtoFromJson(Map<String, dynamic> json) => InvitationResponseDto(
+  id: (json['id'] as num).toInt(),
   game: InvitationGameResponseDto.fromJson(json['game'] as Map<String, dynamic>),
   inviterName: json['inviterName'] as String,
   status: $enumDecode(_$InvitationStatusEnumEnumMap, json['status']),
   createdAt: DateTime.parse(json['createdAt'] as String),
   expiresAt: DateTime.parse(json['expiresAt'] as String),
-  respondedAt: DateTime.parse(json['respondedAt'] as String),
-  message: json['message'] as String,
+  respondedAt: json['respondedAt'] == null ? null : DateTime.parse(json['respondedAt'] as String),
+  message: json['message'] as String? ?? '',
 );
 
 const _$InvitationStatusEnumEnumMap = {
@@ -40,20 +41,23 @@ mixin _$InvitationResponseDtoMixin {
 
   InvitationResponseDto copyWith({
     InvitationGameResponseDto? game,
+    int? id,
     String? inviterName,
     InvitationStatusEnum? status,
     DateTime? createdAt,
     DateTime? expiresAt,
     DateTime? respondedAt,
+    bool respondedAtProvided = true,
     String? message,
   }) {
     return InvitationResponseDto(
       game: game ?? self.game,
+      id: id ?? self.id,
       inviterName: inviterName ?? self.inviterName,
       status: status ?? self.status,
       createdAt: createdAt ?? self.createdAt,
       expiresAt: expiresAt ?? self.expiresAt,
-      respondedAt: respondedAt ?? self.respondedAt,
+      respondedAt: respondedAtProvided ? (respondedAt ?? self.respondedAt) : null,
       message: message ?? self.message,
     );
   }
@@ -63,6 +67,7 @@ mixin _$InvitationResponseDtoMixin {
     return other is InvitationResponseDto &&
         other.runtimeType == runtimeType &&
         other.game == self.game &&
+        other.id == self.id &&
         other.inviterName == self.inviterName &&
         other.status == self.status &&
         other.createdAt == self.createdAt &&
@@ -75,6 +80,7 @@ mixin _$InvitationResponseDtoMixin {
   int get hashCode {
     return Object.hash(
       self.game,
+      self.id,
       self.inviterName,
       self.status,
       self.createdAt,
@@ -88,6 +94,7 @@ mixin _$InvitationResponseDtoMixin {
   String toString() =>
       'InvitationResponseDto(\n'
       '  game: ${self.game},\n'
+      '  id: ${self.id},\n'
       '  inviterName: ${self.inviterName},\n'
       '  status: ${self.status},\n'
       '  createdAt: ${self.createdAt},\n'

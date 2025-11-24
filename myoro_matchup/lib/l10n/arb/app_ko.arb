@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "연결을 확인하고 다시 시도하세요!",
   "mmErrorFeedbackActionButtonText": "다시 시도",
 
+  "mmEmptyFeedbackActionButtonText": "새로고침",
+
   "mmSuccessFeedbackSubtitle": "작업이 성공적으로 완료되었습니다!",
   "mmSuccessFeedbackActionButtonText": "완료",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "배구",
 
+  "invitationStatusEnumPendingLabel": "대기 중",
+  "invitationStatusEnumAcceptedLabel": "수락됨",
+  "invitationStatusEnumRejectedLabel": "거부됨",
+  "invitationStatusEnumExpiredLabel": "만료됨",
+  "invitationStatusEnumCancelledLabel": "취소됨",
+
   "gameDetailsScreenBodyErrorStateTitle": "게임 세부 정보를 가져오지 못했습니다!",
+  "invitationListingScreenAppBarTitle": "초대",
   "invitationListingScreenBodyErrorStateTitle": "초대를 가져오지 못했습니다!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "초대를 찾을 수 없습니다!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "메시지",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "상태",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "수락",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "거절",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "정보",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "플레이어",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "플레이어 초대",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "비밀번호가 일치하지 않습니다.",
 
   "mmAppBarMenuDrawerTitle": "메뉴",
-  "mmAppBarMenuDrawerCreateGameText": "게임 만들기"
+  "mmAppBarMenuDrawerCreateGameText": "게임 만들기",
+  "mmAppBarMenuDrawerFriendListingText": "친구",
+  "mmAppBarMenuDrawerInvitationListingText": "초대"
 }
 

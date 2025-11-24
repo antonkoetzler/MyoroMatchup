@@ -17,13 +17,12 @@ final class _FormTypeSwitcherButton extends StatelessWidget {
         contentIdleColor: themeExtension.formTypeSwitcherButtonIdleColor,
         contentHoverColor: themeExtension.formTypeSwitcherButtonIdleColor,
         contentTapColor: themeExtension.formTypeSwitcherButtonTapColor,
+        textStyle: MyoroTextStyle(style: themeExtension.formTypeSwitcherButtonTextStyle),
       ).singleBackgroundColor(MyoroColors.transparent),
       text: switch (_formType) {
         LoginSignupScreenEnum.login => localization.loginSignupScreenFormTypeSwitcherButtonLoginText,
         LoginSignupScreenEnum.signup => localization.loginSignupScreenFormTypeSwitcherButtonSignupText,
       },
-
-      textConfiguration: MyoroTextConfiguration(style: themeExtension.formTypeSwitcherButtonTextStyle),
       onTapUp: (_, _) => viewModel.formTypeSwitcherButtonOnTapUp(),
     );
   }

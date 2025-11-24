@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "Vui lòng xác minh kết nối của bạn và thử lại!",
   "mmErrorFeedbackActionButtonText": "Thử lại",
 
+  "mmEmptyFeedbackActionButtonText": "Làm mới",
+
   "mmSuccessFeedbackSubtitle": "Thao tác hoàn tất thành công!",
   "mmSuccessFeedbackActionButtonText": "Hoàn thành",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "Bóng chuyền",
 
+  "invitationStatusEnumPendingLabel": "Đang chờ",
+  "invitationStatusEnumAcceptedLabel": "Đã chấp nhận",
+  "invitationStatusEnumRejectedLabel": "Đã từ chối",
+  "invitationStatusEnumExpiredLabel": "Đã hết hạn",
+  "invitationStatusEnumCancelledLabel": "Đã hủy",
+
   "gameDetailsScreenBodyErrorStateTitle": "Không thể lấy chi tiết trò chơi!",
+  "invitationListingScreenAppBarTitle": "Lời mời",
   "invitationListingScreenBodyErrorStateTitle": "Không thể lấy lời mời!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Không tìm thấy lời mời!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Tin nhắn",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Trạng thái",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Chấp nhận",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Từ chối",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Thông tin",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Người chơi",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Mời người chơi",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Mật khẩu không khớp.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerCreateGameText": "Tạo trò chơi"
+  "mmAppBarMenuDrawerCreateGameText": "Tạo trò chơi",
+  "mmAppBarMenuDrawerFriendListingText": "Bạn bè",
+  "mmAppBarMenuDrawerInvitationListingText": "Lời mời"
 }
 

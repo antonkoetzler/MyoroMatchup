@@ -10,9 +10,26 @@ final class _BodySuccessStateNonEmptyState extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return MyoroListScrollableBuilder(
-      itemCount: _invitations.length,
-      itemBuilder: (_, i) => _BodySuccessStateNonEmptyStateItem(_invitations[i]),
+    final themeExtension = context.resolveThemeExtension<InvitationListingScreenThemeExtension>();
+    final bodySuccessStateNonEmptyStateItemGamePadding = themeExtension.bodySuccessStateNonEmptyStateItemGamePadding;
+    final bodySuccessStateNonEmptyStateScrollableStyle = themeExtension.bodySuccessStateNonEmptyStateScrollableStyle;
+
+    final invitationsLength = _invitations.length;
+
+    return Padding(
+      padding: bodySuccessStateNonEmptyStateItemGamePadding,
+      child: Column(
+        children: [
+          Expanded(
+            child: MyoroListScrollableBuilder(
+              style: bodySuccessStateNonEmptyStateScrollableStyle,
+              itemCount: invitationsLength,
+              itemBuilder: (_, i) => _BodySuccessStateNonEmptyStateItem(_invitations[i]),
+            ),
+          ),
+          const _BodySuccessStateNonEmptyStateFilters(),
+        ],
+      ),
     );
   }
 }

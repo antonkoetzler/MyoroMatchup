@@ -13,6 +13,10 @@ final class _BodyUserSportStatsPlayerCardName extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<HomeScreenThemeExtension>();
     final bodyUserSportStatsPlayerCardNameTextStyle = themeExtension.bodyUserSportStatsPlayerCardNameTextStyle;
-    return Text(_user.name, style: bodyUserSportStatsPlayerCardNameTextStyle);
+    // TODO: Investigate if it shrinks when a minWidth is added to the card or sum
+    return FittedBox(
+      fit: BoxFit.scaleDown,
+      child: Text(_user.name, style: bodyUserSportStatsPlayerCardNameTextStyle),
+    );
   }
 }

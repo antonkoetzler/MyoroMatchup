@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "Harap verifikasi koneksi Anda dan coba lagi!",
   "mmErrorFeedbackActionButtonText": "Coba Lagi",
 
+  "mmEmptyFeedbackActionButtonText": "Muat Ulang",
+
   "mmSuccessFeedbackSubtitle": "Operasi berhasil diselesaikan!",
   "mmSuccessFeedbackActionButtonText": "Selesai",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "Bola Voli",
 
+  "invitationStatusEnumPendingLabel": "Menunggu",
+  "invitationStatusEnumAcceptedLabel": "Diterima",
+  "invitationStatusEnumRejectedLabel": "Ditolak",
+  "invitationStatusEnumExpiredLabel": "Kedaluwarsa",
+  "invitationStatusEnumCancelledLabel": "Dibatalkan",
+
   "gameDetailsScreenBodyErrorStateTitle": "Gagal mengambil detail permainan!",
+  "invitationListingScreenAppBarTitle": "Undangan",
   "invitationListingScreenBodyErrorStateTitle": "Gagal mengambil undangan!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Tidak ada undangan ditemukan!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Pesan",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Terima",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Tolak",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Pemain",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Undang Pemain",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Kata sandi tidak cocok.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerCreateGameText": "Buat Permainan"
+  "mmAppBarMenuDrawerCreateGameText": "Buat Permainan",
+  "mmAppBarMenuDrawerFriendListingText": "Teman",
+  "mmAppBarMenuDrawerInvitationListingText": "Undangan"
 }
 

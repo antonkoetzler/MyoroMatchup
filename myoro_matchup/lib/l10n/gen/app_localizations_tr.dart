@@ -19,6 +19,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Yeniden Dene';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'Yenile';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'İşlem başarıyla tamamlandı!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsTr extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Voleybol';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'Beklemede';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'Kabul Edildi';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'Reddedildi';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'Süresi Doldu';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'İptal Edildi';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'Oyun detayları alınamadı!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'Davetler';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'Davetiyeler alınamadı!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'Davetiye bulunamadı!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Mesaj';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Durum';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Kabul Et';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Reddet';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Bilgi';
@@ -367,4 +400,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Oyun Oluştur';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'Arkadaşlar';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'Davetler';
 }

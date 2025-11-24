@@ -10,6 +10,12 @@ final class _BodySuccessStateNonEmptyStateItemStatus extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Text(_invitation.status.name);
+    final themeExtension = context.resolveThemeExtension<InvitationListingScreenThemeExtension>();
+    final buildBodySuccessStateNonEmptyStateItemStatusTagStyle =
+        themeExtension.buildBodySuccessStateNonEmptyStateItemStatusTagStyle;
+    return MyoroTag(
+      text: _invitation.status.label,
+      style: buildBodySuccessStateNonEmptyStateItemStatusTagStyle(context, _invitation.status),
+    );
   }
 }

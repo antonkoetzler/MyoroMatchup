@@ -146,6 +146,12 @@ abstract class AppLocalizations {
   /// **'Retry'**
   String get mmErrorFeedbackActionButtonText;
 
+  /// No description provided for @mmEmptyFeedbackActionButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Refresh'**
+  String get mmEmptyFeedbackActionButtonText;
+
   /// No description provided for @mmSuccessFeedbackSubtitle.
   ///
   /// In en, this message translates to:
@@ -254,11 +260,47 @@ abstract class AppLocalizations {
   /// **'Volleyball'**
   String get sportsEnumVolleyballLabel;
 
+  /// No description provided for @invitationStatusEnumPendingLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Pending'**
+  String get invitationStatusEnumPendingLabel;
+
+  /// No description provided for @invitationStatusEnumAcceptedLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Accepted'**
+  String get invitationStatusEnumAcceptedLabel;
+
+  /// No description provided for @invitationStatusEnumRejectedLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Rejected'**
+  String get invitationStatusEnumRejectedLabel;
+
+  /// No description provided for @invitationStatusEnumExpiredLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Expired'**
+  String get invitationStatusEnumExpiredLabel;
+
+  /// No description provided for @invitationStatusEnumCancelledLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancelled'**
+  String get invitationStatusEnumCancelledLabel;
+
   /// No description provided for @gameDetailsScreenBodyErrorStateTitle.
   ///
   /// In en, this message translates to:
   /// **'Failed to retrieve game details!'**
   String get gameDetailsScreenBodyErrorStateTitle;
+
+  /// No description provided for @invitationListingScreenAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Invitations'**
+  String get invitationListingScreenAppBarTitle;
 
   /// No description provided for @invitationListingScreenBodyErrorStateTitle.
   ///
@@ -271,6 +313,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No invitations found!'**
   String get invitationListingScreenBodySuccessStateEmptyTitle;
+
+  /// No description provided for @invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Message'**
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel;
+
+  /// No description provided for @invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Status'**
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel;
+
+  /// No description provided for @invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Accept'**
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText;
+
+  /// No description provided for @invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Decline'**
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabText.
   ///
@@ -821,6 +887,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Create Game'**
   String get mmAppBarMenuDrawerCreateGameText;
+
+  /// No description provided for @mmAppBarMenuDrawerFriendListingText.
+  ///
+  /// In en, this message translates to:
+  /// **'Friends'**
+  String get mmAppBarMenuDrawerFriendListingText;
+
+  /// No description provided for @mmAppBarMenuDrawerInvitationListingText.
+  ///
+  /// In en, this message translates to:
+  /// **'Invitations'**
+  String get mmAppBarMenuDrawerInvitationListingText;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

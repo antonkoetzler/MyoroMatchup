@@ -14,11 +14,12 @@ final class _Button extends StatelessWidget {
     final buttonTextStyle = themeExtension.buttonTextStyle;
 
     return MyoroIconTextButton(
-      style: isSecondary
-          ? const MyoroIconTextButtonStyle().secondary(context)
-          : const MyoroIconTextButtonStyle().bordered(context),
+      style:
+          (isSecondary
+                  ? const MyoroIconTextButtonStyle().secondary(context)
+                  : const MyoroIconTextButtonStyle().bordered(context))
+              .copyWith(textStyle: MyoroTextStyle(style: buttonTextStyle)),
       text: text,
-      textConfiguration: MyoroTextConfiguration(style: buttonTextStyle),
       onTapUp: (_, _) => onTapUp(),
     );
   }

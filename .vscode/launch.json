@@ -18,8 +18,9 @@
             "mainClass": "com.myoro.myoro_matchup_api.MyoroMatchupApiApplication",
             "projectName": "myoro-matchup-api",
             "args": "",
-            "envFile": "${workspaceFolder}/.env"
-        }
+            "envFile": "${workspaceFolder}/.env",
+            "preLaunchTask": "Start PostgreSQL container"
+        },
     ],
     "inputs": [
         {

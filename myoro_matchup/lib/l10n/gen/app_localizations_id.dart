@@ -19,6 +19,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Coba Lagi';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'Muat Ulang';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'Operasi berhasil diselesaikan!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsId extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Bola Voli';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'Menunggu';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'Diterima';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'Ditolak';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'Kedaluwarsa';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'Dibatalkan';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'Gagal mengambil detail permainan!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'Undangan';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'Gagal mengambil undangan!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'Tidak ada undangan ditemukan!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Pesan';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Status';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Terima';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Tolak';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Info';
@@ -369,4 +402,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Buat Permainan';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'Teman';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'Undangan';
 }

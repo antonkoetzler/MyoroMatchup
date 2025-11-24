@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "Controleer uw verbinding en probeer het opnieuw!",
   "mmErrorFeedbackActionButtonText": "Opnieuw proberen",
 
+  "mmEmptyFeedbackActionButtonText": "Vernieuwen",
+
   "mmSuccessFeedbackSubtitle": "Bewerking succesvol voltooid!",
   "mmSuccessFeedbackActionButtonText": "Klaar",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "Volleybal",
 
+  "invitationStatusEnumPendingLabel": "In afwachting",
+  "invitationStatusEnumAcceptedLabel": "Geaccepteerd",
+  "invitationStatusEnumRejectedLabel": "Afgewezen",
+  "invitationStatusEnumExpiredLabel": "Verlopen",
+  "invitationStatusEnumCancelledLabel": "Geannuleerd",
+
   "gameDetailsScreenBodyErrorStateTitle": "Kon speldetails niet ophalen!",
+  "invitationListingScreenAppBarTitle": "Uitnodigingen",
   "invitationListingScreenBodyErrorStateTitle": "Kon uitnodigingen niet ophalen!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Geen uitnodigingen gevonden!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Bericht",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Accepteren",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Weigeren",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Spelers",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Speler uitnodigen",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Wachtwoorden komen niet overeen.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerCreateGameText": "Spel maken"
+  "mmAppBarMenuDrawerCreateGameText": "Spel maken",
+  "mmAppBarMenuDrawerFriendListingText": "Vrienden",
+  "mmAppBarMenuDrawerInvitationListingText": "Uitnodigingen"
 }
 

@@ -19,6 +19,9 @@ class AppLocalizationsPl extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Spróbuj ponownie';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'Odśwież';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'Operacja zakończona pomyślnie!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsPl extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Siatkówka';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'Oczekujące';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'Zaakceptowane';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'Odrzucone';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'Wygasłe';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'Anulowane';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'Nie udało się pobrać szczegółów gry!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'Zaproszenia';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'Nie udało się pobrać zaproszeń!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'Nie znaleziono zaproszeń!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Wiadomość';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Status';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Akceptuj';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Odrzuć';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Info';
@@ -369,4 +402,10 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Utwórz grę';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'Przyjaciele';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'Zaproszenia';
 }

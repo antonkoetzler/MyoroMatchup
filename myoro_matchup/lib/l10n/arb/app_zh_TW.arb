@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "請檢查您的連線後重試！",
   "mmErrorFeedbackActionButtonText": "重試",
 
+  "mmEmptyFeedbackActionButtonText": "重新整理",
+
   "mmSuccessFeedbackSubtitle": "操作成功完成！",
   "mmSuccessFeedbackActionButtonText": "完成",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "排球",
 
+  "invitationStatusEnumPendingLabel": "待處理",
+  "invitationStatusEnumAcceptedLabel": "已接受",
+  "invitationStatusEnumRejectedLabel": "已拒絕",
+  "invitationStatusEnumExpiredLabel": "已過期",
+  "invitationStatusEnumCancelledLabel": "已取消",
+
   "gameDetailsScreenBodyErrorStateTitle": "無法取得遊戲詳情！",
+  "invitationListingScreenAppBarTitle": "邀請",
   "invitationListingScreenBodyErrorStateTitle": "無法取得邀請！",
   "invitationListingScreenBodySuccessStateEmptyTitle": "找不到邀請！",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "訊息",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "狀態",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "接受",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "拒絕",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "資訊",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "玩家",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "邀請玩家",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "密碼不相符。",
 
   "mmAppBarMenuDrawerTitle": "選單",
-  "mmAppBarMenuDrawerCreateGameText": "建立遊戲"
+  "mmAppBarMenuDrawerCreateGameText": "建立遊戲",
+  "mmAppBarMenuDrawerFriendListingText": "朋友",
+  "mmAppBarMenuDrawerInvitationListingText": "邀請"
 }
 

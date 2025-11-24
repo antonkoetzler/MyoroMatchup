@@ -12,6 +12,8 @@ final class _BodyErrorState extends StatelessWidget {
     final state = viewModel.state;
     final invitationsRequestController = state.invitationsRequestController;
     final fetch = invitationsRequestController.fetch;
-    return MmErrorFeedback(title: invitationListingScreenBodyErrorStateTitle, onRetry: (_) => fetch());
+    return Center(
+      child: MmErrorFeedback(title: invitationListingScreenBodyErrorStateTitle, onRetry: (_) => fetch()),
+    );
   }
 }

@@ -19,6 +19,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'पुनः प्रयास करें';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'ताज़ा करें';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'ऑपरेशन सफलतापूर्वक पूर्ण हुआ!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsHi extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'वॉलीबॉल';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'लंबित';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'स्वीकृत';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'अस्वीकृत';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'समाप्त';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'रद्द';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'गेम विवरण प्राप्त करने में विफल!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'आमंत्रण';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'आमंत्रण प्राप्त करने में विफल!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'कोई आमंत्रण नहीं मिला!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'संदेश';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'स्थिति';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'स्वीकारें';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'अस्वीकारें';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'जानकारी';
@@ -369,4 +402,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'गेम बनाएं';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'मित्र';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'आमंत्रण';
 }

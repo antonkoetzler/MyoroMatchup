@@ -19,6 +19,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => 'Wiederholen';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => 'Aktualisieren';
+
+  @override
   String get mmSuccessFeedbackSubtitle => 'Vorgang erfolgreich abgeschlossen!';
 
   @override
@@ -75,13 +78,43 @@ class AppLocalizationsDe extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'Volleyball';
 
   @override
+  String get invitationStatusEnumPendingLabel => 'Ausstehend';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => 'Akzeptiert';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => 'Abgelehnt';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => 'Abgelaufen';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'Storniert';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'Spieldetails konnten nicht abgerufen werden!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => 'Einladungen';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => 'Einladungen konnten nicht abgerufen werden!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => 'Keine Einladungen gefunden!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Nachricht';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Status';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Annehmen';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Ablehnen';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Info';
@@ -369,4 +402,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'Spiel erstellen';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => 'Freunde';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => 'Einladungen';
 }

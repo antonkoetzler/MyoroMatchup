@@ -10,6 +10,14 @@ final class _BodySuccessStateNonEmptyStateItemInviter extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Text(_invitation.inviterName);
+    final themeExtension = context.resolveThemeExtension<InvitationListingScreenThemeExtension>();
+    final bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle =
+        themeExtension.bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle;
+    return Text(
+      _invitation.inviterName,
+      maxLines: 1,
+      overflow: TextOverflow.ellipsis,
+      style: bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle,
+    );
   }
 }

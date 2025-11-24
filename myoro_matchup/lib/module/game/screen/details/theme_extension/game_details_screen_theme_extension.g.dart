@@ -22,7 +22,7 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
     EdgeInsets? bodySuccessStateTabViewContentPadding,
     double? spacing,
     EdgeInsets? bodySuccessStateTabViewInfoTabContentPadding,
-    MyoroTextConfiguration? bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration,
+    MyoroTextStyle? bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
     TextStyle? invitationBottomSheetTitleTextStyle,
     double? invitationBottomSheetActionButtonsSpacing,
     double? invitationBottomSheetSpacing,
@@ -34,9 +34,9 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
       spacing: spacing ?? self.spacing,
       bodySuccessStateTabViewInfoTabContentPadding:
           bodySuccessStateTabViewInfoTabContentPadding ?? self.bodySuccessStateTabViewInfoTabContentPadding,
-      bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration:
-          bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration ??
-          self.bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration,
+      bodySuccessStateTabViewPlayersTabActionButtonTextStyle:
+          bodySuccessStateTabViewPlayersTabActionButtonTextStyle ??
+          self.bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
       invitationBottomSheetTitleTextStyle:
           invitationBottomSheetTitleTextStyle ?? self.invitationBottomSheetTitleTextStyle,
       invitationBottomSheetActionButtonsSpacing:
@@ -53,8 +53,8 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
         other.bodySuccessStateTabViewContentPadding == self.bodySuccessStateTabViewContentPadding &&
         other.spacing == self.spacing &&
         other.bodySuccessStateTabViewInfoTabContentPadding == self.bodySuccessStateTabViewInfoTabContentPadding &&
-        other.bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration ==
-            self.bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration &&
+        other.bodySuccessStateTabViewPlayersTabActionButtonTextStyle ==
+            self.bodySuccessStateTabViewPlayersTabActionButtonTextStyle &&
         other.invitationBottomSheetTitleTextStyle == self.invitationBottomSheetTitleTextStyle &&
         other.invitationBottomSheetActionButtonsSpacing == self.invitationBottomSheetActionButtonsSpacing &&
         other.invitationBottomSheetSpacing == self.invitationBottomSheetSpacing;
@@ -67,7 +67,7 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
       self.bodySuccessStateTabViewContentPadding,
       self.spacing,
       self.bodySuccessStateTabViewInfoTabContentPadding,
-      self.bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration,
+      self.bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
       self.invitationBottomSheetTitleTextStyle,
       self.invitationBottomSheetActionButtonsSpacing,
       self.invitationBottomSheetSpacing,
@@ -81,7 +81,7 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
       '  bodySuccessStateTabViewContentPadding: ${self.bodySuccessStateTabViewContentPadding},\n'
       '  spacing: ${self.spacing},\n'
       '  bodySuccessStateTabViewInfoTabContentPadding: ${self.bodySuccessStateTabViewInfoTabContentPadding},\n'
-      '  bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration: ${self.bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration},\n'
+      '  bodySuccessStateTabViewPlayersTabActionButtonTextStyle: ${self.bodySuccessStateTabViewPlayersTabActionButtonTextStyle},\n'
       '  invitationBottomSheetTitleTextStyle: ${self.invitationBottomSheetTitleTextStyle},\n'
       '  invitationBottomSheetActionButtonsSpacing: ${self.invitationBottomSheetActionButtonsSpacing},\n'
       '  invitationBottomSheetSpacing: ${self.invitationBottomSheetSpacing},\n'

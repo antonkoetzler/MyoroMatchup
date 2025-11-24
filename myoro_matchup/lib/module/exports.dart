@@ -1,3 +1,4 @@
+export 'friend/exports.dart';
 export 'game/exports.dart';
 export 'invitation/exports.dart';
 export 'home/exports.dart';

@@ -2,8 +2,16 @@ import 'package:go_router/go_router.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 final class AppRouter {
+  /// Friend module route.
+  static const friendModuleRoute = 'friend';
+
+  /// Game module route.
   static const gameModuleRoute = 'game';
+
+  /// Invitation module route.
   static const invitationModuleRoute = 'invitation';
+
+  /// Login signup module route.
   static const loginModuleRoute = 'login_signup';
 
   /// Navigates to a route.
@@ -57,6 +65,7 @@ final class AppRouter {
       navigatorKey: navigatorKey,
       initialLocation: _userService.isLoggedIn ? homeScreenLocation : loginSignupScreenLocation,
       routes: [
+        Routes.friendRoutes.friendListingScreen.goRoute,
         RedirectRoute(name: gameModuleRoute, routes: [gameDetailsScreen, gameCreationScreen]).goRoute,
         Routes.homeRoutes.homeScreen.goRoute,
         Routes.invitationRoutes.invitationListingScreen.goRoute,

@@ -10,6 +10,14 @@ final class _BodySuccessStateNonEmptyStateItemGame extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Text(_invitation.game.name);
+    final themeExtension = context.resolveThemeExtension<InvitationListingScreenThemeExtension>();
+    final bodySuccessStateNonEmptyStateItemGameTextStyle =
+        themeExtension.bodySuccessStateNonEmptyStateItemGameTextStyle;
+    return Text(
+      _invitation.game.name,
+      maxLines: 3,
+      overflow: TextOverflow.ellipsis,
+      style: bodySuccessStateNonEmptyStateItemGameTextStyle,
+    );
   }
 }

@@ -18,6 +18,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => '重试';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => '刷新';
+
+  @override
   String get mmSuccessFeedbackSubtitle => '操作成功完成！';
 
   @override
@@ -74,13 +77,43 @@ class AppLocalizationsZh extends AppLocalizations {
   String get sportsEnumVolleyballLabel => '排球';
 
   @override
+  String get invitationStatusEnumPendingLabel => '待处理';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => '已接受';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => '已拒绝';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => '已过期';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => '已取消';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => '无法获取游戏详情！';
+
+  @override
+  String get invitationListingScreenAppBarTitle => '邀请';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => '无法获取邀请！';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => '未找到邀请！';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => '消息';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => '状态';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => '接受';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => '拒绝';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '信息';
@@ -364,6 +397,12 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => '创建游戏';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => '朋友';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => '邀请';
 }
 
 /// The translations for Chinese, as used in Taiwan (`zh_TW`).
@@ -378,6 +417,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get mmErrorFeedbackActionButtonText => '重試';
+
+  @override
+  String get mmEmptyFeedbackActionButtonText => '重新整理';
 
   @override
   String get mmSuccessFeedbackSubtitle => '操作成功完成！';
@@ -436,13 +478,43 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get sportsEnumVolleyballLabel => '排球';
 
   @override
+  String get invitationStatusEnumPendingLabel => '待處理';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => '已接受';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => '已拒絕';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => '已過期';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => '已取消';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => '無法取得遊戲詳情！';
+
+  @override
+  String get invitationListingScreenAppBarTitle => '邀請';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => '無法取得邀請！';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => '找不到邀請！';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => '訊息';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => '狀態';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => '接受';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => '拒絕';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '資訊';
@@ -726,4 +798,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => '建立遊戲';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => '朋友';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => '邀請';
 }

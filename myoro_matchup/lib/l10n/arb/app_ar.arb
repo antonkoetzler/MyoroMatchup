@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "يرجى التحقق من اتصالك والمحاولة مرة أخرى!",
   "mmErrorFeedbackActionButtonText": "إعادة المحاولة",
 
+  "mmEmptyFeedbackActionButtonText": "تحديث",
+
   "mmSuccessFeedbackSubtitle": "تمت العملية بنجاح!",
   "mmSuccessFeedbackActionButtonText": "تم",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "الكرة الطائرة",
 
+  "invitationStatusEnumPendingLabel": "قيد الانتظار",
+  "invitationStatusEnumAcceptedLabel": "مقبول",
+  "invitationStatusEnumRejectedLabel": "مرفوض",
+  "invitationStatusEnumExpiredLabel": "منتهي الصلاحية",
+  "invitationStatusEnumCancelledLabel": "ملغي",
+
   "gameDetailsScreenBodyErrorStateTitle": "فشل في استرداد تفاصيل اللعبة!",
+  "invitationListingScreenAppBarTitle": "الدعوات",
   "invitationListingScreenBodyErrorStateTitle": "فشل في استرداد الدعوات!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "لم يتم العثور على دعوات!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "رسالة",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "الحالة",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "قبول",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "رفض",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "معلومات",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "اللاعبون",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "دعوة لاعب",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "كلمات المرور غير متطابقة.",
 
   "mmAppBarMenuDrawerTitle": "القائمة",
-  "mmAppBarMenuDrawerCreateGameText": "إنشاء لعبة"
+  "mmAppBarMenuDrawerCreateGameText": "إنشاء لعبة",
+  "mmAppBarMenuDrawerFriendListingText": "الأصدقاء",
+  "mmAppBarMenuDrawerInvitationListingText": "الدعوات"
 }
 

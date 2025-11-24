@@ -8,6 +8,11 @@ final class _Loader extends StatelessWidget {
   /// Builds function.
   @override
   Widget build(context) {
-    return const Center(child: CircularProgressIndicator());
+    final themeExtension = context.resolveThemeExtension<HomeScreenThemeExtension>();
+    final bodyUserSportStatsLoaderPadding = themeExtension.bodyUserSportStatsLoaderPadding;
+    return Padding(
+      padding: bodyUserSportStatsLoaderPadding,
+      child: const Center(child: MyoroCircularLoader()),
+    );
   }
 }

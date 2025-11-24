@@ -21,11 +21,12 @@ final class _InvitationBottomSheetActionButton extends StatelessWidget {
   @override
   Widget build(context) {
     return MyoroIconTextButton(
-      style: _isSecondary
-          ? const MyoroIconTextButtonStyle().secondary(context)
-          : const MyoroIconTextButtonStyle().bordered(context),
+      style:
+          (_isSecondary
+                  ? const MyoroIconTextButtonStyle().secondary(context)
+                  : const MyoroIconTextButtonStyle().bordered(context))
+              .copyWith(textStyle: const MyoroTextStyle(alignment: TextAlign.center)),
       text: _text,
-      textConfiguration: const MyoroTextConfiguration(alignment: TextAlign.center),
       isLoading: _isLoading,
       onTapUp: (_, _) => _onTapUp(),
     );

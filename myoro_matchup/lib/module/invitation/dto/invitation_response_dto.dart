@@ -14,6 +14,7 @@ part 'invitation_response_dto.g.dart';
 final class InvitationResponseDto with _$InvitationResponseDtoMixin {
   /// Default constructor.
   const InvitationResponseDto({
+    required this.id,
     required this.game,
     required this.inviterName,
     required this.status,
@@ -35,6 +36,7 @@ final class InvitationResponseDto with _$InvitationResponseDtoMixin {
     final respondedAt = createdAt.add(const Duration(days: 1));
 
     return InvitationResponseDto(
+      id: faker.randomGenerator.integer(100000, min: 1),
       game: InvitationGameResponseDto.fake(),
       inviterName: faker.person.name(),
       status: InvitationStatusEnum.fake(),
@@ -47,6 +49,9 @@ final class InvitationResponseDto with _$InvitationResponseDtoMixin {
 
   /// Game being invited to.
   final InvitationGameResponseDto game;
+
+  /// Invitation identifier.
+  final int id;
 
   /// Name of the user who sent the invitation.
   final String inviterName;
@@ -61,8 +66,9 @@ final class InvitationResponseDto with _$InvitationResponseDtoMixin {
   final DateTime expiresAt;
 
   /// When the invitee responded.
-  final DateTime respondedAt;
+  final DateTime? respondedAt;
 
   /// Optional message from the inviter.
+  @JsonKey(defaultValue: kMyoroEmptyString)
   final String message;
 }

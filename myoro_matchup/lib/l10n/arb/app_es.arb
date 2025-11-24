@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "Por favor, verifica tu conexión e inténtalo de nuevo.",
   "mmErrorFeedbackActionButtonText": "Reintentar",
 
+  "mmEmptyFeedbackActionButtonText": "Actualizar",
+
   "mmSuccessFeedbackSubtitle": "¡Operación completada con éxito!",
   "mmSuccessFeedbackActionButtonText": "Hecho",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "Voleibol",
 
+  "invitationStatusEnumPendingLabel": "Pendiente",
+  "invitationStatusEnumAcceptedLabel": "Aceptado",
+  "invitationStatusEnumRejectedLabel": "Rechazado",
+  "invitationStatusEnumExpiredLabel": "Expirado",
+  "invitationStatusEnumCancelledLabel": "Cancelado",
+
   "gameDetailsScreenBodyErrorStateTitle": "¡No se pudieron obtener los detalles del juego!",
+  "invitationListingScreenAppBarTitle": "Invitaciones",
   "invitationListingScreenBodyErrorStateTitle": "¡No se pudieron obtener las invitaciones!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "¡No se encontraron invitaciones!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Mensaje",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Estado",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Aceptar",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Rechazar",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Jugadores",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Invitar Jugador",
@@ -170,5 +183,7 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Las contraseñas no coinciden.",
 
   "mmAppBarMenuDrawerTitle": "Menú",
-  "mmAppBarMenuDrawerCreateGameText": "Crear Juego"
+  "mmAppBarMenuDrawerCreateGameText": "Crear Juego",
+  "mmAppBarMenuDrawerFriendListingText": "Amigos",
+  "mmAppBarMenuDrawerInvitationListingText": "Invitaciones"
 }

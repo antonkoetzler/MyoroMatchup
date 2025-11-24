@@ -6,7 +6,7 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 @JsonEnum()
 enum GameVisibilityEnum {
   /// Private; link-only.
-  @JsonValue('PUBLIC')
+  @JsonValue('PRIVATE')
   private,
 
   /// Public; everyone can see.

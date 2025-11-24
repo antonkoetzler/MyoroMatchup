@@ -1,14 +1,14 @@
 # TODO
 
-## What are we currently doing?
+## In progress
 
-game flow (inviting players, invitations screen, whatsapp api)
-
-- (**IN PROGRESS**) Inviting players and the invitation listing
-  - SELECT endpoint for the invitations listing screen
+Stripe, paywalls, and WhatsApp API
 
 ## List
 
-1. `STAGELOG.md`/`CHANGELOG.md` and deploy script
-1. Formatter and linting in Java
-1. Sentry
+- Formatter and linting settings/tasks for `myoro_matchup_api`
+- Sentry
+- `STAGELOG.md`/`CHANGELOG.md` and deploy script
+- Get second desktop setup as server and get refine env setup
+- Homologação
+- Ship

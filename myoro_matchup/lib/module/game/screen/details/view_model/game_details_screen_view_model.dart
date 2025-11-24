@@ -45,7 +45,7 @@ final class GameDetailsScreenViewModel {
   }
 
   /// [MyoroSearchInput.itemBuilder] of the invitation bottom sheet's user search input.
-  MyoroMenuItem invitationBottomSheetUserSearchInputItemBuilder(UserResponseDto user, _) {
+  MyoroMenuIconTextButtonItem invitationBottomSheetUserSearchInputItemBuilder(_, UserResponseDto user) {
     final gameDetailsScreenInvitationBottomSheetUserSearchInputItemText =
         localization.gameDetailsScreenInvitationBottomSheetUserSearchInputItemText;
     return MyoroMenuIconTextButtonItem(

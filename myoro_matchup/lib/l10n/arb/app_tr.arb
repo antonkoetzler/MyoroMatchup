@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "Lütfen bağlantınızı doğrulayın ve tekrar deneyin!",
   "mmErrorFeedbackActionButtonText": "Yeniden Dene",
 
+  "mmEmptyFeedbackActionButtonText": "Yenile",
+
   "mmSuccessFeedbackSubtitle": "İşlem başarıyla tamamlandı!",
   "mmSuccessFeedbackActionButtonText": "Tamamlandı",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "Voleybol",
 
+  "invitationStatusEnumPendingLabel": "Beklemede",
+  "invitationStatusEnumAcceptedLabel": "Kabul Edildi",
+  "invitationStatusEnumRejectedLabel": "Reddedildi",
+  "invitationStatusEnumExpiredLabel": "Süresi Doldu",
+  "invitationStatusEnumCancelledLabel": "İptal Edildi",
+
   "gameDetailsScreenBodyErrorStateTitle": "Oyun detayları alınamadı!",
+  "invitationListingScreenAppBarTitle": "Davetler",
   "invitationListingScreenBodyErrorStateTitle": "Davetiyeler alınamadı!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Davetiye bulunamadı!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Mesaj",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Durum",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Kabul Et",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Reddet",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Bilgi",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Oyuncular",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Oyuncu Davet Et",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Şifreler eşleşmiyor.",
 
   "mmAppBarMenuDrawerTitle": "Menü",
-  "mmAppBarMenuDrawerCreateGameText": "Oyun Oluştur"
+  "mmAppBarMenuDrawerCreateGameText": "Oyun Oluştur",
+  "mmAppBarMenuDrawerFriendListingText": "Arkadaşlar",
+  "mmAppBarMenuDrawerInvitationListingText": "Davetler"
 }
 

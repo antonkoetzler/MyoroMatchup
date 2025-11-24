@@ -17,7 +17,7 @@ final class _BodyUserGameListing extends StatelessWidget {
       builder: (_, request, _) => switch (request.status) {
         MyoroRequestEnum.idle => const _Loader(),
         MyoroRequestEnum.loading => const _Loader(),
-        MyoroRequestEnum.error => _BodyUserGameListingErrorState(),
+        MyoroRequestEnum.error => const _BodyUserGameListingErrorState(),
         MyoroRequestEnum.success =>
           request.data!.isEmpty
               ? const _BodyUserGameListingEmptyFeedback()

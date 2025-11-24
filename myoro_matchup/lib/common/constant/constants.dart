@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 
 /// [EdgeInsets] length.
-const kEdgeInsetsLength = kMyoroMultiplier * 2.0;
+const kEdgeInsetsLength = kMyoroMultiplier * 3;
 
 /// [MyoroAppBar.showBottomDivider] value.
 const kAppBarBordered = true;

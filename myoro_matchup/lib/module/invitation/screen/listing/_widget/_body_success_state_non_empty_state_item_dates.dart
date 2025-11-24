@@ -10,6 +10,13 @@ final class _BodySuccessStateNonEmptyStateItemDates extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Text(_invitation.createdAt.toLocal().toString());
+    final themeExtension = context.resolveThemeExtension<InvitationListingScreenThemeExtension>();
+    final bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle =
+        themeExtension.bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle;
+    return Text(
+      DateFormat('dd/MM/yyyy').format(_invitation.createdAt.toLocal()),
+      textAlign: TextAlign.center,
+      style: bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle,
+    );
   }
 }

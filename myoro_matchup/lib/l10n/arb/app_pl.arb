@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "Sprawdź połączenie i spróbuj ponownie!",
   "mmErrorFeedbackActionButtonText": "Spróbuj ponownie",
 
+  "mmEmptyFeedbackActionButtonText": "Odśwież",
+
   "mmSuccessFeedbackSubtitle": "Operacja zakończona pomyślnie!",
   "mmSuccessFeedbackActionButtonText": "Gotowe",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "Siatkówka",
 
+  "invitationStatusEnumPendingLabel": "Oczekujące",
+  "invitationStatusEnumAcceptedLabel": "Zaakceptowane",
+  "invitationStatusEnumRejectedLabel": "Odrzucone",
+  "invitationStatusEnumExpiredLabel": "Wygasłe",
+  "invitationStatusEnumCancelledLabel": "Anulowane",
+
   "gameDetailsScreenBodyErrorStateTitle": "Nie udało się pobrać szczegółów gry!",
+  "invitationListingScreenAppBarTitle": "Zaproszenia",
   "invitationListingScreenBodyErrorStateTitle": "Nie udało się pobrać zaproszeń!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Nie znaleziono zaproszeń!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Wiadomość",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Akceptuj",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Odrzuć",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Gracze",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Zaproś gracza",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Hasła nie pasują do siebie.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
-  "mmAppBarMenuDrawerCreateGameText": "Utwórz grę"
+  "mmAppBarMenuDrawerCreateGameText": "Utwórz grę",
+  "mmAppBarMenuDrawerFriendListingText": "Przyjaciele",
+  "mmAppBarMenuDrawerInvitationListingText": "Zaproszenia"
 }
 

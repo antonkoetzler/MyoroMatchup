@@ -18,6 +18,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => '再試行';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => '更新';
+
+  @override
   String get mmSuccessFeedbackSubtitle => '操作が正常に完了しました！';
 
   @override
@@ -74,13 +77,43 @@ class AppLocalizationsJa extends AppLocalizations {
   String get sportsEnumVolleyballLabel => 'バレーボール';
 
   @override
+  String get invitationStatusEnumPendingLabel => '保留中';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => '承認済み';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => '拒否済み';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => '期限切れ';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => 'キャンセル済み';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => 'ゲームの詳細を取得できませんでした！';
+
+  @override
+  String get invitationListingScreenAppBarTitle => '招待';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => '招待を取得できませんでした！';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => '招待が見つかりませんでした！';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'メッセージ';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'ステータス';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => '承諾';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => '辞退';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '情報';
@@ -364,4 +397,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => 'ゲームを作成';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => '友達';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => '招待';
 }

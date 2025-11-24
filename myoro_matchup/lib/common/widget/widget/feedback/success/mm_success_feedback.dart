@@ -6,7 +6,7 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 final class MmSuccessFeedback extends MyoroFeedback {
   MmSuccessFeedback({super.key, required String title, String? subtitle, required VoidCallback onFinishButtonTapped})
     : super(
-        iconConfiguration: const MyoroIconConfiguration(icon: Icons.check),
+        icon: Icons.check,
         title: title,
         subtitle: subtitle ?? localization.mmSuccessFeedbackSubtitle,
         actionButtonText: localization.mmSuccessFeedbackActionButtonText,

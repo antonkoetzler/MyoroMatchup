@@ -18,6 +18,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get mmErrorFeedbackActionButtonText => '다시 시도';
 
   @override
+  String get mmEmptyFeedbackActionButtonText => '새로고침';
+
+  @override
   String get mmSuccessFeedbackSubtitle => '작업이 성공적으로 완료되었습니다!';
 
   @override
@@ -74,13 +77,43 @@ class AppLocalizationsKo extends AppLocalizations {
   String get sportsEnumVolleyballLabel => '배구';
 
   @override
+  String get invitationStatusEnumPendingLabel => '대기 중';
+
+  @override
+  String get invitationStatusEnumAcceptedLabel => '수락됨';
+
+  @override
+  String get invitationStatusEnumRejectedLabel => '거부됨';
+
+  @override
+  String get invitationStatusEnumExpiredLabel => '만료됨';
+
+  @override
+  String get invitationStatusEnumCancelledLabel => '취소됨';
+
+  @override
   String get gameDetailsScreenBodyErrorStateTitle => '게임 세부 정보를 가져오지 못했습니다!';
+
+  @override
+  String get invitationListingScreenAppBarTitle => '초대';
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => '초대를 가져오지 못했습니다!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => '초대를 찾을 수 없습니다!';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => '메시지';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => '상태';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => '수락';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => '거절';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '정보';
@@ -364,4 +397,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerCreateGameText => '게임 만들기';
+
+  @override
+  String get mmAppBarMenuDrawerFriendListingText => '친구';
+
+  @override
+  String get mmAppBarMenuDrawerInvitationListingText => '초대';
 }

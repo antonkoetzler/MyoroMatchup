@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "कृपया अपना कनेक्शन सत्यापित करें और पुनः प्रयास करें!",
   "mmErrorFeedbackActionButtonText": "पुनः प्रयास करें",
 
+  "mmEmptyFeedbackActionButtonText": "ताज़ा करें",
+
   "mmSuccessFeedbackSubtitle": "ऑपरेशन सफलतापूर्वक पूर्ण हुआ!",
   "mmSuccessFeedbackActionButtonText": "पूर्ण",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "वॉलीबॉल",
 
+  "invitationStatusEnumPendingLabel": "लंबित",
+  "invitationStatusEnumAcceptedLabel": "स्वीकृत",
+  "invitationStatusEnumRejectedLabel": "अस्वीकृत",
+  "invitationStatusEnumExpiredLabel": "समाप्त",
+  "invitationStatusEnumCancelledLabel": "रद्द",
+
   "gameDetailsScreenBodyErrorStateTitle": "गेम विवरण प्राप्त करने में विफल!",
+  "invitationListingScreenAppBarTitle": "आमंत्रण",
   "invitationListingScreenBodyErrorStateTitle": "आमंत्रण प्राप्त करने में विफल!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "कोई आमंत्रण नहीं मिला!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "संदेश",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "स्थिति",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "स्वीकारें",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "अस्वीकारें",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "जानकारी",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "खिलाड़ी",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "खिलाड़ी को आमंत्रित करें",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "पासवर्ड मेल नहीं खाते।",
 
   "mmAppBarMenuDrawerTitle": "मेनू",
-  "mmAppBarMenuDrawerCreateGameText": "गेम बनाएं"
+  "mmAppBarMenuDrawerCreateGameText": "गेम बनाएं",
+  "mmAppBarMenuDrawerFriendListingText": "मित्र",
+  "mmAppBarMenuDrawerInvitationListingText": "आमंत्रण"
 }
 

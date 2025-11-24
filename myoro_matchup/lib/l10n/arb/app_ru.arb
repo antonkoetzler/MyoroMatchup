@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "Пожалуйста, проверьте ваше подключение и попробуйте снова!",
   "mmErrorFeedbackActionButtonText": "Повторить",
 
+  "mmEmptyFeedbackActionButtonText": "Обновить",
+
   "mmSuccessFeedbackSubtitle": "Операция успешно завершена!",
   "mmSuccessFeedbackActionButtonText": "Готово",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "Волейбол",
 
+  "invitationStatusEnumPendingLabel": "В ожидании",
+  "invitationStatusEnumAcceptedLabel": "Принято",
+  "invitationStatusEnumRejectedLabel": "Отклонено",
+  "invitationStatusEnumExpiredLabel": "Истекло",
+  "invitationStatusEnumCancelledLabel": "Отменено",
+
   "gameDetailsScreenBodyErrorStateTitle": "Не удалось получить детали игры!",
+  "invitationListingScreenAppBarTitle": "Приглашения",
   "invitationListingScreenBodyErrorStateTitle": "Не удалось получить приглашения!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Приглашения не найдены!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Сообщение",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Статус",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Принять",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Отклонить",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Инфо",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Игроки",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Пригласить игрока",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Пароли не совпадают.",
 
   "mmAppBarMenuDrawerTitle": "Меню",
-  "mmAppBarMenuDrawerCreateGameText": "Создать игру"
+  "mmAppBarMenuDrawerCreateGameText": "Создать игру",
+  "mmAppBarMenuDrawerFriendListingText": "Друзья",
+  "mmAppBarMenuDrawerInvitationListingText": "Приглашения"
 }
 

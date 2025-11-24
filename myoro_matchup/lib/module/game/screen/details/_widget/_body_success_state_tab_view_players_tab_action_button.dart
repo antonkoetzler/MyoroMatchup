@@ -10,13 +10,13 @@ final class _BodySuccessStateTabViewPlayersTabActionButton extends StatelessWidg
         localization.gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText;
 
     final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
-    final bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration =
-        themeExtension.bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration;
-
+    final bodySuccessStateTabViewPlayersTabActionButtonTextStyle =
+        themeExtension.bodySuccessStateTabViewPlayersTabActionButtonTextStyle;
     return MyoroIconTextButton(
-      style: const MyoroIconTextButtonStyle().secondary(context),
+      style: const MyoroIconTextButtonStyle()
+          .secondary(context)
+          .copyWith(textStyle: bodySuccessStateTabViewPlayersTabActionButtonTextStyle),
       text: bodySuccessStateTabViewPlayersTabActionButtonText,
-      textConfiguration: bodySuccessStateTabViewPlayersTabActionButtonTextConfiguration,
       onTapUp: (_, _) => _InvitationBottomSheet.show(context),
     );
   }

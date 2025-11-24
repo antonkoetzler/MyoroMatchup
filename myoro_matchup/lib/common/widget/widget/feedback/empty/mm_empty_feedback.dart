@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
+import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Empty feedback variant of [MyoroFeedback].
 final class MmEmptyFeedback extends MyoroFeedback {
@@ -16,17 +17,15 @@ final class MmEmptyFeedback extends MyoroFeedback {
     String subtitle = subtitleDefaultValue,
     String actionButtonText = actionButtonTextDefaultValue,
     VoidCallback? actionButtonCallback,
-  }) : assert(
-         !(actionButtonText.isNotEmpty ^ (actionButtonCallback != null)),
-         '[MmEmptyFeedbackConfiguration]: If [actionButtonText] is provided, [actionButtonCallback], vice versa.',
-       ),
-       super(
-         iconConfiguration: const MyoroIconConfiguration(icon: Icons.hourglass_empty),
+  }) : super(
+         icon: Icons.hourglass_empty,
          title: title,
          subtitle: subtitle,
-         actionButtonText: actionButtonText,
-         actionButtonConfiguration: actionButtonText.isNotEmpty
-             ? MyoroFeedbackActionButtonConfiguration(onTapUp: (_, _) => actionButtonCallback!())
+         actionButtonText: actionButtonCallback != null
+             ? (actionButtonText.isNotEmpty ? actionButtonText : localization.mmEmptyFeedbackActionButtonText)
+             : kMyoroEmptyString,
+         actionButtonConfiguration: actionButtonCallback != null
+             ? MyoroFeedbackActionButtonConfiguration(onTapUp: (_, _) => actionButtonCallback())
              : null,
        );
 }

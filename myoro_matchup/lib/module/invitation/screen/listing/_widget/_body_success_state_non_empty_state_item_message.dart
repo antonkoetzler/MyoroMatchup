@@ -10,6 +10,16 @@ final class _BodySuccessStateNonEmptyStateItemMessage extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return Text(_invitation.message);
+    final invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel =
+        localization.invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel;
+    final message = _invitation.message;
+    return SizedBox(
+      width: double.infinity,
+      child: MyoroField(
+        direction: Axis.vertical,
+        label: invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel,
+        data: message,
+      ),
+    );
   }
 }

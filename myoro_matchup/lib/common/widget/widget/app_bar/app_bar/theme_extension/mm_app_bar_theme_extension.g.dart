@@ -20,16 +20,20 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
   MmAppBarThemeExtension copyWith({
     bool? bordered,
     TextStyle? titleTextStyle,
-    MyoroIconConfiguration? backButtonIconConfiguration,
-    MyoroIconConfiguration? menuButtonIconConfiguration,
+    IconData? backButtonIcon,
+    double? backButtonIconSize,
+    IconData? menuButtonIcon,
+    double? menuButtonIconSize,
     double? menuDrawerSpacing,
     EdgeInsets? menuDrawerContentPadding,
   }) {
     return MmAppBarThemeExtension(
       bordered: bordered ?? self.bordered,
       titleTextStyle: titleTextStyle ?? self.titleTextStyle,
-      backButtonIconConfiguration: backButtonIconConfiguration ?? self.backButtonIconConfiguration,
-      menuButtonIconConfiguration: menuButtonIconConfiguration ?? self.menuButtonIconConfiguration,
+      backButtonIcon: backButtonIcon ?? self.backButtonIcon,
+      backButtonIconSize: backButtonIconSize ?? self.backButtonIconSize,
+      menuButtonIcon: menuButtonIcon ?? self.menuButtonIcon,
+      menuButtonIconSize: menuButtonIconSize ?? self.menuButtonIconSize,
       menuDrawerSpacing: menuDrawerSpacing ?? self.menuDrawerSpacing,
       menuDrawerContentPadding: menuDrawerContentPadding ?? self.menuDrawerContentPadding,
     );
@@ -41,8 +45,10 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
         other.runtimeType == runtimeType &&
         other.bordered == self.bordered &&
         other.titleTextStyle == self.titleTextStyle &&
-        other.backButtonIconConfiguration == self.backButtonIconConfiguration &&
-        other.menuButtonIconConfiguration == self.menuButtonIconConfiguration &&
+        other.backButtonIcon == self.backButtonIcon &&
+        other.backButtonIconSize == self.backButtonIconSize &&
+        other.menuButtonIcon == self.menuButtonIcon &&
+        other.menuButtonIconSize == self.menuButtonIconSize &&
         other.menuDrawerSpacing == self.menuDrawerSpacing &&
         other.menuDrawerContentPadding == self.menuDrawerContentPadding;
   }
@@ -52,8 +58,10 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
     return Object.hash(
       self.bordered,
       self.titleTextStyle,
-      self.backButtonIconConfiguration,
-      self.menuButtonIconConfiguration,
+      self.backButtonIcon,
+      self.backButtonIconSize,
+      self.menuButtonIcon,
+      self.menuButtonIconSize,
       self.menuDrawerSpacing,
       self.menuDrawerContentPadding,
     );
@@ -64,8 +72,10 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
       'MmAppBarThemeExtension(\n'
       '  bordered: ${self.bordered},\n'
       '  titleTextStyle: ${self.titleTextStyle},\n'
-      '  backButtonIconConfiguration: ${self.backButtonIconConfiguration},\n'
-      '  menuButtonIconConfiguration: ${self.menuButtonIconConfiguration},\n'
+      '  backButtonIcon: ${self.backButtonIcon},\n'
+      '  backButtonIconSize: ${self.backButtonIconSize},\n'
+      '  menuButtonIcon: ${self.menuButtonIcon},\n'
+      '  menuButtonIconSize: ${self.menuButtonIconSize},\n'
       '  menuDrawerSpacing: ${self.menuDrawerSpacing},\n'
       '  menuDrawerContentPadding: ${self.menuDrawerContentPadding},\n'
       ');';

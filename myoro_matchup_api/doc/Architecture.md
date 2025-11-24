@@ -47,3 +47,12 @@ Contains business logic service classes that handle application functionality - 
 ### `<PROJECT ROOT>/util`
 
 Contains utility classes with static helper methods and constants - create files here when you need shared helper functions, validation rules, or application-wide constants.
+
+## Debug Users
+
+When running the application in debug mode, the database is automatically populated with mock data including two test users:
+
+- **Username:** `user1` | **Password:** `password123`
+- **Username:** `user2` | **Password:** `password123`
+
+These users are only created when the database is empty (first startup). They exist solely for development and debugging purposes and are not available in production environments.

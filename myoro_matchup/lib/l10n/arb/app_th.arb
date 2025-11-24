@@ -4,6 +4,8 @@
   "mmErrorFeedbackSubtitle": "โปรดตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้ง!",
   "mmErrorFeedbackActionButtonText": "ลองอีกครั้ง",
 
+  "mmEmptyFeedbackActionButtonText": "รีเฟรช",
+
   "mmSuccessFeedbackSubtitle": "ดำเนินการเสร็จสมบูรณ์แล้ว!",
   "mmSuccessFeedbackActionButtonText": "เสร็จสิ้น",
 
@@ -40,9 +42,20 @@
   "sportsEnumFut7Label": "Fut7",
   "sportsEnumVolleyballLabel": "วอลเลย์บอล",
 
+  "invitationStatusEnumPendingLabel": "รอดำเนินการ",
+  "invitationStatusEnumAcceptedLabel": "ยอมรับแล้ว",
+  "invitationStatusEnumRejectedLabel": "ปฏิเสธแล้ว",
+  "invitationStatusEnumExpiredLabel": "หมดอายุ",
+  "invitationStatusEnumCancelledLabel": "ยกเลิกแล้ว",
+
   "gameDetailsScreenBodyErrorStateTitle": "ไม่สามารถดึงรายละเอียดเกมได้!",
+  "invitationListingScreenAppBarTitle": "คำเชิญ",
   "invitationListingScreenBodyErrorStateTitle": "ไม่สามารถดึงคำเชิญได้!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "ไม่พบคำเชิญ!",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "ข้อความ",
+  "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "สถานะ",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "ยอมรับ",
+  "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "ปฏิเสธ",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "ข้อมูล",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "ผู้เล่น",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "เชิญผู้เล่น",
@@ -170,6 +183,8 @@
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "รหัสผ่านไม่ตรงกัน",
 
   "mmAppBarMenuDrawerTitle": "เมนู",
-  "mmAppBarMenuDrawerCreateGameText": "สร้างเกม"
+  "mmAppBarMenuDrawerCreateGameText": "สร้างเกม",
+  "mmAppBarMenuDrawerFriendListingText": "เพื่อน",
+  "mmAppBarMenuDrawerInvitationListingText": "คำเชิญ"
 }
 

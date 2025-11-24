@@ -15,8 +15,10 @@ final class MmAppBarThemeExtension extends ThemeExtension<MmAppBarThemeExtension
   const MmAppBarThemeExtension({
     required this.bordered,
     required this.titleTextStyle,
-    required this.backButtonIconConfiguration,
-    required this.menuButtonIconConfiguration,
+    required this.backButtonIcon,
+    required this.backButtonIconSize,
+    required this.menuButtonIcon,
+    required this.menuButtonIconSize,
     required this.menuDrawerSpacing,
     required this.menuDrawerContentPadding,
   });
@@ -24,16 +26,20 @@ final class MmAppBarThemeExtension extends ThemeExtension<MmAppBarThemeExtension
   MmAppBarThemeExtension.fake()
     : bordered = faker.randomGenerator.boolean(),
       titleTextStyle = myoroFake<TextStyle>(),
-      backButtonIconConfiguration = MyoroIconConfiguration.fake(),
-      menuButtonIconConfiguration = MyoroIconConfiguration.fake(),
+      backButtonIcon = myoroFake<IconData>(),
+      backButtonIconSize = myoroFake<double>(),
+      menuButtonIcon = myoroFake<IconData>(),
+      menuButtonIconSize = myoroFake<double>(),
       menuDrawerSpacing = faker.randomGenerator.decimal(scale: 20),
       menuDrawerContentPadding = myoroFake<EdgeInsets>();
 
   MmAppBarThemeExtension.builder(TextTheme textTheme)
     : bordered = true,
       titleTextStyle = textTheme.titleMedium!,
-      backButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.arrow_back, size: kMyoroMultiplier * 6),
-      menuButtonIconConfiguration = const MyoroIconConfiguration(icon: Icons.menu, size: kMyoroMultiplier * 6),
+      backButtonIcon = Icons.arrow_back,
+      backButtonIconSize = kMyoroMultiplier * 6,
+      menuButtonIcon = Icons.menu,
+      menuButtonIconSize = kMyoroMultiplier * 6,
       menuDrawerSpacing = kMyoroMultiplier * 2,
       menuDrawerContentPadding = const EdgeInsets.all(kMyoroMultiplier * 2);
 
@@ -43,11 +49,17 @@ final class MmAppBarThemeExtension extends ThemeExtension<MmAppBarThemeExtension
   /// [TextStyle] of [MmAppBarConfiguration.title].
   final TextStyle titleTextStyle;
 
-  /// [MyoroIconTextButtonConfiguration] of the back button.
-  final MyoroIconConfiguration backButtonIconConfiguration;
+  /// Icon of the back button.
+  final IconData backButtonIcon;
 
-  /// [MyoroIconConfiguration] of the menu button.
-  final MyoroIconConfiguration menuButtonIconConfiguration;
+  /// Size of the back button icon.
+  final double backButtonIconSize;
+
+  /// Icon of the menu button.
+  final IconData menuButtonIcon;
+
+  /// Size of the menu button icon.
+  final double menuButtonIconSize;
 
   /// Spacing between the menu drawer items.
   final double menuDrawerSpacing;
@@ -61,7 +73,8 @@ final class MmAppBarThemeExtension extends ThemeExtension<MmAppBarThemeExtension
     return copyWith(
       bordered: myoroFallbackLerp(bordered, other.bordered, t),
       titleTextStyle: TextStyle.lerp(titleTextStyle, other.titleTextStyle, t),
-      backButtonIconConfiguration: myoroFallbackLerp(backButtonIconConfiguration, other.backButtonIconConfiguration, t),
+      backButtonIcon: myoroFallbackLerp(backButtonIcon, other.backButtonIcon, t),
+      backButtonIconSize: lerpDouble(backButtonIconSize, other.backButtonIconSize, t),
       menuDrawerSpacing: lerpDouble(menuDrawerSpacing, other.menuDrawerSpacing, t),
       menuDrawerContentPadding: EdgeInsets.lerp(menuDrawerContentPadding, other.menuDrawerContentPadding, t),
     );

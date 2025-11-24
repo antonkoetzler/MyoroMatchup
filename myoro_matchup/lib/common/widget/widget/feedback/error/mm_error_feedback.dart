@@ -15,7 +15,7 @@ class MmErrorFeedback extends MyoroFeedback {
     String? subtitle,
     required void Function(BuildContext) onRetry,
   }) : super(
-         iconConfiguration: showIcon ? const MyoroIconConfiguration(icon: Icons.error) : null,
+         icon: showIcon ? Icons.error : null,
          title: title,
          subtitle: subtitle ?? localization.mmErrorFeedbackSubtitle,
          actionButtonText: localization.mmErrorFeedbackActionButtonText,
