@@ -38,6 +38,12 @@ public class GameResponseDto {
   /** Banner of the game. */
   private String banner;
 
+  /** WhatsApp group chat invite link. */
+  private String whatsAppGroupChatLink;
+
+  /** Whether to use the group chat bot. */
+  private Boolean useGroupChatBot;
+
   /** Default constructor. */
   public GameResponseDto() {
   }
@@ -255,5 +261,41 @@ public class GameResponseDto {
    */
   public void setBanner(String banner) {
     this.banner = banner;
+  }
+
+  /**
+   * Getter for whatsAppGroupChatLink
+   * 
+   * @return the WhatsApp group chat invite link
+   */
+  public String getWhatsAppGroupChatLink() {
+    return whatsAppGroupChatLink;
+  }
+
+  /**
+   * Setter for whatsAppGroupChatLink
+   * 
+   * @param whatsAppGroupChatLink the WhatsApp group chat invite link
+   */
+  public void setWhatsAppGroupChatLink(String whatsAppGroupChatLink) {
+    this.whatsAppGroupChatLink = whatsAppGroupChatLink;
+  }
+
+  /**
+   * Getter for useGroupChatBot
+   * 
+   * @return whether to use the group chat bot
+   */
+  public Boolean getUseGroupChatBot() {
+    return useGroupChatBot;
+  }
+
+  /**
+   * Setter for useGroupChatBot
+   * 
+   * @param useGroupChatBot whether to use the group chat bot
+   */
+  public void setUseGroupChatBot(Boolean useGroupChatBot) {
+    this.useGroupChatBot = useGroupChatBot;
   }
 }

@@ -79,6 +79,14 @@ public class GameModel {
   @JoinTable(name = "game_players", joinColumns = @JoinColumn(name = "game_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
   private List<UserModel> players;
 
+  /** WhatsApp group chat invite link. */
+  @Column(name = "whats_app_group_chat_link", nullable = true)
+  private String whatsAppGroupChatLink;
+
+  /** Whether to use the group chat bot. */
+  @Column(name = "use_group_chat_bot", nullable = false)
+  private Boolean useGroupChatBot = false;
+
   /** Default constructor. */
   public GameModel() {
   }
@@ -304,5 +312,41 @@ public class GameModel {
    */
   public void setPlayers(List<UserModel> players) {
     this.players = players;
+  }
+
+  /**
+   * Getter for whatsAppGroupChatLink
+   * 
+   * @return the WhatsApp group chat invite link
+   */
+  public String getWhatsAppGroupChatLink() {
+    return whatsAppGroupChatLink;
+  }
+
+  /**
+   * Setter for whatsAppGroupChatLink
+   * 
+   * @param whatsAppGroupChatLink the WhatsApp group chat invite link
+   */
+  public void setWhatsAppGroupChatLink(String whatsAppGroupChatLink) {
+    this.whatsAppGroupChatLink = whatsAppGroupChatLink;
+  }
+
+  /**
+   * Getter for useGroupChatBot
+   * 
+   * @return whether to use the group chat bot
+   */
+  public Boolean getUseGroupChatBot() {
+    return useGroupChatBot;
+  }
+
+  /**
+   * Setter for useGroupChatBot
+   * 
+   * @param useGroupChatBot whether to use the group chat bot
+   */
+  public void setUseGroupChatBot(Boolean useGroupChatBot) {
+    this.useGroupChatBot = useGroupChatBot;
   }
 }

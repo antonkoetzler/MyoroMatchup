@@ -42,7 +42,7 @@ public class GameService {
   public Long create(GameCreationRequestDto request, Long userId) {
     UserModel owner = userRepository.findById(userId)
         .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
-    
+
     GameModel game = new GameModel();
     game.setName(request.getName());
     game.setSport(request.getSport());
@@ -73,6 +73,7 @@ public class GameService {
     game.setVisibility(request.getVisibility());
     game.setProfilePicture(request.getProfilePicture());
     game.setBanner(request.getBanner());
+    game.setUseGroupChatBot(false);
     return gameRepository.save(game).getId();
   }
 
@@ -159,6 +160,25 @@ public class GameService {
       dto.setLocation(locationDto);
     }
 
+    dto.setWhatsAppGroupChatLink(game.getWhatsAppGroupChatLink());
+    dto.setUseGroupChatBot(game.getUseGroupChatBot());
+
     return dto;
+  }
+
+  /** Set WhatsApp group chat link for a game. */
+  public void setWhatsAppGroupChatLink(Long gameId, String link) {
+    GameModel game = gameRepository.findById(gameId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    game.setWhatsAppGroupChatLink(link);
+    gameRepository.save(game);
+  }
+
+  /** Set use WhatsApp group chat bot flag for a game. */
+  public void setUseWhatsAppGroupChatBot(Long gameId, Boolean useBot) {
+    GameModel game = gameRepository.findById(gameId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    game.setUseGroupChatBot(useBot);
+    gameRepository.save(game);
   }
 }

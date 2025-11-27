@@ -13,7 +13,8 @@ class AppLocalizationsTr extends AppLocalizations {
       'Sunucuya bağlanılamadı, lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.';
 
   @override
-  String get mmErrorFeedbackSubtitle => 'Lütfen bağlantınızı doğrulayın ve tekrar deneyin!';
+  String get mmErrorFeedbackSubtitle =>
+      'Lütfen bağlantınızı doğrulayın ve tekrar deneyin!';
 
   @override
   String get mmErrorFeedbackActionButtonText => 'Yeniden Dene';
@@ -43,7 +44,11 @@ class AppLocalizationsTr extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'Kıta';
 
   @override
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
     return '$city, $emoji $countryName';
   }
 
@@ -93,94 +98,137 @@ class AppLocalizationsTr extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => 'İptal Edildi';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle => 'Oyun detayları alınamadı!';
+  String get gameDetailsScreenBodyErrorStateTitle =>
+      'Oyun detayları alınamadı!';
 
   @override
   String get invitationListingScreenAppBarTitle => 'Davetler';
 
   @override
-  String get invitationListingScreenBodyErrorStateTitle => 'Davetiyeler alınamadı!';
+  String get invitationListingScreenBodyErrorStateTitle =>
+      'Davetiyeler alınamadı!';
 
   @override
-  String get invitationListingScreenBodySuccessStateEmptyTitle => 'Davetiye bulunamadı!';
+  String get invitationListingScreenBodySuccessStateEmptyTitle =>
+      'Davetiye bulunamadı!';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Mesaj';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel =>
+      'Mesaj';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Durum';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel =>
+      'Durum';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Kabul Et';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText =>
+      'Kabul Et';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Reddet';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText =>
+      'Reddet';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Bilgi';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Oyuncular';
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText =>
+      'Oyuncular';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'Oyuncu Davet Et';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText =>
+      'Oyuncu Davet Et';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetTitleText => 'Oyuncu Davet Et';
+  String get gameDetailsScreenInvitationBottomSheetTitleText =>
+      'Oyuncu Davet Et';
 
   @override
-  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(
+    String username,
+    String name,
+  ) {
     return '$username ($name)';
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'Kullanıcı ara...';
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+      'Kullanıcı ara...';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'Mesaj';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'İptal';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText =>
+      'İptal';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'Gönder';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText =>
+      'Gönder';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Sıralamalar';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
+      'Sıralamalar';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => 'Sıklık';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel =>
+      'Sıklık';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => 'Ana Gün';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel =>
+      'Ana Gün';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel => 'Ana Zamanlar';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
+      'Ana Zamanlar';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
       'İki Haftada Bir Gün';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
       'İki Haftada Bir Zamanlar';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => 'Üye Fiyatı';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel =>
+      'Üye Fiyatı';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => 'Misafir Fiyatı';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel =>
+      'Misafir Fiyatı';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => 'Yaş Aralığı';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel =>
+      'Yaş Aralığı';
 
   @override
-  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(
+    int minAge,
+    int maxAge,
+  ) {
     return '$minAge - $maxAge';
   }
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Görünürlük';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel =>
+      'Görünürlük';
 
   @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
@@ -195,13 +243,16 @@ class AppLocalizationsTr extends AppLocalizations {
   String get homeScreenNewGameButtonText => 'Oyun oluştur';
 
   @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle => 'Kullanıcı spor istatistikleri alınamadı!';
+  String get homeScreenBodyUserSportStatsErrorStateTitle =>
+      'Kullanıcı spor istatistikleri alınamadı!';
 
   @override
-  String get homeScreenBodyUserGameListingErrorStateTitle => 'Oyunlarınız alınamadı!';
+  String get homeScreenBodyUserGameListingErrorStateTitle =>
+      'Oyunlarınız alınamadı!';
 
   @override
-  String get homeScreenBodyUserGameListingEmptyTitle => 'Henüz hiçbir oyuna katılmadınız!';
+  String get homeScreenBodyUserGameListingEmptyTitle =>
+      'Henüz hiçbir oyuna katılmadınız!';
 
   @override
   String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
@@ -261,34 +312,45 @@ class AppLocalizationsTr extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputLabel => 'İsim';
 
   @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder => 'örn. Haftalık Futbol Maçı';
+  String get gameCreationScreenNameScreenNameInputPlaceholder =>
+      'örn. Haftalık Futbol Maçı';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'İsim boş olamaz.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
+      'İsim boş olamaz.';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage => 'İsim en az 3 karakter uzunluğunda olmalıdır.';
+  String get gameCreationScreenNameScreenNameInputLengthMessage =>
+      'İsim en az 3 karakter uzunluğunda olmalıdır.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Spor';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Sıklık ve Tarih/Saat';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
+      'Sıklık ve Tarih/Saat';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Sıklık';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      'Sıklık';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'Başlangıç';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      'Başlangıç';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'Bitiş';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
+      'Bitiş';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage => 'Başlangıç saati boş olamaz.';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+      'Başlangıç saati boş olamaz.';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage => 'Bitiş saati boş olamaz.';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+      'Bitiş saati boş olamaz.';
 
   @override
   String get gameCreationScreenPriceScreenTitle => 'Fiyat';
@@ -306,7 +368,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Konum';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage => 'Lütfen bir konum seçin.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      'Lütfen bir konum seçin.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -318,13 +381,17 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle => 'Görünürlük ve Görsel';
+  String get gameCreationScreenVisibilityAndImageScreenTitle =>
+      'Görünürlük ve Görsel';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'Profil Resmi';
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      'Profil Resmi';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'Afiş';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      'Afiş';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Önceki';
@@ -336,10 +403,12 @@ class AppLocalizationsTr extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'Bitir';
 
   @override
-  String get gameCreationScreenGameCreationSuccessMessage => 'Oyun başarıyla oluşturuldu!';
+  String get gameCreationScreenGameCreationSuccessMessage =>
+      'Oyun başarıyla oluşturuldu!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'Kullanıcı adı/e-posta';
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+      'Kullanıcı adı/e-posta';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'Şifre';
@@ -348,7 +417,8 @@ class AppLocalizationsTr extends AppLocalizations {
   String get loginSignupScreenLoginLoginButton => 'Giriş Yap';
 
   @override
-  String get loginSignupScreenLoginForgotPasswordButton => 'Şifrenizi mi unuttunuz?';
+  String get loginSignupScreenLoginForgotPasswordButton =>
+      'Şifrenizi mi unuttunuz?';
 
   @override
   String get loginSignupScreenSignupNameInputPlaceholder => 'İsim';
@@ -369,31 +439,40 @@ class AppLocalizationsTr extends AppLocalizations {
   String get loginSignupScreenSignupSignupButton => 'Kayıt Ol';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'MyoroMatchup\'a yeni misiniz? Kayıt olun!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'MyoroMatchup\'a yeni misiniz? Kayıt olun!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'Zaten kayıtlı mısınız? Giriş yapın!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      'Zaten kayıtlı mısınız? Giriş yapın!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'Kullanıcı adı/e-posta boş olamaz.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'Kullanıcı adı/e-posta boş olamaz.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'Şifre boş olamaz.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'Şifre boş olamaz.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'İsim boş olamaz.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      'İsim boş olamaz.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'Kullanıcı adı boş olamaz.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'Kullanıcı adı boş olamaz.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'E-posta boş olamaz.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'E-posta boş olamaz.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'Şifre alanları boş olamaz.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'Şifre alanları boş olamaz.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Şifreler eşleşmiyor.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      'Şifreler eşleşmiyor.';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Menü';

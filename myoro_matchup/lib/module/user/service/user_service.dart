@@ -1,7 +1,7 @@
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
-/// Service of [User].
+/// User service.
 @singleton
 final class UserService {
   /// Default constructor.

@@ -9,7 +9,8 @@ class AppLocalizationsJa extends AppLocalizations {
   AppLocalizationsJa([String locale = 'ja']) : super(locale);
 
   @override
-  String get httpClientConnectionExceptionMessage => 'サーバーに接続できませんでした。インターネット接続を確認して、もう一度お試しください。';
+  String get httpClientConnectionExceptionMessage =>
+      'サーバーに接続できませんでした。インターネット接続を確認して、もう一度お試しください。';
 
   @override
   String get mmErrorFeedbackSubtitle => '接続を確認して、もう一度お試しください！';
@@ -42,7 +43,11 @@ class AppLocalizationsJa extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => '大陸';
 
   @override
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
     return '$city, $emoji $countryName';
   }
 
@@ -101,19 +106,28 @@ class AppLocalizationsJa extends AppLocalizations {
   String get invitationListingScreenBodyErrorStateTitle => '招待を取得できませんでした！';
 
   @override
-  String get invitationListingScreenBodySuccessStateEmptyTitle => '招待が見つかりませんでした！';
+  String get invitationListingScreenBodySuccessStateEmptyTitle =>
+      '招待が見つかりませんでした！';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'メッセージ';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel =>
+      'メッセージ';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'ステータス';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel =>
+      'ステータス';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => '承諾';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText =>
+      '承諾';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => '辞退';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText =>
+      '辞退';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '情報';
@@ -122,62 +136,92 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'プレイヤー';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'プレイヤーを招待';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText =>
+      'プレイヤーを招待';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetTitleText => 'プレイヤーを招待';
 
   @override
-  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(
+    String username,
+    String name,
+  ) {
     return '$username ($name)';
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder => 'ユーザーを検索...';
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+      'ユーザーを検索...';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'メッセージ';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'キャンセル';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText =>
+      'キャンセル';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '送信';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '送信';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'ランキング';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => '頻度';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel =>
+      '頻度';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => '主要日';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel =>
+      '主要日';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel => '主要時間';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
+      '主要時間';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel => '隔週日';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+      '隔週日';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel => '隔週時間';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+      '隔週時間';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => 'メンバー価格';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel =>
+      'メンバー価格';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => 'ドロップイン価格';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel =>
+      'ドロップイン価格';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => '年齢範囲';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel =>
+      '年齢範囲';
 
   @override
-  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(
+    int minAge,
+    int maxAge,
+  ) {
     return '$minAgeから$maxAgeまで';
   }
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => '公開設定';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel =>
+      '公開設定';
 
   @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
@@ -192,10 +236,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get homeScreenNewGameButtonText => 'ゲームを作成';
 
   @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle => 'ユーザーのスポーツ統計を取得できませんでした！';
+  String get homeScreenBodyUserSportStatsErrorStateTitle =>
+      'ユーザーのスポーツ統計を取得できませんでした！';
 
   @override
-  String get homeScreenBodyUserGameListingErrorStateTitle => 'あなたのゲームを取得できませんでした！';
+  String get homeScreenBodyUserGameListingErrorStateTitle =>
+      'あなたのゲームを取得できませんでした！';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle => 'まだどのゲームにも参加していません！';
@@ -264,7 +310,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputEmptyMessage => '名前は空にできません。';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage => '名前は少なくとも3文字である必要があります。';
+  String get gameCreationScreenNameScreenNameInputLengthMessage =>
+      '名前は少なくとも3文字である必要があります。';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'スポーツ';
@@ -273,19 +320,25 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameCreationScreenFrequencyDayTimeScreenTitle => '頻度と日時';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => '頻度';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      '頻度';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => '開始';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      '開始';
 
   @override
   String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => '終了';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage => '開始時刻は空にできません。';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+      '開始時刻は空にできません。';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage => '終了時刻は空にできません。';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+      '終了時刻は空にできません。';
 
   @override
   String get gameCreationScreenPriceScreenTitle => '価格';
@@ -303,7 +356,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => '場所';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage => '場所を選択してください。';
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      '場所を選択してください。';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -318,10 +372,13 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameCreationScreenVisibilityAndImageScreenTitle => '公開設定と画像';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'プロフィール写真';
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      'プロフィール写真';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'バナー';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      'バナー';
 
   @override
   String get gameCreationScreenButtonPreviousText => '前へ';
@@ -336,7 +393,8 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameCreationScreenGameCreationSuccessMessage => 'ゲームが正常に作成されました！';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => 'ユーザー名/メールアドレス';
+  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+      'ユーザー名/メールアドレス';
 
   @override
   String get loginSignupScreenLoginPasswordInputPlaceholder => 'パスワード';
@@ -366,31 +424,39 @@ class AppLocalizationsJa extends AppLocalizations {
   String get loginSignupScreenSignupSignupButton => '登録';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'MyoroMatchupが初めてですか？登録してください！';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'MyoroMatchupが初めてですか？登録してください！';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText => '既に登録済みですか？ログインしてください！';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      '既に登録済みですか？ログインしてください！';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'ユーザー名/メールアドレスは空にできません。';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'ユーザー名/メールアドレスは空にできません。';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'パスワードは空にできません。';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'パスワードは空にできません。';
 
   @override
   String get loginSignupScreenSignupFormNameFieldEmptyMessage => '名前は空にできません。';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'ユーザー名は空にできません。';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'ユーザー名は空にできません。';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'メールアドレスは空にできません。';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'メールアドレスは空にできません。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'パスワードフィールドは空にできません。';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'パスワードフィールドは空にできません。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'パスワードが一致しません。';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      'パスワードが一致しません。';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'メニュー';
