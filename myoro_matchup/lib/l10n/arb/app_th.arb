@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณและลองอีกครั้ง",
   
-  "mmErrorFeedbackSubtitle": "โปรดตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้ง!",
-  "mmErrorFeedbackActionButtonText": "ลองอีกครั้ง",
-
   "mmEmptyFeedbackActionButtonText": "รีเฟรช",
-
-  "mmSuccessFeedbackSubtitle": "ดำเนินการเสร็จสมบูรณ์แล้ว!",
-  "mmSuccessFeedbackActionButtonText": "เสร็จสิ้น",
 
   "mmLocationInputTypeEnumPlaceLabel": "สถานที่",
   "mmLocationInputTypeEnumCityLabel": "เมือง",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "หมดอายุ",
   "invitationStatusEnumCancelledLabel": "ยกเลิกแล้ว",
 
-  "gameDetailsScreenBodyErrorStateTitle": "ไม่สามารถดึงรายละเอียดเกมได้!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "ไม่สามารถดึงรายละเอียดเกมได้!",
   "invitationListingScreenAppBarTitle": "คำเชิญ",
+  "userDetailsScreenAppBarTitle": "รายละเอียดผู้ใช้",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {สมัครสมาชิกแล้ว} other {ยังไม่ได้สมัครสมาชิก}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "สถานะการสมัครสมาชิก: {isSubscribed, select, true {สมัครสมาชิกแล้ว} other {ยังไม่ได้สมัครสมาชิก}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "สมัครสมาชิก",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "เปลี่ยนการมองเห็นโปรไฟล์",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการเปลี่ยนการมองเห็นโปรไฟล์ของคุณ?",
+  "userDetailsScreenBodyLocationLabel": "ตำแหน่ง",
+  "userDetailsScreenBodyLocationCountryLabel": "ประเทศ",
+  "userDetailsScreenBodyLocationStateLabel": "รัฐ/จังหวัด",
+  "userDetailsScreenBodyLocationCityLabel": "เมือง",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "แก้ไขตำแหน่ง",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "ไม่สามารถดึงคำเชิญได้!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "ไม่พบคำเชิญ!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "ข้อความ",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "ค้นหาผู้ใช้...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "ค้นหาผู้ใช้...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "ข้อความ",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "ยกเลิก",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "ส่ง",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "การมองเห็น",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "ลิงก์แชทกลุ่ม WhatsApp",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "ใช้บอทแชทกลุ่ม WhatsApp",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "ใช้บอทแชทกลุ่ม WhatsApp",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "คุณต้องการเปิดใช้งานบอทแชทกลุ่ม WhatsApp สำหรับเกมนี้หรือไม่?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "ลิงก์กลุ่ม WhatsApp จำเป็นต้องใช้บอท",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "ลิงก์แชทกลุ่ม WhatsApp จำเป็นต้องระบุ",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "ลิงก์แชทกลุ่ม WhatsApp ต้องอยู่ในรูปแบบ: https://chat.whatsapp.com/[รหัส]",
+
+  "playerDetailsBottomSheetAddAsFriendText": "เพิ่มเป็นเพื่อน",
+  "playerDetailsBottomSheetBlockText": "บล็อก",
+  "sendFriendRequestConfirmationBottomSheetTitle": "ส่งคำขอเป็นเพื่อน",
+  "sendFriendRequestConfirmationBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการส่งคำขอเป็นเพื่อนไปยังผู้ใช้รายนี้?",
+  "blockUserConfirmationBottomSheetTitle": "บล็อกผู้ใช้",
+  "blockUserConfirmationBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการบล็อกผู้ใช้รายนี้?",
+  "unblockUserConfirmationBottomSheetTitle": "ยกเลิกการบล็อกผู้ใช้",
+  "unblockUserConfirmationBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการบล็อกผู้ใช้รายนี้?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "เกิดข้อผิดพลาดในการดึงเกม!",
   "homeScreenBodySuccessStateEmptyTitle": "ไม่พบเกม!",
   "homeScreenNewGameButtonText": "สร้างเกม",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "ไม่สามารถดึงสถิติกีฬาของผู้ใช้ได้!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "ไม่สามารถดึงเกมของคุณได้!",
   "homeScreenBodyUserGameListingEmptyTitle": "คุณยังไม่ได้เข้าร่วมเกมใดเลย!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Edit profile",
 
   "gameCreationScreenAppBarTitle": "สร้างเกม",
   "gameCreationScreenNameScreenTitle": "ชื่อ",
   "gameCreationScreenNameScreenNameInputLabel": "ชื่อ",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "เช่น เกมฟุตบอลรายสัปดาห์",
+  "gameCreationScreenNameScreenNameInputLabel": "เช่น เกมฟุตบอลรายสัปดาห์",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "ชื่อไม่สามารถว่างได้",
   "gameCreationScreenNameScreenNameInputLengthMessage": "ชื่อต้องมีอย่างน้อย 3 ตัวอักษร",
   "gameCreationScreenSportScreenTitle": "กีฬา",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "เสร็จสิ้น",
   "gameCreationScreenGameCreationSuccessMessage": "สร้างเกมสำเร็จแล้ว!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "ชื่อผู้ใช้/อีเมล",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "รหัสผ่าน",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "ชื่อผู้ใช้/อีเมล",
+  "loginSignupScreenLoginPasswordInputLabel": "รหัสผ่าน",
   "loginSignupScreenLoginLoginButton": "เข้าสู่ระบบ",
   "loginSignupScreenLoginForgotPasswordButton": "ลืมรหัสผ่าน?",
-  "loginSignupScreenSignupNameInputPlaceholder": "ชื่อ",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "ชื่อผู้ใช้",
-  "loginSignupScreenSignupEmailInputPlaceholder": "อีเมล",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "รหัสผ่าน",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "รหัสผ่าน",
+  "loginSignupScreenSignupNameInputLabel": "ชื่อ",
+  "loginSignupScreenSignupUsernameInputLabel": "ชื่อผู้ใช้",
+  "loginSignupScreenSignupEmailInputLabel": "อีเมล",
+  "loginSignupScreenSignupPasswordInputLabel": "รหัสผ่าน",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "รหัสผ่าน",
   "loginSignupScreenSignupSignupButton": "สมัครสมาชิก",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "ใหม่ใน MyoroMatchup? สมัครสมาชิก!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "ลงทะเบียนแล้ว? เข้าสู่ระบบ!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "ชื่อไม่สามารถว่างได้",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "ชื่อผู้ใช้ไม่สามารถว่างได้",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "อีเมลไม่สามารถว่างได้",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "ประเทศไม่สามารถว่างได้",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "ฟิลด์รหัสผ่านไม่สามารถว่างได้",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "รหัสผ่านไม่ตรงกัน",
 

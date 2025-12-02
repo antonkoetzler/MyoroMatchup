@@ -137,35 +137,11 @@ abstract class AppLocalizations {
   /// **'Couldn\'t connect to server, please check your internet and try again.'**
   String get httpClientConnectionExceptionMessage;
 
-  /// No description provided for @mmErrorFeedbackSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Please verify your connection and try again!'**
-  String get mmErrorFeedbackSubtitle;
-
-  /// No description provided for @mmErrorFeedbackActionButtonText.
-  ///
-  /// In en, this message translates to:
-  /// **'Retry'**
-  String get mmErrorFeedbackActionButtonText;
-
   /// No description provided for @mmEmptyFeedbackActionButtonText.
   ///
   /// In en, this message translates to:
   /// **'Refresh'**
   String get mmEmptyFeedbackActionButtonText;
-
-  /// No description provided for @mmSuccessFeedbackSubtitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Operation completed successfully!'**
-  String get mmSuccessFeedbackSubtitle;
-
-  /// No description provided for @mmSuccessFeedbackActionButtonText.
-  ///
-  /// In en, this message translates to:
-  /// **'Done'**
-  String get mmSuccessFeedbackActionButtonText;
 
   /// No description provided for @mmLocationInputTypeEnumPlaceLabel.
   ///
@@ -297,17 +273,93 @@ abstract class AppLocalizations {
   /// **'Cancelled'**
   String get invitationStatusEnumCancelledLabel;
 
-  /// No description provided for @gameDetailsScreenBodyErrorStateTitle.
+  /// No description provided for @gameDetailsScreenBodyErrorFeedbackTitle.
   ///
   /// In en, this message translates to:
   /// **'Failed to retrieve game details!'**
-  String get gameDetailsScreenBodyErrorStateTitle;
+  String get gameDetailsScreenBodyErrorFeedbackTitle;
 
   /// No description provided for @invitationListingScreenAppBarTitle.
   ///
   /// In en, this message translates to:
   /// **'Invitations'**
   String get invitationListingScreenAppBarTitle;
+
+  /// No description provided for @userDetailsScreenAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'User Details'**
+  String get userDetailsScreenAppBarTitle;
+
+  /// No description provided for @userDetailsScreenBodySubscriptionPlanText.
+  ///
+  /// In en, this message translates to:
+  /// **'{isSubscribed, select, true {Subscribed} other {Unsubscribed}}'**
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed);
+
+  /// No description provided for @bodySubscriptionStatusLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Subscription status: {isSubscribed, select, true {Subscribed} other {Unsubscribed}}'**
+  String bodySubscriptionStatusLabel(String isSubscribed);
+
+  /// No description provided for @bodySubscriptionStatusButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Subscribe'**
+  String get bodySubscriptionStatusButtonText;
+
+  /// No description provided for @userDetailsScreenBodyProfileVisibilityBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Change Profile Visibility'**
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle;
+
+  /// No description provided for @userDetailsScreenBodyProfileVisibilityBottomSheetMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to change your profile visibility?'**
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage;
+
+  /// No description provided for @userDetailsScreenBodyLocationLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Location'**
+  String get userDetailsScreenBodyLocationLabel;
+
+  /// No description provided for @userDetailsScreenBodyLocationCountryLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Country'**
+  String get userDetailsScreenBodyLocationCountryLabel;
+
+  /// No description provided for @userDetailsScreenBodyLocationStateLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'State/Province'**
+  String get userDetailsScreenBodyLocationStateLabel;
+
+  /// No description provided for @userDetailsScreenBodyLocationCityLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'City'**
+  String get userDetailsScreenBodyLocationCityLabel;
+
+  /// No description provided for @userDetailsScreenLocationEditingBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Location'**
+  String get userDetailsScreenLocationEditingBottomSheetTitle;
+
+  /// No description provided for @userLocationResponseDtoFormattedLocation.
+  ///
+  /// In en, this message translates to:
+  /// **'{city}{city, select, other {, }}{state}{state, select, other {, }}{country}'**
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  );
 
   /// No description provided for @invitationListingScreenBodyErrorStateTitle.
   ///
@@ -382,11 +434,11 @@ abstract class AppLocalizations {
     String name,
   );
 
-  /// No description provided for @gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder.
+  /// No description provided for @gameDetailsScreenInvitationBottomSheetUserSearchInputLabel.
   ///
   /// In en, this message translates to:
   /// **'Search users...'**
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder;
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel;
 
   /// No description provided for @gameDetailsScreenInvitationBottomSheetMessageInputLabel.
   ///
@@ -485,6 +537,98 @@ abstract class AppLocalizations {
   String
   get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel;
 
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText.
+  ///
+  /// In en, this message translates to:
+  /// **'WhatsApp Group Chat Link'**
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText;
+
+  /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText.
+  ///
+  /// In en, this message translates to:
+  /// **'Use WhatsApp Group Chat Bot'**
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText;
+
+  /// No description provided for @gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Use WhatsApp Group Chat Bot'**
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle;
+
+  /// No description provided for @gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText.
+  ///
+  /// In en, this message translates to:
+  /// **'Do you want to enable the WhatsApp group chat bot for this game?'**
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText;
+
+  /// No description provided for @gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'WhatsApp group link is required to use the bot.'**
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage;
+
+  /// No description provided for @gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'WhatsApp group chat link is required.'**
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty;
+
+  /// No description provided for @gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid.
+  ///
+  /// In en, this message translates to:
+  /// **'WhatsApp group chat link must be in the format: https://chat.whatsapp.com/[code].'**
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid;
+
+  /// No description provided for @playerDetailsBottomSheetAddAsFriendText.
+  ///
+  /// In en, this message translates to:
+  /// **'Add as Friend'**
+  String get playerDetailsBottomSheetAddAsFriendText;
+
+  /// No description provided for @playerDetailsBottomSheetBlockText.
+  ///
+  /// In en, this message translates to:
+  /// **'Block'**
+  String get playerDetailsBottomSheetBlockText;
+
+  /// No description provided for @sendFriendRequestConfirmationBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Send Friend Request'**
+  String get sendFriendRequestConfirmationBottomSheetTitle;
+
+  /// No description provided for @sendFriendRequestConfirmationBottomSheetMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to send a friend request to this user?'**
+  String get sendFriendRequestConfirmationBottomSheetMessage;
+
+  /// No description provided for @blockUserConfirmationBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Block User'**
+  String get blockUserConfirmationBottomSheetTitle;
+
+  /// No description provided for @blockUserConfirmationBottomSheetMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to block this user?'**
+  String get blockUserConfirmationBottomSheetMessage;
+
+  /// No description provided for @unblockUserConfirmationBottomSheetTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Unblock User'**
+  String get unblockUserConfirmationBottomSheetTitle;
+
+  /// No description provided for @unblockUserConfirmationBottomSheetMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to unblock this user?'**
+  String get unblockUserConfirmationBottomSheetMessage;
+
   /// No description provided for @homeScreenAppBarTitle.
   ///
   /// In en, this message translates to:
@@ -508,18 +652,6 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Create game'**
   String get homeScreenNewGameButtonText;
-
-  /// No description provided for @homeScreenBodyUserSportStatsErrorStateTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Failed to retrieve user sport stats!'**
-  String get homeScreenBodyUserSportStatsErrorStateTitle;
-
-  /// No description provided for @homeScreenBodyUserGameListingErrorStateTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Failed to retrieve your games!'**
-  String get homeScreenBodyUserGameListingErrorStateTitle;
 
   /// No description provided for @homeScreenBodyUserGameListingEmptyTitle.
   ///
@@ -623,6 +755,12 @@ abstract class AppLocalizations {
   /// **'REC'**
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel;
 
+  /// No description provided for @homeScreenBodyUserSportStatsEditProfileButtonText.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit profile'**
+  String get homeScreenBodyUserSportStatsEditProfileButtonText;
+
   /// No description provided for @gameCreationScreenAppBarTitle.
   ///
   /// In en, this message translates to:
@@ -638,14 +776,8 @@ abstract class AppLocalizations {
   /// No description provided for @gameCreationScreenNameScreenNameInputLabel.
   ///
   /// In en, this message translates to:
-  /// **'Name'**
-  String get gameCreationScreenNameScreenNameInputLabel;
-
-  /// No description provided for @gameCreationScreenNameScreenNameInputPlaceholder.
-  ///
-  /// In en, this message translates to:
   /// **'i.e., Weekly Soccer Game'**
-  String get gameCreationScreenNameScreenNameInputPlaceholder;
+  String get gameCreationScreenNameScreenNameInputLabel;
 
   /// No description provided for @gameCreationScreenNameScreenNameInputEmptyMessage.
   ///
@@ -792,17 +924,17 @@ abstract class AppLocalizations {
   /// **'Game created successfully!'**
   String get gameCreationScreenGameCreationSuccessMessage;
 
-  /// No description provided for @loginSignupScreenLoginUsernameEmailInputPlaceholder.
+  /// No description provided for @loginSignupScreenLoginUsernameEmailInputLabel.
   ///
   /// In en, this message translates to:
   /// **'Username/email'**
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder;
+  String get loginSignupScreenLoginUsernameEmailInputLabel;
 
-  /// No description provided for @loginSignupScreenLoginPasswordInputPlaceholder.
+  /// No description provided for @loginSignupScreenLoginPasswordInputLabel.
   ///
   /// In en, this message translates to:
   /// **'Password'**
-  String get loginSignupScreenLoginPasswordInputPlaceholder;
+  String get loginSignupScreenLoginPasswordInputLabel;
 
   /// No description provided for @loginSignupScreenLoginLoginButton.
   ///
@@ -816,35 +948,35 @@ abstract class AppLocalizations {
   /// **'Forgot password?'**
   String get loginSignupScreenLoginForgotPasswordButton;
 
-  /// No description provided for @loginSignupScreenSignupNameInputPlaceholder.
+  /// No description provided for @loginSignupScreenSignupNameInputLabel.
   ///
   /// In en, this message translates to:
   /// **'Name'**
-  String get loginSignupScreenSignupNameInputPlaceholder;
+  String get loginSignupScreenSignupNameInputLabel;
 
-  /// No description provided for @loginSignupScreenSignupUsernameInputPlaceholder.
+  /// No description provided for @loginSignupScreenSignupUsernameInputLabel.
   ///
   /// In en, this message translates to:
   /// **'Username'**
-  String get loginSignupScreenSignupUsernameInputPlaceholder;
+  String get loginSignupScreenSignupUsernameInputLabel;
 
-  /// No description provided for @loginSignupScreenSignupEmailInputPlaceholder.
+  /// No description provided for @loginSignupScreenSignupEmailInputLabel.
   ///
   /// In en, this message translates to:
   /// **'Email'**
-  String get loginSignupScreenSignupEmailInputPlaceholder;
+  String get loginSignupScreenSignupEmailInputLabel;
 
-  /// No description provided for @loginSignupScreenSignupPasswordInputPlaceholder.
+  /// No description provided for @loginSignupScreenSignupPasswordInputLabel.
   ///
   /// In en, this message translates to:
   /// **'Password'**
-  String get loginSignupScreenSignupPasswordInputPlaceholder;
+  String get loginSignupScreenSignupPasswordInputLabel;
 
-  /// No description provided for @loginSignupScreenSignupPasswordRepeatInputPlaceholder.
+  /// No description provided for @loginSignupScreenSignupPasswordRepeatInputLabel.
   ///
   /// In en, this message translates to:
   /// **'Password'**
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder;
+  String get loginSignupScreenSignupPasswordRepeatInputLabel;
 
   /// No description provided for @loginSignupScreenSignupSignupButton.
   ///
@@ -893,6 +1025,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Email cannot be empty.'**
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage;
+
+  /// No description provided for @loginSignupScreenSignupFormLocationCountryFieldEmptyMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Country cannot be empty.'**
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage;
 
   /// No description provided for @loginSignupScreenSignupFormPasswordFieldsEmptyMessage.
   ///

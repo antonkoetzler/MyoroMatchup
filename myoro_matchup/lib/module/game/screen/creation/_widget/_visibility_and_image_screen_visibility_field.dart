@@ -11,18 +11,18 @@ final class _VisibilityAndImageScreenVisibilityField extends StatelessWidget {
     final state = viewModel.state;
     final visibility = state.visibility;
 
-    return MyoroSingleSelectionDropdown<GameVisibilityEnum>(
+    return MyoroSingleSelectionDropdown<VisibilityEnum>(
       selectedItem: visibility,
       itemBuilder: (_, item) => MyoroMenuIconTextButtonItem(
         icon: switch (item) {
-          GameVisibilityEnum.private => Icons.lock,
-          GameVisibilityEnum.public => Icons.public,
+          VisibilityEnum.private => Icons.lock,
+          VisibilityEnum.public => Icons.public,
         },
         text: item.label,
       ),
       selectedItemBuilder: (item) => item.label,
       allowDeselection: false,
-      items: GameVisibilityEnum.values.toSet(),
+      items: VisibilityEnum.values.toSet(),
       onChanged: (item) => onVisibilityChanged(item!),
     );
   }

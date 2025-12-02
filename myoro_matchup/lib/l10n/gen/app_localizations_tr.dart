@@ -13,20 +13,7 @@ class AppLocalizationsTr extends AppLocalizations {
       'Sunucuya bağlanılamadı, lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.';
 
   @override
-  String get mmErrorFeedbackSubtitle =>
-      'Lütfen bağlantınızı doğrulayın ve tekrar deneyin!';
-
-  @override
-  String get mmErrorFeedbackActionButtonText => 'Yeniden Dene';
-
-  @override
   String get mmEmptyFeedbackActionButtonText => 'Yenile';
-
-  @override
-  String get mmSuccessFeedbackSubtitle => 'İşlem başarıyla tamamlandı!';
-
-  @override
-  String get mmSuccessFeedbackActionButtonText => 'Tamamlandı';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => 'Yer';
@@ -98,11 +85,70 @@ class AppLocalizationsTr extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => 'İptal Edildi';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle =>
+  String get gameDetailsScreenBodyErrorFeedbackTitle =>
       'Oyun detayları alınamadı!';
 
   @override
   String get invitationListingScreenAppBarTitle => 'Davetler';
+
+  @override
+  String get userDetailsScreenAppBarTitle => 'Kullanıcı Detayları';
+
+  @override
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'Abone',
+      'other': 'Abone değil',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String bodySubscriptionStatusLabel(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'Abone',
+      'other': 'Abone değil',
+    });
+    return 'Abonelik durumu: $_temp0';
+  }
+
+  @override
+  String get bodySubscriptionStatusButtonText => 'Abone Ol';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      'Profil Görünürlüğünü Değiştir';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      'Profil görünürlüğünü değiştirmek istediğinizden emin misiniz?';
+
+  @override
+  String get userDetailsScreenBodyLocationLabel => 'Konum';
+
+  @override
+  String get userDetailsScreenBodyLocationCountryLabel => 'Ülke';
+
+  @override
+  String get userDetailsScreenBodyLocationStateLabel => 'Eyalet/İl';
+
+  @override
+  String get userDetailsScreenBodyLocationCityLabel => 'Şehir';
+
+  @override
+  String get userDetailsScreenLocationEditingBottomSheetTitle =>
+      'Konumu Düzenle';
+
+  @override
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
+    String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
+    String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
+    return '$city$_temp0$state$_temp1$country';
+  }
 
   @override
   String get invitationListingScreenBodyErrorStateTitle =>
@@ -157,7 +203,7 @@ class AppLocalizationsTr extends AppLocalizations {
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
       'Kullanıcı ara...';
 
   @override
@@ -231,6 +277,65 @@ class AppLocalizationsTr extends AppLocalizations {
       'Görünürlük';
 
   @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'WhatsApp Grup Sohbet Bağlantısı';
+
+  @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      'WhatsApp Grup Sohbet Botu Kullan';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      'WhatsApp Grup Sohbet Botu Kullan';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      'Bu oyun için WhatsApp grup sohbet botunu etkinleştirmek istiyor musunuz?';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      'Botu kullanmak için WhatsApp grup bağlantısı gereklidir.';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'WhatsApp grup sohbet bağlantısı gereklidir.';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
+      'WhatsApp grup sohbet bağlantısı şu formatta olmalıdır: https://chat.whatsapp.com/[kod].';
+
+  @override
+  String get playerDetailsBottomSheetAddAsFriendText => 'Arkadaş Olarak Ekle';
+
+  @override
+  String get playerDetailsBottomSheetBlockText => 'Engelle';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetTitle =>
+      'Arkadaşlık İsteği Gönder';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      'Bu kullanıcıya arkadaşlık isteği göndermek istediğinizden emin misiniz?';
+
+  @override
+  String get blockUserConfirmationBottomSheetTitle => 'Kullanıcıyı Engelle';
+
+  @override
+  String get blockUserConfirmationBottomSheetMessage =>
+      'Bu kullanıcıyı engellemek istediğinizden emin misiniz?';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle =>
+      'Kullanıcının Engellemesini Kaldır';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage =>
+      'Bu kullanıcının engellemesini kaldırmak istediğinizden emin misiniz?';
+
+  @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
@@ -241,14 +346,6 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get homeScreenNewGameButtonText => 'Oyun oluştur';
-
-  @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle =>
-      'Kullanıcı spor istatistikleri alınamadı!';
-
-  @override
-  String get homeScreenBodyUserGameListingErrorStateTitle =>
-      'Oyunlarınız alınamadı!';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle =>
@@ -303,16 +400,17 @@ class AppLocalizationsTr extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
+  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
+      'Profili düzenle';
+
+  @override
   String get gameCreationScreenAppBarTitle => 'Oyun oluştur';
 
   @override
   String get gameCreationScreenNameScreenTitle => 'İsim';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => 'İsim';
-
-  @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder =>
+  String get gameCreationScreenNameScreenNameInputLabel =>
       'örn. Haftalık Futbol Maçı';
 
   @override
@@ -407,11 +505,11 @@ class AppLocalizationsTr extends AppLocalizations {
       'Oyun başarıyla oluşturuldu!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+  String get loginSignupScreenLoginUsernameEmailInputLabel =>
       'Kullanıcı adı/e-posta';
 
   @override
-  String get loginSignupScreenLoginPasswordInputPlaceholder => 'Şifre';
+  String get loginSignupScreenLoginPasswordInputLabel => 'Şifre';
 
   @override
   String get loginSignupScreenLoginLoginButton => 'Giriş Yap';
@@ -421,19 +519,19 @@ class AppLocalizationsTr extends AppLocalizations {
       'Şifrenizi mi unuttunuz?';
 
   @override
-  String get loginSignupScreenSignupNameInputPlaceholder => 'İsim';
+  String get loginSignupScreenSignupNameInputLabel => 'İsim';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder => 'Kullanıcı adı';
+  String get loginSignupScreenSignupUsernameInputLabel => 'Kullanıcı adı';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder => 'E-posta';
+  String get loginSignupScreenSignupEmailInputLabel => 'E-posta';
 
   @override
-  String get loginSignupScreenSignupPasswordInputPlaceholder => 'Şifre';
+  String get loginSignupScreenSignupPasswordInputLabel => 'Şifre';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'Şifre';
+  String get loginSignupScreenSignupPasswordRepeatInputLabel => 'Şifre';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Kayıt Ol';
@@ -465,6 +563,10 @@ class AppLocalizationsTr extends AppLocalizations {
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
       'E-posta boş olamaz.';
+
+  @override
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      'Ülke boş olamaz.';
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>

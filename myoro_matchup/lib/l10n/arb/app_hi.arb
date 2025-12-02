@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "सर्वर से कनेक्ट नहीं हो सका, कृपया अपना इंटरनेट जांचें और पुनः प्रयास करें।",
   
-  "mmErrorFeedbackSubtitle": "कृपया अपना कनेक्शन सत्यापित करें और पुनः प्रयास करें!",
-  "mmErrorFeedbackActionButtonText": "पुनः प्रयास करें",
-
   "mmEmptyFeedbackActionButtonText": "ताज़ा करें",
-
-  "mmSuccessFeedbackSubtitle": "ऑपरेशन सफलतापूर्वक पूर्ण हुआ!",
-  "mmSuccessFeedbackActionButtonText": "पूर्ण",
 
   "mmLocationInputTypeEnumPlaceLabel": "स्थान",
   "mmLocationInputTypeEnumCityLabel": "शहर",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "समाप्त",
   "invitationStatusEnumCancelledLabel": "रद्द",
 
-  "gameDetailsScreenBodyErrorStateTitle": "गेम विवरण प्राप्त करने में विफल!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "गेम विवरण प्राप्त करने में विफल!",
   "invitationListingScreenAppBarTitle": "आमंत्रण",
+  "userDetailsScreenAppBarTitle": "उपयोगकर्ता विवरण",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {सदस्यता ली गई} other {सदस्यता नहीं ली गई}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "सदस्यता स्थिति: {isSubscribed, select, true {सदस्यता ली गई} other {सदस्यता नहीं ली गई}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "सदस्यता लें",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "प्रोफ़ाइल दृश्यता बदलें",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "क्या आप वाकई अपनी प्रोफ़ाइल की दृश्यता बदलना चाहते हैं?",
+  "userDetailsScreenBodyLocationLabel": "स्थान",
+  "userDetailsScreenBodyLocationCountryLabel": "देश",
+  "userDetailsScreenBodyLocationStateLabel": "राज्य/प्रांत",
+  "userDetailsScreenBodyLocationCityLabel": "शहर",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "स्थान संपादित करें",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "आमंत्रण प्राप्त करने में विफल!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "कोई आमंत्रण नहीं मिला!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "संदेश",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "उपयोगकर्ताओं को खोजें...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "उपयोगकर्ताओं को खोजें...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "संदेश",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "रद्द करें",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "भेजें",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "दृश्यता",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp समूह चैट लिंक",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp समूह चैट बॉट का उपयोग करें",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp समूह चैट बॉट का उपयोग करें",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "क्या आप इस खेल के लिए WhatsApp समूह चैट बॉट सक्षम करना चाहते हैं?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "बॉट का उपयोग करने के लिए WhatsApp समूह लिंक आवश्यक है।",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp समूह चैट लिंक आवश्यक है।",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp समूह चैट लिंक इस प्रारूप में होना चाहिए: https://chat.whatsapp.com/[कोड]।",
+
+  "playerDetailsBottomSheetAddAsFriendText": "मित्र के रूप में जोड़ें",
+  "playerDetailsBottomSheetBlockText": "अवरुद्ध करें",
+  "sendFriendRequestConfirmationBottomSheetTitle": "मित्र अनुरोध भेजें",
+  "sendFriendRequestConfirmationBottomSheetMessage": "क्या आप वाकई इस उपयोगकर्ता को मित्र अनुरोध भेजना चाहते हैं?",
+  "blockUserConfirmationBottomSheetTitle": "उपयोगकर्ता अवरुद्ध करें",
+  "blockUserConfirmationBottomSheetMessage": "क्या आप वाकई इस उपयोगकर्ता को अवरुद्ध करना चाहते हैं?",
+  "unblockUserConfirmationBottomSheetTitle": "उपयोगकर्ता अवरुद्ध हटाएं",
+  "unblockUserConfirmationBottomSheetMessage": "क्या आप वाकई इस उपयोगकर्ता का अवरुद्ध हटाना चाहते हैं?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "गेम प्राप्त करने में त्रुटि!",
   "homeScreenBodySuccessStateEmptyTitle": "कोई गेम नहीं मिला!",
   "homeScreenNewGameButtonText": "गेम बनाएं",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "उपयोगकर्ता खेल आंकड़े प्राप्त करने में विफल!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "आपके गेम प्राप्त करने में विफल!",
   "homeScreenBodyUserGameListingEmptyTitle": "आपने अभी तक कोई गेम में शामिल नहीं हुए हैं!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Edit profile",
 
   "gameCreationScreenAppBarTitle": "गेम बनाएं",
   "gameCreationScreenNameScreenTitle": "नाम",
   "gameCreationScreenNameScreenNameInputLabel": "नाम",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "उदाहरण: साप्ताहिक फुटबॉल गेम",
+  "gameCreationScreenNameScreenNameInputLabel": "उदाहरण: साप्ताहिक फुटबॉल गेम",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "नाम खाली नहीं हो सकता।",
   "gameCreationScreenNameScreenNameInputLengthMessage": "नाम कम से कम 3 अक्षर का होना चाहिए।",
   "gameCreationScreenSportScreenTitle": "खेल",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "समाप्त करें",
   "gameCreationScreenGameCreationSuccessMessage": "गेम सफलतापूर्वक बनाया गया!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "उपयोगकर्ता नाम/ईमेल",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "पासवर्ड",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "उपयोगकर्ता नाम/ईमेल",
+  "loginSignupScreenLoginPasswordInputLabel": "पासवर्ड",
   "loginSignupScreenLoginLoginButton": "लॉगिन",
   "loginSignupScreenLoginForgotPasswordButton": "पासवर्ड भूल गए?",
-  "loginSignupScreenSignupNameInputPlaceholder": "नाम",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "उपयोगकर्ता नाम",
-  "loginSignupScreenSignupEmailInputPlaceholder": "ईमेल",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "पासवर्ड",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "पासवर्ड",
+  "loginSignupScreenSignupNameInputLabel": "नाम",
+  "loginSignupScreenSignupUsernameInputLabel": "उपयोगकर्ता नाम",
+  "loginSignupScreenSignupEmailInputLabel": "ईमेल",
+  "loginSignupScreenSignupPasswordInputLabel": "पासवर्ड",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "पासवर्ड",
   "loginSignupScreenSignupSignupButton": "साइन अप",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchup में नए हैं? साइन अप करें!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "पहले से पंजीकृत हैं? लॉगिन करें!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "नाम खाली नहीं हो सकता।",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "उपयोगकर्ता नाम खाली नहीं हो सकता।",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "ईमेल खाली नहीं हो सकता।",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "देश खाली नहीं हो सकता।",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "पासवर्ड फ़ील्ड खाली नहीं हो सकते।",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "पासवर्ड मेल नहीं खाते।",
 

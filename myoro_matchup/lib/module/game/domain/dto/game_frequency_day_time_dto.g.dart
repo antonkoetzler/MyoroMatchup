@@ -6,24 +6,44 @@ part of 'game_frequency_day_time_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GameFrequencyDayTimeDto _$GameFrequencyDayTimeDtoFromJson(Map<String, dynamic> json) => GameFrequencyDayTimeDto(
+GameFrequencyDayTimeDto _$GameFrequencyDayTimeDtoFromJson(
+  Map<String, dynamic> json,
+) => GameFrequencyDayTimeDto(
   frequency: $enumDecode(_$GameFrequencyEnumEnumMap, json['frequency']),
   primaryDay: $enumDecode(_$MyoroDayEnumEnumMap, json['primaryDay']),
   biWeeklyDay: $enumDecodeNullable(_$MyoroDayEnumEnumMap, json['biWeeklyDay']),
-  primaryStartTime: GameFrequencyDayTimeDto._timeOfDayFromJson(json['primaryStartTime'] as String),
-  primaryEndTime: GameFrequencyDayTimeDto._timeOfDayFromJson(json['primaryEndTime'] as String),
-  biWeeklyStartTime: GameFrequencyDayTimeDto._timeOfDayFromJsonNullable(json['biWeeklyStartTime']),
-  biWeeklyEndTime: GameFrequencyDayTimeDto._timeOfDayFromJsonNullable(json['biWeeklyEndTime']),
+  primaryStartTime: GameFrequencyDayTimeDto._timeOfDayFromJson(
+    json['primaryStartTime'] as String,
+  ),
+  primaryEndTime: GameFrequencyDayTimeDto._timeOfDayFromJson(
+    json['primaryEndTime'] as String,
+  ),
+  biWeeklyStartTime: GameFrequencyDayTimeDto._timeOfDayFromJsonNullable(
+    json['biWeeklyStartTime'],
+  ),
+  biWeeklyEndTime: GameFrequencyDayTimeDto._timeOfDayFromJsonNullable(
+    json['biWeeklyEndTime'],
+  ),
 );
 
-Map<String, dynamic> _$GameFrequencyDayTimeDtoToJson(GameFrequencyDayTimeDto instance) => <String, dynamic>{
+Map<String, dynamic> _$GameFrequencyDayTimeDtoToJson(
+  GameFrequencyDayTimeDto instance,
+) => <String, dynamic>{
   'frequency': _$GameFrequencyEnumEnumMap[instance.frequency]!,
   'primaryDay': _$MyoroDayEnumEnumMap[instance.primaryDay]!,
   'biWeeklyDay': ?_$MyoroDayEnumEnumMap[instance.biWeeklyDay],
-  'primaryStartTime': GameFrequencyDayTimeDto._timeOfDayToJson(instance.primaryStartTime),
-  'primaryEndTime': GameFrequencyDayTimeDto._timeOfDayToJson(instance.primaryEndTime),
-  'biWeeklyStartTime': ?GameFrequencyDayTimeDto._timeOfDayToJsonNullable(instance.biWeeklyStartTime),
-  'biWeeklyEndTime': ?GameFrequencyDayTimeDto._timeOfDayToJsonNullable(instance.biWeeklyEndTime),
+  'primaryStartTime': GameFrequencyDayTimeDto._timeOfDayToJson(
+    instance.primaryStartTime,
+  ),
+  'primaryEndTime': GameFrequencyDayTimeDto._timeOfDayToJson(
+    instance.primaryEndTime,
+  ),
+  'biWeeklyStartTime': ?GameFrequencyDayTimeDto._timeOfDayToJsonNullable(
+    instance.biWeeklyStartTime,
+  ),
+  'biWeeklyEndTime': ?GameFrequencyDayTimeDto._timeOfDayToJsonNullable(
+    instance.biWeeklyEndTime,
+  ),
 };
 
 const _$GameFrequencyEnumEnumMap = {
@@ -72,11 +92,17 @@ mixin _$GameFrequencyDayTimeDtoMixin {
     return GameFrequencyDayTimeDto(
       frequency: frequency ?? self.frequency,
       primaryDay: primaryDay ?? self.primaryDay,
-      biWeeklyDay: biWeeklyDayProvided ? (biWeeklyDay ?? self.biWeeklyDay) : null,
+      biWeeklyDay: biWeeklyDayProvided
+          ? (biWeeklyDay ?? self.biWeeklyDay)
+          : null,
       primaryStartTime: primaryStartTime ?? self.primaryStartTime,
       primaryEndTime: primaryEndTime ?? self.primaryEndTime,
-      biWeeklyStartTime: biWeeklyStartTimeProvided ? (biWeeklyStartTime ?? self.biWeeklyStartTime) : null,
-      biWeeklyEndTime: biWeeklyEndTimeProvided ? (biWeeklyEndTime ?? self.biWeeklyEndTime) : null,
+      biWeeklyStartTime: biWeeklyStartTimeProvided
+          ? (biWeeklyStartTime ?? self.biWeeklyStartTime)
+          : null,
+      biWeeklyEndTime: biWeeklyEndTimeProvided
+          ? (biWeeklyEndTime ?? self.biWeeklyEndTime)
+          : null,
     );
   }
 

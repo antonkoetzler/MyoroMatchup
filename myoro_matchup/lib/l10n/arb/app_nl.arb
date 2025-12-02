@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "Kan niet verbinden met de server, controleer uw internetverbinding en probeer het opnieuw.",
   
-  "mmErrorFeedbackSubtitle": "Controleer uw verbinding en probeer het opnieuw!",
-  "mmErrorFeedbackActionButtonText": "Opnieuw proberen",
-
   "mmEmptyFeedbackActionButtonText": "Vernieuwen",
-
-  "mmSuccessFeedbackSubtitle": "Bewerking succesvol voltooid!",
-  "mmSuccessFeedbackActionButtonText": "Klaar",
 
   "mmLocationInputTypeEnumPlaceLabel": "Plaats",
   "mmLocationInputTypeEnumCityLabel": "Stad",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "Verlopen",
   "invitationStatusEnumCancelledLabel": "Geannuleerd",
 
-  "gameDetailsScreenBodyErrorStateTitle": "Kon speldetails niet ophalen!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "Kon speldetails niet ophalen!",
   "invitationListingScreenAppBarTitle": "Uitnodigingen",
+  "userDetailsScreenAppBarTitle": "Gebruikersgegevens",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Geabonneerd} other {Niet geabonneerd}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "Abonnementsstatus: {isSubscribed, select, true {Geabonneerd} other {Niet geabonneerd}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "Abonneren",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Profielzichtbaarheid Wijzigen",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Weet je zeker dat je de zichtbaarheid van je profiel wilt wijzigen?",
+  "userDetailsScreenBodyLocationLabel": "Locatie",
+  "userDetailsScreenBodyLocationCountryLabel": "Land",
+  "userDetailsScreenBodyLocationStateLabel": "Staat/Provincie",
+  "userDetailsScreenBodyLocationCityLabel": "Stad",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "Locatie Bewerken",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "Kon uitnodigingen niet ophalen!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Geen uitnodigingen gevonden!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Bericht",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Zoek gebruikers...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Zoek gebruikers...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Bericht",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Annuleren",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Verzenden",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Zichtbaarheid",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp-groepschatlink",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp-groepschatbot gebruiken",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp-groepschatbot gebruiken",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Wilt u de WhatsApp-groepschatbot voor dit spel inschakelen?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "De WhatsApp-groepslink is vereist om de bot te gebruiken.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp-groepschatlink is verplicht.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp-groepschatlink moet in het formaat zijn: https://chat.whatsapp.com/[code].",
+
+  "playerDetailsBottomSheetAddAsFriendText": "Als vriend toevoegen",
+  "playerDetailsBottomSheetBlockText": "Blokkeren",
+  "sendFriendRequestConfirmationBottomSheetTitle": "Vriendschapsverzoek verzenden",
+  "sendFriendRequestConfirmationBottomSheetMessage": "Weet u zeker dat u een vriendschapsverzoek naar deze gebruiker wilt verzenden?",
+  "blockUserConfirmationBottomSheetTitle": "Gebruiker blokkeren",
+  "blockUserConfirmationBottomSheetMessage": "Weet u zeker dat u deze gebruiker wilt blokkeren?",
+  "unblockUserConfirmationBottomSheetTitle": "Gebruiker deblokkeren",
+  "unblockUserConfirmationBottomSheetMessage": "Weet u zeker dat u deze gebruiker wilt deblokkeren?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Fout bij het ophalen van spellen!",
   "homeScreenBodySuccessStateEmptyTitle": "Geen spellen gevonden!",
   "homeScreenNewGameButtonText": "Spel maken",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "Kon gebruikerssportstatistieken niet ophalen!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "Kon uw spellen niet ophalen!",
   "homeScreenBodyUserGameListingEmptyTitle": "U bent nog niet bij een spel aangesloten!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Profiel bewerken",
 
   "gameCreationScreenAppBarTitle": "Spel maken",
   "gameCreationScreenNameScreenTitle": "Naam",
   "gameCreationScreenNameScreenNameInputLabel": "Naam",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "bijv. Wekelijkse voetbalwedstrijd",
+  "gameCreationScreenNameScreenNameInputLabel": "bijv. Wekelijkse voetbalwedstrijd",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Naam mag niet leeg zijn.",
   "gameCreationScreenNameScreenNameInputLengthMessage": "Naam moet minimaal 3 tekens lang zijn.",
   "gameCreationScreenSportScreenTitle": "Sport",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "Voltooien",
   "gameCreationScreenGameCreationSuccessMessage": "Spel succesvol aangemaakt!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Gebruikersnaam/e-mail",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "Wachtwoord",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "Gebruikersnaam/e-mail",
+  "loginSignupScreenLoginPasswordInputLabel": "Wachtwoord",
   "loginSignupScreenLoginLoginButton": "Inloggen",
   "loginSignupScreenLoginForgotPasswordButton": "Wachtwoord vergeten?",
-  "loginSignupScreenSignupNameInputPlaceholder": "Naam",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "Gebruikersnaam",
-  "loginSignupScreenSignupEmailInputPlaceholder": "E-mail",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "Wachtwoord",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Wachtwoord",
+  "loginSignupScreenSignupNameInputLabel": "Naam",
+  "loginSignupScreenSignupUsernameInputLabel": "Gebruikersnaam",
+  "loginSignupScreenSignupEmailInputLabel": "E-mail",
+  "loginSignupScreenSignupPasswordInputLabel": "Wachtwoord",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "Wachtwoord",
   "loginSignupScreenSignupSignupButton": "Registreren",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "Nieuw bij MyoroMatchup? Registreer!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "Al geregistreerd? Log in!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "Naam mag niet leeg zijn.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Gebruikersnaam mag niet leeg zijn.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "E-mail mag niet leeg zijn.",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Land mag niet leeg zijn.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Wachtwoordvelden mogen niet leeg zijn.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Wachtwoorden komen niet overeen.",
 

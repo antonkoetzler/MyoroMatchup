@@ -26,6 +26,9 @@ final class LoginSignupScreenSignupState {
   /// Email controller.
   final _emailController = TextEditingController();
 
+  /// Country controller.
+  final _countryController = ValueNotifier<MyoroCountryEnum?>(null);
+
   /// Password controller.
   final _passwordController = TextEditingController();
 
@@ -42,6 +45,7 @@ final class LoginSignupScreenSignupState {
     _nameController.dispose();
     _usernameController.dispose();
     _emailController.dispose();
+    _countryController.dispose();
     _passwordController.dispose();
     _passwordRepeatController.dispose();
   }
@@ -101,6 +105,16 @@ final class LoginSignupScreenSignupState {
     return _emailController.text;
   }
 
+  /// [_countryController] getter.
+  ValueNotifier<MyoroCountryEnum?> get countryController {
+    return _countryController;
+  }
+
+  /// Getter of [_countryController]'s value.
+  MyoroCountryEnum? get country {
+    return _countryController.value;
+  }
+
   /// [_passwordController] getter.
   TextEditingController get passwordController {
     return _passwordController;
@@ -119,5 +133,35 @@ final class LoginSignupScreenSignupState {
   /// Getter of [_passwordRepeatController]'s [TextEditingController.text].
   String get passwordRepeat {
     return _passwordRepeatController.text;
+  }
+
+  /// [_nameController] setter.
+  set name(String name) {
+    _nameController.text = name;
+  }
+
+  /// [_usernameController] setter.
+  set username(String username) {
+    _usernameController.text = username;
+  }
+
+  /// [_emailController] setter.
+  set email(String email) {
+    _emailController.text = email;
+  }
+
+  /// [_countryController] setter.
+  set country(MyoroCountryEnum? country) {
+    _countryController.value = country;
+  }
+
+  /// [_passwordController] setter.
+  set password(String password) {
+    _passwordController.text = password;
+  }
+
+  /// [_passwordRepeatController] setter.
+  set passwordRepeat(String passwordRepeat) {
+    _passwordRepeatController.text = passwordRepeat;
   }
 }

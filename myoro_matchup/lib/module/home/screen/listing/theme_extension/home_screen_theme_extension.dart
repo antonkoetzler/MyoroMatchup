@@ -16,68 +16,69 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
   const HomeScreenThemeExtension({
     required this.gameMargin,
     required this.gameBorderRadius,
-    required this.bodyUserSportStatsErrorStatePadding,
     required this.bodyUserSportStatsPlayerCardNameTextStyle,
-    required this.bodyUserSportStatsPlayerCardRatingTextStyle,
+    required this.bodyUserSportStatsPlayerCardBadgeTextStyle,
     required this.bodyUserSportStatsStatsItemLabelTextStyle,
     required this.bodyUserSportStatsStatsItemValueTextStyle,
-    required this.bodyUserSportStatsPlayerCardProfilePictureSize,
     required this.bodyUserSportStatsSuccessStateCardStyle,
     required this.bodyUserSportStatsSportSwitcherStyle,
     required this.bodyUserSportStatsStatsSpacing,
     required this.bodyUserSportStatsPlayerCardBeginnerCardStyle,
     required this.bodyUserSportStatsPlayerCardProCardStyle,
     required this.bodyUserSportStatsPlayerCardGoatCardStyle,
-    required this.bodyUserSportStatsLoaderPadding,
+    required this.bodyUserSportStatsPlayerCardBadgeDecoration,
+    required this.bodyUserSportStatsPlayerCardBadgePadding,
+    required this.bodyUserSportStatsSuccessStateRowSpacing,
+    required this.bodyUserSportStatsSuccessStateColumnSpacing,
+    required this.bodyUserSportStatsPlayerCardProfilePictureSize,
+    required this.bodyUserSportStatsEditProfileButtonStyle,
+    required this.bodyUserSportStatsStatsDividerMargin,
   });
 
   /// Fake constructor.
   HomeScreenThemeExtension.fake()
     : gameMargin = myoroFake<EdgeInsets>(),
       gameBorderRadius = myoroFake<BorderRadius>(),
-      bodyUserSportStatsErrorStatePadding = myoroFake<EdgeInsets>(),
       bodyUserSportStatsPlayerCardNameTextStyle = myoroFake<TextStyle>(),
-      bodyUserSportStatsPlayerCardRatingTextStyle = myoroFake<TextStyle>(),
+      bodyUserSportStatsPlayerCardBadgeTextStyle = myoroFake<TextStyle>(),
       bodyUserSportStatsStatsItemLabelTextStyle = myoroFake<TextStyle>(),
       bodyUserSportStatsStatsItemValueTextStyle = myoroFake<TextStyle>(),
-      bodyUserSportStatsPlayerCardProfilePictureSize = myoroFake<double>(),
       bodyUserSportStatsSuccessStateCardStyle = myoroFake<MyoroCardStyle>(),
       bodyUserSportStatsSportSwitcherStyle = myoroFake<MyoroDropdownStyle>(),
       bodyUserSportStatsStatsSpacing = myoroFake<double>(),
       bodyUserSportStatsPlayerCardBeginnerCardStyle = myoroFake<MyoroCardStyle>(),
       bodyUserSportStatsPlayerCardProCardStyle = myoroFake<MyoroCardStyle>(),
       bodyUserSportStatsPlayerCardGoatCardStyle = myoroFake<MyoroCardStyle>(),
-      bodyUserSportStatsLoaderPadding = myoroFake<EdgeInsets>();
+      bodyUserSportStatsPlayerCardBadgeDecoration = myoroFake<BoxDecoration>(),
+      bodyUserSportStatsPlayerCardBadgePadding = myoroFake<EdgeInsets>(),
+      bodyUserSportStatsSuccessStateRowSpacing = myoroFake<double>(),
+      bodyUserSportStatsSuccessStateColumnSpacing = myoroFake<double>(),
+      bodyUserSportStatsPlayerCardProfilePictureSize = myoroFake<double>(),
+      bodyUserSportStatsEditProfileButtonStyle = myoroFake<MyoroIconTextButtonStyle>(),
+      bodyUserSportStatsStatsDividerMargin = myoroFake<EdgeInsets>();
 
   /// Builder constructor.
   factory HomeScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme) {
     const baseBodyUserSportStatsPlayerCardCardStyle = MyoroCardStyle(
       padding: EdgeInsets.only(
         top: kMyoroMultiplier * 1.5,
-        bottom: kMyoroMultiplier - 2,
-        left: kMyoroMultiplier,
-        right: kMyoroMultiplier,
+        left: kMyoroMultiplier * 1.5,
+        right: kMyoroMultiplier * 1.5,
       ),
     );
 
     return HomeScreenThemeExtension(
       gameMargin: const EdgeInsets.only(bottom: kEdgeInsetsLength, left: kEdgeInsetsLength, right: kEdgeInsetsLength),
       gameBorderRadius: BorderRadius.circular(kMyoroBorderRadius),
-      bodyUserSportStatsErrorStatePadding: const EdgeInsets.only(
-        top: kEdgeInsetsLength - kMyoroMultiplier,
-        bottom: kEdgeInsetsLength * 1.5,
-        left: kEdgeInsetsLength * 1.5,
-        right: kEdgeInsetsLength * 1.5,
-      ),
       bodyUserSportStatsPlayerCardNameTextStyle: textTheme.bodySmall!,
-      bodyUserSportStatsPlayerCardRatingTextStyle: textTheme.titleSmall!,
+      bodyUserSportStatsPlayerCardBadgeTextStyle: textTheme.titleMedium!,
       bodyUserSportStatsStatsItemLabelTextStyle: textTheme.titleSmall!,
       bodyUserSportStatsStatsItemValueTextStyle: textTheme.bodySmall!,
-      bodyUserSportStatsPlayerCardProfilePictureSize: kMyoroMultiplier * 10,
       bodyUserSportStatsSuccessStateCardStyle: MyoroCardStyle(border: Border.all(width: 0)),
       bodyUserSportStatsSportSwitcherStyle: MyoroDropdownStyle(
         textAlign: TextAlign.center,
-        inputTextStyle: textTheme.bodySmall!.copyWith(fontSize: MyoroFontSizeEnum.extraTiny.size),
+        inputTextStyle: textTheme.bodySmall!,
+        contentPadding: const EdgeInsets.all(kMyoroMultiplier * 1.4),
       ),
       bodyUserSportStatsStatsSpacing: kMyoroMultiplier * 3,
       bodyUserSportStatsPlayerCardBeginnerCardStyle: baseBodyUserSportStatsPlayerCardCardStyle.copyWith(
@@ -92,7 +93,19 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
         backgroundColor: MyoroColors.gold1.withValues(alpha: 0.3),
         border: Border.all(width: kMyoroBorderWidth, color: MyoroColors.gold1),
       ),
-      bodyUserSportStatsLoaderPadding: const EdgeInsets.all(kEdgeInsetsLength * 2),
+      bodyUserSportStatsPlayerCardBadgeDecoration: BoxDecoration(
+        color: colorScheme.primary,
+        borderRadius: BorderRadius.circular(kMyoroBorderRadius * 2),
+        border: Border.all(width: kMyoroBorderWidth, color: colorScheme.onPrimary),
+      ),
+      bodyUserSportStatsPlayerCardBadgePadding: const EdgeInsets.symmetric(horizontal: kMyoroMultiplier),
+      bodyUserSportStatsSuccessStateRowSpacing: kMyoroMultiplier * 3,
+      bodyUserSportStatsSuccessStateColumnSpacing: kMyoroMultiplier,
+      bodyUserSportStatsPlayerCardProfilePictureSize: 51,
+      bodyUserSportStatsEditProfileButtonStyle: const MyoroIconTextButtonStyle(
+        contentPadding: EdgeInsets.all(kMyoroMultiplier),
+      ),
+      bodyUserSportStatsStatsDividerMargin: const EdgeInsets.symmetric(vertical: kMyoroMultiplier * 1.5),
     );
   }
 
@@ -102,23 +115,17 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
   /// [BorderRadius] of a game item.
   final BorderRadius gameBorderRadius;
 
-  /// [EdgeInsets] margin of the error state of the player stats section.
-  final EdgeInsets bodyUserSportStatsErrorStatePadding;
-
   /// [TextStyle] of the stats player card name.
   final TextStyle bodyUserSportStatsPlayerCardNameTextStyle;
 
   /// [TextStyle] of the stats player card rating.
-  final TextStyle bodyUserSportStatsPlayerCardRatingTextStyle;
+  final TextStyle bodyUserSportStatsPlayerCardBadgeTextStyle;
 
   /// [TextStyle] of the stats item label.
   final TextStyle bodyUserSportStatsStatsItemLabelTextStyle;
 
   /// [TextStyle] of the stats item value.
   final TextStyle bodyUserSportStatsStatsItemValueTextStyle;
-
-  /// Size of the profile picture of the player card.
-  final double bodyUserSportStatsPlayerCardProfilePictureSize;
 
   /// Style of the success state of the player stats section.
   final MyoroCardStyle bodyUserSportStatsSuccessStateCardStyle;
@@ -138,8 +145,26 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
   /// [MyoroCardStyle] of the goat player card.
   final MyoroCardStyle bodyUserSportStatsPlayerCardGoatCardStyle;
 
-  /// [EdgeInsets] of the [MyoroCircularLoader].
-  final EdgeInsets bodyUserSportStatsLoaderPadding;
+  /// [Decoration] of the rating of the player card.
+  final BoxDecoration bodyUserSportStatsPlayerCardBadgeDecoration;
+
+  /// [EdgeInsets] of the rating of the player card.
+  final EdgeInsets bodyUserSportStatsPlayerCardBadgePadding;
+
+  /// Spacing of the row in the success state of the player stats section.
+  final double bodyUserSportStatsSuccessStateRowSpacing;
+
+  /// Spacing of the column in the success state of the player stats section.
+  final double bodyUserSportStatsSuccessStateColumnSpacing;
+
+  /// Size of the profile picture of the player card.
+  final double bodyUserSportStatsPlayerCardProfilePictureSize;
+
+  /// Style of the edit profile button.
+  final MyoroIconTextButtonStyle bodyUserSportStatsEditProfileButtonStyle;
+
+  /// Margin of the divider in the stats section.
+  final EdgeInsets bodyUserSportStatsStatsDividerMargin;
 
   /// Lerp function.
   @override
@@ -148,19 +173,14 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
     return copyWith(
       gameMargin: EdgeInsets.lerp(gameMargin, other.gameMargin, t),
       gameBorderRadius: BorderRadius.lerp(gameBorderRadius, other.gameBorderRadius, t),
-      bodyUserSportStatsErrorStatePadding: EdgeInsets.lerp(
-        bodyUserSportStatsErrorStatePadding,
-        other.bodyUserSportStatsErrorStatePadding,
-        t,
-      ),
       bodyUserSportStatsPlayerCardNameTextStyle: TextStyle.lerp(
         bodyUserSportStatsPlayerCardNameTextStyle,
         other.bodyUserSportStatsPlayerCardNameTextStyle,
         t,
       ),
-      bodyUserSportStatsPlayerCardRatingTextStyle: TextStyle.lerp(
-        bodyUserSportStatsPlayerCardRatingTextStyle,
-        other.bodyUserSportStatsPlayerCardRatingTextStyle,
+      bodyUserSportStatsPlayerCardBadgeTextStyle: TextStyle.lerp(
+        bodyUserSportStatsPlayerCardBadgeTextStyle,
+        other.bodyUserSportStatsPlayerCardBadgeTextStyle,
         t,
       ),
       bodyUserSportStatsStatsItemLabelTextStyle: TextStyle.lerp(
@@ -171,11 +191,6 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
       bodyUserSportStatsStatsItemValueTextStyle: TextStyle.lerp(
         bodyUserSportStatsStatsItemValueTextStyle,
         other.bodyUserSportStatsStatsItemValueTextStyle,
-        t,
-      ),
-      bodyUserSportStatsPlayerCardProfilePictureSize: lerpDouble(
-        bodyUserSportStatsPlayerCardProfilePictureSize,
-        other.bodyUserSportStatsPlayerCardProfilePictureSize,
         t,
       ),
       bodyUserSportStatsSuccessStateCardStyle: MyoroCardStyle.lerp(
@@ -208,9 +223,39 @@ final class HomeScreenThemeExtension extends ThemeExtension<HomeScreenThemeExten
         other.bodyUserSportStatsPlayerCardGoatCardStyle,
         t,
       ),
-      bodyUserSportStatsLoaderPadding: EdgeInsets.lerp(
-        bodyUserSportStatsLoaderPadding,
-        other.bodyUserSportStatsLoaderPadding,
+      bodyUserSportStatsPlayerCardBadgeDecoration: BoxDecoration.lerp(
+        bodyUserSportStatsPlayerCardBadgeDecoration,
+        other.bodyUserSportStatsPlayerCardBadgeDecoration,
+        t,
+      ),
+      bodyUserSportStatsPlayerCardBadgePadding: EdgeInsets.lerp(
+        bodyUserSportStatsPlayerCardBadgePadding,
+        other.bodyUserSportStatsPlayerCardBadgePadding,
+        t,
+      ),
+      bodyUserSportStatsSuccessStateRowSpacing: lerpDouble(
+        bodyUserSportStatsSuccessStateRowSpacing,
+        other.bodyUserSportStatsSuccessStateRowSpacing,
+        t,
+      ),
+      bodyUserSportStatsSuccessStateColumnSpacing: lerpDouble(
+        bodyUserSportStatsSuccessStateColumnSpacing,
+        other.bodyUserSportStatsSuccessStateColumnSpacing,
+        t,
+      ),
+      bodyUserSportStatsPlayerCardProfilePictureSize: lerpDouble(
+        bodyUserSportStatsPlayerCardProfilePictureSize,
+        other.bodyUserSportStatsPlayerCardProfilePictureSize,
+        t,
+      ),
+      bodyUserSportStatsEditProfileButtonStyle: MyoroIconTextButtonStyle.lerp(
+        bodyUserSportStatsEditProfileButtonStyle,
+        other.bodyUserSportStatsEditProfileButtonStyle,
+        t,
+      ),
+      bodyUserSportStatsStatsDividerMargin: EdgeInsets.lerp(
+        bodyUserSportStatsStatsDividerMargin,
+        other.bodyUserSportStatsStatsDividerMargin,
         t,
       ),
     );

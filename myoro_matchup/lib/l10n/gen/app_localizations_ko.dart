@@ -13,19 +13,7 @@ class AppLocalizationsKo extends AppLocalizations {
       '서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.';
 
   @override
-  String get mmErrorFeedbackSubtitle => '연결을 확인하고 다시 시도하세요!';
-
-  @override
-  String get mmErrorFeedbackActionButtonText => '다시 시도';
-
-  @override
   String get mmEmptyFeedbackActionButtonText => '새로고침';
-
-  @override
-  String get mmSuccessFeedbackSubtitle => '작업이 성공적으로 완료되었습니다!';
-
-  @override
-  String get mmSuccessFeedbackActionButtonText => '완료';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => '장소';
@@ -97,10 +85,68 @@ class AppLocalizationsKo extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => '취소됨';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle => '게임 세부 정보를 가져오지 못했습니다!';
+  String get gameDetailsScreenBodyErrorFeedbackTitle => '게임 세부 정보를 가져오지 못했습니다!';
 
   @override
   String get invitationListingScreenAppBarTitle => '초대';
+
+  @override
+  String get userDetailsScreenAppBarTitle => '사용자 세부 정보';
+
+  @override
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '구독 중',
+      'other': '구독 안 함',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String bodySubscriptionStatusLabel(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '구독 중',
+      'other': '구독 안 함',
+    });
+    return '구독 상태: $_temp0';
+  }
+
+  @override
+  String get bodySubscriptionStatusButtonText => '구독하기';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      '프로필 공개 설정 변경';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      '프로필 공개 설정을 변경하시겠습니까?';
+
+  @override
+  String get userDetailsScreenBodyLocationLabel => '위치';
+
+  @override
+  String get userDetailsScreenBodyLocationCountryLabel => '국가';
+
+  @override
+  String get userDetailsScreenBodyLocationStateLabel => '주/도';
+
+  @override
+  String get userDetailsScreenBodyLocationCityLabel => '도시';
+
+  @override
+  String get userDetailsScreenLocationEditingBottomSheetTitle => '위치 편집';
+
+  @override
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
+    String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
+    String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
+    return '$city$_temp0$state$_temp1$country';
+  }
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => '초대를 가져오지 못했습니다!';
@@ -152,7 +198,7 @@ class AppLocalizationsKo extends AppLocalizations {
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
       '사용자 검색...';
 
   @override
@@ -225,6 +271,62 @@ class AppLocalizationsKo extends AppLocalizations {
       '공개 설정';
 
   @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'WhatsApp 그룹 채팅 링크';
+
+  @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      'WhatsApp 그룹 채팅 봇 사용';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      'WhatsApp 그룹 채팅 봇 사용';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      '이 게임에 WhatsApp 그룹 채팅 봇을 활성화하시겠습니까?';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      '봇을 사용하려면 WhatsApp 그룹 링크가 필요합니다.';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'WhatsApp 그룹 채팅 링크는 필수입니다.';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
+      'WhatsApp 그룹 채팅 링크는 다음 형식이어야 합니다: https://chat.whatsapp.com/[코드]。';
+
+  @override
+  String get playerDetailsBottomSheetAddAsFriendText => '친구로 추가';
+
+  @override
+  String get playerDetailsBottomSheetBlockText => '차단';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetTitle => '친구 요청 보내기';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      '이 사용자에게 친구 요청을 보내시겠습니까?';
+
+  @override
+  String get blockUserConfirmationBottomSheetTitle => '사용자 차단';
+
+  @override
+  String get blockUserConfirmationBottomSheetMessage => '이 사용자를 차단하시겠습니까?';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle => '사용자 차단 해제';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage =>
+      '이 사용자의 차단을 해제하시겠습니까?';
+
+  @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
@@ -235,13 +337,6 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get homeScreenNewGameButtonText => '게임 만들기';
-
-  @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle =>
-      '사용자 스포츠 통계를 가져오지 못했습니다!';
-
-  @override
-  String get homeScreenBodyUserGameListingErrorStateTitle => '게임을 가져오지 못했습니다!';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle =>
@@ -296,16 +391,17 @@ class AppLocalizationsKo extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
+  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
+      'Edit profile';
+
+  @override
   String get gameCreationScreenAppBarTitle => '게임 만들기';
 
   @override
   String get gameCreationScreenNameScreenTitle => '이름';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => '이름';
-
-  @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder => '예: 주간 축구 게임';
+  String get gameCreationScreenNameScreenNameInputLabel => '예: 주간 축구 게임';
 
   @override
   String get gameCreationScreenNameScreenNameInputEmptyMessage =>
@@ -396,11 +492,10 @@ class AppLocalizationsKo extends AppLocalizations {
       '게임이 성공적으로 생성되었습니다!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
-      '사용자 이름/이메일';
+  String get loginSignupScreenLoginUsernameEmailInputLabel => '사용자 이름/이메일';
 
   @override
-  String get loginSignupScreenLoginPasswordInputPlaceholder => '비밀번호';
+  String get loginSignupScreenLoginPasswordInputLabel => '비밀번호';
 
   @override
   String get loginSignupScreenLoginLoginButton => '로그인';
@@ -409,19 +504,19 @@ class AppLocalizationsKo extends AppLocalizations {
   String get loginSignupScreenLoginForgotPasswordButton => '비밀번호를 잊으셨나요?';
 
   @override
-  String get loginSignupScreenSignupNameInputPlaceholder => '이름';
+  String get loginSignupScreenSignupNameInputLabel => '이름';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder => '사용자 이름';
+  String get loginSignupScreenSignupUsernameInputLabel => '사용자 이름';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder => '이메일';
+  String get loginSignupScreenSignupEmailInputLabel => '이메일';
 
   @override
-  String get loginSignupScreenSignupPasswordInputPlaceholder => '비밀번호';
+  String get loginSignupScreenSignupPasswordInputLabel => '비밀번호';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => '비밀번호';
+  String get loginSignupScreenSignupPasswordRepeatInputLabel => '비밀번호';
 
   @override
   String get loginSignupScreenSignupSignupButton => '가입';
@@ -453,6 +548,10 @@ class AppLocalizationsKo extends AppLocalizations {
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
       '이메일은 비어 있을 수 없습니다.';
+
+  @override
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      '국가는 비어 있을 수 없습니다.';
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>

@@ -43,6 +43,8 @@ import 'package:myoro_matchup/module/login_signup/screen/login_signup/view_model
     as _i205;
 import 'package:myoro_matchup/module/user/repository/user_repository.dart'
     as _i624;
+import 'package:myoro_matchup/module/user/screen/details/view_model/user_details_screen_view_model.dart'
+    as _i703;
 import 'package:myoro_matchup/module/user/service/user_service.dart' as _i782;
 import 'package:myoro_matchup/myoro_matchup.dart' as _i460;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
@@ -98,18 +100,16 @@ extension GetItInjectableX on _i174.GetIt {
       () => appRouterModule.appRouter(gh<_i460.UserService>()),
       preResolve: true,
     );
+    gh.factory<_i703.UserDetailsScreenViewModel>(
+      () => _i703.UserDetailsScreenViewModel(
+        gh<_i460.SharedPreferencesService>(),
+        gh<_i460.UserRepository>(),
+      ),
+    );
     gh.factory<_i206.AuthService>(
       () => _i206.AuthService(
         gh<_i460.SharedPreferencesService>(),
         gh<_i460.AuthRepository>(),
-      ),
-    );
-    gh.factory<_i606.GameCreationScreenViewModel>(
-      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
-    );
-    gh.factory<_i296.InvitationListingScreenViewModel>(
-      () => _i296.InvitationListingScreenViewModel(
-        gh<_i460.InvitationRepository>(),
       ),
     );
     gh.factory<_i1009.HomeScreenViewModel>(
@@ -121,10 +121,18 @@ extension GetItInjectableX on _i174.GetIt {
     );
     gh.factoryParam<_i17.GameDetailsScreenViewModel, int, dynamic>(
       (gameId, _) => _i17.GameDetailsScreenViewModel(
-        gh<_i460.GameRepository>(),
         gh<_i460.UserRepository>(),
+        gh<_i460.GameRepository>(),
         gh<_i460.InvitationRepository>(),
         gameId,
+      ),
+    );
+    gh.factory<_i606.GameCreationScreenViewModel>(
+      () => _i606.GameCreationScreenViewModel(gh<_i460.GameRepository>()),
+    );
+    gh.factory<_i296.InvitationListingScreenViewModel>(
+      () => _i296.InvitationListingScreenViewModel(
+        gh<_i460.InvitationRepository>(),
       ),
     );
     gh.factory<_i205.LoginSignupScreenViewModel>(

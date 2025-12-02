@@ -14,10 +14,6 @@ final class _BodyUserSportStatsPlayerCardProfilePicture extends StatelessWidget 
     final bodyUserSportStatsPlayerCardProfilePictureSize =
         themeExtension.bodyUserSportStatsPlayerCardProfilePictureSize;
     final profilePicture = _user.profilePicture.isNotEmpty ? _user.profilePicture : MmImages.svgs.logo;
-    return MyoroImage(
-      path: profilePicture,
-      width: bodyUserSportStatsPlayerCardProfilePictureSize,
-      height: bodyUserSportStatsPlayerCardProfilePictureSize,
-    );
+    return MyoroImage(path: profilePicture, height: bodyUserSportStatsPlayerCardProfilePictureSize);
   }
 }

@@ -1,9 +1,11 @@
 package com.myoro.myoro_matchup_api.dto;
 
+import com.myoro.myoro_matchup_api.enums.CountryEnum;
 import com.myoro.myoro_matchup_api.util.ValidationConstants;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 
@@ -24,6 +26,10 @@ public class SignupRequestDto {
   @NotBlank(message = "{validation.email.required}")
   @Email(message = "{validation.email.invalid}")
   private String email;
+
+  /** Country. */
+  @NotNull(message = "{validation.country.required}")
+  private CountryEnum country;
 
   /** Password. */
   @NotBlank(message = "{validation.password.required}")
@@ -70,6 +76,15 @@ public class SignupRequestDto {
   }
 
   /**
+   * Getter for country
+   * 
+   * @return the country
+   */
+  public CountryEnum getCountry() {
+    return country;
+  }
+
+  /**
    * Getter for password
    * 
    * @return the password
@@ -91,6 +106,11 @@ public class SignupRequestDto {
   /** Setter for email. */
   public void setEmail(String email) {
     this.email = email;
+  }
+
+  /** Setter for country. */
+  public void setCountry(CountryEnum country) {
+    this.country = country;
   }
 
   /** Setter for password. */

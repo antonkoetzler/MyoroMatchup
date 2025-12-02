@@ -7,7 +7,7 @@ import java.util.Random;
 
 import com.myoro.myoro_matchup_api.enums.DayEnum;
 import com.myoro.myoro_matchup_api.enums.GameFrequencyEnum;
-import com.myoro.myoro_matchup_api.enums.GameVisibilityEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
 import com.myoro.myoro_matchup_api.model.GameAgeRangeModel;
 import com.myoro.myoro_matchup_api.model.GameFrequencyDayTimeModel;
@@ -38,8 +38,10 @@ public class GameModelBuilder {
   private String city;
   private String state;
   private String country;
-  private GameVisibilityEnum visibility;
+  private VisibilityEnum visibility;
   private List<UserModel> players;
+  private String whatsAppGroupChatLink;
+  private Boolean useWhatsAppGroupChatBot;
   private final Faker faker;
   private final Random random;
 
@@ -74,7 +76,7 @@ public class GameModelBuilder {
   }
 
   /** Sets the visibility. */
-  public GameModelBuilder withVisibility(GameVisibilityEnum visibility) {
+  public GameModelBuilder withVisibility(VisibilityEnum visibility) {
     this.visibility = visibility;
     return this;
   }
@@ -105,7 +107,7 @@ public class GameModelBuilder {
 
   /** Generates random visibility. */
   public GameModelBuilder withRandomVisibility() {
-    this.visibility = random.nextBoolean() ? GameVisibilityEnum.PUBLIC : GameVisibilityEnum.PRIVATE;
+    this.visibility = random.nextBoolean() ? VisibilityEnum.PUBLIC : VisibilityEnum.PRIVATE;
     return this;
   }
 
@@ -148,6 +150,24 @@ public class GameModelBuilder {
     this.city = faker.address().city();
     this.state = faker.address().stateAbbr();
     this.country = getRandomCountryCode();
+    return this;
+  }
+
+  /** Generates random WhatsApp group chat link. */
+  public GameModelBuilder withRandomWhatsAppGroupChatLink() {
+    // Generate a fake WhatsApp invite code (22 characters, alphanumeric)
+    String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    StringBuilder code = new StringBuilder();
+    for (int i = 0; i < 22; i++) {
+      code.append(chars.charAt(random.nextInt(chars.length())));
+    }
+    this.whatsAppGroupChatLink = "https://chat.whatsapp.com/" + code.toString();
+    return this;
+  }
+
+  /** Generates random use WhatsApp group chat bot flag. */
+  public GameModelBuilder withRandomUseWhatsAppGroupChatBot() {
+    this.useWhatsAppGroupChatBot = random.nextBoolean();
     return this;
   }
 
@@ -262,6 +282,16 @@ public class GameModelBuilder {
       game.setPlayers(players);
     } else {
       game.setPlayers(new ArrayList<>());
+    }
+
+    // WhatsApp group chat link
+    if (whatsAppGroupChatLink != null) {
+      game.setWhatsAppGroupChatLink(whatsAppGroupChatLink);
+    }
+
+    // Use WhatsApp group chat bot
+    if (useWhatsAppGroupChatBot != null) {
+      game.setUseWhatsAppGroupChatBot(useWhatsAppGroupChatBot);
     }
 
     return game;

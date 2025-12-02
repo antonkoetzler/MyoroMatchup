@@ -1,22 +1,33 @@
 package com.myoro.myoro_matchup_api.service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import com.myoro.myoro_matchup_api.model.BlockedUserModel;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.myoro.myoro_matchup_api.dto.FootballStatsDto;
+import com.myoro.myoro_matchup_api.dto.UserLocationResponseDto;
 import com.myoro.myoro_matchup_api.dto.UserResponseDto;
 import com.myoro.myoro_matchup_api.dto.UserSportStatsResponseDto;
 import com.myoro.myoro_matchup_api.dto.VolleyballStatsDto;
+import com.myoro.myoro_matchup_api.enums.CountryEnum;
+import com.myoro.myoro_matchup_api.enums.FriendRequestStatusEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
+import com.myoro.myoro_matchup_api.model.BlockedUserModel;
 import com.myoro.myoro_matchup_api.model.FootballUserStatsModel;
+import com.myoro.myoro_matchup_api.model.FriendRequestModel;
 import com.myoro.myoro_matchup_api.model.FutsalUserStatsModel;
+import com.myoro.myoro_matchup_api.model.UserLocationModel;
 import com.myoro.myoro_matchup_api.model.Fut7UserStatsModel;
 import com.myoro.myoro_matchup_api.model.UserModel;
 import com.myoro.myoro_matchup_api.model.UserStatsModel;
 import com.myoro.myoro_matchup_api.model.VolleyballUserStatsModel;
+import com.myoro.myoro_matchup_api.repository.BlockedUserRepository;
+import com.myoro.myoro_matchup_api.repository.FriendRequestRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
 import com.myoro.myoro_matchup_api.repository.UserStatsRepository;
 
@@ -32,6 +43,14 @@ public class UserService {
   /** User stats repository for database operations */
   @Autowired
   private UserStatsRepository userStatsRepository;
+
+  /** Friend request repository for database operations */
+  @Autowired
+  private FriendRequestRepository friendRequestRepository;
+
+  /** Blocked user repository for database operations */
+  @Autowired
+  private BlockedUserRepository blockedUserRepository;
 
   /** Message service for localization and internationalization. */
   @Autowired
@@ -68,13 +87,17 @@ public class UserService {
   }
 
   /**
-   * Get user DTO by ID with optional stats.
+   * Get user DTO by ID with optional stats and location data.
    * 
-   * @param id        the user ID
-   * @param showStats whether to include stats
+   * @param id               the user ID
+   * @param showStats        whether to include stats
+   * @param showSubscription whether to include subscription status
+   * @param locationFilter   the location data to include (null or NONE = no
+   *                         location, COUNTRY = country only, FULL = city, state,
+   *                         country)
    * @return the user response DTO
    */
-  public UserResponseDto getUserDto(Long id, boolean showStats) {
+  public UserResponseDto getUserDto(Long id) {
     UserModel user = userRepository.findById(id)
         .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
@@ -83,10 +106,16 @@ public class UserService {
     dto.setUsername(user.getUsername());
     dto.setName(user.getName());
     dto.setEmail(user.getEmail());
+    dto.setStats(buildSportStatsDto(user));
+    dto.setIsSubscribed(user.getIsSubscribed());
+    dto.setVisibility(user.getVisibility());
 
-    if (showStats) {
-      dto.setStats(buildSportStatsDto(user));
-    }
+    final UserLocationModel locationModel = user.getLocation();
+    final CountryEnum country = locationModel.getCountry();
+    final String state = locationModel.getState();
+    final String city = locationModel.getCity();
+    final UserLocationResponseDto location = new UserLocationResponseDto(country, state, city);
+    dto.setLocation(location);
 
     return dto;
   }
@@ -137,8 +166,169 @@ public class UserService {
           dto.setUsername(user.getUsername());
           dto.setName(user.getName());
           dto.setEmail(user.getEmail());
+          dto.setVisibility(user.getVisibility());
           return dto;
         })
         .collect(Collectors.toList());
+  }
+
+  /**
+   * Updates the visibility of a user.
+   * 
+   * @param request    the HTTP request containing the bearer token
+   * @param visibility the new visibility value
+   */
+  public void updateVisibility(final HttpServletRequest request,
+      final com.myoro.myoro_matchup_api.enums.VisibilityEnum visibility) {
+    final Long userId = jwtService.getUserIdFromRequest(request);
+    UserModel user = get(userId);
+    user.setVisibility(visibility);
+    userRepository.save(user);
+  }
+
+  /**
+   * Updates the location of a user.
+   * 
+   * @param request  the HTTP request containing the bearer token
+   * @param country  the country
+   * @param state    the state
+   * @param city     the city
+   */
+  public void updateLocation(final HttpServletRequest request, final CountryEnum country, final String state,
+      final String city) {
+    final Long userId = jwtService.getUserIdFromRequest(request);
+    UserModel user = get(userId);
+    user.setLocation(new UserLocationModel(country, state, city));
+    userRepository.save(user);
+  }
+
+  /**
+   * Sends a friend request to a user.
+   * 
+   * @param request    the HTTP request containing the bearer token
+   * @param recipientId the ID of the user receiving the friend request
+   */
+  public void sendFriendRequest(final HttpServletRequest request, final Long recipientId) {
+    final Long requesterId = jwtService.getUserIdFromRequest(request);
+
+    // Validate recipient exists
+    UserModel recipient = userRepository.findById(recipientId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+
+    // Validate requester is not the recipient
+    if (recipient.getId().equals(requesterId)) {
+      throw new RuntimeException(messageService.getMessage("error.friend.request.cannot.request.self"));
+    }
+
+    // Check if there's already a pending friend request
+    if (friendRequestRepository.existsByRequesterIdAndRecipientIdAndStatus(requesterId, recipientId,
+        FriendRequestStatusEnum.PENDING)) {
+      throw new RuntimeException(messageService.getMessage("error.friend.request.already.pending"));
+    }
+
+    // Check if there's already a pending friend request in reverse direction
+    if (friendRequestRepository.existsByRequesterIdAndRecipientIdAndStatus(recipientId, requesterId,
+        FriendRequestStatusEnum.PENDING)) {
+      throw new RuntimeException(messageService.getMessage("error.friend.request.already.pending"));
+    }
+
+    // Get requester
+    UserModel requester = userRepository.findById(requesterId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+
+    // Check if users are already blocked
+    if (blockedUserRepository.existsByBlockerIdAndBlockedId(requesterId, recipientId) ||
+        blockedUserRepository.existsByBlockerIdAndBlockedId(recipientId, requesterId)) {
+      throw new RuntimeException(messageService.getMessage("error.friend.request.user.blocked"));
+    }
+
+    // Create friend request
+    FriendRequestModel friendRequest = new FriendRequestModel();
+    friendRequest.setRequester(requester);
+    friendRequest.setRecipient(recipient);
+    friendRequest.setStatus(FriendRequestStatusEnum.PENDING);
+    friendRequest.setCreatedAt(LocalDateTime.now());
+
+    // Save friend request
+    friendRequestRepository.save(friendRequest);
+  }
+
+  /**
+   * Blocks a user.
+   * 
+   * @param request   the HTTP request containing the bearer token
+   * @param blockedId the ID of the user being blocked
+   */
+  public void blockUser(final HttpServletRequest request, final Long blockedId) {
+    final Long blockerId = jwtService.getUserIdFromRequest(request);
+
+    // Validate blocked user exists
+    UserModel blocked = userRepository.findById(blockedId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+
+    // Validate blocker is not blocking themselves
+    if (blocked.getId().equals(blockerId)) {
+      throw new RuntimeException(messageService.getMessage("error.block.user.cannot.block.self"));
+    }
+
+    // Check if already blocked
+    if (blockedUserRepository.existsByBlockerIdAndBlockedId(blockerId, blockedId)) {
+      throw new RuntimeException(messageService.getMessage("error.block.user.already.blocked"));
+    }
+
+    // Get blocker
+    UserModel blocker = userRepository.findById(blockerId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+
+    // Create blocked user relationship
+    BlockedUserModel blockedUser = new BlockedUserModel();
+    blockedUser.setBlocker(blocker);
+    blockedUser.setBlocked(blocked);
+    blockedUser.setBlockedAt(LocalDateTime.now());
+
+    // Save blocked user relationship
+    blockedUserRepository.save(blockedUser);
+  }
+
+  /**
+   * Gets all blocked users for the authenticated user.
+   * 
+   * @param request the HTTP request containing the bearer token
+   * @return list of blocked users as DTOs
+   */
+  public List<UserResponseDto> getBlockedUsers(final HttpServletRequest request) {
+    final Long blockerId = jwtService.getUserIdFromRequest(request);
+    List<BlockedUserModel> blockedUsers = blockedUserRepository.findByBlockerId(blockerId);
+    
+    return blockedUsers.stream()
+        .map(blockedUser -> {
+          UserModel user = blockedUser.getBlocked();
+          UserResponseDto dto = new UserResponseDto();
+          dto.setId(user.getId());
+          dto.setUsername(user.getUsername());
+          dto.setName(user.getName());
+          dto.setEmail(user.getEmail());
+          dto.setVisibility(user.getVisibility());
+          return dto;
+        })
+        .collect(Collectors.toList());
+  }
+
+  /**
+   * Unblocks a user.
+   * 
+   * @param request   the HTTP request containing the bearer token
+   * @param blockedId the ID of the user being unblocked
+   */
+  public void unblockUser(final HttpServletRequest request, final Long blockedId) {
+    final Long blockerId = jwtService.getUserIdFromRequest(request);
+
+    // Find the blocked user relationship
+    BlockedUserModel blockedUser = blockedUserRepository
+        .findByBlockerIdAndBlockedId(blockerId, blockedId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.unblock.user.not.blocked")));
+
+    // Delete the blocked user relationship
+    blockedUserRepository.delete(blockedUser);
   }
 }

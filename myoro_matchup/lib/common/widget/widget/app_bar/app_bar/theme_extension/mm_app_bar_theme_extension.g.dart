@@ -35,7 +35,8 @@ mixin _$MmAppBarThemeExtensionMixin on ThemeExtension<MmAppBarThemeExtension> {
       menuButtonIcon: menuButtonIcon ?? self.menuButtonIcon,
       menuButtonIconSize: menuButtonIconSize ?? self.menuButtonIconSize,
       menuDrawerSpacing: menuDrawerSpacing ?? self.menuDrawerSpacing,
-      menuDrawerContentPadding: menuDrawerContentPadding ?? self.menuDrawerContentPadding,
+      menuDrawerContentPadding:
+          menuDrawerContentPadding ?? self.menuDrawerContentPadding,
     );
   }
 

@@ -9,20 +9,12 @@ final class _BodyUserGameListing extends StatelessWidget {
   @override
   Widget build(context) {
     final viewModel = context.read<HomeScreenViewModel>();
-    final state = viewModel.state;
-    final gamesRequestController = state.gamesRequestController;
+    final fetchGames = viewModel.fetchGames;
 
-    return ValueListenableBuilder(
-      valueListenable: gamesRequestController,
-      builder: (_, request, _) => switch (request.status) {
-        MyoroRequestEnum.idle => const _Loader(),
-        MyoroRequestEnum.loading => const _Loader(),
-        MyoroRequestEnum.error => const _BodyUserGameListingErrorState(),
-        MyoroRequestEnum.success =>
-          request.data!.isEmpty
-              ? const _BodyUserGameListingEmptyFeedback()
-              : _BodyUserGameListingListing(request.data!),
-      },
+    return MyoroRequestWidget<Set<GameResponseDto>>(
+      request: fetchGames,
+      successBuilder: (_, games) =>
+          games!.isEmpty ? const _BodyUserGameListingEmptyFeedback() : _BodyUserGameListingListing(games),
     );
   }
 }

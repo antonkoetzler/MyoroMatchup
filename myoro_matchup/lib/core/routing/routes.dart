@@ -18,4 +18,7 @@ final class Routes {
 
   /// [LoginSignupRoutes].
   static final loginSignupRoutes = LoginSignupRoutes();
+
+  /// [UserRoutes].
+  static final userRoutes = UserRoutes();
 }

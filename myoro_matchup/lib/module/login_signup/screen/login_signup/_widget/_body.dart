@@ -1,8 +1,12 @@
-part of '../login_signup_screen.dart';
+part of '../widget/login_signup_screen.dart';
 
-/// [MyoroScreenConfiguration.body] of [LoginSignupScreen].
+/// [MyoroScreen.body] of [LoginSignupScreen].
 final class _Body extends StatelessWidget {
-  const _Body();
+  /// Default constructor.
+  const _Body(this._formType);
+
+  /// Form type.
+  final LoginSignupScreenEnum _formType;
 
   @override
   Widget build(context) {
@@ -11,47 +15,21 @@ final class _Body extends StatelessWidget {
     final logoInputsSpacing = themeExtension.logoInputsSpacing;
     final inputsFormTypeSwitcherButtonSpacing = themeExtension.inputsFormTypeSwitcherButtonSpacing;
 
-    final viewModel = context.read<LoginSignupScreenViewModel>();
-    final state = viewModel.state;
-    final formTypeController = state.formTypeController;
-    final formController = state.formController;
-
-    return ValueListenableBuilder(
-      valueListenable: formTypeController,
-      builder: (_, formType, _) {
-        return MyoroForm(
-          controller: formController,
-          builder: (request, _) {
-            return Padding(
-              padding: bodyPadding,
-              child: Column(
-                children: [
-                  Expanded(
-                    child: Center(
-                      child: MyoroSingleChildScrollable(
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const _Logo(),
-                            SizedBox(height: logoInputsSpacing),
-                            Flexible(child: _Inputs(formType)),
-                            SizedBox(height: inputsFormTypeSwitcherButtonSpacing),
-                            _FormTypeSwitcherButton(formType),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Column(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [if (request.status.isLoading) const MyoroCircularLoader() else _ActionButtons(formType)],
-                  ),
-                ],
-              ),
-            );
-          },
-        );
-      },
+    return Padding(
+      padding: bodyPadding,
+      child: Center(
+        child: MyoroSingleChildScrollable(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const _Logo(),
+              SizedBox(height: logoInputsSpacing),
+              Flexible(child: _Inputs(_formType)),
+              SizedBox(height: inputsFormTypeSwitcherButtonSpacing),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -6,6 +6,8 @@ final class GameDetailsScreenRoute extends PayloadRoute<int> {
     : super(
         parentLocation: AppRouter.gameModuleRoute,
         name: 'details',
-        builder: (_, gameId) => GameDetailsScreen(gameId: gameId),
+        builder: (_, gameId) {
+          return GameDetailsScreen(gameId);
+        },
       );
 }

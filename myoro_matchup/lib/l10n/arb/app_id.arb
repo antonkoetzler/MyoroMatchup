@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "Tidak dapat terhubung ke server, harap periksa koneksi internet Anda dan coba lagi.",
   
-  "mmErrorFeedbackSubtitle": "Harap verifikasi koneksi Anda dan coba lagi!",
-  "mmErrorFeedbackActionButtonText": "Coba Lagi",
-
   "mmEmptyFeedbackActionButtonText": "Muat Ulang",
-
-  "mmSuccessFeedbackSubtitle": "Operasi berhasil diselesaikan!",
-  "mmSuccessFeedbackActionButtonText": "Selesai",
 
   "mmLocationInputTypeEnumPlaceLabel": "Tempat",
   "mmLocationInputTypeEnumCityLabel": "Kota",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "Kedaluwarsa",
   "invitationStatusEnumCancelledLabel": "Dibatalkan",
 
-  "gameDetailsScreenBodyErrorStateTitle": "Gagal mengambil detail permainan!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "Gagal mengambil detail permainan!",
   "invitationListingScreenAppBarTitle": "Undangan",
+  "userDetailsScreenAppBarTitle": "Detail Pengguna",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Berlangganan} other {Tidak berlangganan}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "Status berlangganan: {isSubscribed, select, true {Berlangganan} other {Tidak berlangganan}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "Berlangganan",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Ubah Visibilitas Profil",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Apakah Anda yakin ingin mengubah visibilitas profil Anda?",
+  "userDetailsScreenBodyLocationLabel": "Lokasi",
+  "userDetailsScreenBodyLocationCountryLabel": "Negara",
+  "userDetailsScreenBodyLocationStateLabel": "Provinsi",
+  "userDetailsScreenBodyLocationCityLabel": "Kota",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "Edit Lokasi",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "Gagal mengambil undangan!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Tidak ada undangan ditemukan!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Pesan",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Cari pengguna...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Cari pengguna...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Pesan",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Batal",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Kirim",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Visibilitas",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "Tautan Grup Chat WhatsApp",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "Gunakan Bot Grup Chat WhatsApp",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "Gunakan Bot Grup Chat WhatsApp",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Apakah Anda ingin mengaktifkan bot grup chat WhatsApp untuk permainan ini?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "Tautan grup WhatsApp diperlukan untuk menggunakan bot.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "Tautan grup chat WhatsApp wajib diisi.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "Tautan grup chat WhatsApp harus dalam format: https://chat.whatsapp.com/[kode].",
+
+  "playerDetailsBottomSheetAddAsFriendText": "Tambah sebagai Teman",
+  "playerDetailsBottomSheetBlockText": "Blokir",
+  "sendFriendRequestConfirmationBottomSheetTitle": "Kirim Permintaan Pertemanan",
+  "sendFriendRequestConfirmationBottomSheetMessage": "Apakah Anda yakin ingin mengirim permintaan pertemanan kepada pengguna ini?",
+  "blockUserConfirmationBottomSheetTitle": "Blokir Pengguna",
+  "blockUserConfirmationBottomSheetMessage": "Apakah Anda yakin ingin memblokir pengguna ini?",
+  "unblockUserConfirmationBottomSheetTitle": "Buka Blokir Pengguna",
+  "unblockUserConfirmationBottomSheetMessage": "Apakah Anda yakin ingin membuka blokir pengguna ini?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Kesalahan saat mengambil permainan!",
   "homeScreenBodySuccessStateEmptyTitle": "Tidak ada permainan ditemukan!",
   "homeScreenNewGameButtonText": "Buat permainan",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "Gagal mengambil statistik olahraga pengguna!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "Gagal mengambil permainan Anda!",
   "homeScreenBodyUserGameListingEmptyTitle": "Anda belum bergabung dengan permainan apa pun!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Edit profile",
 
   "gameCreationScreenAppBarTitle": "Buat permainan",
   "gameCreationScreenNameScreenTitle": "Nama",
   "gameCreationScreenNameScreenNameInputLabel": "Nama",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "mis. Permainan Sepak Bola Mingguan",
+  "gameCreationScreenNameScreenNameInputLabel": "mis. Permainan Sepak Bola Mingguan",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Nama tidak boleh kosong.",
   "gameCreationScreenNameScreenNameInputLengthMessage": "Nama harus memiliki setidaknya 3 karakter.",
   "gameCreationScreenSportScreenTitle": "Olahraga",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "Selesai",
   "gameCreationScreenGameCreationSuccessMessage": "Permainan berhasil dibuat!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Nama pengguna/email",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "Kata sandi",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "Nama pengguna/email",
+  "loginSignupScreenLoginPasswordInputLabel": "Kata sandi",
   "loginSignupScreenLoginLoginButton": "Masuk",
   "loginSignupScreenLoginForgotPasswordButton": "Lupa kata sandi?",
-  "loginSignupScreenSignupNameInputPlaceholder": "Nama",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "Nama pengguna",
-  "loginSignupScreenSignupEmailInputPlaceholder": "Email",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "Kata sandi",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Kata sandi",
+  "loginSignupScreenSignupNameInputLabel": "Nama",
+  "loginSignupScreenSignupUsernameInputLabel": "Nama pengguna",
+  "loginSignupScreenSignupEmailInputLabel": "Email",
+  "loginSignupScreenSignupPasswordInputLabel": "Kata sandi",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "Kata sandi",
   "loginSignupScreenSignupSignupButton": "Daftar",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "Baru di MyoroMatchup? Daftar!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "Sudah terdaftar? Masuk!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "Nama tidak boleh kosong.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Nama pengguna tidak boleh kosong.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email tidak boleh kosong.",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Negara tidak boleh kosong.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Bidang kata sandi tidak boleh kosong.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Kata sandi tidak cocok.",
 

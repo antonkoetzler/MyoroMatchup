@@ -1,6 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
-import com.myoro.myoro_matchup_api.enums.GameVisibilityEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
 
 /** Game response DTO. */
@@ -30,7 +30,7 @@ public class GameResponseDto {
   private LocationDto location;
 
   /** Visibility of the game. */
-  private GameVisibilityEnum visibility;
+  private VisibilityEnum visibility;
 
   /** Profile picture of the game. */
   private String profilePicture;
@@ -41,8 +41,8 @@ public class GameResponseDto {
   /** WhatsApp group chat invite link. */
   private String whatsAppGroupChatLink;
 
-  /** Whether to use the group chat bot. */
-  private Boolean useGroupChatBot;
+  /** Whether to use the WhatsApp group chat bot. */
+  private Boolean useWhatsAppGroupChatBot;
 
   /** Default constructor. */
   public GameResponseDto() {
@@ -51,7 +51,7 @@ public class GameResponseDto {
   /** Constructor with all fields. */
   public GameResponseDto(Long id, Long userId, String name, SportsEnum sport,
       GameFrequencyDayTimeDto frequencyDayTime, GamePriceDto price, GameAgeRangeDto ageRange,
-      LocationDto location, GameVisibilityEnum visibility, String profilePicture, String banner) {
+      LocationDto location, VisibilityEnum visibility, String profilePicture, String banner) {
     this.id = id;
     this.userId = userId;
     this.name = name;
@@ -142,7 +142,7 @@ public class GameResponseDto {
    * 
    * @return the visibility of the game
    */
-  public GameVisibilityEnum getVisibility() {
+  public VisibilityEnum getVisibility() {
     return visibility;
   }
 
@@ -241,7 +241,7 @@ public class GameResponseDto {
    * 
    * @param visibility the visibility of the game
    */
-  public void setVisibility(GameVisibilityEnum visibility) {
+  public void setVisibility(VisibilityEnum visibility) {
     this.visibility = visibility;
   }
 
@@ -282,20 +282,20 @@ public class GameResponseDto {
   }
 
   /**
-   * Getter for useGroupChatBot
+   * Getter for useWhatsAppGroupChatBot
    * 
-   * @return whether to use the group chat bot
+   * @return whether to use the WhatsApp group chat bot
    */
-  public Boolean getUseGroupChatBot() {
-    return useGroupChatBot;
+  public Boolean getUseWhatsAppGroupChatBot() {
+    return useWhatsAppGroupChatBot;
   }
 
   /**
-   * Setter for useGroupChatBot
+   * Setter for useWhatsAppGroupChatBot
    * 
-   * @param useGroupChatBot whether to use the group chat bot
+   * @param useWhatsAppGroupChatBot whether to use the WhatsApp group chat bot
    */
-  public void setUseGroupChatBot(Boolean useGroupChatBot) {
-    this.useGroupChatBot = useGroupChatBot;
+  public void setUseWhatsAppGroupChatBot(Boolean useWhatsAppGroupChatBot) {
+    this.useWhatsAppGroupChatBot = useWhatsAppGroupChatBot;
   }
 }

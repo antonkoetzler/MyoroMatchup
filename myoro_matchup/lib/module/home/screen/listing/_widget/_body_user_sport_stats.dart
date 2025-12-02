@@ -9,15 +9,10 @@ final class _BodyUserSportStats extends StatelessWidget {
     final viewModel = context.read<HomeScreenViewModel>();
     final state = viewModel.state;
     final userRequestController = state.userRequestController;
-
-    return ValueListenableBuilder(
-      valueListenable: userRequestController,
-      builder: (_, request, _) => switch (request.status) {
-        MyoroRequestEnum.idle => const _Loader(),
-        MyoroRequestEnum.loading => const _Loader(),
-        MyoroRequestEnum.error => const _BodyUserSportStatsErrorState(),
-        MyoroRequestEnum.success => _BodyUserSportStatsSuccessState(request.data!),
-      },
+    return MyoroRequestWidget<UserResponseDto>(
+      requestController: userRequestController,
+      errorShowIcon: false,
+      successBuilder: (_, user) => _BodyUserSportStatsSuccessState(user!),
     );
   }
 }

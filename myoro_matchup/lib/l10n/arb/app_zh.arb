@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "无法连接到服务器，请检查您的网络连接后重试。",
   
-  "mmErrorFeedbackSubtitle": "请检查您的连接后重试！",
-  "mmErrorFeedbackActionButtonText": "重试",
-
   "mmEmptyFeedbackActionButtonText": "刷新",
-
-  "mmSuccessFeedbackSubtitle": "操作成功完成！",
-  "mmSuccessFeedbackActionButtonText": "完成",
 
   "mmLocationInputTypeEnumPlaceLabel": "地点",
   "mmLocationInputTypeEnumCityLabel": "城市",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "已过期",
   "invitationStatusEnumCancelledLabel": "已取消",
 
-  "gameDetailsScreenBodyErrorStateTitle": "无法获取游戏详情！",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "无法获取游戏详情！",
   "invitationListingScreenAppBarTitle": "邀请",
+  "userDetailsScreenAppBarTitle": "用户详情",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {已订阅} other {未订阅}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "订阅状态: {isSubscribed, select, true {已订阅} other {未订阅}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "订阅",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "更改个人资料可见性",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "您确定要更改个人资料的可见性吗？",
+  "userDetailsScreenBodyLocationLabel": "位置",
+  "userDetailsScreenBodyLocationCountryLabel": "国家",
+  "userDetailsScreenBodyLocationStateLabel": "州/省",
+  "userDetailsScreenBodyLocationCityLabel": "城市",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "编辑位置",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "无法获取邀请！",
   "invitationListingScreenBodySuccessStateEmptyTitle": "未找到邀请！",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "消息",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "搜索用户...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "搜索用户...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "消息",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "取消",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "发送",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "可见性",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp群聊链接",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "使用WhatsApp群聊机器人",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "使用WhatsApp群聊机器人",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "您想为此游戏启用WhatsApp群聊机器人吗？",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "使用机器人需要WhatsApp群聊链接。",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp群聊链接是必需的。",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp群聊链接必须采用以下格式: https://chat.whatsapp.com/[代码]。",
+
+  "playerDetailsBottomSheetAddAsFriendText": "添加为好友",
+  "playerDetailsBottomSheetBlockText": "屏蔽",
+  "sendFriendRequestConfirmationBottomSheetTitle": "发送好友请求",
+  "sendFriendRequestConfirmationBottomSheetMessage": "您确定要向此用户发送好友请求吗？",
+  "blockUserConfirmationBottomSheetTitle": "屏蔽用户",
+  "blockUserConfirmationBottomSheetMessage": "您确定要屏蔽此用户吗？",
+  "unblockUserConfirmationBottomSheetTitle": "取消屏蔽用户",
+  "unblockUserConfirmationBottomSheetMessage": "您确定要取消屏蔽此用户吗？",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "获取游戏时出错！",
   "homeScreenBodySuccessStateEmptyTitle": "未找到游戏！",
   "homeScreenNewGameButtonText": "创建游戏",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "无法获取用户运动统计数据！",
-  "homeScreenBodyUserGameListingErrorStateTitle": "无法获取您的游戏！",
   "homeScreenBodyUserGameListingEmptyTitle": "您还没有加入任何游戏！",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "编辑个人资料",
 
   "gameCreationScreenAppBarTitle": "创建游戏",
   "gameCreationScreenNameScreenTitle": "名称",
   "gameCreationScreenNameScreenNameInputLabel": "名称",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "例如：每周足球赛",
+  "gameCreationScreenNameScreenNameInputLabel": "例如：每周足球赛",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "名称不能为空。",
   "gameCreationScreenNameScreenNameInputLengthMessage": "名称必须至少包含3个字符。",
   "gameCreationScreenSportScreenTitle": "运动",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "完成",
   "gameCreationScreenGameCreationSuccessMessage": "游戏创建成功！",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "用户名/邮箱",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "密码",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "用户名/邮箱",
+  "loginSignupScreenLoginPasswordInputLabel": "密码",
   "loginSignupScreenLoginLoginButton": "登录",
   "loginSignupScreenLoginForgotPasswordButton": "忘记密码？",
-  "loginSignupScreenSignupNameInputPlaceholder": "姓名",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "用户名",
-  "loginSignupScreenSignupEmailInputPlaceholder": "邮箱",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "密码",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "密码",
+  "loginSignupScreenSignupNameInputLabel": "姓名",
+  "loginSignupScreenSignupUsernameInputLabel": "用户名",
+  "loginSignupScreenSignupEmailInputLabel": "邮箱",
+  "loginSignupScreenSignupPasswordInputLabel": "密码",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "密码",
   "loginSignupScreenSignupSignupButton": "注册",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "新用户？注册！",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "已有账号？登录！",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "姓名不能为空。",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "用户名不能为空。",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "邮箱不能为空。",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "国家不能为空。",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "密码字段不能为空。",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "密码不匹配。",
 

@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "Не удалось подключиться к серверу, проверьте подключение к интернету и попробуйте снова.",
   
-  "mmErrorFeedbackSubtitle": "Пожалуйста, проверьте ваше подключение и попробуйте снова!",
-  "mmErrorFeedbackActionButtonText": "Повторить",
-
   "mmEmptyFeedbackActionButtonText": "Обновить",
-
-  "mmSuccessFeedbackSubtitle": "Операция успешно завершена!",
-  "mmSuccessFeedbackActionButtonText": "Готово",
 
   "mmLocationInputTypeEnumPlaceLabel": "Место",
   "mmLocationInputTypeEnumCityLabel": "Город",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "Истекло",
   "invitationStatusEnumCancelledLabel": "Отменено",
 
-  "gameDetailsScreenBodyErrorStateTitle": "Не удалось получить детали игры!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "Не удалось получить детали игры!",
   "invitationListingScreenAppBarTitle": "Приглашения",
+  "userDetailsScreenAppBarTitle": "Детали пользователя",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Подписан} other {Не подписан}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "Статус подписки: {isSubscribed, select, true {Подписан} other {Не подписан}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "Подписаться",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Изменить Видимость Профиля",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Вы уверены, что хотите изменить видимость вашего профиля?",
+  "userDetailsScreenBodyLocationLabel": "Местоположение",
+  "userDetailsScreenBodyLocationCountryLabel": "Страна",
+  "userDetailsScreenBodyLocationStateLabel": "Штат/Провинция",
+  "userDetailsScreenBodyLocationCityLabel": "Город",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "Изменить Местоположение",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "Не удалось получить приглашения!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Приглашения не найдены!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Сообщение",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Поиск пользователей...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Поиск пользователей...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Сообщение",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Отмена",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Отправить",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Видимость",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "Ссылка на групповой чат WhatsApp",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "Использовать бота группового чата WhatsApp",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "Использовать бота группового чата WhatsApp",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Вы хотите включить бота группового чата WhatsApp для этой игры?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "Ссылка на группу WhatsApp необходима для использования бота.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "Ссылка на групповой чат WhatsApp обязательна.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "Ссылка на групповой чат WhatsApp должна быть в формате: https://chat.whatsapp.com/[код].",
+
+  "playerDetailsBottomSheetAddAsFriendText": "Добавить в друзья",
+  "playerDetailsBottomSheetBlockText": "Заблокировать",
+  "sendFriendRequestConfirmationBottomSheetTitle": "Отправить запрос на дружбу",
+  "sendFriendRequestConfirmationBottomSheetMessage": "Вы уверены, что хотите отправить запрос на дружбу этому пользователю?",
+  "blockUserConfirmationBottomSheetTitle": "Заблокировать пользователя",
+  "blockUserConfirmationBottomSheetMessage": "Вы уверены, что хотите заблокировать этого пользователя?",
+  "unblockUserConfirmationBottomSheetTitle": "Разблокировать пользователя",
+  "unblockUserConfirmationBottomSheetMessage": "Вы уверены, что хотите разблокировать этого пользователя?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Ошибка при получении игр!",
   "homeScreenBodySuccessStateEmptyTitle": "Игры не найдены!",
   "homeScreenNewGameButtonText": "Создать игру",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "Не удалось получить спортивную статистику пользователя!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "Не удалось получить ваши игры!",
   "homeScreenBodyUserGameListingEmptyTitle": "Вы еще не присоединились ни к одной игре!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Редактировать профиль",
 
   "gameCreationScreenAppBarTitle": "Создать игру",
   "gameCreationScreenNameScreenTitle": "Название",
   "gameCreationScreenNameScreenNameInputLabel": "Название",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "например, Еженедельная футбольная игра",
+  "gameCreationScreenNameScreenNameInputLabel": "например, Еженедельная футбольная игра",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Название не может быть пустым.",
   "gameCreationScreenNameScreenNameInputLengthMessage": "Название должно содержать не менее 3 символов.",
   "gameCreationScreenSportScreenTitle": "Спорт",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "Завершить",
   "gameCreationScreenGameCreationSuccessMessage": "Игра успешно создана!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Имя пользователя/email",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "Пароль",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "Имя пользователя/email",
+  "loginSignupScreenLoginPasswordInputLabel": "Пароль",
   "loginSignupScreenLoginLoginButton": "Войти",
   "loginSignupScreenLoginForgotPasswordButton": "Забыли пароль?",
-  "loginSignupScreenSignupNameInputPlaceholder": "Имя",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "Имя пользователя",
-  "loginSignupScreenSignupEmailInputPlaceholder": "Email",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "Пароль",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Пароль",
+  "loginSignupScreenSignupNameInputLabel": "Имя",
+  "loginSignupScreenSignupUsernameInputLabel": "Имя пользователя",
+  "loginSignupScreenSignupEmailInputLabel": "Email",
+  "loginSignupScreenSignupPasswordInputLabel": "Пароль",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "Пароль",
   "loginSignupScreenSignupSignupButton": "Зарегистрироваться",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "Новичок в MyoroMatchup? Зарегистрируйтесь!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "Уже зарегистрированы? Войдите!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "Имя не может быть пустым.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Имя пользователя не может быть пустым.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email не может быть пустым.",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Страна не может быть пустой.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Поля пароля не могут быть пустыми.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Пароли не совпадают.",
 

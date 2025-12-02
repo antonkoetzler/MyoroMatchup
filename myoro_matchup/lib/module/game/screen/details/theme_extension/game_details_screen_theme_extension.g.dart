@@ -13,8 +13,10 @@ part of 'game_details_screen_theme_extension.dart';
 /// ```dart
 /// class GameDetailsScreenThemeExtension with _$GameDetailsScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreenThemeExtension> {
-  GameDetailsScreenThemeExtension get self => this as GameDetailsScreenThemeExtension;
+mixin _$GameDetailsScreenThemeExtensionMixin
+    on ThemeExtension<GameDetailsScreenThemeExtension> {
+  GameDetailsScreenThemeExtension get self =>
+      this as GameDetailsScreenThemeExtension;
 
   @override
   GameDetailsScreenThemeExtension copyWith({
@@ -26,22 +28,79 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
     TextStyle? invitationBottomSheetTitleTextStyle,
     double? invitationBottomSheetActionButtonsSpacing,
     double? invitationBottomSheetSpacing,
+    double?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize,
+    MyoroInputStyle?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor,
+    EdgeInsets? invitationBottomSheetContentPadding,
+    TextStyle? playerDetailsBottomSheetTitleTextStyle,
+    double? playerDetailsBottomSheetSpacing,
   }) {
     return GameDetailsScreenThemeExtension(
       errorStatePadding: errorStatePadding ?? self.errorStatePadding,
       bodySuccessStateTabViewContentPadding:
-          bodySuccessStateTabViewContentPadding ?? self.bodySuccessStateTabViewContentPadding,
+          bodySuccessStateTabViewContentPadding ??
+          self.bodySuccessStateTabViewContentPadding,
       spacing: spacing ?? self.spacing,
       bodySuccessStateTabViewInfoTabContentPadding:
-          bodySuccessStateTabViewInfoTabContentPadding ?? self.bodySuccessStateTabViewInfoTabContentPadding,
+          bodySuccessStateTabViewInfoTabContentPadding ??
+          self.bodySuccessStateTabViewInfoTabContentPadding,
       bodySuccessStateTabViewPlayersTabActionButtonTextStyle:
           bodySuccessStateTabViewPlayersTabActionButtonTextStyle ??
           self.bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
       invitationBottomSheetTitleTextStyle:
-          invitationBottomSheetTitleTextStyle ?? self.invitationBottomSheetTitleTextStyle,
+          invitationBottomSheetTitleTextStyle ??
+          self.invitationBottomSheetTitleTextStyle,
       invitationBottomSheetActionButtonsSpacing:
-          invitationBottomSheetActionButtonsSpacing ?? self.invitationBottomSheetActionButtonsSpacing,
-      invitationBottomSheetSpacing: invitationBottomSheetSpacing ?? self.invitationBottomSheetSpacing,
+          invitationBottomSheetActionButtonsSpacing ??
+          self.invitationBottomSheetActionButtonsSpacing,
+      invitationBottomSheetSpacing:
+          invitationBottomSheetSpacing ?? self.invitationBottomSheetSpacing,
+      bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize:
+          bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize ??
+          self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize,
+      bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle:
+          bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle ??
+          self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle,
+      bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor:
+          bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor ??
+          self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor,
+      bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor:
+          bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor ??
+          self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor,
+      bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor:
+          bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor ??
+          self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor,
+      bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor:
+          bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor ??
+          self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor,
+      bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor:
+          bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor ??
+          self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor,
+      bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor:
+          bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor ??
+          self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor,
+      invitationBottomSheetContentPadding:
+          invitationBottomSheetContentPadding ??
+          self.invitationBottomSheetContentPadding,
+      playerDetailsBottomSheetTitleTextStyle:
+          playerDetailsBottomSheetTitleTextStyle ??
+          self.playerDetailsBottomSheetTitleTextStyle,
+      playerDetailsBottomSheetSpacing:
+          playerDetailsBottomSheetSpacing ??
+          self.playerDetailsBottomSheetSpacing,
     );
   }
 
@@ -50,14 +109,41 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
     return other is GameDetailsScreenThemeExtension &&
         other.runtimeType == runtimeType &&
         other.errorStatePadding == self.errorStatePadding &&
-        other.bodySuccessStateTabViewContentPadding == self.bodySuccessStateTabViewContentPadding &&
+        other.bodySuccessStateTabViewContentPadding ==
+            self.bodySuccessStateTabViewContentPadding &&
         other.spacing == self.spacing &&
-        other.bodySuccessStateTabViewInfoTabContentPadding == self.bodySuccessStateTabViewInfoTabContentPadding &&
+        other.bodySuccessStateTabViewInfoTabContentPadding ==
+            self.bodySuccessStateTabViewInfoTabContentPadding &&
         other.bodySuccessStateTabViewPlayersTabActionButtonTextStyle ==
             self.bodySuccessStateTabViewPlayersTabActionButtonTextStyle &&
-        other.invitationBottomSheetTitleTextStyle == self.invitationBottomSheetTitleTextStyle &&
-        other.invitationBottomSheetActionButtonsSpacing == self.invitationBottomSheetActionButtonsSpacing &&
-        other.invitationBottomSheetSpacing == self.invitationBottomSheetSpacing;
+        other.invitationBottomSheetTitleTextStyle ==
+            self.invitationBottomSheetTitleTextStyle &&
+        other.invitationBottomSheetActionButtonsSpacing ==
+            self.invitationBottomSheetActionButtonsSpacing &&
+        other.invitationBottomSheetSpacing ==
+            self.invitationBottomSheetSpacing &&
+        other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize ==
+            self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize &&
+        other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle ==
+            self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle &&
+        other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor ==
+            self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor &&
+        other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor ==
+            self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor &&
+        other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor ==
+            self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor &&
+        other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor ==
+            self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor &&
+        other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor ==
+            self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor &&
+        other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor ==
+            self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor &&
+        other.invitationBottomSheetContentPadding ==
+            self.invitationBottomSheetContentPadding &&
+        other.playerDetailsBottomSheetTitleTextStyle ==
+            self.playerDetailsBottomSheetTitleTextStyle &&
+        other.playerDetailsBottomSheetSpacing ==
+            self.playerDetailsBottomSheetSpacing;
   }
 
   @override
@@ -71,6 +157,17 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
       self.invitationBottomSheetTitleTextStyle,
       self.invitationBottomSheetActionButtonsSpacing,
       self.invitationBottomSheetSpacing,
+      self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize,
+      self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle,
+      self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor,
+      self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor,
+      self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor,
+      self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor,
+      self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor,
+      self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor,
+      self.invitationBottomSheetContentPadding,
+      self.playerDetailsBottomSheetTitleTextStyle,
+      self.playerDetailsBottomSheetSpacing,
     );
   }
 
@@ -85,5 +182,16 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
       '  invitationBottomSheetTitleTextStyle: ${self.invitationBottomSheetTitleTextStyle},\n'
       '  invitationBottomSheetActionButtonsSpacing: ${self.invitationBottomSheetActionButtonsSpacing},\n'
       '  invitationBottomSheetSpacing: ${self.invitationBottomSheetSpacing},\n'
+      '  bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize: ${self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize},\n'
+      '  bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle: ${self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle},\n'
+      '  bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor: ${self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor},\n'
+      '  bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor: ${self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor},\n'
+      '  bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor: ${self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor},\n'
+      '  bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor: ${self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor},\n'
+      '  bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor: ${self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor},\n'
+      '  bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor: ${self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor},\n'
+      '  invitationBottomSheetContentPadding: ${self.invitationBottomSheetContentPadding},\n'
+      '  playerDetailsBottomSheetTitleTextStyle: ${self.playerDetailsBottomSheetTitleTextStyle},\n'
+      '  playerDetailsBottomSheetSpacing: ${self.playerDetailsBottomSheetSpacing},\n'
       ');';
 }

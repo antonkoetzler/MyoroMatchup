@@ -13,20 +13,7 @@ class AppLocalizationsId extends AppLocalizations {
       'Tidak dapat terhubung ke server, harap periksa koneksi internet Anda dan coba lagi.';
 
   @override
-  String get mmErrorFeedbackSubtitle =>
-      'Harap verifikasi koneksi Anda dan coba lagi!';
-
-  @override
-  String get mmErrorFeedbackActionButtonText => 'Coba Lagi';
-
-  @override
   String get mmEmptyFeedbackActionButtonText => 'Muat Ulang';
-
-  @override
-  String get mmSuccessFeedbackSubtitle => 'Operasi berhasil diselesaikan!';
-
-  @override
-  String get mmSuccessFeedbackActionButtonText => 'Selesai';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => 'Tempat';
@@ -98,11 +85,69 @@ class AppLocalizationsId extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => 'Dibatalkan';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle =>
+  String get gameDetailsScreenBodyErrorFeedbackTitle =>
       'Gagal mengambil detail permainan!';
 
   @override
   String get invitationListingScreenAppBarTitle => 'Undangan';
+
+  @override
+  String get userDetailsScreenAppBarTitle => 'Detail Pengguna';
+
+  @override
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'Berlangganan',
+      'other': 'Tidak berlangganan',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String bodySubscriptionStatusLabel(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'Berlangganan',
+      'other': 'Tidak berlangganan',
+    });
+    return 'Status berlangganan: $_temp0';
+  }
+
+  @override
+  String get bodySubscriptionStatusButtonText => 'Berlangganan';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      'Ubah Visibilitas Profil';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      'Apakah Anda yakin ingin mengubah visibilitas profil Anda?';
+
+  @override
+  String get userDetailsScreenBodyLocationLabel => 'Lokasi';
+
+  @override
+  String get userDetailsScreenBodyLocationCountryLabel => 'Negara';
+
+  @override
+  String get userDetailsScreenBodyLocationStateLabel => 'Provinsi';
+
+  @override
+  String get userDetailsScreenBodyLocationCityLabel => 'Kota';
+
+  @override
+  String get userDetailsScreenLocationEditingBottomSheetTitle => 'Edit Lokasi';
+
+  @override
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
+    String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
+    String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
+    return '$city$_temp0$state$_temp1$country';
+  }
 
   @override
   String get invitationListingScreenBodyErrorStateTitle =>
@@ -155,7 +200,7 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
       'Cari pengguna...';
 
   @override
@@ -229,6 +274,64 @@ class AppLocalizationsId extends AppLocalizations {
       'Visibilitas';
 
   @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'Tautan Grup Chat WhatsApp';
+
+  @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      'Gunakan Bot Grup Chat WhatsApp';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      'Gunakan Bot Grup Chat WhatsApp';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      'Apakah Anda ingin mengaktifkan bot grup chat WhatsApp untuk permainan ini?';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      'Tautan grup WhatsApp diperlukan untuk menggunakan bot.';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'Tautan grup chat WhatsApp wajib diisi.';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
+      'Tautan grup chat WhatsApp harus dalam format: https://chat.whatsapp.com/[kode].';
+
+  @override
+  String get playerDetailsBottomSheetAddAsFriendText => 'Tambah sebagai Teman';
+
+  @override
+  String get playerDetailsBottomSheetBlockText => 'Blokir';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetTitle =>
+      'Kirim Permintaan Pertemanan';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      'Apakah Anda yakin ingin mengirim permintaan pertemanan kepada pengguna ini?';
+
+  @override
+  String get blockUserConfirmationBottomSheetTitle => 'Blokir Pengguna';
+
+  @override
+  String get blockUserConfirmationBottomSheetMessage =>
+      'Apakah Anda yakin ingin memblokir pengguna ini?';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle => 'Buka Blokir Pengguna';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage =>
+      'Apakah Anda yakin ingin membuka blokir pengguna ini?';
+
+  @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
@@ -241,14 +344,6 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get homeScreenNewGameButtonText => 'Buat permainan';
-
-  @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle =>
-      'Gagal mengambil statistik olahraga pengguna!';
-
-  @override
-  String get homeScreenBodyUserGameListingErrorStateTitle =>
-      'Gagal mengambil permainan Anda!';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle =>
@@ -303,16 +398,17 @@ class AppLocalizationsId extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
+  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
+      'Edit profile';
+
+  @override
   String get gameCreationScreenAppBarTitle => 'Buat permainan';
 
   @override
   String get gameCreationScreenNameScreenTitle => 'Nama';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => 'Nama';
-
-  @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder =>
+  String get gameCreationScreenNameScreenNameInputLabel =>
       'mis. Permainan Sepak Bola Mingguan';
 
   @override
@@ -407,11 +503,11 @@ class AppLocalizationsId extends AppLocalizations {
       'Permainan berhasil dibuat!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+  String get loginSignupScreenLoginUsernameEmailInputLabel =>
       'Nama pengguna/email';
 
   @override
-  String get loginSignupScreenLoginPasswordInputPlaceholder => 'Kata sandi';
+  String get loginSignupScreenLoginPasswordInputLabel => 'Kata sandi';
 
   @override
   String get loginSignupScreenLoginLoginButton => 'Masuk';
@@ -420,20 +516,19 @@ class AppLocalizationsId extends AppLocalizations {
   String get loginSignupScreenLoginForgotPasswordButton => 'Lupa kata sandi?';
 
   @override
-  String get loginSignupScreenSignupNameInputPlaceholder => 'Nama';
+  String get loginSignupScreenSignupNameInputLabel => 'Nama';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder => 'Nama pengguna';
+  String get loginSignupScreenSignupUsernameInputLabel => 'Nama pengguna';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder => 'Email';
+  String get loginSignupScreenSignupEmailInputLabel => 'Email';
 
   @override
-  String get loginSignupScreenSignupPasswordInputPlaceholder => 'Kata sandi';
+  String get loginSignupScreenSignupPasswordInputLabel => 'Kata sandi';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'Kata sandi';
+  String get loginSignupScreenSignupPasswordRepeatInputLabel => 'Kata sandi';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Daftar';
@@ -465,6 +560,10 @@ class AppLocalizationsId extends AppLocalizations {
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
       'Email tidak boleh kosong.';
+
+  @override
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      'Negara tidak boleh kosong.';
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>

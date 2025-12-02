@@ -1,7 +1,10 @@
 import 'package:go_router/go_router.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
+/// App's router.
 final class AppRouter {
+  /// TODO: Need to refactor these static strings to place them in the route classes.
+
   /// Friend module route.
   static const friendModuleRoute = 'friend';
 
@@ -13,6 +16,9 @@ final class AppRouter {
 
   /// Login signup module route.
   static const loginModuleRoute = 'login_signup';
+
+  /// User module route.
+  static const userModuleRoute = 'user';
 
   /// Navigates to a route.
   ///
@@ -64,12 +70,14 @@ final class AppRouter {
     _router = GoRouter(
       navigatorKey: navigatorKey,
       initialLocation: _userService.isLoggedIn ? homeScreenLocation : loginSignupScreenLocation,
+      // TODO: Need a way to automatically do this.
       routes: [
         Routes.friendRoutes.friendListingScreen.goRoute,
         RedirectRoute(name: gameModuleRoute, routes: [gameDetailsScreen, gameCreationScreen]).goRoute,
         Routes.homeRoutes.homeScreen.goRoute,
         Routes.invitationRoutes.invitationListingScreen.goRoute,
         Routes.loginSignupRoutes.loginSignupScreen.goRoute,
+        Routes.userRoutes.userDetailsScreen.goRoute,
       ],
     );
   }

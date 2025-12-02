@@ -6,13 +6,20 @@ part of 'game_frequency_day_time_time_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GameFrequencyDayTimeTimeDto _$GameFrequencyDayTimeTimeDtoFromJson(Map<String, dynamic> json) =>
-    GameFrequencyDayTimeTimeDto(
-      startTime: GameFrequencyDayTimeTimeDto._timeOfDayFromJson(json['startTime'] as Map<String, dynamic>),
-      endTime: GameFrequencyDayTimeTimeDto._timeOfDayFromJson(json['endTime'] as Map<String, dynamic>),
-    );
+GameFrequencyDayTimeTimeDto _$GameFrequencyDayTimeTimeDtoFromJson(
+  Map<String, dynamic> json,
+) => GameFrequencyDayTimeTimeDto(
+  startTime: GameFrequencyDayTimeTimeDto._timeOfDayFromJson(
+    json['startTime'] as Map<String, dynamic>,
+  ),
+  endTime: GameFrequencyDayTimeTimeDto._timeOfDayFromJson(
+    json['endTime'] as Map<String, dynamic>,
+  ),
+);
 
-Map<String, dynamic> _$GameFrequencyDayTimeTimeDtoToJson(GameFrequencyDayTimeTimeDto instance) => <String, dynamic>{
+Map<String, dynamic> _$GameFrequencyDayTimeTimeDtoToJson(
+  GameFrequencyDayTimeTimeDto instance,
+) => <String, dynamic>{
   'startTime': GameFrequencyDayTimeTimeDto._timeOfDayToJson(instance.startTime),
   'endTime': GameFrequencyDayTimeTimeDto._timeOfDayToJson(instance.endTime),
 };
@@ -31,8 +38,14 @@ Map<String, dynamic> _$GameFrequencyDayTimeTimeDtoToJson(GameFrequencyDayTimeTim
 mixin _$GameFrequencyDayTimeTimeDtoMixin {
   GameFrequencyDayTimeTimeDto get self => this as GameFrequencyDayTimeTimeDto;
 
-  GameFrequencyDayTimeTimeDto copyWith({TimeOfDay? startTime, TimeOfDay? endTime}) {
-    return GameFrequencyDayTimeTimeDto(startTime: startTime ?? self.startTime, endTime: endTime ?? self.endTime);
+  GameFrequencyDayTimeTimeDto copyWith({
+    TimeOfDay? startTime,
+    TimeOfDay? endTime,
+  }) {
+    return GameFrequencyDayTimeTimeDto(
+      startTime: startTime ?? self.startTime,
+      endTime: endTime ?? self.endTime,
+    );
   }
 
   @override

@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "Verbindung zum Server nicht möglich. Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
   
-  "mmErrorFeedbackSubtitle": "Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut!",
-  "mmErrorFeedbackActionButtonText": "Wiederholen",
-
   "mmEmptyFeedbackActionButtonText": "Aktualisieren",
-
-  "mmSuccessFeedbackSubtitle": "Vorgang erfolgreich abgeschlossen!",
-  "mmSuccessFeedbackActionButtonText": "Fertig",
 
   "mmLocationInputTypeEnumPlaceLabel": "Ort",
   "mmLocationInputTypeEnumCityLabel": "Stadt",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "Abgelaufen",
   "invitationStatusEnumCancelledLabel": "Storniert",
 
-  "gameDetailsScreenBodyErrorStateTitle": "Spieldetails konnten nicht abgerufen werden!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "Spieldetails konnten nicht abgerufen werden!",
   "invitationListingScreenAppBarTitle": "Einladungen",
+  "userDetailsScreenAppBarTitle": "Benutzerdetails",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Abonniert} other {Nicht abonniert}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "Abonnementstatus: {isSubscribed, select, true {Abonniert} other {Nicht abonniert}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "Abonnieren",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Profil-Sichtbarkeit Ändern",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Sind Sie sicher, dass Sie die Sichtbarkeit Ihres Profils ändern möchten?",
+  "userDetailsScreenBodyLocationLabel": "Standort",
+  "userDetailsScreenBodyLocationCountryLabel": "Land",
+  "userDetailsScreenBodyLocationStateLabel": "Bundesland/Provinz",
+  "userDetailsScreenBodyLocationCityLabel": "Stadt",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "Standort Bearbeiten",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "Einladungen konnten nicht abgerufen werden!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Keine Einladungen gefunden!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Nachricht",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Benutzer suchen...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Benutzer suchen...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Nachricht",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Abbrechen",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Senden",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Sichtbarkeit",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp-Gruppenchat-Link",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp-Gruppenchat-Bot verwenden",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp-Gruppenchat-Bot verwenden",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Möchten Sie den WhatsApp-Gruppenchat-Bot für dieses Spiel aktivieren?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "Der WhatsApp-Gruppenlink ist erforderlich, um den Bot zu verwenden.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "Der WhatsApp-Gruppenchat-Link ist erforderlich.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "Der WhatsApp-Gruppenchat-Link muss im Format sein: https://chat.whatsapp.com/[code].",
+
+  "playerDetailsBottomSheetAddAsFriendText": "Als Freund hinzufügen",
+  "playerDetailsBottomSheetBlockText": "Blockieren",
+  "sendFriendRequestConfirmationBottomSheetTitle": "Freundschaftsanfrage senden",
+  "sendFriendRequestConfirmationBottomSheetMessage": "Sind Sie sicher, dass Sie diesem Benutzer eine Freundschaftsanfrage senden möchten?",
+  "blockUserConfirmationBottomSheetTitle": "Benutzer blockieren",
+  "blockUserConfirmationBottomSheetMessage": "Sind Sie sicher, dass Sie diesen Benutzer blockieren möchten?",
+  "unblockUserConfirmationBottomSheetTitle": "Benutzer entsperren",
+  "unblockUserConfirmationBottomSheetMessage": "Sind Sie sicher, dass Sie diesen Benutzer entsperren möchten?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Fehler beim Abrufen der Spiele!",
   "homeScreenBodySuccessStateEmptyTitle": "Keine Spiele gefunden!",
   "homeScreenNewGameButtonText": "Spiel erstellen",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "Fehler beim Abrufen der Benutzer-Sportstatistiken!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "Fehler beim Abrufen Ihrer Spiele!",
   "homeScreenBodyUserGameListingEmptyTitle": "Sie sind noch keinem Spiel beigetreten!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Profil bearbeiten",
 
   "gameCreationScreenAppBarTitle": "Spiel erstellen",
   "gameCreationScreenNameScreenTitle": "Name",
   "gameCreationScreenNameScreenNameInputLabel": "Name",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "z.B. Wöchentliches Fußballspiel",
+  "gameCreationScreenNameScreenNameInputLabel": "z.B. Wöchentliches Fußballspiel",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Der Name darf nicht leer sein.",
   "gameCreationScreenNameScreenNameInputLengthMessage": "Der Name muss mindestens 3 Zeichen lang sein.",
   "gameCreationScreenSportScreenTitle": "Sport",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "Fertigstellen",
   "gameCreationScreenGameCreationSuccessMessage": "Spiel erfolgreich erstellt!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Benutzername/E-Mail",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "Passwort",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "Benutzername/E-Mail",
+  "loginSignupScreenLoginPasswordInputLabel": "Passwort",
   "loginSignupScreenLoginLoginButton": "Anmelden",
   "loginSignupScreenLoginForgotPasswordButton": "Passwort vergessen?",
-  "loginSignupScreenSignupNameInputPlaceholder": "Name",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "Benutzername",
-  "loginSignupScreenSignupEmailInputPlaceholder": "E-Mail",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "Passwort",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Passwort",
+  "loginSignupScreenSignupNameInputLabel": "Name",
+  "loginSignupScreenSignupUsernameInputLabel": "Benutzername",
+  "loginSignupScreenSignupEmailInputLabel": "E-Mail",
+  "loginSignupScreenSignupPasswordInputLabel": "Passwort",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "Passwort",
   "loginSignupScreenSignupSignupButton": "Registrieren",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "Neu bei MyoroMatchup? Registrieren!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "Bereits registriert? Anmelden!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "Name darf nicht leer sein.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Benutzername darf nicht leer sein.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "E-Mail darf nicht leer sein.",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Land darf nicht leer sein.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Passwortfelder dürfen nicht leer sein.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwörter stimmen nicht überein.",
 

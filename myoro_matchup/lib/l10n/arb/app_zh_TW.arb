@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "無法連接到伺服器，請檢查您的網路連線後重試。",
   
-  "mmErrorFeedbackSubtitle": "請檢查您的連線後重試！",
-  "mmErrorFeedbackActionButtonText": "重試",
-
   "mmEmptyFeedbackActionButtonText": "重新整理",
-
-  "mmSuccessFeedbackSubtitle": "操作成功完成！",
-  "mmSuccessFeedbackActionButtonText": "完成",
 
   "mmLocationInputTypeEnumPlaceLabel": "地點",
   "mmLocationInputTypeEnumCityLabel": "城市",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "已過期",
   "invitationStatusEnumCancelledLabel": "已取消",
 
-  "gameDetailsScreenBodyErrorStateTitle": "無法取得遊戲詳情！",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "無法取得遊戲詳情！",
   "invitationListingScreenAppBarTitle": "邀請",
+  "userDetailsScreenAppBarTitle": "使用者詳情",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {已訂閱} other {未訂閱}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "訂閱狀態: {isSubscribed, select, true {已訂閱} other {未訂閱}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "訂閱",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "更改個人資料可見性",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "您確定要更改個人資料的可見性嗎？",
+  "userDetailsScreenBodyLocationLabel": "位置",
+  "userDetailsScreenBodyLocationCountryLabel": "國家",
+  "userDetailsScreenBodyLocationStateLabel": "州/省",
+  "userDetailsScreenBodyLocationCityLabel": "城市",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "編輯位置",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "無法取得邀請！",
   "invitationListingScreenBodySuccessStateEmptyTitle": "找不到邀請！",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "訊息",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "搜尋使用者...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "搜尋使用者...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "訊息",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "取消",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "傳送",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "可見性",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp群組聊天連結",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "使用WhatsApp群組聊天機器人",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "使用WhatsApp群組聊天機器人",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "您想為此遊戲啟用WhatsApp群組聊天機器人嗎？",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "使用機器人需要WhatsApp群組聊天連結。",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp群組聊天連結是必需的。",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp群組聊天連結必須採用以下格式: https://chat.whatsapp.com/[代碼]。",
+
+  "playerDetailsBottomSheetAddAsFriendText": "新增為好友",
+  "playerDetailsBottomSheetBlockText": "封鎖",
+  "sendFriendRequestConfirmationBottomSheetTitle": "傳送好友請求",
+  "sendFriendRequestConfirmationBottomSheetMessage": "您確定要向此使用者傳送好友請求嗎？",
+  "blockUserConfirmationBottomSheetTitle": "封鎖使用者",
+  "blockUserConfirmationBottomSheetMessage": "您確定要封鎖此使用者嗎？",
+  "unblockUserConfirmationBottomSheetTitle": "解除封鎖使用者",
+  "unblockUserConfirmationBottomSheetMessage": "您確定要解除封鎖此使用者嗎？",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "取得遊戲時發生錯誤！",
   "homeScreenBodySuccessStateEmptyTitle": "找不到遊戲！",
   "homeScreenNewGameButtonText": "建立遊戲",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "無法取得使用者運動統計資料！",
-  "homeScreenBodyUserGameListingErrorStateTitle": "無法取得您的遊戲！",
   "homeScreenBodyUserGameListingEmptyTitle": "您還沒有加入任何遊戲！",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "編輯個人資料",
 
   "gameCreationScreenAppBarTitle": "建立遊戲",
   "gameCreationScreenNameScreenTitle": "名稱",
   "gameCreationScreenNameScreenNameInputLabel": "名稱",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "例如：每週足球賽",
+  "gameCreationScreenNameScreenNameInputLabel": "例如：每週足球賽",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "名稱不能為空。",
   "gameCreationScreenNameScreenNameInputLengthMessage": "名稱必須至少包含3個字元。",
   "gameCreationScreenSportScreenTitle": "運動",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "完成",
   "gameCreationScreenGameCreationSuccessMessage": "遊戲建立成功！",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "使用者名稱/電子郵件",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "密碼",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "使用者名稱/電子郵件",
+  "loginSignupScreenLoginPasswordInputLabel": "密碼",
   "loginSignupScreenLoginLoginButton": "登入",
   "loginSignupScreenLoginForgotPasswordButton": "忘記密碼？",
-  "loginSignupScreenSignupNameInputPlaceholder": "姓名",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "使用者名稱",
-  "loginSignupScreenSignupEmailInputPlaceholder": "電子郵件",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "密碼",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "密碼",
+  "loginSignupScreenSignupNameInputLabel": "姓名",
+  "loginSignupScreenSignupUsernameInputLabel": "使用者名稱",
+  "loginSignupScreenSignupEmailInputLabel": "電子郵件",
+  "loginSignupScreenSignupPasswordInputLabel": "密碼",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "密碼",
   "loginSignupScreenSignupSignupButton": "註冊",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "新用戶？註冊！",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "已有帳號？登入！",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "姓名不能為空。",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "使用者名稱不能為空。",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "電子郵件不能為空。",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "國家不能為空。",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "密碼欄位不能為空。",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "密碼不相符。",
 

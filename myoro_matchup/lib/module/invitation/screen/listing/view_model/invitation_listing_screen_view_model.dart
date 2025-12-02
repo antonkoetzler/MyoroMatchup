@@ -44,16 +44,18 @@ final class InvitationListingScreenViewModel {
   /// On decline.
   void onDecline(InvitationResponseDto invitation) {
     _state
-      ..declineInvitationRequestController.requestCallback = (() async =>
-          await _invitationRepository.declineInvitation(invitation.id))
+      ..declineInvitationRequestController.setRequestCallback(
+        (() async => await _invitationRepository.declineInvitation(invitation.id)),
+      )
       ..declineInvitationRequestController.fetch();
   }
 
   /// On accept.
   void onAccept(InvitationResponseDto invitation) {
     _state
-      ..acceptInvitationRequestController.requestCallback = (() async =>
-          await _invitationRepository.acceptInvitation(invitation.id))
+      ..acceptInvitationRequestController.setRequestCallback(
+        (() async => await _invitationRepository.acceptInvitation(invitation.id)),
+      )
       ..acceptInvitationRequestController.fetch();
   }
 

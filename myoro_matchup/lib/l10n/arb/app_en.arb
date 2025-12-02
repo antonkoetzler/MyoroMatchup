@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "Couldn't connect to server, please check your internet and try again.",
   
-  "mmErrorFeedbackSubtitle": "Please verify your connection and try again!",
-  "mmErrorFeedbackActionButtonText": "Retry",
-
   "mmEmptyFeedbackActionButtonText": "Refresh",
-
-  "mmSuccessFeedbackSubtitle": "Operation completed successfully!",
-  "mmSuccessFeedbackActionButtonText": "Done",
 
   "mmLocationInputTypeEnumPlaceLabel": "Place",
   "mmLocationInputTypeEnumCityLabel": "City",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "Expired",
   "invitationStatusEnumCancelledLabel": "Cancelled",
 
-  "gameDetailsScreenBodyErrorStateTitle": "Failed to retrieve game details!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "Failed to retrieve game details!",
   "invitationListingScreenAppBarTitle": "Invitations",
+  "userDetailsScreenAppBarTitle": "User Details",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Subscribed} other {Unsubscribed}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "Subscription status: {isSubscribed, select, true {Subscribed} other {Unsubscribed}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "Subscribe",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Change Profile Visibility",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Are you sure you want to change your profile visibility?",
+  "userDetailsScreenBodyLocationLabel": "Location",
+  "userDetailsScreenBodyLocationCountryLabel": "Country",
+  "userDetailsScreenBodyLocationStateLabel": "State/Province",
+  "userDetailsScreenBodyLocationCityLabel": "City",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "Edit Location",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "Failed to retrieve invitations!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "No invitations found!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Message",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Search users...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Search users...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Message",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Cancel",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Send",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Visibility",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp Group Chat Link",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "Use WhatsApp Group Chat Bot",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "Use WhatsApp Group Chat Bot",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Do you want to enable the WhatsApp group chat bot for this game?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "WhatsApp group link is required to use the bot.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp group chat link is required.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp group chat link must be in the format: https://chat.whatsapp.com/[code].",
+
+  "playerDetailsBottomSheetAddAsFriendText": "Add as Friend",
+  "playerDetailsBottomSheetBlockText": "Block",
+  "sendFriendRequestConfirmationBottomSheetTitle": "Send Friend Request",
+  "sendFriendRequestConfirmationBottomSheetMessage": "Are you sure you want to send a friend request to this user?",
+  "blockUserConfirmationBottomSheetTitle": "Block User",
+  "blockUserConfirmationBottomSheetMessage": "Are you sure you want to block this user?",
+  "unblockUserConfirmationBottomSheetTitle": "Unblock User",
+  "unblockUserConfirmationBottomSheetMessage": "Are you sure you want to unblock this user?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Error retrieving games!",
   "homeScreenBodySuccessStateEmptyTitle": "No games found!",
   "homeScreenNewGameButtonText": "Create game",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "Failed to retrieve user sport stats!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "Failed to retrieve your games!",
   "homeScreenBodyUserGameListingEmptyTitle": "You haven't joined any games yet!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Edit profile",
 
   "gameCreationScreenAppBarTitle": "Create game",
   "gameCreationScreenNameScreenTitle": "Name",
   "gameCreationScreenNameScreenNameInputLabel": "Name",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "i.e., Weekly Soccer Game",
+  "gameCreationScreenNameScreenNameInputLabel": "i.e., Weekly Soccer Game",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "Name cannot be empty.",
   "gameCreationScreenNameScreenNameInputLengthMessage": "Name must be at least 3 characters long.",
   "gameCreationScreenSportScreenTitle": "Sport",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "Finish",
   "gameCreationScreenGameCreationSuccessMessage": "Game created successfully!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Username/email",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "Password",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "Username/email",
+  "loginSignupScreenLoginPasswordInputLabel": "Password",
   "loginSignupScreenLoginLoginButton": "Login",
   "loginSignupScreenLoginForgotPasswordButton": "Forgot password?",
-  "loginSignupScreenSignupNameInputPlaceholder": "Name",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "Username",
-  "loginSignupScreenSignupEmailInputPlaceholder": "Email",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "Password",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Password",
+  "loginSignupScreenSignupNameInputLabel": "Name",
+  "loginSignupScreenSignupUsernameInputLabel": "Username",
+  "loginSignupScreenSignupEmailInputLabel": "Email",
+  "loginSignupScreenSignupPasswordInputLabel": "Password",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "Password",
   "loginSignupScreenSignupSignupButton": "Signup",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "New to MyoroMatchup? Signup!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "New to MyoroMatchup? Login!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "Name cannot be empty.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Username cannot be empty.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email cannot be empty.",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Country cannot be empty.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Password fields cannot be empty.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwords do not match.",
 

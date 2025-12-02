@@ -60,7 +60,7 @@ final class GameCreationScreenState {
   final _ageRangeController = ValueNotifier(const RangeValues(0, 100));
 
   /// Visibility field.
-  var visibility = GameVisibilityEnum.public;
+  var visibility = VisibilityEnum.public;
 
   /// Profile picture image field.
   String profilePictureImage = kMyoroEmptyString;

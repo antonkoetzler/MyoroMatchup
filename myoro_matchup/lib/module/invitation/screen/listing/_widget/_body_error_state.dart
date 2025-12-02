@@ -13,7 +13,7 @@ final class _BodyErrorState extends StatelessWidget {
     final invitationsRequestController = state.invitationsRequestController;
     final fetch = invitationsRequestController.fetch;
     return Center(
-      child: MmErrorFeedback(title: invitationListingScreenBodyErrorStateTitle, onRetry: (_) => fetch()),
+      child: MyoroErrorFeedback(title: invitationListingScreenBodyErrorStateTitle, onRetry: (_) => fetch()),
     );
   }
 }

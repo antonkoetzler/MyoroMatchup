@@ -1,6 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 
 /** User response DTO. */
 public class UserResponseDto {
@@ -17,16 +17,23 @@ public class UserResponseDto {
   private String email;
 
   /** User stats for each sport. */
-  @JsonInclude(JsonInclude.Include.NON_NULL)
   private UserSportStatsResponseDto stats;
+
+  /** User location. */
+  private UserLocationResponseDto location;
+
+  /** Subscription status. */
+  private Boolean isSubscribed;
+
+  /** Visibility. */
+  private VisibilityEnum visibility;
 
   /** Default constructor. */
   public UserResponseDto() {
   }
 
   /** Constructor with all fields. */
-  public UserResponseDto(Long id, String username, String name, String email, UserSportStatsResponseDto stats) {
-    this.id = id;
+  public UserResponseDto(String username, String name, String email, UserSportStatsResponseDto stats) {
     this.username = username;
     this.name = name;
     this.email = email;
@@ -78,6 +85,15 @@ public class UserResponseDto {
     return stats;
   }
 
+  /**
+   * Getter for location
+   * 
+   * @return the user location
+   */
+  public UserLocationResponseDto getLocation() {
+    return location;
+  }
+
   /** Setter for id. */
   public void setId(Long id) {
     this.id = id;
@@ -101,5 +117,38 @@ public class UserResponseDto {
   /** Setter for stats. */
   public void setStats(UserSportStatsResponseDto stats) {
     this.stats = stats;
+  }
+
+  /** Setter for location. */
+  public void setLocation(UserLocationResponseDto location) {
+    this.location = location;
+  }
+
+  /**
+   * Getter for isSubscribed
+   * 
+   * @return the subscription status
+   */
+  public Boolean getIsSubscribed() {
+    return isSubscribed;
+  }
+
+  /** Setter for isSubscribed. */
+  public void setIsSubscribed(Boolean isSubscribed) {
+    this.isSubscribed = isSubscribed;
+  }
+
+  /**
+   * Getter for visibility
+   * 
+   * @return the visibility
+   */
+  public VisibilityEnum getVisibility() {
+    return visibility;
+  }
+
+  /** Setter for visibility. */
+  public void setVisibility(VisibilityEnum visibility) {
+    this.visibility = visibility;
   }
 }

@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "تعذر الاتصال بالخادم، يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.",
   
-  "mmErrorFeedbackSubtitle": "يرجى التحقق من اتصالك والمحاولة مرة أخرى!",
-  "mmErrorFeedbackActionButtonText": "إعادة المحاولة",
-
   "mmEmptyFeedbackActionButtonText": "تحديث",
-
-  "mmSuccessFeedbackSubtitle": "تمت العملية بنجاح!",
-  "mmSuccessFeedbackActionButtonText": "تم",
 
   "mmLocationInputTypeEnumPlaceLabel": "مكان",
   "mmLocationInputTypeEnumCityLabel": "مدينة",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "منتهي الصلاحية",
   "invitationStatusEnumCancelledLabel": "ملغي",
 
-  "gameDetailsScreenBodyErrorStateTitle": "فشل في استرداد تفاصيل اللعبة!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "فشل في استرداد تفاصيل اللعبة!",
   "invitationListingScreenAppBarTitle": "الدعوات",
+  "userDetailsScreenAppBarTitle": "تفاصيل المستخدم",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {مشترك} other {غير مشترك}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "حالة الاشتراك: {isSubscribed, select, true {مشترك} other {غير مشترك}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "اشترك",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "تغيير رؤية الملف الشخصي",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "هل أنت متأكد من أنك تريد تغيير رؤية ملفك الشخصي؟",
+  "userDetailsScreenBodyLocationLabel": "الموقع",
+  "userDetailsScreenBodyLocationCountryLabel": "البلد",
+  "userDetailsScreenBodyLocationStateLabel": "الولاية/المقاطعة",
+  "userDetailsScreenBodyLocationCityLabel": "المدينة",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "تعديل الموقع",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "فشل في استرداد الدعوات!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "لم يتم العثور على دعوات!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "رسالة",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "البحث عن المستخدمين...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "البحث عن المستخدمين...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "الرسالة",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "إلغاء",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "إرسال",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "الرؤية",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "رابط مجموعة الدردشة على واتساب",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "استخدام بوت الدردشة الجماعية على واتساب",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "استخدام بوت الدردشة الجماعية على واتساب",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "هل تريد تفعيل بوت الدردشة الجماعية على واتساب لهذه اللعبة؟",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "رابط مجموعة واتساب مطلوب لاستخدام البوت.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "رابط مجموعة الدردشة على واتساب مطلوب.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "يجب أن يكون رابط مجموعة الدردشة على واتساب بالتنسيق: https://chat.whatsapp.com/[رمز].",
+
+  "playerDetailsBottomSheetAddAsFriendText": "إضافة كصديق",
+  "playerDetailsBottomSheetBlockText": "حظر",
+  "sendFriendRequestConfirmationBottomSheetTitle": "إرسال طلب صداقة",
+  "sendFriendRequestConfirmationBottomSheetMessage": "هل أنت متأكد من أنك تريد إرسال طلب صداقة إلى هذا المستخدم؟",
+  "blockUserConfirmationBottomSheetTitle": "حظر المستخدم",
+  "blockUserConfirmationBottomSheetMessage": "هل أنت متأكد من أنك تريد حظر هذا المستخدم؟",
+  "unblockUserConfirmationBottomSheetTitle": "إلغاء حظر المستخدم",
+  "unblockUserConfirmationBottomSheetMessage": "هل أنت متأكد من أنك تريد إلغاء حظر هذا المستخدم؟",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "خطأ في استرداد الألعاب!",
   "homeScreenBodySuccessStateEmptyTitle": "لم يتم العثور على ألعاب!",
   "homeScreenNewGameButtonText": "إنشاء لعبة",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "فشل في استرداد إحصائيات المستخدم الرياضية!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "فشل في استرداد ألعابك!",
   "homeScreenBodyUserGameListingEmptyTitle": "لم تنضم إلى أي ألعاب بعد!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Edit profile",
 
   "gameCreationScreenAppBarTitle": "إنشاء لعبة",
   "gameCreationScreenNameScreenTitle": "الاسم",
   "gameCreationScreenNameScreenNameInputLabel": "الاسم",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "مثال: مباراة كرة قدم أسبوعية",
+  "gameCreationScreenNameScreenNameInputLabel": "مثال: مباراة كرة قدم أسبوعية",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "لا يمكن أن يكون الاسم فارغًا.",
   "gameCreationScreenNameScreenNameInputLengthMessage": "يجب أن يكون الاسم 3 أحرف على الأقل.",
   "gameCreationScreenSportScreenTitle": "الرياضة",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "إنهاء",
   "gameCreationScreenGameCreationSuccessMessage": "تم إنشاء اللعبة بنجاح!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "اسم المستخدم/البريد الإلكتروني",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "كلمة المرور",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "اسم المستخدم/البريد الإلكتروني",
+  "loginSignupScreenLoginPasswordInputLabel": "كلمة المرور",
   "loginSignupScreenLoginLoginButton": "تسجيل الدخول",
   "loginSignupScreenLoginForgotPasswordButton": "نسيت كلمة المرور؟",
-  "loginSignupScreenSignupNameInputPlaceholder": "الاسم",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "اسم المستخدم",
-  "loginSignupScreenSignupEmailInputPlaceholder": "البريد الإلكتروني",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "كلمة المرور",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "كلمة المرور",
+  "loginSignupScreenSignupNameInputLabel": "الاسم",
+  "loginSignupScreenSignupUsernameInputLabel": "اسم المستخدم",
+  "loginSignupScreenSignupEmailInputLabel": "البريد الإلكتروني",
+  "loginSignupScreenSignupPasswordInputLabel": "كلمة المرور",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "كلمة المرور",
   "loginSignupScreenSignupSignupButton": "التسجيل",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "جديد في MyoroMatchup؟ سجل!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "مسجل بالفعل؟ سجل الدخول!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "لا يمكن أن يكون الاسم فارغًا.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "لا يمكن أن يكون اسم المستخدم فارغًا.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "لا يمكن أن يكون البريد الإلكتروني فارغًا.",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "لا يمكن أن تكون الدولة فارغة.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "لا يمكن أن تكون حقول كلمة المرور فارغة.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "كلمات المرور غير متطابقة.",
 

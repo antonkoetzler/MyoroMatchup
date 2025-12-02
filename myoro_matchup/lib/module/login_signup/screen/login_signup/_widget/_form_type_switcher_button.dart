@@ -1,4 +1,4 @@
-part of '../login_signup_screen.dart';
+part of '../widget/login_signup_screen.dart';
 
 /// Button to switch the [LoginSignupScreenEnum] form in [LoginSignupScreen].
 final class _FormTypeSwitcherButton extends StatelessWidget {

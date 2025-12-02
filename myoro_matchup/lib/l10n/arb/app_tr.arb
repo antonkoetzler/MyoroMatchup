@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "Sunucuya bağlanılamadı, lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.",
   
-  "mmErrorFeedbackSubtitle": "Lütfen bağlantınızı doğrulayın ve tekrar deneyin!",
-  "mmErrorFeedbackActionButtonText": "Yeniden Dene",
-
   "mmEmptyFeedbackActionButtonText": "Yenile",
-
-  "mmSuccessFeedbackSubtitle": "İşlem başarıyla tamamlandı!",
-  "mmSuccessFeedbackActionButtonText": "Tamamlandı",
 
   "mmLocationInputTypeEnumPlaceLabel": "Yer",
   "mmLocationInputTypeEnumCityLabel": "Şehir",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "Süresi Doldu",
   "invitationStatusEnumCancelledLabel": "İptal Edildi",
 
-  "gameDetailsScreenBodyErrorStateTitle": "Oyun detayları alınamadı!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "Oyun detayları alınamadı!",
   "invitationListingScreenAppBarTitle": "Davetler",
+  "userDetailsScreenAppBarTitle": "Kullanıcı Detayları",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Abone} other {Abone değil}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "Abonelik durumu: {isSubscribed, select, true {Abone} other {Abone değil}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "Abone Ol",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Profil Görünürlüğünü Değiştir",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Profil görünürlüğünü değiştirmek istediğinizden emin misiniz?",
+  "userDetailsScreenBodyLocationLabel": "Konum",
+  "userDetailsScreenBodyLocationCountryLabel": "Ülke",
+  "userDetailsScreenBodyLocationStateLabel": "Eyalet/İl",
+  "userDetailsScreenBodyLocationCityLabel": "Şehir",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "Konumu Düzenle",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "Davetiyeler alınamadı!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Davetiye bulunamadı!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Mesaj",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "Kullanıcı ara...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Kullanıcı ara...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Mesaj",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "İptal",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Gönder",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Görünürlük",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp Grup Sohbet Bağlantısı",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp Grup Sohbet Botu Kullan",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp Grup Sohbet Botu Kullan",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Bu oyun için WhatsApp grup sohbet botunu etkinleştirmek istiyor musunuz?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "Botu kullanmak için WhatsApp grup bağlantısı gereklidir.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp grup sohbet bağlantısı gereklidir.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp grup sohbet bağlantısı şu formatta olmalıdır: https://chat.whatsapp.com/[kod].",
+
+  "playerDetailsBottomSheetAddAsFriendText": "Arkadaş Olarak Ekle",
+  "playerDetailsBottomSheetBlockText": "Engelle",
+  "sendFriendRequestConfirmationBottomSheetTitle": "Arkadaşlık İsteği Gönder",
+  "sendFriendRequestConfirmationBottomSheetMessage": "Bu kullanıcıya arkadaşlık isteği göndermek istediğinizden emin misiniz?",
+  "blockUserConfirmationBottomSheetTitle": "Kullanıcıyı Engelle",
+  "blockUserConfirmationBottomSheetMessage": "Bu kullanıcıyı engellemek istediğinizden emin misiniz?",
+  "unblockUserConfirmationBottomSheetTitle": "Kullanıcının Engellemesini Kaldır",
+  "unblockUserConfirmationBottomSheetMessage": "Bu kullanıcının engellemesini kaldırmak istediğinizden emin misiniz?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Oyunlar alınırken hata oluştu!",
   "homeScreenBodySuccessStateEmptyTitle": "Oyun bulunamadı!",
   "homeScreenNewGameButtonText": "Oyun oluştur",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "Kullanıcı spor istatistikleri alınamadı!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "Oyunlarınız alınamadı!",
   "homeScreenBodyUserGameListingEmptyTitle": "Henüz hiçbir oyuna katılmadınız!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Profili düzenle",
 
   "gameCreationScreenAppBarTitle": "Oyun oluştur",
   "gameCreationScreenNameScreenTitle": "İsim",
   "gameCreationScreenNameScreenNameInputLabel": "İsim",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "örn. Haftalık Futbol Maçı",
+  "gameCreationScreenNameScreenNameInputLabel": "örn. Haftalık Futbol Maçı",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "İsim boş olamaz.",
   "gameCreationScreenNameScreenNameInputLengthMessage": "İsim en az 3 karakter uzunluğunda olmalıdır.",
   "gameCreationScreenSportScreenTitle": "Spor",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "Bitir",
   "gameCreationScreenGameCreationSuccessMessage": "Oyun başarıyla oluşturuldu!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "Kullanıcı adı/e-posta",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "Şifre",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "Kullanıcı adı/e-posta",
+  "loginSignupScreenLoginPasswordInputLabel": "Şifre",
   "loginSignupScreenLoginLoginButton": "Giriş Yap",
   "loginSignupScreenLoginForgotPasswordButton": "Şifrenizi mi unuttunuz?",
-  "loginSignupScreenSignupNameInputPlaceholder": "İsim",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "Kullanıcı adı",
-  "loginSignupScreenSignupEmailInputPlaceholder": "E-posta",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "Şifre",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "Şifre",
+  "loginSignupScreenSignupNameInputLabel": "İsim",
+  "loginSignupScreenSignupUsernameInputLabel": "Kullanıcı adı",
+  "loginSignupScreenSignupEmailInputLabel": "E-posta",
+  "loginSignupScreenSignupPasswordInputLabel": "Şifre",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "Şifre",
   "loginSignupScreenSignupSignupButton": "Kayıt Ol",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchup'a yeni misiniz? Kayıt olun!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "Zaten kayıtlı mısınız? Giriş yapın!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "İsim boş olamaz.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Kullanıcı adı boş olamaz.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "E-posta boş olamaz.",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Ülke boş olamaz.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Şifre alanları boş olamaz.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Şifreler eşleşmiyor.",
 

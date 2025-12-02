@@ -1,4 +1,4 @@
-part of '../login_signup_screen.dart';
+part of '../widget/login_signup_screen.dart';
 
 /// Input section of [LoginSignupScreen].
 final class _Inputs extends StatelessWidget {
@@ -8,12 +8,43 @@ final class _Inputs extends StatelessWidget {
 
   @override
   Widget build(context) {
+    final loginSignupScreenLoginUsernameEmailInputLabel = localization.loginSignupScreenLoginUsernameEmailInputLabel;
+    final loginSignupScreenLoginPasswordInputLabel = localization.loginSignupScreenLoginPasswordInputLabel;
+    final loginSignupScreenSignupNameInputLabel = localization.loginSignupScreenSignupNameInputLabel;
+    final loginSignupScreenSignupUsernameInputLabel = localization.loginSignupScreenSignupUsernameInputLabel;
+    final loginSignupScreenSignupEmailInputLabel = localization.loginSignupScreenSignupEmailInputLabel;
+    final loginSignupScreenSignupPasswordInputLabel = localization.loginSignupScreenSignupPasswordInputLabel;
+    final loginSignupScreenSignupPasswordRepeatInputLabel =
+        localization.loginSignupScreenSignupPasswordRepeatInputLabel;
+
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
 
     final viewModel = context.read<LoginSignupScreenViewModel>();
+    final onSignupCountryChanged = viewModel.onSignupCountryChanged;
     final state = viewModel.state;
+    final formController = state.formController;
+    final formControllerFetch = formController.fetch;
     final loginState = state.loginState;
+    final loginPasswordFocusNode = loginState.passwordFocusNode;
+    final loginPasswordRequestFocusNode = loginPasswordFocusNode.requestFocus;
+    final loginUsernameEmailFocusNode = loginState.usernameEmailFocusNode;
+    final loginUsernameEmailController = loginState.usernameEmailController;
+    final loginPasswordController = loginState.passwordController;
     final signupState = state.signupState;
+    final signupNameFocusNode = signupState.nameFocusNode;
+    final signupNameController = signupState.nameController;
+    final signupUsernameFocusNode = signupState.usernameFocusNode;
+    final signupUsernameController = signupState.usernameController;
+    final signupEmailFocusNode = signupState.emailFocusNode;
+    final signupEmailController = signupState.emailController;
+    final signupPasswordFocusNode = signupState.passwordFocusNode;
+    final signupPasswordController = signupState.passwordController;
+    final signupPasswordRepeatFocusNode = signupState.passwordRepeatFocusNode;
+    final signupPasswordRepeatController = signupState.passwordRepeatController;
+    final signupEmailFocusNodeRequestFocus = signupEmailFocusNode.requestFocus;
+    final signupPasswordFocusNodeRequestFocus = signupPasswordFocusNode.requestFocus;
+    final signupNameFocusNodeRequestFocus = signupNameFocusNode.requestFocus;
+    final signupPasswordRepeatFocusNodeRequestFocus = signupPasswordRepeatFocusNode.requestFocus;
 
     return Column(
       spacing: themeExtension.inputsSpacing,
@@ -21,57 +52,58 @@ final class _Inputs extends StatelessWidget {
       children: switch (_formType) {
         LoginSignupScreenEnum.login => [
           _Input(
-            placeholder: localization.loginSignupScreenLoginUsernameEmailInputPlaceholder,
-            onFieldSubmitted: loginState.passwordFocusNode.requestFocus,
-            focusNode: loginState.usernameEmailFocusNode,
-            controller: loginState.usernameEmailController,
+            label: loginSignupScreenLoginUsernameEmailInputLabel,
+            onFieldSubmitted: loginPasswordRequestFocusNode,
+            focusNode: loginUsernameEmailFocusNode,
+            controller: loginUsernameEmailController,
           ),
           _Input(
-            placeholder: localization.loginSignupScreenLoginPasswordInputPlaceholder,
+            label: loginSignupScreenLoginPasswordInputLabel,
             obscurify: true,
-            onFieldSubmitted: state.formController.fetch,
-            focusNode: loginState.passwordFocusNode,
-            controller: loginState.passwordController,
+            onFieldSubmitted: formControllerFetch,
+            focusNode: loginPasswordFocusNode,
+            controller: loginPasswordController,
           ),
         ],
         LoginSignupScreenEnum.signup => [
           _Input(
-            placeholder: localization.loginSignupScreenSignupNameInputPlaceholder,
-            onFieldSubmitted: signupState.usernameFocusNode.requestFocus,
-            focusNode: signupState.nameFocusNode,
-            controller: signupState.nameController,
+            label: loginSignupScreenSignupNameInputLabel,
+            onFieldSubmitted: signupNameFocusNodeRequestFocus,
+            focusNode: signupNameFocusNode,
+            controller: signupNameController,
           ),
           _Input(
-            placeholder: localization.loginSignupScreenSignupUsernameInputPlaceholder,
-            onFieldSubmitted: signupState.emailFocusNode.requestFocus,
-            focusNode: signupState.usernameFocusNode,
-            controller: signupState.usernameController,
+            label: loginSignupScreenSignupUsernameInputLabel,
+            onFieldSubmitted: signupEmailFocusNodeRequestFocus,
+            focusNode: signupUsernameFocusNode,
+            controller: signupUsernameController,
           ),
           _Input(
-            placeholder: localization.loginSignupScreenSignupEmailInputPlaceholder,
-            onFieldSubmitted: signupState.passwordFocusNode.requestFocus,
-            focusNode: signupState.emailFocusNode,
-            controller: signupState.emailController,
+            label: loginSignupScreenSignupEmailInputLabel,
+            onFieldSubmitted: signupPasswordFocusNodeRequestFocus,
+            focusNode: signupEmailFocusNode,
+            controller: signupEmailController,
           ),
+          MyoroCountryDropdown(onChanged: onSignupCountryChanged),
           Row(
             spacing: themeExtension.inputsSpacing,
             children: [
               Expanded(
                 child: _Input(
-                  placeholder: localization.loginSignupScreenSignupPasswordInputPlaceholder,
+                  label: loginSignupScreenSignupPasswordInputLabel,
                   obscurify: true,
-                  onFieldSubmitted: signupState.passwordRepeatFocusNode.requestFocus,
-                  focusNode: signupState.passwordFocusNode,
-                  controller: signupState.passwordController,
+                  onFieldSubmitted: signupPasswordRepeatFocusNodeRequestFocus,
+                  focusNode: signupPasswordFocusNode,
+                  controller: signupPasswordController,
                 ),
               ),
               Expanded(
                 child: _Input(
-                  placeholder: localization.loginSignupScreenSignupPasswordRepeatInputPlaceholder,
+                  label: loginSignupScreenSignupPasswordRepeatInputLabel,
                   obscurify: true,
-                  onFieldSubmitted: state.formController.fetch,
-                  focusNode: signupState.passwordRepeatFocusNode,
-                  controller: signupState.passwordRepeatController,
+                  onFieldSubmitted: formControllerFetch,
+                  focusNode: signupPasswordRepeatFocusNode,
+                  controller: signupPasswordRepeatController,
                 ),
               ),
             ],

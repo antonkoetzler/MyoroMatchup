@@ -1,6 +1,6 @@
 import 'package:myoro_matchup/myoro_matchup.dart';
 
-/// [Route]s of the games module.
+/// [Route]s of the game module.
 final class GameRoutes {
   /// [GameCreationScreen].
   late final gameCreationScreen = GameCreationScreenRoute();

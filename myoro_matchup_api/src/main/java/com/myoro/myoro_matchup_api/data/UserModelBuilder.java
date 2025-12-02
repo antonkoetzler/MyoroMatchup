@@ -1,9 +1,13 @@
 package com.myoro.myoro_matchup_api.data;
 
 import java.time.LocalDateTime;
+import java.util.Random;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import com.myoro.myoro_matchup_api.enums.CountryEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
+import com.myoro.myoro_matchup_api.model.UserLocationModel;
 import com.myoro.myoro_matchup_api.model.UserModel;
 
 import net.datafaker.Faker;
@@ -15,8 +19,12 @@ public class UserModelBuilder {
   private String email;
   private String password;
   private LocalDateTime createdAt;
+  private UserLocationModel location;
+  private Boolean isSubscribed;
+  private VisibilityEnum visibility;
   private final Faker faker;
   private final PasswordEncoder passwordEncoder;
+  private final Random random = new Random();
 
   /** Creates a new builder with faker and password encoder. */
   public UserModelBuilder(Faker faker, PasswordEncoder passwordEncoder) {
@@ -78,6 +86,34 @@ public class UserModelBuilder {
     return this;
   }
 
+  /** Sets the location. */
+  public UserModelBuilder withLocation(UserLocationModel location) {
+    this.location = location;
+    return this;
+  }
+
+  /** Generates random location. */
+  public UserModelBuilder withRandomLocation() {
+    CountryEnum[] countries = CountryEnum.values();
+    CountryEnum country = countries[random.nextInt(countries.length)];
+    String state = faker.address().stateAbbr();
+    String city = faker.address().city();
+    this.location = new UserLocationModel(country, state, city);
+    return this;
+  }
+
+  /** Sets the subscription status. */
+  public UserModelBuilder withIsSubscribed(Boolean isSubscribed) {
+    this.isSubscribed = isSubscribed;
+    return this;
+  }
+
+  /** Sets the visibility. */
+  public UserModelBuilder withVisibility(VisibilityEnum visibility) {
+    this.visibility = visibility;
+    return this;
+  }
+
   /** Builds the UserModel instance. */
   public UserModel build() {
     UserModel user = new UserModel();
@@ -97,6 +133,19 @@ public class UserModelBuilder {
       user.setCreatedAt(createdAt);
     } else {
       user.setCreatedAt(LocalDateTime.now());
+    }
+    if (location != null) {
+      user.setLocation(location);
+    }
+    if (isSubscribed != null) {
+      user.setIsSubscribed(isSubscribed);
+    } else {
+      user.setIsSubscribed(false); // Default to false if not set
+    }
+    if (visibility != null) {
+      user.setVisibility(visibility);
+    } else {
+      user.setVisibility(VisibilityEnum.PRIVATE); // Default to PRIVATE if not set
     }
     return user;
   }

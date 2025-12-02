@@ -19,10 +19,10 @@ import com.myoro.myoro_matchup_api.service.JwtService;
 import jakarta.servlet.http.HttpServletRequest;
 
 import com.myoro.myoro_matchup_api.dto.GameCreationRequestDto;
+import com.myoro.myoro_matchup_api.dto.GamePlayerResponseDto;
 import com.myoro.myoro_matchup_api.dto.GameResponseDto;
 import com.myoro.myoro_matchup_api.dto.SetUseWhatsAppGroupChatBotRequestDto;
 import com.myoro.myoro_matchup_api.dto.SetWhatsAppGroupChatLinkRequestDto;
-import com.myoro.myoro_matchup_api.dto.UserResponseDto;
 import com.myoro.myoro_matchup_api.service.GameService;
 import com.myoro.myoro_matchup_api.service.MessageService;
 
@@ -72,7 +72,7 @@ public class GameController {
 
   /** Get players of a game by game id. */
   @GetMapping("/{id}/players")
-  public ResponseEntity<List<UserResponseDto>> getPlayers(@PathVariable Long id) {
+  public ResponseEntity<List<GamePlayerResponseDto>> getPlayers(@PathVariable Long id) {
     return ResponseEntity.ok(gameService.getPlayersByGameId(id));
   }
 

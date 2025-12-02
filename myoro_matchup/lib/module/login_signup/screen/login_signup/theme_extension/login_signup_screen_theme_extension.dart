@@ -13,6 +13,7 @@ part 'login_signup_screen_theme_extension.g.dart';
 @myoroThemeExtension
 final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupScreenThemeExtension>
     with _$LoginSignupScreenThemeExtensionMixin {
+  /// Default constructor.
   const LoginSignupScreenThemeExtension({
     required this.bodyPadding,
     required this.inputsSpacing,
@@ -24,8 +25,11 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
     required this.formTypeSwitcherButtonTapColor,
     required this.logoInputsSpacing,
     required this.inputsFormTypeSwitcherButtonSpacing,
+    required this.formSwitcherActionButtonsSpacing,
+    required this.bottomNavigationBarPadding,
   });
 
+  /// Fake constructor.
   LoginSignupScreenThemeExtension.fake()
     : bodyPadding = myoroFake<EdgeInsets>(),
       inputsSpacing = faker.randomGenerator.decimal(scale: 20),
@@ -36,11 +40,14 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       formTypeSwitcherButtonIdleColor = myoroFake<Color>(),
       formTypeSwitcherButtonTapColor = myoroFake<Color>(),
       logoInputsSpacing = faker.randomGenerator.decimal(scale: 20),
-      inputsFormTypeSwitcherButtonSpacing = faker.randomGenerator.decimal(scale: 20);
+      inputsFormTypeSwitcherButtonSpacing = faker.randomGenerator.decimal(scale: 20),
+      formSwitcherActionButtonsSpacing = faker.randomGenerator.decimal(scale: 20),
+      bottomNavigationBarPadding = myoroFake<EdgeInsets>();
 
+  /// Builder constructor.
   LoginSignupScreenThemeExtension.builder(TextTheme textTheme)
-    : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength * 2),
-      inputsSpacing = kMyoroMultiplier * 2,
+    : bodyPadding = const EdgeInsets.only(top: kEdgeInsetsLength, left: kEdgeInsetsLength, right: kEdgeInsetsLength),
+      inputsSpacing = kMyoroMultiplier * 3,
       inputTextStyle = textTheme.bodySmall!,
       buttonTextStyle = textTheme.bodySmall!,
       buttonsSpacing = kMyoroMultiplier * 2,
@@ -48,7 +55,13 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       formTypeSwitcherButtonIdleColor = MyoroColors.blue1.darken(0.05),
       formTypeSwitcherButtonTapColor = MyoroColors.blue1,
       logoInputsSpacing = kMyoroMultiplier * 6,
-      inputsFormTypeSwitcherButtonSpacing = kMyoroMultiplier;
+      inputsFormTypeSwitcherButtonSpacing = kMyoroMultiplier,
+      formSwitcherActionButtonsSpacing = kMyoroMultiplier,
+      bottomNavigationBarPadding = const EdgeInsets.only(
+        bottom: kEdgeInsetsLength,
+        left: kEdgeInsetsLength,
+        right: kEdgeInsetsLength,
+      );
 
   /// Padding of [LoginSignupScreen].
   final EdgeInsets bodyPadding;
@@ -80,6 +93,13 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
   /// Spacing between the innputs and form switcher button.
   final double inputsFormTypeSwitcherButtonSpacing;
 
+  /// Spacing between the form switcher button and action buttons.
+  final double formSwitcherActionButtonsSpacing;
+
+  /// Padding of the bottom navigation bar.
+  final EdgeInsets bottomNavigationBarPadding;
+
+  /// Lerp function.
   @override
   LoginSignupScreenThemeExtension lerp(covariant ThemeExtension<LoginSignupScreenThemeExtension>? other, double t) {
     if (other is! LoginSignupScreenThemeExtension) return this;
@@ -110,6 +130,12 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
         other.inputsFormTypeSwitcherButtonSpacing,
         t,
       ),
+      formSwitcherActionButtonsSpacing: lerpDouble(
+        formSwitcherActionButtonsSpacing,
+        other.formSwitcherActionButtonsSpacing,
+        t,
+      ),
+      bottomNavigationBarPadding: EdgeInsets.lerp(bottomNavigationBarPadding, other.bottomNavigationBarPadding, t),
     );
   }
 }

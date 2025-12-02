@@ -44,6 +44,23 @@ final class HttpClient {
     });
   }
 
+  /// Put function.
+  Future<HttpClientResponse> put(String path, {Map<String, dynamic>? data, String baseUrl = kMyoroEmptyString}) async {
+    return await _runRequest(() async {
+      final uri = _buildUri(path, baseUrl: baseUrl);
+      final body = data != null ? jsonEncode(data) : null;
+      return await _client.put(uri, headers: _baseHeaders, body: body).timeout(timeoutDuration);
+    });
+  }
+
+  /// Delete function.
+  Future<HttpClientResponse> delete(String path, {String baseUrl = kMyoroEmptyString}) async {
+    return await _runRequest(() async {
+      final uri = _buildUri(path, baseUrl: baseUrl);
+      return await _client.delete(uri, headers: _baseHeaders).timeout(timeoutDuration);
+    });
+  }
+
   /// Build URI from path and query parameters.
   Uri _buildUri(String path, {Map<String, dynamic>? queryParameters, String baseUrl = kMyoroEmptyString}) {
     baseUrl = baseUrl.isEmpty ? EnvironmentConfiguration.apiUrl : baseUrl;

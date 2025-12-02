@@ -13,19 +13,7 @@ class AppLocalizationsJa extends AppLocalizations {
       'サーバーに接続できませんでした。インターネット接続を確認して、もう一度お試しください。';
 
   @override
-  String get mmErrorFeedbackSubtitle => '接続を確認して、もう一度お試しください！';
-
-  @override
-  String get mmErrorFeedbackActionButtonText => '再試行';
-
-  @override
   String get mmEmptyFeedbackActionButtonText => '更新';
-
-  @override
-  String get mmSuccessFeedbackSubtitle => '操作が正常に完了しました！';
-
-  @override
-  String get mmSuccessFeedbackActionButtonText => '完了';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => '場所';
@@ -97,10 +85,68 @@ class AppLocalizationsJa extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => 'キャンセル済み';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle => 'ゲームの詳細を取得できませんでした！';
+  String get gameDetailsScreenBodyErrorFeedbackTitle => 'ゲームの詳細を取得できませんでした！';
 
   @override
   String get invitationListingScreenAppBarTitle => '招待';
+
+  @override
+  String get userDetailsScreenAppBarTitle => 'ユーザー詳細';
+
+  @override
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '購読中',
+      'other': '未購読',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String bodySubscriptionStatusLabel(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '購読中',
+      'other': '未購読',
+    });
+    return '購読ステータス: $_temp0';
+  }
+
+  @override
+  String get bodySubscriptionStatusButtonText => '購読する';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      'プロフィールの公開設定を変更';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      'プロフィールの公開設定を変更してもよろしいですか？';
+
+  @override
+  String get userDetailsScreenBodyLocationLabel => '位置';
+
+  @override
+  String get userDetailsScreenBodyLocationCountryLabel => '国';
+
+  @override
+  String get userDetailsScreenBodyLocationStateLabel => '州/都道府県';
+
+  @override
+  String get userDetailsScreenBodyLocationCityLabel => '都市';
+
+  @override
+  String get userDetailsScreenLocationEditingBottomSheetTitle => '位置を編集';
+
+  @override
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
+    String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
+    String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
+    return '$city$_temp0$state$_temp1$country';
+  }
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => '招待を取得できませんでした！';
@@ -152,7 +198,7 @@ class AppLocalizationsJa extends AppLocalizations {
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
       'ユーザーを検索...';
 
   @override
@@ -224,6 +270,63 @@ class AppLocalizationsJa extends AppLocalizations {
       '公開設定';
 
   @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'WhatsAppグループチャットリンク';
+
+  @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      'WhatsAppグループチャットボットを使用';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      'WhatsAppグループチャットボットを使用';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      'このゲームでWhatsAppグループチャットボットを有効にしますか？';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      'ボットを使用するには、WhatsAppグループリンクが必要です。';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'WhatsAppグループチャットリンクは必須です。';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
+      'WhatsAppグループチャットリンクは次の形式である必要があります: https://chat.whatsapp.com/[コード]。';
+
+  @override
+  String get playerDetailsBottomSheetAddAsFriendText => '友達として追加';
+
+  @override
+  String get playerDetailsBottomSheetBlockText => 'ブロック';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetTitle => '友達リクエストを送信';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      'このユーザーに友達リクエストを送信してもよろしいですか？';
+
+  @override
+  String get blockUserConfirmationBottomSheetTitle => 'ユーザーをブロック';
+
+  @override
+  String get blockUserConfirmationBottomSheetMessage =>
+      'このユーザーをブロックしてもよろしいですか？';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle => 'ユーザーのブロックを解除';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage =>
+      'このユーザーのブロックを解除してもよろしいですか？';
+
+  @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
@@ -234,14 +337,6 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get homeScreenNewGameButtonText => 'ゲームを作成';
-
-  @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle =>
-      'ユーザーのスポーツ統計を取得できませんでした！';
-
-  @override
-  String get homeScreenBodyUserGameListingErrorStateTitle =>
-      'あなたのゲームを取得できませんでした！';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle => 'まだどのゲームにも参加していません！';
@@ -295,16 +390,17 @@ class AppLocalizationsJa extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
+  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
+      'Edit profile';
+
+  @override
   String get gameCreationScreenAppBarTitle => 'ゲームを作成';
 
   @override
   String get gameCreationScreenNameScreenTitle => '名前';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => '名前';
-
-  @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder => '例：週次サッカーゲーム';
+  String get gameCreationScreenNameScreenNameInputLabel => '例：週次サッカーゲーム';
 
   @override
   String get gameCreationScreenNameScreenNameInputEmptyMessage => '名前は空にできません。';
@@ -393,11 +489,10 @@ class AppLocalizationsJa extends AppLocalizations {
   String get gameCreationScreenGameCreationSuccessMessage => 'ゲームが正常に作成されました！';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
-      'ユーザー名/メールアドレス';
+  String get loginSignupScreenLoginUsernameEmailInputLabel => 'ユーザー名/メールアドレス';
 
   @override
-  String get loginSignupScreenLoginPasswordInputPlaceholder => 'パスワード';
+  String get loginSignupScreenLoginPasswordInputLabel => 'パスワード';
 
   @override
   String get loginSignupScreenLoginLoginButton => 'ログイン';
@@ -406,19 +501,19 @@ class AppLocalizationsJa extends AppLocalizations {
   String get loginSignupScreenLoginForgotPasswordButton => 'パスワードをお忘れですか？';
 
   @override
-  String get loginSignupScreenSignupNameInputPlaceholder => '名前';
+  String get loginSignupScreenSignupNameInputLabel => '名前';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder => 'ユーザー名';
+  String get loginSignupScreenSignupUsernameInputLabel => 'ユーザー名';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder => 'メールアドレス';
+  String get loginSignupScreenSignupEmailInputLabel => 'メールアドレス';
 
   @override
-  String get loginSignupScreenSignupPasswordInputPlaceholder => 'パスワード';
+  String get loginSignupScreenSignupPasswordInputLabel => 'パスワード';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => 'パスワード';
+  String get loginSignupScreenSignupPasswordRepeatInputLabel => 'パスワード';
 
   @override
   String get loginSignupScreenSignupSignupButton => '登録';
@@ -449,6 +544,10 @@ class AppLocalizationsJa extends AppLocalizations {
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
       'メールアドレスは空にできません。';
+
+  @override
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      '国は空にできません。';
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>

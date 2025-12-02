@@ -10,15 +10,14 @@ part 'login_signup_screen_state.dart';
 /// View model of [LoginSignupScreen].
 @injectable
 final class LoginSignupScreenViewModel {
-  LoginSignupScreenViewModel(this._authService) {
-    _state.formController.addListener(_formControllerListener);
-  }
+  /// Default constructor.
+  LoginSignupScreenViewModel(this._authService);
 
   /// [User] repository.
   final AuthService _authService;
 
   /// State.
-  late final _state = LoginSignupScreenState(_validation, _request);
+  late final _state = LoginSignupScreenState(_validation, _request, _onSuccess, _onError);
 
   /// Dispose function.
   void dispose() {
@@ -31,6 +30,11 @@ final class LoginSignupScreenViewModel {
       LoginSignupScreenEnum.login => LoginSignupScreenEnum.signup,
       LoginSignupScreenEnum.signup => LoginSignupScreenEnum.login,
     };
+  }
+
+  /// Updates the [LoginSignupScreenState.signupState.countryController].
+  void onSignupCountryChanged(MyoroCountryEnum? country) {
+    _state.signupState.countryController.value = country;
   }
 
   /// Form validation function.
@@ -66,6 +70,9 @@ final class LoginSignupScreenViewModel {
         if (emailController.text.isEmpty) {
           return localization.loginSignupScreenSignupFormEmailFieldEmptyMessage;
         }
+        if (signupState.country == null) {
+          return localization.loginSignupScreenSignupFormLocationCountryFieldEmptyMessage;
+        }
         if (passwordController.text.isEmpty || passwordRepeatController.text.isEmpty) {
           return localization.loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
         }
@@ -92,38 +99,43 @@ final class LoginSignupScreenViewModel {
     final signupName = signupState.name;
     final signupUsername = signupState.username;
     final signupEmail = signupState.email;
+    final signupCountry = signupState.country;
     final signupPassword = signupState.password;
 
     return await switch (formType) {
       LoginSignupScreenEnum.login => _authService.login(
-        LoginRequest(
+        LoginRequestDto(
           username: loginIsEmail ? null : loginUsernameEmail,
           email: loginIsEmail ? loginUsernameEmail : null,
           password: loginPassword,
         ),
       ),
       LoginSignupScreenEnum.signup => _authService.signup(
-        SignupRequest(username: signupUsername, name: signupName, email: signupEmail, password: signupPassword),
+        SignupRequestDto(
+          username: signupUsername,
+          name: signupName,
+          email: signupEmail,
+          country: signupCountry!,
+          password: signupPassword,
+        ),
       ),
     };
   }
 
-  /// Listener of [LoginSignupScreenState.formController].
-  void _formControllerListener() {
-    final formController = _state.formController;
-    final request = formController.request;
-    final status = request.status;
-    final errorMessage = request.errorMessage;
-    if (status.isError) {
-      MmSnackBarHelper.showSnackBar(
-        snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage!),
-      );
-    }
-    if (status.isSuccess) {
-      AppRouter.replace(Routes.homeRoutes.homeScreen.navigate());
-    }
+  /// On success function.
+  void _onSuccess(_) {
+    AppRouter.replace(Routes.homeRoutes.homeScreen.navigate());
+  }
+
+  /// On error function.
+  void _onError(String errorMessage) {
+    MmSnackBarHelper.showSnackBar(
+      snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage),
+    );
   }
 
   /// [_state] getter.
-  LoginSignupScreenState get state => _state;
+  LoginSignupScreenState get state {
+    return _state;
+  }
 }

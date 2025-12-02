@@ -2,17 +2,23 @@
 
 ## In progress
 
-Stripe, paywalls, and WhatsApp API
+- In app payments and paywall
 
 ## List
 
+- Get second desktop setup as server and get refine env setup
 - `myoro_matchup_api`
+  - Password encryption logic
   - Migration system
   - Formatter and linting settings/tasks
+  - Automatic seeder
+  - Automatic postman/hoppscotch style documentation
+  - Other things that aren't working
 - `myoro_matchup`
-  - Sentry
+  - Sentry & logger
   - `STAGELOG.md`/`CHANGELOG.md` and deploy script
-- Get second desktop setup as server and get refine env setup
+  - Friend listing screen
+  - Whatsapp bot
+  - Other things that aren't working
 - Documentation on Notion
-- Homologação
 - Ship

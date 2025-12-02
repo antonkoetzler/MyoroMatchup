@@ -3,13 +3,10 @@ part of '../home_screen.dart';
 /// Player card of [_BodyUserSportStats].
 final class _BodyUserSportStatsPlayerCard extends StatelessWidget {
   /// Default constructor.
-  const _BodyUserSportStatsPlayerCard(this._user, this._stats);
+  const _BodyUserSportStatsPlayerCard(this._user);
 
   /// User.
   final UserResponseDto _user;
-
-  /// Stats.
-  final UserStatsResponseDto _stats;
 
   /// Build function.
   @override
@@ -22,8 +19,8 @@ final class _BodyUserSportStatsPlayerCard extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          _BodyUserSportStatsPlayerCardProfilePicture(_user),
-          Row(children: [_BodyUserSportStatsPlayerCardName(_user), _BodyUserSportStatsPlayerCardRating(_stats)]),
+          Flexible(child: _BodyUserSportStatsPlayerCardProfilePicture(_user)),
+          _BodyUserSportStatsPlayerCardName(_user),
         ],
       ),
     );

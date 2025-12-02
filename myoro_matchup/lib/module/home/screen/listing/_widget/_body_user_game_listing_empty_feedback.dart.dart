@@ -6,6 +6,6 @@ final class _BodyUserGameListingEmptyFeedback extends StatelessWidget {
 
   @override
   Widget build(_) {
-    return Center(child: MmEmptyFeedback(title: localization.homeScreenBodyUserGameListingEmptyTitle));
+    return Center(child: MyoroEmptyFeedback(title: localization.homeScreenBodyUserGameListingEmptyTitle));
   }
 }

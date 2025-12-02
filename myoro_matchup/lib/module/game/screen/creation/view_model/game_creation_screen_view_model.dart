@@ -138,7 +138,7 @@ final class GameCreationScreenViewModel {
   }
 
   /// On visibility changed.
-  void onVisibilityChanged(GameVisibilityEnum visibility) {
+  void onVisibilityChanged(VisibilityEnum visibility) {
     _state.visibility = visibility;
   }
 

@@ -13,20 +13,7 @@ class AppLocalizationsNl extends AppLocalizations {
       'Kan niet verbinden met de server, controleer uw internetverbinding en probeer het opnieuw.';
 
   @override
-  String get mmErrorFeedbackSubtitle =>
-      'Controleer uw verbinding en probeer het opnieuw!';
-
-  @override
-  String get mmErrorFeedbackActionButtonText => 'Opnieuw proberen';
-
-  @override
   String get mmEmptyFeedbackActionButtonText => 'Vernieuwen';
-
-  @override
-  String get mmSuccessFeedbackSubtitle => 'Bewerking succesvol voltooid!';
-
-  @override
-  String get mmSuccessFeedbackActionButtonText => 'Klaar';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => 'Plaats';
@@ -98,11 +85,70 @@ class AppLocalizationsNl extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => 'Geannuleerd';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle =>
+  String get gameDetailsScreenBodyErrorFeedbackTitle =>
       'Kon speldetails niet ophalen!';
 
   @override
   String get invitationListingScreenAppBarTitle => 'Uitnodigingen';
+
+  @override
+  String get userDetailsScreenAppBarTitle => 'Gebruikersgegevens';
+
+  @override
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'Geabonneerd',
+      'other': 'Niet geabonneerd',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String bodySubscriptionStatusLabel(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'Geabonneerd',
+      'other': 'Niet geabonneerd',
+    });
+    return 'Abonnementsstatus: $_temp0';
+  }
+
+  @override
+  String get bodySubscriptionStatusButtonText => 'Abonneren';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      'Profielzichtbaarheid Wijzigen';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      'Weet je zeker dat je de zichtbaarheid van je profiel wilt wijzigen?';
+
+  @override
+  String get userDetailsScreenBodyLocationLabel => 'Locatie';
+
+  @override
+  String get userDetailsScreenBodyLocationCountryLabel => 'Land';
+
+  @override
+  String get userDetailsScreenBodyLocationStateLabel => 'Staat/Provincie';
+
+  @override
+  String get userDetailsScreenBodyLocationCityLabel => 'Stad';
+
+  @override
+  String get userDetailsScreenLocationEditingBottomSheetTitle =>
+      'Locatie Bewerken';
+
+  @override
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
+    String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
+    String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
+    return '$city$_temp0$state$_temp1$country';
+  }
 
   @override
   String get invitationListingScreenBodyErrorStateTitle =>
@@ -157,7 +203,7 @@ class AppLocalizationsNl extends AppLocalizations {
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
       'Zoek gebruikers...';
 
   @override
@@ -232,6 +278,64 @@ class AppLocalizationsNl extends AppLocalizations {
       'Zichtbaarheid';
 
   @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'WhatsApp-groepschatlink';
+
+  @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      'WhatsApp-groepschatbot gebruiken';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      'WhatsApp-groepschatbot gebruiken';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      'Wilt u de WhatsApp-groepschatbot voor dit spel inschakelen?';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      'De WhatsApp-groepslink is vereist om de bot te gebruiken.';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'WhatsApp-groepschatlink is verplicht.';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
+      'WhatsApp-groepschatlink moet in het formaat zijn: https://chat.whatsapp.com/[code].';
+
+  @override
+  String get playerDetailsBottomSheetAddAsFriendText => 'Als vriend toevoegen';
+
+  @override
+  String get playerDetailsBottomSheetBlockText => 'Blokkeren';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetTitle =>
+      'Vriendschapsverzoek verzenden';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      'Weet u zeker dat u een vriendschapsverzoek naar deze gebruiker wilt verzenden?';
+
+  @override
+  String get blockUserConfirmationBottomSheetTitle => 'Gebruiker blokkeren';
+
+  @override
+  String get blockUserConfirmationBottomSheetMessage =>
+      'Weet u zeker dat u deze gebruiker wilt blokkeren?';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle => 'Gebruiker deblokkeren';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage =>
+      'Weet u zeker dat u deze gebruiker wilt deblokkeren?';
+
+  @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
@@ -243,14 +347,6 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get homeScreenNewGameButtonText => 'Spel maken';
-
-  @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle =>
-      'Kon gebruikerssportstatistieken niet ophalen!';
-
-  @override
-  String get homeScreenBodyUserGameListingErrorStateTitle =>
-      'Kon uw spellen niet ophalen!';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle =>
@@ -305,16 +401,17 @@ class AppLocalizationsNl extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
+  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
+      'Profiel bewerken';
+
+  @override
   String get gameCreationScreenAppBarTitle => 'Spel maken';
 
   @override
   String get gameCreationScreenNameScreenTitle => 'Naam';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => 'Naam';
-
-  @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder =>
+  String get gameCreationScreenNameScreenNameInputLabel =>
       'bijv. Wekelijkse voetbalwedstrijd';
 
   @override
@@ -409,11 +506,11 @@ class AppLocalizationsNl extends AppLocalizations {
       'Spel succesvol aangemaakt!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+  String get loginSignupScreenLoginUsernameEmailInputLabel =>
       'Gebruikersnaam/e-mail';
 
   @override
-  String get loginSignupScreenLoginPasswordInputPlaceholder => 'Wachtwoord';
+  String get loginSignupScreenLoginPasswordInputLabel => 'Wachtwoord';
 
   @override
   String get loginSignupScreenLoginLoginButton => 'Inloggen';
@@ -423,21 +520,19 @@ class AppLocalizationsNl extends AppLocalizations {
       'Wachtwoord vergeten?';
 
   @override
-  String get loginSignupScreenSignupNameInputPlaceholder => 'Naam';
+  String get loginSignupScreenSignupNameInputLabel => 'Naam';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder =>
-      'Gebruikersnaam';
+  String get loginSignupScreenSignupUsernameInputLabel => 'Gebruikersnaam';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder => 'E-mail';
+  String get loginSignupScreenSignupEmailInputLabel => 'E-mail';
 
   @override
-  String get loginSignupScreenSignupPasswordInputPlaceholder => 'Wachtwoord';
+  String get loginSignupScreenSignupPasswordInputLabel => 'Wachtwoord';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'Wachtwoord';
+  String get loginSignupScreenSignupPasswordRepeatInputLabel => 'Wachtwoord';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'Registreren';
@@ -469,6 +564,10 @@ class AppLocalizationsNl extends AppLocalizations {
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
       'E-mail mag niet leeg zijn.';
+
+  @override
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      'Land mag niet leeg zijn.';
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>

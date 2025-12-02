@@ -6,8 +6,8 @@ final class _InvitationBottomSheetUserSearchInput extends StatelessWidget {
 
   @override
   Widget build(context) {
-    final gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =
-        localization.gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder;
+    final gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =
+        localization.gameDetailsScreenInvitationBottomSheetUserSearchInputLabel;
 
     final viewModel = context.read<GameDetailsScreenViewModel>();
     final invitationBottomSheetUserSearchInputRequestCallback =
@@ -17,7 +17,7 @@ final class _InvitationBottomSheetUserSearchInput extends StatelessWidget {
         viewModel.invitationBottomSheetUserSearchInputSelectedItemBuilder;
 
     return MyoroSearchDropdown<UserResponseDto>(
-      placeholder: gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder,
+      label: gameDetailsScreenInvitationBottomSheetUserSearchInputLabel,
       requestCallback: invitationBottomSheetUserSearchInputRequestCallback,
       itemBuilder: invitationBottomSheetUserSearchInputItemBuilder,
       selectedItemBuilder: invitationBottomSheetUserSearchInputSelectedItemBuilder,

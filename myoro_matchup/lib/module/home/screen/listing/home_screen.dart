@@ -13,19 +13,18 @@ part '_widget/_body_user_sport_stats_player_card.dart';
 part '_widget/_body_user_sport_stats_stats.dart';
 part '_widget/_body_user_sport_stats_sport_switcher.dart';
 part '_widget/_body_user_game_listing.dart';
-part '_widget/_body_user_sport_stats_error_state.dart';
 part '_widget/_body_user_sport_stats_success_state.dart';
-part '_widget/_loader.dart';
-part '_widget/_body_user_game_listing_error_state.dart';
 part '_widget/_body_user_sport_stats_player_card_profile_picture.dart';
 part '_widget/_body_user_sport_stats_player_card_name.dart';
-part '_widget/_body_user_sport_stats_player_card_rating.dart';
 part '_widget/_body_user_sport_stats_stats_item.dart';
+part '_widget/_body_user_sport_stats_player_card_badge.dart';
+part '_widget/_body_user_sport_stats_edit_profile_button.dart';
 
 /// Home screen.
 final class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
 
+  /// Build function.
   @override
   Widget build(_) {
     return InheritedProvider(

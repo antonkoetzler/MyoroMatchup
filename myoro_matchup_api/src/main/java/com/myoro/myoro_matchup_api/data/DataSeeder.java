@@ -15,7 +15,7 @@ import org.springframework.stereotype.Component;
 import net.datafaker.Faker;
 
 import com.myoro.myoro_matchup_api.enums.GameFrequencyEnum;
-import com.myoro.myoro_matchup_api.enums.GameVisibilityEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.InvitationStatusEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
 import com.myoro.myoro_matchup_api.model.GameModel;
@@ -24,7 +24,11 @@ import com.myoro.myoro_matchup_api.repository.GameRepository;
 import com.myoro.myoro_matchup_api.repository.InvitationRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
 
-/** Data seeder for populating the database with mock data. */
+/**
+ * Data seeder for populating the database with mock data.
+ * 
+ * TODO: See if there is a better and more automatic way to do this.
+ */
 @Component
 public class DataSeeder implements CommandLineRunner {
   /** User repository. */
@@ -63,12 +67,14 @@ public class DataSeeder implements CommandLineRunner {
         .withName("User One")
         .withEmail("user1@example.com")
         .withPassword("password123")
+        .withRandomLocation()
         .build();
     UserModel user2 = userBuilder
         .withUsername("user2")
         .withName("User Two")
         .withEmail("user2@example.com")
         .withPassword("password123")
+        .withRandomLocation()
         .build();
 
     user1 = userRepository.save(user1);
@@ -81,7 +87,7 @@ public class DataSeeder implements CommandLineRunner {
       UserModel owner = random.nextBoolean() ? user1 : user2;
       SportsEnum sport = SportsEnum.values()[random.nextInt(SportsEnum.values().length)];
       GameFrequencyEnum frequency = GameFrequencyEnum.values()[random.nextInt(GameFrequencyEnum.values().length)];
-      GameVisibilityEnum visibility = random.nextBoolean() ? GameVisibilityEnum.PUBLIC : GameVisibilityEnum.PRIVATE;
+      VisibilityEnum visibility = random.nextBoolean() ? VisibilityEnum.PUBLIC : VisibilityEnum.PRIVATE;
 
       GameModel game = gameBuilder
           .withRandomName()
@@ -94,17 +100,32 @@ public class DataSeeder implements CommandLineRunner {
           .withRandomAgeRange()
           .withRandomLocation()
           .build();
+
+      // Randomly add WhatsApp group chat data (70% chance)
+      if (random.nextDouble() < 0.7) {
+        game.setWhatsAppGroupChatLink("https://chat.whatsapp.com/" + generateRandomWhatsAppCode());
+        game.setUseWhatsAppGroupChatBot(random.nextBoolean());
+      }
+
       games.add(gameRepository.save(game));
     }
 
     // Add random players to games
     for (GameModel game : games) {
-      if (random.nextBoolean()) {
+      // 80% chance to add players to a game
+      if (random.nextDouble() < 0.8) {
         List<UserModel> players = new ArrayList<>();
         UserModel otherUser = game.getOwner().equals(user1) ? user2 : user1;
-        if (random.nextBoolean()) {
-          players.add(otherUser);
+
+        // Always add the other user as a player
+        players.add(otherUser);
+
+        // 30% chance to also add the owner as a player (for games with multiple
+        // players)
+        if (random.nextDouble() < 0.3) {
+          players.add(game.getOwner());
         }
+
         game.setPlayers(players);
         gameRepository.save(game);
       }
@@ -152,6 +173,16 @@ public class DataSeeder implements CommandLineRunner {
       created++;
       attempts = 0; // Reset attempts on success
     }
+  }
+
+  /** Generates a random WhatsApp invite code (22 characters, alphanumeric). */
+  private String generateRandomWhatsAppCode() {
+    String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    StringBuilder code = new StringBuilder();
+    for (int i = 0; i < 22; i++) {
+      code.append(chars.charAt(random.nextInt(chars.length())));
+    }
+    return code.toString();
   }
 
 }

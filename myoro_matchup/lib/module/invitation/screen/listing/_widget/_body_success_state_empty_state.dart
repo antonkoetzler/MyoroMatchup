@@ -16,7 +16,7 @@ final class _BodySuccessStateEmptyState extends StatelessWidget {
     final fetch = invitationsRequestController.fetch;
 
     return Center(
-      child: MmEmptyFeedback(title: invitationListingScreenBodySuccessStateEmptyTitle, actionButtonCallback: fetch),
+      child: MyoroEmptyFeedback(title: invitationListingScreenBodySuccessStateEmptyTitle, onActionButtonTapped: fetch),
     );
   }
 }

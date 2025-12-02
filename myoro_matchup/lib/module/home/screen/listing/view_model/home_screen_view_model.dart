@@ -12,14 +12,11 @@ final class HomeScreenViewModel {
   HomeScreenViewModel(
     SharedPreferencesService sharedPreferencesService,
     UserRepository userRepository,
-    GameRepository gameRepository,
-  ) : _state = HomeScreenState(
-        () async => userRepository.get(sharedPreferencesService.loggedInUser!.id, showStats: true),
-        () async => await gameRepository.select(),
-      ) {
-    fetchUser();
-    fetchGames();
-  }
+    this._gameRepository,
+  ) : _state = HomeScreenState(() async => userRepository.get(sharedPreferencesService.loggedInUser!.id));
+
+  /// [GameRepository].
+  final GameRepository _gameRepository;
 
   /// State.
   final HomeScreenState _state;
@@ -35,8 +32,8 @@ final class HomeScreenViewModel {
   }
 
   /// Fetch the games.
-  void fetchGames() {
-    _state.gamesRequestController.fetch();
+  Future<Set<GameResponseDto>> fetchGames() async {
+    return await _gameRepository.select();
   }
 
   /// [MyoroSingleSelectionDropdown.itemBuilder] of the sport switcher.
@@ -79,12 +76,13 @@ final class HomeScreenViewModel {
   /// Getter of the [UserStatsResponseDto] of the selected sport.
   UserStatsResponseDto get selectedSportStats {
     final user = state.userRequest.data!;
+    final stats = user.stats;
 
     return switch (state.selectedSport) {
-      SportsEnum.football => user.stats.football,
-      SportsEnum.futsal => user.stats.futsal,
-      SportsEnum.fut7 => user.stats.fut7,
-      SportsEnum.volleyball => user.stats.volleyball,
+      SportsEnum.football => stats.football,
+      SportsEnum.futsal => stats.futsal,
+      SportsEnum.fut7 => stats.fut7,
+      SportsEnum.volleyball => stats.volleyball,
     };
   }
 

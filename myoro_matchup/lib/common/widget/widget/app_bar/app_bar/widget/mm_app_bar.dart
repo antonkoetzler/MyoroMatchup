@@ -38,9 +38,7 @@ class MmAppBar extends StatelessWidget implements PreferredSizeWidget {
   /// Leading [Widget].
   final String title;
 
-  @override
-  Size get preferredSize => const Size.fromHeight(kMyoroMultiplier * 16);
-
+  /// Build function.
   @override
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<MmAppBarThemeExtension>();
@@ -60,4 +58,8 @@ class MmAppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
     );
   }
+
+  /// Preferred size of [MmAppBar].
+  @override
+  Size get preferredSize => const Size.fromHeight(kMyoroMultiplier * 16);
 }

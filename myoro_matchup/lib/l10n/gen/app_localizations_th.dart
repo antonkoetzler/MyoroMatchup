@@ -13,20 +13,7 @@ class AppLocalizationsTh extends AppLocalizations {
       'ไม่สามารถเชื่อมต่อกับเซิร์ฟเวอร์ได้ โปรดตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณและลองอีกครั้ง';
 
   @override
-  String get mmErrorFeedbackSubtitle =>
-      'โปรดตรวจสอบการเชื่อมต่อของคุณและลองอีกครั้ง!';
-
-  @override
-  String get mmErrorFeedbackActionButtonText => 'ลองอีกครั้ง';
-
-  @override
   String get mmEmptyFeedbackActionButtonText => 'รีเฟรช';
-
-  @override
-  String get mmSuccessFeedbackSubtitle => 'ดำเนินการเสร็จสมบูรณ์แล้ว!';
-
-  @override
-  String get mmSuccessFeedbackActionButtonText => 'เสร็จสิ้น';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => 'สถานที่';
@@ -98,11 +85,69 @@ class AppLocalizationsTh extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => 'ยกเลิกแล้ว';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle =>
+  String get gameDetailsScreenBodyErrorFeedbackTitle =>
       'ไม่สามารถดึงรายละเอียดเกมได้!';
 
   @override
   String get invitationListingScreenAppBarTitle => 'คำเชิญ';
+
+  @override
+  String get userDetailsScreenAppBarTitle => 'รายละเอียดผู้ใช้';
+
+  @override
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'สมัครสมาชิกแล้ว',
+      'other': 'ยังไม่ได้สมัครสมาชิก',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String bodySubscriptionStatusLabel(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'สมัครสมาชิกแล้ว',
+      'other': 'ยังไม่ได้สมัครสมาชิก',
+    });
+    return 'สถานะการสมัครสมาชิก: $_temp0';
+  }
+
+  @override
+  String get bodySubscriptionStatusButtonText => 'สมัครสมาชิก';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      'เปลี่ยนการมองเห็นโปรไฟล์';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      'คุณแน่ใจหรือไม่ว่าต้องการเปลี่ยนการมองเห็นโปรไฟล์ของคุณ?';
+
+  @override
+  String get userDetailsScreenBodyLocationLabel => 'ตำแหน่ง';
+
+  @override
+  String get userDetailsScreenBodyLocationCountryLabel => 'ประเทศ';
+
+  @override
+  String get userDetailsScreenBodyLocationStateLabel => 'รัฐ/จังหวัด';
+
+  @override
+  String get userDetailsScreenBodyLocationCityLabel => 'เมือง';
+
+  @override
+  String get userDetailsScreenLocationEditingBottomSheetTitle => 'แก้ไขตำแหน่ง';
+
+  @override
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
+    String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
+    String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
+    return '$city$_temp0$state$_temp1$country';
+  }
 
   @override
   String get invitationListingScreenBodyErrorStateTitle =>
@@ -156,7 +201,7 @@ class AppLocalizationsTh extends AppLocalizations {
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
       'ค้นหาผู้ใช้...';
 
   @override
@@ -231,6 +276,64 @@ class AppLocalizationsTh extends AppLocalizations {
       'การมองเห็น';
 
   @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'ลิงก์แชทกลุ่ม WhatsApp';
+
+  @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      'ใช้บอทแชทกลุ่ม WhatsApp';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      'ใช้บอทแชทกลุ่ม WhatsApp';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      'คุณต้องการเปิดใช้งานบอทแชทกลุ่ม WhatsApp สำหรับเกมนี้หรือไม่?';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      'ลิงก์กลุ่ม WhatsApp จำเป็นต้องใช้บอท';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'ลิงก์แชทกลุ่ม WhatsApp จำเป็นต้องระบุ';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
+      'ลิงก์แชทกลุ่ม WhatsApp ต้องอยู่ในรูปแบบ: https://chat.whatsapp.com/[รหัส]';
+
+  @override
+  String get playerDetailsBottomSheetAddAsFriendText => 'เพิ่มเป็นเพื่อน';
+
+  @override
+  String get playerDetailsBottomSheetBlockText => 'บล็อก';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetTitle =>
+      'ส่งคำขอเป็นเพื่อน';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      'คุณแน่ใจหรือไม่ว่าต้องการส่งคำขอเป็นเพื่อนไปยังผู้ใช้รายนี้?';
+
+  @override
+  String get blockUserConfirmationBottomSheetTitle => 'บล็อกผู้ใช้';
+
+  @override
+  String get blockUserConfirmationBottomSheetMessage =>
+      'คุณแน่ใจหรือไม่ว่าต้องการบล็อกผู้ใช้รายนี้?';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle => 'ยกเลิกการบล็อกผู้ใช้';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage =>
+      'คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการบล็อกผู้ใช้รายนี้?';
+
+  @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
@@ -241,14 +344,6 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get homeScreenNewGameButtonText => 'สร้างเกม';
-
-  @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle =>
-      'ไม่สามารถดึงสถิติกีฬาของผู้ใช้ได้!';
-
-  @override
-  String get homeScreenBodyUserGameListingErrorStateTitle =>
-      'ไม่สามารถดึงเกมของคุณได้!';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle =>
@@ -303,16 +398,17 @@ class AppLocalizationsTh extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
+  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
+      'Edit profile';
+
+  @override
   String get gameCreationScreenAppBarTitle => 'สร้างเกม';
 
   @override
   String get gameCreationScreenNameScreenTitle => 'ชื่อ';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => 'ชื่อ';
-
-  @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder =>
+  String get gameCreationScreenNameScreenNameInputLabel =>
       'เช่น เกมฟุตบอลรายสัปดาห์';
 
   @override
@@ -407,11 +503,11 @@ class AppLocalizationsTh extends AppLocalizations {
       'สร้างเกมสำเร็จแล้ว!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
+  String get loginSignupScreenLoginUsernameEmailInputLabel =>
       'ชื่อผู้ใช้/อีเมล';
 
   @override
-  String get loginSignupScreenLoginPasswordInputPlaceholder => 'รหัสผ่าน';
+  String get loginSignupScreenLoginPasswordInputLabel => 'รหัสผ่าน';
 
   @override
   String get loginSignupScreenLoginLoginButton => 'เข้าสู่ระบบ';
@@ -420,20 +516,19 @@ class AppLocalizationsTh extends AppLocalizations {
   String get loginSignupScreenLoginForgotPasswordButton => 'ลืมรหัสผ่าน?';
 
   @override
-  String get loginSignupScreenSignupNameInputPlaceholder => 'ชื่อ';
+  String get loginSignupScreenSignupNameInputLabel => 'ชื่อ';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder => 'ชื่อผู้ใช้';
+  String get loginSignupScreenSignupUsernameInputLabel => 'ชื่อผู้ใช้';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder => 'อีเมล';
+  String get loginSignupScreenSignupEmailInputLabel => 'อีเมล';
 
   @override
-  String get loginSignupScreenSignupPasswordInputPlaceholder => 'รหัสผ่าน';
+  String get loginSignupScreenSignupPasswordInputLabel => 'รหัสผ่าน';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder =>
-      'รหัสผ่าน';
+  String get loginSignupScreenSignupPasswordRepeatInputLabel => 'รหัสผ่าน';
 
   @override
   String get loginSignupScreenSignupSignupButton => 'สมัครสมาชิก';
@@ -465,6 +560,10 @@ class AppLocalizationsTh extends AppLocalizations {
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
       'อีเมลไม่สามารถว่างได้';
+
+  @override
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      'ประเทศไม่สามารถว่างได้';
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>

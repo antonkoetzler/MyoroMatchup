@@ -1,6 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
-import com.myoro.myoro_matchup_api.enums.GameVisibilityEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
 import com.myoro.myoro_matchup_api.util.GameConstants;
 
@@ -42,7 +42,7 @@ public class GameCreationRequestDto {
 
   /** Visibility of the game. */
   @NotNull(message = "{validation.game.visibility.required}")
-  private GameVisibilityEnum visibility;
+  private VisibilityEnum visibility;
 
   /** Profile picture of the game. */
   private String profilePicture;
@@ -56,7 +56,7 @@ public class GameCreationRequestDto {
 
   /** Constructor with all fields. */
   public GameCreationRequestDto(String name, SportsEnum sport, GameFrequencyDayTimeDto frequencyDayTime,
-      GamePriceDto price, GameAgeRangeDto ageRange, LocationDto location, GameVisibilityEnum visibility,
+      GamePriceDto price, GameAgeRangeDto ageRange, LocationDto location, VisibilityEnum visibility,
       String profilePicture, String banner) {
     this.name = name;
     this.sport = sport;
@@ -128,7 +128,7 @@ public class GameCreationRequestDto {
    * 
    * @return the visibility of the game
    */
-  public GameVisibilityEnum getVisibility() {
+  public VisibilityEnum getVisibility() {
     return visibility;
   }
 
@@ -209,7 +209,7 @@ public class GameCreationRequestDto {
    * 
    * @param visibility the visibility of the game
    */
-  public void setVisibility(GameVisibilityEnum visibility) {
+  public void setVisibility(VisibilityEnum visibility) {
     this.visibility = visibility;
   }
 

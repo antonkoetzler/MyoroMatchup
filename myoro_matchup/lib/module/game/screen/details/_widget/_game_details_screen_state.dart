@@ -9,7 +9,7 @@ final class _GameDetailsScreenState extends State<GameDetailsScreen> {
   @override
   void initState() {
     super.initState();
-    _viewModel = getIt<GameDetailsScreenViewModel>(param1: widget.gameId);
+    _viewModel = getIt<GameDetailsScreenViewModel>(param1: widget._gameId);
   }
 
   /// Dispose function.
@@ -30,10 +30,10 @@ final class _GameDetailsScreenState extends State<GameDetailsScreen> {
           return MyoroScreen(
             appBar: gameRequest.status.isSuccess ? _AppBar(gameRequest.data!) : null,
             body: switch (gameRequest.status) {
-              MyoroRequestEnum.idle => const _BodyLoaderState(),
-              MyoroRequestEnum.loading => const _BodyLoaderState(),
+              MyoroRequestEnum.idle => const _Loader(),
+              MyoroRequestEnum.loading => const _Loader(),
               MyoroRequestEnum.success => _BodySuccessState(gameRequest.data!),
-              MyoroRequestEnum.error => const _ErrorState(),
+              MyoroRequestEnum.error => const _ErrorFeedback(),
             },
           );
         },

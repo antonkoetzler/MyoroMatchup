@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 import com.myoro.myoro_matchup_api.dto.GameAgeRangeDto;
 import com.myoro.myoro_matchup_api.dto.GameCreationRequestDto;
 import com.myoro.myoro_matchup_api.dto.GameFrequencyDayTimeDto;
+import com.myoro.myoro_matchup_api.dto.GamePlayerResponseDto;
 import com.myoro.myoro_matchup_api.dto.GamePriceDto;
 import com.myoro.myoro_matchup_api.dto.GameResponseDto;
 import com.myoro.myoro_matchup_api.dto.LocationDto;
-import com.myoro.myoro_matchup_api.dto.UserResponseDto;
 import com.myoro.myoro_matchup_api.model.GameModel;
 import com.myoro.myoro_matchup_api.repository.GameRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
@@ -73,7 +73,7 @@ public class GameService {
     game.setVisibility(request.getVisibility());
     game.setProfilePicture(request.getProfilePicture());
     game.setBanner(request.getBanner());
-    game.setUseGroupChatBot(false);
+    game.setUseWhatsAppGroupChatBot(false);
     return gameRepository.save(game).getId();
   }
 
@@ -92,7 +92,7 @@ public class GameService {
   }
 
   /** Get players of a game by game id. */
-  public List<UserResponseDto> getPlayersByGameId(Long id) {
+  public List<GamePlayerResponseDto> getPlayersByGameId(Long id) {
     GameModel game = gameRepository.findById(id)
         .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
 
@@ -101,7 +101,7 @@ public class GameService {
     }
 
     return game.getPlayers().stream()
-        .map(DtoMapper::userToDto)
+        .map(DtoMapper::userToGamePlayerDto)
         .collect(Collectors.toList());
   }
 
@@ -161,7 +161,7 @@ public class GameService {
     }
 
     dto.setWhatsAppGroupChatLink(game.getWhatsAppGroupChatLink());
-    dto.setUseGroupChatBot(game.getUseGroupChatBot());
+    dto.setUseWhatsAppGroupChatBot(game.getUseWhatsAppGroupChatBot());
 
     return dto;
   }
@@ -178,7 +178,7 @@ public class GameService {
   public void setUseWhatsAppGroupChatBot(Long gameId, Boolean useBot) {
     GameModel game = gameRepository.findById(gameId)
         .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
-    game.setUseGroupChatBot(useBot);
+    game.setUseWhatsAppGroupChatBot(useBot);
     gameRepository.save(game);
   }
 }

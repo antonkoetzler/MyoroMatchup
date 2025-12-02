@@ -13,6 +13,8 @@ final class _BodyUserSportStatsSuccessState extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<HomeScreenThemeExtension>();
     final bodyUserSportStatsSuccessStateCardStyle = themeExtension.bodyUserSportStatsSuccessStateCardStyle;
+    final bodyUserSportStatsSuccessStateRowSpacing = themeExtension.bodyUserSportStatsSuccessStateRowSpacing;
+    final bodyUserSportStatsSuccessStateColumnSpacing = themeExtension.bodyUserSportStatsSuccessStateColumnSpacing;
 
     final viewModel = context.read<HomeScreenViewModel>();
     final state = viewModel.state;
@@ -21,22 +23,31 @@ final class _BodyUserSportStatsSuccessState extends StatelessWidget {
     return ValueListenableBuilder(
       valueListenable: selectedSportController,
       builder: (_, selectedSport, _) {
-        final stats = viewModel.selectedSportStats;
+        final selectedSportStats = viewModel.selectedSportStats;
         final statsItems = viewModel.statsItems;
 
         return MyoroCard(
           style: bodyUserSportStatsSuccessStateCardStyle,
-          child: Stack(
-            alignment: Alignment.center,
+          child: Row(
+            spacing: bodyUserSportStatsSuccessStateRowSpacing,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  _BodyUserSportStatsPlayerCard(_user, stats),
-                  _BodyUserSportStatsSportSwitcher(selectedSport),
-                ],
+              _BodyUserSportStatsPlayerCard(_user),
+              Expanded(
+                child: Column(
+                  spacing: bodyUserSportStatsSuccessStateColumnSpacing,
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _BodyUserSportStatsStats(_user, selectedSportStats, statsItems),
+                    Row(
+                      spacing: bodyUserSportStatsSuccessStateRowSpacing,
+                      children: [
+                        const Expanded(child: _BodyUserSportStatsEditProfileButton()),
+                        Expanded(child: _BodyUserSportStatsSportSwitcher(selectedSport)),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              Positioned(child: IntrinsicWidth(child: _BodyUserSportStatsStats(statsItems))),
             ],
           ),
         );

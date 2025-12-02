@@ -1,4 +1,4 @@
-part of '../login_signup_screen.dart';
+part of '../widget/login_signup_screen.dart';
 
 /// Logo of [LoginSignupScreen].
 final class _Logo extends StatelessWidget {

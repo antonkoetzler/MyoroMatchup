@@ -11,10 +11,11 @@ GamePriceDto _$GamePriceDtoFromJson(Map<String, dynamic> json) => GamePriceDto(
   dropInPrice: (json['dropInPrice'] as num).toDouble(),
 );
 
-Map<String, dynamic> _$GamePriceDtoToJson(GamePriceDto instance) => <String, dynamic>{
-  'memberPrice': instance.memberPrice,
-  'dropInPrice': instance.dropInPrice,
-};
+Map<String, dynamic> _$GamePriceDtoToJson(GamePriceDto instance) =>
+    <String, dynamic>{
+      'memberPrice': instance.memberPrice,
+      'dropInPrice': instance.dropInPrice,
+    };
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -31,7 +32,10 @@ mixin _$GamePriceDtoMixin {
   GamePriceDto get self => this as GamePriceDto;
 
   GamePriceDto copyWith({double? memberPrice, double? dropInPrice}) {
-    return GamePriceDto(memberPrice: memberPrice ?? self.memberPrice, dropInPrice: dropInPrice ?? self.dropInPrice);
+    return GamePriceDto(
+      memberPrice: memberPrice ?? self.memberPrice,
+      dropInPrice: dropInPrice ?? self.dropInPrice,
+    );
   }
 
   @override

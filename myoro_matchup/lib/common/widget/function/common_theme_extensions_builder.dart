@@ -7,9 +7,6 @@ List<ThemeExtension> commonThemeExtensionsBuilder(bool isDarkMode, ColorScheme c
     // App bars
     MmAppBarThemeExtension.builder(textTheme),
 
-    // Feedbacks
-    const MmEmptyFeedbackThemeExtension.builder(),
-
     // Inputs
     MmLocationInputThemeExtension.builder(textTheme),
   ];

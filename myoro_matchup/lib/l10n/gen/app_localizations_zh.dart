@@ -12,19 +12,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get httpClientConnectionExceptionMessage => '无法连接到服务器，请检查您的网络连接后重试。';
 
   @override
-  String get mmErrorFeedbackSubtitle => '请检查您的连接后重试！';
-
-  @override
-  String get mmErrorFeedbackActionButtonText => '重试';
-
-  @override
   String get mmEmptyFeedbackActionButtonText => '刷新';
-
-  @override
-  String get mmSuccessFeedbackSubtitle => '操作成功完成！';
-
-  @override
-  String get mmSuccessFeedbackActionButtonText => '完成';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => '地点';
@@ -96,10 +84,68 @@ class AppLocalizationsZh extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => '已取消';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle => '无法获取游戏详情！';
+  String get gameDetailsScreenBodyErrorFeedbackTitle => '无法获取游戏详情！';
 
   @override
   String get invitationListingScreenAppBarTitle => '邀请';
+
+  @override
+  String get userDetailsScreenAppBarTitle => '用户详情';
+
+  @override
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '已订阅',
+      'other': '未订阅',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String bodySubscriptionStatusLabel(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '已订阅',
+      'other': '未订阅',
+    });
+    return '订阅状态: $_temp0';
+  }
+
+  @override
+  String get bodySubscriptionStatusButtonText => '订阅';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      '更改个人资料可见性';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      '您确定要更改个人资料的可见性吗？';
+
+  @override
+  String get userDetailsScreenBodyLocationLabel => '位置';
+
+  @override
+  String get userDetailsScreenBodyLocationCountryLabel => '国家';
+
+  @override
+  String get userDetailsScreenBodyLocationStateLabel => '州/省';
+
+  @override
+  String get userDetailsScreenBodyLocationCityLabel => '城市';
+
+  @override
+  String get userDetailsScreenLocationEditingBottomSheetTitle => '编辑位置';
+
+  @override
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
+    String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
+    String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
+    return '$city$_temp0$state$_temp1$country';
+  }
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => '无法获取邀请！';
@@ -150,7 +196,7 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
       '搜索用户...';
 
   @override
@@ -222,6 +268,61 @@ class AppLocalizationsZh extends AppLocalizations {
       '可见性';
 
   @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'WhatsApp群聊链接';
+
+  @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      '使用WhatsApp群聊机器人';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      '使用WhatsApp群聊机器人';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      '您想为此游戏启用WhatsApp群聊机器人吗？';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      '使用机器人需要WhatsApp群聊链接。';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'WhatsApp群聊链接是必需的。';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
+      'WhatsApp群聊链接必须采用以下格式: https://chat.whatsapp.com/[代码]。';
+
+  @override
+  String get playerDetailsBottomSheetAddAsFriendText => '添加为好友';
+
+  @override
+  String get playerDetailsBottomSheetBlockText => '屏蔽';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetTitle => '发送好友请求';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      '您确定要向此用户发送好友请求吗？';
+
+  @override
+  String get blockUserConfirmationBottomSheetTitle => '屏蔽用户';
+
+  @override
+  String get blockUserConfirmationBottomSheetMessage => '您确定要屏蔽此用户吗？';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle => '取消屏蔽用户';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage => '您确定要取消屏蔽此用户吗？';
+
+  @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
@@ -232,12 +333,6 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get homeScreenNewGameButtonText => '创建游戏';
-
-  @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle => '无法获取用户运动统计数据！';
-
-  @override
-  String get homeScreenBodyUserGameListingErrorStateTitle => '无法获取您的游戏！';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle => '您还没有加入任何游戏！';
@@ -291,16 +386,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
+  String get homeScreenBodyUserSportStatsEditProfileButtonText => '编辑个人资料';
+
+  @override
   String get gameCreationScreenAppBarTitle => '创建游戏';
 
   @override
   String get gameCreationScreenNameScreenTitle => '名称';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => '名称';
-
-  @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder => '例如：每周足球赛';
+  String get gameCreationScreenNameScreenNameInputLabel => '例如：每周足球赛';
 
   @override
   String get gameCreationScreenNameScreenNameInputEmptyMessage => '名称不能为空。';
@@ -389,10 +484,10 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameCreationScreenGameCreationSuccessMessage => '游戏创建成功！';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder => '用户名/邮箱';
+  String get loginSignupScreenLoginUsernameEmailInputLabel => '用户名/邮箱';
 
   @override
-  String get loginSignupScreenLoginPasswordInputPlaceholder => '密码';
+  String get loginSignupScreenLoginPasswordInputLabel => '密码';
 
   @override
   String get loginSignupScreenLoginLoginButton => '登录';
@@ -401,19 +496,19 @@ class AppLocalizationsZh extends AppLocalizations {
   String get loginSignupScreenLoginForgotPasswordButton => '忘记密码？';
 
   @override
-  String get loginSignupScreenSignupNameInputPlaceholder => '姓名';
+  String get loginSignupScreenSignupNameInputLabel => '姓名';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder => '用户名';
+  String get loginSignupScreenSignupUsernameInputLabel => '用户名';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder => '邮箱';
+  String get loginSignupScreenSignupEmailInputLabel => '邮箱';
 
   @override
-  String get loginSignupScreenSignupPasswordInputPlaceholder => '密码';
+  String get loginSignupScreenSignupPasswordInputLabel => '密码';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => '密码';
+  String get loginSignupScreenSignupPasswordRepeatInputLabel => '密码';
 
   @override
   String get loginSignupScreenSignupSignupButton => '注册';
@@ -439,6 +534,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage => '邮箱不能为空。';
+
+  @override
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      '国家不能为空。';
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
@@ -469,19 +568,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get httpClientConnectionExceptionMessage => '無法連接到伺服器，請檢查您的網路連線後重試。';
 
   @override
-  String get mmErrorFeedbackSubtitle => '請檢查您的連線後重試！';
-
-  @override
-  String get mmErrorFeedbackActionButtonText => '重試';
-
-  @override
   String get mmEmptyFeedbackActionButtonText => '重新整理';
-
-  @override
-  String get mmSuccessFeedbackSubtitle => '操作成功完成！';
-
-  @override
-  String get mmSuccessFeedbackActionButtonText => '完成';
 
   @override
   String get mmLocationInputTypeEnumPlaceLabel => '地點';
@@ -553,10 +640,68 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get invitationStatusEnumCancelledLabel => '已取消';
 
   @override
-  String get gameDetailsScreenBodyErrorStateTitle => '無法取得遊戲詳情！';
+  String get gameDetailsScreenBodyErrorFeedbackTitle => '無法取得遊戲詳情！';
 
   @override
   String get invitationListingScreenAppBarTitle => '邀請';
+
+  @override
+  String get userDetailsScreenAppBarTitle => '使用者詳情';
+
+  @override
+  String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '已訂閱',
+      'other': '未訂閱',
+    });
+    return '$_temp0';
+  }
+
+  @override
+  String bodySubscriptionStatusLabel(String isSubscribed) {
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '已訂閱',
+      'other': '未訂閱',
+    });
+    return '訂閱狀態: $_temp0';
+  }
+
+  @override
+  String get bodySubscriptionStatusButtonText => '訂閱';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      '更改個人資料可見性';
+
+  @override
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      '您確定要更改個人資料的可見性嗎？';
+
+  @override
+  String get userDetailsScreenBodyLocationLabel => '位置';
+
+  @override
+  String get userDetailsScreenBodyLocationCountryLabel => '國家';
+
+  @override
+  String get userDetailsScreenBodyLocationStateLabel => '州/省';
+
+  @override
+  String get userDetailsScreenBodyLocationCityLabel => '城市';
+
+  @override
+  String get userDetailsScreenLocationEditingBottomSheetTitle => '編輯位置';
+
+  @override
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
+    String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
+    String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
+    return '$city$_temp0$state$_temp1$country';
+  }
 
   @override
   String get invitationListingScreenBodyErrorStateTitle => '無法取得邀請！';
@@ -607,7 +752,7 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder =>
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
       '搜尋使用者...';
 
   @override
@@ -679,6 +824,61 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
       '可見性';
 
   @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'WhatsApp群組聊天連結';
+
+  @override
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      '使用WhatsApp群組聊天機器人';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      '使用WhatsApp群組聊天機器人';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      '您想為此遊戲啟用WhatsApp群組聊天機器人嗎？';
+
+  @override
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      '使用機器人需要WhatsApp群組聊天連結。';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'WhatsApp群組聊天連結是必需的。';
+
+  @override
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
+      'WhatsApp群組聊天連結必須採用以下格式: https://chat.whatsapp.com/[代碼]。';
+
+  @override
+  String get playerDetailsBottomSheetAddAsFriendText => '新增為好友';
+
+  @override
+  String get playerDetailsBottomSheetBlockText => '封鎖';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetTitle => '傳送好友請求';
+
+  @override
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      '您確定要向此使用者傳送好友請求嗎？';
+
+  @override
+  String get blockUserConfirmationBottomSheetTitle => '封鎖使用者';
+
+  @override
+  String get blockUserConfirmationBottomSheetMessage => '您確定要封鎖此使用者嗎？';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle => '解除封鎖使用者';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage => '您確定要解除封鎖此使用者嗎？';
+
+  @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
@@ -689,12 +889,6 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get homeScreenNewGameButtonText => '建立遊戲';
-
-  @override
-  String get homeScreenBodyUserSportStatsErrorStateTitle => '無法取得使用者運動統計資料！';
-
-  @override
-  String get homeScreenBodyUserGameListingErrorStateTitle => '無法取得您的遊戲！';
 
   @override
   String get homeScreenBodyUserGameListingEmptyTitle => '您還沒有加入任何遊戲！';
@@ -748,16 +942,16 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
+  String get homeScreenBodyUserSportStatsEditProfileButtonText => '編輯個人資料';
+
+  @override
   String get gameCreationScreenAppBarTitle => '建立遊戲';
 
   @override
   String get gameCreationScreenNameScreenTitle => '名稱';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => '名稱';
-
-  @override
-  String get gameCreationScreenNameScreenNameInputPlaceholder => '例如：每週足球賽';
+  String get gameCreationScreenNameScreenNameInputLabel => '例如：每週足球賽';
 
   @override
   String get gameCreationScreenNameScreenNameInputEmptyMessage => '名稱不能為空。';
@@ -846,11 +1040,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenGameCreationSuccessMessage => '遊戲建立成功！';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputPlaceholder =>
-      '使用者名稱/電子郵件';
+  String get loginSignupScreenLoginUsernameEmailInputLabel => '使用者名稱/電子郵件';
 
   @override
-  String get loginSignupScreenLoginPasswordInputPlaceholder => '密碼';
+  String get loginSignupScreenLoginPasswordInputLabel => '密碼';
 
   @override
   String get loginSignupScreenLoginLoginButton => '登入';
@@ -859,19 +1052,19 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get loginSignupScreenLoginForgotPasswordButton => '忘記密碼？';
 
   @override
-  String get loginSignupScreenSignupNameInputPlaceholder => '姓名';
+  String get loginSignupScreenSignupNameInputLabel => '姓名';
 
   @override
-  String get loginSignupScreenSignupUsernameInputPlaceholder => '使用者名稱';
+  String get loginSignupScreenSignupUsernameInputLabel => '使用者名稱';
 
   @override
-  String get loginSignupScreenSignupEmailInputPlaceholder => '電子郵件';
+  String get loginSignupScreenSignupEmailInputLabel => '電子郵件';
 
   @override
-  String get loginSignupScreenSignupPasswordInputPlaceholder => '密碼';
+  String get loginSignupScreenSignupPasswordInputLabel => '密碼';
 
   @override
-  String get loginSignupScreenSignupPasswordRepeatInputPlaceholder => '密碼';
+  String get loginSignupScreenSignupPasswordRepeatInputLabel => '密碼';
 
   @override
   String get loginSignupScreenSignupSignupButton => '註冊';
@@ -898,6 +1091,10 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage => '電子郵件不能為空。';
+
+  @override
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      '國家不能為空。';
 
   @override
   String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>

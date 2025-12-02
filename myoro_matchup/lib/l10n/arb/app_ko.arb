@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
   
-  "mmErrorFeedbackSubtitle": "연결을 확인하고 다시 시도하세요!",
-  "mmErrorFeedbackActionButtonText": "다시 시도",
-
   "mmEmptyFeedbackActionButtonText": "새로고침",
-
-  "mmSuccessFeedbackSubtitle": "작업이 성공적으로 완료되었습니다!",
-  "mmSuccessFeedbackActionButtonText": "완료",
 
   "mmLocationInputTypeEnumPlaceLabel": "장소",
   "mmLocationInputTypeEnumCityLabel": "도시",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "만료됨",
   "invitationStatusEnumCancelledLabel": "취소됨",
 
-  "gameDetailsScreenBodyErrorStateTitle": "게임 세부 정보를 가져오지 못했습니다!",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "게임 세부 정보를 가져오지 못했습니다!",
   "invitationListingScreenAppBarTitle": "초대",
+  "userDetailsScreenAppBarTitle": "사용자 세부 정보",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {구독 중} other {구독 안 함}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "구독 상태: {isSubscribed, select, true {구독 중} other {구독 안 함}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "구독하기",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "프로필 공개 설정 변경",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "프로필 공개 설정을 변경하시겠습니까?",
+  "userDetailsScreenBodyLocationLabel": "위치",
+  "userDetailsScreenBodyLocationCountryLabel": "국가",
+  "userDetailsScreenBodyLocationStateLabel": "주/도",
+  "userDetailsScreenBodyLocationCityLabel": "도시",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "위치 편집",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "초대를 가져오지 못했습니다!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "초대를 찾을 수 없습니다!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "메시지",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "사용자 검색...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "사용자 검색...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "메시지",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "취소",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "보내기",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "공개 설정",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp 그룹 채팅 링크",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp 그룹 채팅 봇 사용",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp 그룹 채팅 봇 사용",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "이 게임에 WhatsApp 그룹 채팅 봇을 활성화하시겠습니까?",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "봇을 사용하려면 WhatsApp 그룹 링크가 필요합니다.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp 그룹 채팅 링크는 필수입니다.",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp 그룹 채팅 링크는 다음 형식이어야 합니다: https://chat.whatsapp.com/[코드]。",
+
+  "playerDetailsBottomSheetAddAsFriendText": "친구로 추가",
+  "playerDetailsBottomSheetBlockText": "차단",
+  "sendFriendRequestConfirmationBottomSheetTitle": "친구 요청 보내기",
+  "sendFriendRequestConfirmationBottomSheetMessage": "이 사용자에게 친구 요청을 보내시겠습니까?",
+  "blockUserConfirmationBottomSheetTitle": "사용자 차단",
+  "blockUserConfirmationBottomSheetMessage": "이 사용자를 차단하시겠습니까?",
+  "unblockUserConfirmationBottomSheetTitle": "사용자 차단 해제",
+  "unblockUserConfirmationBottomSheetMessage": "이 사용자의 차단을 해제하시겠습니까?",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "게임을 가져오는 중 오류가 발생했습니다!",
   "homeScreenBodySuccessStateEmptyTitle": "게임을 찾을 수 없습니다!",
   "homeScreenNewGameButtonText": "게임 만들기",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "사용자 스포츠 통계를 가져오지 못했습니다!",
-  "homeScreenBodyUserGameListingErrorStateTitle": "게임을 가져오지 못했습니다!",
   "homeScreenBodyUserGameListingEmptyTitle": "아직 어떤 게임에도 참여하지 않았습니다!",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Edit profile",
 
   "gameCreationScreenAppBarTitle": "게임 만들기",
   "gameCreationScreenNameScreenTitle": "이름",
   "gameCreationScreenNameScreenNameInputLabel": "이름",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "예: 주간 축구 게임",
+  "gameCreationScreenNameScreenNameInputLabel": "예: 주간 축구 게임",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "이름은 비어 있을 수 없습니다.",
   "gameCreationScreenNameScreenNameInputLengthMessage": "이름은 최소 3자 이상이어야 합니다.",
   "gameCreationScreenSportScreenTitle": "스포츠",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "완료",
   "gameCreationScreenGameCreationSuccessMessage": "게임이 성공적으로 생성되었습니다!",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "사용자 이름/이메일",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "비밀번호",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "사용자 이름/이메일",
+  "loginSignupScreenLoginPasswordInputLabel": "비밀번호",
   "loginSignupScreenLoginLoginButton": "로그인",
   "loginSignupScreenLoginForgotPasswordButton": "비밀번호를 잊으셨나요?",
-  "loginSignupScreenSignupNameInputPlaceholder": "이름",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "사용자 이름",
-  "loginSignupScreenSignupEmailInputPlaceholder": "이메일",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "비밀번호",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "비밀번호",
+  "loginSignupScreenSignupNameInputLabel": "이름",
+  "loginSignupScreenSignupUsernameInputLabel": "사용자 이름",
+  "loginSignupScreenSignupEmailInputLabel": "이메일",
+  "loginSignupScreenSignupPasswordInputLabel": "비밀번호",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "비밀번호",
   "loginSignupScreenSignupSignupButton": "가입",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchup이 처음이신가요? 가입하세요!",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "이미 가입하셨나요? 로그인하세요!",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "이름은 비어 있을 수 없습니다.",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "사용자 이름은 비어 있을 수 없습니다.",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "이메일은 비어 있을 수 없습니다.",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "국가는 비어 있을 수 없습니다.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "비밀번호 필드는 비어 있을 수 없습니다.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "비밀번호가 일치하지 않습니다.",
 

@@ -14,8 +14,6 @@ class _NameScreen extends _Screen {
         },
         builder: (context) {
           final gameCreationScreenNameScreenNameInputLabel = localization.gameCreationScreenNameScreenNameInputLabel;
-          final gameCreationScreenNameScreenNameInputPlaceholder =
-              localization.gameCreationScreenNameScreenNameInputPlaceholder;
 
           final viewModel = context.read<GameCreationScreenViewModel>();
           final state = viewModel.state;
@@ -26,7 +24,6 @@ class _NameScreen extends _Screen {
 
           return MyoroInput(
             label: gameCreationScreenNameScreenNameInputLabel,
-            placeholder: gameCreationScreenNameScreenNameInputPlaceholder,
             validation: nameValidation,
             onChanged: onNameChanged,
             autofocus: true,

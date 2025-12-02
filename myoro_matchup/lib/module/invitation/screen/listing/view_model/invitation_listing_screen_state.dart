@@ -4,7 +4,7 @@ part of 'invitation_listing_screen_view_model.dart';
 final class InvitationListingScreenState {
   /// Default constructor.
   InvitationListingScreenState(MyoroRequestControllerRequest<List<InvitationResponseDto>> invitationsRequestCallback)
-    : _invitationsRequestController = MyoroRequestController(requestCallback: invitationsRequestCallback);
+    : _invitationsRequestController = MyoroRequestController(invitationsRequestCallback);
 
   /// Invitations request controller.
   final MyoroRequestController<List<InvitationResponseDto>> _invitationsRequestController;
@@ -16,10 +16,10 @@ final class InvitationListingScreenState {
   final _queryController = TextEditingController();
 
   /// Decline invitation request controller.
-  final _declineInvitationRequestController = MyoroRequestController<String>();
+  final _declineInvitationRequestController = MyoroRequestController<String>(null);
 
   /// Accept invitation request controller.
-  final _acceptInvitationRequestController = MyoroRequestController<String>();
+  final _acceptInvitationRequestController = MyoroRequestController<String>(null);
 
   /// Dispose function.
   void dispose() {

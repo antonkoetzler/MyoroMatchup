@@ -1,13 +1,7 @@
 {
   "httpClientConnectionExceptionMessage": "サーバーに接続できませんでした。インターネット接続を確認して、もう一度お試しください。",
   
-  "mmErrorFeedbackSubtitle": "接続を確認して、もう一度お試しください！",
-  "mmErrorFeedbackActionButtonText": "再試行",
-
   "mmEmptyFeedbackActionButtonText": "更新",
-
-  "mmSuccessFeedbackSubtitle": "操作が正常に完了しました！",
-  "mmSuccessFeedbackActionButtonText": "完了",
 
   "mmLocationInputTypeEnumPlaceLabel": "場所",
   "mmLocationInputTypeEnumCityLabel": "都市",
@@ -48,8 +42,47 @@
   "invitationStatusEnumExpiredLabel": "期限切れ",
   "invitationStatusEnumCancelledLabel": "キャンセル済み",
 
-  "gameDetailsScreenBodyErrorStateTitle": "ゲームの詳細を取得できませんでした！",
+  "gameDetailsScreenBodyErrorFeedbackTitle": "ゲームの詳細を取得できませんでした！",
   "invitationListingScreenAppBarTitle": "招待",
+  "userDetailsScreenAppBarTitle": "ユーザー詳細",
+  "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {購読中} other {未購読}}",
+  "@userDetailsScreenBodySubscriptionPlanText": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusLabel": "購読ステータス: {isSubscribed, select, true {購読中} other {未購読}}",
+  "@bodySubscriptionStatusLabel": {
+    "placeholders": {
+      "isSubscribed": {
+        "type": "String"
+      }
+    }
+  },
+  "bodySubscriptionStatusButtonText": "購読する",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "プロフィールの公開設定を変更",
+  "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "プロフィールの公開設定を変更してもよろしいですか？",
+  "userDetailsScreenBodyLocationLabel": "位置",
+  "userDetailsScreenBodyLocationCountryLabel": "国",
+  "userDetailsScreenBodyLocationStateLabel": "州/都道府県",
+  "userDetailsScreenBodyLocationCityLabel": "都市",
+  "userDetailsScreenLocationEditingBottomSheetTitle": "位置を編集",
+  "userLocationResponseDtoFormattedLocation": "{city}{city, select, other {, }}{state}{state, select, other {, }}{country}",
+  "@userLocationResponseDtoFormattedLocation": {
+    "placeholders": {
+      "city": {
+        "type": "String"
+      },
+      "state": {
+        "type": "String"
+      },
+      "country": {
+        "type": "String"
+      }
+    }
+  },
   "invitationListingScreenBodyErrorStateTitle": "招待を取得できませんでした！",
   "invitationListingScreenBodySuccessStateEmptyTitle": "招待が見つかりませんでした！",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "メッセージ",
@@ -71,7 +104,7 @@
       }
     }
   },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputPlaceholder": "ユーザーを検索...",
+  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "ユーザーを検索...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "メッセージ",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "キャンセル",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "送信",
@@ -96,13 +129,27 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "公開設定",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsAppグループチャットリンク",
+  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsAppグループチャットボットを使用",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsAppグループチャットボットを使用",
+  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "このゲームでWhatsAppグループチャットボットを有効にしますか？",
+  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "ボットを使用するには、WhatsAppグループリンクが必要です。",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsAppグループチャットリンクは必須です。",
+  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsAppグループチャットリンクは次の形式である必要があります: https://chat.whatsapp.com/[コード]。",
+
+  "playerDetailsBottomSheetAddAsFriendText": "友達として追加",
+  "playerDetailsBottomSheetBlockText": "ブロック",
+  "sendFriendRequestConfirmationBottomSheetTitle": "友達リクエストを送信",
+  "sendFriendRequestConfirmationBottomSheetMessage": "このユーザーに友達リクエストを送信してもよろしいですか？",
+  "blockUserConfirmationBottomSheetTitle": "ユーザーをブロック",
+  "blockUserConfirmationBottomSheetMessage": "このユーザーをブロックしてもよろしいですか？",
+  "unblockUserConfirmationBottomSheetTitle": "ユーザーのブロックを解除",
+  "unblockUserConfirmationBottomSheetMessage": "このユーザーのブロックを解除してもよろしいですか？",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "ゲームの取得中にエラーが発生しました！",
   "homeScreenBodySuccessStateEmptyTitle": "ゲームが見つかりませんでした！",
   "homeScreenNewGameButtonText": "ゲームを作成",
-  "homeScreenBodyUserSportStatsErrorStateTitle": "ユーザーのスポーツ統計を取得できませんでした！",
-  "homeScreenBodyUserGameListingErrorStateTitle": "あなたのゲームを取得できませんでした！",
   "homeScreenBodyUserGameListingEmptyTitle": "まだどのゲームにも参加していません！",
   "homeScreenBodyUserSportStatsStatsFootballAttackLabel": "ATK",
   "homeScreenBodyUserSportStatsStatsFootballDefenseLabel": "DEF",
@@ -120,11 +167,12 @@
   "homeScreenBodyUserSportStatsStatsVolleyballBlockingLabel": "BLK",
   "homeScreenBodyUserSportStatsStatsVolleyballServingLabel": "SRV",
   "homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel": "REC",
+  "homeScreenBodyUserSportStatsEditProfileButtonText": "Edit profile",
 
   "gameCreationScreenAppBarTitle": "ゲームを作成",
   "gameCreationScreenNameScreenTitle": "名前",
   "gameCreationScreenNameScreenNameInputLabel": "名前",
-  "gameCreationScreenNameScreenNameInputPlaceholder": "例：週次サッカーゲーム",
+  "gameCreationScreenNameScreenNameInputLabel": "例：週次サッカーゲーム",
   "gameCreationScreenNameScreenNameInputEmptyMessage": "名前は空にできません。",
   "gameCreationScreenNameScreenNameInputLengthMessage": "名前は少なくとも3文字である必要があります。",
   "gameCreationScreenSportScreenTitle": "スポーツ",
@@ -162,15 +210,15 @@
   "gameCreationScreenButtonFinishText": "完了",
   "gameCreationScreenGameCreationSuccessMessage": "ゲームが正常に作成されました！",
 
-  "loginSignupScreenLoginUsernameEmailInputPlaceholder": "ユーザー名/メールアドレス",
-  "loginSignupScreenLoginPasswordInputPlaceholder": "パスワード",
+  "loginSignupScreenLoginUsernameEmailInputLabel": "ユーザー名/メールアドレス",
+  "loginSignupScreenLoginPasswordInputLabel": "パスワード",
   "loginSignupScreenLoginLoginButton": "ログイン",
   "loginSignupScreenLoginForgotPasswordButton": "パスワードをお忘れですか？",
-  "loginSignupScreenSignupNameInputPlaceholder": "名前",
-  "loginSignupScreenSignupUsernameInputPlaceholder": "ユーザー名",
-  "loginSignupScreenSignupEmailInputPlaceholder": "メールアドレス",
-  "loginSignupScreenSignupPasswordInputPlaceholder": "パスワード",
-  "loginSignupScreenSignupPasswordRepeatInputPlaceholder": "パスワード",
+  "loginSignupScreenSignupNameInputLabel": "名前",
+  "loginSignupScreenSignupUsernameInputLabel": "ユーザー名",
+  "loginSignupScreenSignupEmailInputLabel": "メールアドレス",
+  "loginSignupScreenSignupPasswordInputLabel": "パスワード",
+  "loginSignupScreenSignupPasswordRepeatInputLabel": "パスワード",
   "loginSignupScreenSignupSignupButton": "登録",
   "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchupが初めてですか？登録してください！",
   "loginSignupScreenFormTypeSwitcherButtonSignupText": "既に登録済みですか？ログインしてください！",
@@ -179,6 +227,7 @@
   "loginSignupScreenSignupFormNameFieldEmptyMessage": "名前は空にできません。",
   "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "ユーザー名は空にできません。",
   "loginSignupScreenSignupFormEmailFieldEmptyMessage": "メールアドレスは空にできません。",
+  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "国は空にできません。",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "パスワードフィールドは空にできません。",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "パスワードが一致しません。",
 

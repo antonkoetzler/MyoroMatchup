@@ -14,13 +14,13 @@ final class AuthService {
   final AuthRepository _authRepository;
 
   /// Signup function.
-  Future<void> signup(SignupRequest request) async {
+  Future<void> signup(SignupRequestDto request) async {
     final loggedInUser = await _authRepository.signup(request);
     await _sharedPreferencesService.setLoggedInUser(loggedInUser);
   }
 
   /// Login function.
-  Future<void> login(LoginRequest request) async {
+  Future<void> login(LoginRequestDto request) async {
     final loggedInUser = await _authRepository.login(request);
     await _sharedPreferencesService.setLoggedInUser(loggedInUser);
   }

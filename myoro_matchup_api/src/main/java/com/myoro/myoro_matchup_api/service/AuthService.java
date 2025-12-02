@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 import com.myoro.myoro_matchup_api.dto.LoginRequestDto;
 import com.myoro.myoro_matchup_api.dto.LoginResponseDto;
 import com.myoro.myoro_matchup_api.dto.SignupRequestDto;
+import com.myoro.myoro_matchup_api.enums.CountryEnum;
+import com.myoro.myoro_matchup_api.model.UserLocationModel;
 import com.myoro.myoro_matchup_api.model.UserModel;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
 
@@ -51,10 +53,12 @@ public class AuthService {
 
     // Create a new user.
     UserModel user = new UserModel();
+    final CountryEnum country = request.getCountry();
     user.setUsername(request.getUsername());
     user.setName(request.getName());
     user.setEmail(request.getEmail());
     user.setPassword(passwordEncoder.encode(request.getPassword()));
+    user.setLocation(new UserLocationModel(country, null, null));
     user.setCreatedAt(LocalDateTime.now());
 
     // Save the user.

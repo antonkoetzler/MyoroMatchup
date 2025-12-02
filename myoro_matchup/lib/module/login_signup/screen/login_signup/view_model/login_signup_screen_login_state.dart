@@ -51,4 +51,14 @@ final class LoginSignupScreenLoginState {
   String get password {
     return _passwordController.text;
   }
+
+  /// [_usernameEmailController] setter.
+  set usernameEmail(String usernameEmail) {
+    _usernameEmailController.text = usernameEmail;
+  }
+
+  /// [_passwordController] setter.
+  set password(String password) {
+    _passwordController.text = password;
+  }
 }

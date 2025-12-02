@@ -19,16 +19,14 @@ final class _BodyUserSportStatsSportSwitcher extends StatelessWidget {
         viewModel.bodyUserSportStatsSportSwitcherSelectedItemBuilder;
     final bodyUserSportStatsSportSwitcherOnChanged = viewModel.bodyUserSportStatsSportSwitcherOnChanged;
 
-    return IntrinsicWidth(
-      child: MyoroSingleSelectionDropdown<SportsEnum>(
-        style: bodyUserSportStatsSportSwitcherStyle,
-        items: SportsEnum.values.toSet(),
-        selectedItem: _selectedSport,
-        allowDeselection: false,
-        itemBuilder: bodyUserSportStatsSportSwitcherItemBuilder,
-        selectedItemBuilder: bodyUserSportStatsSportSwitcherSelectedItemBuilder,
-        onChanged: (s) => bodyUserSportStatsSportSwitcherOnChanged(s!),
-      ),
+    return MyoroSingleSelectionDropdown<SportsEnum>(
+      style: bodyUserSportStatsSportSwitcherStyle,
+      items: SportsEnum.values.toSet(),
+      selectedItem: _selectedSport,
+      allowDeselection: false,
+      itemBuilder: bodyUserSportStatsSportSwitcherItemBuilder,
+      selectedItemBuilder: bodyUserSportStatsSportSwitcherSelectedItemBuilder,
+      onChanged: (s) => bodyUserSportStatsSportSwitcherOnChanged(s!),
     );
   }
 }

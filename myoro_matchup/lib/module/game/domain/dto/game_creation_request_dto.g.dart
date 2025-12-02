@@ -6,14 +6,16 @@ part of 'game_creation_request_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$GameCreationRequestDtoToJson(GameCreationRequestDto instance) => <String, dynamic>{
+Map<String, dynamic> _$GameCreationRequestDtoToJson(
+  GameCreationRequestDto instance,
+) => <String, dynamic>{
   'name': instance.name,
   'sport': _$SportsEnumEnumMap[instance.sport]!,
   'frequencyDayTime': instance.frequencyDayTime.toJson(),
   'location': instance.location.toJson(),
   'price': instance.price.toJson(),
   'ageRange': instance.ageRange.toJson(),
-  'visibility': _$GameVisibilityEnumEnumMap[instance.visibility]!,
+  'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
   'profilePicture': instance.profilePicture,
   'banner': instance.banner,
 };
@@ -25,7 +27,10 @@ const _$SportsEnumEnumMap = {
   SportsEnum.volleyball: 'VOLLEYBALL',
 };
 
-const _$GameVisibilityEnumEnumMap = {GameVisibilityEnum.private: 'PRIVATE', GameVisibilityEnum.public: 'PUBLIC'};
+const _$VisibilityEnumEnumMap = {
+  VisibilityEnum.private: 'PRIVATE',
+  VisibilityEnum.public: 'PUBLIC',
+};
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -48,7 +53,7 @@ mixin _$GameCreationRequestDtoMixin {
     LocationResponseDto? location,
     GamePriceDto? price,
     GameAgeRangeModel? ageRange,
-    GameVisibilityEnum? visibility,
+    VisibilityEnum? visibility,
     String? profilePicture,
     String? banner,
   }) {

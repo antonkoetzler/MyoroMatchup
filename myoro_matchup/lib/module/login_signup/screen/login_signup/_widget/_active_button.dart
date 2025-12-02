@@ -1,4 +1,4 @@
-part of '../login_signup_screen.dart';
+part of '../widget/login_signup_screen.dart';
 
 /// Generic button used in [_Buttons] of [LoginSignupScreen].
 final class _ActionButton extends StatelessWidget {

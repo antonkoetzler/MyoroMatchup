@@ -1,6 +1,6 @@
 package com.myoro.myoro_matchup_api.model;
 
-import com.myoro.myoro_matchup_api.enums.GameVisibilityEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
 
 import jakarta.persistence.AttributeOverride;
@@ -64,7 +64,7 @@ public class GameModel {
 
   /** Visibility of the game. */
   @Column(nullable = false)
-  private GameVisibilityEnum visibility;
+  private VisibilityEnum visibility;
 
   /** Profile picture of the game. */
   @Column(nullable = true)
@@ -83,9 +83,9 @@ public class GameModel {
   @Column(name = "whats_app_group_chat_link", nullable = true)
   private String whatsAppGroupChatLink;
 
-  /** Whether to use the group chat bot. */
-  @Column(name = "use_group_chat_bot", nullable = false)
-  private Boolean useGroupChatBot = false;
+  /** Whether to use the WhatsApp group chat bot. */
+  @Column(name = "use_whats_app_group_chat_bot", nullable = false)
+  private Boolean useWhatsAppGroupChatBot = false;
 
   /** Default constructor. */
   public GameModel() {
@@ -175,7 +175,7 @@ public class GameModel {
    * 
    * @return the visibility of the game
    */
-  public GameVisibilityEnum getVisibility() {
+  public VisibilityEnum getVisibility() {
     return visibility;
   }
 
@@ -283,7 +283,7 @@ public class GameModel {
    * 
    * @param visibility the visibility of the game
    */
-  public void setVisibility(GameVisibilityEnum visibility) {
+  public void setVisibility(VisibilityEnum visibility) {
     this.visibility = visibility;
   }
 
@@ -333,20 +333,20 @@ public class GameModel {
   }
 
   /**
-   * Getter for useGroupChatBot
+   * Getter for useWhatsAppGroupChatBot
    * 
-   * @return whether to use the group chat bot
+   * @return whether to use the WhatsApp group chat bot
    */
-  public Boolean getUseGroupChatBot() {
-    return useGroupChatBot;
+  public Boolean getUseWhatsAppGroupChatBot() {
+    return useWhatsAppGroupChatBot;
   }
 
   /**
-   * Setter for useGroupChatBot
+   * Setter for useWhatsAppGroupChatBot
    * 
-   * @param useGroupChatBot whether to use the group chat bot
+   * @param useWhatsAppGroupChatBot whether to use the WhatsApp group chat bot
    */
-  public void setUseGroupChatBot(Boolean useGroupChatBot) {
-    this.useGroupChatBot = useGroupChatBot;
+  public void setUseWhatsAppGroupChatBot(Boolean useWhatsAppGroupChatBot) {
+    this.useWhatsAppGroupChatBot = useWhatsAppGroupChatBot;
   }
 }

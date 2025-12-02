@@ -1,16 +1,16 @@
-part of '../login_signup_screen.dart';
+part of '../widget/login_signup_screen.dart';
 
 /// An input apart of [_Inputs].
 final class _Input extends StatelessWidget {
   const _Input({
-    required this.placeholder,
+    required this.label,
     this.obscurify = false,
     required this.onFieldSubmitted,
     required this.focusNode,
     required this.controller,
   });
 
-  final String placeholder;
+  final String label;
   final bool obscurify;
   final VoidCallback onFieldSubmitted;
   final FocusNode focusNode;
@@ -22,7 +22,7 @@ final class _Input extends StatelessWidget {
 
     return MyoroInput(
       style: MyoroInputStyle(inputTextStyle: themeExtension.inputTextStyle),
-      placeholder: placeholder,
+      label: label,
       obscureText: obscurify,
       showObscureTextButton: obscurify,
       onFieldSubmitted: (_) => onFieldSubmitted(),

@@ -28,6 +28,7 @@ final class _InvitationBottomSheet extends StatelessWidget {
   Widget build(context) {
     final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
     final invitationBottomSheetSpacing = themeExtension.invitationBottomSheetSpacing;
+    final invitationBottomSheetContentPadding = themeExtension.invitationBottomSheetContentPadding;
 
     final viewModel = context.read<GameDetailsScreenViewModel>();
     final invitationBottomSheetRequest = viewModel.invitationBottomSheetRequest;
@@ -37,15 +38,19 @@ final class _InvitationBottomSheet extends StatelessWidget {
       request: invitationBottomSheetRequest,
       onSuccess: invitationBottomSheetOnSuccess,
       builder: (request, controller) {
-        return Column(
-          mainAxisSize: MainAxisSize.min,
-          spacing: invitationBottomSheetSpacing,
-          children: [
-            const _InvitationBottomSheetTitle(),
-            const _InvitationBottomSheetUserSearchInput(),
-            const _InvitationBottomSheetMessageInput(),
-            _InvitationBottomSheetActionButtons(request, controller),
-          ],
+        return Padding(
+          padding: invitationBottomSheetContentPadding,
+          child: Column(
+            spacing: invitationBottomSheetSpacing,
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const _InvitationBottomSheetTitle(),
+              const _InvitationBottomSheetUserSearchInput(),
+              const _InvitationBottomSheetMessageInput(),
+              _InvitationBottomSheetActionButtons(request, controller),
+            ],
+          ),
         );
       },
     );
