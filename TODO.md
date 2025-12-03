@@ -22,7 +22,6 @@
 - `myoro_matchup`
   - Sentry & logger
   - `STAGELOG.md`/`CHANGELOG.md` and deploy script
-  - Friend listing screen
   - Whatsapp bot
   - Other things that aren't working
 - Documentation on Notion

@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "ゲームの詳細を取得できませんでした！",
   "invitationListingScreenAppBarTitle": "招待",
+  "friendListingScreenAppBarTitle": "友達",
   "userDetailsScreenAppBarTitle": "ユーザー詳細",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {購読中} other {未購読}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "招待を取得できませんでした！",
   "invitationListingScreenBodySuccessStateEmptyTitle": "招待が見つかりませんでした！",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "メッセージ",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "ステータス",

@@ -13,10 +13,8 @@ part of 'friend_listing_screen_theme_extension.dart';
 /// ```dart
 /// class FriendListingScreenThemeExtension with _$FriendListingScreenThemeExtensionMixin {}
 /// ```
-mixin _$FriendListingScreenThemeExtensionMixin
-    on ThemeExtension<FriendListingScreenThemeExtension> {
-  FriendListingScreenThemeExtension get self =>
-      this as FriendListingScreenThemeExtension;
+mixin _$FriendListingScreenThemeExtensionMixin on ThemeExtension<FriendListingScreenThemeExtension> {
+  FriendListingScreenThemeExtension get self => this as FriendListingScreenThemeExtension;
 
   @override
   FriendListingScreenThemeExtension copyWith() {
@@ -25,8 +23,7 @@ mixin _$FriendListingScreenThemeExtensionMixin
 
   @override
   bool operator ==(Object other) {
-    return other is FriendListingScreenThemeExtension &&
-        other.runtimeType == runtimeType;
+    return other is FriendListingScreenThemeExtension && other.runtimeType == runtimeType;
   }
 
   @override

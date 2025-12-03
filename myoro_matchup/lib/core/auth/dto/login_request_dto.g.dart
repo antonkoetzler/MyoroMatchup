@@ -6,12 +6,11 @@ part of 'login_request_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$LoginRequestDtoToJson(LoginRequestDto instance) =>
-    <String, dynamic>{
-      'username': ?instance.username,
-      'email': ?instance.email,
-      'password': instance.password,
-    };
+Map<String, dynamic> _$LoginRequestDtoToJson(LoginRequestDto instance) => <String, dynamic>{
+  'username': ?instance.username,
+  'email': ?instance.email,
+  'password': instance.password,
+};
 
 // **************************************************************************
 // MyoroModelGenerator

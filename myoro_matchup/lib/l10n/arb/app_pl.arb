@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Nie udało się pobrać szczegółów gry!",
   "invitationListingScreenAppBarTitle": "Zaproszenia",
+  "friendListingScreenAppBarTitle": "Przyjaciele",
   "userDetailsScreenAppBarTitle": "Szczegóły użytkownika",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Subskrybowane} other {Niesubskrybowane}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Nie udało się pobrać zaproszeń!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Nie znaleziono zaproszeń!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Wiadomość",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",

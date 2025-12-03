@@ -285,6 +285,12 @@ abstract class AppLocalizations {
   /// **'Invitations'**
   String get invitationListingScreenAppBarTitle;
 
+  /// No description provided for @friendListingScreenAppBarTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Friends'**
+  String get friendListingScreenAppBarTitle;
+
   /// No description provided for @userDetailsScreenAppBarTitle.
   ///
   /// In en, this message translates to:
@@ -360,12 +366,6 @@ abstract class AppLocalizations {
     String state,
     String country,
   );
-
-  /// No description provided for @invitationListingScreenBodyErrorStateTitle.
-  ///
-  /// In en, this message translates to:
-  /// **'Failed to retrieve invitations!'**
-  String get invitationListingScreenBodyErrorStateTitle;
 
   /// No description provided for @invitationListingScreenBodySuccessStateEmptyTitle.
   ///

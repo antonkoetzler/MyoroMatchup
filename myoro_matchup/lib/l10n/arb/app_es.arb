@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "¡No se pudieron obtener los detalles del juego!",
   "invitationListingScreenAppBarTitle": "Invitaciones",
+  "friendListingScreenAppBarTitle": "Amigos",
   "userDetailsScreenAppBarTitle": "Detalles del usuario",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Suscrito} other {No suscrito}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "¡No se pudieron obtener las invitaciones!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "¡No se encontraron invitaciones!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Mensaje",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Estado",

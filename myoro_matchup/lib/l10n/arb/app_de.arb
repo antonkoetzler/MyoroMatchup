@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Spieldetails konnten nicht abgerufen werden!",
   "invitationListingScreenAppBarTitle": "Einladungen",
+  "friendListingScreenAppBarTitle": "Freunde",
   "userDetailsScreenAppBarTitle": "Benutzerdetails",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Abonniert} other {Nicht abonniert}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Einladungen konnten nicht abgerufen werden!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Keine Einladungen gefunden!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Nachricht",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",

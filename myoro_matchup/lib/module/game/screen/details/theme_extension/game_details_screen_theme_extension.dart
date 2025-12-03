@@ -10,7 +10,8 @@ part 'game_details_screen_theme_extension.g.dart';
 /// [ThemeExtension] of [GameDetailsScreen].
 @immutable
 @myoroThemeExtension
-final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsScreenThemeExtension> with _$GameDetailsScreenThemeExtensionMixin {
+final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsScreenThemeExtension>
+    with _$GameDetailsScreenThemeExtensionMixin {
   /// Default constructor.
   const GameDetailsScreenThemeExtension({
     required this.errorStatePadding,
@@ -163,11 +164,18 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
 
   /// Lerp function.
   @override
-  ThemeExtension<GameDetailsScreenThemeExtension> lerp(covariant ThemeExtension<GameDetailsScreenThemeExtension>? other, double t) {
+  ThemeExtension<GameDetailsScreenThemeExtension> lerp(
+    covariant ThemeExtension<GameDetailsScreenThemeExtension>? other,
+    double t,
+  ) {
     if (other is! GameDetailsScreenThemeExtension) return this;
     return copyWith(
       errorStatePadding: EdgeInsets.lerp(errorStatePadding, other.errorStatePadding, t),
-      bodySuccessStateTabViewContentPadding: EdgeInsets.lerp(bodySuccessStateTabViewContentPadding, other.bodySuccessStateTabViewContentPadding, t),
+      bodySuccessStateTabViewContentPadding: EdgeInsets.lerp(
+        bodySuccessStateTabViewContentPadding,
+        other.bodySuccessStateTabViewContentPadding,
+        t,
+      ),
       spacing: lerpDouble(spacing, other.spacing, t),
       bodySuccessStateTabViewInfoTabContentPadding: EdgeInsets.lerp(
         bodySuccessStateTabViewInfoTabContentPadding,
@@ -179,8 +187,16 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
         other.bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
         t,
       ),
-      invitationBottomSheetTitleTextStyle: TextStyle.lerp(invitationBottomSheetTitleTextStyle, other.invitationBottomSheetTitleTextStyle, t)!,
-      invitationBottomSheetActionButtonsSpacing: lerpDouble(invitationBottomSheetActionButtonsSpacing, other.invitationBottomSheetActionButtonsSpacing, t),
+      invitationBottomSheetTitleTextStyle: TextStyle.lerp(
+        invitationBottomSheetTitleTextStyle,
+        other.invitationBottomSheetTitleTextStyle,
+        t,
+      )!,
+      invitationBottomSheetActionButtonsSpacing: lerpDouble(
+        invitationBottomSheetActionButtonsSpacing,
+        other.invitationBottomSheetActionButtonsSpacing,
+        t,
+      ),
       invitationBottomSheetSpacing: lerpDouble(invitationBottomSheetSpacing, other.invitationBottomSheetSpacing, t),
       bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize: lerpDouble(
         bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize,
@@ -222,9 +238,21 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
         other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor,
         t,
       ),
-      invitationBottomSheetContentPadding: EdgeInsets.lerp(invitationBottomSheetContentPadding, other.invitationBottomSheetContentPadding, t),
-      playerDetailsBottomSheetTitleTextStyle: TextStyle.lerp(playerDetailsBottomSheetTitleTextStyle, other.playerDetailsBottomSheetTitleTextStyle, t)!,
-      playerDetailsBottomSheetSpacing: lerpDouble(playerDetailsBottomSheetSpacing, other.playerDetailsBottomSheetSpacing, t),
+      invitationBottomSheetContentPadding: EdgeInsets.lerp(
+        invitationBottomSheetContentPadding,
+        other.invitationBottomSheetContentPadding,
+        t,
+      ),
+      playerDetailsBottomSheetTitleTextStyle: TextStyle.lerp(
+        playerDetailsBottomSheetTitleTextStyle,
+        other.playerDetailsBottomSheetTitleTextStyle,
+        t,
+      )!,
+      playerDetailsBottomSheetSpacing: lerpDouble(
+        playerDetailsBottomSheetSpacing,
+        other.playerDetailsBottomSheetSpacing,
+        t,
+      ),
     );
   }
 }

@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Не удалось получить детали игры!",
   "invitationListingScreenAppBarTitle": "Приглашения",
+  "friendListingScreenAppBarTitle": "Друзья",
   "userDetailsScreenAppBarTitle": "Детали пользователя",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Подписан} other {Не подписан}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Не удалось получить приглашения!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Приглашения не найдены!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Сообщение",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Статус",

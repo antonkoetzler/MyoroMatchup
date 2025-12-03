@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "게임 세부 정보를 가져오지 못했습니다!",
   "invitationListingScreenAppBarTitle": "초대",
+  "friendListingScreenAppBarTitle": "친구",
   "userDetailsScreenAppBarTitle": "사용자 세부 정보",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {구독 중} other {구독 안 함}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "초대를 가져오지 못했습니다!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "초대를 찾을 수 없습니다!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "메시지",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "상태",

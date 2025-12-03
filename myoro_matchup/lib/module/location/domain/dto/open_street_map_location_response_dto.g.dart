@@ -6,21 +6,14 @@ part of 'open_street_map_location_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-OpenStreetMapLocationResponseDto _$OpenStreetMapLocationResponseDtoFromJson(
-  Map<String, dynamic> json,
-) => OpenStreetMapLocationResponseDto(
-  name: json['name'] as String,
-  address: OpenStreetMapLocationAddressResponseDto.fromJson(
-    json['address'] as Map<String, dynamic>,
-  ),
-);
+OpenStreetMapLocationResponseDto _$OpenStreetMapLocationResponseDtoFromJson(Map<String, dynamic> json) =>
+    OpenStreetMapLocationResponseDto(
+      name: json['name'] as String,
+      address: OpenStreetMapLocationAddressResponseDto.fromJson(json['address'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$OpenStreetMapLocationResponseDtoToJson(
-  OpenStreetMapLocationResponseDto instance,
-) => <String, dynamic>{
-  'name': instance.name,
-  'address': instance.address.toJson(),
-};
+Map<String, dynamic> _$OpenStreetMapLocationResponseDtoToJson(OpenStreetMapLocationResponseDto instance) =>
+    <String, dynamic>{'name': instance.name, 'address': instance.address.toJson()};
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -34,17 +27,10 @@ Map<String, dynamic> _$OpenStreetMapLocationResponseDtoToJson(
 /// class OpenStreetMapLocationResponseDto with _$OpenStreetMapLocationResponseDtoMixin {}
 /// ```
 mixin _$OpenStreetMapLocationResponseDtoMixin {
-  OpenStreetMapLocationResponseDto get self =>
-      this as OpenStreetMapLocationResponseDto;
+  OpenStreetMapLocationResponseDto get self => this as OpenStreetMapLocationResponseDto;
 
-  OpenStreetMapLocationResponseDto copyWith({
-    String? name,
-    OpenStreetMapLocationAddressResponseDto? address,
-  }) {
-    return OpenStreetMapLocationResponseDto(
-      name: name ?? self.name,
-      address: address ?? self.address,
-    );
+  OpenStreetMapLocationResponseDto copyWith({String? name, OpenStreetMapLocationAddressResponseDto? address}) {
+    return OpenStreetMapLocationResponseDto(name: name ?? self.name, address: address ?? self.address);
   }
 
   @override

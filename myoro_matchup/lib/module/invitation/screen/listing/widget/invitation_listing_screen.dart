@@ -5,9 +5,6 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 import 'package:provider/provider.dart';
 
 part '../_widget/_body.dart';
-part '../_widget/_body_error_state.dart';
-part '../_widget/_body_success_state.dart';
-part '../_widget/_loader.dart';
 part '../_widget/_body_success_state_empty_state.dart';
 part '../_widget/_body_success_state_non_empty_state.dart';
 part '../_widget/_body_success_state_non_empty_state_item.dart';

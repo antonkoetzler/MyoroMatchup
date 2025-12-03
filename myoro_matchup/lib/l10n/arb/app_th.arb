@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "ไม่สามารถดึงรายละเอียดเกมได้!",
   "invitationListingScreenAppBarTitle": "คำเชิญ",
+  "friendListingScreenAppBarTitle": "เพื่อน",
   "userDetailsScreenAppBarTitle": "รายละเอียดผู้ใช้",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {สมัครสมาชิกแล้ว} other {ยังไม่ได้สมัครสมาชิก}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "ไม่สามารถดึงคำเชิญได้!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "ไม่พบคำเชิญ!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "ข้อความ",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "สถานะ",

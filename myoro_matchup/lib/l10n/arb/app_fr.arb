@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Échec de la récupération des détails du jeu.",
   "invitationListingScreenAppBarTitle": "Invitations",
+  "friendListingScreenAppBarTitle": "Amis",
   "userDetailsScreenAppBarTitle": "Détails de l'utilisateur",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Abonné} other {Non abonné}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Échec de la récupération des invitations.",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Aucune invitation trouvée.",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Message",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Statut",

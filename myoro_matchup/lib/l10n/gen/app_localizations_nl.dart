@@ -92,6 +92,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => 'Uitnodigingen';
 
   @override
+  String get friendListingScreenAppBarTitle => 'Vrienden';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'Gebruikersgegevens';
 
   @override
@@ -149,10 +152,6 @@ class AppLocalizationsNl extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle =>
-      'Kon uitnodigingen niet ophalen!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

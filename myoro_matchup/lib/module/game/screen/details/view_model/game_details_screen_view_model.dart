@@ -12,7 +12,12 @@ part 'game_details_screen_state.dart';
 @injectable
 final class GameDetailsScreenViewModel {
   /// Default constructor.
-  GameDetailsScreenViewModel(this._userRepository, this._gameRepository, this._invitationRepository, @factoryParam int gameId) {
+  GameDetailsScreenViewModel(
+    this._userRepository,
+    this._gameRepository,
+    this._invitationRepository,
+    @factoryParam int gameId,
+  ) {
     _state = GameDetailsScreenState(
       () async => await _gameRepository.get(gameId),
       () async => await _gameRepository.setWhatsAppGroupChatLink(gameId, state.whatsAppGroupChatLink),
@@ -59,8 +64,11 @@ final class GameDetailsScreenViewModel {
 
   /// [MyoroSearchInput.itemBuilder] of the invitation bottom sheet's user search input.
   MyoroMenuIconTextButtonItem invitationBottomSheetUserSearchInputItemBuilder(_, UserResponseDto user) {
-    final gameDetailsScreenInvitationBottomSheetUserSearchInputItemText = localization.gameDetailsScreenInvitationBottomSheetUserSearchInputItemText;
-    return MyoroMenuIconTextButtonItem(text: gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(user.username, user.name));
+    final gameDetailsScreenInvitationBottomSheetUserSearchInputItemText =
+        localization.gameDetailsScreenInvitationBottomSheetUserSearchInputItemText;
+    return MyoroMenuIconTextButtonItem(
+      text: gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(user.username, user.name),
+    );
   }
 
   /// [MyoroSearchInput.selectedItemBuilder] of the invitation bottom sheet's user search input.
@@ -93,8 +101,10 @@ final class GameDetailsScreenViewModel {
 
   /// Sets the use WhatsApp group chat bot.
   void openUseWhatsAppGroupChatBotBottomSheet(BuildContext context, bool useWhatsAppGroupChatBot) {
-    final gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle = localization.gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle;
-    final gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText = localization.gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText;
+    final gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =
+        localization.gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle;
+    final gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =
+        localization.gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText;
 
     final useWhatsAppGroupChatBotRequestController = state.useWhatsAppGroupChatBotRequestController;
     final fetch = useWhatsAppGroupChatBotRequestController.fetch;
@@ -109,10 +119,14 @@ final class GameDetailsScreenViewModel {
 
   /// Use WhatsApp group chat bot disabled on tap up.
   void useWhatsAppGroupChatBotDisabledOnTapUp() {
-    final gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage = localization.gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage;
+    final gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =
+        localization.gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage;
 
     MmSnackBarHelper.showSnackBar(
-      snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.attention, message: gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage),
+      snackBar: MyoroSnackBar(
+        snackBarType: MyoroSnackBarTypeEnum.attention,
+        message: gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage,
+      ),
     );
   }
 

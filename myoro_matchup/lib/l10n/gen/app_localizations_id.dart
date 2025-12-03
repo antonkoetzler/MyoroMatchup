@@ -92,6 +92,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => 'Undangan';
 
   @override
+  String get friendListingScreenAppBarTitle => 'Teman';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'Detail Pengguna';
 
   @override
@@ -148,10 +151,6 @@ class AppLocalizationsId extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle =>
-      'Gagal mengambil undangan!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

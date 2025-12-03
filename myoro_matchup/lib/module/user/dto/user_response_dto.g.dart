@@ -6,38 +6,29 @@ part of 'user_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserResponseDto _$UserResponseDtoFromJson(Map<String, dynamic> json) =>
-    UserResponseDto(
-      id: (json['id'] as num).toInt(),
-      profilePicture: json['profilePicture'] as String? ?? '',
-      name: json['name'] as String,
-      username: json['username'] as String,
-      stats: UserSportStatsResponseDto.fromJson(
-        json['stats'] as Map<String, dynamic>,
-      ),
-      location: UserLocationResponseDto.fromJson(
-        json['location'] as Map<String, dynamic>,
-      ),
-      isSubscribed: json['isSubscribed'] as bool,
-      visibility: $enumDecode(_$VisibilityEnumEnumMap, json['visibility']),
-    );
+UserResponseDto _$UserResponseDtoFromJson(Map<String, dynamic> json) => UserResponseDto(
+  id: (json['id'] as num).toInt(),
+  profilePicture: json['profilePicture'] as String? ?? '',
+  name: json['name'] as String,
+  username: json['username'] as String,
+  stats: UserSportStatsResponseDto.fromJson(json['stats'] as Map<String, dynamic>),
+  location: UserLocationResponseDto.fromJson(json['location'] as Map<String, dynamic>),
+  isSubscribed: json['isSubscribed'] as bool,
+  visibility: $enumDecode(_$VisibilityEnumEnumMap, json['visibility']),
+);
 
-Map<String, dynamic> _$UserResponseDtoToJson(UserResponseDto instance) =>
-    <String, dynamic>{
-      'id': instance.id,
-      'profilePicture': instance.profilePicture,
-      'name': instance.name,
-      'username': instance.username,
-      'stats': instance.stats.toJson(),
-      'location': instance.location.toJson(),
-      'isSubscribed': instance.isSubscribed,
-      'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
-    };
-
-const _$VisibilityEnumEnumMap = {
-  VisibilityEnum.private: 'PRIVATE',
-  VisibilityEnum.public: 'PUBLIC',
+Map<String, dynamic> _$UserResponseDtoToJson(UserResponseDto instance) => <String, dynamic>{
+  'id': instance.id,
+  'profilePicture': instance.profilePicture,
+  'name': instance.name,
+  'username': instance.username,
+  'stats': instance.stats.toJson(),
+  'location': instance.location.toJson(),
+  'isSubscribed': instance.isSubscribed,
+  'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
 };
+
+const _$VisibilityEnumEnumMap = {VisibilityEnum.private: 'PRIVATE', VisibilityEnum.public: 'PUBLIC'};
 
 // **************************************************************************
 // MyoroModelGenerator

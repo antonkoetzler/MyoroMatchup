@@ -91,6 +91,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => '招待';
 
   @override
+  String get friendListingScreenAppBarTitle => '友達';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'ユーザー詳細';
 
   @override
@@ -147,9 +150,6 @@ class AppLocalizationsJa extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle => '招待を取得できませんでした！';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

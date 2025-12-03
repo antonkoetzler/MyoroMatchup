@@ -92,6 +92,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => 'คำเชิญ';
 
   @override
+  String get friendListingScreenAppBarTitle => 'เพื่อน';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'รายละเอียดผู้ใช้';
 
   @override
@@ -148,10 +151,6 @@ class AppLocalizationsTh extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle =>
-      'ไม่สามารถดึงคำเชิญได้!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

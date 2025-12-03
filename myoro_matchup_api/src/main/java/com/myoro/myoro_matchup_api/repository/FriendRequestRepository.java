@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 import com.myoro.myoro_matchup_api.enums.FriendRequestStatusEnum;
@@ -11,7 +12,7 @@ import com.myoro.myoro_matchup_api.model.FriendRequestModel;
 
 /** Friend request repository. */
 @Repository
-public interface FriendRequestRepository extends JpaRepository<FriendRequestModel, Long> {
+public interface FriendRequestRepository extends JpaRepository<FriendRequestModel, Long>, JpaSpecificationExecutor<FriendRequestModel> {
   /**
    * Finds pending friend request between two users.
    * 

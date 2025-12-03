@@ -92,6 +92,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => 'Convites';
 
   @override
+  String get friendListingScreenAppBarTitle => 'Amigos';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'Detalhes do usuário';
 
   @override
@@ -149,10 +152,6 @@ class AppLocalizationsPt extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle =>
-      'Falha ao obter os convites!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

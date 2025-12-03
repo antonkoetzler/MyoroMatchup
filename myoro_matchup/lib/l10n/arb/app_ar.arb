@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "فشل في استرداد تفاصيل اللعبة!",
   "invitationListingScreenAppBarTitle": "الدعوات",
+  "friendListingScreenAppBarTitle": "الأصدقاء",
   "userDetailsScreenAppBarTitle": "تفاصيل المستخدم",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {مشترك} other {غير مشترك}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "فشل في استرداد الدعوات!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "لم يتم العثور على دعوات!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "رسالة",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "الحالة",

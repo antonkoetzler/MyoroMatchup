@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "無法取得遊戲詳情！",
   "invitationListingScreenAppBarTitle": "邀請",
+  "friendListingScreenAppBarTitle": "朋友",
   "userDetailsScreenAppBarTitle": "使用者詳情",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {已訂閱} other {未訂閱}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "無法取得邀請！",
   "invitationListingScreenBodySuccessStateEmptyTitle": "找不到邀請！",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "訊息",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "狀態",

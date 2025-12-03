@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Falha ao obter os detalhes do jogo!",
   "invitationListingScreenAppBarTitle": "Convites",
+  "friendListingScreenAppBarTitle": "Amigos",
   "userDetailsScreenAppBarTitle": "Detalhes do usuário",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Assinado} other {Não assinado}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Falha ao obter os convites!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Nenhum convite encontrado!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Mensagem",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",

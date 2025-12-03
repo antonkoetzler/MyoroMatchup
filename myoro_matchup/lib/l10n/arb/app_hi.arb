@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "गेम विवरण प्राप्त करने में विफल!",
   "invitationListingScreenAppBarTitle": "आमंत्रण",
+  "friendListingScreenAppBarTitle": "मित्र",
   "userDetailsScreenAppBarTitle": "उपयोगकर्ता विवरण",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {सदस्यता ली गई} other {सदस्यता नहीं ली गई}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "आमंत्रण प्राप्त करने में विफल!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "कोई आमंत्रण नहीं मिला!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "संदेश",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "स्थिति",

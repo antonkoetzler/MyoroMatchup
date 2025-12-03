@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Failed to retrieve game details!",
   "invitationListingScreenAppBarTitle": "Invitations",
+  "friendListingScreenAppBarTitle": "Friends",
   "userDetailsScreenAppBarTitle": "User Details",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Subscribed} other {Unsubscribed}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Failed to retrieve invitations!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "No invitations found!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Message",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",

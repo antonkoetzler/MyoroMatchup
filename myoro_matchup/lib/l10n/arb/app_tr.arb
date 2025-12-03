@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Oyun detayları alınamadı!",
   "invitationListingScreenAppBarTitle": "Davetler",
+  "friendListingScreenAppBarTitle": "Arkadaşlar",
   "userDetailsScreenAppBarTitle": "Kullanıcı Detayları",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Abone} other {Abone değil}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Davetiyeler alınamadı!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Davetiye bulunamadı!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Mesaj",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Durum",

@@ -92,6 +92,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => 'الدعوات';
 
   @override
+  String get friendListingScreenAppBarTitle => 'الأصدقاء';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'تفاصيل المستخدم';
 
   @override
@@ -148,10 +151,6 @@ class AppLocalizationsAr extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle =>
-      'فشل في استرداد الدعوات!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

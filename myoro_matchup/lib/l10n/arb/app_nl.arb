@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Kon speldetails niet ophalen!",
   "invitationListingScreenAppBarTitle": "Uitnodigingen",
+  "friendListingScreenAppBarTitle": "Vrienden",
   "userDetailsScreenAppBarTitle": "Gebruikersgegevens",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Geabonneerd} other {Niet geabonneerd}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Kon uitnodigingen niet ophalen!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Geen uitnodigingen gevonden!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Bericht",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",

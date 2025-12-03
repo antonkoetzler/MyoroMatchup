@@ -92,6 +92,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => 'Davetler';
 
   @override
+  String get friendListingScreenAppBarTitle => 'Arkadaşlar';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'Kullanıcı Detayları';
 
   @override
@@ -149,10 +152,6 @@ class AppLocalizationsTr extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle =>
-      'Davetiyeler alınamadı!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

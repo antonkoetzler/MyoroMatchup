@@ -91,6 +91,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => '초대';
 
   @override
+  String get friendListingScreenAppBarTitle => '친구';
+
+  @override
   String get userDetailsScreenAppBarTitle => '사용자 세부 정보';
 
   @override
@@ -147,9 +150,6 @@ class AppLocalizationsKo extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle => '초대를 가져오지 못했습니다!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

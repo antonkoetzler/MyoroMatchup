@@ -10,7 +10,8 @@ part 'user_details_screen_theme_extension.g.dart';
 /// [ThemeExtension] of [UserDetailsScreen].
 @immutable
 @myoroThemeExtension
-final class UserDetailsScreenThemeExtension extends ThemeExtension<UserDetailsScreenThemeExtension> with _$UserDetailsScreenThemeExtensionMixin {
+final class UserDetailsScreenThemeExtension extends ThemeExtension<UserDetailsScreenThemeExtension>
+    with _$UserDetailsScreenThemeExtensionMixin {
   /// Default constructor.
   const UserDetailsScreenThemeExtension({
     required this.bodySpacing,
@@ -81,7 +82,11 @@ final class UserDetailsScreenThemeExtension extends ThemeExtension<UserDetailsSc
       bodyPadding: EdgeInsets.lerp(bodyPadding, other.bodyPadding, t),
       bodyLocationSpacing: lerpDouble(bodyLocationSpacing, other.bodyLocationSpacing, t),
       bodyLocationLabelTextStyle: TextStyle.lerp(bodyLocationLabelTextStyle, other.bodyLocationLabelTextStyle, t),
-      bodySubscriptionStatusLabelTextStyle: TextStyle.lerp(bodySubscriptionStatusLabelTextStyle, other.bodySubscriptionStatusLabelTextStyle, t),
+      bodySubscriptionStatusLabelTextStyle: TextStyle.lerp(
+        bodySubscriptionStatusLabelTextStyle,
+        other.bodySubscriptionStatusLabelTextStyle,
+        t,
+      ),
     );
   }
 }

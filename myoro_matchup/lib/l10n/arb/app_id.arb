@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Gagal mengambil detail permainan!",
   "invitationListingScreenAppBarTitle": "Undangan",
+  "friendListingScreenAppBarTitle": "Teman",
   "userDetailsScreenAppBarTitle": "Detail Pengguna",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Berlangganan} other {Tidak berlangganan}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Gagal mengambil undangan!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Tidak ada undangan ditemukan!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Pesan",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",

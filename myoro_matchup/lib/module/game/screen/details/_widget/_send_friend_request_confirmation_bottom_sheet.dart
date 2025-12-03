@@ -5,7 +5,8 @@ final class _SendFriendRequestConfirmationBottomSheet {
   /// Show function.
   static void show(BuildContext context, GamePlayerResponseDto player) {
     final sendFriendRequestConfirmationBottomSheetTitle = localization.sendFriendRequestConfirmationBottomSheetTitle;
-    final sendFriendRequestConfirmationBottomSheetMessage = localization.sendFriendRequestConfirmationBottomSheetMessage;
+    final sendFriendRequestConfirmationBottomSheetMessage =
+        localization.sendFriendRequestConfirmationBottomSheetMessage;
 
     final viewModel = context.read<GameDetailsScreenViewModel>();
     final sendFriendRequest = viewModel.sendFriendRequest;

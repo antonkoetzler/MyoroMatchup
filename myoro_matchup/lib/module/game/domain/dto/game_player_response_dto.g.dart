@@ -6,17 +6,13 @@ part of 'game_player_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GamePlayerResponseDto _$GamePlayerResponseDtoFromJson(
-  Map<String, dynamic> json,
-) => GamePlayerResponseDto(
+GamePlayerResponseDto _$GamePlayerResponseDtoFromJson(Map<String, dynamic> json) => GamePlayerResponseDto(
   id: (json['id'] as num).toInt(),
   username: json['username'] as String,
   name: json['name'] as String,
 );
 
-Map<String, dynamic> _$GamePlayerResponseDtoToJson(
-  GamePlayerResponseDto instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$GamePlayerResponseDtoToJson(GamePlayerResponseDto instance) => <String, dynamic>{
   'id': instance.id,
   'username': instance.username,
   'name': instance.name,
@@ -37,11 +33,7 @@ mixin _$GamePlayerResponseDtoMixin {
   GamePlayerResponseDto get self => this as GamePlayerResponseDto;
 
   GamePlayerResponseDto copyWith({int? id, String? username, String? name}) {
-    return GamePlayerResponseDto(
-      id: id ?? self.id,
-      username: username ?? self.username,
-      name: name ?? self.name,
-    );
+    return GamePlayerResponseDto(id: id ?? self.id, username: username ?? self.username, name: name ?? self.name);
   }
 
   @override

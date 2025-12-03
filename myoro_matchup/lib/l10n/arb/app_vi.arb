@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Không thể lấy chi tiết trò chơi!",
   "invitationListingScreenAppBarTitle": "Lời mời",
+  "friendListingScreenAppBarTitle": "Bạn bè",
   "userDetailsScreenAppBarTitle": "Chi tiết người dùng",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Đã đăng ký} other {Chưa đăng ký}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Không thể lấy lời mời!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Không tìm thấy lời mời!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Tin nhắn",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Trạng thái",

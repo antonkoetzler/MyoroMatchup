@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "无法获取游戏详情！",
   "invitationListingScreenAppBarTitle": "邀请",
+  "friendListingScreenAppBarTitle": "朋友",
   "userDetailsScreenAppBarTitle": "用户详情",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {已订阅} other {未订阅}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "无法获取邀请！",
   "invitationListingScreenBodySuccessStateEmptyTitle": "未找到邀请！",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "消息",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "状态",

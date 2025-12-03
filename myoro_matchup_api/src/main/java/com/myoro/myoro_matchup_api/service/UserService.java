@@ -30,6 +30,9 @@ import com.myoro.myoro_matchup_api.repository.BlockedUserRepository;
 import com.myoro.myoro_matchup_api.repository.FriendRequestRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
 import com.myoro.myoro_matchup_api.repository.UserStatsRepository;
+import com.myoro.myoro_matchup_api.specification.FriendSpecifications;
+
+import org.springframework.data.jpa.domain.Specification;
 
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -251,6 +254,74 @@ public class UserService {
 
     // Save friend request
     friendRequestRepository.save(friendRequest);
+  }
+
+  /**
+   * Accepts a friend request.
+   * 
+   * @param request        the HTTP request containing the bearer token
+   * @param friendRequestId the ID of the friend request to accept
+   */
+  public void acceptFriendRequest(final HttpServletRequest request, final Long friendRequestId) {
+    final Long userId = jwtService.getUserIdFromRequest(request);
+
+    // Find the friend request
+    FriendRequestModel friendRequest = friendRequestRepository.findById(friendRequestId)
+        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.friend.request.not.found")));
+
+    // Validate user is the recipient
+    if (!friendRequest.getRecipient().getId().equals(userId)) {
+      throw new RuntimeException(messageService.getMessage("error.access.denied"));
+    }
+
+    // Validate friend request is pending
+    if (friendRequest.getStatus() != FriendRequestStatusEnum.PENDING) {
+      throw new RuntimeException(messageService.getMessage("error.friend.request.not.pending"));
+    }
+
+    // Update friend request status
+    friendRequest.setStatus(FriendRequestStatusEnum.ACCEPTED);
+    friendRequest.setRespondedAt(LocalDateTime.now());
+
+    // Save friend request
+    friendRequestRepository.save(friendRequest);
+  }
+
+  /**
+   * Gets all friends for the authenticated user, optionally filtered by query
+   * and status.
+   * 
+   * @param request  the HTTP request containing the bearer token
+   * @param query    optional search query to filter by friend name, username,
+   *                 status, or dates
+   * @param status   optional status filter (PENDING, ACCEPTED, REJECTED)
+   * @return list of friends as user response DTOs
+   */
+  public List<UserResponseDto> getFriends(final HttpServletRequest request, final String query,
+      final FriendRequestStatusEnum status) {
+    final Long userId = jwtService.getUserIdFromRequest(request);
+
+    // Filter to only accepted friend requests (friends)
+    Specification<FriendRequestModel> spec = FriendSpecifications.filter(userId, query,
+        status != null ? status : FriendRequestStatusEnum.ACCEPTED);
+    List<FriendRequestModel> friendRequests = friendRequestRepository.findAll(spec);
+
+    return friendRequests.stream()
+        .map(friendRequest -> {
+          // Get the other user (not the current user)
+          UserModel friend = friendRequest.getRequester().getId().equals(userId)
+              ? friendRequest.getRecipient()
+              : friendRequest.getRequester();
+
+          UserResponseDto dto = new UserResponseDto();
+          dto.setId(friend.getId());
+          dto.setUsername(friend.getUsername());
+          dto.setName(friend.getName());
+          dto.setEmail(friend.getEmail());
+          dto.setVisibility(friend.getVisibility());
+          return dto;
+        })
+        .collect(Collectors.toList());
   }
 
   /**

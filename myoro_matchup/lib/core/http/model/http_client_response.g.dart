@@ -17,10 +17,7 @@ mixin _$HttpClientResponseMixin<T> {
   HttpClientResponse<T> get self => this as HttpClientResponse<T>;
 
   HttpClientResponse<T> copyWith({int? statusCode, T? data}) {
-    return HttpClientResponse(
-      statusCode: statusCode ?? self.statusCode,
-      data: data ?? self.data,
-    );
+    return HttpClientResponse(statusCode: statusCode ?? self.statusCode, data: data ?? self.data);
   }
 
   @override

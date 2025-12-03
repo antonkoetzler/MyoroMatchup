@@ -44,6 +44,7 @@
 
   "gameDetailsScreenBodyErrorFeedbackTitle": "Impossibile recuperare i dettagli del gioco!",
   "invitationListingScreenAppBarTitle": "Inviti",
+  "friendListingScreenAppBarTitle": "Amici",
   "userDetailsScreenAppBarTitle": "Dettagli utente",
   "userDetailsScreenBodySubscriptionPlanText": "{isSubscribed, select, true {Abbonato} other {Non abbonato}}",
   "@userDetailsScreenBodySubscriptionPlanText": {
@@ -83,7 +84,6 @@
       }
     }
   },
-  "invitationListingScreenBodyErrorStateTitle": "Impossibile recuperare gli inviti!",
   "invitationListingScreenBodySuccessStateEmptyTitle": "Nessun invito trovato!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Messaggio",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Stato",

@@ -13,10 +13,8 @@ part of 'user_details_screen_theme_extension.dart';
 /// ```dart
 /// class UserDetailsScreenThemeExtension with _$UserDetailsScreenThemeExtensionMixin {}
 /// ```
-mixin _$UserDetailsScreenThemeExtensionMixin
-    on ThemeExtension<UserDetailsScreenThemeExtension> {
-  UserDetailsScreenThemeExtension get self =>
-      this as UserDetailsScreenThemeExtension;
+mixin _$UserDetailsScreenThemeExtensionMixin on ThemeExtension<UserDetailsScreenThemeExtension> {
+  UserDetailsScreenThemeExtension get self => this as UserDetailsScreenThemeExtension;
 
   @override
   UserDetailsScreenThemeExtension copyWith({
@@ -33,15 +31,12 @@ mixin _$UserDetailsScreenThemeExtensionMixin
       bodySpacing: bodySpacing ?? self.bodySpacing,
       bodyPadding: bodyPadding ?? self.bodyPadding,
       profilePictureSize: profilePictureSize ?? self.profilePictureSize,
-      bodyUsernameTextStyle:
-          bodyUsernameTextStyle ?? self.bodyUsernameTextStyle,
+      bodyUsernameTextStyle: bodyUsernameTextStyle ?? self.bodyUsernameTextStyle,
       bodyNameTextStyle: bodyNameTextStyle ?? self.bodyNameTextStyle,
       bodyLocationSpacing: bodyLocationSpacing ?? self.bodyLocationSpacing,
-      bodyLocationLabelTextStyle:
-          bodyLocationLabelTextStyle ?? self.bodyLocationLabelTextStyle,
+      bodyLocationLabelTextStyle: bodyLocationLabelTextStyle ?? self.bodyLocationLabelTextStyle,
       bodySubscriptionStatusLabelTextStyle:
-          bodySubscriptionStatusLabelTextStyle ??
-          self.bodySubscriptionStatusLabelTextStyle,
+          bodySubscriptionStatusLabelTextStyle ?? self.bodySubscriptionStatusLabelTextStyle,
     );
   }
 
@@ -56,8 +51,7 @@ mixin _$UserDetailsScreenThemeExtensionMixin
         other.bodyNameTextStyle == self.bodyNameTextStyle &&
         other.bodyLocationSpacing == self.bodyLocationSpacing &&
         other.bodyLocationLabelTextStyle == self.bodyLocationLabelTextStyle &&
-        other.bodySubscriptionStatusLabelTextStyle ==
-            self.bodySubscriptionStatusLabelTextStyle;
+        other.bodySubscriptionStatusLabelTextStyle == self.bodySubscriptionStatusLabelTextStyle;
   }
 
   @override

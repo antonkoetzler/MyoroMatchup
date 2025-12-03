@@ -26,7 +26,10 @@ final class _BodySubscriptionStatus extends StatelessWidget {
           Text(bodySubscriptionStatusLabel(isSubscribed.toString()), style: bodySubscriptionStatusLabelTextStyle),
           // TODO
           IntrinsicWidth(
-            child: MyoroIconTextButton(text: bodySubscriptionStatusButtonText, onTapUp: isSubscribed ? null : (_, _) {}),
+            child: MyoroIconTextButton(
+              text: bodySubscriptionStatusButtonText,
+              onTapUp: isSubscribed ? null : (_, _) {},
+            ),
           ),
         ],
       ),

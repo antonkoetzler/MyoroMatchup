@@ -92,6 +92,9 @@ class AppLocalizationsIt extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => 'Inviti';
 
   @override
+  String get friendListingScreenAppBarTitle => 'Amici';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'Dettagli utente';
 
   @override
@@ -149,10 +152,6 @@ class AppLocalizationsIt extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle =>
-      'Impossibile recuperare gli inviti!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

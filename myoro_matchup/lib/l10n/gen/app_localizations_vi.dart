@@ -92,6 +92,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => 'Lời mời';
 
   @override
+  String get friendListingScreenAppBarTitle => 'Bạn bè';
+
+  @override
   String get userDetailsScreenAppBarTitle => 'Chi tiết người dùng';
 
   @override
@@ -149,10 +152,6 @@ class AppLocalizationsVi extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle =>
-      'Không thể lấy lời mời!';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle =>

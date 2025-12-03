@@ -10,11 +10,8 @@ part 'invitation_listing_screen_state.dart';
 final class InvitationListingScreenViewModel {
   /// Default constructor.
   InvitationListingScreenViewModel(this._invitationRepository) {
-    _state = InvitationListingScreenState(
-      () async => await _invitationRepository.select(searchQuery: _state.query, status: _state.filteredStatus),
-    );
+    _state = InvitationListingScreenState(() async => await _invitationRepository.select(searchQuery: _state.query, status: _state.filteredStatus));
     _state
-      ..invitationsRequestController.fetch()
       ..queryController.addListener(_queryControllerListener)
       ..declineInvitationRequestController.addListener(_declineInvitationRequestListener)
       ..acceptInvitationRequestController.addListener(_acceptInvitationRequestListener);
@@ -44,18 +41,14 @@ final class InvitationListingScreenViewModel {
   /// On decline.
   void onDecline(InvitationResponseDto invitation) {
     _state
-      ..declineInvitationRequestController.setRequestCallback(
-        (() async => await _invitationRepository.declineInvitation(invitation.id)),
-      )
+      ..declineInvitationRequestController.setRequestCallback((() async => await _invitationRepository.declineInvitation(invitation.id)))
       ..declineInvitationRequestController.fetch();
   }
 
   /// On accept.
   void onAccept(InvitationResponseDto invitation) {
     _state
-      ..acceptInvitationRequestController.setRequestCallback(
-        (() async => await _invitationRepository.acceptInvitation(invitation.id)),
-      )
+      ..acceptInvitationRequestController.setRequestCallback((() async => await _invitationRepository.acceptInvitation(invitation.id)))
       ..acceptInvitationRequestController.fetch();
   }
 
@@ -78,10 +71,7 @@ final class InvitationListingScreenViewModel {
     }
     if (isError) {
       MmSnackBarHelper.showSnackBar(
-        snackBar: MyoroSnackBar(
-          snackBarType: MyoroSnackBarTypeEnum.error,
-          message: declineInvitationRequest.errorMessage!,
-        ),
+        snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: declineInvitationRequest.errorMessage!),
       );
     }
   }

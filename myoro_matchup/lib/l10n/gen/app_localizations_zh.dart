@@ -90,6 +90,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get invitationListingScreenAppBarTitle => '邀请';
 
   @override
+  String get friendListingScreenAppBarTitle => '朋友';
+
+  @override
   String get userDetailsScreenAppBarTitle => '用户详情';
 
   @override
@@ -146,9 +149,6 @@ class AppLocalizationsZh extends AppLocalizations {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle => '无法获取邀请！';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => '未找到邀请！';
@@ -646,6 +646,9 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get invitationListingScreenAppBarTitle => '邀請';
 
   @override
+  String get friendListingScreenAppBarTitle => '朋友';
+
+  @override
   String get userDetailsScreenAppBarTitle => '使用者詳情';
 
   @override
@@ -702,9 +705,6 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
-
-  @override
-  String get invitationListingScreenBodyErrorStateTitle => '無法取得邀請！';
 
   @override
   String get invitationListingScreenBodySuccessStateEmptyTitle => '找不到邀請！';

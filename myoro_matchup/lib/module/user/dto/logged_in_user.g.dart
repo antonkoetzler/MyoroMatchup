@@ -6,13 +6,13 @@ part of 'logged_in_user.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-LoggedInUser _$LoggedInUserFromJson(Map<String, dynamic> json) => LoggedInUser(
-  id: (json['id'] as num).toInt(),
-  token: json['token'] as String,
-);
+LoggedInUser _$LoggedInUserFromJson(Map<String, dynamic> json) =>
+    LoggedInUser(id: (json['id'] as num).toInt(), token: json['token'] as String);
 
-Map<String, dynamic> _$LoggedInUserToJson(LoggedInUser instance) =>
-    <String, dynamic>{'id': instance.id, 'token': instance.token};
+Map<String, dynamic> _$LoggedInUserToJson(LoggedInUser instance) => <String, dynamic>{
+  'id': instance.id,
+  'token': instance.token,
+};
 
 // **************************************************************************
 // MyoroModelGenerator
