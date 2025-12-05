@@ -38,4 +38,9 @@ final class UserDetailsScreenViewModel {
   Future<String> unblockUser(UserResponseDto user) async {
     return await _userRepository.unblockUser(user.id);
   }
+
+  /// Delete account function.
+  Future<String> deleteAccount() async {
+    return await _userRepository.deleteAccount();
+  }
 }

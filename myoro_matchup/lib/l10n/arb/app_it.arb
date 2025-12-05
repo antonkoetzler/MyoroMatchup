@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "Scaduto",
   "invitationStatusEnumCancelledLabel": "Annullato",
 
+  "friendRequestStatusEnumPendingLabel": "In attesa",
+  "friendRequestStatusEnumAcceptedLabel": "Accettato",
+  "friendRequestStatusEnumRejectedLabel": "Rifiutato",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "Impossibile recuperare i dettagli del gioco!",
   "invitationListingScreenAppBarTitle": "Inviti",
   "friendListingScreenAppBarTitle": "Amici",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "Nessun invito trovato!",
+  "friendListingScreenBodyEmptyTitle": "Nessun amico trovato!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Messaggio",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Stato",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Accetta",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "Stato",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Rifiuta",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Giocatori",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "Blocca",
   "sendFriendRequestConfirmationBottomSheetTitle": "Invia Richiesta di Amicizia",
   "sendFriendRequestConfirmationBottomSheetMessage": "Sei sicuro di voler inviare una richiesta di amicizia a questo utente?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "Accetta Richiesta di Amicizia",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "Sei sicuro di voler accettare questa richiesta di amicizia?",
   "blockUserConfirmationBottomSheetTitle": "Blocca Utente",
   "blockUserConfirmationBottomSheetMessage": "Sei sicuro di voler bloccare questo utente?",
   "unblockUserConfirmationBottomSheetTitle": "Sblocca Utente",
   "unblockUserConfirmationBottomSheetMessage": "Sei sicuro di voler sbloccare questo utente?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "Elimina Account",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "Sei sicuro di voler eliminare il tuo account? Questa azione non può essere annullata.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Errore nel recupero dei giochi!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Il paese non può essere vuoto.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "I campi password non possono essere vuoti.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Le password non corrispondono.",
+  "loginSignupScreenForgotPasswordDialogTitle": "Password dimenticata",
+  "loginSignupScreenForgotPasswordDialogMessage": "Inserisci il tuo indirizzo email e ti invieremo un link per reimpostare la password.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Inserisci un indirizzo email valido.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Crea gioco",
   "mmAppBarMenuDrawerFriendListingText": "Amici",
-  "mmAppBarMenuDrawerInvitationListingText": "Inviti"
+  "mmAppBarMenuDrawerInvitationListingText": "Inviti",
+  "mmAppBarMenuDrawerLogoutText": "Esci"
 }
 

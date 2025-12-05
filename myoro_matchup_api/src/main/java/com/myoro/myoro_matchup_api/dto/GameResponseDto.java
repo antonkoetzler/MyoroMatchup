@@ -1,7 +1,7 @@
 package com.myoro.myoro_matchup_api.dto;
 
-import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 
 /** Game response DTO. */
 public class GameResponseDto {
@@ -45,13 +45,21 @@ public class GameResponseDto {
   private Boolean useWhatsAppGroupChatBot;
 
   /** Default constructor. */
-  public GameResponseDto() {
-  }
+  public GameResponseDto() {}
 
   /** Constructor with all fields. */
-  public GameResponseDto(Long id, Long userId, String name, SportsEnum sport,
-      GameFrequencyDayTimeDto frequencyDayTime, GamePriceDto price, GameAgeRangeDto ageRange,
-      LocationDto location, VisibilityEnum visibility, String profilePicture, String banner) {
+  public GameResponseDto(
+      Long id,
+      Long userId,
+      String name,
+      SportsEnum sport,
+      GameFrequencyDayTimeDto frequencyDayTime,
+      GamePriceDto price,
+      GameAgeRangeDto ageRange,
+      LocationDto location,
+      VisibilityEnum visibility,
+      String profilePicture,
+      String banner) {
     this.id = id;
     this.userId = userId;
     this.name = name;
@@ -67,7 +75,7 @@ public class GameResponseDto {
 
   /**
    * Getter for id
-   * 
+   *
    * @return the game ID
    */
   public Long getId() {
@@ -76,7 +84,7 @@ public class GameResponseDto {
 
   /**
    * Getter for userId
-   * 
+   *
    * @return the ID of the user that owns the game
    */
   public Long getUserId() {
@@ -85,7 +93,7 @@ public class GameResponseDto {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the game name
    */
   public String getName() {
@@ -94,7 +102,7 @@ public class GameResponseDto {
 
   /**
    * Getter for sport
-   * 
+   *
    * @return the sport being played
    */
   public SportsEnum getSport() {
@@ -103,7 +111,7 @@ public class GameResponseDto {
 
   /**
    * Getter for frequencyDayTime
-   * 
+   *
    * @return the frequency and day time of the game
    */
   public GameFrequencyDayTimeDto getFrequencyDayTime() {
@@ -112,7 +120,7 @@ public class GameResponseDto {
 
   /**
    * Getter for price
-   * 
+   *
    * @return the price of the game
    */
   public GamePriceDto getPrice() {
@@ -121,7 +129,7 @@ public class GameResponseDto {
 
   /**
    * Getter for ageRange
-   * 
+   *
    * @return the age range of the game
    */
   public GameAgeRangeDto getAgeRange() {
@@ -130,7 +138,7 @@ public class GameResponseDto {
 
   /**
    * Getter for location
-   * 
+   *
    * @return the location of the game
    */
   public LocationDto getLocation() {
@@ -139,7 +147,7 @@ public class GameResponseDto {
 
   /**
    * Getter for visibility
-   * 
+   *
    * @return the visibility of the game
    */
   public VisibilityEnum getVisibility() {
@@ -148,7 +156,7 @@ public class GameResponseDto {
 
   /**
    * Getter for profilePicture
-   * 
+   *
    * @return the profile picture of the game
    */
   public String getProfilePicture() {
@@ -157,7 +165,7 @@ public class GameResponseDto {
 
   /**
    * Getter for banner
-   * 
+   *
    * @return the banner of the game
    */
   public String getBanner() {
@@ -166,7 +174,7 @@ public class GameResponseDto {
 
   /**
    * Setter for id
-   * 
+   *
    * @param id the game ID
    */
   public void setId(Long id) {
@@ -175,7 +183,7 @@ public class GameResponseDto {
 
   /**
    * Setter for userId
-   * 
+   *
    * @param userId the ID of the user that owns the game
    */
   public void setUserId(Long userId) {
@@ -184,7 +192,7 @@ public class GameResponseDto {
 
   /**
    * Setter for name
-   * 
+   *
    * @param name the game name
    */
   public void setName(String name) {
@@ -193,7 +201,7 @@ public class GameResponseDto {
 
   /**
    * Setter for sport
-   * 
+   *
    * @param sport the sport being played
    */
   public void setSport(SportsEnum sport) {
@@ -202,7 +210,7 @@ public class GameResponseDto {
 
   /**
    * Setter for frequencyDayTime
-   * 
+   *
    * @param frequencyDayTime the frequency and day time of the game
    */
   public void setFrequencyDayTime(GameFrequencyDayTimeDto frequencyDayTime) {
@@ -211,7 +219,7 @@ public class GameResponseDto {
 
   /**
    * Setter for price
-   * 
+   *
    * @param price the price of the game
    */
   public void setPrice(GamePriceDto price) {
@@ -220,7 +228,7 @@ public class GameResponseDto {
 
   /**
    * Setter for ageRange
-   * 
+   *
    * @param ageRange the age range of the game
    */
   public void setAgeRange(GameAgeRangeDto ageRange) {
@@ -229,7 +237,7 @@ public class GameResponseDto {
 
   /**
    * Setter for location
-   * 
+   *
    * @param location the location of the game
    */
   public void setLocation(LocationDto location) {
@@ -238,7 +246,7 @@ public class GameResponseDto {
 
   /**
    * Setter for visibility
-   * 
+   *
    * @param visibility the visibility of the game
    */
   public void setVisibility(VisibilityEnum visibility) {
@@ -247,7 +255,7 @@ public class GameResponseDto {
 
   /**
    * Setter for profilePicture
-   * 
+   *
    * @param profilePicture the profile picture of the game
    */
   public void setProfilePicture(String profilePicture) {
@@ -256,7 +264,7 @@ public class GameResponseDto {
 
   /**
    * Setter for banner
-   * 
+   *
    * @param banner the banner of the game
    */
   public void setBanner(String banner) {
@@ -265,7 +273,7 @@ public class GameResponseDto {
 
   /**
    * Getter for whatsAppGroupChatLink
-   * 
+   *
    * @return the WhatsApp group chat invite link
    */
   public String getWhatsAppGroupChatLink() {
@@ -274,7 +282,7 @@ public class GameResponseDto {
 
   /**
    * Setter for whatsAppGroupChatLink
-   * 
+   *
    * @param whatsAppGroupChatLink the WhatsApp group chat invite link
    */
   public void setWhatsAppGroupChatLink(String whatsAppGroupChatLink) {
@@ -283,7 +291,7 @@ public class GameResponseDto {
 
   /**
    * Getter for useWhatsAppGroupChatBot
-   * 
+   *
    * @return whether to use the WhatsApp group chat bot
    */
   public Boolean getUseWhatsAppGroupChatBot() {
@@ -292,7 +300,7 @@ public class GameResponseDto {
 
   /**
    * Setter for useWhatsAppGroupChatBot
-   * 
+   *
    * @param useWhatsAppGroupChatBot whether to use the WhatsApp group chat bot
    */
   public void setUseWhatsAppGroupChatBot(Boolean useWhatsAppGroupChatBot) {

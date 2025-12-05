@@ -9,12 +9,11 @@ public class SetUseWhatsAppGroupChatBotRequestDto {
   private Boolean useWhatsAppGroupChatBot;
 
   /** Default constructor. */
-  public SetUseWhatsAppGroupChatBotRequestDto() {
-  }
+  public SetUseWhatsAppGroupChatBotRequestDto() {}
 
   /**
    * Getter for useWhatsAppGroupChatBot
-   * 
+   *
    * @return whether to use the WhatsApp group chat bot
    */
   public Boolean getUseWhatsAppGroupChatBot() {
@@ -23,11 +22,10 @@ public class SetUseWhatsAppGroupChatBotRequestDto {
 
   /**
    * Setter for useWhatsAppGroupChatBot
-   * 
+   *
    * @param useWhatsAppGroupChatBot whether to use the WhatsApp group chat bot
    */
   public void setUseWhatsAppGroupChatBot(Boolean useWhatsAppGroupChatBot) {
     this.useWhatsAppGroupChatBot = useWhatsAppGroupChatBot;
   }
 }
-

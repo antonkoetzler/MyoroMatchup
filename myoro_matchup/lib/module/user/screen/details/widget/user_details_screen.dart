@@ -19,6 +19,8 @@ part '../_widget/_body_user_details.dart';
 part '../_widget/_body_profile_visibility_bottom_sheet.dart';
 part '../_widget/_location_editing_bottom_sheet.dart';
 part '../_widget/_unblock_user_confirmation_bottom_sheet.dart';
+part '../_widget/_body_delete_account_button.dart';
+part '../_widget/_delete_account_confirmation_bottom_sheet.dart';
 
 /// User details screen.
 final class UserDetailsScreen extends StatelessWidget {

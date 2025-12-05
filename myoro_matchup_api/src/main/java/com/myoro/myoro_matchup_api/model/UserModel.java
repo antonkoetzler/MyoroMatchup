@@ -1,18 +1,16 @@
 package com.myoro.myoro_matchup_api.model;
 
-import java.time.LocalDateTime;
-
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-
-import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
+import java.time.LocalDateTime;
 
 /** User model. */
 @Entity
@@ -40,8 +38,7 @@ public class UserModel {
   private String password;
 
   /** Location. */
-  @Embedded
-  private UserLocationModel location;
+  @Embedded private UserLocationModel location;
 
   /** Subscription status. */
   @Column(nullable = false)
@@ -57,8 +54,7 @@ public class UserModel {
   private LocalDateTime createdAt;
 
   /** Default constructor. */
-  public UserModel() {
-  }
+  public UserModel() {}
 
   /** Constructor with all fields. */
   public UserModel(String username, String name, String email, String password) {
@@ -73,7 +69,7 @@ public class UserModel {
 
   /**
    * Getter for id
-   * 
+   *
    * @return the user ID
    */
   public Long getId() {
@@ -82,7 +78,7 @@ public class UserModel {
 
   /**
    * Getter for username
-   * 
+   *
    * @return the username
    */
   public String getUsername() {
@@ -91,7 +87,7 @@ public class UserModel {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the name
    */
   public String getName() {
@@ -100,7 +96,7 @@ public class UserModel {
 
   /**
    * Getter for email
-   * 
+   *
    * @return the email
    */
   public String getEmail() {
@@ -109,7 +105,7 @@ public class UserModel {
 
   /**
    * Getter for password
-   * 
+   *
    * @return the password
    */
   public String getPassword() {
@@ -118,7 +114,7 @@ public class UserModel {
 
   /**
    * Getter for location
-   * 
+   *
    * @return the location
    */
   public UserLocationModel getLocation() {
@@ -127,7 +123,7 @@ public class UserModel {
 
   /**
    * Getter for created at
-   * 
+   *
    * @return the creation timestamp
    */
   public LocalDateTime getCreatedAt() {
@@ -166,7 +162,7 @@ public class UserModel {
 
   /**
    * Getter for isSubscribed
-   * 
+   *
    * @return the subscription status
    */
   public Boolean getIsSubscribed() {
@@ -180,7 +176,7 @@ public class UserModel {
 
   /**
    * Getter for visibility
-   * 
+   *
    * @return the visibility
    */
   public VisibilityEnum getVisibility() {

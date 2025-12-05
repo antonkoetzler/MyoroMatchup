@@ -9,14 +9,17 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
-
 import java.time.LocalDateTime;
 
 /** Blocked user model. */
 @Entity
-@Table(name = "blocked_users", uniqueConstraints = {
-    @UniqueConstraint(name = "unique_blocked_user", columnNames = { "blocker_id", "blocked_id" })
-})
+@Table(
+    name = "blocked_users",
+    uniqueConstraints = {
+      @UniqueConstraint(
+          name = "unique_blocked_user",
+          columnNames = {"blocker_id", "blocked_id"})
+    })
 public class BlockedUserModel {
   /** Blocked user ID. */
   @Id
@@ -38,12 +41,11 @@ public class BlockedUserModel {
   private LocalDateTime blockedAt;
 
   /** Default constructor. */
-  public BlockedUserModel() {
-  }
+  public BlockedUserModel() {}
 
   /**
    * Getter for id
-   * 
+   *
    * @return the blocked user ID
    */
   public Long getId() {
@@ -52,7 +54,7 @@ public class BlockedUserModel {
 
   /**
    * Getter for blocker
-   * 
+   *
    * @return the user who blocked
    */
   public UserModel getBlocker() {
@@ -61,7 +63,7 @@ public class BlockedUserModel {
 
   /**
    * Getter for blocked
-   * 
+   *
    * @return the user being blocked
    */
   public UserModel getBlocked() {
@@ -70,7 +72,7 @@ public class BlockedUserModel {
 
   /**
    * Getter for blockedAt
-   * 
+   *
    * @return when the user was blocked
    */
   public LocalDateTime getBlockedAt() {
@@ -79,7 +81,7 @@ public class BlockedUserModel {
 
   /**
    * Setter for id
-   * 
+   *
    * @param id the blocked user ID
    */
   public void setId(Long id) {
@@ -88,7 +90,7 @@ public class BlockedUserModel {
 
   /**
    * Setter for blocker
-   * 
+   *
    * @param blocker the user who blocked
    */
   public void setBlocker(UserModel blocker) {
@@ -97,7 +99,7 @@ public class BlockedUserModel {
 
   /**
    * Setter for blocked
-   * 
+   *
    * @param blocked the user being blocked
    */
   public void setBlocked(UserModel blocked) {
@@ -106,11 +108,10 @@ public class BlockedUserModel {
 
   /**
    * Setter for blockedAt
-   * 
+   *
    * @param blockedAt when the user was blocked
    */
   public void setBlockedAt(LocalDateTime blockedAt) {
     this.blockedAt = blockedAt;
   }
 }
-

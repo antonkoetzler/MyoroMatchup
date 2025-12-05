@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "समाप्त",
   "invitationStatusEnumCancelledLabel": "रद्द",
 
+  "friendRequestStatusEnumPendingLabel": "लंबित",
+  "friendRequestStatusEnumAcceptedLabel": "स्वीकृत",
+  "friendRequestStatusEnumRejectedLabel": "अस्वीकृत",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "गेम विवरण प्राप्त करने में विफल!",
   "invitationListingScreenAppBarTitle": "आमंत्रण",
   "friendListingScreenAppBarTitle": "मित्र",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "कोई आमंत्रण नहीं मिला!",
+  "friendListingScreenBodyEmptyTitle": "कोई मित्र नहीं मिले!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "संदेश",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "स्थिति",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "स्वीकारें",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "स्थिति",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "अस्वीकारें",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "जानकारी",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "खिलाड़ी",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "अवरुद्ध करें",
   "sendFriendRequestConfirmationBottomSheetTitle": "मित्र अनुरोध भेजें",
   "sendFriendRequestConfirmationBottomSheetMessage": "क्या आप वाकई इस उपयोगकर्ता को मित्र अनुरोध भेजना चाहते हैं?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "मित्र अनुरोध स्वीकार करें",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "क्या आप वाकई इस मित्र अनुरोध को स्वीकार करना चाहते हैं?",
   "blockUserConfirmationBottomSheetTitle": "उपयोगकर्ता अवरुद्ध करें",
   "blockUserConfirmationBottomSheetMessage": "क्या आप वाकई इस उपयोगकर्ता को अवरुद्ध करना चाहते हैं?",
   "unblockUserConfirmationBottomSheetTitle": "उपयोगकर्ता अवरुद्ध हटाएं",
   "unblockUserConfirmationBottomSheetMessage": "क्या आप वाकई इस उपयोगकर्ता का अवरुद्ध हटाना चाहते हैं?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "खाता हटाएं",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "क्या आप वाकई अपना खाता हटाना चाहते हैं? इस क्रिया को पूर्ववत नहीं किया जा सकता।",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "गेम प्राप्त करने में त्रुटि!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "देश खाली नहीं हो सकता।",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "पासवर्ड फ़ील्ड खाली नहीं हो सकते।",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "पासवर्ड मेल नहीं खाते।",
+  "loginSignupScreenForgotPasswordDialogTitle": "पासवर्ड भूल गए",
+  "loginSignupScreenForgotPasswordDialogMessage": "अपना ईमेल पता दर्ज करें और हम आपको अपना पासवर्ड रीसेट करने के लिए एक लिंक भेजेंगे।",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "ईमेल",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "कृपया एक वैध ईमेल पता दर्ज करें।",
 
   "mmAppBarMenuDrawerTitle": "मेनू",
   "mmAppBarMenuDrawerCreateGameText": "गेम बनाएं",
   "mmAppBarMenuDrawerFriendListingText": "मित्र",
-  "mmAppBarMenuDrawerInvitationListingText": "आमंत्रण"
+  "mmAppBarMenuDrawerInvitationListingText": "आमंत्रण",
+  "mmAppBarMenuDrawerLogoutText": "लॉगआउट"
 }
 

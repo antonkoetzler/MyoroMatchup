@@ -27,7 +27,8 @@ public class FootballStatsDto {
   }
 
   /** Constructor with all fields. */
-  public FootballStatsDto(Integer rating, Integer attack, Integer defense, Integer striking, Integer skills) {
+  public FootballStatsDto(
+      Integer rating, Integer attack, Integer defense, Integer striking, Integer skills) {
     this.rating = rating;
     this.attack = attack;
     this.defense = defense;

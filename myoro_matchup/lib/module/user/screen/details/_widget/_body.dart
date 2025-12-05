@@ -29,6 +29,7 @@ final class _Body extends StatelessWidget {
               _BodyProfileVisibility(user),
               _BodySubscriptionStatus(user),
               const Flexible(child: _BodyBlockedUsers()),
+              const _BodyDeleteAccountButton(),
             ],
           ),
         );

@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.model;
 
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
@@ -37,15 +36,20 @@ public class VolleyballUserStatsModel extends UserStatsModel {
 
   /**
    * Constructor with all fields.
-   * 
-   * @param user      the user
-   * @param rating    the rating
-   * @param attack    the attack stat
-   * @param blocking  the blocking stat
-   * @param serving   the serving stat
+   *
+   * @param user the user
+   * @param rating the rating
+   * @param attack the attack stat
+   * @param blocking the blocking stat
+   * @param serving the serving stat
    * @param reception the reception stat
    */
-  public VolleyballUserStatsModel(UserModel user, Integer rating, Integer attack, Integer blocking, Integer serving,
+  public VolleyballUserStatsModel(
+      UserModel user,
+      Integer rating,
+      Integer attack,
+      Integer blocking,
+      Integer serving,
       Integer reception) {
     setUser(user);
     setSport(SportsEnum.VOLLEYBALL);

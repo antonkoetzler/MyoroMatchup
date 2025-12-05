@@ -8,7 +8,7 @@ import com.myoro.myoro_matchup_api.model.UserModel;
 public class DtoMapper {
   /**
    * Converts UserModel to UserResponseDto.
-   * 
+   *
    * @param user the user model
    * @return the user response DTO
    */
@@ -27,7 +27,7 @@ public class DtoMapper {
 
   /**
    * Converts UserModel to GamePlayerResponseDto.
-   * 
+   *
    * @param user the user model
    * @return the game player response DTO
    */

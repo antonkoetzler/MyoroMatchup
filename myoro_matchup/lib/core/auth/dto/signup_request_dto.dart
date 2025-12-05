@@ -44,8 +44,6 @@ class SignupRequestDto with _$SignupRequestDtoMixin {
   final MyoroCountryEnum country;
 
   /// Password.
-  ///
-  /// TODO: Needs to be encrypted.
   final String password;
 
   Map<String, dynamic> toJson() {

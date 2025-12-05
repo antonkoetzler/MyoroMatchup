@@ -15,8 +15,7 @@ public class GameAgeRangeModel {
   private Integer maxAge;
 
   /** Default constructor. */
-  public GameAgeRangeModel() {
-  }
+  public GameAgeRangeModel() {}
 
   /** Constructor with all fields. */
   public GameAgeRangeModel(Integer minAge, Integer maxAge) {
@@ -26,7 +25,7 @@ public class GameAgeRangeModel {
 
   /**
    * Getter for minAge
-   * 
+   *
    * @return the minimum age
    */
   public Integer getMinAge() {
@@ -35,7 +34,7 @@ public class GameAgeRangeModel {
 
   /**
    * Getter for maxAge
-   * 
+   *
    * @return the maximum age
    */
   public Integer getMaxAge() {
@@ -44,7 +43,7 @@ public class GameAgeRangeModel {
 
   /**
    * Setter for minAge
-   * 
+   *
    * @param minAge the minimum age
    */
   public void setMinAge(Integer minAge) {
@@ -53,7 +52,7 @@ public class GameAgeRangeModel {
 
   /**
    * Setter for maxAge
-   * 
+   *
    * @param maxAge the maximum age
    */
   public void setMaxAge(Integer maxAge) {

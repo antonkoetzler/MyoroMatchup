@@ -11,12 +11,11 @@ public class InvitationGameResponseDto {
   private SportsEnum sport;
 
   /** Default constructor. */
-  public InvitationGameResponseDto() {
-  }
+  public InvitationGameResponseDto() {}
 
   /**
    * Constructor with all fields.
-   * 
+   *
    * @param name the game name
    * @param sport the sport being played
    */
@@ -27,7 +26,7 @@ public class InvitationGameResponseDto {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the game name
    */
   public String getName() {
@@ -36,7 +35,7 @@ public class InvitationGameResponseDto {
 
   /**
    * Getter for sport
-   * 
+   *
    * @return the sport being played
    */
   public SportsEnum getSport() {
@@ -45,7 +44,7 @@ public class InvitationGameResponseDto {
 
   /**
    * Setter for name
-   * 
+   *
    * @param name the game name
    */
   public void setName(String name) {
@@ -54,11 +53,10 @@ public class InvitationGameResponseDto {
 
   /**
    * Setter for sport
-   * 
+   *
    * @param sport the sport being played
    */
   public void setSport(SportsEnum sport) {
     this.sport = sport;
   }
 }
-

@@ -12,12 +12,11 @@ public class InvitationCreationRequestDto {
   private String message;
 
   /** Default constructor. */
-  public InvitationCreationRequestDto() {
-  }
+  public InvitationCreationRequestDto() {}
 
   /**
    * Getter for inviteeId
-   * 
+   *
    * @return the ID of the user being invited
    */
   public Long getInviteeId() {
@@ -26,7 +25,7 @@ public class InvitationCreationRequestDto {
 
   /**
    * Getter for message
-   * 
+   *
    * @return the optional message from the inviter
    */
   public String getMessage() {
@@ -35,7 +34,7 @@ public class InvitationCreationRequestDto {
 
   /**
    * Setter for inviteeId
-   * 
+   *
    * @param inviteeId the ID of the user being invited
    */
   public void setInviteeId(Long inviteeId) {
@@ -44,7 +43,7 @@ public class InvitationCreationRequestDto {
 
   /**
    * Setter for message
-   * 
+   *
    * @param message the optional message from the inviter
    */
   public void setMessage(String message) {

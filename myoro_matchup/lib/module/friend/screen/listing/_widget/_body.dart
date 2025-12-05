@@ -9,10 +9,11 @@ final class _Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final viewModel = context.read<FriendListingScreenViewModel>();
-    final fetchFriends = viewModel.fetchFriends;
+    final state = viewModel.state;
+    final friendsRequestController = state.friendsRequestController;
 
     return MyoroRequestWidget(
-      request: fetchFriends,
+      requestController: friendsRequestController,
       successBuilder: (_, friends) {
         return friends!.isEmpty ? const _BodyEmptyState() : _BodyNonEmptyState(friends);
       },

@@ -1,12 +1,10 @@
 package com.myoro.myoro_matchup_api.data;
 
-import java.time.LocalDateTime;
-
 import com.myoro.myoro_matchup_api.enums.InvitationStatusEnum;
 import com.myoro.myoro_matchup_api.model.GameModel;
 import com.myoro.myoro_matchup_api.model.InvitationModel;
 import com.myoro.myoro_matchup_api.model.UserModel;
-
+import java.time.LocalDateTime;
 import net.datafaker.Faker;
 
 /** Builder for creating InvitationModel instances. */

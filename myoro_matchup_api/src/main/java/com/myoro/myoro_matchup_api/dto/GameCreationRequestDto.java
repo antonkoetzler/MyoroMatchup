@@ -1,9 +1,8 @@
 package com.myoro.myoro_matchup_api.dto;
 
-import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.util.GameConstants;
-
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,7 +12,10 @@ import jakarta.validation.constraints.Size;
 public class GameCreationRequestDto {
   /** Name. */
   @NotBlank(message = "{validation.game.name.required}")
-  @Size(min = GameConstants.MIN_NAME_LENGTH, max = GameConstants.MAX_NAME_LENGTH, message = "{validation.game.name.length}")
+  @Size(
+      min = GameConstants.MIN_NAME_LENGTH,
+      max = GameConstants.MAX_NAME_LENGTH,
+      message = "{validation.game.name.length}")
   private String name;
 
   /** Sport. */
@@ -51,13 +53,19 @@ public class GameCreationRequestDto {
   private String banner;
 
   /** Default constructor. */
-  public GameCreationRequestDto() {
-  }
+  public GameCreationRequestDto() {}
 
   /** Constructor with all fields. */
-  public GameCreationRequestDto(String name, SportsEnum sport, GameFrequencyDayTimeDto frequencyDayTime,
-      GamePriceDto price, GameAgeRangeDto ageRange, LocationDto location, VisibilityEnum visibility,
-      String profilePicture, String banner) {
+  public GameCreationRequestDto(
+      String name,
+      SportsEnum sport,
+      GameFrequencyDayTimeDto frequencyDayTime,
+      GamePriceDto price,
+      GameAgeRangeDto ageRange,
+      LocationDto location,
+      VisibilityEnum visibility,
+      String profilePicture,
+      String banner) {
     this.name = name;
     this.sport = sport;
     this.frequencyDayTime = frequencyDayTime;
@@ -71,7 +79,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the name
    */
   public String getName() {
@@ -80,7 +88,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for sport
-   * 
+   *
    * @return the sport
    */
   public SportsEnum getSport() {
@@ -89,7 +97,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for frequencyDayTime
-   * 
+   *
    * @return the frequency and day time of the game
    */
   public GameFrequencyDayTimeDto getFrequencyDayTime() {
@@ -98,7 +106,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for price
-   * 
+   *
    * @return the price of the game
    */
   public GamePriceDto getPrice() {
@@ -107,7 +115,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for ageRange
-   * 
+   *
    * @return the age range of the game
    */
   public GameAgeRangeDto getAgeRange() {
@@ -116,7 +124,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for location
-   * 
+   *
    * @return the location of the game
    */
   public LocationDto getLocation() {
@@ -125,7 +133,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for visibility
-   * 
+   *
    * @return the visibility of the game
    */
   public VisibilityEnum getVisibility() {
@@ -134,7 +142,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for profilePicture
-   * 
+   *
    * @return the profile picture of the game
    */
   public String getProfilePicture() {
@@ -143,7 +151,7 @@ public class GameCreationRequestDto {
 
   /**
    * Getter for banner
-   * 
+   *
    * @return the banner of the game
    */
   public String getBanner() {
@@ -152,7 +160,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for name
-   * 
+   *
    * @param name the name
    */
   public void setName(String name) {
@@ -161,7 +169,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for sport
-   * 
+   *
    * @param sport the sport
    */
   public void setSport(SportsEnum sport) {
@@ -170,7 +178,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for frequencyDayTime
-   * 
+   *
    * @param frequencyDayTime the frequency and day time of the game
    */
   public void setFrequencyDayTime(GameFrequencyDayTimeDto frequencyDayTime) {
@@ -179,7 +187,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for price
-   * 
+   *
    * @param price the price of the game
    */
   public void setPrice(GamePriceDto price) {
@@ -188,7 +196,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for ageRange
-   * 
+   *
    * @param ageRange the age range of the game
    */
   public void setAgeRange(GameAgeRangeDto ageRange) {
@@ -197,7 +205,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for location
-   * 
+   *
    * @param location the location of the game
    */
   public void setLocation(LocationDto location) {
@@ -206,7 +214,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for visibility
-   * 
+   *
    * @param visibility the visibility of the game
    */
   public void setVisibility(VisibilityEnum visibility) {
@@ -215,7 +223,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for profilePicture
-   * 
+   *
    * @param profilePicture the profile picture of the game
    */
   public void setProfilePicture(String profilePicture) {
@@ -224,7 +232,7 @@ public class GameCreationRequestDto {
 
   /**
    * Setter for banner
-   * 
+   *
    * @param banner the banner of the game
    */
   public void setBanner(String banner) {

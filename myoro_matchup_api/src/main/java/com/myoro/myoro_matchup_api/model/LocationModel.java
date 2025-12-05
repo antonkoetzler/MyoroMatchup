@@ -23,8 +23,7 @@ public class LocationModel {
   private String country;
 
   /** Default constructor. */
-  public LocationModel() {
-  }
+  public LocationModel() {}
 
   /** Constructor with all fields. */
   public LocationModel(String name, String city, String state, String country) {
@@ -36,7 +35,7 @@ public class LocationModel {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the name of the location
    */
   public String getName() {
@@ -45,7 +44,7 @@ public class LocationModel {
 
   /**
    * Getter for city
-   * 
+   *
    * @return the city of the location
    */
   public String getCity() {
@@ -54,7 +53,7 @@ public class LocationModel {
 
   /**
    * Getter for state
-   * 
+   *
    * @return the state of the location
    */
   public String getState() {
@@ -63,7 +62,7 @@ public class LocationModel {
 
   /**
    * Getter for country
-   * 
+   *
    * @return the country of the location
    */
   public String getCountry() {
@@ -72,7 +71,7 @@ public class LocationModel {
 
   /**
    * Setter for name
-   * 
+   *
    * @param name the name of the location
    */
   public void setName(String name) {
@@ -81,7 +80,7 @@ public class LocationModel {
 
   /**
    * Setter for city
-   * 
+   *
    * @param city the city of the location
    */
   public void setCity(String city) {
@@ -90,7 +89,7 @@ public class LocationModel {
 
   /**
    * Setter for state
-   * 
+   *
    * @param state the state of the location
    */
   public void setState(String state) {
@@ -99,7 +98,7 @@ public class LocationModel {
 
   /**
    * Setter for country
-   * 
+   *
    * @param country the country of the location
    */
   public void setCountry(String country) {

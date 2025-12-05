@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "หมดอายุ",
   "invitationStatusEnumCancelledLabel": "ยกเลิกแล้ว",
 
+  "friendRequestStatusEnumPendingLabel": "รอดำเนินการ",
+  "friendRequestStatusEnumAcceptedLabel": "ยอมรับแล้ว",
+  "friendRequestStatusEnumRejectedLabel": "ปฏิเสธแล้ว",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "ไม่สามารถดึงรายละเอียดเกมได้!",
   "invitationListingScreenAppBarTitle": "คำเชิญ",
   "friendListingScreenAppBarTitle": "เพื่อน",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "ไม่พบคำเชิญ!",
+  "friendListingScreenBodyEmptyTitle": "ไม่พบเพื่อน!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "ข้อความ",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "สถานะ",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "ยอมรับ",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "สถานะ",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "ปฏิเสธ",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "ข้อมูล",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "ผู้เล่น",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "บล็อก",
   "sendFriendRequestConfirmationBottomSheetTitle": "ส่งคำขอเป็นเพื่อน",
   "sendFriendRequestConfirmationBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการส่งคำขอเป็นเพื่อนไปยังผู้ใช้รายนี้?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "ยอมรับคำขอเป็นเพื่อน",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการยอมรับคำขอเป็นเพื่อนนี้?",
   "blockUserConfirmationBottomSheetTitle": "บล็อกผู้ใช้",
   "blockUserConfirmationBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการบล็อกผู้ใช้รายนี้?",
   "unblockUserConfirmationBottomSheetTitle": "ยกเลิกการบล็อกผู้ใช้",
   "unblockUserConfirmationBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการยกเลิกการบล็อกผู้ใช้รายนี้?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "ลบบัญชี",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการลบบัญชีของคุณ? การกระทำนี้ไม่สามารถยกเลิกได้",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "เกิดข้อผิดพลาดในการดึงเกม!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "ประเทศไม่สามารถว่างได้",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "ฟิลด์รหัสผ่านไม่สามารถว่างได้",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "รหัสผ่านไม่ตรงกัน",
+  "loginSignupScreenForgotPasswordDialogTitle": "ลืมรหัสผ่าน",
+  "loginSignupScreenForgotPasswordDialogMessage": "ใส่อีเมลของคุณแล้วเราจะส่งลิงก์เพื่อรีเซ็ตรหัสผ่านให้คุณ",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "อีเมล",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "กรุณาใส่อีเมลที่ถูกต้อง",
 
   "mmAppBarMenuDrawerTitle": "เมนู",
   "mmAppBarMenuDrawerCreateGameText": "สร้างเกม",
   "mmAppBarMenuDrawerFriendListingText": "เพื่อน",
-  "mmAppBarMenuDrawerInvitationListingText": "คำเชิญ"
+  "mmAppBarMenuDrawerInvitationListingText": "คำเชิญ",
+  "mmAppBarMenuDrawerLogoutText": "ออกจากระบบ"
 }
 

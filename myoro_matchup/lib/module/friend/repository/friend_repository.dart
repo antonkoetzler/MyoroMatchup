@@ -28,10 +28,7 @@ final class FriendRepository {
   }) async {
     final response = await _httpClient.get(
       '/friend-requests',
-      queryParameters: {
-        if (searchQuery.isNotEmpty) 'query': searchQuery,
-        if (status != null) 'status': status.apiKey,
-      },
+      queryParameters: {if (searchQuery.isNotEmpty) 'query': searchQuery, if (status != null) 'status': status.apiKey},
     );
     final friendRequests = (response.data as List<Map<String, dynamic>>)
         .map<FriendRequestResponseDto>(FriendRequestResponseDto.fromJson)
@@ -50,9 +47,7 @@ final class FriendRepository {
   /// Fetches all friends for the current user.
   ///
   /// Returns a list of friends (accepted friend requests).
-  Future<List<FriendRequestResponseDto>> fetchFriends({
-    String searchQuery = kMyoroEmptyString,
-  }) async {
+  Future<List<FriendRequestResponseDto>> fetchFriends({String searchQuery = kMyoroEmptyString}) async {
     final response = await _httpClient.get(
       '/friend-requests/friends',
       queryParameters: {if (searchQuery.isNotEmpty) 'query': searchQuery},
@@ -63,4 +58,3 @@ final class FriendRepository {
     return friends;
   }
 }
-

@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "Verlopen",
   "invitationStatusEnumCancelledLabel": "Geannuleerd",
 
+  "friendRequestStatusEnumPendingLabel": "In afwachting",
+  "friendRequestStatusEnumAcceptedLabel": "Geaccepteerd",
+  "friendRequestStatusEnumRejectedLabel": "Afgewezen",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "Kon speldetails niet ophalen!",
   "invitationListingScreenAppBarTitle": "Uitnodigingen",
   "friendListingScreenAppBarTitle": "Vrienden",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "Geen uitnodigingen gevonden!",
+  "friendListingScreenBodyEmptyTitle": "Geen vrienden gevonden!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Bericht",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Accepteren",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Weigeren",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Spelers",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "Blokkeren",
   "sendFriendRequestConfirmationBottomSheetTitle": "Vriendschapsverzoek verzenden",
   "sendFriendRequestConfirmationBottomSheetMessage": "Weet u zeker dat u een vriendschapsverzoek naar deze gebruiker wilt verzenden?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "Vriendschapsverzoek accepteren",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "Weet u zeker dat u dit vriendschapsverzoek wilt accepteren?",
   "blockUserConfirmationBottomSheetTitle": "Gebruiker blokkeren",
   "blockUserConfirmationBottomSheetMessage": "Weet u zeker dat u deze gebruiker wilt blokkeren?",
   "unblockUserConfirmationBottomSheetTitle": "Gebruiker deblokkeren",
   "unblockUserConfirmationBottomSheetMessage": "Weet u zeker dat u deze gebruiker wilt deblokkeren?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "Account verwijderen",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "Weet u zeker dat u uw account wilt verwijderen? Deze actie kan niet ongedaan worden gemaakt.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Fout bij het ophalen van spellen!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Land mag niet leeg zijn.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Wachtwoordvelden mogen niet leeg zijn.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Wachtwoorden komen niet overeen.",
+  "loginSignupScreenForgotPasswordDialogTitle": "Wachtwoord vergeten",
+  "loginSignupScreenForgotPasswordDialogMessage": "Voer uw e-mailadres in en we sturen u een link om uw wachtwoord opnieuw in te stellen.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "E-mail",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Voer een geldig e-mailadres in.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Spel maken",
   "mmAppBarMenuDrawerFriendListingText": "Vrienden",
-  "mmAppBarMenuDrawerInvitationListingText": "Uitnodigingen"
+  "mmAppBarMenuDrawerInvitationListingText": "Uitnodigingen",
+  "mmAppBarMenuDrawerLogoutText": "Uitloggen"
 }
 

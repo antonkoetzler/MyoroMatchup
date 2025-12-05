@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "Süresi Doldu",
   "invitationStatusEnumCancelledLabel": "İptal Edildi",
 
+  "friendRequestStatusEnumPendingLabel": "Beklemede",
+  "friendRequestStatusEnumAcceptedLabel": "Kabul Edildi",
+  "friendRequestStatusEnumRejectedLabel": "Reddedildi",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "Oyun detayları alınamadı!",
   "invitationListingScreenAppBarTitle": "Davetler",
   "friendListingScreenAppBarTitle": "Arkadaşlar",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "Davetiye bulunamadı!",
+  "friendListingScreenBodyEmptyTitle": "Arkadaş bulunamadı!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Mesaj",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Durum",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Kabul Et",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "Durum",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Reddet",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Bilgi",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Oyuncular",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "Engelle",
   "sendFriendRequestConfirmationBottomSheetTitle": "Arkadaşlık İsteği Gönder",
   "sendFriendRequestConfirmationBottomSheetMessage": "Bu kullanıcıya arkadaşlık isteği göndermek istediğinizden emin misiniz?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "Arkadaşlık İsteğini Kabul Et",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "Bu arkadaşlık isteğini kabul etmek istediğinizden emin misiniz?",
   "blockUserConfirmationBottomSheetTitle": "Kullanıcıyı Engelle",
   "blockUserConfirmationBottomSheetMessage": "Bu kullanıcıyı engellemek istediğinizden emin misiniz?",
   "unblockUserConfirmationBottomSheetTitle": "Kullanıcının Engellemesini Kaldır",
   "unblockUserConfirmationBottomSheetMessage": "Bu kullanıcının engellemesini kaldırmak istediğinizden emin misiniz?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "Hesabı Sil",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "Hesabınızı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Oyunlar alınırken hata oluştu!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Ülke boş olamaz.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Şifre alanları boş olamaz.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Şifreler eşleşmiyor.",
+  "loginSignupScreenForgotPasswordDialogTitle": "Şifremi Unuttum",
+  "loginSignupScreenForgotPasswordDialogMessage": "E-posta adresinizi girin, size şifrenizi sıfırlamak için bir bağlantı göndereceğiz.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "E-posta",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Lütfen geçerli bir e-posta adresi girin.",
 
   "mmAppBarMenuDrawerTitle": "Menü",
   "mmAppBarMenuDrawerCreateGameText": "Oyun Oluştur",
   "mmAppBarMenuDrawerFriendListingText": "Arkadaşlar",
-  "mmAppBarMenuDrawerInvitationListingText": "Davetler"
+  "mmAppBarMenuDrawerInvitationListingText": "Davetler",
+  "mmAppBarMenuDrawerLogoutText": "Çıkış Yap"
 }
 

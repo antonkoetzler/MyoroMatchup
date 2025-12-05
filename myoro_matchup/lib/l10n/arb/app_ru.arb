@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "Истекло",
   "invitationStatusEnumCancelledLabel": "Отменено",
 
+  "friendRequestStatusEnumPendingLabel": "В ожидании",
+  "friendRequestStatusEnumAcceptedLabel": "Принято",
+  "friendRequestStatusEnumRejectedLabel": "Отклонено",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "Не удалось получить детали игры!",
   "invitationListingScreenAppBarTitle": "Приглашения",
   "friendListingScreenAppBarTitle": "Друзья",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "Приглашения не найдены!",
+  "friendListingScreenBodyEmptyTitle": "Друзья не найдены!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Сообщение",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Статус",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Принять",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "Статус",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Отклонить",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Инфо",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Игроки",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "Заблокировать",
   "sendFriendRequestConfirmationBottomSheetTitle": "Отправить запрос на дружбу",
   "sendFriendRequestConfirmationBottomSheetMessage": "Вы уверены, что хотите отправить запрос на дружбу этому пользователю?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "Принять запрос на дружбу",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "Вы уверены, что хотите принять этот запрос на дружбу?",
   "blockUserConfirmationBottomSheetTitle": "Заблокировать пользователя",
   "blockUserConfirmationBottomSheetMessage": "Вы уверены, что хотите заблокировать этого пользователя?",
   "unblockUserConfirmationBottomSheetTitle": "Разблокировать пользователя",
   "unblockUserConfirmationBottomSheetMessage": "Вы уверены, что хотите разблокировать этого пользователя?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "Удалить Аккаунт",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "Вы уверены, что хотите удалить свой аккаунт? Это действие нельзя отменить.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Ошибка при получении игр!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Страна не может быть пустой.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Поля пароля не могут быть пустыми.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Пароли не совпадают.",
+  "loginSignupScreenForgotPasswordDialogTitle": "Забыли пароль",
+  "loginSignupScreenForgotPasswordDialogMessage": "Введите свой адрес электронной почты, и мы отправим вам ссылку для сброса пароля.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Пожалуйста, введите действительный адрес электронной почты.",
 
   "mmAppBarMenuDrawerTitle": "Меню",
   "mmAppBarMenuDrawerCreateGameText": "Создать игру",
   "mmAppBarMenuDrawerFriendListingText": "Друзья",
-  "mmAppBarMenuDrawerInvitationListingText": "Приглашения"
+  "mmAppBarMenuDrawerInvitationListingText": "Приглашения",
+  "mmAppBarMenuDrawerLogoutText": "Выйти"
 }
 

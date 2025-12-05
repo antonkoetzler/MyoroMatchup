@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "Abgelaufen",
   "invitationStatusEnumCancelledLabel": "Storniert",
 
+  "friendRequestStatusEnumPendingLabel": "Ausstehend",
+  "friendRequestStatusEnumAcceptedLabel": "Akzeptiert",
+  "friendRequestStatusEnumRejectedLabel": "Abgelehnt",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "Spieldetails konnten nicht abgerufen werden!",
   "invitationListingScreenAppBarTitle": "Einladungen",
   "friendListingScreenAppBarTitle": "Freunde",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "Keine Einladungen gefunden!",
+  "friendListingScreenBodyEmptyTitle": "Keine Freunde gefunden!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Nachricht",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Annehmen",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Ablehnen",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Spieler",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "Blockieren",
   "sendFriendRequestConfirmationBottomSheetTitle": "Freundschaftsanfrage senden",
   "sendFriendRequestConfirmationBottomSheetMessage": "Sind Sie sicher, dass Sie diesem Benutzer eine Freundschaftsanfrage senden möchten?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "Freundschaftsanfrage annehmen",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "Sind Sie sicher, dass Sie diese Freundschaftsanfrage annehmen möchten?",
   "blockUserConfirmationBottomSheetTitle": "Benutzer blockieren",
   "blockUserConfirmationBottomSheetMessage": "Sind Sie sicher, dass Sie diesen Benutzer blockieren möchten?",
   "unblockUserConfirmationBottomSheetTitle": "Benutzer entsperren",
   "unblockUserConfirmationBottomSheetMessage": "Sind Sie sicher, dass Sie diesen Benutzer entsperren möchten?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "Konto löschen",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "Sind Sie sicher, dass Sie Ihr Konto löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Fehler beim Abrufen der Spiele!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Land darf nicht leer sein.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Passwortfelder dürfen nicht leer sein.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwörter stimmen nicht überein.",
+  "loginSignupScreenForgotPasswordDialogTitle": "Passwort vergessen",
+  "loginSignupScreenForgotPasswordDialogMessage": "Geben Sie Ihre E-Mail-Adresse ein und wir senden Ihnen einen Link zum Zurücksetzen Ihres Passworts.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "E-Mail",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
 
   "mmAppBarMenuDrawerTitle": "Menü",
   "mmAppBarMenuDrawerCreateGameText": "Spiel erstellen",
   "mmAppBarMenuDrawerFriendListingText": "Freunde",
-  "mmAppBarMenuDrawerInvitationListingText": "Einladungen"
+  "mmAppBarMenuDrawerInvitationListingText": "Einladungen",
+  "mmAppBarMenuDrawerLogoutText": "Abmelden"
 }
 

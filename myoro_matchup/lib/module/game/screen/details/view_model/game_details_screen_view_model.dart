@@ -78,7 +78,7 @@ final class GameDetailsScreenViewModel {
 
   /// Cancel invitation.
   void cancelInvitation() {
-    AppRouter.pop();
+    MmRouter.pop();
   }
 
   /// Sends the invitation.
@@ -96,7 +96,7 @@ final class GameDetailsScreenViewModel {
     MmSnackBarHelper.showSnackBar(
       snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.success, message: successMessage!),
     );
-    Future.delayed(kSuccessNavigationDelayDuration).then((_) => AppRouter.pop());
+    Future.delayed(kSuccessNavigationDelayDuration).then((_) => MmRouter.pop());
   }
 
   /// Sets the use WhatsApp group chat bot.

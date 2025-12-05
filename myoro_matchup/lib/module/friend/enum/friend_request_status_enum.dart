@@ -1,6 +1,8 @@
 import 'package:faker/faker.dart';
 import 'package:json_annotation/json_annotation.dart';
 
+import '../../../myoro_matchup.dart';
+
 /// Friend request status enum.
 @JsonEnum()
 enum FriendRequestStatusEnum {
@@ -30,15 +32,6 @@ enum FriendRequestStatusEnum {
     return values[faker.randomGenerator.integer(values.length)];
   }
 
-  /// API key.
-  String get apiKey {
-    return switch (this) {
-      pending => _pendingKey,
-      accepted => _acceptedKey,
-      rejected => _rejectedKey,
-    };
-  }
-
   /// Is pending.
   bool get isPending {
     return this == pending;
@@ -53,5 +46,26 @@ enum FriendRequestStatusEnum {
   bool get isRejected {
     return this == rejected;
   }
-}
 
+  /// Label.
+  String get label {
+    final friendRequestStatusEnumPendingLabel = localization.friendRequestStatusEnumPendingLabel;
+    final friendRequestStatusEnumAcceptedLabel = localization.friendRequestStatusEnumAcceptedLabel;
+    final friendRequestStatusEnumRejectedLabel = localization.friendRequestStatusEnumRejectedLabel;
+
+    return switch (this) {
+      pending => friendRequestStatusEnumPendingLabel,
+      accepted => friendRequestStatusEnumAcceptedLabel,
+      rejected => friendRequestStatusEnumRejectedLabel,
+    };
+  }
+
+  /// API key.
+  String get apiKey {
+    return switch (this) {
+      pending => _pendingKey,
+      accepted => _acceptedKey,
+      rejected => _rejectedKey,
+    };
+  }
+}

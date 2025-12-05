@@ -24,9 +24,9 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
     required this.formTypeSwitcherButtonIdleColor,
     required this.formTypeSwitcherButtonTapColor,
     required this.logoInputsSpacing,
-    required this.inputsFormTypeSwitcherButtonSpacing,
     required this.formSwitcherActionButtonsSpacing,
     required this.bottomNavigationBarPadding,
+    required this.forgotPasswordDialogStyle,
   });
 
   /// Fake constructor.
@@ -40,9 +40,9 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       formTypeSwitcherButtonIdleColor = myoroFake<Color>(),
       formTypeSwitcherButtonTapColor = myoroFake<Color>(),
       logoInputsSpacing = faker.randomGenerator.decimal(scale: 20),
-      inputsFormTypeSwitcherButtonSpacing = faker.randomGenerator.decimal(scale: 20),
       formSwitcherActionButtonsSpacing = faker.randomGenerator.decimal(scale: 20),
-      bottomNavigationBarPadding = myoroFake<EdgeInsets>();
+      bottomNavigationBarPadding = myoroFake<EdgeInsets>(),
+      forgotPasswordDialogStyle = myoroFake<MyoroDialogModalStyle>();
 
   /// Builder constructor.
   LoginSignupScreenThemeExtension.builder(TextTheme textTheme)
@@ -55,13 +55,13 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       formTypeSwitcherButtonIdleColor = MyoroColors.blue1.darken(0.05),
       formTypeSwitcherButtonTapColor = MyoroColors.blue1,
       logoInputsSpacing = kMyoroMultiplier * 6,
-      inputsFormTypeSwitcherButtonSpacing = kMyoroMultiplier,
       formSwitcherActionButtonsSpacing = kMyoroMultiplier,
       bottomNavigationBarPadding = const EdgeInsets.only(
         bottom: kEdgeInsetsLength,
         left: kEdgeInsetsLength,
         right: kEdgeInsetsLength,
-      );
+      ),
+      forgotPasswordDialogStyle = const MyoroDialogModalStyle(contentPadding: EdgeInsets.all(kMyoroMultiplier * 2));
 
   /// Padding of [LoginSignupScreen].
   final EdgeInsets bodyPadding;
@@ -90,14 +90,14 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
   /// [MyoroTapStatusEnum.tap]'s [Color] of the [LoginSignupScreenEnum] form switcher button.
   final Color formTypeSwitcherButtonTapColor;
 
-  /// Spacing between the innputs and form switcher button.
-  final double inputsFormTypeSwitcherButtonSpacing;
-
   /// Spacing between the form switcher button and action buttons.
   final double formSwitcherActionButtonsSpacing;
 
   /// Padding of the bottom navigation bar.
   final EdgeInsets bottomNavigationBarPadding;
+
+  /// Style of the forgot password dialog.
+  final MyoroDialogModalStyle forgotPasswordDialogStyle;
 
   /// Lerp function.
   @override
@@ -125,17 +125,17 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
         t,
       ),
       logoInputsSpacing: lerpDouble(logoInputsSpacing, other.logoInputsSpacing, t),
-      inputsFormTypeSwitcherButtonSpacing: lerpDouble(
-        inputsFormTypeSwitcherButtonSpacing,
-        other.inputsFormTypeSwitcherButtonSpacing,
-        t,
-      ),
       formSwitcherActionButtonsSpacing: lerpDouble(
         formSwitcherActionButtonsSpacing,
         other.formSwitcherActionButtonsSpacing,
         t,
       ),
       bottomNavigationBarPadding: EdgeInsets.lerp(bottomNavigationBarPadding, other.bottomNavigationBarPadding, t),
+      forgotPasswordDialogStyle: MyoroDialogModalStyle.lerp(
+        forgotPasswordDialogStyle,
+        other.forgotPasswordDialogStyle,
+        t,
+      ),
     );
   }
 }

@@ -2,34 +2,17 @@ import 'package:go_router/go_router.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// App's router.
-final class AppRouter {
-  /// TODO: Need to refactor these static strings to place them in the route classes.
-
-  /// Friend module route.
-  static const friendModuleRoute = 'friend';
-
-  /// Game module route.
-  static const gameModuleRoute = 'game';
-
-  /// Invitation module route.
-  static const invitationModuleRoute = 'invitation';
-
-  /// Login signup module route.
-  static const loginModuleRoute = 'login_signup';
-
-  /// User module route.
-  static const userModuleRoute = 'user';
-
+final class MmRouter {
   /// Navigates to a route.
   ///
-  /// i.e. [AppRouter.push(Routes.gameRoutes.gameListingScreen.navigate())]
+  /// i.e. [MmRouter.push(Routes.gameRoutes.gameListingScreen.navigate())]
   static void push(RouteNavigationConfiguration navigationConfiguration) {
     navigatorKey.currentContext?.push(navigationConfiguration.location, extra: navigationConfiguration.payload);
   }
 
   /// Replaces the current route stack with the provided route.
   ///
-  /// i.e. [AppRouter.replace(Routes.gameRoutes.gameListingScreen.navigate())]
+  /// i.e. [MmRouter.replace(Routes.gameRoutes.gameListingScreen.navigate())]
   static void replace(RouteNavigationConfiguration navigationConfiguration) {
     navigatorKey.currentContext?.go(navigationConfiguration.location, extra: navigationConfiguration.payload);
   }
@@ -45,7 +28,7 @@ final class AppRouter {
   }
 
   /// Default constructor.
-  AppRouter(this._userService);
+  MmRouter(this._userService);
 
   /// User service.
   final UserService _userService;
@@ -55,6 +38,7 @@ final class AppRouter {
 
   /// Initialization function.
   Future<void> init() async {
+    MmLogger.info('[MmRouter.init]: Initializing app router...');
     final homeRoutes = Routes.homeRoutes;
     final homeScreen = homeRoutes.homeScreen;
     final homeScreenLocation = homeScreen.location;
@@ -67,19 +51,23 @@ final class AppRouter {
     final gameDetailsScreen = gameRoutes.gameDetailsScreen;
     final gameCreationScreen = gameRoutes.gameCreationScreen;
 
+    final isLoggedIn = _userService.isLoggedIn;
+    final initialLocation = isLoggedIn ? homeScreenLocation : loginSignupScreenLocation;
+    MmLogger.info('[MmRouter.init]: User logged in: $isLoggedIn, initial location: $initialLocation.');
+
     _router = GoRouter(
       navigatorKey: navigatorKey,
-      initialLocation: _userService.isLoggedIn ? homeScreenLocation : loginSignupScreenLocation,
-      // TODO: Need a way to automatically do this.
+      initialLocation: initialLocation,
       routes: [
         Routes.friendRoutes.friendListingScreen.goRoute,
-        RedirectRoute(name: gameModuleRoute, routes: [gameDetailsScreen, gameCreationScreen]).goRoute,
+        RedirectRoute(name: Routes.gameRoutes.parentDirectory, routes: [gameDetailsScreen, gameCreationScreen]).goRoute,
         Routes.homeRoutes.homeScreen.goRoute,
         Routes.invitationRoutes.invitationListingScreen.goRoute,
         Routes.loginSignupRoutes.loginSignupScreen.goRoute,
         Routes.userRoutes.userDetailsScreen.goRoute,
       ],
     );
+    MmLogger.success('[MmRouter.init]: App router initialized.');
   }
 
   /// [_router] getter.

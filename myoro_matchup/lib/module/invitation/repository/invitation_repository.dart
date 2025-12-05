@@ -15,8 +15,21 @@ final class InvitationRepository {
   ///
   /// Returns a success message.
   Future<String> sendInvitation(int gameId, int inviteeId, String message) async {
-    final response = await _httpClient.post('/invitations/invite/$gameId/$inviteeId', data: {'message': message});
-    return response.data['message'];
+    MmLogger.info('[InvitationRepository.sendInvitation]: Sending invitation for game $gameId to user $inviteeId.');
+    try {
+      final response = await _httpClient.post('/invitations/invite/$gameId/$inviteeId', data: {'message': message});
+      MmLogger.success(
+        '[InvitationRepository.sendInvitation]: Invitation sent successfully for game $gameId to user $inviteeId.',
+      );
+      return response.data['message'];
+    } catch (e, stackTrace) {
+      await MmLogger.error(
+        '[InvitationRepository.sendInvitation]: Failed to send invitation for game $gameId to user $inviteeId.',
+        e,
+        stackTrace,
+      );
+      rethrow;
+    }
   }
 
   /// Selects all invitations for the current user.

@@ -22,7 +22,7 @@ final class _SendFriendRequestConfirmationBottomSheet {
         MmSnackBarHelper.showSnackBar(
           snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.success, message: message!),
         );
-        AppRouter.pop();
+        MmRouter.pop();
       },
       onError: (error) {
         MmSnackBarHelper.showSnackBar(

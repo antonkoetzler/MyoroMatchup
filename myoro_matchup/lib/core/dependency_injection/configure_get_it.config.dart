@@ -17,14 +17,19 @@ import 'package:myoro_matchup/core/auth/repository/auth_repository.dart'
     as _i643;
 import 'package:myoro_matchup/core/auth/service/auth_service.dart' as _i206;
 import 'package:myoro_matchup/core/http/http_client.dart' as _i126;
-import 'package:myoro_matchup/core/routing/module/app_router_module.dart'
-    as _i436;
+import 'package:myoro_matchup/core/log/mm_logger.dart' as _i788;
+import 'package:myoro_matchup/core/routing/module/mm_router_module.dart'
+    as _i908;
 import 'package:myoro_matchup/core/shared_preferences/module/shared_preferences_module.dart'
     as _i407;
 import 'package:myoro_matchup/core/shared_preferences/repository/shared_preferences_repository.dart'
     as _i558;
 import 'package:myoro_matchup/core/shared_preferences/service/shared_preferences_service.dart'
     as _i980;
+import 'package:myoro_matchup/module/friend/repository/friend_repository.dart'
+    as _i150;
+import 'package:myoro_matchup/module/friend/screen/listing/view_model/friend_listing_screen_view_model.dart'
+    as _i898;
 import 'package:myoro_matchup/module/game/domain/repository/game_repository.dart'
     as _i1006;
 import 'package:myoro_matchup/module/game/screen/creation/view_model/game_creation_screen_view_model.dart'
@@ -57,7 +62,8 @@ extension GetItInjectableX on _i174.GetIt {
   }) async {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final sharedPreferencesModule = _$SharedPreferencesModule();
-    final appRouterModule = _$AppRouterModule();
+    final mmRouterModule = _$MmRouterModule();
+    gh.singleton<_i788.MmLogger>(() => _i788.MmLogger());
     await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.sharedPreferences,
       preResolve: true,
@@ -79,6 +85,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i643.AuthRepository>(
       () => _i643.AuthRepository(gh<_i460.HttpClient>()),
     );
+    gh.factory<_i150.FriendRepository>(
+      () => _i150.FriendRepository(gh<_i460.HttpClient>()),
+    );
     gh.factory<_i1006.GameRepository>(
       () => _i1006.GameRepository(gh<_i460.HttpClient>()),
     );
@@ -96,8 +105,8 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.OpenStreetMapLocationRepository>(),
       ),
     );
-    await gh.singletonAsync<_i460.AppRouter>(
-      () => appRouterModule.appRouter(gh<_i460.UserService>()),
+    await gh.singletonAsync<_i460.MmRouter>(
+      () => mmRouterModule.appRouter(gh<_i460.UserService>()),
       preResolve: true,
     );
     gh.factory<_i703.UserDetailsScreenViewModel>(
@@ -105,6 +114,9 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.SharedPreferencesService>(),
         gh<_i460.UserRepository>(),
       ),
+    );
+    gh.factory<_i898.FriendListingScreenViewModel>(
+      () => _i898.FriendListingScreenViewModel(gh<_i460.FriendRepository>()),
     );
     gh.factory<_i206.AuthService>(
       () => _i206.AuthService(
@@ -144,4 +156,4 @@ extension GetItInjectableX on _i174.GetIt {
 
 class _$SharedPreferencesModule extends _i407.SharedPreferencesModule {}
 
-class _$AppRouterModule extends _i436.AppRouterModule {}
+class _$MmRouterModule extends _i908.MmRouterModule {}

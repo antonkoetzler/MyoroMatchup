@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.model;
 
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.DiscriminatorType;
@@ -40,12 +39,11 @@ public abstract class UserStatsModel {
   private Integer rating;
 
   /** Default constructor. */
-  public UserStatsModel() {
-  }
+  public UserStatsModel() {}
 
   /**
    * Getter for id
-   * 
+   *
    * @return the stats ID
    */
   public Long getId() {
@@ -54,7 +52,7 @@ public abstract class UserStatsModel {
 
   /**
    * Getter for user
-   * 
+   *
    * @return the user that owns these stats
    */
   public UserModel getUser() {
@@ -63,7 +61,7 @@ public abstract class UserStatsModel {
 
   /**
    * Getter for sport
-   * 
+   *
    * @return the sport these stats are for
    */
   public SportsEnum getSport() {
@@ -72,7 +70,7 @@ public abstract class UserStatsModel {
 
   /**
    * Getter for rating
-   * 
+   *
    * @return the rating out of 100
    */
   public Integer getRating() {

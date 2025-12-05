@@ -29,11 +29,11 @@ public class UserResponseDto {
   private VisibilityEnum visibility;
 
   /** Default constructor. */
-  public UserResponseDto() {
-  }
+  public UserResponseDto() {}
 
   /** Constructor with all fields. */
-  public UserResponseDto(String username, String name, String email, UserSportStatsResponseDto stats) {
+  public UserResponseDto(
+      String username, String name, String email, UserSportStatsResponseDto stats) {
     this.username = username;
     this.name = name;
     this.email = email;
@@ -42,7 +42,7 @@ public class UserResponseDto {
 
   /**
    * Getter for id
-   * 
+   *
    * @return the user ID
    */
   public Long getId() {
@@ -51,7 +51,7 @@ public class UserResponseDto {
 
   /**
    * Getter for username
-   * 
+   *
    * @return the username
    */
   public String getUsername() {
@@ -60,7 +60,7 @@ public class UserResponseDto {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the name
    */
   public String getName() {
@@ -69,7 +69,7 @@ public class UserResponseDto {
 
   /**
    * Getter for email
-   * 
+   *
    * @return the email
    */
   public String getEmail() {
@@ -78,7 +78,7 @@ public class UserResponseDto {
 
   /**
    * Getter for stats
-   * 
+   *
    * @return the user stats for each sport
    */
   public UserSportStatsResponseDto getStats() {
@@ -87,7 +87,7 @@ public class UserResponseDto {
 
   /**
    * Getter for location
-   * 
+   *
    * @return the user location
    */
   public UserLocationResponseDto getLocation() {
@@ -126,7 +126,7 @@ public class UserResponseDto {
 
   /**
    * Getter for isSubscribed
-   * 
+   *
    * @return the subscription status
    */
   public Boolean getIsSubscribed() {
@@ -140,7 +140,7 @@ public class UserResponseDto {
 
   /**
    * Getter for visibility
-   * 
+   *
    * @return the visibility
    */
   public VisibilityEnum getVisibility() {

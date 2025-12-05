@@ -1,9 +1,20 @@
 package com.myoro.myoro_matchup_api.controller;
 
+import com.myoro.myoro_matchup_api.dto.UserLocationUpdateRequestDto;
+import com.myoro.myoro_matchup_api.dto.UserResponseDto;
+import com.myoro.myoro_matchup_api.dto.UserVisibilityUpdateRequestDto;
+import com.myoro.myoro_matchup_api.service.MessageService;
+import com.myoro.myoro_matchup_api.service.UserService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,36 +26,34 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.myoro.myoro_matchup_api.dto.UserLocationUpdateRequestDto;
-import com.myoro.myoro_matchup_api.dto.UserResponseDto;
-import com.myoro.myoro_matchup_api.dto.UserVisibilityUpdateRequestDto;
-import com.myoro.myoro_matchup_api.service.MessageService;
-import com.myoro.myoro_matchup_api.service.UserService;
-
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.validation.Valid;
-
 /** User controller. */
+@Tag(name = "Users", description = "User management endpoints")
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
   /** User service. */
-  @Autowired
-  private UserService userService;
+  @Autowired private UserService userService;
 
   /** Message service. */
-  @Autowired
-  private MessageService messageService;
+  @Autowired private MessageService messageService;
 
   /**
    * Retrieves a user by their unique identifier
-   * 
-   * @param id               the unique identifier of the user to retrieve
-   * @param showStats        whether to include user stats
+   *
+   * @param id the unique identifier of the user to retrieve
+   * @param showStats whether to include user stats
    * @param showSubscription whether to include subscription status
-   * @param locationFilter   the location data to include (none, country, or full)
+   * @param locationFilter the location data to include (none, country, or full)
    * @return ResponseEntity containing the user details
    */
+  @Operation(
+      summary = "Get user by ID",
+      description = "Retrieves user details by their unique identifier")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "User found"),
+        @ApiResponse(responseCode = "404", description = "User not found")
+      })
   @GetMapping("/{id}")
   public ResponseEntity<UserResponseDto> getUserById(@PathVariable Long id) {
     return ResponseEntity.ok(userService.getUserDto(id));
@@ -52,9 +61,11 @@ public class UserController {
 
   /**
    * Retrieves all users in the system
-   * 
+   *
    * @return ResponseEntity containing list of all users
    */
+  @Operation(summary = "Get all users", description = "Retrieves a list of all users in the system")
+  @ApiResponse(responseCode = "200", description = "List of users retrieved successfully")
   @GetMapping
   public ResponseEntity<List<UserResponseDto>> getAllUsers() {
     return ResponseEntity.ok(userService.getAllUsersDto());
@@ -62,11 +73,20 @@ public class UserController {
 
   /**
    * Updates the visibility of the authenticated user
-   * 
-   * @param request       the HTTP request containing the bearer token
+   *
+   * @param request the HTTP request containing the bearer token
    * @param updateRequest the visibility update request
    * @return ResponseEntity containing success message
    */
+  @Operation(
+      summary = "Update user visibility",
+      description = "Updates the visibility settings for the authenticated user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Visibility updated successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @PutMapping("/visibility")
   public ResponseEntity<Map<String, Object>> updateVisibility(
       HttpServletRequest request,
@@ -79,17 +99,25 @@ public class UserController {
 
   /**
    * Updates the location of the authenticated user
-   * 
-   * @param request       the HTTP request containing the bearer token
+   *
+   * @param request the HTTP request containing the bearer token
    * @param updateRequest the location update request
    * @return ResponseEntity containing success message
    */
+  @Operation(
+      summary = "Update user location",
+      description = "Updates the location (country, state, city) for the authenticated user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Location updated successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @PutMapping("/location")
   public ResponseEntity<Map<String, Object>> updateLocation(
-      HttpServletRequest request,
-      @Valid @RequestBody UserLocationUpdateRequestDto updateRequest) {
-    userService.updateLocation(request, updateRequest.getCountry(), updateRequest.getState(),
-        updateRequest.getCity());
+      HttpServletRequest request, @Valid @RequestBody UserLocationUpdateRequestDto updateRequest) {
+    userService.updateLocation(
+        request, updateRequest.getCountry(), updateRequest.getState(), updateRequest.getCity());
     Map<String, Object> responseBody = new HashMap<>();
     responseBody.put("message", messageService.getMessage("user.location.update.success"));
     return ResponseEntity.ok(responseBody);
@@ -97,15 +125,24 @@ public class UserController {
 
   /**
    * Sends a friend request to a user
-   * 
-   * @param request     the HTTP request containing the bearer token
+   *
+   * @param request the HTTP request containing the bearer token
    * @param recipientId the ID of the user receiving the friend request
    * @return ResponseEntity containing success message
    */
+  @Operation(
+      summary = "Send friend request",
+      description = "Sends a friend request from the authenticated user to another user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Friend request sent successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized"),
+        @ApiResponse(responseCode = "404", description = "Recipient not found")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @PostMapping("/friend-request/{recipientId}")
   public ResponseEntity<Map<String, Object>> sendFriendRequest(
-      HttpServletRequest request,
-      @PathVariable Long recipientId) {
+      HttpServletRequest request, @PathVariable Long recipientId) {
     userService.sendFriendRequest(request, recipientId);
     Map<String, Object> responseBody = new HashMap<>();
     responseBody.put("message", messageService.getMessage("user.friend.request.send.success"));
@@ -114,15 +151,22 @@ public class UserController {
 
   /**
    * Blocks a user
-   * 
-   * @param request   the HTTP request containing the bearer token
+   *
+   * @param request the HTTP request containing the bearer token
    * @param blockedId the ID of the user being blocked
    * @return ResponseEntity containing success message
    */
+  @Operation(summary = "Block user", description = "Blocks a user for the authenticated user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "User blocked successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized"),
+        @ApiResponse(responseCode = "404", description = "User not found")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @PostMapping("/block/{blockedId}")
   public ResponseEntity<Map<String, Object>> blockUser(
-      HttpServletRequest request,
-      @PathVariable Long blockedId) {
+      HttpServletRequest request, @PathVariable Long blockedId) {
     userService.blockUser(request, blockedId);
     Map<String, Object> responseBody = new HashMap<>();
     responseBody.put("message", messageService.getMessage("user.block.success"));
@@ -131,10 +175,21 @@ public class UserController {
 
   /**
    * Gets all blocked users for the authenticated user
-   * 
+   *
    * @param request the HTTP request containing the bearer token
    * @return ResponseEntity containing list of blocked users
    */
+  @Operation(
+      summary = "Get blocked users",
+      description = "Retrieves all users blocked by the authenticated user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(
+            responseCode = "200",
+            description = "List of blocked users retrieved successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @GetMapping("/blocked")
   public ResponseEntity<List<UserResponseDto>> getBlockedUsers(HttpServletRequest request) {
     return ResponseEntity.ok(userService.getBlockedUsers(request));
@@ -142,18 +197,50 @@ public class UserController {
 
   /**
    * Unblocks a user
-   * 
-   * @param request   the HTTP request containing the bearer token
+   *
+   * @param request the HTTP request containing the bearer token
    * @param blockedId the ID of the user being unblocked
    * @return ResponseEntity containing success message
    */
+  @Operation(
+      summary = "Unblock user",
+      description = "Unblocks a previously blocked user for the authenticated user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "User unblocked successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized"),
+        @ApiResponse(responseCode = "404", description = "User not found")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @DeleteMapping("/block/{blockedId}")
   public ResponseEntity<Map<String, Object>> unblockUser(
-      HttpServletRequest request,
-      @PathVariable Long blockedId) {
+      HttpServletRequest request, @PathVariable Long blockedId) {
     userService.unblockUser(request, blockedId);
     Map<String, Object> responseBody = new HashMap<>();
     responseBody.put("message", messageService.getMessage("user.unblock.success"));
+    return ResponseEntity.ok(responseBody);
+  }
+
+  /**
+   * Deletes the authenticated user's account
+   *
+   * @param request the HTTP request containing the bearer token
+   * @return ResponseEntity containing success message
+   */
+  @Operation(
+      summary = "Delete account",
+      description = "Deletes the authenticated user's account and all associated data")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Account deleted successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized")
+      })
+  @SecurityRequirement(name = "bearerAuth")
+  @DeleteMapping
+  public ResponseEntity<Map<String, Object>> deleteAccount(HttpServletRequest request) {
+    userService.deleteAccount(request);
+    Map<String, Object> responseBody = new HashMap<>();
+    responseBody.put("message", messageService.getMessage("user.delete.success"));
     return ResponseEntity.ok(responseBody);
   }
 }

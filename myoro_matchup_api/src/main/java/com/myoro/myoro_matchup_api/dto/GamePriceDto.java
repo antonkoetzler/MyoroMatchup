@@ -16,8 +16,7 @@ public class GamePriceDto {
   private Double dropInPrice;
 
   /** Default constructor. */
-  public GamePriceDto() {
-  }
+  public GamePriceDto() {}
 
   /** Constructor with all fields. */
   public GamePriceDto(Double memberPrice, Double dropInPrice) {
@@ -27,7 +26,7 @@ public class GamePriceDto {
 
   /**
    * Getter for memberPrice
-   * 
+   *
    * @return the member price
    */
   public Double getMemberPrice() {
@@ -36,7 +35,7 @@ public class GamePriceDto {
 
   /**
    * Getter for dropInPrice
-   * 
+   *
    * @return the drop in price
    */
   public Double getDropInPrice() {
@@ -45,7 +44,7 @@ public class GamePriceDto {
 
   /**
    * Setter for memberPrice
-   * 
+   *
    * @param memberPrice the member price
    */
   public void setMemberPrice(Double memberPrice) {
@@ -54,7 +53,7 @@ public class GamePriceDto {
 
   /**
    * Setter for dropInPrice
-   * 
+   *
    * @param dropInPrice the drop in price
    */
   public void setDropInPrice(Double dropInPrice) {

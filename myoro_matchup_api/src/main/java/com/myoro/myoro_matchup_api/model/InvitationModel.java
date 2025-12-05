@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.model;
 
 import com.myoro.myoro_matchup_api.enums.InvitationStatusEnum;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,14 +10,17 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
-
 import java.time.LocalDateTime;
 
 /** Invitation model. */
 @Entity
-@Table(name = "invitations", uniqueConstraints = {
-    @UniqueConstraint(name = "unique_pending_invitation", columnNames = { "game_id", "invitee_id", "status" })
-})
+@Table(
+    name = "invitations",
+    uniqueConstraints = {
+      @UniqueConstraint(
+          name = "unique_pending_invitation",
+          columnNames = {"game_id", "invitee_id", "status"})
+    })
 public class InvitationModel {
   /** Invitation ID. */
   @Id
@@ -62,12 +64,11 @@ public class InvitationModel {
   private String message;
 
   /** Default constructor. */
-  public InvitationModel() {
-  }
+  public InvitationModel() {}
 
   /**
    * Getter for id
-   * 
+   *
    * @return the invitation ID
    */
   public Long getId() {
@@ -76,7 +77,7 @@ public class InvitationModel {
 
   /**
    * Getter for game
-   * 
+   *
    * @return the game being invited to
    */
   public GameModel getGame() {
@@ -85,7 +86,7 @@ public class InvitationModel {
 
   /**
    * Getter for inviter
-   * 
+   *
    * @return the user who sent the invitation
    */
   public UserModel getInviter() {
@@ -94,7 +95,7 @@ public class InvitationModel {
 
   /**
    * Getter for invitee
-   * 
+   *
    * @return the user being invited
    */
   public UserModel getInvitee() {
@@ -103,7 +104,7 @@ public class InvitationModel {
 
   /**
    * Getter for status
-   * 
+   *
    * @return the status of the invitation
    */
   public InvitationStatusEnum getStatus() {
@@ -112,7 +113,7 @@ public class InvitationModel {
 
   /**
    * Getter for createdAt
-   * 
+   *
    * @return when the invitation was created
    */
   public LocalDateTime getCreatedAt() {
@@ -121,7 +122,7 @@ public class InvitationModel {
 
   /**
    * Getter for expiresAt
-   * 
+   *
    * @return when the invitation expires
    */
   public LocalDateTime getExpiresAt() {
@@ -130,7 +131,7 @@ public class InvitationModel {
 
   /**
    * Getter for respondedAt
-   * 
+   *
    * @return when the invitee responded
    */
   public LocalDateTime getRespondedAt() {
@@ -139,7 +140,7 @@ public class InvitationModel {
 
   /**
    * Getter for message
-   * 
+   *
    * @return the optional message from the inviter
    */
   public String getMessage() {
@@ -148,7 +149,7 @@ public class InvitationModel {
 
   /**
    * Setter for id
-   * 
+   *
    * @param id the invitation ID
    */
   public void setId(Long id) {
@@ -157,7 +158,7 @@ public class InvitationModel {
 
   /**
    * Setter for game
-   * 
+   *
    * @param game the game being invited to
    */
   public void setGame(GameModel game) {
@@ -166,7 +167,7 @@ public class InvitationModel {
 
   /**
    * Setter for inviter
-   * 
+   *
    * @param inviter the user who sent the invitation
    */
   public void setInviter(UserModel inviter) {
@@ -175,7 +176,7 @@ public class InvitationModel {
 
   /**
    * Setter for invitee
-   * 
+   *
    * @param invitee the user being invited
    */
   public void setInvitee(UserModel invitee) {
@@ -184,7 +185,7 @@ public class InvitationModel {
 
   /**
    * Setter for status
-   * 
+   *
    * @param status the status of the invitation
    */
   public void setStatus(InvitationStatusEnum status) {
@@ -193,7 +194,7 @@ public class InvitationModel {
 
   /**
    * Setter for createdAt
-   * 
+   *
    * @param createdAt when the invitation was created
    */
   public void setCreatedAt(LocalDateTime createdAt) {
@@ -202,7 +203,7 @@ public class InvitationModel {
 
   /**
    * Setter for expiresAt
-   * 
+   *
    * @param expiresAt when the invitation expires
    */
   public void setExpiresAt(LocalDateTime expiresAt) {
@@ -211,7 +212,7 @@ public class InvitationModel {
 
   /**
    * Setter for respondedAt
-   * 
+   *
    * @param respondedAt when the invitee responded
    */
   public void setRespondedAt(LocalDateTime respondedAt) {
@@ -220,7 +221,7 @@ public class InvitationModel {
 
   /**
    * Setter for message
-   * 
+   *
    * @param message the optional message from the inviter
    */
   public void setMessage(String message) {

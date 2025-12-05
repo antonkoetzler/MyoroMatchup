@@ -1,51 +1,40 @@
 package com.myoro.myoro_matchup_api.data;
 
+import com.myoro.myoro_matchup_api.enums.GameFrequencyEnum;
+import com.myoro.myoro_matchup_api.enums.InvitationStatusEnum;
+import com.myoro.myoro_matchup_api.enums.SportsEnum;
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
+import com.myoro.myoro_matchup_api.model.GameModel;
+import com.myoro.myoro_matchup_api.model.UserModel;
+import com.myoro.myoro_matchup_api.repository.GameRepository;
+import com.myoro.myoro_matchup_api.repository.InvitationRepository;
+import com.myoro.myoro_matchup_api.repository.UserRepository;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
-
+import net.datafaker.Faker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-import net.datafaker.Faker;
-
-import com.myoro.myoro_matchup_api.enums.GameFrequencyEnum;
-import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
-import com.myoro.myoro_matchup_api.enums.InvitationStatusEnum;
-import com.myoro.myoro_matchup_api.enums.SportsEnum;
-import com.myoro.myoro_matchup_api.model.GameModel;
-import com.myoro.myoro_matchup_api.model.UserModel;
-import com.myoro.myoro_matchup_api.repository.GameRepository;
-import com.myoro.myoro_matchup_api.repository.InvitationRepository;
-import com.myoro.myoro_matchup_api.repository.UserRepository;
-
-/**
- * Data seeder for populating the database with mock data.
- * 
- * TODO: See if there is a better and more automatic way to do this.
- */
+/** Data seeder for populating the database with mock data. */
 @Component
 public class DataSeeder implements CommandLineRunner {
   /** User repository. */
-  @Autowired
-  private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
   /** Game repository. */
-  @Autowired
-  private GameRepository gameRepository;
+  @Autowired private GameRepository gameRepository;
 
   /** Invitation repository. */
-  @Autowired
-  private InvitationRepository invitationRepository;
+  @Autowired private InvitationRepository invitationRepository;
 
   /** Password encoder. */
-  @Autowired
-  private PasswordEncoder passwordEncoder;
+  @Autowired private PasswordEncoder passwordEncoder;
 
   /** Faker instance for generating random data. */
   private final Faker faker = new Faker();
@@ -62,20 +51,22 @@ public class DataSeeder implements CommandLineRunner {
 
     // Create fixed debug users
     UserModelBuilder userBuilder = new UserModelBuilder(faker, passwordEncoder);
-    UserModel user1 = userBuilder
-        .withUsername("user1")
-        .withName("User One")
-        .withEmail("user1@example.com")
-        .withPassword("password123")
-        .withRandomLocation()
-        .build();
-    UserModel user2 = userBuilder
-        .withUsername("user2")
-        .withName("User Two")
-        .withEmail("user2@example.com")
-        .withPassword("password123")
-        .withRandomLocation()
-        .build();
+    UserModel user1 =
+        userBuilder
+            .withUsername("user1")
+            .withName("User One")
+            .withEmail("user1@example.com")
+            .withPassword("password123")
+            .withRandomLocation()
+            .build();
+    UserModel user2 =
+        userBuilder
+            .withUsername("user2")
+            .withName("User Two")
+            .withEmail("user2@example.com")
+            .withPassword("password123")
+            .withRandomLocation()
+            .build();
 
     user1 = userRepository.save(user1);
     user2 = userRepository.save(user2);
@@ -86,20 +77,23 @@ public class DataSeeder implements CommandLineRunner {
     for (int i = 0; i < 5; i++) {
       UserModel owner = random.nextBoolean() ? user1 : user2;
       SportsEnum sport = SportsEnum.values()[random.nextInt(SportsEnum.values().length)];
-      GameFrequencyEnum frequency = GameFrequencyEnum.values()[random.nextInt(GameFrequencyEnum.values().length)];
-      VisibilityEnum visibility = random.nextBoolean() ? VisibilityEnum.PUBLIC : VisibilityEnum.PRIVATE;
+      GameFrequencyEnum frequency =
+          GameFrequencyEnum.values()[random.nextInt(GameFrequencyEnum.values().length)];
+      VisibilityEnum visibility =
+          random.nextBoolean() ? VisibilityEnum.PUBLIC : VisibilityEnum.PRIVATE;
 
-      GameModel game = gameBuilder
-          .withRandomName()
-          .withSport(sport)
-          .withOwner(owner)
-          .withFrequency(frequency)
-          .withVisibility(visibility)
-          .withRandomDayAndTime()
-          .withRandomPrice()
-          .withRandomAgeRange()
-          .withRandomLocation()
-          .build();
+      GameModel game =
+          gameBuilder
+              .withRandomName()
+              .withSport(sport)
+              .withOwner(owner)
+              .withFrequency(frequency)
+              .withVisibility(visibility)
+              .withRandomDayAndTime()
+              .withRandomPrice()
+              .withRandomAgeRange()
+              .withRandomLocation()
+              .build();
 
       // Randomly add WhatsApp group chat data (70% chance)
       if (random.nextDouble() < 0.7) {
@@ -142,7 +136,8 @@ public class DataSeeder implements CommandLineRunner {
       GameModel game = games.get(random.nextInt(games.size()));
       UserModel inviter = random.nextBoolean() ? user1 : user2;
       UserModel invitee = inviter.equals(user1) ? user2 : user1;
-      InvitationStatusEnum status = InvitationStatusEnum.values()[random.nextInt(InvitationStatusEnum.values().length)];
+      InvitationStatusEnum status =
+          InvitationStatusEnum.values()[random.nextInt(InvitationStatusEnum.values().length)];
 
       // Check unique constraint: (game_id, invitee_id, status) must be unique
       String combination = game.getId() + "_" + invitee.getId() + "_" + status.ordinal();
@@ -153,16 +148,18 @@ public class DataSeeder implements CommandLineRunner {
 
       usedCombinations.add(combination);
       LocalDateTime expiresAt = LocalDateTime.now().plusDays(random.nextInt(14) + 1);
-      LocalDateTime respondedAt = (status == InvitationStatusEnum.ACCEPTED || status == InvitationStatusEnum.REJECTED)
-          ? LocalDateTime.now().minusDays(random.nextInt(5))
-          : null;
+      LocalDateTime respondedAt =
+          (status == InvitationStatusEnum.ACCEPTED || status == InvitationStatusEnum.REJECTED)
+              ? LocalDateTime.now().minusDays(random.nextInt(5))
+              : null;
 
-      InvitationModelBuilder builder = new InvitationModelBuilder(faker)
-          .withGame(game)
-          .withInviter(inviter)
-          .withInvitee(invitee)
-          .withStatus(status)
-          .withExpiresAt(expiresAt);
+      InvitationModelBuilder builder =
+          new InvitationModelBuilder(faker)
+              .withGame(game)
+              .withInviter(inviter)
+              .withInvitee(invitee)
+              .withStatus(status)
+              .withExpiresAt(expiresAt);
       if (random.nextBoolean()) {
         builder.withRandomMessage();
       }
@@ -184,5 +181,4 @@ public class DataSeeder implements CommandLineRunner {
     }
     return code.toString();
   }
-
 }

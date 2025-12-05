@@ -1,3 +1,4 @@
+import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
@@ -35,6 +36,35 @@ final class LoginSignupScreenViewModel {
   /// Updates the [LoginSignupScreenState.signupState.countryController].
   void onSignupCountryChanged(MyoroCountryEnum? country) {
     _state.signupState.countryController.value = country;
+  }
+
+  /// Validation function for the [LoginSignupScreenState.forgotPasswordEmailController].
+  String? forgotPasswordEmailInputValidation(_) {
+    final loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =
+        localization.loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage;
+    final forgotPasswordEmail = _state.forgotPasswordEmail;
+    return EmailValidator.validate(forgotPasswordEmail)
+        ? null
+        : loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage;
+  }
+
+  /// Sends the forgot password email.
+  Future<String> sendForgotPasswordEmail() async {
+    return await _authService.forgotPassword(ForgotPasswordRequestDto(email: _state.forgotPasswordEmail));
+  }
+
+  /// On success function.
+  void onSendForgotPasswordEmail(String? message) {
+    MmSnackBarHelper.showSnackBar(
+      snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.success, message: message!),
+    );
+  }
+
+  /// On error function.
+  void onErrorSendingForgotPasswordEmail(String errorMessage) {
+    MmSnackBarHelper.showSnackBar(
+      snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage),
+    );
   }
 
   /// Form validation function.
@@ -124,11 +154,13 @@ final class LoginSignupScreenViewModel {
 
   /// On success function.
   void _onSuccess(_) {
-    AppRouter.replace(Routes.homeRoutes.homeScreen.navigate());
+    MmLogger.success('[LoginSignupScreenViewModel._onSuccess]: Login/Signup successful, navigating to home.');
+    MmRouter.replace(Routes.homeRoutes.homeScreen.navigate());
   }
 
   /// On error function.
   void _onError(String errorMessage) {
+    MmLogger.error('[LoginSignupScreenViewModel._onError]: Login/Signup failed: $errorMessage.');
     MmSnackBarHelper.showSnackBar(
       snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage),
     );

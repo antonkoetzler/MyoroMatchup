@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "已过期",
   "invitationStatusEnumCancelledLabel": "已取消",
 
+  "friendRequestStatusEnumPendingLabel": "待处理",
+  "friendRequestStatusEnumAcceptedLabel": "已接受",
+  "friendRequestStatusEnumRejectedLabel": "已拒绝",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "无法获取游戏详情！",
   "invitationListingScreenAppBarTitle": "邀请",
   "friendListingScreenAppBarTitle": "朋友",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "未找到邀请！",
+  "friendListingScreenBodyEmptyTitle": "未找到朋友！",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "消息",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "状态",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "接受",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "状态",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "拒绝",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "信息",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "玩家",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "屏蔽",
   "sendFriendRequestConfirmationBottomSheetTitle": "发送好友请求",
   "sendFriendRequestConfirmationBottomSheetMessage": "您确定要向此用户发送好友请求吗？",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "接受好友请求",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "您确定要接受此好友请求吗？",
   "blockUserConfirmationBottomSheetTitle": "屏蔽用户",
   "blockUserConfirmationBottomSheetMessage": "您确定要屏蔽此用户吗？",
   "unblockUserConfirmationBottomSheetTitle": "取消屏蔽用户",
   "unblockUserConfirmationBottomSheetMessage": "您确定要取消屏蔽此用户吗？",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "删除账户",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "您确定要删除您的账户吗？此操作无法撤销。",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "获取游戏时出错！",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "国家不能为空。",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "密码字段不能为空。",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "密码不匹配。",
+  "loginSignupScreenForgotPasswordDialogTitle": "忘记密码",
+  "loginSignupScreenForgotPasswordDialogMessage": "输入您的电子邮件地址，我们将向您发送重置密码的链接。",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "电子邮件",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "请输入有效的电子邮件地址。",
 
   "mmAppBarMenuDrawerTitle": "菜单",
   "mmAppBarMenuDrawerCreateGameText": "创建游戏",
   "mmAppBarMenuDrawerFriendListingText": "朋友",
-  "mmAppBarMenuDrawerInvitationListingText": "邀请"
+  "mmAppBarMenuDrawerInvitationListingText": "邀请",
+  "mmAppBarMenuDrawerLogoutText": "登出"
 }
 

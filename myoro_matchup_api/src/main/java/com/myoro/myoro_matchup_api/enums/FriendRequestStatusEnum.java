@@ -11,4 +11,3 @@ public enum FriendRequestStatusEnum {
   /** Rejected; recipient declined the friend request. */
   REJECTED;
 }
-

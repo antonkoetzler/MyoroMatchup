@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 part 'friend_listing_screen_state.dart';
@@ -8,13 +11,17 @@ part 'friend_listing_screen_state.dart';
 @injectable
 final class FriendListingScreenViewModel {
   /// Default constructor.
-  FriendListingScreenViewModel(this._friendRepository);
+  FriendListingScreenViewModel(this._friendRepository) {
+    _state = FriendListingScreenState(
+      () async => await _friendRepository.select(searchQuery: _state.query, status: _state.filteredStatus),
+    );
+  }
 
   /// Friend repository.
   final FriendRepository _friendRepository;
 
   /// State.
-  final _state = FriendListingScreenState();
+  late final FriendListingScreenState _state;
 
   /// Dispose function.
   void dispose() {
@@ -22,8 +29,23 @@ final class FriendListingScreenViewModel {
   }
 
   /// Fetch friends.
-  Future<List<FriendRequestResponseDto>> fetchFriends() async {
-    return await _friendRepository.fetchFriends();
+  void fetchFriends() {
+    unawaited(_state.friendsRequestController.fetch());
+  }
+
+  /// Accept friend request.
+  Future<String> acceptFriendRequest(FriendRequestResponseDto friend) async {
+    return await _friendRepository.acceptFriendRequest(friend.id);
+  }
+
+  /// [MyoroRadioFilterButton.itemLabelBuilder] of the status filter.
+  String statusFilterItemLabelBuilder(FriendRequestStatusEnum status) {
+    return status.label;
+  }
+
+  /// Status filter on changed.
+  void statusFilterOnChanged(FriendRequestStatusEnum? value) {
+    _state.filteredStatus = value;
   }
 
   /// [_state] getter.
@@ -33,10 +55,6 @@ final class FriendListingScreenViewModel {
 
   /// On filters cleared.
   VoidCallback? get onFiltersCleared {
-    return _state.query.isNotEmpty
-        ? () {
-            _state.queryController.clear();
-          }
-        : null;
+    return _state.query.isNotEmpty ? _state.queryController.clear : null;
   }
 }

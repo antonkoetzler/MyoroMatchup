@@ -14,8 +14,7 @@ public class UserLocationResponseDto {
   private String city;
 
   /** Default constructor. */
-  public UserLocationResponseDto() {
-  }
+  public UserLocationResponseDto() {}
 
   /** Constructor with all fields. */
   public UserLocationResponseDto(CountryEnum country, String state, String city) {
@@ -26,7 +25,7 @@ public class UserLocationResponseDto {
 
   /**
    * Getter for country
-   * 
+   *
    * @return the country
    */
   public CountryEnum getCountry() {
@@ -35,7 +34,7 @@ public class UserLocationResponseDto {
 
   /**
    * Getter for state
-   * 
+   *
    * @return the state
    */
   public String getState() {
@@ -44,7 +43,7 @@ public class UserLocationResponseDto {
 
   /**
    * Getter for city
-   * 
+   *
    * @return the city
    */
   public String getCity() {

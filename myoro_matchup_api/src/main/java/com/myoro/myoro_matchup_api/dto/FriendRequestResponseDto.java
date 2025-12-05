@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
 import com.myoro.myoro_matchup_api.enums.FriendRequestStatusEnum;
-
 import java.time.LocalDateTime;
 
 /** Friend request response DTO. */
@@ -25,12 +24,11 @@ public class FriendRequestResponseDto {
   private LocalDateTime respondedAt;
 
   /** Default constructor. */
-  public FriendRequestResponseDto() {
-  }
+  public FriendRequestResponseDto() {}
 
   /**
    * Getter for id
-   * 
+   *
    * @return the friend request ID
    */
   public Long getId() {
@@ -39,7 +37,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Getter for requesterName
-   * 
+   *
    * @return the name of the user who sent the friend request
    */
   public String getRequesterName() {
@@ -48,7 +46,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Getter for recipientName
-   * 
+   *
    * @return the name of the user receiving the friend request
    */
   public String getRecipientName() {
@@ -57,7 +55,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Getter for status
-   * 
+   *
    * @return the status of the friend request
    */
   public FriendRequestStatusEnum getStatus() {
@@ -66,7 +64,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Getter for createdAt
-   * 
+   *
    * @return when the friend request was created
    */
   public LocalDateTime getCreatedAt() {
@@ -75,7 +73,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Getter for respondedAt
-   * 
+   *
    * @return when the recipient responded
    */
   public LocalDateTime getRespondedAt() {
@@ -84,7 +82,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Setter for id
-   * 
+   *
    * @param id the friend request ID
    */
   public void setId(Long id) {
@@ -93,7 +91,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Setter for requesterName
-   * 
+   *
    * @param requesterName the name of the user who sent the friend request
    */
   public void setRequesterName(String requesterName) {
@@ -102,7 +100,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Setter for recipientName
-   * 
+   *
    * @param recipientName the name of the user receiving the friend request
    */
   public void setRecipientName(String recipientName) {
@@ -111,7 +109,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Setter for status
-   * 
+   *
    * @param status the status of the friend request
    */
   public void setStatus(FriendRequestStatusEnum status) {
@@ -120,7 +118,7 @@ public class FriendRequestResponseDto {
 
   /**
    * Setter for createdAt
-   * 
+   *
    * @param createdAt when the friend request was created
    */
   public void setCreatedAt(LocalDateTime createdAt) {
@@ -129,11 +127,10 @@ public class FriendRequestResponseDto {
 
   /**
    * Setter for respondedAt
-   * 
+   *
    * @param respondedAt when the recipient responded
    */
   public void setRespondedAt(LocalDateTime respondedAt) {
     this.respondedAt = respondedAt;
   }
 }
-

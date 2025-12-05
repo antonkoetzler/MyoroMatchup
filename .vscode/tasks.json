@@ -4,7 +4,7 @@
     {
       "label": "Format and fix files",
       "type": "shell",
-      "command": "cd myoro_matchup && bash tool/format_and_fix.sh",
+      "command": "cd myoro_matchup && bash tool/format_and_fix.sh && cd ../myoro_matchup_api && bash tool/format_and_fix.sh",
       "problemMatcher": [],
       "group": "build",
       "presentation": {
@@ -24,20 +24,9 @@
       }
     },
     {
-      "label": "Initialize Myoro Flutter Annotations and Myoro Flutter Library",
-      "type": "shell",
-      "command": "cd myoro_matchup && bash tool/setup_mfl_and_mfa.sh ${input:mfaMflInitType}",
-      "problemMatcher": [],
-      "group": "build",
-      "presentation": {
-        "reveal": "always",
-        "panel": "shared"
-      }
-    },
-    {
       "label": "Setup environment",
       "type": "shell",
-      "command": "cd myoro_matchup && bash tool/setup.sh",
+      "command": "cd myoro_matchup && bash tool/setup.sh && cd ../myoro_matchup_api && bash tool/format_and_fix.sh",
       "problemMatcher": [],
       "group": "build",
       "presentation": {
@@ -61,21 +50,9 @@
       "type": "shell",
       "command": "docker-compose up -d",
       "options": {
-        "cwd": "${workspaceFolder}/MyoroMatchup/myoro_matchup_api"
+        "cwd": "${workspaceFolder}/myoro_matchup_api"
       },
       "problemMatcher": []
-    }
-  ],
-  "inputs": [
-    {
-      "id": "mfaMflInitType",
-      "type": "pickString",
-      "description": "Select Myoro Flutter Annotations and Myoro Flutter Library initialization type",
-      "options": [
-        "remote",
-        "local"
-      ],
-      "default": "remote"
     }
   ]
 }

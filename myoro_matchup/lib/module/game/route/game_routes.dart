@@ -1,10 +1,16 @@
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// [Route]s of the game module.
-final class GameRoutes {
+final class GameRoutes implements RouteRepository {
   /// [GameCreationScreen].
   late final gameCreationScreen = GameCreationScreenRoute();
 
   /// [GameDetailsScreen]
   late final gameDetailsScreen = GameDetailsScreenRoute();
+
+  /// Parent directory.
+  @override
+  String get parentDirectory {
+    return 'game';
+  }
 }

@@ -5,17 +5,15 @@ import jakarta.validation.constraints.NotNull;
 /** Login response. */
 public class LoginResponseDto {
   /** User ID. */
-  @NotNull
-  private Long id;
+  @NotNull private Long id;
 
   /** Token. */
-  @NotNull
-  private String token;
+  @NotNull private String token;
 
   /**
    * Constructor.
-   * 
-   * @param id    User ID.
+   *
+   * @param id User ID.
    * @param token Token.
    */
   public LoginResponseDto(Long id, String token) {
@@ -25,7 +23,7 @@ public class LoginResponseDto {
 
   /**
    * Getter for ID.
-   * 
+   *
    * @return User ID.
    */
   public Long getId() {
@@ -34,7 +32,7 @@ public class LoginResponseDto {
 
   /**
    * Getter for token.
-   * 
+   *
    * @return Token.
    */
   public String getToken() {
@@ -43,7 +41,7 @@ public class LoginResponseDto {
 
   /**
    * Setter for ID.
-   * 
+   *
    * @param id User ID.
    */
   public void setId(Long id) {
@@ -52,7 +50,7 @@ public class LoginResponseDto {
 
   /**
    * Setter for token.
-   * 
+   *
    * @param token Token.
    */
   public void setToken(String token) {

@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.model;
 
 import com.myoro.myoro_matchup_api.enums.FriendRequestStatusEnum;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -11,14 +10,17 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.persistence.UniqueConstraint;
-
 import java.time.LocalDateTime;
 
 /** Friend request model. */
 @Entity
-@Table(name = "friend_requests", uniqueConstraints = {
-    @UniqueConstraint(name = "unique_pending_friend_request", columnNames = { "requester_id", "recipient_id", "status" })
-})
+@Table(
+    name = "friend_requests",
+    uniqueConstraints = {
+      @UniqueConstraint(
+          name = "unique_pending_friend_request",
+          columnNames = {"requester_id", "recipient_id", "status"})
+    })
 public class FriendRequestModel {
   /** Friend request ID. */
   @Id
@@ -49,12 +51,11 @@ public class FriendRequestModel {
   private LocalDateTime respondedAt;
 
   /** Default constructor. */
-  public FriendRequestModel() {
-  }
+  public FriendRequestModel() {}
 
   /**
    * Getter for id
-   * 
+   *
    * @return the friend request ID
    */
   public Long getId() {
@@ -63,7 +64,7 @@ public class FriendRequestModel {
 
   /**
    * Getter for requester
-   * 
+   *
    * @return the user who sent the friend request
    */
   public UserModel getRequester() {
@@ -72,7 +73,7 @@ public class FriendRequestModel {
 
   /**
    * Getter for recipient
-   * 
+   *
    * @return the user receiving the friend request
    */
   public UserModel getRecipient() {
@@ -81,7 +82,7 @@ public class FriendRequestModel {
 
   /**
    * Getter for status
-   * 
+   *
    * @return the status of the friend request
    */
   public FriendRequestStatusEnum getStatus() {
@@ -90,7 +91,7 @@ public class FriendRequestModel {
 
   /**
    * Getter for createdAt
-   * 
+   *
    * @return when the friend request was created
    */
   public LocalDateTime getCreatedAt() {
@@ -99,7 +100,7 @@ public class FriendRequestModel {
 
   /**
    * Getter for respondedAt
-   * 
+   *
    * @return when the recipient responded
    */
   public LocalDateTime getRespondedAt() {
@@ -108,7 +109,7 @@ public class FriendRequestModel {
 
   /**
    * Setter for id
-   * 
+   *
    * @param id the friend request ID
    */
   public void setId(Long id) {
@@ -117,7 +118,7 @@ public class FriendRequestModel {
 
   /**
    * Setter for requester
-   * 
+   *
    * @param requester the user who sent the friend request
    */
   public void setRequester(UserModel requester) {
@@ -126,7 +127,7 @@ public class FriendRequestModel {
 
   /**
    * Setter for recipient
-   * 
+   *
    * @param recipient the user receiving the friend request
    */
   public void setRecipient(UserModel recipient) {
@@ -135,7 +136,7 @@ public class FriendRequestModel {
 
   /**
    * Setter for status
-   * 
+   *
    * @param status the status of the friend request
    */
   public void setStatus(FriendRequestStatusEnum status) {
@@ -144,7 +145,7 @@ public class FriendRequestModel {
 
   /**
    * Setter for createdAt
-   * 
+   *
    * @param createdAt when the friend request was created
    */
   public void setCreatedAt(LocalDateTime createdAt) {
@@ -153,11 +154,10 @@ public class FriendRequestModel {
 
   /**
    * Setter for respondedAt
-   * 
+   *
    * @param respondedAt when the recipient responded
    */
   public void setRespondedAt(LocalDateTime respondedAt) {
     this.respondedAt = respondedAt;
   }
 }
-

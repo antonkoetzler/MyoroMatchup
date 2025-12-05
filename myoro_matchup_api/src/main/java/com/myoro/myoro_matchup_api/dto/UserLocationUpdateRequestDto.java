@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
 import com.myoro.myoro_matchup_api.enums.CountryEnum;
-
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -20,12 +19,11 @@ public class UserLocationUpdateRequestDto {
   private String city;
 
   /** Default constructor. */
-  public UserLocationUpdateRequestDto() {
-  }
+  public UserLocationUpdateRequestDto() {}
 
   /**
    * Getter for country
-   * 
+   *
    * @return the country
    */
   public CountryEnum getCountry() {
@@ -34,7 +32,7 @@ public class UserLocationUpdateRequestDto {
 
   /**
    * Setter for country
-   * 
+   *
    * @param country the country
    */
   public void setCountry(CountryEnum country) {
@@ -43,7 +41,7 @@ public class UserLocationUpdateRequestDto {
 
   /**
    * Getter for state
-   * 
+   *
    * @return the state
    */
   public String getState() {
@@ -52,7 +50,7 @@ public class UserLocationUpdateRequestDto {
 
   /**
    * Setter for state
-   * 
+   *
    * @param state the state
    */
   public void setState(String state) {
@@ -61,7 +59,7 @@ public class UserLocationUpdateRequestDto {
 
   /**
    * Getter for city
-   * 
+   *
    * @return the city
    */
   public String getCity() {
@@ -70,11 +68,10 @@ public class UserLocationUpdateRequestDto {
 
   /**
    * Setter for city
-   * 
+   *
    * @param city the city
    */
   public void setCity(String city) {
     this.city = city;
   }
 }
-

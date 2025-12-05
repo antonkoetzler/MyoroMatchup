@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "Expired",
   "invitationStatusEnumCancelledLabel": "Cancelled",
 
+  "friendRequestStatusEnumPendingLabel": "Pending",
+  "friendRequestStatusEnumAcceptedLabel": "Accepted",
+  "friendRequestStatusEnumRejectedLabel": "Rejected",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "Failed to retrieve game details!",
   "invitationListingScreenAppBarTitle": "Invitations",
   "friendListingScreenAppBarTitle": "Friends",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "No invitations found!",
+  "friendListingScreenBodyEmptyTitle": "No friends found!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Message",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Accept",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Decline",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Players",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "Block",
   "sendFriendRequestConfirmationBottomSheetTitle": "Send Friend Request",
   "sendFriendRequestConfirmationBottomSheetMessage": "Are you sure you want to send a friend request to this user?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "Accept Friend Request",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "Are you sure you want to accept this friend request?",
   "blockUserConfirmationBottomSheetTitle": "Block User",
   "blockUserConfirmationBottomSheetMessage": "Are you sure you want to block this user?",
   "unblockUserConfirmationBottomSheetTitle": "Unblock User",
   "unblockUserConfirmationBottomSheetMessage": "Are you sure you want to unblock this user?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "Delete Account",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "Are you sure you want to delete your account? This action cannot be undone.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Error retrieving games!",
@@ -230,9 +240,14 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Country cannot be empty.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Password fields cannot be empty.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Passwords do not match.",
+  "loginSignupScreenForgotPasswordDialogTitle": "Forgot Password",
+  "loginSignupScreenForgotPasswordDialogMessage": "Enter your email address and we'll send you a link to reset your password.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Please enter a valid email address.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Create Game",
   "mmAppBarMenuDrawerFriendListingText": "Friends",
-  "mmAppBarMenuDrawerInvitationListingText": "Invitations"
+  "mmAppBarMenuDrawerInvitationListingText": "Invitations",
+  "mmAppBarMenuDrawerLogoutText": "Logout"
 }

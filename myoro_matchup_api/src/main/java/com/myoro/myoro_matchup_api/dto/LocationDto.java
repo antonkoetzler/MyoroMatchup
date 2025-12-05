@@ -18,8 +18,7 @@ public class LocationDto {
   private String country;
 
   /** Default constructor. */
-  public LocationDto() {
-  }
+  public LocationDto() {}
 
   /** Constructor with all fields. */
   public LocationDto(String name, String city, String state, String country) {
@@ -31,7 +30,7 @@ public class LocationDto {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the name of the location
    */
   public String getName() {
@@ -40,7 +39,7 @@ public class LocationDto {
 
   /**
    * Getter for city
-   * 
+   *
    * @return the city of the location
    */
   public String getCity() {
@@ -49,7 +48,7 @@ public class LocationDto {
 
   /**
    * Getter for state
-   * 
+   *
    * @return the state of the location
    */
   public String getState() {
@@ -58,7 +57,7 @@ public class LocationDto {
 
   /**
    * Getter for country
-   * 
+   *
    * @return the country of the location
    */
   public String getCountry() {
@@ -67,7 +66,7 @@ public class LocationDto {
 
   /**
    * Setter for name
-   * 
+   *
    * @param name the name of the location
    */
   public void setName(String name) {
@@ -76,7 +75,7 @@ public class LocationDto {
 
   /**
    * Setter for city
-   * 
+   *
    * @param city the city of the location
    */
   public void setCity(String city) {
@@ -85,7 +84,7 @@ public class LocationDto {
 
   /**
    * Setter for state
-   * 
+   *
    * @param state the state of the location
    */
   public void setState(String state) {
@@ -94,7 +93,7 @@ public class LocationDto {
 
   /**
    * Setter for country
-   * 
+   *
    * @param country the country of the location
    */
   public void setCountry(String country) {

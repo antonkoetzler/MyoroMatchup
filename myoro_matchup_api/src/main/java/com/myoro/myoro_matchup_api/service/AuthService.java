@@ -1,41 +1,49 @@
 package com.myoro.myoro_matchup_api.service;
 
-import java.time.LocalDateTime;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-
+import com.myoro.myoro_matchup_api.dto.ForgotPasswordRequestDto;
 import com.myoro.myoro_matchup_api.dto.LoginRequestDto;
 import com.myoro.myoro_matchup_api.dto.LoginResponseDto;
 import com.myoro.myoro_matchup_api.dto.SignupRequestDto;
 import com.myoro.myoro_matchup_api.enums.CountryEnum;
+import com.myoro.myoro_matchup_api.model.PasswordResetTokenModel;
 import com.myoro.myoro_matchup_api.model.UserLocationModel;
 import com.myoro.myoro_matchup_api.model.UserModel;
+import com.myoro.myoro_matchup_api.repository.PasswordResetTokenRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
+import java.security.SecureRandom;
+import java.time.LocalDateTime;
+import java.util.Base64;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
 /** Auth service. */
 @Service
 public class AuthService {
   /** User repository for database operations */
-  @Autowired
-  private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
   /** JWT service for token generation */
-  @Autowired
-  private JwtService jwtService;
+  @Autowired private JwtService jwtService;
 
   /** Message service for localized error messages */
-  @Autowired
-  private MessageService messageService;
+  @Autowired private MessageService messageService;
 
   /** Password encoder for hashing passwords */
-  @Autowired
-  private PasswordEncoder passwordEncoder;
+  @Autowired private PasswordEncoder passwordEncoder;
+
+  /** Password reset token repository */
+  @Autowired private PasswordResetTokenRepository passwordResetTokenRepository;
+
+  /** Email service for sending emails */
+  @Autowired private EmailService emailService;
+
+  /** Secure random for token generation */
+  private static final SecureRandom secureRandom = new SecureRandom();
 
   /**
    * Registers a new user and returns JWT token
-   * 
+   *
    * @param request the signup request containing user details
    * @return JWT token for the newly created user
    * @throws RuntimeException if username or email already exists
@@ -72,11 +80,10 @@ public class AuthService {
 
   /**
    * Authenticates user and returns JWT token
-   * 
+   *
    * @param request the login request containing credentials
    * @return JWT token for the authenticated user
-   * @throws RuntimeException if credentials are invalid or login request is
-   *                          malformed
+   * @throws RuntimeException if credentials are invalid or login request is malformed
    */
   public LoginResponseDto login(LoginRequestDto request) {
     String username = request.getUsername();
@@ -107,5 +114,43 @@ public class AuthService {
     String token = jwtService.generateToken(user.getId());
 
     return new LoginResponseDto(user.getId(), token);
+  }
+
+  /**
+   * Initiates password reset process by generating a token and sending reset email
+   *
+   * @param request the forgot password request containing email
+   */
+  public void forgotPassword(ForgotPasswordRequestDto request) {
+    // Find user by email
+    UserModel user = userRepository.findByEmail(request.getEmail());
+
+    // Always return success to prevent email enumeration attacks
+    // Only send email if user exists
+    if (user != null) {
+      // Generate secure random token
+      String token = generateSecureToken();
+
+      // Set expiration to 1 hour from now
+      LocalDateTime expiresAt = LocalDateTime.now().plusHours(1);
+
+      // Create and save password reset token
+      PasswordResetTokenModel resetToken = new PasswordResetTokenModel(token, user, expiresAt);
+      passwordResetTokenRepository.save(resetToken);
+
+      // Send password reset email
+      emailService.sendPasswordResetEmail(user.getEmail(), token, user.getUsername());
+    }
+  }
+
+  /**
+   * Generates a secure random token for password reset
+   *
+   * @return a base64-encoded secure random token
+   */
+  private String generateSecureToken() {
+    byte[] tokenBytes = new byte[32];
+    secureRandom.nextBytes(tokenBytes);
+    return Base64.getUrlEncoder().withoutPadding().encodeToString(tokenBytes);
   }
 }

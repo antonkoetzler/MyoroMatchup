@@ -1,16 +1,13 @@
 package com.myoro.myoro_matchup_api.data;
 
-import java.time.LocalDateTime;
-import java.util.Random;
-
-import org.springframework.security.crypto.password.PasswordEncoder;
-
 import com.myoro.myoro_matchup_api.enums.CountryEnum;
 import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.model.UserLocationModel;
 import com.myoro.myoro_matchup_api.model.UserModel;
-
+import java.time.LocalDateTime;
+import java.util.Random;
 import net.datafaker.Faker;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 /** Builder for creating UserModel instances. */
 public class UserModelBuilder {

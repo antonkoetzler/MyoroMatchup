@@ -600,7 +600,7 @@ public enum CountryEnum {
 
   /**
    * Constructor.
-   * 
+   *
    * @param code the country code
    */
   CountryEnum(String code) {
@@ -609,7 +609,7 @@ public enum CountryEnum {
 
   /**
    * Getter for code
-   * 
+   *
    * @return the country code
    */
   @JsonValue

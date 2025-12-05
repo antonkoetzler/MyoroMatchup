@@ -12,8 +12,7 @@ public class GamePlayerResponseDto {
   private String name;
 
   /** Default constructor. */
-  public GamePlayerResponseDto() {
-  }
+  public GamePlayerResponseDto() {}
 
   /** Constructor with all fields. */
   public GamePlayerResponseDto(Long id, String username, String name) {
@@ -24,7 +23,7 @@ public class GamePlayerResponseDto {
 
   /**
    * Getter for id
-   * 
+   *
    * @return the user ID
    */
   public Long getId() {
@@ -33,7 +32,7 @@ public class GamePlayerResponseDto {
 
   /**
    * Getter for username
-   * 
+   *
    * @return the username
    */
   public String getUsername() {
@@ -42,7 +41,7 @@ public class GamePlayerResponseDto {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the name
    */
   public String getName() {

@@ -25,4 +25,12 @@ final class AuthRepository {
     final response = await _httpClient.post('/auth/login', data: request.toJson());
     return LoggedInUser.fromJson(response.data['user']);
   }
+
+  /// Forgot password.
+  ///
+  /// Returns a success message.
+  Future<String> forgotPassword(ForgotPasswordRequestDto request) async {
+    final response = await _httpClient.post('/auth/forgot-password', data: request.toJson());
+    return response.data['message'];
+  }
 }

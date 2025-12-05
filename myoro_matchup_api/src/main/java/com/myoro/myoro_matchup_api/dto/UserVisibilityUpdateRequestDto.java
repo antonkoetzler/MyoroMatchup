@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
 import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
-
 import jakarta.validation.constraints.NotNull;
 
 /** Request DTO for updating user visibility. */
@@ -11,12 +10,11 @@ public class UserVisibilityUpdateRequestDto {
   private VisibilityEnum visibility;
 
   /** Default constructor. */
-  public UserVisibilityUpdateRequestDto() {
-  }
+  public UserVisibilityUpdateRequestDto() {}
 
   /**
    * Getter for visibility
-   * 
+   *
    * @return the visibility
    */
   public VisibilityEnum getVisibility() {
@@ -25,11 +23,10 @@ public class UserVisibilityUpdateRequestDto {
 
   /**
    * Setter for visibility
-   * 
+   *
    * @param visibility the visibility
    */
   public void setVisibility(VisibilityEnum visibility) {
     this.visibility = visibility;
   }
 }
-

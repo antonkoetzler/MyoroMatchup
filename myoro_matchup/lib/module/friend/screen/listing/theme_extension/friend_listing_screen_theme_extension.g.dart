@@ -17,22 +17,33 @@ mixin _$FriendListingScreenThemeExtensionMixin on ThemeExtension<FriendListingSc
   FriendListingScreenThemeExtension get self => this as FriendListingScreenThemeExtension;
 
   @override
-  FriendListingScreenThemeExtension copyWith() {
-    return self;
+  FriendListingScreenThemeExtension copyWith({
+    EdgeInsets? bodyNonEmptyStatePadding,
+    MyoroScrollableStyle? bodyNonEmptyStateScrollableStyle,
+  }) {
+    return FriendListingScreenThemeExtension(
+      bodyNonEmptyStatePadding: bodyNonEmptyStatePadding ?? self.bodyNonEmptyStatePadding,
+      bodyNonEmptyStateScrollableStyle: bodyNonEmptyStateScrollableStyle ?? self.bodyNonEmptyStateScrollableStyle,
+    );
   }
 
   @override
   bool operator ==(Object other) {
-    return other is FriendListingScreenThemeExtension && other.runtimeType == runtimeType;
+    return other is FriendListingScreenThemeExtension &&
+        other.runtimeType == runtimeType &&
+        other.bodyNonEmptyStatePadding == self.bodyNonEmptyStatePadding &&
+        other.bodyNonEmptyStateScrollableStyle == self.bodyNonEmptyStateScrollableStyle;
   }
 
   @override
   int get hashCode {
-    return Object.hashAll(const []);
+    return Object.hash(self.bodyNonEmptyStatePadding, self.bodyNonEmptyStateScrollableStyle);
   }
 
   @override
   String toString() =>
       'FriendListingScreenThemeExtension(\n'
+      '  bodyNonEmptyStatePadding: ${self.bodyNonEmptyStatePadding},\n'
+      '  bodyNonEmptyStateScrollableStyle: ${self.bodyNonEmptyStateScrollableStyle},\n'
       ');';
 }

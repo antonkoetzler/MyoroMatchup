@@ -15,8 +15,7 @@ public class GamePriceModel {
   private Double dropInPrice;
 
   /** Default constructor. */
-  public GamePriceModel() {
-  }
+  public GamePriceModel() {}
 
   /** Constructor with all fields. */
   public GamePriceModel(Double monthlyPrice, Double dropInPrice) {
@@ -26,7 +25,7 @@ public class GamePriceModel {
 
   /**
    * Getter for monthlyPrice
-   * 
+   *
    * @return the monthly price
    */
   public Double getMonthlyPrice() {
@@ -35,7 +34,7 @@ public class GamePriceModel {
 
   /**
    * Getter for dropInPrice
-   * 
+   *
    * @return the drop in price
    */
   public Double getDropInPrice() {
@@ -44,7 +43,7 @@ public class GamePriceModel {
 
   /**
    * Setter for monthlyPrice
-   * 
+   *
    * @param monthlyPrice the monthly price
    */
   public void setMonthlyPrice(Double monthlyPrice) {
@@ -53,7 +52,7 @@ public class GamePriceModel {
 
   /**
    * Setter for dropInPrice
-   * 
+   *
    * @param dropInPrice the drop in price
    */
   public void setDropInPrice(Double dropInPrice) {

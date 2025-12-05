@@ -3,12 +3,14 @@ import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Root [Widget] of the application.
-final class App extends StatelessWidget {
-  const App({super.key});
+final class Root extends StatelessWidget {
+  /// Default constructor.
+  const Root({super.key});
 
+  /// Build function.
   @override
   Widget build(context) {
-    final appRouter = getIt<AppRouter>();
+    final appRouter = getIt<MmRouter>();
     final router = appRouter.router;
 
     return MyoroApp(

@@ -7,6 +7,10 @@ part '../_widget/_app_bar.dart';
 part '../_widget/_body.dart';
 part '../_widget/_body_empty_state.dart';
 part '../_widget/_body_non_empty_state.dart';
+part '../_widget/_body_non_empty_state_item.dart';
+part '../_widget/_body_non_empty_state_filters.dart';
+part '../_widget/_body_non_empty_state_filters_status_filter.dart';
+part '../_widget/_accept_friend_request_confirmation_bottom_sheet.dart';
 
 /// Friend listing screen.
 final class FriendListingScreen extends StatelessWidget {

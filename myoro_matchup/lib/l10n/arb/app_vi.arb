@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "Đã hết hạn",
   "invitationStatusEnumCancelledLabel": "Đã hủy",
 
+  "friendRequestStatusEnumPendingLabel": "Đang chờ",
+  "friendRequestStatusEnumAcceptedLabel": "Đã chấp nhận",
+  "friendRequestStatusEnumRejectedLabel": "Đã từ chối",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "Không thể lấy chi tiết trò chơi!",
   "invitationListingScreenAppBarTitle": "Lời mời",
   "friendListingScreenAppBarTitle": "Bạn bè",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "Không tìm thấy lời mời!",
+  "friendListingScreenBodyEmptyTitle": "Không tìm thấy bạn bè!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Tin nhắn",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Trạng thái",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Chấp nhận",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "Trạng thái",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Từ chối",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Thông tin",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Người chơi",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "Chặn",
   "sendFriendRequestConfirmationBottomSheetTitle": "Gửi Lời mời kết bạn",
   "sendFriendRequestConfirmationBottomSheetMessage": "Bạn có chắc chắn muốn gửi lời mời kết bạn cho người dùng này không?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "Chấp nhận Lời mời kết bạn",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "Bạn có chắc chắn muốn chấp nhận lời mời kết bạn này không?",
   "blockUserConfirmationBottomSheetTitle": "Chặn Người dùng",
   "blockUserConfirmationBottomSheetMessage": "Bạn có chắc chắn muốn chặn người dùng này không?",
   "unblockUserConfirmationBottomSheetTitle": "Bỏ chặn Người dùng",
   "unblockUserConfirmationBottomSheetMessage": "Bạn có chắc chắn muốn bỏ chặn người dùng này không?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "Xóa Tài khoản",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "Bạn có chắc chắn muốn xóa tài khoản của mình không? Hành động này không thể hoàn tác.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Lỗi khi lấy trò chơi!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Quốc gia không thể để trống.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Các trường mật khẩu không thể để trống.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Mật khẩu không khớp.",
+  "loginSignupScreenForgotPasswordDialogTitle": "Quên mật khẩu",
+  "loginSignupScreenForgotPasswordDialogMessage": "Nhập địa chỉ email của bạn và chúng tôi sẽ gửi cho bạn một liên kết để đặt lại mật khẩu.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Vui lòng nhập địa chỉ email hợp lệ.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Tạo trò chơi",
   "mmAppBarMenuDrawerFriendListingText": "Bạn bè",
-  "mmAppBarMenuDrawerInvitationListingText": "Lời mời"
+  "mmAppBarMenuDrawerInvitationListingText": "Lời mời",
+  "mmAppBarMenuDrawerLogoutText": "Đăng xuất"
 }
 

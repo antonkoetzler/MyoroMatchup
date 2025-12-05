@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
@@ -213,11 +212,7 @@ final class GameCreationScreenViewModel {
 
       _state.request = _state.request.createSuccessState(id);
     } catch (e, s) {
-      if (kDebugMode) {
-        print('[GameCreationScreenViewModel.onFinish]: Error: $e');
-        print('[GameCreationScreenViewModel.onFinish]: Stack trace:\n$s');
-      }
-
+      await MmLogger.error('[GameCreationScreenViewModel.onFinish]: Failed to create game.', e, s);
       _state.request = _state.request.createErrorState(e.toString());
     }
   }
@@ -267,8 +262,8 @@ final class GameCreationScreenViewModel {
           ),
         );
         Future.delayed(kSuccessNavigationDelayDuration).then((_) {
-          AppRouter.pop();
-          AppRouter.push(Routes.gameRoutes.gameDetailsScreen.navigate(request.data!));
+          MmRouter.pop();
+          MmRouter.push(Routes.gameRoutes.gameDetailsScreen.navigate(request.data!));
         });
         break;
       case MyoroRequestEnum.error:

@@ -1,12 +1,10 @@
 package com.myoro.myoro_matchup_api.model;
 
-import java.time.LocalTime;
-
 import com.myoro.myoro_matchup_api.enums.DayEnum;
 import com.myoro.myoro_matchup_api.enums.GameFrequencyEnum;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import java.time.LocalTime;
 
 /** Game frequency model. */
 @Embeddable
@@ -40,12 +38,17 @@ public class GameFrequencyDayTimeModel {
   private LocalTime biWeeklyEndTime;
 
   /** Default constructor. */
-  public GameFrequencyDayTimeModel() {
-  }
+  public GameFrequencyDayTimeModel() {}
 
   /** Constructor with all fields. */
-  public GameFrequencyDayTimeModel(GameFrequencyEnum frequency, DayEnum primaryDay, DayEnum biWeeklyDay,
-      LocalTime primaryStartTime, LocalTime primaryEndTime, LocalTime biWeeklyStartTime, LocalTime biWeeklyEndTime) {
+  public GameFrequencyDayTimeModel(
+      GameFrequencyEnum frequency,
+      DayEnum primaryDay,
+      DayEnum biWeeklyDay,
+      LocalTime primaryStartTime,
+      LocalTime primaryEndTime,
+      LocalTime biWeeklyStartTime,
+      LocalTime biWeeklyEndTime) {
     this.frequency = frequency;
     this.primaryDay = primaryDay;
     this.biWeeklyDay = biWeeklyDay;
@@ -57,7 +60,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Getter for frequency
-   * 
+   *
    * @return the frequency of the game
    */
   public GameFrequencyEnum getFrequency() {
@@ -66,7 +69,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Getter for primaryDay
-   * 
+   *
    * @return the primary day of the game
    */
   public DayEnum getPrimaryDay() {
@@ -75,7 +78,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Getter for biWeeklyDay
-   * 
+   *
    * @return the bi-weekly day of the game
    */
   public DayEnum getBiWeeklyDay() {
@@ -84,7 +87,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Getter for primaryStartTime
-   * 
+   *
    * @return the primary start time of the game
    */
   public LocalTime getPrimaryStartTime() {
@@ -93,7 +96,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Getter for primaryEndTime
-   * 
+   *
    * @return the primary end time of the game
    */
   public LocalTime getPrimaryEndTime() {
@@ -102,7 +105,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Getter for biWeeklyStartTime
-   * 
+   *
    * @return the bi-weekly start time of the game
    */
   public LocalTime getBiWeeklyStartTime() {
@@ -111,7 +114,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Getter for biWeeklyEndTime
-   * 
+   *
    * @return the bi-weekly end time of the game
    */
   public LocalTime getBiWeeklyEndTime() {
@@ -120,7 +123,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Setter for frequency
-   * 
+   *
    * @param frequency the frequency of the game
    */
   public void setFrequency(GameFrequencyEnum frequency) {
@@ -129,7 +132,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Setter for primaryDay
-   * 
+   *
    * @param primaryDay the primary day of the game
    */
   public void setPrimaryDay(DayEnum primaryDay) {
@@ -138,7 +141,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Setter for biWeeklyDay
-   * 
+   *
    * @param biWeeklyDay the bi-weekly day of the game
    */
   public void setBiWeeklyDay(DayEnum biWeeklyDay) {
@@ -147,7 +150,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Setter for primaryStartTime
-   * 
+   *
    * @param primaryStartTime the primary start time of the game
    */
   public void setPrimaryStartTime(LocalTime primaryStartTime) {
@@ -156,7 +159,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Setter for primaryEndTime
-   * 
+   *
    * @param primaryEndTime the primary end time of the game
    */
   public void setPrimaryEndTime(LocalTime primaryEndTime) {
@@ -165,7 +168,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Setter for biWeeklyStartTime
-   * 
+   *
    * @param biWeeklyStartTime the bi-weekly start time of the game
    */
   public void setBiWeeklyStartTime(LocalTime biWeeklyStartTime) {
@@ -174,7 +177,7 @@ public class GameFrequencyDayTimeModel {
 
   /**
    * Setter for biWeeklyEndTime
-   * 
+   *
    * @param biWeeklyEndTime the bi-weekly end time of the game
    */
   public void setBiWeeklyEndTime(LocalTime biWeeklyEndTime) {

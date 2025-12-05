@@ -31,4 +31,9 @@ final class SharedPreferencesService {
       await _sharedPreferencesRepository.remove(_loggedInUserKey);
     }
   }
+
+  /// Removes the logged in user.
+  Future<void> removeLoggedInUser() async {
+    await _sharedPreferencesRepository.remove(_loggedInUserKey);
+  }
 }

@@ -1,11 +1,5 @@
 package com.myoro.myoro_matchup_api.service;
 
-import java.util.List;
-import java.util.stream.Collectors;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.myoro.myoro_matchup_api.dto.GameAgeRangeDto;
 import com.myoro.myoro_matchup_api.dto.GameCreationRequestDto;
 import com.myoro.myoro_matchup_api.dto.GameFrequencyDayTimeDto;
@@ -13,35 +7,39 @@ import com.myoro.myoro_matchup_api.dto.GamePlayerResponseDto;
 import com.myoro.myoro_matchup_api.dto.GamePriceDto;
 import com.myoro.myoro_matchup_api.dto.GameResponseDto;
 import com.myoro.myoro_matchup_api.dto.LocationDto;
-import com.myoro.myoro_matchup_api.model.GameModel;
-import com.myoro.myoro_matchup_api.repository.GameRepository;
-import com.myoro.myoro_matchup_api.repository.UserRepository;
-import com.myoro.myoro_matchup_api.model.GamePriceModel;
 import com.myoro.myoro_matchup_api.model.GameAgeRangeModel;
 import com.myoro.myoro_matchup_api.model.GameFrequencyDayTimeModel;
+import com.myoro.myoro_matchup_api.model.GameModel;
+import com.myoro.myoro_matchup_api.model.GamePriceModel;
 import com.myoro.myoro_matchup_api.model.LocationModel;
 import com.myoro.myoro_matchup_api.model.UserModel;
+import com.myoro.myoro_matchup_api.repository.GameRepository;
+import com.myoro.myoro_matchup_api.repository.UserRepository;
 import com.myoro.myoro_matchup_api.util.DtoMapper;
+import java.util.List;
+import java.util.stream.Collectors;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /** Game service. */
 @Service
 public class GameService {
   /** Game repository. */
-  @Autowired
-  private GameRepository gameRepository;
+  @Autowired private GameRepository gameRepository;
 
   /** Message service for localization and internationalization. */
-  @Autowired
-  private MessageService messageService;
+  @Autowired private MessageService messageService;
 
   /** User repository. */
-  @Autowired
-  private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
   /** Creates a game. */
   public Long create(GameCreationRequestDto request, Long userId) {
-    UserModel owner = userRepository.findById(userId)
-        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    UserModel owner =
+        userRepository
+            .findById(userId)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     GameModel game = new GameModel();
     game.setName(request.getName());
@@ -79,22 +77,26 @@ public class GameService {
 
   /** Get all games. */
   public List<GameResponseDto> getAll() {
-    return gameRepository.findAll().stream()
-        .map(this::toDto)
-        .collect(Collectors.toList());
+    return gameRepository.findAll().stream().map(this::toDto).collect(Collectors.toList());
   }
 
   /** Get a game by id. */
   public GameResponseDto getById(Long id) {
-    GameModel game = gameRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    GameModel game =
+        gameRepository
+            .findById(id)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
     return toDto(game);
   }
 
   /** Get players of a game by game id. */
   public List<GamePlayerResponseDto> getPlayersByGameId(Long id) {
-    GameModel game = gameRepository.findById(id)
-        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    GameModel game =
+        gameRepository
+            .findById(id)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
 
     if (game.getPlayers() == null) {
       return List.of();
@@ -107,7 +109,7 @@ public class GameService {
 
   /**
    * Converts GameModel to GameResponseDto.
-   * 
+   *
    * @param game the game model
    * @return the game response DTO
    */
@@ -168,16 +170,22 @@ public class GameService {
 
   /** Set WhatsApp group chat link for a game. */
   public void setWhatsAppGroupChatLink(Long gameId, String link) {
-    GameModel game = gameRepository.findById(gameId)
-        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    GameModel game =
+        gameRepository
+            .findById(gameId)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
     game.setWhatsAppGroupChatLink(link);
     gameRepository.save(game);
   }
 
   /** Set use WhatsApp group chat bot flag for a game. */
   public void setUseWhatsAppGroupChatBot(Long gameId, Boolean useBot) {
-    GameModel game = gameRepository.findById(gameId)
-        .orElseThrow(() -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    GameModel game =
+        gameRepository
+            .findById(gameId)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
     game.setUseWhatsAppGroupChatBot(useBot);
     gameRepository.save(game);
   }

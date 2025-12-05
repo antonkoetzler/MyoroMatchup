@@ -17,7 +17,7 @@ final class _BackButton extends StatelessWidget {
       icon: backButtonIcon,
       onTapUp: (_, _) {
         _onBack?.call();
-        AppRouter.pop();
+        MmRouter.pop();
       },
     );
   }

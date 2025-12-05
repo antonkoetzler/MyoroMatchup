@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "منتهي الصلاحية",
   "invitationStatusEnumCancelledLabel": "ملغي",
 
+  "friendRequestStatusEnumPendingLabel": "قيد الانتظار",
+  "friendRequestStatusEnumAcceptedLabel": "مقبول",
+  "friendRequestStatusEnumRejectedLabel": "مرفوض",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "فشل في استرداد تفاصيل اللعبة!",
   "invitationListingScreenAppBarTitle": "الدعوات",
   "friendListingScreenAppBarTitle": "الأصدقاء",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "لم يتم العثور على دعوات!",
+  "friendListingScreenBodyEmptyTitle": "لم يتم العثور على أصدقاء!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "رسالة",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "الحالة",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "قبول",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "الحالة",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "رفض",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "معلومات",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "اللاعبون",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "حظر",
   "sendFriendRequestConfirmationBottomSheetTitle": "إرسال طلب صداقة",
   "sendFriendRequestConfirmationBottomSheetMessage": "هل أنت متأكد من أنك تريد إرسال طلب صداقة إلى هذا المستخدم؟",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "قبول طلب صداقة",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "هل أنت متأكد من أنك تريد قبول طلب الصداقة هذا؟",
   "blockUserConfirmationBottomSheetTitle": "حظر المستخدم",
   "blockUserConfirmationBottomSheetMessage": "هل أنت متأكد من أنك تريد حظر هذا المستخدم؟",
   "unblockUserConfirmationBottomSheetTitle": "إلغاء حظر المستخدم",
   "unblockUserConfirmationBottomSheetMessage": "هل أنت متأكد من أنك تريد إلغاء حظر هذا المستخدم؟",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "حذف الحساب",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "هل أنت متأكد من أنك تريد حذف حسابك؟ لا يمكن التراجع عن هذا الإجراء.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "خطأ في استرداد الألعاب!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "لا يمكن أن تكون الدولة فارغة.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "لا يمكن أن تكون حقول كلمة المرور فارغة.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "كلمات المرور غير متطابقة.",
+  "loginSignupScreenForgotPasswordDialogTitle": "نسيت كلمة المرور",
+  "loginSignupScreenForgotPasswordDialogMessage": "أدخل عنوان بريدك الإلكتروني وسنرسل لك رابطًا لإعادة تعيين كلمة المرور.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "البريد الإلكتروني",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "يرجى إدخال عنوان بريد إلكتروني صحيح.",
 
   "mmAppBarMenuDrawerTitle": "القائمة",
   "mmAppBarMenuDrawerCreateGameText": "إنشاء لعبة",
   "mmAppBarMenuDrawerFriendListingText": "الأصدقاء",
-  "mmAppBarMenuDrawerInvitationListingText": "الدعوات"
+  "mmAppBarMenuDrawerInvitationListingText": "الدعوات",
+  "mmAppBarMenuDrawerLogoutText": "تسجيل الخروج"
 }
 

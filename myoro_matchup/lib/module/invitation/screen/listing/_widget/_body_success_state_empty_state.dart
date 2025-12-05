@@ -5,6 +5,7 @@ final class _BodySuccessStateEmptyState extends StatelessWidget {
   /// Default constructor.
   const _BodySuccessStateEmptyState();
 
+  /// Build function.
   @override
   Widget build(context) {
     final invitationListingScreenBodySuccessStateEmptyTitle =

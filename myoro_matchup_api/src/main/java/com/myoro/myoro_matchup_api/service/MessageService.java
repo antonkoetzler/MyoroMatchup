@@ -9,12 +9,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class MessageService {
   /** Spring message source for internationalization */
-  @Autowired
-  private MessageSource messageSource;
+  @Autowired private MessageSource messageSource;
 
   /**
    * Retrieves localized message by key
-   * 
+   *
    * @param key the message key to retrieve
    * @return localized message string
    */
@@ -24,7 +23,7 @@ public class MessageService {
 
   /**
    * Retrieves localized message by key with parameters
-   * 
+   *
    * @param key the message key to retrieve
    * @param args the arguments to substitute in the message
    * @return localized message string

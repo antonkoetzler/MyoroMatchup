@@ -1,8 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
-/**
- * Standard error response class for consistent API error formatting.
- */
+/** Standard error response class for consistent API error formatting. */
 public class ErrorResponseDto {
   /** Error type or category. */
   private String error;
@@ -11,13 +9,12 @@ public class ErrorResponseDto {
   private String message;
 
   /** Default constructor for JSON deserialization. */
-  public ErrorResponseDto() {
-  }
+  public ErrorResponseDto() {}
 
   /**
    * Creates a new error response with the specified error type and message.
-   * 
-   * @param error   the error type or category
+   *
+   * @param error the error type or category
    * @param message the detailed error message
    */
   public ErrorResponseDto(final String error, final String message) {

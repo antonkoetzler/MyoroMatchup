@@ -25,14 +25,16 @@ final class _LocationEditingBottomSheet extends StatelessWidget {
         );
       },
       onSuccess: (_) {
-        AppRouter.pop();
+        MmRouter.pop();
       },
       title: userDetailsScreenLocationEditingBottomSheetTitle,
-      child: _LocationEditingBottomSheet._((country, region, city) {
-        countryController.value = country;
-        regionController.value = region;
-        cityController.value = city;
-      }),
+      builder: (_, _) {
+        return _LocationEditingBottomSheet._((country, region, city) {
+          countryController.value = country;
+          regionController.value = region;
+          cityController.value = city;
+        });
+      },
     ).then((_) {
       countryController.dispose();
       regionController.dispose();

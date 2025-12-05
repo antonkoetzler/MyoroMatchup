@@ -2,29 +2,27 @@
 
 ## In progress
 
-- In app payments and paywall
-  - (**IN PROGRESS**) Setup Google Play Store and App Store subscription
-  - Setup Apple Store subscription
-  - Setup `in_app_purchase` package and paywalls
+- `STAGELOG.md`/`CHANGELOG.md` and deploy script
+- `myoro_matchup`
+  - In app payments and paywall
+    - (**IN PROGRESS**) Setup Google Play Store and App Store subscription
+    - Setup Apple Store subscription
+    - Setup `in_app_purchase` package and paywalls
 
 ## List
 
-- Get second desktop setup as server and get refine env setup
-- `myoro_matchup_api`
-  - Endpoint to delete a user
-  - Encrypt traffic
-  - Password encryption logic
-  - Migration system
-  - Formatter and linting settings/tasks
-  - Automatic seeder
-  - Automatic postman/hoppscotch style documentation
-  - Other things that aren't working
-- `myoro_matchup`
-  - Sentry & logger
-  - `STAGELOG.md`/`CHANGELOG.md` and deploy script
-  - Whatsapp bot
-  - Other things that aren't working
+- Setup prod server and second desktop
+- Get a second SIM and start Whatsapp bot
+- UAT
+  - Sentry
+  - Login
+  - Signup
+  - Forgot password
+  - Swagger and making sure every endpoint is interactive and gucci
 - Documentation on Notion
   - Backend
     - CORS
+  - Frontend
+    - Design system
+    - Link my Flutter bible (finish that)
 - Ship

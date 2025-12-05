@@ -1,5 +1,7 @@
 export 'http/exports.dart';
-export 'app/exports.dart';
+export 'initialization/exports.dart';
+export 'log/exports.dart';
+export 'root/exports.dart';
 export 'auth/exports.dart';
 export 'dependency_injection/exports.dart';
 export 'environment/exports.dart';

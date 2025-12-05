@@ -1,0 +1,34 @@
+name: Frontend Format Check
+
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+jobs:
+  format-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.8.1'
+
+      - name: Get dependencies
+        working-directory: myoro_matchup
+        run: flutter pub get
+
+      - name: Format and fix files
+        working-directory: myoro_matchup
+        run: |
+          dart format . --line-length 120 --set-exit-if-changed
+          dart fix --apply
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Files were formatted or fixed. Please run 'dart format' and 'dart fix --apply' locally."
+            git diff
+            exit 1
+          fi
+

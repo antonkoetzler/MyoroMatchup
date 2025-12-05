@@ -2,7 +2,6 @@ package com.myoro.myoro_matchup_api.dto;
 
 import com.myoro.myoro_matchup_api.enums.CountryEnum;
 import com.myoro.myoro_matchup_api.util.ValidationConstants;
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,7 +12,10 @@ import jakarta.validation.constraints.Size;
 public class SignupRequestDto {
   /** Username. */
   @NotBlank(message = "{validation.username.required}")
-  @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, max = ValidationConstants.MAX_USERNAME_LENGTH, message = "{validation.username.length}")
+  @Size(
+      min = ValidationConstants.MIN_USERNAME_LENGTH,
+      max = ValidationConstants.MAX_USERNAME_LENGTH,
+      message = "{validation.username.length}")
   @Pattern(regexp = ValidationConstants.USERNAME_PATTERN, message = "{validation.username.pattern}")
   private String username;
 
@@ -37,8 +39,7 @@ public class SignupRequestDto {
   private String password;
 
   /** Default constructor. */
-  public SignupRequestDto() {
-  }
+  public SignupRequestDto() {}
 
   /** Constructor with all fields. */
   public SignupRequestDto(String username, String name, String email, String password) {
@@ -50,7 +51,7 @@ public class SignupRequestDto {
 
   /**
    * Getter for username
-   * 
+   *
    * @return the username
    */
   public String getUsername() {
@@ -59,7 +60,7 @@ public class SignupRequestDto {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the name
    */
   public String getName() {
@@ -68,7 +69,7 @@ public class SignupRequestDto {
 
   /**
    * Getter for email
-   * 
+   *
    * @return the email
    */
   public String getEmail() {
@@ -77,7 +78,7 @@ public class SignupRequestDto {
 
   /**
    * Getter for country
-   * 
+   *
    * @return the country
    */
   public CountryEnum getCountry() {
@@ -86,7 +87,7 @@ public class SignupRequestDto {
 
   /**
    * Getter for password
-   * 
+   *
    * @return the password
    */
   public String getPassword() {

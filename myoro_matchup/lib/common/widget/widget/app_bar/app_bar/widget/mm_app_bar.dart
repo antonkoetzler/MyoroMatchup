@@ -51,7 +51,7 @@ class MmAppBar extends StatelessWidget implements PreferredSizeWidget {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [if (AppRouter.canPop()) _BackButton(onBack) else const _Logo(), const _MenuButton()],
+            children: [if (MmRouter.canPop()) _BackButton(onBack) else const _Logo(), const _MenuButton()],
           ),
           if (title.isNotEmpty) Positioned(child: _Title(title)),
         ],

@@ -1,8 +1,7 @@
 package com.myoro.myoro_matchup_api.model;
 
-import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
-
+import com.myoro.myoro_matchup_api.enums.VisibilityEnum;
 import jakarta.persistence.AttributeOverride;
 import jakarta.persistence.AttributeOverrides;
 import jakarta.persistence.Column;
@@ -16,7 +15,6 @@ import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
-
 import java.util.List;
 
 /** Game model. */
@@ -42,23 +40,24 @@ public class GameModel {
   private SportsEnum sport;
 
   /** Frequency of the game. */
-  @Embedded
-  private GameFrequencyDayTimeModel frequencyDayTime;
+  @Embedded private GameFrequencyDayTimeModel frequencyDayTime;
 
   /** Price of the game. */
-  @Embedded
-  private GamePriceModel price;
+  @Embedded private GamePriceModel price;
 
   /** Age range of the game. */
-  @Embedded
-  private GameAgeRangeModel ageRange;
+  @Embedded private GameAgeRangeModel ageRange;
 
   /** Location of the game. */
   @Embedded
   @AttributeOverrides({
-      @AttributeOverride(name = "name", column = @Column(name = "location_name", nullable = false)),
-      @AttributeOverride(name = "address.city", column = @Column(name = "location_city", nullable = false)),
-      @AttributeOverride(name = "address.country", column = @Column(name = "location_country", nullable = true))
+    @AttributeOverride(name = "name", column = @Column(name = "location_name", nullable = false)),
+    @AttributeOverride(
+        name = "address.city",
+        column = @Column(name = "location_city", nullable = false)),
+    @AttributeOverride(
+        name = "address.country",
+        column = @Column(name = "location_country", nullable = true))
   })
   private LocationModel location;
 
@@ -76,7 +75,10 @@ public class GameModel {
 
   /** Players in the game. */
   @ManyToMany
-  @JoinTable(name = "game_players", joinColumns = @JoinColumn(name = "game_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
+  @JoinTable(
+      name = "game_players",
+      joinColumns = @JoinColumn(name = "game_id"),
+      inverseJoinColumns = @JoinColumn(name = "user_id"))
   private List<UserModel> players;
 
   /** WhatsApp group chat invite link. */
@@ -88,8 +90,7 @@ public class GameModel {
   private Boolean useWhatsAppGroupChatBot = false;
 
   /** Default constructor. */
-  public GameModel() {
-  }
+  public GameModel() {}
 
   /** Constructor with all fields. */
   public GameModel(String name, SportsEnum sport, GameFrequencyDayTimeModel frequencyDayTime) {
@@ -100,7 +101,7 @@ public class GameModel {
 
   /**
    * Getter for id
-   * 
+   *
    * @return the game ID
    */
   public Long getId() {
@@ -109,7 +110,7 @@ public class GameModel {
 
   /**
    * Getter for owner
-   * 
+   *
    * @return the user that owns the game
    */
   public UserModel getOwner() {
@@ -118,7 +119,7 @@ public class GameModel {
 
   /**
    * Getter for name
-   * 
+   *
    * @return the game name
    */
   public String getName() {
@@ -127,7 +128,7 @@ public class GameModel {
 
   /**
    * Getter for sport
-   * 
+   *
    * @return the sport being played
    */
   public SportsEnum getSport() {
@@ -136,7 +137,7 @@ public class GameModel {
 
   /**
    * Getter for frequencyDayTime
-   * 
+   *
    * @return the frequency and day time of the game
    */
   public GameFrequencyDayTimeModel getFrequencyDayTime() {
@@ -145,7 +146,7 @@ public class GameModel {
 
   /**
    * Getter for price
-   * 
+   *
    * @return the price of the game
    */
   public GamePriceModel getPrice() {
@@ -154,7 +155,7 @@ public class GameModel {
 
   /**
    * Getter for ageRange
-   * 
+   *
    * @return the age range of the game
    */
   public GameAgeRangeModel getAgeRange() {
@@ -163,7 +164,7 @@ public class GameModel {
 
   /**
    * Getter for location
-   * 
+   *
    * @return the location of the game
    */
   public LocationModel getLocation() {
@@ -172,7 +173,7 @@ public class GameModel {
 
   /**
    * Getter for visibility
-   * 
+   *
    * @return the visibility of the game
    */
   public VisibilityEnum getVisibility() {
@@ -181,7 +182,7 @@ public class GameModel {
 
   /**
    * Getter for profilePicture
-   * 
+   *
    * @return the profile picture of the game
    */
   public String getProfilePicture() {
@@ -190,7 +191,7 @@ public class GameModel {
 
   /**
    * Getter for banner
-   * 
+   *
    * @return the banner of the game
    */
   public String getBanner() {
@@ -199,7 +200,7 @@ public class GameModel {
 
   /**
    * Getter for players
-   * 
+   *
    * @return the players in the game
    */
   public List<UserModel> getPlayers() {
@@ -208,7 +209,7 @@ public class GameModel {
 
   /**
    * Setter for id
-   * 
+   *
    * @param id the game ID
    */
   public void setId(Long id) {
@@ -217,7 +218,7 @@ public class GameModel {
 
   /**
    * Setter for owner
-   * 
+   *
    * @param owner the user that owns the game
    */
   public void setOwner(UserModel owner) {
@@ -226,7 +227,7 @@ public class GameModel {
 
   /**
    * Setter for name
-   * 
+   *
    * @param name the game name
    */
   public void setName(String name) {
@@ -235,7 +236,7 @@ public class GameModel {
 
   /**
    * Setter for sport
-   * 
+   *
    * @param sport the sport being played
    */
   public void setSport(SportsEnum sport) {
@@ -244,7 +245,7 @@ public class GameModel {
 
   /**
    * Setter for frequencyDayTime
-   * 
+   *
    * @param frequencyDayTime the frequency and day time of the game
    */
   public void setFrequencyDayTime(GameFrequencyDayTimeModel frequencyDayTime) {
@@ -253,7 +254,7 @@ public class GameModel {
 
   /**
    * Setter for price
-   * 
+   *
    * @param price the price of the game
    */
   public void setPrice(GamePriceModel price) {
@@ -262,7 +263,7 @@ public class GameModel {
 
   /**
    * Setter for ageRange
-   * 
+   *
    * @param ageRange the age range of the game
    */
   public void setAgeRange(GameAgeRangeModel ageRange) {
@@ -271,7 +272,7 @@ public class GameModel {
 
   /**
    * Setter for location
-   * 
+   *
    * @param location the location of the game
    */
   public void setLocation(LocationModel location) {
@@ -280,7 +281,7 @@ public class GameModel {
 
   /**
    * Setter for visibility
-   * 
+   *
    * @param visibility the visibility of the game
    */
   public void setVisibility(VisibilityEnum visibility) {
@@ -289,7 +290,7 @@ public class GameModel {
 
   /**
    * Setter for profilePicture
-   * 
+   *
    * @param profilePicture the profile picture of the game
    */
   public void setProfilePicture(String profilePicture) {
@@ -298,7 +299,7 @@ public class GameModel {
 
   /**
    * Setter for banner
-   * 
+   *
    * @param banner the banner of the game
    */
   public void setBanner(String banner) {
@@ -307,7 +308,7 @@ public class GameModel {
 
   /**
    * Setter for players
-   * 
+   *
    * @param players the players in the game
    */
   public void setPlayers(List<UserModel> players) {
@@ -316,7 +317,7 @@ public class GameModel {
 
   /**
    * Getter for whatsAppGroupChatLink
-   * 
+   *
    * @return the WhatsApp group chat invite link
    */
   public String getWhatsAppGroupChatLink() {
@@ -325,7 +326,7 @@ public class GameModel {
 
   /**
    * Setter for whatsAppGroupChatLink
-   * 
+   *
    * @param whatsAppGroupChatLink the WhatsApp group chat invite link
    */
   public void setWhatsAppGroupChatLink(String whatsAppGroupChatLink) {
@@ -334,7 +335,7 @@ public class GameModel {
 
   /**
    * Getter for useWhatsAppGroupChatBot
-   * 
+   *
    * @return whether to use the WhatsApp group chat bot
    */
   public Boolean getUseWhatsAppGroupChatBot() {
@@ -343,7 +344,7 @@ public class GameModel {
 
   /**
    * Setter for useWhatsAppGroupChatBot
-   * 
+   *
    * @param useWhatsAppGroupChatBot whether to use the WhatsApp group chat bot
    */
   public void setUseWhatsAppGroupChatBot(Boolean useWhatsAppGroupChatBot) {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// [GlobalKey] of [AppRouter]'s [GoRouter] of the application.
 ///

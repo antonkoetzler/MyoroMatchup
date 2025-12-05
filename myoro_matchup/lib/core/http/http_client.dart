@@ -29,36 +29,54 @@ final class HttpClient {
     Map<String, dynamic>? queryParameters,
     String baseUrl = kMyoroEmptyString,
   }) async {
-    return await _runRequest<T>(() async {
-      final uri = _buildUri(path, queryParameters: queryParameters, baseUrl: baseUrl);
-      return await _client.get(uri, headers: _baseHeaders).timeout(timeoutDuration);
-    });
+    MmLogger.info('[HttpClient.get]: "${_buildUri(path, queryParameters: queryParameters, baseUrl: baseUrl)}".');
+    return await _runRequest<T>(
+      () async => await _client
+          .get(
+            _buildUri(path, queryParameters: queryParameters, baseUrl: baseUrl),
+            headers: _baseHeaders,
+          )
+          .timeout(timeoutDuration),
+    );
   }
 
   /// Post function.
   Future<HttpClientResponse> post(String path, {Map<String, dynamic>? data, String baseUrl = kMyoroEmptyString}) async {
+    MmLogger.info('[HttpClient.post]: "${_buildUri(path, baseUrl: baseUrl)}".');
     return await _runRequest(() async {
-      final uri = _buildUri(path, baseUrl: baseUrl);
       final body = data != null ? jsonEncode(data) : null;
-      return await _client.post(uri, headers: _baseHeaders, body: body).timeout(timeoutDuration);
+      return await _client
+          .post(
+            _buildUri(path, baseUrl: baseUrl),
+            headers: _baseHeaders,
+            body: body,
+          )
+          .timeout(timeoutDuration);
     });
   }
 
   /// Put function.
   Future<HttpClientResponse> put(String path, {Map<String, dynamic>? data, String baseUrl = kMyoroEmptyString}) async {
+    MmLogger.info('[HttpClient.put]: "${_buildUri(path, baseUrl: baseUrl)}".');
     return await _runRequest(() async {
-      final uri = _buildUri(path, baseUrl: baseUrl);
       final body = data != null ? jsonEncode(data) : null;
-      return await _client.put(uri, headers: _baseHeaders, body: body).timeout(timeoutDuration);
+      return await _client
+          .put(
+            _buildUri(path, baseUrl: baseUrl),
+            headers: _baseHeaders,
+            body: body,
+          )
+          .timeout(timeoutDuration);
     });
   }
 
   /// Delete function.
   Future<HttpClientResponse> delete(String path, {String baseUrl = kMyoroEmptyString}) async {
-    return await _runRequest(() async {
-      final uri = _buildUri(path, baseUrl: baseUrl);
-      return await _client.delete(uri, headers: _baseHeaders).timeout(timeoutDuration);
-    });
+    MmLogger.info('[HttpClient.delete]: "${_buildUri(path, baseUrl: baseUrl)}".');
+    return await _runRequest(
+      () async =>
+          await _client.delete(_buildUri(path, baseUrl: baseUrl), headers: _baseHeaders).timeout(timeoutDuration),
+    );
   }
 
   /// Build URI from path and query parameters.
@@ -77,14 +95,26 @@ final class HttpClient {
       final statusCode = response.statusCode;
 
       // Throw exception if status code is greater than or equal to 400.
-      if (statusCode >= 400) throw ApiException((response.data as Map<String, dynamic>)['message']);
+      if (statusCode >= 400) {
+        final message = (response.data as Map<String, dynamic>)['message'];
+        await MmLogger.error('[HttpClient._runRequest]: Request failed with status $statusCode: $message.');
+        throw ApiException(message);
+      }
 
+      MmLogger.success('[HttpClient._runRequest]: Request succeeded with status $statusCode.');
       return response;
-    } on SocketException {
+    } on SocketException catch (e, stackTrace) {
+      await MmLogger.error('[HttpClient._runRequest]: Connection failed.', e, stackTrace);
       throw ApiException(localization.httpClientConnectionExceptionMessage);
-    } on TimeoutException {
+    } on TimeoutException catch (e, stackTrace) {
+      await MmLogger.error('[HttpClient._runRequest]: Request timeout.', e, stackTrace);
       throw ApiException(localization.httpClientConnectionExceptionMessage);
-    } catch (e) {
+    } on ApiException catch (e, stackTrace) {
+      // Re-throw ApiException but try to extract status code if available
+      await MmLogger.error('[HttpClient._runRequest]: API exception occurred.', e, stackTrace);
+      rethrow;
+    } catch (e, stackTrace) {
+      await MmLogger.error('[HttpClient._runRequest]: Unexpected error.', e, stackTrace);
       throw ApiException(e.toString());
     }
   }

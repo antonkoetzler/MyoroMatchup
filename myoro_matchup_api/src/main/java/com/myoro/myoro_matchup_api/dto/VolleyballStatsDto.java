@@ -27,7 +27,8 @@ public class VolleyballStatsDto {
   }
 
   /** Constructor with all fields. */
-  public VolleyballStatsDto(Integer rating, Integer attack, Integer blocking, Integer serving, Integer reception) {
+  public VolleyballStatsDto(
+      Integer rating, Integer attack, Integer blocking, Integer serving, Integer reception) {
     this.rating = rating;
     this.attack = attack;
     this.blocking = blocking;
@@ -85,4 +86,3 @@ public class VolleyballStatsDto {
     this.reception = reception;
   }
 }
-

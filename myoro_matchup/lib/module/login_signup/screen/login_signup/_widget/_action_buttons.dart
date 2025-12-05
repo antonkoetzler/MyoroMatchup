@@ -21,8 +21,7 @@ final class _ActionButtons extends StatelessWidget {
           Expanded(
             child: _ActionButton(
               text: localization.loginSignupScreenLoginForgotPasswordButton,
-              // TODO
-              onTapUp: () => throw UnimplementedError(),
+              onTapUp: () => _ForgotPasswordDialog.show(context),
             ),
           ),
           Expanded(

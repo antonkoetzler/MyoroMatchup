@@ -42,6 +42,10 @@
   "invitationStatusEnumExpiredLabel": "Kedaluwarsa",
   "invitationStatusEnumCancelledLabel": "Dibatalkan",
 
+  "friendRequestStatusEnumPendingLabel": "Menunggu",
+  "friendRequestStatusEnumAcceptedLabel": "Diterima",
+  "friendRequestStatusEnumRejectedLabel": "Ditolak",
+
   "gameDetailsScreenBodyErrorFeedbackTitle": "Gagal mengambil detail permainan!",
   "invitationListingScreenAppBarTitle": "Undangan",
   "friendListingScreenAppBarTitle": "Teman",
@@ -85,9 +89,11 @@
     }
   },
   "invitationListingScreenBodySuccessStateEmptyTitle": "Tidak ada undangan ditemukan!",
+  "friendListingScreenBodyEmptyTitle": "Tidak ada teman ditemukan!",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel": "Pesan",
   "invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText": "Terima",
+  "friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel": "Status",
   "invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText": "Tolak",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Pemain",
@@ -141,10 +147,14 @@
   "playerDetailsBottomSheetBlockText": "Blokir",
   "sendFriendRequestConfirmationBottomSheetTitle": "Kirim Permintaan Pertemanan",
   "sendFriendRequestConfirmationBottomSheetMessage": "Apakah Anda yakin ingin mengirim permintaan pertemanan kepada pengguna ini?",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle": "Terima Permintaan Pertemanan",
+  "friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage": "Apakah Anda yakin ingin menerima permintaan pertemanan ini?",
   "blockUserConfirmationBottomSheetTitle": "Blokir Pengguna",
   "blockUserConfirmationBottomSheetMessage": "Apakah Anda yakin ingin memblokir pengguna ini?",
   "unblockUserConfirmationBottomSheetTitle": "Buka Blokir Pengguna",
   "unblockUserConfirmationBottomSheetMessage": "Apakah Anda yakin ingin membuka blokir pengguna ini?",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetTitle": "Hapus Akun",
+  "userDetailsScreenDeleteAccountConfirmationBottomSheetMessage": "Apakah Anda yakin ingin menghapus akun Anda? Tindakan ini tidak dapat dibatalkan.",
 
   "homeScreenAppBarTitle": "Myoro Matchup",
   "homeScreenBodyErrorStateTitle": "Kesalahan saat mengambil permainan!",
@@ -230,10 +240,15 @@
   "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Negara tidak boleh kosong.",
   "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Bidang kata sandi tidak boleh kosong.",
   "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Kata sandi tidak cocok.",
+  "loginSignupScreenForgotPasswordDialogTitle": "Lupa Kata Sandi",
+  "loginSignupScreenForgotPasswordDialogMessage": "Masukkan alamat email Anda dan kami akan mengirimkan tautan untuk mereset kata sandi Anda.",
+  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
+  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Harap masukkan alamat email yang valid.",
 
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Buat Permainan",
   "mmAppBarMenuDrawerFriendListingText": "Teman",
-  "mmAppBarMenuDrawerInvitationListingText": "Undangan"
+  "mmAppBarMenuDrawerInvitationListingText": "Undangan",
+  "mmAppBarMenuDrawerLogoutText": "Keluar"
 }
 

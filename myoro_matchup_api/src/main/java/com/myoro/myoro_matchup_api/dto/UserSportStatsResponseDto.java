@@ -23,7 +23,10 @@ public class UserSportStatsResponseDto {
   }
 
   /** Constructor with all fields. */
-  public UserSportStatsResponseDto(FootballStatsDto football, FootballStatsDto futsal, FootballStatsDto fut7,
+  public UserSportStatsResponseDto(
+      FootballStatsDto football,
+      FootballStatsDto futsal,
+      FootballStatsDto fut7,
       VolleyballStatsDto volleyball) {
     this.football = football;
     this.futsal = futsal;

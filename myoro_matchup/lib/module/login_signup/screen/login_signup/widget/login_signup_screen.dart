@@ -11,6 +11,7 @@ part '../_widget/_input.dart';
 part '../_widget/_inputs.dart';
 part '../_widget/_logo.dart';
 part '../_widget/_bottom_navigation_bar.dart';
+part '../_widget/_forgot_password_dialog.dart';
 
 /// Login/signup screen.
 final class LoginSignupScreen extends StatelessWidget {

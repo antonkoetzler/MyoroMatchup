@@ -26,12 +26,16 @@ final class LoginSignupScreenState {
   /// [LoginSignupScreenEnum.signup] state.
   final _signupState = LoginSignupScreenSignupState();
 
+  /// Forgot password [TextEditingController].
+  final _forgotPasswordEmailController = TextEditingController();
+
   /// Dispose function.
   void dispose() {
     _formTypeController.dispose();
     _formController.dispose();
     _loginState.dispose();
     _signupState.dispose();
+    _forgotPasswordEmailController.dispose();
   }
 
   /// [_formTypeController] getter.
@@ -57,5 +61,15 @@ final class LoginSignupScreenState {
   /// [_signupState] getter.
   LoginSignupScreenSignupState get signupState {
     return _signupState;
+  }
+
+  /// [_forgotPasswordEmailController] getter.
+  TextEditingController get forgotPasswordEmailController {
+    return _forgotPasswordEmailController;
+  }
+
+  /// Getter of [_forgotPasswordEmailController]'s [TextEditingController.text].
+  String get forgotPasswordEmail {
+    return _forgotPasswordEmailController.text;
   }
 }

@@ -60,4 +60,3 @@ final class FriendRequestResponseDto with _$FriendRequestResponseDtoMixin {
   /// When the recipient responded.
   final DateTime? respondedAt;
 }
-

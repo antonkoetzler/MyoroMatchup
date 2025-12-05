@@ -31,11 +31,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'Континент';
 
   @override
-  String mmLocationInputItemCityCountryText(
-    String city,
-    String emoji,
-    String countryName,
-  ) {
+  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
     return '$city, $emoji $countryName';
   }
 
@@ -85,8 +81,16 @@ class AppLocalizationsRu extends AppLocalizations {
   String get invitationStatusEnumCancelledLabel => 'Отменено';
 
   @override
-  String get gameDetailsScreenBodyErrorFeedbackTitle =>
-      'Не удалось получить детали игры!';
+  String get friendRequestStatusEnumPendingLabel => 'В ожидании';
+
+  @override
+  String get friendRequestStatusEnumAcceptedLabel => 'Принято';
+
+  @override
+  String get friendRequestStatusEnumRejectedLabel => 'Отклонено';
+
+  @override
+  String get gameDetailsScreenBodyErrorFeedbackTitle => 'Не удалось получить детали игры!';
 
   @override
   String get invitationListingScreenAppBarTitle => 'Приглашения';
@@ -99,19 +103,13 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
-      'true': 'Подписан',
-      'other': 'Не подписан',
-    });
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': 'Подписан', 'other': 'Не подписан'});
     return '$_temp0';
   }
 
   @override
   String bodySubscriptionStatusLabel(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
-      'true': 'Подписан',
-      'other': 'Не подписан',
-    });
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': 'Подписан', 'other': 'Не подписан'});
     return 'Статус подписки: $_temp0';
   }
 
@@ -119,8 +117,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get bodySubscriptionStatusButtonText => 'Подписаться';
 
   @override
-  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
-      'Изменить Видимость Профиля';
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle => 'Изменить Видимость Профиля';
 
   @override
   String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
@@ -139,43 +136,35 @@ class AppLocalizationsRu extends AppLocalizations {
   String get userDetailsScreenBodyLocationCityLabel => 'Город';
 
   @override
-  String get userDetailsScreenLocationEditingBottomSheetTitle =>
-      'Изменить Местоположение';
+  String get userDetailsScreenLocationEditingBottomSheetTitle => 'Изменить Местоположение';
 
   @override
-  String userLocationResponseDtoFormattedLocation(
-    String city,
-    String state,
-    String country,
-  ) {
+  String userLocationResponseDtoFormattedLocation(String city, String state, String country) {
     String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
 
   @override
-  String get invitationListingScreenBodySuccessStateEmptyTitle =>
-      'Приглашения не найдены!';
+  String get invitationListingScreenBodySuccessStateEmptyTitle => 'Приглашения не найдены!';
 
   @override
-  String
-  get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel =>
-      'Сообщение';
+  String get friendListingScreenBodyEmptyTitle => 'Друзья не найдены!';
 
   @override
-  String
-  get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel =>
-      'Статус';
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Сообщение';
 
   @override
-  String
-  get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText =>
-      'Принять';
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Статус';
 
   @override
-  String
-  get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText =>
-      'Отклонить';
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Принять';
+
+  @override
+  String get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel => 'Статус';
+
+  @override
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Отклонить';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Инфо';
@@ -184,110 +173,76 @@ class AppLocalizationsRu extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Игроки';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText =>
-      'Пригласить игрока';
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'Пригласить игрока';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetTitleText =>
-      'Пригласить игрока';
+  String get gameDetailsScreenInvitationBottomSheetTitleText => 'Пригласить игрока';
 
   @override
-  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(
-    String username,
-    String name,
-  ) {
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
     return '$username ($name)';
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
-      'Поиск пользователей...';
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel => 'Поиск пользователей...';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel =>
-      'Сообщение';
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'Сообщение';
 
   @override
-  String
-  get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText =>
-      'Отмена';
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'Отмена';
 
   @override
-  String
-  get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText =>
-      'Отправить';
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'Отправить';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
-      'Рейтинги';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Рейтинги';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel =>
-      'Частота';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => 'Частота';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel =>
-      'Основной День';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => 'Основной День';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
       'Основное Время';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
       'День Раз в Две Недели';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
       'Время Раз в Две Недели';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel =>
-      'Цена для Члена';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => 'Цена для Члена';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel =>
-      'Цена для Гостя';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => 'Цена для Гостя';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel =>
-      'Возрастной диапазон';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => 'Возрастной диапазон';
 
   @override
-  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(
-    int minAge,
-    int maxAge,
-  ) {
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
     return '$minAge до $maxAge';
   }
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel =>
-      'Видимость';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Видимость';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
       'Ссылка на групповой чат WhatsApp';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
       'Использовать бота группового чата WhatsApp';
 
   @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
-      'Использовать бота группового чата WhatsApp';
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle => 'Использовать бота группового чата WhatsApp';
 
   @override
   String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
@@ -312,28 +267,37 @@ class AppLocalizationsRu extends AppLocalizations {
   String get playerDetailsBottomSheetBlockText => 'Заблокировать';
 
   @override
-  String get sendFriendRequestConfirmationBottomSheetTitle =>
-      'Отправить запрос на дружбу';
+  String get sendFriendRequestConfirmationBottomSheetTitle => 'Отправить запрос на дружбу';
 
   @override
   String get sendFriendRequestConfirmationBottomSheetMessage =>
       'Вы уверены, что хотите отправить запрос на дружбу этому пользователю?';
 
   @override
-  String get blockUserConfirmationBottomSheetTitle =>
-      'Заблокировать пользователя';
+  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle => 'Принять запрос на дружбу';
 
   @override
-  String get blockUserConfirmationBottomSheetMessage =>
-      'Вы уверены, что хотите заблокировать этого пользователя?';
+  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage =>
+      'Вы уверены, что хотите принять этот запрос на дружбу?';
 
   @override
-  String get unblockUserConfirmationBottomSheetTitle =>
-      'Разблокировать пользователя';
+  String get blockUserConfirmationBottomSheetTitle => 'Заблокировать пользователя';
 
   @override
-  String get unblockUserConfirmationBottomSheetMessage =>
-      'Вы уверены, что хотите разблокировать этого пользователя?';
+  String get blockUserConfirmationBottomSheetMessage => 'Вы уверены, что хотите заблокировать этого пользователя?';
+
+  @override
+  String get unblockUserConfirmationBottomSheetTitle => 'Разблокировать пользователя';
+
+  @override
+  String get unblockUserConfirmationBottomSheetMessage => 'Вы уверены, что хотите разблокировать этого пользователя?';
+
+  @override
+  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle => 'Удалить Аккаунт';
+
+  @override
+  String get userDetailsScreenDeleteAccountConfirmationBottomSheetMessage =>
+      'Вы уверены, что хотите удалить свой аккаунт? Это действие нельзя отменить.';
 
   @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
@@ -348,8 +312,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get homeScreenNewGameButtonText => 'Создать игру';
 
   @override
-  String get homeScreenBodyUserGameListingEmptyTitle =>
-      'Вы еще не присоединились ни к одной игре!';
+  String get homeScreenBodyUserGameListingEmptyTitle => 'Вы еще не присоединились ни к одной игре!';
 
   @override
   String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
@@ -400,8 +363,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
-  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
-      'Редактировать профиль';
+  String get homeScreenBodyUserSportStatsEditProfileButtonText => 'Редактировать профиль';
 
   @override
   String get gameCreationScreenAppBarTitle => 'Создать игру';
@@ -410,44 +372,35 @@ class AppLocalizationsRu extends AppLocalizations {
   String get gameCreationScreenNameScreenTitle => 'Название';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel =>
-      'например, Еженедельная футбольная игра';
+  String get gameCreationScreenNameScreenNameInputLabel => 'например, Еженедельная футбольная игра';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
-      'Название не может быть пустым.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'Название не может быть пустым.';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage =>
-      'Название должно содержать не менее 3 символов.';
+  String get gameCreationScreenNameScreenNameInputLengthMessage => 'Название должно содержать не менее 3 символов.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Спорт';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
-      'Частота и Дата/Время';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Частота и Дата/Время';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
-      'Частота';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Частота';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
-      'Начало';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'Начало';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
-      'Конец';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'Конец';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
       'Время начала не может быть пустым.';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
       'Время окончания не может быть пустым.';
 
   @override
@@ -466,8 +419,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Местоположение';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage =>
-      'Пожалуйста, выберите местоположение.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage => 'Пожалуйста, выберите местоположение.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -479,17 +431,13 @@ class AppLocalizationsRu extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle =>
-      'Видимость и Изображение';
+  String get gameCreationScreenVisibilityAndImageScreenTitle => 'Видимость и Изображение';
 
   @override
-  String
-  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
-      'Фото профиля';
+  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'Фото профиля';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
-      'Баннер';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'Баннер';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Назад';
@@ -501,12 +449,10 @@ class AppLocalizationsRu extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'Завершить';
 
   @override
-  String get gameCreationScreenGameCreationSuccessMessage =>
-      'Игра успешно создана!';
+  String get gameCreationScreenGameCreationSuccessMessage => 'Игра успешно создана!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputLabel =>
-      'Имя пользователя/email';
+  String get loginSignupScreenLoginUsernameEmailInputLabel => 'Имя пользователя/email';
 
   @override
   String get loginSignupScreenLoginPasswordInputLabel => 'Пароль';
@@ -536,44 +482,48 @@ class AppLocalizationsRu extends AppLocalizations {
   String get loginSignupScreenSignupSignupButton => 'Зарегистрироваться';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
-      'Новичок в MyoroMatchup? Зарегистрируйтесь!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'Новичок в MyoroMatchup? Зарегистрируйтесь!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
-      'Уже зарегистрированы? Войдите!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'Уже зарегистрированы? Войдите!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
-      'Имя пользователя/email не может быть пустым.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'Имя пользователя/email не может быть пустым.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
-      'Пароль не может быть пустым.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'Пароль не может быть пустым.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
-      'Имя не может быть пустым.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'Имя не может быть пустым.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
-      'Имя пользователя не может быть пустым.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'Имя пользователя не может быть пустым.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
-      'Email не может быть пустым.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'Email не может быть пустым.';
 
   @override
-  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
-      'Страна не может быть пустой.';
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage => 'Страна не может быть пустой.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
-      'Поля пароля не могут быть пустыми.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'Поля пароля не могут быть пустыми.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
-      'Пароли не совпадают.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Пароли не совпадают.';
+
+  @override
+  String get loginSignupScreenForgotPasswordDialogTitle => 'Забыли пароль';
+
+  @override
+  String get loginSignupScreenForgotPasswordDialogMessage =>
+      'Введите свой адрес электронной почты, и мы отправим вам ссылку для сброса пароля.';
+
+  @override
+  String get loginSignupScreenForgotPasswordDialogInputPlaceholder => 'Email';
+
+  @override
+  String get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =>
+      'Пожалуйста, введите действительный адрес электронной почты.';
 
   @override
   String get mmAppBarMenuDrawerTitle => 'Меню';
@@ -586,4 +536,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get mmAppBarMenuDrawerInvitationListingText => 'Приглашения';
+
+  @override
+  String get mmAppBarMenuDrawerLogoutText => 'Выйти';
 }

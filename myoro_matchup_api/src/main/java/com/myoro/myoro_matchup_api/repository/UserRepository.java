@@ -1,9 +1,8 @@
 package com.myoro.myoro_matchup_api.repository;
 
+import com.myoro.myoro_matchup_api.model.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-
-import com.myoro.myoro_matchup_api.model.UserModel;
 
 /** User repository. */
 @Repository

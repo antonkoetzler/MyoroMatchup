@@ -1,30 +1,27 @@
 package com.myoro.myoro_matchup_api.service;
 
-import javax.crypto.SecretKey;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
-
 import jakarta.servlet.http.HttpServletRequest;
+import javax.crypto.SecretKey;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
 
 @Service
 public final class JwtService {
   /** Secret key for JWT signing and validation */
-  private final String secret = "mySecretKey123456789012345678901234567890";
+  @Value("${jwt.secret:mySecretKey123456789012345678901234567890}")
+  private String secret;
 
   /** Message service for localized error messages */
-  @Autowired
-  private MessageService messageService;
+  @Autowired private MessageService messageService;
 
   /**
-   * Creates a secret key for signing JWT tokens.
-   * This key is used to both create and verify tokens - it's like a password
-   * that ensures tokens can't be tampered with.
-   * 
+   * Creates a secret key for signing JWT tokens. This key is used to both create and verify tokens
+   * - it's like a password that ensures tokens can't be tampered with.
+   *
    * @return A secret key derived from our secret string
    */
   private SecretKey getSigningKey() {
@@ -32,8 +29,9 @@ public final class JwtService {
   }
 
   /**
-   * Generates a JWT token for a given user ID.
-   * 
+   * Generates a JWT token for a given user ID. Includes issued-at timestamp to ensure token
+   * uniqueness.
+   *
    * @param userId The ID of the user to create a token for
    * @return A JWT token string that can be used for authentication
    */
@@ -41,22 +39,20 @@ public final class JwtService {
     return Jwts.builder()
         .subject(userId.toString())
         .claim("userId", userId)
+        .issuedAt(java.util.Date.from(java.time.Instant.now()))
         .signWith(getSigningKey())
         .compact();
   }
 
   /**
    * Validates if a JWT token is valid.
-   * 
+   *
    * @param token the JWT token to validate
    * @return true if token is valid, false otherwise
    */
   public boolean isValidToken(final String token) {
     try {
-      Jwts.parser()
-          .verifyWith(getSigningKey())
-          .build()
-          .parseSignedClaims(token);
+      Jwts.parser().verifyWith(getSigningKey()).build().parseSignedClaims(token);
       return true;
     } catch (final Exception e) {
       return false;
@@ -65,7 +61,7 @@ public final class JwtService {
 
   /**
    * Extracts the token from the Authorization header.
-   * 
+   *
    * @param authHeader the Authorization header value
    * @return the token without "Bearer " prefix, or null if invalid
    */
@@ -78,18 +74,15 @@ public final class JwtService {
 
   /**
    * Validates a JWT token and extracts the user ID.
-   * 
+   *
    * @param token the JWT token to validate
    * @return the user ID from the token
    * @throws RuntimeException if the token is invalid or expired
    */
   public Long validateTokenAndGetUserId(final String token) {
     try {
-      final Claims claims = Jwts.parser()
-          .verifyWith(getSigningKey())
-          .build()
-          .parseSignedClaims(token)
-          .getPayload();
+      final Claims claims =
+          Jwts.parser().verifyWith(getSigningKey()).build().parseSignedClaims(token).getPayload();
 
       return claims.get("userId", Long.class);
     } catch (final Exception e) {
@@ -98,9 +91,8 @@ public final class JwtService {
   }
 
   /**
-   * Extracts and validates the bearer token from the request and returns the user
-   * ID.
-   * 
+   * Extracts and validates the bearer token from the request and returns the user ID.
+   *
    * @param request the HTTP request containing the Authorization header
    * @return the user ID from the token
    * @throws RuntimeException if the token is missing, invalid, or expired

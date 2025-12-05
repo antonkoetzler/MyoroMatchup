@@ -16,6 +16,7 @@ final class _MenuModal extends StatelessWidget {
     final mmAppBarMenuDrawerCreateGameText = localization.mmAppBarMenuDrawerCreateGameText;
     final mmAppBarMenuDrawerFriendListingText = localization.mmAppBarMenuDrawerFriendListingText;
     final mmAppBarMenuDrawerInvitationListingText = localization.mmAppBarMenuDrawerInvitationListingText;
+    final mmAppBarMenuDrawerLogoutText = localization.mmAppBarMenuDrawerLogoutText;
 
     final themeExtension = context.resolveThemeExtension<MmAppBarThemeExtension>();
     final menuDrawerSpacing = themeExtension.menuDrawerSpacing;
@@ -27,17 +28,26 @@ final class _MenuModal extends StatelessWidget {
         spacing: menuDrawerSpacing,
         mainAxisSize: MainAxisSize.min,
         children: [
-          _MenuModalItem(Icons.add, mmAppBarMenuDrawerCreateGameText, Routes.gameRoutes.gameCreationScreen.navigate()),
+          _MenuModalItem(
+            Icons.add,
+            mmAppBarMenuDrawerCreateGameText,
+            () => MmRouter.push(Routes.gameRoutes.gameCreationScreen.navigate()),
+          ),
           _MenuModalItem(
             Icons.person,
             mmAppBarMenuDrawerFriendListingText,
-            Routes.friendRoutes.friendListingScreen.navigate(),
+            () => MmRouter.push(Routes.friendRoutes.friendListingScreen.navigate()),
           ),
           _MenuModalItem(
             Icons.insert_invitation,
             mmAppBarMenuDrawerInvitationListingText,
-            Routes.invitationRoutes.invitationListingScreen.navigate(),
+            () => MmRouter.push(Routes.invitationRoutes.invitationListingScreen.navigate()),
           ),
+          _MenuModalItem(Icons.logout, mmAppBarMenuDrawerLogoutText, () {
+            getIt<SharedPreferencesService>().removeLoggedInUser().then((_) {
+              MmRouter.replace(Routes.loginSignupRoutes.loginSignupScreen.navigate());
+            });
+          }),
         ],
       ),
     );

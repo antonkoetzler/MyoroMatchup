@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.model;
 
 import com.myoro.myoro_matchup_api.enums.CountryEnum;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
 
@@ -19,8 +18,7 @@ public class UserLocationModel {
   private String city;
 
   /** Default constructor. */
-  public UserLocationModel() {
-  }
+  public UserLocationModel() {}
 
   /** Constructor with all fields. */
   public UserLocationModel(CountryEnum country, String state, String city) {
@@ -31,7 +29,7 @@ public class UserLocationModel {
 
   /**
    * Getter for country
-   * 
+   *
    * @return the country
    */
   public CountryEnum getCountry() {
@@ -40,7 +38,7 @@ public class UserLocationModel {
 
   /**
    * Getter for state
-   * 
+   *
    * @return the state
    */
   public String getState() {
@@ -49,7 +47,7 @@ public class UserLocationModel {
 
   /**
    * Getter for city
-   * 
+   *
    * @return the city
    */
   public String getCity() {
@@ -58,7 +56,7 @@ public class UserLocationModel {
 
   /**
    * Setter for country
-   * 
+   *
    * @param country the country
    */
   public void setCountry(CountryEnum country) {
@@ -67,7 +65,7 @@ public class UserLocationModel {
 
   /**
    * Setter for state
-   * 
+   *
    * @param state the state
    */
   public void setState(String state) {
@@ -76,7 +74,7 @@ public class UserLocationModel {
 
   /**
    * Setter for city
-   * 
+   *
    * @param city the city
    */
   public void setCity(String city) {

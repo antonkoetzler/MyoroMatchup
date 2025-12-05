@@ -27,9 +27,9 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
     Color? formTypeSwitcherButtonIdleColor,
     double? logoInputsSpacing,
     Color? formTypeSwitcherButtonTapColor,
-    double? inputsFormTypeSwitcherButtonSpacing,
     double? formSwitcherActionButtonsSpacing,
     EdgeInsets? bottomNavigationBarPadding,
+    MyoroDialogModalStyle? forgotPasswordDialogStyle,
   }) {
     return LoginSignupScreenThemeExtension(
       bodyPadding: bodyPadding ?? self.bodyPadding,
@@ -41,10 +41,9 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
       formTypeSwitcherButtonIdleColor: formTypeSwitcherButtonIdleColor ?? self.formTypeSwitcherButtonIdleColor,
       logoInputsSpacing: logoInputsSpacing ?? self.logoInputsSpacing,
       formTypeSwitcherButtonTapColor: formTypeSwitcherButtonTapColor ?? self.formTypeSwitcherButtonTapColor,
-      inputsFormTypeSwitcherButtonSpacing:
-          inputsFormTypeSwitcherButtonSpacing ?? self.inputsFormTypeSwitcherButtonSpacing,
       formSwitcherActionButtonsSpacing: formSwitcherActionButtonsSpacing ?? self.formSwitcherActionButtonsSpacing,
       bottomNavigationBarPadding: bottomNavigationBarPadding ?? self.bottomNavigationBarPadding,
+      forgotPasswordDialogStyle: forgotPasswordDialogStyle ?? self.forgotPasswordDialogStyle,
     );
   }
 
@@ -61,9 +60,9 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
         other.formTypeSwitcherButtonIdleColor == self.formTypeSwitcherButtonIdleColor &&
         other.logoInputsSpacing == self.logoInputsSpacing &&
         other.formTypeSwitcherButtonTapColor == self.formTypeSwitcherButtonTapColor &&
-        other.inputsFormTypeSwitcherButtonSpacing == self.inputsFormTypeSwitcherButtonSpacing &&
         other.formSwitcherActionButtonsSpacing == self.formSwitcherActionButtonsSpacing &&
-        other.bottomNavigationBarPadding == self.bottomNavigationBarPadding;
+        other.bottomNavigationBarPadding == self.bottomNavigationBarPadding &&
+        other.forgotPasswordDialogStyle == self.forgotPasswordDialogStyle;
   }
 
   @override
@@ -78,9 +77,9 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
       self.formTypeSwitcherButtonIdleColor,
       self.logoInputsSpacing,
       self.formTypeSwitcherButtonTapColor,
-      self.inputsFormTypeSwitcherButtonSpacing,
       self.formSwitcherActionButtonsSpacing,
       self.bottomNavigationBarPadding,
+      self.forgotPasswordDialogStyle,
     );
   }
 
@@ -96,8 +95,8 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
       '  formTypeSwitcherButtonIdleColor: ${self.formTypeSwitcherButtonIdleColor},\n'
       '  logoInputsSpacing: ${self.logoInputsSpacing},\n'
       '  formTypeSwitcherButtonTapColor: ${self.formTypeSwitcherButtonTapColor},\n'
-      '  inputsFormTypeSwitcherButtonSpacing: ${self.inputsFormTypeSwitcherButtonSpacing},\n'
       '  formSwitcherActionButtonsSpacing: ${self.formSwitcherActionButtonsSpacing},\n'
       '  bottomNavigationBarPadding: ${self.bottomNavigationBarPadding},\n'
+      '  forgotPasswordDialogStyle: ${self.forgotPasswordDialogStyle},\n'
       ');';
 }

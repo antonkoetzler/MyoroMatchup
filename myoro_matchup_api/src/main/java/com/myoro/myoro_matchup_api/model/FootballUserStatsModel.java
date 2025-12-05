@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.model;
 
 import com.myoro.myoro_matchup_api.enums.SportsEnum;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
@@ -37,15 +36,20 @@ public class FootballUserStatsModel extends UserStatsModel {
 
   /**
    * Constructor with all fields.
-   * 
-   * @param user     the user
-   * @param rating   the rating
-   * @param attack   the attack stat
-   * @param defense  the defense stat
+   *
+   * @param user the user
+   * @param rating the rating
+   * @param attack the attack stat
+   * @param defense the defense stat
    * @param striking the striking stat
-   * @param skills   the skills stat
+   * @param skills the skills stat
    */
-  public FootballUserStatsModel(UserModel user, Integer rating, Integer attack, Integer defense, Integer striking,
+  public FootballUserStatsModel(
+      UserModel user,
+      Integer rating,
+      Integer attack,
+      Integer defense,
+      Integer striking,
       Integer skills) {
     setUser(user);
     setSport(SportsEnum.FOOTBALL);

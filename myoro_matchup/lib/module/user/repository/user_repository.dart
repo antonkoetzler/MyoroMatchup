@@ -73,4 +73,17 @@ final class UserRepository {
     final response = await _httpClient.delete('/users/block/$blockedId');
     return response.data['message'] as String;
   }
+
+  /// Deletes the authenticated user's account.
+  Future<String> deleteAccount() async {
+    MmLogger.warning('[UserRepository.deleteAccount]: Deleting user account.');
+    try {
+      final response = await _httpClient.delete('/users');
+      MmLogger.success('[UserRepository.deleteAccount]: User account deleted successfully.');
+      return response.data['message'] as String;
+    } catch (e, stackTrace) {
+      await MmLogger.error('[UserRepository.deleteAccount]: Failed to delete user account.', e, stackTrace);
+      rethrow;
+    }
+  }
 }

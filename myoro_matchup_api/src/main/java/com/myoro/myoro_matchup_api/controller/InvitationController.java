@@ -1,9 +1,19 @@
 package com.myoro.myoro_matchup_api.controller;
 
+import com.myoro.myoro_matchup_api.dto.InvitationResponseDto;
+import com.myoro.myoro_matchup_api.enums.InvitationStatusEnum;
+import com.myoro.myoro_matchup_api.service.InvitationService;
+import com.myoro.myoro_matchup_api.service.JwtService;
+import com.myoro.myoro_matchup_api.service.MessageService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,36 +24,34 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.myoro.myoro_matchup_api.dto.InvitationResponseDto;
-import com.myoro.myoro_matchup_api.enums.InvitationStatusEnum;
-import com.myoro.myoro_matchup_api.service.InvitationService;
-import com.myoro.myoro_matchup_api.service.JwtService;
-import com.myoro.myoro_matchup_api.service.MessageService;
-
-import jakarta.servlet.http.HttpServletRequest;
-
 /** Invitation controller. */
+@Tag(name = "Invitations", description = "Game invitation management endpoints")
 @RestController
 @RequestMapping("/api/invitations")
 public class InvitationController {
   /** Message service. */
-  @Autowired
-  private MessageService messageService;
+  @Autowired private MessageService messageService;
 
   /** Invitation service. */
-  @Autowired
-  private InvitationService invitationService;
+  @Autowired private InvitationService invitationService;
 
   /** JWT service for extracting user ID from token. */
-  @Autowired
-  private JwtService jwtService;
+  @Autowired private JwtService jwtService;
 
-  /**
-   * Send an invitation to a user for a game.
-   */
+  /** Send an invitation to a user for a game. */
+  @Operation(summary = "Send invitation", description = "Sends a game invitation to a user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Invitation sent successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized"),
+        @ApiResponse(responseCode = "404", description = "Game or user not found")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @PostMapping("/invite/{gameId}/{inviteeId}")
-  public ResponseEntity<Map<String, Object>> sendInvitation(@PathVariable Long gameId,
-      @PathVariable Long inviteeId, @RequestBody(required = false) Map<String, String> requestBody,
+  public ResponseEntity<Map<String, Object>> sendInvitation(
+      @PathVariable Long gameId,
+      @PathVariable Long inviteeId,
+      @RequestBody(required = false) Map<String, String> requestBody,
       HttpServletRequest httpRequest) {
     final Long userId = jwtService.getUserIdFromRequest(httpRequest);
     String message = requestBody != null ? requestBody.get("message") : null;
@@ -54,16 +62,24 @@ public class InvitationController {
   }
 
   /**
-   * Get all invitations for the authenticated user, optionally filtered by
-   * query and status.
-   * 
-   * @param query       optional search query to filter by game name, inviter
-   *                    name, status, dates, or message
-   * @param status      optional status filter (PENDING, ACCEPTED, REJECTED,
-   *                    EXPIRED, CANCELLED)
+   * Get all invitations for the authenticated user, optionally filtered by query and status.
+   *
+   * @param query optional search query to filter by game name, inviter name, status, dates, or
+   *     message
+   * @param status optional status filter (PENDING, ACCEPTED, REJECTED, EXPIRED, CANCELLED)
    * @param httpRequest the HTTP request
    * @return list of invitations
    */
+  @Operation(
+      summary = "Get invitations",
+      description =
+          "Retrieves all invitations for the authenticated user, optionally filtered by query and status")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Invitations retrieved successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @GetMapping
   public ResponseEntity<List<InvitationResponseDto>> getInvitations(
       @RequestParam(required = false) String query,
@@ -75,14 +91,24 @@ public class InvitationController {
 
   /**
    * Accept an invitation for the authenticated user.
-   * 
+   *
    * @param invitationId the invitation ID
-   * @param httpRequest  the HTTP request
+   * @param httpRequest the HTTP request
    * @return success message
    */
+  @Operation(
+      summary = "Accept invitation",
+      description = "Accepts a pending game invitation for the authenticated user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Invitation accepted successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized"),
+        @ApiResponse(responseCode = "404", description = "Invitation not found")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @PostMapping("/{invitationId}/accept")
-  public ResponseEntity<Map<String, Object>> acceptInvitation(@PathVariable Long invitationId,
-      HttpServletRequest httpRequest) {
+  public ResponseEntity<Map<String, Object>> acceptInvitation(
+      @PathVariable Long invitationId, HttpServletRequest httpRequest) {
     final Long userId = jwtService.getUserIdFromRequest(httpRequest);
     invitationService.acceptInvitation(invitationId, userId);
     Map<String, Object> responseBody = new HashMap<>();
@@ -92,14 +118,24 @@ public class InvitationController {
 
   /**
    * Decline an invitation for the authenticated user.
-   * 
+   *
    * @param invitationId the invitation ID
-   * @param httpRequest  the HTTP request
+   * @param httpRequest the HTTP request
    * @return success message
    */
+  @Operation(
+      summary = "Decline invitation",
+      description = "Declines a pending game invitation for the authenticated user")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Invitation declined successfully"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized"),
+        @ApiResponse(responseCode = "404", description = "Invitation not found")
+      })
+  @SecurityRequirement(name = "bearerAuth")
   @PostMapping("/{invitationId}/decline")
-  public ResponseEntity<Map<String, Object>> declineInvitation(@PathVariable Long invitationId,
-      HttpServletRequest httpRequest) {
+  public ResponseEntity<Map<String, Object>> declineInvitation(
+      @PathVariable Long invitationId, HttpServletRequest httpRequest) {
     final Long userId = jwtService.getUserIdFromRequest(httpRequest);
     invitationService.declineInvitation(invitationId, userId);
     Map<String, Object> responseBody = new HashMap<>();

@@ -1,0 +1,31 @@
+name: Backend Format Check
+
+on:
+  pull_request:
+  push:
+    branches: [main, develop]
+
+jobs:
+  format-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Format and fix files
+        working-directory: myoro_matchup_api
+        run: |
+          chmod +x mvnw
+          ./mvnw fmt:format
+          if [ -n "$(git status --porcelain)" ]; then
+            echo "Files were formatted. Please run './mvnw fmt:format' locally."
+            git diff
+            exit 1
+          fi
+

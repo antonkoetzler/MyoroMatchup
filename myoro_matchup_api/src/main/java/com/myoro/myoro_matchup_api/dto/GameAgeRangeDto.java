@@ -19,8 +19,7 @@ public class GameAgeRangeDto {
   private Integer maxAge;
 
   /** Default constructor. */
-  public GameAgeRangeDto() {
-  }
+  public GameAgeRangeDto() {}
 
   /** Constructor with all fields. */
   public GameAgeRangeDto(Integer minAge, Integer maxAge) {
@@ -30,7 +29,7 @@ public class GameAgeRangeDto {
 
   /**
    * Getter for minAge
-   * 
+   *
    * @return the minimum age
    */
   public Integer getMinAge() {
@@ -39,7 +38,7 @@ public class GameAgeRangeDto {
 
   /**
    * Getter for maxAge
-   * 
+   *
    * @return the maximum age
    */
   public Integer getMaxAge() {
@@ -48,7 +47,7 @@ public class GameAgeRangeDto {
 
   /**
    * Setter for minAge
-   * 
+   *
    * @param minAge the minimum age
    */
   public void setMinAge(Integer minAge) {
@@ -57,7 +56,7 @@ public class GameAgeRangeDto {
 
   /**
    * Setter for maxAge
-   * 
+   *
    * @param maxAge the maximum age
    */
   public void setMaxAge(Integer maxAge) {

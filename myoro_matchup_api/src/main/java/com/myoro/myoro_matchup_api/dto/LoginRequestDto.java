@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
 import com.myoro.myoro_matchup_api.util.ValidationConstants;
-
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -22,8 +21,7 @@ public class LoginRequestDto {
   private String password;
 
   /* Default constructor. */
-  public LoginRequestDto() {
-  }
+  public LoginRequestDto() {}
 
   /** Constructor with all fields. */
   public LoginRequestDto(String username, String email, String password) {
@@ -34,7 +32,7 @@ public class LoginRequestDto {
 
   /**
    * Getter for username
-   * 
+   *
    * @return the username
    */
   public String getUsername() {
@@ -43,7 +41,7 @@ public class LoginRequestDto {
 
   /**
    * Getter for email
-   * 
+   *
    * @return the email
    */
   public String getEmail() {
@@ -52,7 +50,7 @@ public class LoginRequestDto {
 
   /**
    * Getter for password
-   * 
+   *
    * @return the password
    */
   public String getPassword() {

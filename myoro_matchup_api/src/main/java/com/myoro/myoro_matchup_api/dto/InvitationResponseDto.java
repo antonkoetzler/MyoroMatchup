@@ -1,7 +1,6 @@
 package com.myoro.myoro_matchup_api.dto;
 
 import com.myoro.myoro_matchup_api.enums.InvitationStatusEnum;
-
 import java.time.LocalDateTime;
 
 /** Invitation response DTO. */
@@ -31,12 +30,11 @@ public class InvitationResponseDto {
   private String message;
 
   /** Default constructor. */
-  public InvitationResponseDto() {
-  }
+  public InvitationResponseDto() {}
 
   /**
    * Getter for id
-   * 
+   *
    * @return the invitation ID
    */
   public Long getId() {
@@ -45,7 +43,7 @@ public class InvitationResponseDto {
 
   /**
    * Getter for game
-   * 
+   *
    * @return the game being invited to
    */
   public InvitationGameResponseDto getGame() {
@@ -54,7 +52,7 @@ public class InvitationResponseDto {
 
   /**
    * Getter for inviterName
-   * 
+   *
    * @return the name of the user who sent the invitation
    */
   public String getInviterName() {
@@ -63,7 +61,7 @@ public class InvitationResponseDto {
 
   /**
    * Getter for status
-   * 
+   *
    * @return the status of the invitation
    */
   public InvitationStatusEnum getStatus() {
@@ -72,7 +70,7 @@ public class InvitationResponseDto {
 
   /**
    * Getter for createdAt
-   * 
+   *
    * @return when the invitation was created
    */
   public LocalDateTime getCreatedAt() {
@@ -81,7 +79,7 @@ public class InvitationResponseDto {
 
   /**
    * Getter for expiresAt
-   * 
+   *
    * @return when the invitation expires
    */
   public LocalDateTime getExpiresAt() {
@@ -90,7 +88,7 @@ public class InvitationResponseDto {
 
   /**
    * Getter for respondedAt
-   * 
+   *
    * @return when the invitee responded
    */
   public LocalDateTime getRespondedAt() {
@@ -99,7 +97,7 @@ public class InvitationResponseDto {
 
   /**
    * Getter for message
-   * 
+   *
    * @return the optional message from the inviter
    */
   public String getMessage() {
@@ -108,7 +106,7 @@ public class InvitationResponseDto {
 
   /**
    * Setter for game
-   * 
+   *
    * @param game the game being invited to
    */
   public void setGame(InvitationGameResponseDto game) {
@@ -117,7 +115,7 @@ public class InvitationResponseDto {
 
   /**
    * Setter for id
-   * 
+   *
    * @param id the invitation ID
    */
   public void setId(Long id) {
@@ -126,7 +124,7 @@ public class InvitationResponseDto {
 
   /**
    * Setter for inviterName
-   * 
+   *
    * @param inviterName the name of the user who sent the invitation
    */
   public void setInviterName(String inviterName) {
@@ -135,7 +133,7 @@ public class InvitationResponseDto {
 
   /**
    * Setter for status
-   * 
+   *
    * @param status the status of the invitation
    */
   public void setStatus(InvitationStatusEnum status) {
@@ -144,7 +142,7 @@ public class InvitationResponseDto {
 
   /**
    * Setter for createdAt
-   * 
+   *
    * @param createdAt when the invitation was created
    */
   public void setCreatedAt(LocalDateTime createdAt) {
@@ -153,7 +151,7 @@ public class InvitationResponseDto {
 
   /**
    * Setter for expiresAt
-   * 
+   *
    * @param expiresAt when the invitation expires
    */
   public void setExpiresAt(LocalDateTime expiresAt) {
@@ -162,7 +160,7 @@ public class InvitationResponseDto {
 
   /**
    * Setter for respondedAt
-   * 
+   *
    * @param respondedAt when the invitee responded
    */
   public void setRespondedAt(LocalDateTime respondedAt) {
@@ -171,7 +169,7 @@ public class InvitationResponseDto {
 
   /**
    * Setter for message
-   * 
+   *
    * @param message the optional message from the inviter
    */
   public void setMessage(String message) {

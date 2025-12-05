@@ -4,7 +4,7 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 final class GameDetailsScreenRoute extends PayloadRoute<int> {
   GameDetailsScreenRoute()
     : super(
-        parentLocation: AppRouter.gameModuleRoute,
+        parentLocation: Routes.gameRoutes.parentDirectory,
         name: 'details',
         builder: (_, gameId) {
           return GameDetailsScreen(gameId);
