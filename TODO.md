@@ -6,7 +6,7 @@
   - Separate for frontend and backend
   - Separate deploy scripts for backend and frontend and also grouped
     - Think about git flows or whatever
-- `myoro_matchup`
+- (**WAITING FOR GOOGLE FUCKING VERIFICATION FUCK**) `myoro_matchup`
   - In app payments and paywall
     - (**IN PROGRESS**) Setup Google Play Store and App Store subscription
     - Setup Apple Store subscription
