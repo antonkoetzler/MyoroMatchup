@@ -3,6 +3,9 @@
 ## In progress
 
 - `STAGELOG.md`/`CHANGELOG.md` and deploy script
+  - Separate for frontend and backend
+  - Separate deploy scripts for backend and frontend and also grouped
+    - Think about git flows or whatever
 - `myoro_matchup`
   - In app payments and paywall
     - (**IN PROGRESS**) Setup Google Play Store and App Store subscription
