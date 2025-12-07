@@ -13,7 +13,6 @@ part '../_widget/_body_profile_visibility.dart';
 part '../_widget/_body_blocked_users.dart';
 part '../_widget/_body_subscription_plan.dart';
 part '../_widget/_body_subscription_status.dart';
-part '../_widget/_body_payment_method.dart';
 part '../_widget/_body_card.dart';
 part '../_widget/_body_user_details.dart';
 part '../_widget/_body_profile_visibility_bottom_sheet.dart';

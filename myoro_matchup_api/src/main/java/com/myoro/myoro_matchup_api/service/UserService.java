@@ -34,22 +34,28 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
   /** User repository for database operations */
-  @Autowired private UserRepository userRepository;
+  @Autowired
+  private UserRepository userRepository;
 
   /** User stats repository for database operations */
-  @Autowired private UserStatsRepository userStatsRepository;
+  @Autowired
+  private UserStatsRepository userStatsRepository;
 
   /** Friend request repository for database operations */
-  @Autowired private FriendRequestRepository friendRequestRepository;
+  @Autowired
+  private FriendRequestRepository friendRequestRepository;
 
   /** Blocked user repository for database operations */
-  @Autowired private BlockedUserRepository blockedUserRepository;
+  @Autowired
+  private BlockedUserRepository blockedUserRepository;
 
   /** Message service for localization and internationalization. */
-  @Autowired private MessageService messageService;
+  @Autowired
+  private MessageService messageService;
 
   /** JWT service for extracting user ID from bearer token. */
-  @Autowired private JwtService jwtService;
+  @Autowired
+  private JwtService jwtService;
 
   /** Get user by ID. */
   public UserModel get(Long id) {
@@ -81,19 +87,20 @@ public class UserService {
   /**
    * Get user DTO by ID with optional stats and location data.
    *
-   * @param id the user ID
-   * @param showStats whether to include stats
+   * @param id               the user ID
+   * @param showStats        whether to include stats
    * @param showSubscription whether to include subscription status
-   * @param locationFilter the location data to include (null or NONE = no location, COUNTRY =
-   *     country only, FULL = city, state, country)
+   * @param locationFilter   the location data to include (null or NONE = no
+   *                         location, COUNTRY =
+   *                         country only, FULL = city, state, country)
    * @return the user response DTO
    */
   public UserResponseDto getUserDto(Long id) {
-    UserModel user =
-        userRepository
-            .findById(id)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    @SuppressWarnings("null")
+    UserModel user = userRepository
+        .findById(id)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     UserResponseDto dto = new UserResponseDto();
     dto.setId(user.getId());
@@ -191,7 +198,7 @@ public class UserService {
   /**
    * Updates the visibility of a user.
    *
-   * @param request the HTTP request containing the bearer token
+   * @param request    the HTTP request containing the bearer token
    * @param visibility the new visibility value
    */
   public void updateVisibility(
@@ -208,8 +215,8 @@ public class UserService {
    *
    * @param request the HTTP request containing the bearer token
    * @param country the country
-   * @param state the state
-   * @param city the city
+   * @param state   the state
+   * @param city    the city
    */
   public void updateLocation(
       final HttpServletRequest request,
@@ -225,18 +232,18 @@ public class UserService {
   /**
    * Sends a friend request to a user.
    *
-   * @param request the HTTP request containing the bearer token
+   * @param request     the HTTP request containing the bearer token
    * @param recipientId the ID of the user receiving the friend request
    */
   public void sendFriendRequest(final HttpServletRequest request, final Long recipientId) {
     final Long requesterId = jwtService.getUserIdFromRequest(request);
 
     // Validate recipient exists
-    UserModel recipient =
-        userRepository
-            .findById(recipientId)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    @SuppressWarnings("null")
+    UserModel recipient = userRepository
+        .findById(recipientId)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     // Validate requester is not the recipient
     if (recipient.getId().equals(requesterId)) {
@@ -257,11 +264,11 @@ public class UserService {
     }
 
     // Get requester
-    UserModel requester =
-        userRepository
-            .findById(requesterId)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    @SuppressWarnings("null")
+    UserModel requester = userRepository
+        .findById(requesterId)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     // Check if users are already blocked
     if (blockedUserRepository.existsByBlockerIdAndBlockedId(requesterId, recipientId)
@@ -283,20 +290,19 @@ public class UserService {
   /**
    * Accepts a friend request.
    *
-   * @param request the HTTP request containing the bearer token
+   * @param request         the HTTP request containing the bearer token
    * @param friendRequestId the ID of the friend request to accept
    */
   public void acceptFriendRequest(final HttpServletRequest request, final Long friendRequestId) {
     final Long userId = jwtService.getUserIdFromRequest(request);
 
     // Find the friend request
-    FriendRequestModel friendRequest =
-        friendRequestRepository
-            .findById(friendRequestId)
-            .orElseThrow(
-                () ->
-                    new RuntimeException(
-                        messageService.getMessage("error.friend.request.not.found")));
+    @SuppressWarnings("null")
+    FriendRequestModel friendRequest = friendRequestRepository
+        .findById(friendRequestId)
+        .orElseThrow(
+            () -> new RuntimeException(
+                messageService.getMessage("error.friend.request.not.found")));
 
     // Validate user is the recipient
     if (!friendRequest.getRecipient().getId().equals(userId)) {
@@ -317,11 +323,13 @@ public class UserService {
   }
 
   /**
-   * Gets all friends for the authenticated user, optionally filtered by query and status.
+   * Gets all friends for the authenticated user, optionally filtered by query and
+   * status.
    *
    * @param request the HTTP request containing the bearer token
-   * @param query optional search query to filter by friend name, username, status, or dates
-   * @param status optional status filter (PENDING, ACCEPTED, REJECTED)
+   * @param query   optional search query to filter by friend name, username,
+   *                status, or dates
+   * @param status  optional status filter (PENDING, ACCEPTED, REJECTED)
    * @return list of friends as user response DTOs
    */
   public List<UserResponseDto> getFriends(
@@ -329,19 +337,17 @@ public class UserService {
     final Long userId = jwtService.getUserIdFromRequest(request);
 
     // Filter to only accepted friend requests (friends)
-    Specification<FriendRequestModel> spec =
-        FriendSpecifications.filter(
-            userId, query, status != null ? status : FriendRequestStatusEnum.ACCEPTED);
+    Specification<FriendRequestModel> spec = FriendSpecifications.filter(
+        userId, query, status != null ? status : FriendRequestStatusEnum.ACCEPTED);
     List<FriendRequestModel> friendRequests = friendRequestRepository.findAll(spec);
 
     return friendRequests.stream()
         .map(
             friendRequest -> {
               // Get the other user (not the current user)
-              UserModel friend =
-                  friendRequest.getRequester().getId().equals(userId)
-                      ? friendRequest.getRecipient()
-                      : friendRequest.getRequester();
+              UserModel friend = friendRequest.getRequester().getId().equals(userId)
+                  ? friendRequest.getRecipient()
+                  : friendRequest.getRequester();
 
               UserResponseDto dto = new UserResponseDto();
               dto.setId(friend.getId());
@@ -357,18 +363,18 @@ public class UserService {
   /**
    * Blocks a user.
    *
-   * @param request the HTTP request containing the bearer token
+   * @param request   the HTTP request containing the bearer token
    * @param blockedId the ID of the user being blocked
    */
   public void blockUser(final HttpServletRequest request, final Long blockedId) {
     final Long blockerId = jwtService.getUserIdFromRequest(request);
 
     // Validate blocked user exists
-    UserModel blocked =
-        userRepository
-            .findById(blockedId)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    @SuppressWarnings("null")
+    UserModel blocked = userRepository
+        .findById(blockedId)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     // Validate blocker is not blocking themselves
     if (blocked.getId().equals(blockerId)) {
@@ -381,11 +387,11 @@ public class UserService {
     }
 
     // Get blocker
-    UserModel blocker =
-        userRepository
-            .findById(blockerId)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    @SuppressWarnings("null")
+    UserModel blocker = userRepository
+        .findById(blockerId)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     // Create blocked user relationship
     BlockedUserModel blockedUser = new BlockedUserModel();
@@ -425,20 +431,18 @@ public class UserService {
   /**
    * Unblocks a user.
    *
-   * @param request the HTTP request containing the bearer token
+   * @param request   the HTTP request containing the bearer token
    * @param blockedId the ID of the user being unblocked
    */
   public void unblockUser(final HttpServletRequest request, final Long blockedId) {
     final Long blockerId = jwtService.getUserIdFromRequest(request);
 
     // Find the blocked user relationship
-    BlockedUserModel blockedUser =
-        blockedUserRepository
-            .findByBlockerIdAndBlockedId(blockerId, blockedId)
-            .orElseThrow(
-                () ->
-                    new RuntimeException(
-                        messageService.getMessage("error.unblock.user.not.blocked")));
+    BlockedUserModel blockedUser = blockedUserRepository
+        .findByBlockerIdAndBlockedId(blockerId, blockedId)
+        .orElseThrow(
+            () -> new RuntimeException(
+                messageService.getMessage("error.unblock.user.not.blocked")));
 
     // Delete the blocked user relationship
     blockedUserRepository.delete(blockedUser);

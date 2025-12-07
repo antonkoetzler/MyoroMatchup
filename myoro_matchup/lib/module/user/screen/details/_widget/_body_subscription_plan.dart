@@ -13,7 +13,7 @@ final class _BodySubscriptionPlan extends StatelessWidget {
   Widget build(context) {
     final userDetailsScreenBodySubscriptionPlanText = localization.userDetailsScreenBodySubscriptionPlanText;
 
-    final isSubscribed = _user.isSubscribed ?? false;
+    final isSubscribed = _user.isSubscribed;
     final isSubscribedString = isSubscribed.toString();
 
     return MyoroTag(text: userDetailsScreenBodySubscriptionPlanText(isSubscribedString));

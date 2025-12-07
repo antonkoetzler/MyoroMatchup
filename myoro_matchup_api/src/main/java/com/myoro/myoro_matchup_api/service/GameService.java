@@ -25,21 +25,24 @@ import org.springframework.stereotype.Service;
 @Service
 public class GameService {
   /** Game repository. */
-  @Autowired private GameRepository gameRepository;
+  @Autowired
+  private GameRepository gameRepository;
 
   /** Message service for localization and internationalization. */
-  @Autowired private MessageService messageService;
+  @Autowired
+  private MessageService messageService;
 
   /** User repository. */
-  @Autowired private UserRepository userRepository;
+  @Autowired
+  private UserRepository userRepository;
 
   /** Creates a game. */
   public Long create(GameCreationRequestDto request, Long userId) {
-    UserModel owner =
-        userRepository
-            .findById(userId)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    @SuppressWarnings("null")
+    UserModel owner = userRepository
+        .findById(userId)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     GameModel game = new GameModel();
     game.setName(request.getName());
@@ -82,21 +85,21 @@ public class GameService {
 
   /** Get a game by id. */
   public GameResponseDto getById(Long id) {
-    GameModel game =
-        gameRepository
-            .findById(id)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    @SuppressWarnings("null")
+    GameModel game = gameRepository
+        .findById(id)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
     return toDto(game);
   }
 
   /** Get players of a game by game id. */
   public List<GamePlayerResponseDto> getPlayersByGameId(Long id) {
-    GameModel game =
-        gameRepository
-            .findById(id)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    @SuppressWarnings("null")
+    GameModel game = gameRepository
+        .findById(id)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
 
     if (game.getPlayers() == null) {
       return List.of();
@@ -170,22 +173,22 @@ public class GameService {
 
   /** Set WhatsApp group chat link for a game. */
   public void setWhatsAppGroupChatLink(Long gameId, String link) {
-    GameModel game =
-        gameRepository
-            .findById(gameId)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    @SuppressWarnings("null")
+    GameModel game = gameRepository
+        .findById(gameId)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
     game.setWhatsAppGroupChatLink(link);
     gameRepository.save(game);
   }
 
   /** Set use WhatsApp group chat bot flag for a game. */
   public void setUseWhatsAppGroupChatBot(Long gameId, Boolean useBot) {
-    GameModel game =
-        gameRepository
-            .findById(gameId)
-            .orElseThrow(
-                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    @SuppressWarnings("null")
+    GameModel game = gameRepository
+        .findById(gameId)
+        .orElseThrow(
+            () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
     game.setUseWhatsAppGroupChatBot(useBot);
     gameRepository.save(game);
   }
