@@ -9,7 +9,7 @@
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 REPO_ROOT="$(cd "$PROJECT_ROOT/.." && pwd)"
-COMMON_SCRIPT="$REPO_ROOT/tool/deploy_common.sh"
+COMMON_SCRIPT="$REPO_ROOT/tool/deploy.sh"
 
 # Source common functions
 source "$COMMON_SCRIPT"

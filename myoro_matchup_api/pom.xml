@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.myoro</groupId>
 	<artifactId>myoro-matchup-api</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>myoro-matchup-api</name>
 	<description>Myoro Matchup API</description>
 	<url/>
