@@ -53,6 +53,38 @@
         "cwd": "${workspaceFolder}/myoro_matchup_api"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Deploy myoro_matchup",
+      "type": "shell",
+      "command": "bash myoro_matchup/tool/deploy.sh ${input:versionType}",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "id": "versionType",
+      "type": "pickString",
+      "description": "Select version type",
+      "options": [
+        {
+          "label": "Patch",
+          "value": "patch"
+        },
+        {
+          "label": "Minor",
+          "value": "minor"
+        },
+        {
+          "label": "Major",
+          "value": "major"
+        }
+      ]
     }
   ]
 }

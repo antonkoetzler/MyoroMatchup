@@ -3,10 +3,6 @@
 ## In progress
 
 - (**IN PROGRESS**) Setup prod server and second desktop
-- `STAGELOG.md`/`CHANGELOG.md`, deploy script, and versioning
-  - Separate for frontend and backend
-  - Separate deploy scripts for backend and frontend and also grouped
-    - Think about git flows or whatever
 - (**WAITING FOR GOOGLE FUCKING VERIFICATION FUCK**) In app payments, paywall, and WhatsApp
   - Setup Google Play Store and App Store subscription
   - Setup Apple Store subscription

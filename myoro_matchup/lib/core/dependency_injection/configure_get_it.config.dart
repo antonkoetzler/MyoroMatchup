@@ -63,11 +63,11 @@ extension GetItInjectableX on _i174.GetIt {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
     final sharedPreferencesModule = _$SharedPreferencesModule();
     final mmRouterModule = _$MmRouterModule();
+    gh.singleton<_i788.MmLogger>(() => _i788.MmLogger());
     await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.sharedPreferences,
       preResolve: true,
     );
-    gh.singleton<_i788.MmLogger>(() => _i788.MmLogger());
     gh.singleton<_i558.SharedPreferencesRepository>(
       () => _i558.SharedPreferencesRepository(gh<_i460.SharedPreferences>()),
     );
@@ -76,29 +76,29 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.SharedPreferencesRepository>(),
       ),
     );
+    gh.singleton<_i126.HttpClient>(
+      () => _i126.HttpClient(gh<_i460.SharedPreferencesService>()),
+    );
     gh.singleton<_i782.UserService>(
       () => _i782.UserService(gh<_i460.SharedPreferencesService>()),
     );
-    gh.singleton<_i126.HttpClient>(
-      () => _i126.HttpClient(gh<_i460.SharedPreferencesService>()),
+    gh.factory<_i643.AuthRepository>(
+      () => _i643.AuthRepository(gh<_i460.HttpClient>()),
+    );
+    gh.factory<_i150.FriendRepository>(
+      () => _i150.FriendRepository(gh<_i460.HttpClient>()),
+    );
+    gh.factory<_i1006.GameRepository>(
+      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
+    );
+    gh.factory<_i509.InvitationRepository>(
+      () => _i509.InvitationRepository(gh<_i460.HttpClient>()),
     );
     gh.factory<_i423.OpenStreetMapLocationRepository>(
       () => _i423.OpenStreetMapLocationRepository(gh<_i460.HttpClient>()),
     );
     gh.factory<_i624.UserRepository>(
       () => _i624.UserRepository(gh<_i460.HttpClient>()),
-    );
-    gh.factory<_i150.FriendRepository>(
-      () => _i150.FriendRepository(gh<_i460.HttpClient>()),
-    );
-    gh.factory<_i509.InvitationRepository>(
-      () => _i509.InvitationRepository(gh<_i460.HttpClient>()),
-    );
-    gh.factory<_i1006.GameRepository>(
-      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
-    );
-    gh.factory<_i643.AuthRepository>(
-      () => _i643.AuthRepository(gh<_i460.HttpClient>()),
     );
     gh.factory<_i789.MmLocationInputViewModel>(
       () => _i789.MmLocationInputViewModel(
