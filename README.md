@@ -4,7 +4,4 @@ An application to gather your friends for organized sports.
 
 ## Documentation
 
-1. `./doc`: General documentation;
-1. `./myoro_matchup/doc`: Frontend documentation;
-1. `./myoro_matchup_api/doc`: Backend documentation;
-1. `TODO.md`: Todo list and also where I document what I was doing last.
+All documentation is stored on a [public Notion website](https://tough-shoemaker-cbd.notion.site/Myoro-Matchup-2b5d7dcd552480dd94addfe4180577e8).

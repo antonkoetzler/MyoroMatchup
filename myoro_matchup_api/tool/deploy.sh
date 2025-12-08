@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# Frontend deploy script.
+# Backend deploy script.
 #
 # Author: Anton Louis Koetzler-Faust
 # Date: 07/12/2025
@@ -50,31 +50,37 @@ show_help() {
 run_setup() {
     echo -e "${BLUE}📦 Running setup script...${NC}"
     cd "$PROJECT_ROOT"
-    bash "$SCRIPT_DIR/setup.sh"
     
-    if [ $? -ne 0 ]; then
-        echo -e "${RED}❌ Error:${NC} Setup script failed"
-        exit 1
+    if [ -f "$SCRIPT_DIR/setup.sh" ]; then
+        bash "$SCRIPT_DIR/setup.sh"
+        
+        if [ $? -ne 0 ]; then
+            echo -e "${RED}❌ Error:${NC} Setup script failed"
+            exit 1
+        fi
+    else
+        echo -e "${YELLOW}⚠️  Warning:${NC} Setup script not found, skipping..."
     fi
 }
 
-# Read and parse current version from pubspec.yaml
+# Read and parse current version from pom.xml
 read_current_version() {
-    local pubspec_file="$PROJECT_ROOT/pubspec.yaml"
-    local current_version=$(grep "^version:" "$pubspec_file" | sed 's/version: //' | tr -d ' ')
+    local pom_file="$PROJECT_ROOT/pom.xml"
     
-    # Split version and build number using parameter expansion
-    local version_part="${current_version%%+*}"
-    local build_number="${current_version#*+}"
-    
-    # If no build number exists (no + in version), default to 0
-    if [ "$build_number" = "$current_version" ]; then
-        build_number=0
-    fi
+    # Extract version from pom.xml - get version tag that comes after artifactId
+    local current_version=$(awk '
+        /<artifactId>myoro-matchup-api<\/artifactId>/ { found=1; next }
+        found && /<version>/ { 
+            gsub(/.*<version>|<\/version>.*/, "")
+            gsub(/-SNAPSHOT$/, "")
+            print
+            exit
+        }
+    ' "$pom_file")
     
     # Parse version parts using parameter expansion
-    local major="${version_part%%.*}"
-    local rest="${version_part#*.}"
+    local major="${current_version%%.*}"
+    local rest="${current_version#*.}"
     local minor="${rest%%.*}"
     local patch="${rest#*.}"
     
@@ -82,7 +88,6 @@ read_current_version() {
     MAJOR=$major
     MINOR=$minor
     PATCH=$patch
-    BUILD_NUMBER=$build_number
 }
 
 # Calculate new version based on version type
@@ -104,17 +109,27 @@ calculate_new_version() {
             PATCH=0
             ;;
     esac
-    
-    # Increment build number
-    BUILD_NUMBER=$((BUILD_NUMBER + 1))
 }
 
-# Update version in pubspec.yaml
-update_pubspec_version() {
+# Update version in pom.xml
+update_pom_version() {
     local new_version=$1
-    local pubspec_file="$PROJECT_ROOT/pubspec.yaml"
+    local pom_file="$PROJECT_ROOT/pom.xml"
     
-    sed -i "s/^version:.*/version: $new_version/" "$pubspec_file"
+    # Update version in pom.xml - update the artifact version, not parent version
+    # Use awk to find and update the version tag that comes after artifactId
+    awk -v new_version="$new_version" '
+        /<artifactId>myoro-matchup-api<\/artifactId>/ { 
+            found_artifact=1
+            print
+            next
+        }
+        found_artifact && /<version>/ { 
+            sub(/<version>.*<\/version>/, "<version>" new_version "</version>")
+            found_artifact=0
+        }
+        { print }
+    ' "$pom_file" > "$pom_file.tmp" && mv "$pom_file.tmp" "$pom_file"
 }
 
 # Main execution
@@ -142,16 +157,16 @@ main() {
     
     # Read current version and calculate new version (but don't write yet)
     read_current_version
-    local current_version="$MAJOR.$MINOR.$PATCH+$BUILD_NUMBER"
+    local current_version="$MAJOR.$MINOR.$PATCH"
     
     # Calculate new version
     calculate_new_version "$version_type"
-    local new_version="$MAJOR.$MINOR.$PATCH+$BUILD_NUMBER"
+    local new_version="$MAJOR.$MINOR.$PATCH"
     
     run_setup
     
-    echo -e "${BLUE}📝 Updating version in pubspec.yaml...${NC}"
-    update_pubspec_version "$new_version"
+    echo -e "${BLUE}📝 Updating version in pom.xml...${NC}"
+    update_pom_version "$new_version"
     echo -e "${GREEN}✅ Version updated:${NC} ${CYAN}$current_version${NC} → ${CYAN}$new_version${NC}"
     
     echo -e "${BLUE}📋 Transferring STAGELOG.md to CHANGELOG.md...${NC}"
@@ -164,7 +179,7 @@ main() {
     fi
     
     # Git operations
-    git_commit_and_push "$version_type" "myoro_matchup" "$new_version" "$REPO_ROOT"
+    git_commit_and_push "$version_type" "myoro_matchup_api" "$new_version" "$REPO_ROOT"
 }
 
 # Run main function

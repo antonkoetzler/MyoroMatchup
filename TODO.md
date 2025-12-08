@@ -3,6 +3,12 @@
 ## In progress
 
 - (**IN PROGRESS**) Setup prod server and second desktop
+- (**IN PROGRESS**) Documentation on Notion
+  - Backend
+    - CORS
+  - Frontend
+    - Design system
+    - Link my Flutter bible (finish that)
 - (**WAITING FOR GOOGLE FUCKING VERIFICATION FUCK**) In app payments, paywall, and WhatsApp
   - Setup Google Play Store and App Store subscription
   - Setup Apple Store subscription
@@ -17,10 +23,4 @@
   - Signup
   - Forgot password
   - Swagger and making sure every endpoint is interactive and gucci
-- Documentation on Notion
-  - Backend
-    - CORS
-  - Frontend
-    - Design system
-    - Link my Flutter bible (finish that)
 - Ship

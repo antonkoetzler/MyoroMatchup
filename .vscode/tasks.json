@@ -64,6 +64,17 @@
         "reveal": "always",
         "panel": "shared"
       }
+    },
+    {
+      "label": "Deploy myoro_matchup_api",
+      "type": "shell",
+      "command": "bash myoro_matchup_api/tool/deploy.sh ${input:versionType}",
+      "problemMatcher": [],
+      "group": "build",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared"
+      }
     }
   ],
   "inputs": [

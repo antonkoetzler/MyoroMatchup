@@ -1,4 +1,4 @@
 # STAGELOG
 
-- Added `STAGELOG.md` and `CHANGELOG.md`
-- Added `tool/deploy.sh`
+- feature: Added `STAGELOG.md` and `CHANGELOG.md`
+- feature: Added `tool/deploy.sh`
