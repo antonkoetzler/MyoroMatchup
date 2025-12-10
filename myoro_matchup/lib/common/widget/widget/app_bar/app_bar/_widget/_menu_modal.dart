@@ -31,21 +31,21 @@ final class _MenuModal extends StatelessWidget {
           _MenuModalItem(
             Icons.add,
             mmAppBarMenuDrawerCreateGameText,
-            () => MmRouter.push(Routes.gameRoutes.gameCreationScreen.navigate()),
+            () => MmRouter.push(MmRoutes.gameRoutes.gameCreationScreen.navigate()),
           ),
           _MenuModalItem(
             Icons.person,
             mmAppBarMenuDrawerFriendListingText,
-            () => MmRouter.push(Routes.friendRoutes.friendListingScreen.navigate()),
+            () => MmRouter.push(MmRoutes.friendRoutes.friendListingScreen.navigate()),
           ),
           _MenuModalItem(
             Icons.insert_invitation,
             mmAppBarMenuDrawerInvitationListingText,
-            () => MmRouter.push(Routes.invitationRoutes.invitationListingScreen.navigate()),
+            () => MmRouter.push(MmRoutes.invitationRoutes.invitationListingScreen.navigate()),
           ),
           _MenuModalItem(Icons.logout, mmAppBarMenuDrawerLogoutText, () {
             getIt<SharedPreferencesService>().removeLoggedInUser().then((_) {
-              MmRouter.replace(Routes.loginSignupRoutes.loginSignupScreen.navigate());
+              MmRouter.replace(MmRoutes.loginSignupRoutes.loginSignupScreen.navigate());
             });
           }),
         ],

@@ -22,7 +22,7 @@ final class _DeleteAccountConfirmationBottomSheet {
           snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.success, message: message!),
         );
         MmRouter.pop();
-        MmRouter.replace(Routes.loginSignupRoutes.loginSignupScreen.navigate());
+        MmRouter.replace(MmRoutes.loginSignupRoutes.loginSignupScreen.navigate());
       },
       onError: (error) {
         MmSnackBarHelper.showSnackBar(

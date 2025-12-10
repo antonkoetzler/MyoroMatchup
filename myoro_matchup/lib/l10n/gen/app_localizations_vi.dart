@@ -31,7 +31,11 @@ class AppLocalizationsVi extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'Lục địa';
 
   @override
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
     return '$city, $emoji $countryName';
   }
 
@@ -90,7 +94,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get friendRequestStatusEnumRejectedLabel => 'Đã từ chối';
 
   @override
-  String get gameDetailsScreenBodyErrorFeedbackTitle => 'Không thể lấy chi tiết trò chơi!';
+  String get gameDetailsScreenBodyErrorFeedbackTitle =>
+      'Không thể lấy chi tiết trò chơi!';
 
   @override
   String get invitationListingScreenAppBarTitle => 'Lời mời';
@@ -103,13 +108,19 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': 'Đã đăng ký', 'other': 'Chưa đăng ký'});
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'Đã đăng ký',
+      'other': 'Chưa đăng ký',
+    });
     return '$_temp0';
   }
 
   @override
   String bodySubscriptionStatusLabel(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': 'Đã đăng ký', 'other': 'Chưa đăng ký'});
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': 'Đã đăng ký',
+      'other': 'Chưa đăng ký',
+    });
     return 'Trạng thái đăng ký: $_temp0';
   }
 
@@ -117,7 +128,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get bodySubscriptionStatusButtonText => 'Đăng ký';
 
   @override
-  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle => 'Thay Đổi Hiển Thị Hồ Sơ';
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      'Thay Đổi Hiển Thị Hồ Sơ';
 
   @override
   String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
@@ -136,113 +148,164 @@ class AppLocalizationsVi extends AppLocalizations {
   String get userDetailsScreenBodyLocationCityLabel => 'Thành phố';
 
   @override
-  String get userDetailsScreenLocationEditingBottomSheetTitle => 'Chỉnh Sửa Vị Trí';
+  String get userDetailsScreenLocationEditingBottomSheetTitle =>
+      'Chỉnh Sửa Vị Trí';
 
   @override
-  String userLocationResponseDtoFormattedLocation(String city, String state, String country) {
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
     String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
 
   @override
-  String get invitationListingScreenBodySuccessStateEmptyTitle => 'Không tìm thấy lời mời!';
+  String get invitationListingScreenBodySuccessStateEmptyTitle =>
+      'Không tìm thấy lời mời!';
 
   @override
   String get friendListingScreenBodyEmptyTitle => 'Không tìm thấy bạn bè!';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Tin nhắn';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel =>
+      'Tin nhắn';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Trạng thái';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel =>
+      'Trạng thái';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Chấp nhận';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText =>
+      'Chấp nhận';
 
   @override
-  String get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel => 'Trạng thái';
+  String
+  get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel =>
+      'Trạng thái';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Từ chối';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText =>
+      'Từ chối';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Thông tin';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Người chơi';
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText =>
+      'Người chơi';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'Mời người chơi';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText =>
+      'Mời người chơi';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetTitleText => 'Mời người chơi';
+  String get gameDetailsScreenInvitationBottomSheetTitleText =>
+      'Mời người chơi';
 
   @override
-  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(
+    String username,
+    String name,
+  ) {
     return '$username ($name)';
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel => 'Tìm kiếm người dùng...';
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
+      'Tìm kiếm người dùng...';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'Tin nhắn';
+  String get gameDetailsScreenInvitationBottomSheetMessageInputLabel =>
+      'Tin nhắn';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'Hủy';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText =>
+      'Hủy';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'Gửi';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText =>
+      'Gửi';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Bảng xếp hạng';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
+      'Bảng xếp hạng';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => 'Tần suất';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel =>
+      'Tần suất';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => 'Ngày Chính';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel =>
+      'Ngày Chính';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
       'Thời Gian Chính';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
       'Ngày Hai Tuần Một Lần';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
       'Thời Gian Hai Tuần Một Lần';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => 'Giá Thành Viên';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel =>
+      'Giá Thành Viên';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => 'Giá Khách';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel =>
+      'Giá Khách';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => 'Độ tuổi';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel =>
+      'Độ tuổi';
 
   @override
-  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(
+    int minAge,
+    int maxAge,
+  ) {
     return '$minAge đến $maxAge';
   }
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Tính hiển thị';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel =>
+      'Tính hiển thị';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
       'Liên kết Nhóm Chat WhatsApp';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
       'Sử dụng Bot Nhóm Chat WhatsApp';
 
   @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle => 'Sử dụng Bot Nhóm Chat WhatsApp';
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      'Sử dụng Bot Nhóm Chat WhatsApp';
 
   @override
   String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
@@ -253,7 +316,8 @@ class AppLocalizationsVi extends AppLocalizations {
       'Liên kết nhóm WhatsApp là bắt buộc để sử dụng bot.';
 
   @override
-  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty => 'Liên kết nhóm chat WhatsApp là bắt buộc.';
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'Liên kết nhóm chat WhatsApp là bắt buộc.';
 
   @override
   String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
@@ -266,33 +330,40 @@ class AppLocalizationsVi extends AppLocalizations {
   String get playerDetailsBottomSheetBlockText => 'Chặn';
 
   @override
-  String get sendFriendRequestConfirmationBottomSheetTitle => 'Gửi Lời mời kết bạn';
+  String get sendFriendRequestConfirmationBottomSheetTitle =>
+      'Gửi Lời mời kết bạn';
 
   @override
   String get sendFriendRequestConfirmationBottomSheetMessage =>
       'Bạn có chắc chắn muốn gửi lời mời kết bạn cho người dùng này không?';
 
   @override
-  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle => 'Chấp nhận Lời mời kết bạn';
+  String
+  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle =>
+      'Chấp nhận Lời mời kết bạn';
 
   @override
-  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage =>
+  String
+  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage =>
       'Bạn có chắc chắn muốn chấp nhận lời mời kết bạn này không?';
 
   @override
   String get blockUserConfirmationBottomSheetTitle => 'Chặn Người dùng';
 
   @override
-  String get blockUserConfirmationBottomSheetMessage => 'Bạn có chắc chắn muốn chặn người dùng này không?';
+  String get blockUserConfirmationBottomSheetMessage =>
+      'Bạn có chắc chắn muốn chặn người dùng này không?';
 
   @override
   String get unblockUserConfirmationBottomSheetTitle => 'Bỏ chặn Người dùng';
 
   @override
-  String get unblockUserConfirmationBottomSheetMessage => 'Bạn có chắc chắn muốn bỏ chặn người dùng này không?';
+  String get unblockUserConfirmationBottomSheetMessage =>
+      'Bạn có chắc chắn muốn bỏ chặn người dùng này không?';
 
   @override
-  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle => 'Xóa Tài khoản';
+  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle =>
+      'Xóa Tài khoản';
 
   @override
   String get userDetailsScreenDeleteAccountConfirmationBottomSheetMessage =>
@@ -311,7 +382,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get homeScreenNewGameButtonText => 'Tạo trò chơi';
 
   @override
-  String get homeScreenBodyUserGameListingEmptyTitle => 'Bạn chưa tham gia trò chơi nào!';
+  String get homeScreenBodyUserGameListingEmptyTitle =>
+      'Bạn chưa tham gia trò chơi nào!';
 
   @override
   String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
@@ -362,7 +434,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
-  String get homeScreenBodyUserSportStatsEditProfileButtonText => 'Chỉnh sửa hồ sơ';
+  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
+      'Chỉnh sửa hồ sơ';
 
   @override
   String get gameCreationScreenAppBarTitle => 'Tạo trò chơi';
@@ -371,35 +444,44 @@ class AppLocalizationsVi extends AppLocalizations {
   String get gameCreationScreenNameScreenTitle => 'Tên';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel => 'ví dụ: Trận bóng đá hàng tuần';
+  String get gameCreationScreenNameScreenNameInputLabel =>
+      'ví dụ: Trận bóng đá hàng tuần';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'Tên không thể để trống.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
+      'Tên không thể để trống.';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage => 'Tên phải có ít nhất 3 ký tự.';
+  String get gameCreationScreenNameScreenNameInputLengthMessage =>
+      'Tên phải có ít nhất 3 ký tự.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Môn thể thao';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Tần suất và Ngày/Giờ';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
+      'Tần suất và Ngày/Giờ';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Tần suất';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      'Tần suất';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'Bắt đầu';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      'Bắt đầu';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'Kết thúc';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
+      'Kết thúc';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
       'Thời gian bắt đầu không thể để trống.';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
       'Thời gian kết thúc không thể để trống.';
 
   @override
@@ -418,7 +500,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Vị trí';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage => 'Vui lòng chọn một vị trí.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      'Vui lòng chọn một vị trí.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -430,13 +513,17 @@ class AppLocalizationsVi extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle => 'Hiển thị và Hình ảnh';
+  String get gameCreationScreenVisibilityAndImageScreenTitle =>
+      'Hiển thị và Hình ảnh';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'Ảnh đại diện';
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      'Ảnh đại diện';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'Biểu ngữ';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      'Biểu ngữ';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Trước';
@@ -448,10 +535,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'Hoàn thành';
 
   @override
-  String get gameCreationScreenGameCreationSuccessMessage => 'Trò chơi đã được tạo thành công!';
+  String get gameCreationScreenGameCreationSuccessMessage =>
+      'Trò chơi đã được tạo thành công!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputLabel => 'Tên người dùng/email';
+  String get loginSignupScreenLoginUsernameEmailInputLabel =>
+      'Tên người dùng/email';
 
   @override
   String get loginSignupScreenLoginPasswordInputLabel => 'Mật khẩu';
@@ -481,34 +570,44 @@ class AppLocalizationsVi extends AppLocalizations {
   String get loginSignupScreenSignupSignupButton => 'Đăng ký';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'Mới với MyoroMatchup? Đăng ký!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
+      'Mới với MyoroMatchup? Đăng ký!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'Đã đăng ký? Đăng nhập!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
+      'Đã đăng ký? Đăng nhập!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'Tên người dùng/email không thể để trống.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      'Tên người dùng/email không thể để trống.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'Mật khẩu không thể để trống.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
+      'Mật khẩu không thể để trống.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'Tên không thể để trống.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
+      'Tên không thể để trống.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'Tên người dùng không thể để trống.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      'Tên người dùng không thể để trống.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'Email không thể để trống.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
+      'Email không thể để trống.';
 
   @override
-  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage => 'Quốc gia không thể để trống.';
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      'Quốc gia không thể để trống.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'Các trường mật khẩu không thể để trống.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      'Các trường mật khẩu không thể để trống.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Mật khẩu không khớp.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      'Mật khẩu không khớp.';
 
   @override
   String get loginSignupScreenForgotPasswordDialogTitle => 'Quên mật khẩu';
@@ -521,7 +620,8 @@ class AppLocalizationsVi extends AppLocalizations {
   String get loginSignupScreenForgotPasswordDialogInputPlaceholder => 'Email';
 
   @override
-  String get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =>
+  String
+  get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =>
       'Vui lòng nhập địa chỉ email hợp lệ.';
 
   @override

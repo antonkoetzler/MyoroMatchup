@@ -10,9 +10,9 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Http client for the API.
 @singleton
-final class HttpClient {
+final class MmHttpClient {
   /// Default constructor.
-  HttpClient(this._sharedPreferencesService);
+  MmHttpClient(this._sharedPreferencesService);
 
   /// Shared preferences service.
   final SharedPreferencesService _sharedPreferencesService;
@@ -29,58 +29,42 @@ final class HttpClient {
     Map<String, dynamic>? queryParameters,
     String baseUrl = kMyoroEmptyString,
   }) async {
-    MmLogger.info('[HttpClient.get]: "${_buildUri(path, queryParameters: queryParameters, baseUrl: baseUrl)}".');
+    final uri = _buildUri(path, baseUrl, queryParameters);
     return await _runRequest<T>(
-      () async => await _client
-          .get(
-            _buildUri(path, queryParameters: queryParameters, baseUrl: baseUrl),
-            headers: _baseHeaders,
-          )
-          .timeout(timeoutDuration),
+      uri.toString(),
+      () async => await _client.get(uri, headers: _baseHeaders).timeout(timeoutDuration),
     );
   }
 
   /// Post function.
   Future<HttpClientResponse> post(String path, {Map<String, dynamic>? data, String baseUrl = kMyoroEmptyString}) async {
-    MmLogger.info('[HttpClient.post]: "${_buildUri(path, baseUrl: baseUrl)}".');
-    return await _runRequest(() async {
+    final uri = _buildUri(path, baseUrl);
+    return await _runRequest(uri.toString(), () async {
       final body = data != null ? jsonEncode(data) : null;
-      return await _client
-          .post(
-            _buildUri(path, baseUrl: baseUrl),
-            headers: _baseHeaders,
-            body: body,
-          )
-          .timeout(timeoutDuration);
+      return await _client.post(uri, headers: _baseHeaders, body: body).timeout(timeoutDuration);
     });
   }
 
   /// Put function.
   Future<HttpClientResponse> put(String path, {Map<String, dynamic>? data, String baseUrl = kMyoroEmptyString}) async {
-    MmLogger.info('[HttpClient.put]: "${_buildUri(path, baseUrl: baseUrl)}".');
-    return await _runRequest(() async {
+    final uri = _buildUri(path, baseUrl);
+    return await _runRequest(uri.toString(), () async {
       final body = data != null ? jsonEncode(data) : null;
-      return await _client
-          .put(
-            _buildUri(path, baseUrl: baseUrl),
-            headers: _baseHeaders,
-            body: body,
-          )
-          .timeout(timeoutDuration);
+      return await _client.put(uri, headers: _baseHeaders, body: body).timeout(timeoutDuration);
     });
   }
 
   /// Delete function.
   Future<HttpClientResponse> delete(String path, {String baseUrl = kMyoroEmptyString}) async {
-    MmLogger.info('[HttpClient.delete]: "${_buildUri(path, baseUrl: baseUrl)}".');
+    final uri = _buildUri(path, baseUrl);
     return await _runRequest(
-      () async =>
-          await _client.delete(_buildUri(path, baseUrl: baseUrl), headers: _baseHeaders).timeout(timeoutDuration),
+      uri.toString(),
+      () async => await _client.delete(uri, headers: _baseHeaders).timeout(timeoutDuration),
     );
   }
 
   /// Build URI from path and query parameters.
-  Uri _buildUri(String path, {Map<String, dynamic>? queryParameters, String baseUrl = kMyoroEmptyString}) {
+  Uri _buildUri(String path, [String baseUrl = kMyoroEmptyString, Map<String, dynamic>? queryParameters]) {
     baseUrl = baseUrl.isEmpty ? EnvironmentConfiguration.apiUrl : baseUrl;
     final uri = Uri.parse('$baseUrl$path');
     return queryParameters != null && queryParameters.isNotEmpty
@@ -89,7 +73,7 @@ final class HttpClient {
   }
 
   /// Runs a request.
-  Future<HttpClientResponse<T>> _runRequest<T>(Future<Response> Function() request) async {
+  Future<HttpClientResponse<T>> _runRequest<T>(String endpoint, Future<Response> Function() request) async {
     try {
       final response = HttpClientResponse<T>.fromResponse(await request());
       final statusCode = response.statusCode;
@@ -97,24 +81,28 @@ final class HttpClient {
       // Throw exception if status code is greater than or equal to 400.
       if (statusCode >= 400) {
         final message = (response.data as Map<String, dynamic>)['message'];
-        await MmLogger.error('[HttpClient._runRequest]: Request failed with status $statusCode: $message.');
+        await MmLogger.error(
+          '[MmHttpClient._runRequest]: Request failed - $endpoint | Status: $statusCode | Response: ${jsonEncode(response.data)}',
+        );
         throw ApiException(message);
       }
 
-      MmLogger.success('[HttpClient._runRequest]: Request succeeded with status $statusCode.');
+      MmLogger.info(
+        '[MmHttpClient._runRequest]: Request succeeded - $endpoint | Status: $statusCode | Response: ${jsonEncode(response.data)}',
+      );
       return response;
     } on SocketException catch (e, stackTrace) {
-      await MmLogger.error('[HttpClient._runRequest]: Connection failed.', e, stackTrace);
+      await MmLogger.error('[MmHttpClient._runRequest]: Connection failed - $endpoint', e, stackTrace);
       throw ApiException(localization.httpClientConnectionExceptionMessage);
     } on TimeoutException catch (e, stackTrace) {
-      await MmLogger.error('[HttpClient._runRequest]: Request timeout.', e, stackTrace);
+      await MmLogger.error('[MmHttpClient._runRequest]: Request timeout - $endpoint', e, stackTrace);
       throw ApiException(localization.httpClientConnectionExceptionMessage);
     } on ApiException catch (e, stackTrace) {
       // Re-throw ApiException but try to extract status code if available
-      await MmLogger.error('[HttpClient._runRequest]: API exception occurred.', e, stackTrace);
+      await MmLogger.error('[MmHttpClient._runRequest]: API exception occurred - $endpoint', e, stackTrace);
       rethrow;
     } catch (e, stackTrace) {
-      await MmLogger.error('[HttpClient._runRequest]: Unexpected error.', e, stackTrace);
+      await MmLogger.error('[MmHttpClient._runRequest]: Unexpected error - $endpoint', e, stackTrace);
       throw ApiException(e.toString());
     }
   }

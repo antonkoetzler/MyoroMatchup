@@ -40,24 +40,23 @@ public class GameModel {
   private SportsEnum sport;
 
   /** Frequency of the game. */
-  @Embedded private GameFrequencyDayTimeModel frequencyDayTime;
+  @Embedded
+  private GameFrequencyDayTimeModel frequencyDayTime;
 
   /** Price of the game. */
-  @Embedded private GamePriceModel price;
+  @Embedded
+  private GamePriceModel price;
 
   /** Age range of the game. */
-  @Embedded private GameAgeRangeModel ageRange;
+  @Embedded
+  private GameAgeRangeModel ageRange;
 
   /** Location of the game. */
   @Embedded
   @AttributeOverrides({
-    @AttributeOverride(name = "name", column = @Column(name = "location_name", nullable = false)),
-    @AttributeOverride(
-        name = "address.city",
-        column = @Column(name = "location_city", nullable = false)),
-    @AttributeOverride(
-        name = "address.country",
-        column = @Column(name = "location_country", nullable = true))
+      @AttributeOverride(name = "name", column = @Column(name = "location_name", nullable = false)),
+      @AttributeOverride(name = "address.city", column = @Column(name = "location_city", nullable = false)),
+      @AttributeOverride(name = "address.country", column = @Column(name = "location_country", nullable = true))
   })
   private LocationModel location;
 
@@ -75,10 +74,7 @@ public class GameModel {
 
   /** Players in the game. */
   @ManyToMany
-  @JoinTable(
-      name = "game_players",
-      joinColumns = @JoinColumn(name = "game_id"),
-      inverseJoinColumns = @JoinColumn(name = "user_id"))
+  @JoinTable(name = "game_players", joinColumns = @JoinColumn(name = "game_id"), inverseJoinColumns = @JoinColumn(name = "user_id"))
   private List<UserModel> players;
 
   /** WhatsApp group chat invite link. */
@@ -90,7 +86,8 @@ public class GameModel {
   private Boolean useWhatsAppGroupChatBot = false;
 
   /** Default constructor. */
-  public GameModel() {}
+  public GameModel() {
+  }
 
   /** Constructor with all fields. */
   public GameModel(String name, SportsEnum sport, GameFrequencyDayTimeModel frequencyDayTime) {

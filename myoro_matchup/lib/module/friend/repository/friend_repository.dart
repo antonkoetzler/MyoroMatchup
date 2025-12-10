@@ -9,7 +9,7 @@ final class FriendRepository {
   FriendRepository(this._httpClient);
 
   /// HTTP client.
-  final HttpClient _httpClient;
+  final MmHttpClient _httpClient;
 
   /// Sends a friend request to a user.
   ///

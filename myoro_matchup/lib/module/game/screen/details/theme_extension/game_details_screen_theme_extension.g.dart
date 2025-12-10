@@ -13,8 +13,10 @@ part of 'game_details_screen_theme_extension.dart';
 /// ```dart
 /// class GameDetailsScreenThemeExtension with _$GameDetailsScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreenThemeExtension> {
-  GameDetailsScreenThemeExtension get self => this as GameDetailsScreenThemeExtension;
+mixin _$GameDetailsScreenThemeExtensionMixin
+    on ThemeExtension<GameDetailsScreenThemeExtension> {
+  GameDetailsScreenThemeExtension get self =>
+      this as GameDetailsScreenThemeExtension;
 
   @override
   GameDetailsScreenThemeExtension copyWith({
@@ -26,14 +28,22 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
     TextStyle? invitationBottomSheetTitleTextStyle,
     double? invitationBottomSheetActionButtonsSpacing,
     double? invitationBottomSheetSpacing,
-    double? bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize,
-    MyoroInputStyle? bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle,
-    Color? bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor,
-    Color? bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor,
-    Color? bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor,
-    Color? bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor,
-    Color? bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor,
-    Color? bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor,
+    double?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize,
+    MyoroInputStyle?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundIdleColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundHoverColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCheckButtonBackgroundTapColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundIdleColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor,
+    Color?
+    bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor,
     EdgeInsets? invitationBottomSheetContentPadding,
     TextStyle? playerDetailsBottomSheetTitleTextStyle,
     double? playerDetailsBottomSheetSpacing,
@@ -41,18 +51,23 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
     return GameDetailsScreenThemeExtension(
       errorStatePadding: errorStatePadding ?? self.errorStatePadding,
       bodySuccessStateTabViewContentPadding:
-          bodySuccessStateTabViewContentPadding ?? self.bodySuccessStateTabViewContentPadding,
+          bodySuccessStateTabViewContentPadding ??
+          self.bodySuccessStateTabViewContentPadding,
       spacing: spacing ?? self.spacing,
       bodySuccessStateTabViewInfoTabContentPadding:
-          bodySuccessStateTabViewInfoTabContentPadding ?? self.bodySuccessStateTabViewInfoTabContentPadding,
+          bodySuccessStateTabViewInfoTabContentPadding ??
+          self.bodySuccessStateTabViewInfoTabContentPadding,
       bodySuccessStateTabViewPlayersTabActionButtonTextStyle:
           bodySuccessStateTabViewPlayersTabActionButtonTextStyle ??
           self.bodySuccessStateTabViewPlayersTabActionButtonTextStyle,
       invitationBottomSheetTitleTextStyle:
-          invitationBottomSheetTitleTextStyle ?? self.invitationBottomSheetTitleTextStyle,
+          invitationBottomSheetTitleTextStyle ??
+          self.invitationBottomSheetTitleTextStyle,
       invitationBottomSheetActionButtonsSpacing:
-          invitationBottomSheetActionButtonsSpacing ?? self.invitationBottomSheetActionButtonsSpacing,
-      invitationBottomSheetSpacing: invitationBottomSheetSpacing ?? self.invitationBottomSheetSpacing,
+          invitationBottomSheetActionButtonsSpacing ??
+          self.invitationBottomSheetActionButtonsSpacing,
+      invitationBottomSheetSpacing:
+          invitationBottomSheetSpacing ?? self.invitationBottomSheetSpacing,
       bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize:
           bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize ??
           self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize,
@@ -78,10 +93,14 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
           bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor ??
           self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor,
       invitationBottomSheetContentPadding:
-          invitationBottomSheetContentPadding ?? self.invitationBottomSheetContentPadding,
+          invitationBottomSheetContentPadding ??
+          self.invitationBottomSheetContentPadding,
       playerDetailsBottomSheetTitleTextStyle:
-          playerDetailsBottomSheetTitleTextStyle ?? self.playerDetailsBottomSheetTitleTextStyle,
-      playerDetailsBottomSheetSpacing: playerDetailsBottomSheetSpacing ?? self.playerDetailsBottomSheetSpacing,
+          playerDetailsBottomSheetTitleTextStyle ??
+          self.playerDetailsBottomSheetTitleTextStyle,
+      playerDetailsBottomSheetSpacing:
+          playerDetailsBottomSheetSpacing ??
+          self.playerDetailsBottomSheetSpacing,
     );
   }
 
@@ -90,14 +109,19 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
     return other is GameDetailsScreenThemeExtension &&
         other.runtimeType == runtimeType &&
         other.errorStatePadding == self.errorStatePadding &&
-        other.bodySuccessStateTabViewContentPadding == self.bodySuccessStateTabViewContentPadding &&
+        other.bodySuccessStateTabViewContentPadding ==
+            self.bodySuccessStateTabViewContentPadding &&
         other.spacing == self.spacing &&
-        other.bodySuccessStateTabViewInfoTabContentPadding == self.bodySuccessStateTabViewInfoTabContentPadding &&
+        other.bodySuccessStateTabViewInfoTabContentPadding ==
+            self.bodySuccessStateTabViewInfoTabContentPadding &&
         other.bodySuccessStateTabViewPlayersTabActionButtonTextStyle ==
             self.bodySuccessStateTabViewPlayersTabActionButtonTextStyle &&
-        other.invitationBottomSheetTitleTextStyle == self.invitationBottomSheetTitleTextStyle &&
-        other.invitationBottomSheetActionButtonsSpacing == self.invitationBottomSheetActionButtonsSpacing &&
-        other.invitationBottomSheetSpacing == self.invitationBottomSheetSpacing &&
+        other.invitationBottomSheetTitleTextStyle ==
+            self.invitationBottomSheetTitleTextStyle &&
+        other.invitationBottomSheetActionButtonsSpacing ==
+            self.invitationBottomSheetActionButtonsSpacing &&
+        other.invitationBottomSheetSpacing ==
+            self.invitationBottomSheetSpacing &&
         other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize ==
             self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionButtonIconSize &&
         other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionInputStyle ==
@@ -114,9 +138,12 @@ mixin _$GameDetailsScreenThemeExtensionMixin on ThemeExtension<GameDetailsScreen
             self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundHoverColor &&
         other.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor ==
             self.bodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionCancelButtonBackgroundTapColor &&
-        other.invitationBottomSheetContentPadding == self.invitationBottomSheetContentPadding &&
-        other.playerDetailsBottomSheetTitleTextStyle == self.playerDetailsBottomSheetTitleTextStyle &&
-        other.playerDetailsBottomSheetSpacing == self.playerDetailsBottomSheetSpacing;
+        other.invitationBottomSheetContentPadding ==
+            self.invitationBottomSheetContentPadding &&
+        other.playerDetailsBottomSheetTitleTextStyle ==
+            self.playerDetailsBottomSheetTitleTextStyle &&
+        other.playerDetailsBottomSheetSpacing ==
+            self.playerDetailsBottomSheetSpacing;
   }
 
   @override

@@ -2,7 +2,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Flutter",
+            "name": "Debug Frontend",
             "request": "launch",
             "type": "dart",
             "program": "myoro_matchup/lib/main.dart",
@@ -12,7 +12,7 @@
         },
         {
             "type": "java",
-            "name": "Spring Boot-MyoroMatchupApiApplication<myoro-matchup-api>",
+            "name": "Debug Backend",
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "mainClass": "com.myoro.myoro_matchup_api.MyoroMatchupApiApplication",

@@ -2,8 +2,10 @@ part of '../widget/login_signup_screen.dart';
 
 /// Action button section of [LoginSignupScreen].
 final class _ActionButtons extends StatelessWidget {
+  /// Default constructor.
   const _ActionButtons(this._formType);
 
+  /// Form type.
   final LoginSignupScreenEnum _formType;
 
   @override

@@ -1,13 +1,15 @@
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// [Route] of modules for home.
-final class HomeRoutes implements RouteRepository {
-  /// [HomeScreen].
-  late final homeScreen = HomeScreenRoute();
+final class HomeRoutes extends RouteRepository {
+  /// Default constructor.
+  HomeRoutes() : _homeScreen = HomeScreenRoute();
 
-  /// Parent directory.
-  @override
-  String get parentDirectory {
-    return 'home';
+  /// [HomeScreen].
+  final HomeScreenRoute _homeScreen;
+
+  /// [_homeScreen] getter.
+  HomeScreenRoute get homeScreen {
+    return _homeScreen;
   }
 }

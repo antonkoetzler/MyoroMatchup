@@ -154,8 +154,8 @@ final class LoginSignupScreenViewModel {
 
   /// On success function.
   void _onSuccess(_) {
-    MmLogger.success('[LoginSignupScreenViewModel._onSuccess]: Login/Signup successful, navigating to home.');
-    MmRouter.replace(Routes.homeRoutes.homeScreen.navigate());
+    MmLogger.info('[LoginSignupScreenViewModel._onSuccess]: Login/Signup successful, navigating to home.');
+    MmRouter.replace(MmRoutes.homeRoutes.homeScreen.navigate());
   }
 
   /// On error function.

@@ -13,8 +13,10 @@ part of 'game_creation_screen_theme_extension.dart';
 /// ```dart
 /// class GameCreationScreenThemeExtension with _$GameCreationScreenThemeExtensionMixin {}
 /// ```
-mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScreenThemeExtension> {
-  GameCreationScreenThemeExtension get self => this as GameCreationScreenThemeExtension;
+mixin _$GameCreationScreenThemeExtensionMixin
+    on ThemeExtension<GameCreationScreenThemeExtension> {
+  GameCreationScreenThemeExtension get self =>
+      this as GameCreationScreenThemeExtension;
 
   @override
   GameCreationScreenThemeExtension copyWith({
@@ -24,16 +26,19 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
     TextStyle? buttonTextStyle,
     TextStyle? priceScreenInputLabelTextStyle,
     TextStyle? locationScreenCurrencyNotificationTextStyle,
-    MyoroImagePickerStyle? visibilityAndImageScreenProfilePictureImageFieldStyle,
+    MyoroImagePickerStyle?
+    visibilityAndImageScreenProfilePictureImageFieldStyle,
   }) {
     return GameCreationScreenThemeExtension(
       spacing: spacing ?? self.spacing,
       titleTextStyle: titleTextStyle ?? self.titleTextStyle,
       bodyPadding: bodyPadding ?? self.bodyPadding,
       buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
-      priceScreenInputLabelTextStyle: priceScreenInputLabelTextStyle ?? self.priceScreenInputLabelTextStyle,
+      priceScreenInputLabelTextStyle:
+          priceScreenInputLabelTextStyle ?? self.priceScreenInputLabelTextStyle,
       locationScreenCurrencyNotificationTextStyle:
-          locationScreenCurrencyNotificationTextStyle ?? self.locationScreenCurrencyNotificationTextStyle,
+          locationScreenCurrencyNotificationTextStyle ??
+          self.locationScreenCurrencyNotificationTextStyle,
       visibilityAndImageScreenProfilePictureImageFieldStyle:
           visibilityAndImageScreenProfilePictureImageFieldStyle ??
           self.visibilityAndImageScreenProfilePictureImageFieldStyle,
@@ -48,8 +53,10 @@ mixin _$GameCreationScreenThemeExtensionMixin on ThemeExtension<GameCreationScre
         other.titleTextStyle == self.titleTextStyle &&
         other.bodyPadding == self.bodyPadding &&
         other.buttonTextStyle == self.buttonTextStyle &&
-        other.priceScreenInputLabelTextStyle == self.priceScreenInputLabelTextStyle &&
-        other.locationScreenCurrencyNotificationTextStyle == self.locationScreenCurrencyNotificationTextStyle &&
+        other.priceScreenInputLabelTextStyle ==
+            self.priceScreenInputLabelTextStyle &&
+        other.locationScreenCurrencyNotificationTextStyle ==
+            self.locationScreenCurrencyNotificationTextStyle &&
         other.visibilityAndImageScreenProfilePictureImageFieldStyle ==
             self.visibilityAndImageScreenProfilePictureImageFieldStyle;
   }

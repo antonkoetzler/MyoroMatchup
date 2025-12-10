@@ -6,8 +6,12 @@ part of 'invitation_game_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-InvitationGameResponseDto _$InvitationGameResponseDtoFromJson(Map<String, dynamic> json) =>
-    InvitationGameResponseDto(name: json['name'] as String, sport: $enumDecode(_$SportsEnumEnumMap, json['sport']));
+InvitationGameResponseDto _$InvitationGameResponseDtoFromJson(
+  Map<String, dynamic> json,
+) => InvitationGameResponseDto(
+  name: json['name'] as String,
+  sport: $enumDecode(_$SportsEnumEnumMap, json['sport']),
+);
 
 const _$SportsEnumEnumMap = {
   SportsEnum.football: 'FOOTBALL',
@@ -31,7 +35,10 @@ mixin _$InvitationGameResponseDtoMixin {
   InvitationGameResponseDto get self => this as InvitationGameResponseDto;
 
   InvitationGameResponseDto copyWith({String? name, SportsEnum? sport}) {
-    return InvitationGameResponseDto(name: name ?? self.name, sport: sport ?? self.sport);
+    return InvitationGameResponseDto(
+      name: name ?? self.name,
+      sport: sport ?? self.sport,
+    );
   }
 
   @override

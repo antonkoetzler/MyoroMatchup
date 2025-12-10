@@ -15,7 +15,7 @@ final class _BodyUserSportStatsEditProfileButton extends StatelessWidget {
     return MyoroIconTextButton(
       style: bodyUserSportStatsEditProfileButtonStyle.bordered(context),
       text: homeScreenBodyUserSportStatsEditProfileButtonText,
-      onTapUp: (_, _) => MmRouter.push(Routes.userRoutes.userDetailsScreen.navigate()),
+      onTapUp: (_, _) => MmRouter.push(MmRoutes.userRoutes.userDetailsScreen.navigate()),
     );
   }
 }

@@ -5,7 +5,6 @@ import 'package:sentry_flutter/sentry_flutter.dart';
 /// Logger service for the application.
 ///
 /// Provides static methods for logging at different levels:
-/// - [success]: For successful operations
 /// - [info]: For informational messages
 /// - [warning]: For warnings that don't break functionality
 /// - [error]: For errors that need attention
@@ -34,11 +33,6 @@ final class MmLogger {
       level: Level.all,
     );
     return _logger!;
-  }
-
-  /// Logs a success message.
-  static void success(String message, [dynamic error, StackTrace? stackTrace]) {
-    _instance.i('✅ $message', error: error, stackTrace: stackTrace);
   }
 
   /// Logs an informational message.

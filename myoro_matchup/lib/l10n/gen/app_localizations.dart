@@ -78,7 +78,8 @@ import 'app_localizations_zh.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale)
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -86,7 +87,8 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -98,12 +100,13 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
-    delegate,
-    GlobalMaterialLocalizations.delegate,
-    GlobalCupertinoLocalizations.delegate,
-    GlobalWidgetsLocalizations.delegate,
-  ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
@@ -174,7 +177,11 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{city}, {emoji} {countryName}'**
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName);
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  );
 
   /// No description provided for @visibilityEnumPrivateLabel.
   ///
@@ -372,7 +379,11 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{city}{city, select, other {, }}{state}{state, select, other {, }}{country}'**
-  String userLocationResponseDtoFormattedLocation(String city, String state, String country);
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  );
 
   /// No description provided for @invitationListingScreenBodySuccessStateEmptyTitle.
   ///
@@ -390,19 +401,22 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Message'**
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel;
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel;
 
   /// No description provided for @invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel.
   ///
   /// In en, this message translates to:
   /// **'Status'**
-  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel;
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel;
 
   /// No description provided for @invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText.
   ///
   /// In en, this message translates to:
   /// **'Accept'**
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText;
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText;
 
   /// No description provided for @friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel.
   ///
@@ -414,7 +428,8 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Decline'**
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText;
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabText.
   ///
@@ -444,7 +459,10 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'{username} ({name})'**
-  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name);
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(
+    String username,
+    String name,
+  );
 
   /// No description provided for @gameDetailsScreenInvitationBottomSheetUserSearchInputLabel.
   ///
@@ -462,7 +480,8 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Cancel'**
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText;
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText;
 
   /// No description provided for @gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText.
   ///
@@ -480,73 +499,87 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Frequency'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel.
   ///
   /// In en, this message translates to:
   /// **'Primary Day'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel.
   ///
   /// In en, this message translates to:
   /// **'Primary Times'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel.
   ///
   /// In en, this message translates to:
   /// **'Bi-weekly Day'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel.
   ///
   /// In en, this message translates to:
   /// **'Bi-weekly Times'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel.
   ///
   /// In en, this message translates to:
   /// **'Member Price'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel.
   ///
   /// In en, this message translates to:
   /// **'Drop-in Price'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel.
   ///
   /// In en, this message translates to:
   /// **'Age Range'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData.
   ///
   /// In en, this message translates to:
   /// **'{minAge} to {maxAge}'**
-  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge);
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(
+    int minAge,
+    int maxAge,
+  );
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel.
   ///
   /// In en, this message translates to:
   /// **'Visibility'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText.
   ///
   /// In en, this message translates to:
   /// **'WhatsApp Group Chat Link'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText;
 
   /// No description provided for @gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText.
   ///
   /// In en, this message translates to:
   /// **'Use WhatsApp Group Chat Bot'**
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText;
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText;
 
   /// No description provided for @gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle.
   ///
@@ -612,7 +645,8 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Are you sure you want to accept this friend request?'**
-  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage;
+  String
+  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage;
 
   /// No description provided for @blockUserConfirmationBottomSheetTitle.
   ///
@@ -846,13 +880,15 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Start time cannot be empty.'**
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage;
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage;
 
   /// No description provided for @gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage.
   ///
   /// In en, this message translates to:
   /// **'End time cannot be empty.'**
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage;
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage;
 
   /// No description provided for @gameCreationScreenPriceScreenTitle.
   ///
@@ -910,7 +946,8 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Profile Picture'**
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle;
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle;
 
   /// No description provided for @gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle.
   ///
@@ -1084,7 +1121,8 @@ abstract class AppLocalizations {
   ///
   /// In en, this message translates to:
   /// **'Please enter a valid email address.'**
-  String get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage;
+  String
+  get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage;
 
   /// No description provided for @mmAppBarMenuDrawerTitle.
   ///
@@ -1117,7 +1155,8 @@ abstract class AppLocalizations {
   String get mmAppBarMenuDrawerLogoutText;
 }
 
-class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override

@@ -30,7 +30,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => '大洲';
 
   @override
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
     return '$city, $emoji $countryName';
   }
 
@@ -102,13 +106,19 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': '已订阅', 'other': '未订阅'});
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '已订阅',
+      'other': '未订阅',
+    });
     return '$_temp0';
   }
 
   @override
   String bodySubscriptionStatusLabel(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': '已订阅', 'other': '未订阅'});
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '已订阅',
+      'other': '未订阅',
+    });
     return '订阅状态: $_temp0';
   }
 
@@ -116,10 +126,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get bodySubscriptionStatusButtonText => '订阅';
 
   @override
-  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle => '更改个人资料可见性';
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      '更改个人资料可见性';
 
   @override
-  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage => '您确定要更改个人资料的可见性吗？';
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      '您确定要更改个人资料的可见性吗？';
 
   @override
   String get userDetailsScreenBodyLocationLabel => '位置';
@@ -137,7 +149,11 @@ class AppLocalizationsZh extends AppLocalizations {
   String get userDetailsScreenLocationEditingBottomSheetTitle => '编辑位置';
 
   @override
-  String userLocationResponseDtoFormattedLocation(String city, String state, String country) {
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
     String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
@@ -150,19 +166,29 @@ class AppLocalizationsZh extends AppLocalizations {
   String get friendListingScreenBodyEmptyTitle => '未找到朋友！';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => '消息';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel =>
+      '消息';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => '状态';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel =>
+      '状态';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => '接受';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText =>
+      '接受';
 
   @override
-  String get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel => '状态';
+  String
+  get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel =>
+      '状态';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => '拒绝';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText =>
+      '拒绝';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '信息';
@@ -171,80 +197,118 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => '玩家';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => '邀请玩家';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText =>
+      '邀请玩家';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetTitleText => '邀请玩家';
 
   @override
-  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(
+    String username,
+    String name,
+  ) {
     return '$username ($name)';
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel => '搜索用户...';
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
+      '搜索用户...';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => '消息';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => '取消';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText =>
+      '取消';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '发送';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '发送';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => '排名';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => '频率';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel =>
+      '频率';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => '主要日期';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel =>
+      '主要日期';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel => '主要时间';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
+      '主要时间';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel => '每两周日期';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+      '每两周日期';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel => '每两周时间';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+      '每两周时间';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => '会员价格';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel =>
+      '会员价格';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => '临时价格';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel =>
+      '临时价格';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => '年龄范围';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel =>
+      '年龄范围';
 
   @override
-  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(
+    int minAge,
+    int maxAge,
+  ) {
     return '$minAge 至 $maxAge';
   }
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => '可见性';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel =>
+      '可见性';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText => 'WhatsApp群聊链接';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'WhatsApp群聊链接';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText => '使用WhatsApp群聊机器人';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      '使用WhatsApp群聊机器人';
 
   @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle => '使用WhatsApp群聊机器人';
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      '使用WhatsApp群聊机器人';
 
   @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText => '您想为此游戏启用WhatsApp群聊机器人吗？';
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      '您想为此游戏启用WhatsApp群聊机器人吗？';
 
   @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage => '使用机器人需要WhatsApp群聊链接。';
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      '使用机器人需要WhatsApp群聊链接。';
 
   @override
-  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty => 'WhatsApp群聊链接是必需的。';
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'WhatsApp群聊链接是必需的。';
 
   @override
   String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
@@ -260,13 +324,18 @@ class AppLocalizationsZh extends AppLocalizations {
   String get sendFriendRequestConfirmationBottomSheetTitle => '发送好友请求';
 
   @override
-  String get sendFriendRequestConfirmationBottomSheetMessage => '您确定要向此用户发送好友请求吗？';
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      '您确定要向此用户发送好友请求吗？';
 
   @override
-  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle => '接受好友请求';
+  String
+  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle =>
+      '接受好友请求';
 
   @override
-  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage => '您确定要接受此好友请求吗？';
+  String
+  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage =>
+      '您确定要接受此好友请求吗？';
 
   @override
   String get blockUserConfirmationBottomSheetTitle => '屏蔽用户';
@@ -281,10 +350,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get unblockUserConfirmationBottomSheetMessage => '您确定要取消屏蔽此用户吗？';
 
   @override
-  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle => '删除账户';
+  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle =>
+      '删除账户';
 
   @override
-  String get userDetailsScreenDeleteAccountConfirmationBottomSheetMessage => '您确定要删除您的账户吗？此操作无法撤销。';
+  String get userDetailsScreenDeleteAccountConfirmationBottomSheetMessage =>
+      '您确定要删除您的账户吗？此操作无法撤销。';
 
   @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
@@ -365,7 +436,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameCreationScreenNameScreenNameInputEmptyMessage => '名称不能为空。';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage => '名称必须至少包含3个字符。';
+  String get gameCreationScreenNameScreenNameInputLengthMessage =>
+      '名称必须至少包含3个字符。';
 
   @override
   String get gameCreationScreenSportScreenTitle => '运动';
@@ -374,19 +446,25 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameCreationScreenFrequencyDayTimeScreenTitle => '频率和日期/时间';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => '频率';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      '频率';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => '开始';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      '开始';
 
   @override
   String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => '结束';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage => '开始时间不能为空。';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+      '开始时间不能为空。';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage => '结束时间不能为空。';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+      '结束时间不能为空。';
 
   @override
   String get gameCreationScreenPriceScreenTitle => '价格';
@@ -404,7 +482,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => '位置';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage => '请选择一个位置。';
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      '请选择一个位置。';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -419,10 +498,13 @@ class AppLocalizationsZh extends AppLocalizations {
   String get gameCreationScreenVisibilityAndImageScreenTitle => '可见性和图片';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => '头像';
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      '头像';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => '横幅';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      '横幅';
 
   @override
   String get gameCreationScreenButtonPreviousText => '上一步';
@@ -473,7 +555,8 @@ class AppLocalizationsZh extends AppLocalizations {
   String get loginSignupScreenFormTypeSwitcherButtonSignupText => '已有账号？登录！';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => '用户名/邮箱不能为空。';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      '用户名/邮箱不能为空。';
 
   @override
   String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => '密码不能为空。';
@@ -488,25 +571,31 @@ class AppLocalizationsZh extends AppLocalizations {
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage => '邮箱不能为空。';
 
   @override
-  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage => '国家不能为空。';
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      '国家不能为空。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => '密码字段不能为空。';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      '密码字段不能为空。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => '密码不匹配。';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      '密码不匹配。';
 
   @override
   String get loginSignupScreenForgotPasswordDialogTitle => '忘记密码';
 
   @override
-  String get loginSignupScreenForgotPasswordDialogMessage => '输入您的电子邮件地址，我们将向您发送重置密码的链接。';
+  String get loginSignupScreenForgotPasswordDialogMessage =>
+      '输入您的电子邮件地址，我们将向您发送重置密码的链接。';
 
   @override
   String get loginSignupScreenForgotPasswordDialogInputPlaceholder => '电子邮件';
 
   @override
-  String get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage => '请输入有效的电子邮件地址。';
+  String
+  get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =>
+      '请输入有效的电子邮件地址。';
 
   @override
   String get mmAppBarMenuDrawerTitle => '菜单';
@@ -550,7 +639,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get mmLocationInputTypeEnumContinentLabel => '大洲';
 
   @override
-  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
+  String mmLocationInputItemCityCountryText(
+    String city,
+    String emoji,
+    String countryName,
+  ) {
     return '$city, $emoji $countryName';
   }
 
@@ -622,13 +715,19 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
 
   @override
   String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': '已訂閱', 'other': '未訂閱'});
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '已訂閱',
+      'other': '未訂閱',
+    });
     return '$_temp0';
   }
 
   @override
   String bodySubscriptionStatusLabel(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': '已訂閱', 'other': '未訂閱'});
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
+      'true': '已訂閱',
+      'other': '未訂閱',
+    });
     return '訂閱狀態: $_temp0';
   }
 
@@ -636,10 +735,12 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get bodySubscriptionStatusButtonText => '訂閱';
 
   @override
-  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle => '更改個人資料可見性';
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
+      '更改個人資料可見性';
 
   @override
-  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage => '您確定要更改個人資料的可見性嗎？';
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
+      '您確定要更改個人資料的可見性嗎？';
 
   @override
   String get userDetailsScreenBodyLocationLabel => '位置';
@@ -657,7 +758,11 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get userDetailsScreenLocationEditingBottomSheetTitle => '編輯位置';
 
   @override
-  String userLocationResponseDtoFormattedLocation(String city, String state, String country) {
+  String userLocationResponseDtoFormattedLocation(
+    String city,
+    String state,
+    String country,
+  ) {
     String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
@@ -670,19 +775,29 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get friendListingScreenBodyEmptyTitle => '找不到朋友！';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => '訊息';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel =>
+      '訊息';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => '狀態';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel =>
+      '狀態';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => '接受';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText =>
+      '接受';
 
   @override
-  String get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel => '狀態';
+  String
+  get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel =>
+      '狀態';
 
   @override
-  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => '拒絕';
+  String
+  get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText =>
+      '拒絕';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => '資訊';
@@ -691,80 +806,118 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => '玩家';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => '邀請玩家';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText =>
+      '邀請玩家';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetTitleText => '邀請玩家';
 
   @override
-  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(
+    String username,
+    String name,
+  ) {
     return '$username ($name)';
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel => '搜尋使用者...';
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
+      '搜尋使用者...';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => '訊息';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => '取消';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText =>
+      '取消';
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '傳送';
+  String
+  get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => '傳送';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => '排名';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => '頻率';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel =>
+      '頻率';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => '主要日期';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel =>
+      '主要日期';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel => '主要時間';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
+      '主要時間';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel => '每兩週日期';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+      '每兩週日期';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel => '每兩週時間';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+      '每兩週時間';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => '會員價格';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel =>
+      '會員價格';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => '臨時價格';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel =>
+      '臨時價格';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => '年齡範圍';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel =>
+      '年齡範圍';
 
   @override
-  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(
+    int minAge,
+    int maxAge,
+  ) {
     return '$minAge 至 $maxAge';
   }
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => '可見性';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel =>
+      '可見性';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText => 'WhatsApp群組聊天連結';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
+      'WhatsApp群組聊天連結';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText => '使用WhatsApp群組聊天機器人';
+  String
+  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
+      '使用WhatsApp群組聊天機器人';
 
   @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle => '使用WhatsApp群組聊天機器人';
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
+      '使用WhatsApp群組聊天機器人';
 
   @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText => '您想為此遊戲啟用WhatsApp群組聊天機器人嗎？';
+  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
+      '您想為此遊戲啟用WhatsApp群組聊天機器人嗎？';
 
   @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage => '使用機器人需要WhatsApp群組聊天連結。';
+  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
+      '使用機器人需要WhatsApp群組聊天連結。';
 
   @override
-  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty => 'WhatsApp群組聊天連結是必需的。';
+  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
+      'WhatsApp群組聊天連結是必需的。';
 
   @override
   String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
@@ -780,13 +933,18 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get sendFriendRequestConfirmationBottomSheetTitle => '傳送好友請求';
 
   @override
-  String get sendFriendRequestConfirmationBottomSheetMessage => '您確定要向此使用者傳送好友請求嗎？';
+  String get sendFriendRequestConfirmationBottomSheetMessage =>
+      '您確定要向此使用者傳送好友請求嗎？';
 
   @override
-  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle => '接受好友請求';
+  String
+  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle =>
+      '接受好友請求';
 
   @override
-  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage => '您確定要接受此好友請求嗎？';
+  String
+  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage =>
+      '您確定要接受此好友請求嗎？';
 
   @override
   String get blockUserConfirmationBottomSheetTitle => '封鎖使用者';
@@ -801,10 +959,12 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get unblockUserConfirmationBottomSheetMessage => '您確定要解除封鎖此使用者嗎？';
 
   @override
-  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle => '刪除帳戶';
+  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle =>
+      '刪除帳戶';
 
   @override
-  String get userDetailsScreenDeleteAccountConfirmationBottomSheetMessage => '您確定要刪除您的帳戶嗎？此操作無法復原。';
+  String get userDetailsScreenDeleteAccountConfirmationBottomSheetMessage =>
+      '您確定要刪除您的帳戶嗎？此操作無法復原。';
 
   @override
   String get homeScreenAppBarTitle => 'Myoro Matchup';
@@ -885,7 +1045,8 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenNameScreenNameInputEmptyMessage => '名稱不能為空。';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage => '名稱必須至少包含3個字元。';
+  String get gameCreationScreenNameScreenNameInputLengthMessage =>
+      '名稱必須至少包含3個字元。';
 
   @override
   String get gameCreationScreenSportScreenTitle => '運動';
@@ -894,19 +1055,25 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenFrequencyDayTimeScreenTitle => '頻率和日期/時間';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => '頻率';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
+      '頻率';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => '開始';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
+      '開始';
 
   @override
   String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => '結束';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage => '開始時間不能為空。';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+      '開始時間不能為空。';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage => '結束時間不能為空。';
+  String
+  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+      '結束時間不能為空。';
 
   @override
   String get gameCreationScreenPriceScreenTitle => '價格';
@@ -924,7 +1091,8 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenLocationScreenTitle => '位置';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage => '請選擇一個位置。';
+  String get gameCreationScreenLocationScreenLocationValidationMessage =>
+      '請選擇一個位置。';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -939,10 +1107,13 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get gameCreationScreenVisibilityAndImageScreenTitle => '可見性和圖片';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => '頭像';
+  String
+  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
+      '頭像';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => '橫幅';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
+      '橫幅';
 
   @override
   String get gameCreationScreenButtonPreviousText => '上一步';
@@ -993,7 +1164,8 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get loginSignupScreenFormTypeSwitcherButtonSignupText => '已有帳號？登入！';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => '使用者名稱/電子郵件不能為空。';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
+      '使用者名稱/電子郵件不能為空。';
 
   @override
   String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => '密碼不能為空。';
@@ -1002,31 +1174,38 @@ class AppLocalizationsZhTw extends AppLocalizationsZh {
   String get loginSignupScreenSignupFormNameFieldEmptyMessage => '姓名不能為空。';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => '使用者名稱不能為空。';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
+      '使用者名稱不能為空。';
 
   @override
   String get loginSignupScreenSignupFormEmailFieldEmptyMessage => '電子郵件不能為空。';
 
   @override
-  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage => '國家不能為空。';
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
+      '國家不能為空。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => '密碼欄位不能為空。';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
+      '密碼欄位不能為空。';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => '密碼不相符。';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
+      '密碼不相符。';
 
   @override
   String get loginSignupScreenForgotPasswordDialogTitle => '忘記密碼';
 
   @override
-  String get loginSignupScreenForgotPasswordDialogMessage => '輸入您的電子郵件地址，我們將向您發送重置密碼的連結。';
+  String get loginSignupScreenForgotPasswordDialogMessage =>
+      '輸入您的電子郵件地址，我們將向您發送重置密碼的連結。';
 
   @override
   String get loginSignupScreenForgotPasswordDialogInputPlaceholder => '電子郵件';
 
   @override
-  String get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage => '請輸入有效的電子郵件地址。';
+  String
+  get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =>
+      '請輸入有效的電子郵件地址。';
 
   @override
   String get mmAppBarMenuDrawerTitle => '選單';

@@ -19,7 +19,7 @@ final class AuthService {
     try {
       final loggedInUser = await _authRepository.signup(request);
       await _sharedPreferencesService.setLoggedInUser(loggedInUser);
-      MmLogger.success('[AuthService.signup]: User signed up successfully: ${request.email}.');
+      MmLogger.info('[AuthService.signup]: User signed up successfully: ${request.email}.');
     } catch (e, stackTrace) {
       await MmLogger.error('[AuthService.signup]: Signup failed for: ${request.email}.', e, stackTrace);
       rethrow;
@@ -32,7 +32,7 @@ final class AuthService {
     try {
       final loggedInUser = await _authRepository.login(request);
       await _sharedPreferencesService.setLoggedInUser(loggedInUser);
-      MmLogger.success('[AuthService.login]: User logged in successfully: ${request.email}.');
+      MmLogger.info('[AuthService.login]: User logged in successfully: ${request.email}.');
     } catch (e, stackTrace) {
       await MmLogger.error('[AuthService.login]: Login failed for: ${request.email}.', e, stackTrace);
       rethrow;
@@ -46,7 +46,7 @@ final class AuthService {
     MmLogger.info('[AuthService.forgotPassword]: Forgot password requested for: ${request.email}.');
     try {
       final message = await _authRepository.forgotPassword(request);
-      MmLogger.success('[AuthService.forgotPassword]: Forgot password email sent to: ${request.email}.');
+      MmLogger.info('[AuthService.forgotPassword]: Forgot password email sent to: ${request.email}.');
       return message;
     } catch (e, stackTrace) {
       await MmLogger.error(

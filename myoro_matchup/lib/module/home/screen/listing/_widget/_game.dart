@@ -20,7 +20,7 @@ final class _Game extends StatelessWidget {
       padding: gameMargin,
       child: MyoroButton(
         style: MyoroButtonStyle(borderRadius: themeExtension.gameBorderRadius).bordered(context),
-        onTapUp: (_, _) => MmRouter.push(Routes.gameRoutes.gameDetailsScreen.navigate(_game.id)),
+        onTapUp: (_, _) => MmRouter.push(MmRoutes.gameRoutes.gameDetailsScreen.navigate(_game.id)),
         builder: (_, _) => GameCard(_game),
       ),
     );

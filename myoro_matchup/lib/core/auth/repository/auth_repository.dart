@@ -8,7 +8,7 @@ final class AuthRepository {
   AuthRepository(this._httpClient);
 
   /// HTTP client.
-  final HttpClient _httpClient;
+  final MmHttpClient _httpClient;
 
   /// Signup.
   ///

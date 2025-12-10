@@ -10,7 +10,6 @@ import com.myoro.myoro_matchup_api.repository.GameRepository;
 import com.myoro.myoro_matchup_api.repository.InvitationRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
 import com.myoro.myoro_matchup_api.specification.InvitationSpecifications;
-
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,36 +22,33 @@ import org.springframework.stereotype.Service;
 @Service
 public class InvitationService {
   /** Invitation repository. */
-  @Autowired
-  private InvitationRepository invitationRepository;
+  @Autowired private InvitationRepository invitationRepository;
 
   /** Game repository. */
-  @Autowired
-  private GameRepository gameRepository;
+  @Autowired private GameRepository gameRepository;
 
   /** User repository. */
-  @Autowired
-  private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
   /** Message service for localization and internationalization. */
-  @Autowired
-  private MessageService messageService;
+  @Autowired private MessageService messageService;
 
   /**
    * Sends an invitation to a user for a game.
    *
-   * @param gameId    the game ID
+   * @param gameId the game ID
    * @param inviteeId the ID of the user being invited
-   * @param message   optional message from the inviter
+   * @param message optional message from the inviter
    * @param inviterId the ID of the user sending the invitation
    */
   public void sendInvitation(Long gameId, Long inviteeId, String message, Long inviterId) {
     // Validate game exists
     @SuppressWarnings("null")
-    GameModel game = gameRepository
-        .findById(gameId)
-        .orElseThrow(
-            () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
+    GameModel game =
+        gameRepository
+            .findById(gameId)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.game.not.found")));
 
     // Validate inviter is the game owner
     if (!game.getOwner().getId().equals(inviterId)) {
@@ -61,10 +57,11 @@ public class InvitationService {
 
     // Validate invitee exists
     @SuppressWarnings("null")
-    UserModel invitee = userRepository
-        .findById(inviteeId)
-        .orElseThrow(
-            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    UserModel invitee =
+        userRepository
+            .findById(inviteeId)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     // Validate invitee is not the inviter
     if (invitee.getId().equals(inviterId)) {
@@ -88,10 +85,11 @@ public class InvitationService {
 
     // Get inviter
     @SuppressWarnings("null")
-    UserModel inviter = userRepository
-        .findById(inviterId)
-        .orElseThrow(
-            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    UserModel inviter =
+        userRepository
+            .findById(inviterId)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     // Create invitation
     InvitationModel invitation = new InvitationModel();
@@ -110,9 +108,8 @@ public class InvitationService {
    * Gets all invitations for a user, optionally filtered by query and status.
    *
    * @param userId the user ID
-   * @param query  optional search query to filter by game name, inviter name,
-   *               status, dates, or
-   *               message
+   * @param query optional search query to filter by game name, inviter name, status, dates, or
+   *     message
    * @param status optional status filter
    * @return list of invitation response DTOs
    */
@@ -155,14 +152,16 @@ public class InvitationService {
    * Accepts an invitation for the current user.
    *
    * @param invitationId the invitation ID
-   * @param userId       the authenticated user's ID
+   * @param userId the authenticated user's ID
    */
   public void acceptInvitation(Long invitationId, Long userId) {
     @SuppressWarnings("null")
-    InvitationModel invitation = invitationRepository
-        .findById(invitationId)
-        .orElseThrow(
-            () -> new RuntimeException(messageService.getMessage("error.invitation.not.found")));
+    InvitationModel invitation =
+        invitationRepository
+            .findById(invitationId)
+            .orElseThrow(
+                () ->
+                    new RuntimeException(messageService.getMessage("error.invitation.not.found")));
 
     if (!invitation.getInvitee().getId().equals(userId)) {
       throw new RuntimeException(messageService.getMessage("error.access.denied"));
@@ -196,14 +195,16 @@ public class InvitationService {
    * Declines an invitation for the current user.
    *
    * @param invitationId the invitation ID
-   * @param userId       the authenticated user's ID
+   * @param userId the authenticated user's ID
    */
   public void declineInvitation(Long invitationId, Long userId) {
     @SuppressWarnings("null")
-    InvitationModel invitation = invitationRepository
-        .findById(invitationId)
-        .orElseThrow(
-            () -> new RuntimeException(messageService.getMessage("error.invitation.not.found")));
+    InvitationModel invitation =
+        invitationRepository
+            .findById(invitationId)
+            .orElseThrow(
+                () ->
+                    new RuntimeException(messageService.getMessage("error.invitation.not.found")));
 
     if (!invitation.getInvitee().getId().equals(userId)) {
       throw new RuntimeException(messageService.getMessage("error.access.denied"));

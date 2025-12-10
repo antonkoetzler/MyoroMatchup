@@ -9,7 +9,7 @@ final class UserRepository {
   UserRepository(this._httpClient);
 
   /// HTTP client.
-  final HttpClient _httpClient;
+  final MmHttpClient _httpClient;
 
   /// Gets a user by ID.
   ///
@@ -79,7 +79,7 @@ final class UserRepository {
     MmLogger.warning('[UserRepository.deleteAccount]: Deleting user account.');
     try {
       final response = await _httpClient.delete('/users');
-      MmLogger.success('[UserRepository.deleteAccount]: User account deleted successfully.');
+      MmLogger.info('[UserRepository.deleteAccount]: User account deleted successfully.');
       return response.data['message'] as String;
     } catch (e, stackTrace) {
       await MmLogger.error('[UserRepository.deleteAccount]: Failed to delete user account.', e, stackTrace);

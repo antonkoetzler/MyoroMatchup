@@ -3,7 +3,7 @@ part of 'route.dart';
 /// [Route] accepting a payload.
 abstract class PayloadRoute<T extends Object> extends Route<T> {
   PayloadRoute({
-    super.parentLocation,
+    required super.parentDirectory,
     required super.name,
     required Widget Function(BuildContext, T) builder,
     super.routes,

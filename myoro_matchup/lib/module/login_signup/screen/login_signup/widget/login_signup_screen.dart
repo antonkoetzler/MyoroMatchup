@@ -4,7 +4,7 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 import 'package:provider/provider.dart';
 
 part '../_widget/_body.dart';
-part '../_widget/_active_button.dart';
+part '../_widget/_action_button.dart';
 part '../_widget/_action_buttons.dart';
 part '../_widget/_form_type_switcher_button.dart';
 part '../_widget/_input.dart';
@@ -21,20 +21,27 @@ final class LoginSignupScreen extends StatelessWidget {
   /// Build function.
   @override
   Widget build(_) {
-    final viewModel = getIt<LoginSignupScreenViewModel>();
-    final state = viewModel.state;
-    final formController = state.formController;
-    final formTypeController = state.formTypeController;
+    return Provider(
+      create: (_) => getIt<LoginSignupScreenViewModel>(),
+      child: Builder(
+        builder: (context) {
+          final viewModel = context.read<LoginSignupScreenViewModel>();
+          final state = viewModel.state;
+          final formController = state.formController;
+          final formTypeController = state.formTypeController;
 
-    return Provider.value(
-      value: viewModel,
-      child: MyoroForm(
-        controller: formController,
-        builder: (request, _) {
-          return ValueListenableBuilder(
-            valueListenable: formTypeController,
-            builder: (_, formType, _) {
-              return MyoroScreen(body: _Body(formType), bottomNavigationBar: _BottomNavigationBar(request, formType));
+          return MyoroForm(
+            controller: formController,
+            builder: (request, _) {
+              return ValueListenableBuilder(
+                valueListenable: formTypeController,
+                builder: (_, formType, _) {
+                  return MyoroScreen(
+                    body: _Body(formType),
+                    bottomNavigationBar: _BottomNavigationBar(request, formType),
+                  );
+                },
+              );
             },
           );
         },

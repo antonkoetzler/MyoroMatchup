@@ -6,7 +6,8 @@ part of 'open_street_map_location_address_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-OpenStreetMapLocationAddressResponseDto _$OpenStreetMapLocationAddressResponseDtoFromJson(Map<String, dynamic> json) =>
+OpenStreetMapLocationAddressResponseDto
+_$OpenStreetMapLocationAddressResponseDtoFromJson(Map<String, dynamic> json) =>
     OpenStreetMapLocationAddressResponseDto(
       city: json['city'] as String? ?? '',
       state: json['state'] as String? ?? '',
@@ -233,9 +234,14 @@ const _$MyoroCountryEnumEnumMap = {
 /// class OpenStreetMapLocationAddressResponseDto with _$OpenStreetMapLocationAddressResponseDtoMixin {}
 /// ```
 mixin _$OpenStreetMapLocationAddressResponseDtoMixin {
-  OpenStreetMapLocationAddressResponseDto get self => this as OpenStreetMapLocationAddressResponseDto;
+  OpenStreetMapLocationAddressResponseDto get self =>
+      this as OpenStreetMapLocationAddressResponseDto;
 
-  OpenStreetMapLocationAddressResponseDto copyWith({String? city, String? state, MyoroCountryEnum? country}) {
+  OpenStreetMapLocationAddressResponseDto copyWith({
+    String? city,
+    String? state,
+    MyoroCountryEnum? country,
+  }) {
     return OpenStreetMapLocationAddressResponseDto(
       city: city ?? self.city,
       state: state ?? self.state,

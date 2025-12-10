@@ -9,7 +9,7 @@ final class InvitationRepository {
   InvitationRepository(this._httpClient);
 
   /// HTTP client.
-  final HttpClient _httpClient;
+  final MmHttpClient _httpClient;
 
   /// Sends an invitation to a user for a game.
   ///
@@ -18,7 +18,7 @@ final class InvitationRepository {
     MmLogger.info('[InvitationRepository.sendInvitation]: Sending invitation for game $gameId to user $inviteeId.');
     try {
       final response = await _httpClient.post('/invitations/invite/$gameId/$inviteeId', data: {'message': message});
-      MmLogger.success(
+      MmLogger.info(
         '[InvitationRepository.sendInvitation]: Invitation sent successfully for game $gameId to user $inviteeId.',
       );
       return response.data['message'];

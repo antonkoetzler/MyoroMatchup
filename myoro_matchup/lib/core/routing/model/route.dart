@@ -11,23 +11,17 @@ part 'redirect_route.dart';
 sealed class Route<T extends Object> {
   /// Default constructor.
   Route({
-    String parentLocation = kMyoroEmptyString,
+    String parentDirectory = kMyoroEmptyString,
     String name = kMyoroEmptyString,
     this.redirect,
     this.builder,
     this.routes = const [],
-  }) : name = '/$name',
-       location = '${parentLocation.isNotEmpty ? '/$parentLocation' : ''}/$name';
+  }) : location = '${parentDirectory.isNotEmpty ? '/$parentDirectory' : kMyoroEmptyString}/$name';
 
-  /// The full location of the [Route]
-  ///
-  /// i.e. /game/listing/:id
-  final String location;
-
-  /// The name of the route.
+  /// The location of the route.
   ///
   /// i.e. game
-  final String name;
+  final String location;
 
   /// [GoRoute.redirect]
   final GoRouterRedirect? redirect;
@@ -40,6 +34,6 @@ sealed class Route<T extends Object> {
 
   /// [GoRoute] generator.
   GoRoute get goRoute {
-    return GoRoute(path: name, redirect: redirect, builder: builder, routes: routes.map((r) => r.goRoute).toList());
+    return GoRoute(path: location, redirect: redirect, builder: builder, routes: routes.map((r) => r.goRoute).toList());
   }
 }

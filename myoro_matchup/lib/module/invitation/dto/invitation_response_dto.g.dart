@@ -6,14 +6,20 @@ part of 'invitation_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-InvitationResponseDto _$InvitationResponseDtoFromJson(Map<String, dynamic> json) => InvitationResponseDto(
+InvitationResponseDto _$InvitationResponseDtoFromJson(
+  Map<String, dynamic> json,
+) => InvitationResponseDto(
   id: (json['id'] as num).toInt(),
-  game: InvitationGameResponseDto.fromJson(json['game'] as Map<String, dynamic>),
+  game: InvitationGameResponseDto.fromJson(
+    json['game'] as Map<String, dynamic>,
+  ),
   inviterName: json['inviterName'] as String,
   status: $enumDecode(_$InvitationStatusEnumEnumMap, json['status']),
   createdAt: DateTime.parse(json['createdAt'] as String),
   expiresAt: DateTime.parse(json['expiresAt'] as String),
-  respondedAt: json['respondedAt'] == null ? null : DateTime.parse(json['respondedAt'] as String),
+  respondedAt: json['respondedAt'] == null
+      ? null
+      : DateTime.parse(json['respondedAt'] as String),
   message: json['message'] as String? ?? '',
 );
 
@@ -57,7 +63,9 @@ mixin _$InvitationResponseDtoMixin {
       status: status ?? self.status,
       createdAt: createdAt ?? self.createdAt,
       expiresAt: expiresAt ?? self.expiresAt,
-      respondedAt: respondedAtProvided ? (respondedAt ?? self.respondedAt) : null,
+      respondedAt: respondedAtProvided
+          ? (respondedAt ?? self.respondedAt)
+          : null,
       message: message ?? self.message,
     );
   }

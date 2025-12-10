@@ -8,7 +8,7 @@ Future<void> initializeApp() async {
 
   // Ensure the Flutter binding is initialized.
   WidgetsFlutterBinding.ensureInitialized();
-  MmLogger.success('[initializeApp]: Flutter bindings initialized.');
+  MmLogger.info('[initializeApp]: Flutter bindings initialized.');
 
   // Get the environment.
   final environment = EnvironmentEnum.getEnvironment(
@@ -20,10 +20,10 @@ Future<void> initializeApp() async {
   // Configure the get it instance.
   MmLogger.info('[initializeApp]: Configuring dependency injection...');
   await configureGetIt();
-  MmLogger.success('[initializeApp]: Dependency injection configured.');
+  MmLogger.info('[initializeApp]: Dependency injection configured.');
 
   // Run the application.
   MmLogger.info('[initializeApp]: Starting application...');
   runApp(SentryWidget(child: const Root()));
-  MmLogger.success('[initializeApp]: Application started.');
+  MmLogger.info('[initializeApp]: Application started.');
 }

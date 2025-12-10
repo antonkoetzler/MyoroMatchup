@@ -6,35 +6,44 @@ part of 'game_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-GameResponseDto _$GameResponseDtoFromJson(Map<String, dynamic> json) => GameResponseDto(
-  name: json['name'] as String,
-  sport: $enumDecode(_$SportsEnumEnumMap, json['sport']),
-  frequencyDayTime: GameFrequencyDayTimeDto.fromJson(json['frequencyDayTime'] as Map<String, dynamic>),
-  location: LocationResponseDto.fromJson(json['location'] as Map<String, dynamic>),
-  price: GamePriceDto.fromJson(json['price'] as Map<String, dynamic>),
-  ageRange: GameAgeRangeModel.fromJson(json['ageRange'] as Map<String, dynamic>),
-  visibility: $enumDecode(_$VisibilityEnumEnumMap, json['visibility']),
-  profilePicture: json['profilePicture'] as String? ?? '',
-  banner: json['banner'] as String? ?? '',
-  whatsAppGroupChatLink: json['whatsAppGroupChatLink'] as String? ?? '',
-  useWhatsAppGroupChatBot: json['useWhatsAppGroupChatBot'] as bool? ?? false,
-  id: (json['id'] as num).toInt(),
-);
+GameResponseDto _$GameResponseDtoFromJson(Map<String, dynamic> json) =>
+    GameResponseDto(
+      name: json['name'] as String,
+      sport: $enumDecode(_$SportsEnumEnumMap, json['sport']),
+      frequencyDayTime: GameFrequencyDayTimeDto.fromJson(
+        json['frequencyDayTime'] as Map<String, dynamic>,
+      ),
+      location: LocationResponseDto.fromJson(
+        json['location'] as Map<String, dynamic>,
+      ),
+      price: GamePriceDto.fromJson(json['price'] as Map<String, dynamic>),
+      ageRange: GameAgeRangeModel.fromJson(
+        json['ageRange'] as Map<String, dynamic>,
+      ),
+      visibility: $enumDecode(_$VisibilityEnumEnumMap, json['visibility']),
+      profilePicture: json['profilePicture'] as String? ?? '',
+      banner: json['banner'] as String? ?? '',
+      whatsAppGroupChatLink: json['whatsAppGroupChatLink'] as String? ?? '',
+      useWhatsAppGroupChatBot:
+          json['useWhatsAppGroupChatBot'] as bool? ?? false,
+      id: (json['id'] as num).toInt(),
+    );
 
-Map<String, dynamic> _$GameResponseDtoToJson(GameResponseDto instance) => <String, dynamic>{
-  'id': instance.id,
-  'name': instance.name,
-  'sport': _$SportsEnumEnumMap[instance.sport]!,
-  'frequencyDayTime': instance.frequencyDayTime,
-  'location': instance.location,
-  'price': instance.price,
-  'ageRange': instance.ageRange,
-  'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
-  'profilePicture': instance.profilePicture,
-  'banner': instance.banner,
-  'whatsAppGroupChatLink': instance.whatsAppGroupChatLink,
-  'useWhatsAppGroupChatBot': instance.useWhatsAppGroupChatBot,
-};
+Map<String, dynamic> _$GameResponseDtoToJson(GameResponseDto instance) =>
+    <String, dynamic>{
+      'id': instance.id,
+      'name': instance.name,
+      'sport': _$SportsEnumEnumMap[instance.sport]!,
+      'frequencyDayTime': instance.frequencyDayTime,
+      'location': instance.location,
+      'price': instance.price,
+      'ageRange': instance.ageRange,
+      'visibility': _$VisibilityEnumEnumMap[instance.visibility]!,
+      'profilePicture': instance.profilePicture,
+      'banner': instance.banner,
+      'whatsAppGroupChatLink': instance.whatsAppGroupChatLink,
+      'useWhatsAppGroupChatBot': instance.useWhatsAppGroupChatBot,
+    };
 
 const _$SportsEnumEnumMap = {
   SportsEnum.football: 'FOOTBALL',
@@ -43,7 +52,10 @@ const _$SportsEnumEnumMap = {
   SportsEnum.volleyball: 'VOLLEYBALL',
 };
 
-const _$VisibilityEnumEnumMap = {VisibilityEnum.private: 'PRIVATE', VisibilityEnum.public: 'PUBLIC'};
+const _$VisibilityEnumEnumMap = {
+  VisibilityEnum.private: 'PRIVATE',
+  VisibilityEnum.public: 'PUBLIC',
+};
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -84,8 +96,10 @@ mixin _$GameResponseDtoMixin {
       visibility: visibility ?? self.visibility,
       profilePicture: profilePicture ?? self.profilePicture,
       banner: banner ?? self.banner,
-      whatsAppGroupChatLink: whatsAppGroupChatLink ?? self.whatsAppGroupChatLink,
-      useWhatsAppGroupChatBot: useWhatsAppGroupChatBot ?? self.useWhatsAppGroupChatBot,
+      whatsAppGroupChatLink:
+          whatsAppGroupChatLink ?? self.whatsAppGroupChatLink,
+      useWhatsAppGroupChatBot:
+          useWhatsAppGroupChatBot ?? self.useWhatsAppGroupChatBot,
     );
   }
 

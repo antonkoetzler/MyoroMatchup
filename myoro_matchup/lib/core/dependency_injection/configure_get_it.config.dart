@@ -16,7 +16,7 @@ import 'package:myoro_matchup/common/widget/widget/input/location_input/view_mod
 import 'package:myoro_matchup/core/auth/repository/auth_repository.dart'
     as _i643;
 import 'package:myoro_matchup/core/auth/service/auth_service.dart' as _i206;
-import 'package:myoro_matchup/core/http/http_client.dart' as _i126;
+import 'package:myoro_matchup/core/http/mm_http_client.dart' as _i501;
 import 'package:myoro_matchup/core/log/mm_logger.dart' as _i788;
 import 'package:myoro_matchup/core/routing/module/mm_router_module.dart'
     as _i908;
@@ -76,29 +76,29 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.SharedPreferencesRepository>(),
       ),
     );
-    gh.singleton<_i126.HttpClient>(
-      () => _i126.HttpClient(gh<_i460.SharedPreferencesService>()),
-    );
     gh.singleton<_i782.UserService>(
       () => _i782.UserService(gh<_i460.SharedPreferencesService>()),
     );
+    gh.singleton<_i501.MmHttpClient>(
+      () => _i501.MmHttpClient(gh<_i460.SharedPreferencesService>()),
+    );
     gh.factory<_i643.AuthRepository>(
-      () => _i643.AuthRepository(gh<_i460.HttpClient>()),
+      () => _i643.AuthRepository(gh<_i460.MmHttpClient>()),
     );
     gh.factory<_i150.FriendRepository>(
-      () => _i150.FriendRepository(gh<_i460.HttpClient>()),
+      () => _i150.FriendRepository(gh<_i460.MmHttpClient>()),
     );
     gh.factory<_i1006.GameRepository>(
-      () => _i1006.GameRepository(gh<_i460.HttpClient>()),
+      () => _i1006.GameRepository(gh<_i460.MmHttpClient>()),
     );
     gh.factory<_i509.InvitationRepository>(
-      () => _i509.InvitationRepository(gh<_i460.HttpClient>()),
+      () => _i509.InvitationRepository(gh<_i460.MmHttpClient>()),
     );
     gh.factory<_i423.OpenStreetMapLocationRepository>(
-      () => _i423.OpenStreetMapLocationRepository(gh<_i460.HttpClient>()),
+      () => _i423.OpenStreetMapLocationRepository(gh<_i460.MmHttpClient>()),
     );
     gh.factory<_i624.UserRepository>(
-      () => _i624.UserRepository(gh<_i460.HttpClient>()),
+      () => _i624.UserRepository(gh<_i460.MmHttpClient>()),
     );
     gh.factory<_i789.MmLocationInputViewModel>(
       () => _i789.MmLocationInputViewModel(

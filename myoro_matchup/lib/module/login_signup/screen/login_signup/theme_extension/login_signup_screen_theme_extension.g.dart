@@ -13,8 +13,10 @@ part of 'login_signup_screen_theme_extension.dart';
 /// ```dart
 /// class LoginSignupScreenThemeExtension with _$LoginSignupScreenThemeExtensionMixin {}
 /// ```
-mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreenThemeExtension> {
-  LoginSignupScreenThemeExtension get self => this as LoginSignupScreenThemeExtension;
+mixin _$LoginSignupScreenThemeExtensionMixin
+    on ThemeExtension<LoginSignupScreenThemeExtension> {
+  LoginSignupScreenThemeExtension get self =>
+      this as LoginSignupScreenThemeExtension;
 
   @override
   LoginSignupScreenThemeExtension copyWith({
@@ -37,13 +39,22 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
       inputTextStyle: inputTextStyle ?? self.inputTextStyle,
       buttonTextStyle: buttonTextStyle ?? self.buttonTextStyle,
       buttonsSpacing: buttonsSpacing ?? self.buttonsSpacing,
-      formTypeSwitcherButtonTextStyle: formTypeSwitcherButtonTextStyle ?? self.formTypeSwitcherButtonTextStyle,
-      formTypeSwitcherButtonIdleColor: formTypeSwitcherButtonIdleColor ?? self.formTypeSwitcherButtonIdleColor,
+      formTypeSwitcherButtonTextStyle:
+          formTypeSwitcherButtonTextStyle ??
+          self.formTypeSwitcherButtonTextStyle,
+      formTypeSwitcherButtonIdleColor:
+          formTypeSwitcherButtonIdleColor ??
+          self.formTypeSwitcherButtonIdleColor,
       logoInputsSpacing: logoInputsSpacing ?? self.logoInputsSpacing,
-      formTypeSwitcherButtonTapColor: formTypeSwitcherButtonTapColor ?? self.formTypeSwitcherButtonTapColor,
-      formSwitcherActionButtonsSpacing: formSwitcherActionButtonsSpacing ?? self.formSwitcherActionButtonsSpacing,
-      bottomNavigationBarPadding: bottomNavigationBarPadding ?? self.bottomNavigationBarPadding,
-      forgotPasswordDialogStyle: forgotPasswordDialogStyle ?? self.forgotPasswordDialogStyle,
+      formTypeSwitcherButtonTapColor:
+          formTypeSwitcherButtonTapColor ?? self.formTypeSwitcherButtonTapColor,
+      formSwitcherActionButtonsSpacing:
+          formSwitcherActionButtonsSpacing ??
+          self.formSwitcherActionButtonsSpacing,
+      bottomNavigationBarPadding:
+          bottomNavigationBarPadding ?? self.bottomNavigationBarPadding,
+      forgotPasswordDialogStyle:
+          forgotPasswordDialogStyle ?? self.forgotPasswordDialogStyle,
     );
   }
 
@@ -56,11 +67,15 @@ mixin _$LoginSignupScreenThemeExtensionMixin on ThemeExtension<LoginSignupScreen
         other.inputTextStyle == self.inputTextStyle &&
         other.buttonTextStyle == self.buttonTextStyle &&
         other.buttonsSpacing == self.buttonsSpacing &&
-        other.formTypeSwitcherButtonTextStyle == self.formTypeSwitcherButtonTextStyle &&
-        other.formTypeSwitcherButtonIdleColor == self.formTypeSwitcherButtonIdleColor &&
+        other.formTypeSwitcherButtonTextStyle ==
+            self.formTypeSwitcherButtonTextStyle &&
+        other.formTypeSwitcherButtonIdleColor ==
+            self.formTypeSwitcherButtonIdleColor &&
         other.logoInputsSpacing == self.logoInputsSpacing &&
-        other.formTypeSwitcherButtonTapColor == self.formTypeSwitcherButtonTapColor &&
-        other.formSwitcherActionButtonsSpacing == self.formSwitcherActionButtonsSpacing &&
+        other.formTypeSwitcherButtonTapColor ==
+            self.formTypeSwitcherButtonTapColor &&
+        other.formSwitcherActionButtonsSpacing ==
+            self.formSwitcherActionButtonsSpacing &&
         other.bottomNavigationBarPadding == self.bottomNavigationBarPadding &&
         other.forgotPasswordDialogStyle == self.forgotPasswordDialogStyle;
   }

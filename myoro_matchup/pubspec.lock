@@ -641,10 +641,10 @@ packages:
     dependency: transitive
     description:
       name: meta
-      sha256: "23f08335362185a5ea2ad3a4e597f1375e78bce8a040df5c600c8d3552ef2394"
+      sha256: e3641ec5d63ebf0d9b41bd43201a66e3fc79a65db5f61fc181f04cd27aab950c
       url: "https://pub.dev"
     source: hosted
-    version: "1.17.0"
+    version: "1.16.0"
   mime:
     dependency: transitive
     description:
@@ -664,18 +664,16 @@ packages:
   myoro_flutter_annotations:
     dependency: "direct main"
     description:
-      name: myoro_flutter_annotations
-      sha256: c2de5a24b8305298b973fbfe73c90c81a6a993a1a95339ccd9418493933706ad
-      url: "https://pub.dev"
-    source: hosted
+      path: "../../myoro_flutter_annotations"
+      relative: true
+    source: path
     version: "1.4.10"
   myoro_flutter_library:
     dependency: "direct main"
     description:
-      name: myoro_flutter_library
-      sha256: b4d9abf8bf53927b757d52e563b88107394bae9ce0e494504740130e50c60393
-      url: "https://pub.dev"
-    source: hosted
+      path: "../../myoro_flutter_library"
+      relative: true
+    source: path
     version: "2.7.0"
   nested:
     dependency: transitive
@@ -1054,10 +1052,10 @@ packages:
     dependency: transitive
     description:
       name: test_api
-      sha256: ab2726c1a94d3176a45960b6234466ec367179b87dd74f1611adb1f3b5fb9d55
+      sha256: "522f00f556e73044315fa4585ec3270f1808a4b186c936e612cab0b565ff1e00"
       url: "https://pub.dev"
     source: hosted
-    version: "0.7.7"
+    version: "0.7.6"
   timing:
     dependency: transitive
     description:

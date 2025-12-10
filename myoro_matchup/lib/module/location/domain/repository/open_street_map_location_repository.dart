@@ -14,8 +14,8 @@ final class OpenStreetMapLocationRepository {
   /// Default constructor.
   const OpenStreetMapLocationRepository(this._httpClient);
 
-  /// [HttpClient] to make the requests.
-  final HttpClient _httpClient;
+  /// [MmHttpClient] to make the requests.
+  final MmHttpClient _httpClient;
 
   /// Gets all [Location]s matching the search query.
   ///

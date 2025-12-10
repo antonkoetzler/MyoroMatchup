@@ -34,22 +34,24 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/games")
 public class GameController {
   /** Message service. */
-  @Autowired private MessageService messageService;
+  @Autowired
+  private MessageService messageService;
 
   /** Game service. */
-  @Autowired private GameService gameService;
+  @Autowired
+  private GameService gameService;
 
   /** JWT service for extracting user ID from token. */
-  @Autowired private JwtService jwtService;
+  @Autowired
+  private JwtService jwtService;
 
   /** Create a game. */
   @Operation(summary = "Create game", description = "Creates a new game")
-  @ApiResponses(
-      value = {
-        @ApiResponse(responseCode = "200", description = "Game created successfully"),
-        @ApiResponse(responseCode = "400", description = "Invalid request data"),
-        @ApiResponse(responseCode = "401", description = "Unauthorized")
-      })
+  @ApiResponses(value = {
+      @ApiResponse(responseCode = "200", description = "Game created successfully"),
+      @ApiResponse(responseCode = "400", description = "Invalid request data"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized")
+  })
   @SecurityRequirement(name = "bearerAuth")
   @PostMapping
   public ResponseEntity<Map<String, Object>> create(
@@ -72,40 +74,33 @@ public class GameController {
 
   /** Get a game by id. */
   @Operation(summary = "Get game by ID", description = "Retrieves a specific game by its ID")
-  @ApiResponses(
-      value = {
-        @ApiResponse(responseCode = "200", description = "Game found"),
-        @ApiResponse(responseCode = "404", description = "Game not found")
-      })
+  @ApiResponses(value = {
+      @ApiResponse(responseCode = "200", description = "Game found"),
+      @ApiResponse(responseCode = "404", description = "Game not found")
+  })
   @GetMapping("/{id}")
   public ResponseEntity<GameResponseDto> selectById(@PathVariable Long id) {
     return ResponseEntity.ok(gameService.getById(id));
   }
 
   /** Get players of a game by game id. */
-  @Operation(
-      summary = "Get game players",
-      description = "Retrieves all players for a specific game")
-  @ApiResponses(
-      value = {
-        @ApiResponse(responseCode = "200", description = "Players retrieved successfully"),
-        @ApiResponse(responseCode = "404", description = "Game not found")
-      })
+  @Operation(summary = "Get game players", description = "Retrieves all players for a specific game")
+  @ApiResponses(value = {
+      @ApiResponse(responseCode = "200", description = "Players retrieved successfully"),
+      @ApiResponse(responseCode = "404", description = "Game not found")
+  })
   @GetMapping("/{id}/players")
   public ResponseEntity<List<GamePlayerResponseDto>> getPlayers(@PathVariable Long id) {
     return ResponseEntity.ok(gameService.getPlayersByGameId(id));
   }
 
   /** Set WhatsApp group chat link for a game. */
-  @Operation(
-      summary = "Set WhatsApp group chat link",
-      description = "Sets the WhatsApp group chat link for a game")
-  @ApiResponses(
-      value = {
-        @ApiResponse(responseCode = "200", description = "WhatsApp link set successfully"),
-        @ApiResponse(responseCode = "401", description = "Unauthorized"),
-        @ApiResponse(responseCode = "404", description = "Game not found")
-      })
+  @Operation(summary = "Set WhatsApp group chat link", description = "Sets the WhatsApp group chat link for a game")
+  @ApiResponses(value = {
+      @ApiResponse(responseCode = "200", description = "WhatsApp link set successfully"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized"),
+      @ApiResponse(responseCode = "404", description = "Game not found")
+  })
   @SecurityRequirement(name = "bearerAuth")
   @PutMapping("/{id}/whatsapp-group-chat-link")
   public ResponseEntity<Map<String, Object>> setWhatsAppGroupChatLink(
@@ -118,17 +113,12 @@ public class GameController {
   }
 
   /** Set use WhatsApp group chat bot flag for a game. */
-  @Operation(
-      summary = "Set WhatsApp bot usage",
-      description = "Sets whether to use WhatsApp group chat bot for a game")
-  @ApiResponses(
-      value = {
-        @ApiResponse(
-            responseCode = "200",
-            description = "WhatsApp bot setting updated successfully"),
-        @ApiResponse(responseCode = "401", description = "Unauthorized"),
-        @ApiResponse(responseCode = "404", description = "Game not found")
-      })
+  @Operation(summary = "Set WhatsApp bot usage", description = "Sets whether to use WhatsApp group chat bot for a game")
+  @ApiResponses(value = {
+      @ApiResponse(responseCode = "200", description = "WhatsApp bot setting updated successfully"),
+      @ApiResponse(responseCode = "401", description = "Unauthorized"),
+      @ApiResponse(responseCode = "404", description = "Game not found")
+  })
   @SecurityRequirement(name = "bearerAuth")
   @PutMapping("/{id}/use-whatsapp-group-chat-bot")
   public ResponseEntity<Map<String, Object>> setUseWhatsAppGroupChatBot(

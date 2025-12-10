@@ -18,16 +18,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class FriendRequestService {
   /** Friend request repository. */
-  @Autowired
-  private FriendRequestRepository friendRequestRepository;
+  @Autowired private FriendRequestRepository friendRequestRepository;
 
   /** User repository. */
-  @Autowired
-  private UserRepository userRepository;
+  @Autowired private UserRepository userRepository;
 
   /** Message service for localization and internationalization. */
-  @Autowired
-  private MessageService messageService;
+  @Autowired private MessageService messageService;
 
   /**
    * Sends a friend request to a user.
@@ -38,10 +35,11 @@ public class FriendRequestService {
   public void sendFriendRequest(Long recipientId, Long requesterId) {
     // Validate recipient exists
     @SuppressWarnings("null")
-    UserModel recipient = userRepository
-        .findById(recipientId)
-        .orElseThrow(
-            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    UserModel recipient =
+        userRepository
+            .findById(recipientId)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     // Validate requester is not the recipient
     if (recipient.getId().equals(requesterId)) {
@@ -63,10 +61,11 @@ public class FriendRequestService {
 
     // Get requester
     @SuppressWarnings("null")
-    UserModel requester = userRepository
-        .findById(requesterId)
-        .orElseThrow(
-            () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
+    UserModel requester =
+        userRepository
+            .findById(requesterId)
+            .orElseThrow(
+                () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
     // Create friend request
     FriendRequestModel friendRequest = new FriendRequestModel();
@@ -82,16 +81,16 @@ public class FriendRequestService {
   /**
    * Gets all friend requests for a user, optionally filtered by query and status.
    *
-   * @param userId      the user ID
-   * @param searchQuery optional search query to filter by requester name,
-   *                    recipient name, status,
-   *                    or dates
-   * @param status      optional status filter
+   * @param userId the user ID
+   * @param searchQuery optional search query to filter by requester name, recipient name, status,
+   *     or dates
+   * @param status optional status filter
    * @return list of friend request response DTOs
    */
   public List<FriendRequestResponseDto> getFriendRequests(
       Long userId, String searchQuery, FriendRequestStatusEnum status) {
-    Specification<FriendRequestModel> spec = FriendSpecifications.filter(userId, searchQuery, status);
+    Specification<FriendRequestModel> spec =
+        FriendSpecifications.filter(userId, searchQuery, status);
     List<FriendRequestModel> friendRequests = friendRequestRepository.findAll(spec);
 
     return friendRequests.stream().map(this::toDto).collect(Collectors.toList());
@@ -119,15 +118,17 @@ public class FriendRequestService {
    * Accepts a friend request for the current user.
    *
    * @param friendRequestId the friend request ID
-   * @param userId          the authenticated user's ID
+   * @param userId the authenticated user's ID
    */
   public void acceptFriendRequest(Long friendRequestId, Long userId) {
     @SuppressWarnings("null")
-    FriendRequestModel friendRequest = friendRequestRepository
-        .findById(friendRequestId)
-        .orElseThrow(
-            () -> new RuntimeException(
-                messageService.getMessage("error.friend.request.not.found")));
+    FriendRequestModel friendRequest =
+        friendRequestRepository
+            .findById(friendRequestId)
+            .orElseThrow(
+                () ->
+                    new RuntimeException(
+                        messageService.getMessage("error.friend.request.not.found")));
 
     if (!friendRequest.getRecipient().getId().equals(userId)) {
       throw new RuntimeException(messageService.getMessage("error.access.denied"));
@@ -144,17 +145,16 @@ public class FriendRequestService {
   }
 
   /**
-   * Gets all friends for a user, optionally filtered by query. Returns only
-   * accepted friend
+   * Gets all friends for a user, optionally filtered by query. Returns only accepted friend
    * requests as UserResponseDto.
    *
-   * @param userId      the user ID
+   * @param userId the user ID
    * @param searchQuery optional search query to filter by friend name or username
    * @return list of friend request response DTOs (only accepted)
    */
   public List<FriendRequestResponseDto> getFriends(Long userId, String searchQuery) {
-    Specification<FriendRequestModel> spec = FriendSpecifications.filter(userId, searchQuery,
-        FriendRequestStatusEnum.ACCEPTED);
+    Specification<FriendRequestModel> spec =
+        FriendSpecifications.filter(userId, searchQuery, FriendRequestStatusEnum.ACCEPTED);
     List<FriendRequestModel> friendRequests = friendRequestRepository.findAll(spec);
 
     return friendRequests.stream().map(this::toDto).collect(Collectors.toList());

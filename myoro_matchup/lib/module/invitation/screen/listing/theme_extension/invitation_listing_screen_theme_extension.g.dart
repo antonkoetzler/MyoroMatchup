@@ -13,8 +13,10 @@ part of 'invitation_listing_screen_theme_extension.dart';
 /// ```dart
 /// class InvitationListingScreenThemeExtension with _$InvitationListingScreenThemeExtensionMixin {}
 /// ```
-mixin _$InvitationListingScreenThemeExtensionMixin on ThemeExtension<InvitationListingScreenThemeExtension> {
-  InvitationListingScreenThemeExtension get self => this as InvitationListingScreenThemeExtension;
+mixin _$InvitationListingScreenThemeExtensionMixin
+    on ThemeExtension<InvitationListingScreenThemeExtension> {
+  InvitationListingScreenThemeExtension get self =>
+      this as InvitationListingScreenThemeExtension;
 
   @override
   InvitationListingScreenThemeExtension copyWith({
@@ -34,22 +36,28 @@ mixin _$InvitationListingScreenThemeExtensionMixin on ThemeExtension<InvitationL
     Color? bodySuccessStateNonEmptyStateItemExpiredContentColor,
     Color? bodySuccessStateNonEmptyStateItemCancelledContentColor,
     double? bodySuccessStateNonEmptyStateItemSpacing,
-    MyoroIconTextButtonStyle? bodySuccessStateNonEmptyStateItemDeclineButtonStyle,
-    MyoroIconTextButtonStyle? bodySuccessStateNonEmptyStateItemAcceptButtonStyle,
+    MyoroIconTextButtonStyle?
+    bodySuccessStateNonEmptyStateItemDeclineButtonStyle,
+    MyoroIconTextButtonStyle?
+    bodySuccessStateNonEmptyStateItemAcceptButtonStyle,
     double? bodySuccessStateNonEmptyStateItemDeclineAcceptButtonSpacing,
   }) {
     return InvitationListingScreenThemeExtension(
       bodySuccessStateNonEmptyStateItemGamePadding:
-          bodySuccessStateNonEmptyStateItemGamePadding ?? self.bodySuccessStateNonEmptyStateItemGamePadding,
+          bodySuccessStateNonEmptyStateItemGamePadding ??
+          self.bodySuccessStateNonEmptyStateItemGamePadding,
       bodySuccessStateNonEmptyStateScrollableStyle:
-          bodySuccessStateNonEmptyStateScrollableStyle ?? self.bodySuccessStateNonEmptyStateScrollableStyle,
+          bodySuccessStateNonEmptyStateScrollableStyle ??
+          self.bodySuccessStateNonEmptyStateScrollableStyle,
       bodySuccessStateNonEmptyStateItemGameTextStyle:
-          bodySuccessStateNonEmptyStateItemGameTextStyle ?? self.bodySuccessStateNonEmptyStateItemGameTextStyle,
+          bodySuccessStateNonEmptyStateItemGameTextStyle ??
+          self.bodySuccessStateNonEmptyStateItemGameTextStyle,
       bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle:
           bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle ??
           self.bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle,
       bodySuccessStateNonEmptyStateItemStatusTextStyle:
-          bodySuccessStateNonEmptyStateItemStatusTextStyle ?? self.bodySuccessStateNonEmptyStateItemStatusTextStyle,
+          bodySuccessStateNonEmptyStateItemStatusTextStyle ??
+          self.bodySuccessStateNonEmptyStateItemStatusTextStyle,
       bodySuccessStateNonEmptyStateItemPendingBackgroundColor:
           bodySuccessStateNonEmptyStateItemPendingBackgroundColor ??
           self.bodySuccessStateNonEmptyStateItemPendingBackgroundColor,
@@ -81,12 +89,14 @@ mixin _$InvitationListingScreenThemeExtensionMixin on ThemeExtension<InvitationL
           bodySuccessStateNonEmptyStateItemCancelledContentColor ??
           self.bodySuccessStateNonEmptyStateItemCancelledContentColor,
       bodySuccessStateNonEmptyStateItemSpacing:
-          bodySuccessStateNonEmptyStateItemSpacing ?? self.bodySuccessStateNonEmptyStateItemSpacing,
+          bodySuccessStateNonEmptyStateItemSpacing ??
+          self.bodySuccessStateNonEmptyStateItemSpacing,
       bodySuccessStateNonEmptyStateItemDeclineButtonStyle:
           bodySuccessStateNonEmptyStateItemDeclineButtonStyle ??
           self.bodySuccessStateNonEmptyStateItemDeclineButtonStyle,
       bodySuccessStateNonEmptyStateItemAcceptButtonStyle:
-          bodySuccessStateNonEmptyStateItemAcceptButtonStyle ?? self.bodySuccessStateNonEmptyStateItemAcceptButtonStyle,
+          bodySuccessStateNonEmptyStateItemAcceptButtonStyle ??
+          self.bodySuccessStateNonEmptyStateItemAcceptButtonStyle,
       bodySuccessStateNonEmptyStateItemDeclineAcceptButtonSpacing:
           bodySuccessStateNonEmptyStateItemDeclineAcceptButtonSpacing ??
           self.bodySuccessStateNonEmptyStateItemDeclineAcceptButtonSpacing,
@@ -97,9 +107,12 @@ mixin _$InvitationListingScreenThemeExtensionMixin on ThemeExtension<InvitationL
   bool operator ==(Object other) {
     return other is InvitationListingScreenThemeExtension &&
         other.runtimeType == runtimeType &&
-        other.bodySuccessStateNonEmptyStateItemGamePadding == self.bodySuccessStateNonEmptyStateItemGamePadding &&
-        other.bodySuccessStateNonEmptyStateScrollableStyle == self.bodySuccessStateNonEmptyStateScrollableStyle &&
-        other.bodySuccessStateNonEmptyStateItemGameTextStyle == self.bodySuccessStateNonEmptyStateItemGameTextStyle &&
+        other.bodySuccessStateNonEmptyStateItemGamePadding ==
+            self.bodySuccessStateNonEmptyStateItemGamePadding &&
+        other.bodySuccessStateNonEmptyStateScrollableStyle ==
+            self.bodySuccessStateNonEmptyStateScrollableStyle &&
+        other.bodySuccessStateNonEmptyStateItemGameTextStyle ==
+            self.bodySuccessStateNonEmptyStateItemGameTextStyle &&
         other.bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle ==
             self.bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle &&
         other.bodySuccessStateNonEmptyStateItemStatusTextStyle ==
@@ -124,7 +137,8 @@ mixin _$InvitationListingScreenThemeExtensionMixin on ThemeExtension<InvitationL
             self.bodySuccessStateNonEmptyStateItemExpiredContentColor &&
         other.bodySuccessStateNonEmptyStateItemCancelledContentColor ==
             self.bodySuccessStateNonEmptyStateItemCancelledContentColor &&
-        other.bodySuccessStateNonEmptyStateItemSpacing == self.bodySuccessStateNonEmptyStateItemSpacing &&
+        other.bodySuccessStateNonEmptyStateItemSpacing ==
+            self.bodySuccessStateNonEmptyStateItemSpacing &&
         other.bodySuccessStateNonEmptyStateItemDeclineButtonStyle ==
             self.bodySuccessStateNonEmptyStateItemDeclineButtonStyle &&
         other.bodySuccessStateNonEmptyStateItemAcceptButtonStyle ==

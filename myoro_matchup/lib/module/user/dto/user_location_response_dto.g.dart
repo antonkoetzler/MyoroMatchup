@@ -6,13 +6,17 @@ part of 'user_location_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserLocationResponseDto _$UserLocationResponseDtoFromJson(Map<String, dynamic> json) => UserLocationResponseDto(
+UserLocationResponseDto _$UserLocationResponseDtoFromJson(
+  Map<String, dynamic> json,
+) => UserLocationResponseDto(
   country: $enumDecode(_$MyoroCountryEnumEnumMap, json['country']),
   state: json['state'] as String?,
   city: json['city'] as String?,
 );
 
-Map<String, dynamic> _$UserLocationResponseDtoToJson(UserLocationResponseDto instance) => <String, dynamic>{
+Map<String, dynamic> _$UserLocationResponseDtoToJson(
+  UserLocationResponseDto instance,
+) => <String, dynamic>{
   'country': _$MyoroCountryEnumEnumMap[instance.country]!,
   'state': instance.state,
   'city': instance.city,

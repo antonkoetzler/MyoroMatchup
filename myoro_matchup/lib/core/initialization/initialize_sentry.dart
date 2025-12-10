@@ -18,7 +18,7 @@ Future<void> initializeSentry() async {
         // We recommend adjusting this value in production.
         ..tracesSampleRate = 1.0;
 
-      MmLogger.success('[initializeSentry]: Sentry configured.');
+      MmLogger.info('[initializeSentry]: Sentry configured.');
     },
     appRunner: () async {
       return await initializeApp();

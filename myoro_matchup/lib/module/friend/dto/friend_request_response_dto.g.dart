@@ -6,13 +6,17 @@ part of 'friend_request_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-FriendRequestResponseDto _$FriendRequestResponseDtoFromJson(Map<String, dynamic> json) => FriendRequestResponseDto(
+FriendRequestResponseDto _$FriendRequestResponseDtoFromJson(
+  Map<String, dynamic> json,
+) => FriendRequestResponseDto(
   id: (json['id'] as num).toInt(),
   requesterName: json['requesterName'] as String,
   recipientName: json['recipientName'] as String,
   status: $enumDecode(_$FriendRequestStatusEnumEnumMap, json['status']),
   createdAt: DateTime.parse(json['createdAt'] as String),
-  respondedAt: json['respondedAt'] == null ? null : DateTime.parse(json['respondedAt'] as String),
+  respondedAt: json['respondedAt'] == null
+      ? null
+      : DateTime.parse(json['respondedAt'] as String),
 );
 
 const _$FriendRequestStatusEnumEnumMap = {
@@ -50,7 +54,9 @@ mixin _$FriendRequestResponseDtoMixin {
       recipientName: recipientName ?? self.recipientName,
       status: status ?? self.status,
       createdAt: createdAt ?? self.createdAt,
-      respondedAt: respondedAtProvided ? (respondedAt ?? self.respondedAt) : null,
+      respondedAt: respondedAtProvided
+          ? (respondedAt ?? self.respondedAt)
+          : null,
     );
   }
 
@@ -68,7 +74,14 @@ mixin _$FriendRequestResponseDtoMixin {
 
   @override
   int get hashCode {
-    return Object.hash(self.id, self.requesterName, self.recipientName, self.status, self.createdAt, self.respondedAt);
+    return Object.hash(
+      self.id,
+      self.requesterName,
+      self.recipientName,
+      self.status,
+      self.createdAt,
+      self.respondedAt,
+    );
   }
 
   @override

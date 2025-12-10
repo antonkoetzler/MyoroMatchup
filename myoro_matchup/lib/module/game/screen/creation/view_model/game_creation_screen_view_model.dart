@@ -263,7 +263,7 @@ final class GameCreationScreenViewModel {
         );
         Future.delayed(kSuccessNavigationDelayDuration).then((_) {
           MmRouter.pop();
-          MmRouter.push(Routes.gameRoutes.gameDetailsScreen.navigate(request.data!));
+          MmRouter.push(MmRoutes.gameRoutes.gameDetailsScreen.navigate(request.data!));
         });
         break;
       case MyoroRequestEnum.error:

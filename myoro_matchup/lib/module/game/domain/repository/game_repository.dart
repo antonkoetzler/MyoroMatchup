@@ -8,7 +8,7 @@ final class GameRepository {
   GameRepository(this._httpClient);
 
   /// HTTP client.
-  final HttpClient _httpClient;
+  final MmHttpClient _httpClient;
 
   /// Gets a [Game]
   Future<GameResponseDto>? get(int id) async {
@@ -28,7 +28,7 @@ final class GameRepository {
     try {
       final response = await _httpClient.post('/games', data: game.toJson());
       final id = response.data['id'];
-      MmLogger.success('[GameRepository.create]: Game created successfully: ${game.name} (ID: $id).');
+      MmLogger.info('[GameRepository.create]: Game created successfully: ${game.name} (ID: $id).');
       return id;
     } catch (e, stackTrace) {
       await MmLogger.error('[GameRepository.create]: Failed to create game: ${game.name}.', e, stackTrace);
