@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Spelers",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Speler uitnodigen",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "Nog geen team voor dit spel!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "Nodig wat spelers uit en wij genereren de teams voor je :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "Speler uitnodigen",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Zoek gebruikers...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Bericht",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Annuleren",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Verzenden",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "Gebruiker selecteren",
+  "userSelectionBottomSheetTitle": "Gebruiker selecteren",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Ranglijsten",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Frequentie",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Primaire Dag",

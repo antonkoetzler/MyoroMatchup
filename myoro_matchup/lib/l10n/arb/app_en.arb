@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Players",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Invite Player",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "No team yet for this game!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "Invite some players and we'll generate the teams for you :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "Invite Player",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Search users...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Message",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Cancel",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Send",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "Select User",
+  "userSelectionBottomSheetTitle": "Select User",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Rankings",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Frequency",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Primary Day",

@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Thông tin",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Người chơi",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Mời người chơi",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "Chưa có đội cho trận đấu này!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "Mời một số người chơi và chúng tôi sẽ tạo đội cho bạn :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "Mời người chơi",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Tìm kiếm người dùng...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Tin nhắn",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Hủy",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Gửi",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "Chọn Người dùng",
+  "userSelectionBottomSheetTitle": "Chọn Người dùng",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Bảng xếp hạng",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Tần suất",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Ngày Chính",

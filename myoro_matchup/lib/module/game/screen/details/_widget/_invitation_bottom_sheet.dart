@@ -3,7 +3,7 @@ part of '../widget/game_details_screen.dart';
 /// Invitation bottom sheet of [GameDetailsScreen].
 final class _InvitationBottomSheet extends StatelessWidget {
   /// Show function.
-  static void show(BuildContext context) {
+  static void show(BuildContext context, UserResponseDto invitee) {
     final themeExtension = context.resolveThemeExtension<GameDetailsScreenThemeExtension>();
     final viewModel = context.read<GameDetailsScreenViewModel>();
 
@@ -15,13 +15,16 @@ final class _InvitationBottomSheet extends StatelessWidget {
           InheritedProvider.value(value: themeExtension),
           InheritedProvider.value(value: viewModel),
         ],
-        child: const _InvitationBottomSheet._(),
+        child: _InvitationBottomSheet._(invitee),
       ),
     );
   }
 
   /// Internal constructor.
-  const _InvitationBottomSheet._();
+  const _InvitationBottomSheet._(this._invitee);
+
+  /// Invitee.
+  final UserResponseDto _invitee;
 
   /// Build function.
   @override
@@ -34,8 +37,10 @@ final class _InvitationBottomSheet extends StatelessWidget {
     final invitationBottomSheetRequest = viewModel.invitationBottomSheetRequest;
     final invitationBottomSheetOnSuccess = viewModel.invitationBottomSheetOnSuccess;
 
-    return MyoroForm(
-      request: invitationBottomSheetRequest,
+    return MyoroForm<String>(
+      request: () async {
+        return await invitationBottomSheetRequest(_invitee.id);
+      },
       onSuccess: invitationBottomSheetOnSuccess,
       builder: (request, controller) {
         return Padding(
@@ -46,7 +51,7 @@ final class _InvitationBottomSheet extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const _InvitationBottomSheetTitle(),
-              const _InvitationBottomSheetUserSearchInput(),
+              const _InvitationBottomSheetUserSelectionButton(),
               const _InvitationBottomSheetMessageInput(),
               _InvitationBottomSheetActionButtons(request, controller),
             ],

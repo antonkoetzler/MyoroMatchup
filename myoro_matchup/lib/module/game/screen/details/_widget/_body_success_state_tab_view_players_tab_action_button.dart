@@ -17,7 +17,7 @@ final class _BodySuccessStateTabViewPlayersTabActionButton extends StatelessWidg
           .secondary(context)
           .copyWith(textStyle: bodySuccessStateTabViewPlayersTabActionButtonTextStyle),
       text: bodySuccessStateTabViewPlayersTabActionButtonText,
-      onTapUp: (_, _) => _InvitationBottomSheet.show(context),
+      onTapUp: (_, _) => _UserSelectionBottomSheet.show(context),
     );
   }
 }

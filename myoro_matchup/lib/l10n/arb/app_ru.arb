@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Инфо",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Игроки",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Пригласить игрока",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "Пока нет команды для этой игры!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "Пригласите несколько игроков, и мы сформируем команды за вас :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "Пригласить игрока",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Поиск пользователей...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Сообщение",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Отмена",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Отправить",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "Выбрать пользователя",
+  "userSelectionBottomSheetTitle": "Выбрать пользователя",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Рейтинги",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Частота",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Основной День",

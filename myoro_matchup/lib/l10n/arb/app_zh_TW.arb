@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "資訊",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "玩家",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "邀請玩家",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "此遊戲還沒有隊伍！",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "邀請一些玩家，我們將為您生成隊伍 :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "邀請玩家",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "搜尋使用者...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "訊息",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "取消",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "傳送",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "選擇使用者",
+  "userSelectionBottomSheetTitle": "選擇使用者",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "排名",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "頻率",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "主要日期",

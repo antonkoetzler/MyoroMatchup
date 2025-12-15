@@ -9,17 +9,21 @@ final class GameDetailsScreenState {
   /// [MyoroRequestController] of the game being viewed.
   final MyoroRequestController<GameResponseDto> _gameRequestController;
 
-  /// [ValueNotifier] of the ID of the invitee.
-  final _inviteeIdController = ValueNotifier<int?>(null);
-
   /// [TextEditingController] of the invitation message.
   final _invitationMessageController = TextEditingController();
+
+  /// [ValueNotifier] of the selected user.
+  final _selectedUserController = ValueNotifier<UserResponseDto?>(null);
+
+  /// [TextEditingController] of the search query of the user selection bottom sheet.
+  final _userSelectionBottomSheetSearchQueryController = TextEditingController();
 
   /// Dispose function.
   void dispose() {
     _gameRequestController.dispose();
-    _inviteeIdController.dispose();
     _invitationMessageController.dispose();
+    _selectedUserController.dispose();
+    _userSelectionBottomSheetSearchQueryController.dispose();
   }
 
   /// [_gameRequestController] getter.
@@ -32,14 +36,13 @@ final class GameDetailsScreenState {
     return _gameRequestController.value;
   }
 
-  /// [_inviteeIdController] getter.
-  ValueNotifier<int?> get inviteeIdController {
-    return _inviteeIdController;
-  }
-
-  /// Getter of [_inviteeIdController]'s value.
-  int? get inviteeId {
-    return _inviteeIdController.value;
+  /// Game ID getter.
+  int get gameId {
+    assert(
+      gameRequest.status.isSuccess,
+      '[GameDetailsScreenState.gameId] Game ID can only be accessed when the game request is successful.',
+    );
+    return gameRequest.data!.id;
   }
 
   /// [_invitationMessageController] getter.
@@ -52,17 +55,28 @@ final class GameDetailsScreenState {
     return _invitationMessageController.text;
   }
 
-  /// Game ID getter.
-  int get gameId {
-    assert(
-      gameRequest.status.isSuccess,
-      '[GameDetailsScreenState.gameId] Game ID can only be accessed when the game request is successful.',
-    );
-    return gameRequest.data!.id;
+  /// [_selectedUserController] getter.
+  ValueNotifier<UserResponseDto?> get selectedUserController {
+    return _selectedUserController;
   }
 
-  /// [_inviteeIdController] setter.
-  set inviteeId(int? value) {
-    _inviteeIdController.value = value;
+  /// Getter of [_selectedUserController]'s value.
+  UserResponseDto? get selectedUser {
+    return _selectedUserController.value;
+  }
+
+  /// [_userSelectionBottomSheetSearchQueryController] getter.
+  TextEditingController get userSelectionBottomSheetSearchQueryController {
+    return _userSelectionBottomSheetSearchQueryController;
+  }
+
+  /// Getter of [_userSelectionBottomSheetSearchQueryController]'s text.
+  String get userSelectionBottomSheetSearchQuery {
+    return _userSelectionBottomSheetSearchQueryController.text;
+  }
+
+  /// [_selectedUserController] setter.
+  set selectedUser(UserResponseDto? value) {
+    _selectedUserController.value = value;
   }
 }

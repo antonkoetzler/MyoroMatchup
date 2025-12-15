@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "信息",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "玩家",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "邀请玩家",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "此游戏还没有队伍！",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "邀请一些玩家，我们将为您生成队伍 :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "邀请玩家",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "搜索用户...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "消息",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "取消",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "发送",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "选择用户",
+  "userSelectionBottomSheetTitle": "选择用户",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "排名",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "频率",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "主要日期",

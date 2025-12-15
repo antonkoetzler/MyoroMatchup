@@ -2,11 +2,13 @@ package com.myoro.myoro_matchup_api.repository;
 
 import com.myoro.myoro_matchup_api.model.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 /** User repository. */
 @Repository
-public interface UserRepository extends JpaRepository<UserModel, Long> {
+public interface UserRepository
+    extends JpaRepository<UserModel, Long>, JpaSpecificationExecutor<UserModel> {
   /** Checks if the username exists. */
   boolean existsByUsername(String username);
 

@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 /** User controller. */
@@ -62,13 +63,17 @@ public class UserController {
   /**
    * Retrieves all users in the system
    *
+   * @param query optional search query to filter by username, name, or email
    * @return ResponseEntity containing list of all users
    */
-  @Operation(summary = "Get all users", description = "Retrieves a list of all users in the system")
+  @Operation(
+      summary = "Get all users",
+      description = "Retrieves a list of all users in the system, optionally filtered by query")
   @ApiResponse(responseCode = "200", description = "List of users retrieved successfully")
   @GetMapping
-  public ResponseEntity<List<UserResponseDto>> getAllUsers() {
-    return ResponseEntity.ok(userService.getAllUsersDto());
+  public ResponseEntity<List<UserResponseDto>> getAllUsers(
+      @RequestParam(required = false) String query) {
+    return ResponseEntity.ok(userService.getAllUsersDto(query));
   }
 
   /**

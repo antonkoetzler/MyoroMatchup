@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "معلومات",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "اللاعبون",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "دعوة لاعب",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "لا يوجد فريق لهذه اللعبة بعد!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "ادعُ بعض اللاعبين وسنقوم بإنشاء الفرق لك :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "دعوة لاعب",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "البحث عن المستخدمين...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "الرسالة",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "إلغاء",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "إرسال",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "اختر المستخدم",
+  "userSelectionBottomSheetTitle": "اختر المستخدم",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "التصنيفات",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "التكرار",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "اليوم الأساسي",

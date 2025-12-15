@@ -20,7 +20,6 @@ part '../_widget/_body_success_state_tab_view_players_tab_content.dart';
 part '../_widget/_body_success_state_tab_view_players_tab_action_button.dart';
 part '../_widget/_invitation_bottom_sheet.dart';
 part '../_widget/_invitation_bottom_sheet_title.dart';
-part '../_widget/_invitation_bottom_sheet_user_search_input.dart';
 part '../_widget/_invitation_bottom_sheet_message_input.dart';
 part '../_widget/_invitation_bottom_sheet_action_buttons.dart';
 part '../_widget/_invitation_bottom_sheet_action_button.dart';
@@ -29,6 +28,8 @@ part '../_widget/_player_details_bottom_sheet.dart';
 part '../_widget/_send_friend_request_confirmation_bottom_sheet.dart';
 part '../_widget/_block_user_confirmation_bottom_sheet.dart';
 part '../_widget/_body_success_state_tab_view_players_tab_content_team_listing.dart';
+part '../_widget/_invitation_bottom_sheet_user_selection_button.dart';
+part '../_widget/_user_selection_bottom_sheet.dart';
 
 /// Game details screen.
 final class GameDetailsScreen extends StatelessWidget {

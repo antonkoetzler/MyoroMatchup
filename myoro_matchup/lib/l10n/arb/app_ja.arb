@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "情報",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "プレイヤー",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "プレイヤーを招待",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "このゲームにはまだチームがありません！",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "プレイヤーを招待すると、チームを自動生成します :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "プレイヤーを招待",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "ユーザーを検索...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "メッセージ",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "キャンセル",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "送信",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "ユーザーを選択",
+  "userSelectionBottomSheetTitle": "ユーザーを選択",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "ランキング",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "頻度",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "主要日",

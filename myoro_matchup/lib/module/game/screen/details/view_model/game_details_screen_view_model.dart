@@ -16,9 +16,7 @@ final class GameDetailsScreenViewModel {
     this._gameRepository,
     this._invitationRepository,
     @factoryParam int gameId,
-  ) {
-    _state = GameDetailsScreenState(() async => await _gameRepository.get(gameId));
-    _state.gameRequestController.addListener(_gameRequestControllerListener);
+  ) : _state = GameDetailsScreenState(() async => await _gameRepository.get(gameId)) {
     fetch();
   }
 
@@ -32,7 +30,7 @@ final class GameDetailsScreenViewModel {
   final InvitationRepository _invitationRepository;
 
   /// State.
-  late final GameDetailsScreenState _state;
+  final GameDetailsScreenState _state;
 
   /// Dispose function.
   void dispose() {
@@ -50,22 +48,9 @@ final class GameDetailsScreenViewModel {
   }
 
   /// [MyoroSearchInput.requestCallback] of the invitation bottom sheet's user search input.
-  FutureOr<Set<UserResponseDto>> invitationBottomSheetUserSearchInputRequestCallback(String query) async {
-    return await _userRepository.getAll();
-  }
-
-  /// [MyoroSearchInput.itemBuilder] of the invitation bottom sheet's user search input.
-  MyoroMenuIconTextButtonItem invitationBottomSheetUserSearchInputItemBuilder(_, UserResponseDto user) {
-    final gameDetailsScreenInvitationBottomSheetUserSearchInputItemText =
-        localization.gameDetailsScreenInvitationBottomSheetUserSearchInputItemText;
-    return MyoroMenuIconTextButtonItem(
-      text: gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(user.username, user.name),
-    );
-  }
-
-  /// [MyoroSearchInput.selectedItemBuilder] of the invitation bottom sheet's user search input.
-  String invitationBottomSheetUserSearchInputSelectedItemBuilder(UserResponseDto user) {
-    return user.username;
+  FutureOr<Set<UserResponseDto>> getUsers() async {
+    final userSelectionBottomSheetSearchQuery = state.userSelectionBottomSheetSearchQuery;
+    return await _userRepository.getAll(userSelectionBottomSheetSearchQuery);
   }
 
   /// Cancel invitation.
@@ -74,11 +59,10 @@ final class GameDetailsScreenViewModel {
   }
 
   /// Sends the invitation.
-  Future<String> invitationBottomSheetRequest() async {
+  Future<String> invitationBottomSheetRequest(int inviteeId) async {
     final gameRequest = state.gameRequest;
     final game = gameRequest.data!;
     final gameId = game.id;
-    final inviteeId = state.inviteeId!;
     final message = state.invitationMessage;
     return await _invitationRepository.sendInvitation(gameId, inviteeId, message);
   }
@@ -101,8 +85,11 @@ final class GameDetailsScreenViewModel {
     return await _userRepository.blockUser(player.id);
   }
 
-  /// [_gameRequestControllerListener] listener.
-  void _gameRequestControllerListener() {}
+  /// Select user.
+  void selectUser(UserResponseDto user) {
+    state.selectedUser = user;
+    MmRouter.pop();
+  }
 
   /// [_state] getter.
   GameDetailsScreenState get state {

@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "정보",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "플레이어",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "플레이어 초대",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "이 게임에는 아직 팀이 없습니다!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "플레이어를 초대하면 팀을 자동으로 생성해드립니다 :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "플레이어 초대",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "사용자 검색...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "메시지",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "취소",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "보내기",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "사용자 선택",
+  "userSelectionBottomSheetTitle": "사용자 선택",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "순위",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "빈도",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "주요 일",

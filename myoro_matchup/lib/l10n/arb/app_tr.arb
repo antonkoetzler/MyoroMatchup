@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Bilgi",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Oyuncular",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Oyuncu Davet Et",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "Bu oyun için henüz takım yok!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "Bazı oyuncuları davet edin, takımları sizin için oluşturacağız :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "Oyuncu Davet Et",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Kullanıcı ara...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Mesaj",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "İptal",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Gönder",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "Kullanıcı Seç",
+  "userSelectionBottomSheetTitle": "Kullanıcı Seç",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Sıralamalar",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Sıklık",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Ana Gün",

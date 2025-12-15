@@ -26,6 +26,8 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
     required this.playerDetailsBottomSheetTitleTextStyle,
     required this.playerDetailsBottomSheetSpacing,
     required this.bodySuccessStateTabViewPlayersTabContentTeamListingNameTextStyle,
+    required this.userSelectionBottomSheetTitleTextStyle,
+    required this.userSelectionBottomSheetSpacing,
   });
 
   /// Fake constructor.
@@ -41,7 +43,9 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
       invitationBottomSheetContentPadding = myoroFake<EdgeInsets>(),
       playerDetailsBottomSheetTitleTextStyle = myoroFake<TextStyle>(),
       playerDetailsBottomSheetSpacing = myoroFake<double>(),
-      bodySuccessStateTabViewPlayersTabContentTeamListingNameTextStyle = myoroFake<TextStyle>();
+      bodySuccessStateTabViewPlayersTabContentTeamListingNameTextStyle = myoroFake<TextStyle>(),
+      userSelectionBottomSheetTitleTextStyle = myoroFake<TextStyle>(),
+      userSelectionBottomSheetSpacing = myoroFake<double>();
 
   /// Builder constructor.
   GameDetailsScreenThemeExtension.builder(TextTheme textTheme)
@@ -56,7 +60,9 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
       invitationBottomSheetContentPadding = const EdgeInsets.all(kMyoroMultiplier * 2),
       playerDetailsBottomSheetTitleTextStyle = textTheme.titleMedium!,
       playerDetailsBottomSheetSpacing = kMyoroMultiplier * 1.5,
-      bodySuccessStateTabViewPlayersTabContentTeamListingNameTextStyle = textTheme.titleMedium!;
+      bodySuccessStateTabViewPlayersTabContentTeamListingNameTextStyle = textTheme.titleMedium!,
+      userSelectionBottomSheetTitleTextStyle = textTheme.titleMedium!,
+      userSelectionBottomSheetSpacing = kMyoroMultiplier * 2;
 
   /// [EdgeInsets] of the error state's content.
   final EdgeInsets errorStatePadding;
@@ -93,6 +99,12 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
 
   /// Text style of the team listing name.
   final TextStyle bodySuccessStateTabViewPlayersTabContentTeamListingNameTextStyle;
+
+  /// Text style of the user selection bottom sheet title.
+  final TextStyle userSelectionBottomSheetTitleTextStyle;
+
+  /// Spacing of the user selection bottom sheet.
+  final double userSelectionBottomSheetSpacing;
 
   /// Lerp function.
   @override
@@ -150,6 +162,16 @@ final class GameDetailsScreenThemeExtension extends ThemeExtension<GameDetailsSc
         other.bodySuccessStateTabViewPlayersTabContentTeamListingNameTextStyle,
         t,
       )!,
+      userSelectionBottomSheetTitleTextStyle: TextStyle.lerp(
+        userSelectionBottomSheetTitleTextStyle,
+        other.userSelectionBottomSheetTitleTextStyle,
+        t,
+      )!,
+      userSelectionBottomSheetSpacing: lerpDouble(
+        userSelectionBottomSheetSpacing,
+        other.userSelectionBottomSheetSpacing,
+        t,
+      ),
     );
   }
 }

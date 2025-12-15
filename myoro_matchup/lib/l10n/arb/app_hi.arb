@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "जानकारी",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "खिलाड़ी",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "खिलाड़ी को आमंत्रित करें",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "इस खेल के लिए अभी तक कोई टीम नहीं!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "कुछ खिलाड़ियों को आमंत्रित करें और हम आपके लिए टीमें बनाएंगे :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "खिलाड़ी को आमंत्रित करें",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "उपयोगकर्ताओं को खोजें...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "संदेश",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "रद्द करें",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "भेजें",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "उपयोगकर्ता चुनें",
+  "userSelectionBottomSheetTitle": "उपयोगकर्ता चुनें",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "रैंकिंग",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "आवृत्ति",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "प्राथमिक दिन",

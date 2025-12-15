@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "Info",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "Pemain",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "Undang Pemain",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "Belum ada tim untuk permainan ini!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "Undang beberapa pemain dan kami akan membuat tim untuk Anda :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "Undang Pemain",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "Cari pengguna...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "Pesan",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "Batal",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "Kirim",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "Pilih Pengguna",
+  "userSelectionBottomSheetTitle": "Pilih Pengguna",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "Peringkat",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "Frekuensi",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "Hari Utama",

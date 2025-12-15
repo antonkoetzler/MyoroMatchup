@@ -20,18 +20,16 @@ final class UserRepository {
   }
 
   /// Gets all users.
-  Future<Set<UserResponseDto>> getAll() async {
-    final response = await _httpClient.get('/users');
+  ///
+  /// [query] is optional and filters users by username, name, or email.
+  Future<Set<UserResponseDto>> getAll([String query = kMyoroEmptyString]) async {
+    final response = await _httpClient.get('/users', queryParameters: query.isNotEmpty ? {'query': query} : null);
     return response.data.map((e) => UserResponseDto.fromJson(e)).toList();
   }
 
   /// Updates the visibility of the authenticated user.
   Future<String> updateVisibility(VisibilityEnum visibility) async {
-    final visibilityValue = switch (visibility) {
-      VisibilityEnum.private => 'PRIVATE',
-      VisibilityEnum.public => 'PUBLIC',
-    };
-    final response = await _httpClient.put('/users/visibility', data: {'visibility': visibilityValue});
+    final response = await _httpClient.put('/users/visibility', data: {'visibility': visibility});
     return response.data['message'] as String;
   }
 

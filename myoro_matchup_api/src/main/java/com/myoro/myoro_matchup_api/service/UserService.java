@@ -22,6 +22,7 @@ import com.myoro.myoro_matchup_api.repository.FriendRequestRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
 import com.myoro.myoro_matchup_api.repository.UserStatsRepository;
 import com.myoro.myoro_matchup_api.specification.FriendSpecifications;
+import com.myoro.myoro_matchup_api.specification.UserSpecifications;
 import jakarta.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -72,9 +73,14 @@ public class UserService {
   /**
    * Retrieves all users from database
    *
+   * @param query optional search query to filter by username, name, or email
    * @return list of all users in the system
    */
-  public List<UserModel> getAllUsers() {
+  public List<UserModel> getAllUsers(String query) {
+    Specification<UserModel> spec = UserSpecifications.search(query);
+    if (spec != null) {
+      return userRepository.findAll(spec);
+    }
     return userRepository.findAll();
   }
 
@@ -172,10 +178,18 @@ public class UserService {
   /**
    * Get all users as DTOs.
    *
+   * @param query optional search query to filter by username, name, or email
    * @return list of all user response DTOs
    */
-  public List<UserResponseDto> getAllUsersDto() {
-    return userRepository.findAll().stream()
+  public List<UserResponseDto> getAllUsersDto(String query) {
+    Specification<UserModel> spec = UserSpecifications.search(query);
+    List<UserModel> users;
+    if (spec != null) {
+      users = userRepository.findAll(spec);
+    } else {
+      users = userRepository.findAll();
+    }
+    return users.stream()
         .map(
             user -> {
               UserResponseDto dto = new UserResponseDto();

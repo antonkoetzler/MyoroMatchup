@@ -98,22 +98,14 @@
   "gameDetailsScreenBodySuccessStateTabViewInfoTabText": "ข้อมูล",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabText": "ผู้เล่น",
   "gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText": "เชิญผู้เล่น",
+  "bodySuccessStateTabViewPlayersTabContentEmptyTitle": "ยังไม่มีทีมสำหรับเกมนี้!",
+  "bodySuccessStateTabViewPlayersTabContentEmptySubtitle": "เชิญผู้เล่นบางคนและเราจะสร้างทีมให้คุณ :)",
   "gameDetailsScreenInvitationBottomSheetTitleText": "เชิญผู้เล่น",
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": "{username} ({name})",
-  "@gameDetailsScreenInvitationBottomSheetUserSearchInputItemText": {
-    "placeholders": {
-      "username": {
-        "type": "String"
-      },
-      "name": {
-        "type": "String"
-      }
-    }
-  },
-  "gameDetailsScreenInvitationBottomSheetUserSearchInputLabel": "ค้นหาผู้ใช้...",
   "gameDetailsScreenInvitationBottomSheetMessageInputLabel": "ข้อความ",
   "gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText": "ยกเลิก",
   "gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText": "ส่ง",
+  "invitationBottomSheetUserSelectionButtonUnselectedText": "เลือกผู้ใช้",
+  "userSelectionBottomSheetTitle": "เลือกผู้ใช้",
   "gameDetailsScreenBodySuccessStateTabViewRankingsTabText": "อันดับ",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel": "ความถี่",
   "gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel": "วันหลัก",
