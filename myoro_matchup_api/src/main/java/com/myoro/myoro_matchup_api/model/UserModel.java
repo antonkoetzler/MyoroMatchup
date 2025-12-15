@@ -53,6 +53,10 @@ public class UserModel {
   @Column(nullable = false)
   private LocalDateTime createdAt;
 
+  /** Profile picture of the user. */
+  @Column(nullable = true)
+  private String profilePicture;
+
   /** Default constructor. */
   public UserModel() {}
 
@@ -191,5 +195,19 @@ public class UserModel {
   /** Setter for created at. */
   public void setCreatedAt(LocalDateTime createdAt) {
     this.createdAt = createdAt;
+  }
+
+  /**
+   * Getter for profilePicture
+   *
+   * @return the profile picture path
+   */
+  public String getProfilePicture() {
+    return profilePicture;
+  }
+
+  /** Setter for profilePicture. */
+  public void setProfilePicture(String profilePicture) {
+    this.profilePicture = profilePicture;
   }
 }

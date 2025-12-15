@@ -8,10 +8,13 @@ final class _BodyBlockedUsers extends StatelessWidget {
   /// Build function.
   @override
   Widget build(context) {
+    final userDetailsScreenBodyBlockedUsersTitle = localization.userDetailsScreenBodyBlockedUsersTitle;
+
     final viewModel = context.read<UserDetailsScreenViewModel>();
     final fetchBlockedUsers = viewModel.fetchBlockedUsers;
 
     return _BodyCard(
+      userDetailsScreenBodyBlockedUsersTitle,
       MyoroRequestWidget(
         request: fetchBlockedUsers,
         successBuilder: (_, blockedUsers) {

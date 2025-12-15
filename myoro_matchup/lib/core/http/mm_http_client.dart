@@ -63,6 +63,78 @@ final class MmHttpClient {
     );
   }
 
+  /// Post multipart function for file uploads.
+  Future<HttpClientResponse> postMultipart(
+    String path, {
+    Map<String, dynamic>? data,
+    Map<String, File>? files,
+    String baseUrl = kMyoroEmptyString,
+  }) async {
+    final uri = _buildUri(path, baseUrl);
+    return await _runRequest(uri.toString(), () async {
+      final request = http.MultipartRequest('POST', uri);
+
+      // Add headers (excluding Content-Type for multipart)
+      final headers = Map<String, String>.from(_baseHeaders);
+      headers.remove('Content-Type');
+      request.headers.addAll(headers);
+
+      // Add form fields
+      if (data != null) {
+        data.forEach((key, value) {
+          if (value != null) {
+            if (value is Map || value is List) {
+              request.fields[key] = jsonEncode(value);
+            } else {
+              request.fields[key] = value.toString();
+            }
+          }
+        });
+      }
+
+      // Add files
+      if (files != null) {
+        files.forEach((key, file) {
+          if (file.existsSync()) {
+            final fileStream = http.ByteStream(file.openRead());
+            final fileLength = file.lengthSync();
+            final contentType = _getContentType(file.path);
+            final multipartFile = http.MultipartFile(
+              key,
+              fileStream,
+              fileLength,
+              filename: file.path.split('/').last,
+              contentType: contentType,
+            );
+            request.files.add(multipartFile);
+          }
+        });
+      }
+
+      final streamedResponse = await _client.send(request).timeout(timeoutDuration);
+      final response = await http.Response.fromStream(streamedResponse);
+      return response;
+    });
+  }
+
+  /// Get content type from file extension.
+  MediaType? _getContentType(String filePath) {
+    final extension = filePath.split('.').last.toLowerCase();
+    switch (extension) {
+      case 'jpg':
+      case 'jpeg':
+        return MediaType('image', 'jpeg');
+      case 'png':
+        return MediaType('image', 'png');
+      case 'gif':
+        return MediaType('image', 'gif');
+      case 'webp':
+        return MediaType('image', 'webp');
+      default:
+        return null;
+    }
+  }
+
   /// Build URI from path and query parameters.
   Uri _buildUri(String path, [String baseUrl = kMyoroEmptyString, Map<String, dynamic>? queryParameters]) {
     baseUrl = baseUrl.isEmpty ? EnvironmentConfiguration.apiUrl : baseUrl;

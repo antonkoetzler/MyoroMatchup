@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "สมัครสมาชิก",
+  "userDetailsScreenBodyUserDetailsTitle": "รายละเอียดผู้ใช้",
+  "userDetailsScreenBodyLocationTitle": "ตำแหน่ง",
+  "userDetailsScreenBodyProfileVisibilityTitle": "การมองเห็นโปรไฟล์",
+  "userDetailsScreenBodySubscriptionStatusTitle": "สถานะการสมัครสมาชิก",
+  "userDetailsScreenBodyBlockedUsersTitle": "ผู้ใช้ที่ถูกบล็อก",
+  "userDetailsScreenBodyDeleteAccountButtonText": "ลบบัญชี",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "เปลี่ยนการมองเห็นโปรไฟล์",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "คุณแน่ใจหรือไม่ว่าต้องการเปลี่ยนการมองเห็นโปรไฟล์ของคุณ?",
   "userDetailsScreenBodyLocationLabel": "ตำแหน่ง",

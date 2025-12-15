@@ -26,6 +26,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 /** User controller. */
 @Tag(name = "Users", description = "User management endpoints")
@@ -247,5 +248,47 @@ public class UserController {
     Map<String, Object> responseBody = new HashMap<>();
     responseBody.put("message", messageService.getMessage("user.delete.success"));
     return ResponseEntity.ok(responseBody);
+  }
+
+  /**
+   * Updates the profile picture of the authenticated user. If no file is provided, removes the
+   * profile picture.
+   *
+   * @param request the HTTP request containing the bearer token
+   * @param file the profile picture file (optional)
+   * @return ResponseEntity containing success message
+   */
+  @Operation(
+      summary = "Update profile picture",
+      description =
+          "Updates the profile picture for the authenticated user. If no file is provided, removes the profile picture.")
+  @ApiResponses(
+      value = {
+        @ApiResponse(responseCode = "200", description = "Profile picture updated successfully"),
+        @ApiResponse(responseCode = "400", description = "Invalid file"),
+        @ApiResponse(responseCode = "401", description = "Unauthorized")
+      })
+  @SecurityRequirement(name = "bearerAuth")
+  @PostMapping("/profile-picture")
+  public ResponseEntity<Map<String, Object>> updateProfilePicture(
+      HttpServletRequest request, @RequestParam(required = false) MultipartFile file) {
+    try {
+      userService.updateProfilePicture(request, file);
+      Map<String, Object> responseBody = new HashMap<>();
+      responseBody.put(
+          "message",
+          file != null && !file.isEmpty()
+              ? messageService.getMessage("user.profile.picture.update.success")
+              : messageService.getMessage("user.profile.picture.remove.success"));
+      return ResponseEntity.ok(responseBody);
+    } catch (IllegalArgumentException e) {
+      Map<String, Object> responseBody = new HashMap<>();
+      responseBody.put("message", e.getMessage());
+      return ResponseEntity.badRequest().body(responseBody);
+    } catch (Exception e) {
+      Map<String, Object> responseBody = new HashMap<>();
+      responseBody.put("message", messageService.getMessage("error.profile.picture.update.failed"));
+      return ResponseEntity.status(500).body(responseBody);
+    }
   }
 }

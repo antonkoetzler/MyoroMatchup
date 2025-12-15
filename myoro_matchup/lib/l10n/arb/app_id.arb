@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "Berlangganan",
+  "userDetailsScreenBodyUserDetailsTitle": "Detail Pengguna",
+  "userDetailsScreenBodyLocationTitle": "Lokasi",
+  "userDetailsScreenBodyProfileVisibilityTitle": "Visibilitas Profil",
+  "userDetailsScreenBodySubscriptionStatusTitle": "Status berlangganan",
+  "userDetailsScreenBodyBlockedUsersTitle": "Pengguna yang Diblokir",
+  "userDetailsScreenBodyDeleteAccountButtonText": "Hapus Akun",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Ubah Visibilitas Profil",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Apakah Anda yakin ingin mengubah visibilitas profil Anda?",
   "userDetailsScreenBodyLocationLabel": "Lokasi",

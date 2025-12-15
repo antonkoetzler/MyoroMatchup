@@ -8,8 +8,12 @@ final class _BodyDeleteAccountButton extends StatelessWidget {
   /// Build function.
   @override
   Widget build(context) {
+    final userDetailsScreenBodyDeleteAccountButtonText = localization.userDetailsScreenBodyDeleteAccountButtonText;
+
     return MyoroIconTextButton(
+      style: const MyoroIconTextButtonStyle().secondary(context),
       icon: Icons.delete,
+      text: userDetailsScreenBodyDeleteAccountButtonText,
       onTapUp: (_, _) => _DeleteAccountConfirmationBottomSheet.show(context),
     );
   }

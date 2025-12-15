@@ -18,6 +18,7 @@ import com.myoro.myoro_matchup_api.model.UserModel;
 import com.myoro.myoro_matchup_api.repository.GameRepository;
 import com.myoro.myoro_matchup_api.repository.UserRepository;
 import com.myoro.myoro_matchup_api.util.DtoMapper;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -25,6 +26,7 @@ import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 /** Game service. */
 @Service
@@ -38,8 +40,16 @@ public class GameService {
   /** User repository. */
   @Autowired private UserRepository userRepository;
 
+  /** Image storage service. */
+  @Autowired private ImageStorageService imageStorageService;
+
   /** Creates a game. */
-  public Long create(GameCreationRequestDto request, Long userId) {
+  public Long create(
+      GameCreationRequestDto request,
+      Long userId,
+      MultipartFile profilePicture,
+      MultipartFile banner)
+      throws IOException {
     @SuppressWarnings("null")
     UserModel owner =
         userRepository
@@ -75,8 +85,25 @@ public class GameService {
     frequencyModel.setBiWeeklyEndTime(request.getFrequencyDayTime().getBiWeeklyEndTime());
     game.setFrequencyDayTime(frequencyModel);
     game.setVisibility(request.getVisibility());
-    game.setProfilePicture(request.getProfilePicture());
-    game.setBanner(request.getBanner());
+
+    // Handle profile picture upload
+    if (profilePicture != null && !profilePicture.isEmpty()) {
+      String profilePicturePath = imageStorageService.storeImage(profilePicture, "game");
+      game.setProfilePicture(profilePicturePath);
+    } else if (request.getProfilePicture() != null && !request.getProfilePicture().isEmpty()) {
+      // Fallback to string path if provided (for backward compatibility)
+      game.setProfilePicture(request.getProfilePicture());
+    }
+
+    // Handle banner upload
+    if (banner != null && !banner.isEmpty()) {
+      String bannerPath = imageStorageService.storeImage(banner, "game");
+      game.setBanner(bannerPath);
+    } else if (request.getBanner() != null && !request.getBanner().isEmpty()) {
+      // Fallback to string path if provided (for backward compatibility)
+      game.setBanner(request.getBanner());
+    }
+
     return gameRepository.save(game).getId();
   }
 
@@ -345,8 +372,8 @@ public class GameService {
     dto.setName(game.getName());
     dto.setSport(game.getSport());
     dto.setVisibility(game.getVisibility());
-    dto.setProfilePicture(game.getProfilePicture());
-    dto.setBanner(game.getBanner());
+    dto.setProfilePicture(imageStorageService.getImageUrl(game.getProfilePicture()));
+    dto.setBanner(imageStorageService.getImageUrl(game.getBanner()));
 
     if (game.getFrequencyDayTime() != null) {
       GameFrequencyDayTimeModel freq = game.getFrequencyDayTime();

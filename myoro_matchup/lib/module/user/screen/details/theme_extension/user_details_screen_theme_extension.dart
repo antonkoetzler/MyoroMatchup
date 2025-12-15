@@ -36,12 +36,17 @@ final class UserDetailsScreenThemeExtension extends ThemeExtension<UserDetailsSc
       bodySubscriptionStatusLabelTextStyle = myoroFake<TextStyle>();
 
   /// Builder constructor.
-  UserDetailsScreenThemeExtension.builder(TextTheme textTheme)
+  UserDetailsScreenThemeExtension.builder(ColorScheme colorScheme, TextTheme textTheme)
     : bodySpacing = kMyoroMultiplier * 2,
       profilePictureSize = kMyoroMultiplier * 10,
       bodyUsernameTextStyle = textTheme.titleSmall!,
       bodyNameTextStyle = textTheme.headlineSmall!,
-      bodyPadding = const EdgeInsets.all(kEdgeInsetsLength),
+      bodyPadding = const EdgeInsets.only(
+        top: kMyoroMultiplier,
+        bottom: kEdgeInsetsLength,
+        left: kEdgeInsetsLength,
+        right: kEdgeInsetsLength,
+      ),
       bodyLocationSpacing = kMyoroMultiplier * 2,
       bodyLocationLabelTextStyle = textTheme.titleSmall!,
       bodySubscriptionStatusLabelTextStyle = textTheme.titleSmall!;

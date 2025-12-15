@@ -11,6 +11,7 @@ final class _BodyLocation extends StatelessWidget {
   /// Build function.
   @override
   Widget build(context) {
+    final userDetailsScreenBodyLocationTitle = localization.userDetailsScreenBodyLocationTitle;
     final userDetailsScreenBodyLocationLabel = localization.userDetailsScreenBodyLocationLabel;
     final userDetailsScreenBodyLocationCountryLabel = localization.userDetailsScreenBodyLocationCountryLabel;
     final userDetailsScreenBodyLocationStateLabel = localization.userDetailsScreenBodyLocationStateLabel;
@@ -26,6 +27,7 @@ final class _BodyLocation extends StatelessWidget {
     final country = location.country;
 
     return _BodyCard(
+      userDetailsScreenBodyLocationTitle,
       Column(
         spacing: bodyLocationSpacing,
         children: [

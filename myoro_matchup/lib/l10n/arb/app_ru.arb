@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "Подписаться",
+  "userDetailsScreenBodyUserDetailsTitle": "Детали пользователя",
+  "userDetailsScreenBodyLocationTitle": "Местоположение",
+  "userDetailsScreenBodyProfileVisibilityTitle": "Видимость Профиля",
+  "userDetailsScreenBodySubscriptionStatusTitle": "Статус подписки",
+  "userDetailsScreenBodyBlockedUsersTitle": "Заблокированные пользователи",
+  "userDetailsScreenBodyDeleteAccountButtonText": "Удалить Аккаунт",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Изменить Видимость Профиля",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Вы уверены, что хотите изменить видимость вашего профиля?",
   "userDetailsScreenBodyLocationLabel": "Местоположение",

@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
@@ -81,6 +82,21 @@ final class UserRepository {
       return response.data['message'] as String;
     } catch (e, stackTrace) {
       await MmLogger.error('[UserRepository.deleteAccount]: Failed to delete user account.', e, stackTrace);
+      rethrow;
+    }
+  }
+
+  /// Updates the profile picture of the authenticated user.
+  /// If [file] is null, removes the profile picture.
+  Future<String> updateProfilePicture(File? file) async {
+    MmLogger.info('[UserRepository.updateProfilePicture]: Updating profile picture.');
+    try {
+      final files = file != null && file.existsSync() ? {'file': file} : null;
+      final response = await _httpClient.postMultipart('/users/profile-picture', files: files);
+      MmLogger.info('[UserRepository.updateProfilePicture]: Profile picture updated successfully.');
+      return response.data['message'] as String;
+    } catch (e, stackTrace) {
+      await MmLogger.error('[UserRepository.updateProfilePicture]: Failed to update profile picture.', e, stackTrace);
       rethrow;
     }
   }

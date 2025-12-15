@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "सदस्यता लें",
+  "userDetailsScreenBodyUserDetailsTitle": "उपयोगकर्ता विवरण",
+  "userDetailsScreenBodyLocationTitle": "स्थान",
+  "userDetailsScreenBodyProfileVisibilityTitle": "प्रोफ़ाइल दृश्यता",
+  "userDetailsScreenBodySubscriptionStatusTitle": "सदस्यता स्थिति",
+  "userDetailsScreenBodyBlockedUsersTitle": "अवरुद्ध उपयोगकर्ता",
+  "userDetailsScreenBodyDeleteAccountButtonText": "खाता हटाएं",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "प्रोफ़ाइल दृश्यता बदलें",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "क्या आप वाकई अपनी प्रोफ़ाइल की दृश्यता बदलना चाहते हैं?",
   "userDetailsScreenBodyLocationLabel": "स्थान",

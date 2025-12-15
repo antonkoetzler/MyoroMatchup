@@ -11,12 +11,15 @@ final class _BodyProfileVisibility extends StatelessWidget {
   /// Build function.
   @override
   Widget build(context) {
+    final userDetailsScreenBodyProfileVisibilityTitle = localization.userDetailsScreenBodyProfileVisibilityTitle;
+
     final themeExtension = context.resolveThemeExtension<UserDetailsScreenThemeExtension>();
     final bodySpacing = themeExtension.bodySpacing;
 
     final visibility = _user.visibility;
 
     return _BodyCard(
+      userDetailsScreenBodyProfileVisibilityTitle,
       Row(
         spacing: bodySpacing,
         children: VisibilityEnum.values.map((v) {

@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "S'abonner",
+  "userDetailsScreenBodyUserDetailsTitle": "Détails de l'utilisateur",
+  "userDetailsScreenBodyLocationTitle": "Localisation",
+  "userDetailsScreenBodyProfileVisibilityTitle": "Visibilité du Profil",
+  "userDetailsScreenBodySubscriptionStatusTitle": "Statut d'abonnement",
+  "userDetailsScreenBodyBlockedUsersTitle": "Utilisateurs bloqués",
+  "userDetailsScreenBodyDeleteAccountButtonText": "Supprimer le Compte",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Changer la Visibilité du Profil",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Êtes-vous sûr de vouloir changer la visibilité de votre profil ?",
   "userDetailsScreenBodyLocationLabel": "Localisation",

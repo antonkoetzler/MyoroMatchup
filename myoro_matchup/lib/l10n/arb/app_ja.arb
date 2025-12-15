@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "購読する",
+  "userDetailsScreenBodyUserDetailsTitle": "ユーザー詳細",
+  "userDetailsScreenBodyLocationTitle": "位置",
+  "userDetailsScreenBodyProfileVisibilityTitle": "プロフィールの公開設定",
+  "userDetailsScreenBodySubscriptionStatusTitle": "購読ステータス",
+  "userDetailsScreenBodyBlockedUsersTitle": "ブロックされたユーザー",
+  "userDetailsScreenBodyDeleteAccountButtonText": "アカウントを削除",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "プロフィールの公開設定を変更",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "プロフィールの公開設定を変更してもよろしいですか？",
   "userDetailsScreenBodyLocationLabel": "位置",

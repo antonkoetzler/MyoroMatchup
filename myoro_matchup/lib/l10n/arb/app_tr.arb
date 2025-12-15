@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "Abone Ol",
+  "userDetailsScreenBodyUserDetailsTitle": "Kullanıcı Detayları",
+  "userDetailsScreenBodyLocationTitle": "Konum",
+  "userDetailsScreenBodyProfileVisibilityTitle": "Profil Görünürlüğü",
+  "userDetailsScreenBodySubscriptionStatusTitle": "Abonelik durumu",
+  "userDetailsScreenBodyBlockedUsersTitle": "Engellenen Kullanıcılar",
+  "userDetailsScreenBodyDeleteAccountButtonText": "Hesabı Sil",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Profil Görünürlüğünü Değiştir",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Profil görünürlüğünü değiştirmek istediğinizden emin misiniz?",
   "userDetailsScreenBodyLocationLabel": "Konum",

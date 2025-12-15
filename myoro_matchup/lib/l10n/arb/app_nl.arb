@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "Abonneren",
+  "userDetailsScreenBodyUserDetailsTitle": "Gebruikersgegevens",
+  "userDetailsScreenBodyLocationTitle": "Locatie",
+  "userDetailsScreenBodyProfileVisibilityTitle": "Profielzichtbaarheid",
+  "userDetailsScreenBodySubscriptionStatusTitle": "Abonnementsstatus",
+  "userDetailsScreenBodyBlockedUsersTitle": "Geblokkeerde Gebruikers",
+  "userDetailsScreenBodyDeleteAccountButtonText": "Account Verwijderen",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Profielzichtbaarheid Wijzigen",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Weet je zeker dat je de zichtbaarheid van je profiel wilt wijzigen?",
   "userDetailsScreenBodyLocationLabel": "Locatie",

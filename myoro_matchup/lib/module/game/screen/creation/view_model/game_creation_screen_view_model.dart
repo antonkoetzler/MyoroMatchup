@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
@@ -196,6 +198,30 @@ final class GameCreationScreenViewModel {
 
       _state.request = _state.request.createLoadingState();
 
+      // Convert image paths to File objects
+      File? profilePictureFile;
+      File? bannerFile;
+      if (profilePictureImage.isNotEmpty) {
+        try {
+          final file = File(profilePictureImage);
+          if (file.existsSync()) {
+            profilePictureFile = file;
+          }
+        } catch (_) {
+          // Ignore if not a valid file path
+        }
+      }
+      if (bannerImage.isNotEmpty) {
+        try {
+          final file = File(bannerImage);
+          if (file.existsSync()) {
+            bannerFile = file;
+          }
+        } catch (_) {
+          // Ignore if not a valid file path
+        }
+      }
+
       final id = await _gameRepository.create(
         GameCreationRequestDto(
           name: name,
@@ -205,9 +231,11 @@ final class GameCreationScreenViewModel {
           price: price,
           ageRange: ageRangeModel,
           visibility: visibility,
-          profilePicture: profilePictureImage,
-          banner: bannerImage,
+          profilePicture: kMyoroEmptyString,
+          banner: kMyoroEmptyString,
         ),
+        profilePictureFile: profilePictureFile,
+        bannerFile: bannerFile,
       );
 
       _state.request = _state.request.createSuccessState(id);

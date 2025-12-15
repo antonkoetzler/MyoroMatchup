@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "Đăng ký",
+  "userDetailsScreenBodyUserDetailsTitle": "Chi Tiết Người Dùng",
+  "userDetailsScreenBodyLocationTitle": "Vị trí",
+  "userDetailsScreenBodyProfileVisibilityTitle": "Hiển Thị Hồ Sơ",
+  "userDetailsScreenBodySubscriptionStatusTitle": "Trạng thái đăng ký",
+  "userDetailsScreenBodyBlockedUsersTitle": "Người Dùng Bị Chặn",
+  "userDetailsScreenBodyDeleteAccountButtonText": "Xóa Tài Khoản",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "Thay Đổi Hiển Thị Hồ Sơ",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "Bạn có chắc chắn muốn thay đổi hiển thị hồ sơ của mình không?",
   "userDetailsScreenBodyLocationLabel": "Vị trí",

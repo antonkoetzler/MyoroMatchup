@@ -13,6 +13,7 @@ final class _BodySubscriptionStatus extends StatelessWidget {
   Widget build(context) {
     final bodySubscriptionStatusLabel = localization.bodySubscriptionStatusLabel;
     final bodySubscriptionStatusButtonText = localization.bodySubscriptionStatusButtonText;
+    final userDetailsScreenBodySubscriptionStatusTitle = localization.userDetailsScreenBodySubscriptionStatusTitle;
 
     final themeExtension = context.resolveThemeExtension<UserDetailsScreenThemeExtension>();
     final bodySubscriptionStatusLabelTextStyle = themeExtension.bodySubscriptionStatusLabelTextStyle;
@@ -20,6 +21,7 @@ final class _BodySubscriptionStatus extends StatelessWidget {
     final isSubscribed = _user.isSubscribed;
 
     return _BodyCard(
+      userDetailsScreenBodySubscriptionStatusTitle,
       Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "구독하기",
+  "userDetailsScreenBodyUserDetailsTitle": "사용자 세부정보",
+  "userDetailsScreenBodyLocationTitle": "위치",
+  "userDetailsScreenBodyProfileVisibilityTitle": "프로필 공개 설정",
+  "userDetailsScreenBodySubscriptionStatusTitle": "구독 상태",
+  "userDetailsScreenBodyBlockedUsersTitle": "차단된 사용자",
+  "userDetailsScreenBodyDeleteAccountButtonText": "계정 삭제",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "프로필 공개 설정 변경",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "프로필 공개 설정을 변경하시겠습니까?",
   "userDetailsScreenBodyLocationLabel": "위치",

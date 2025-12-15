@@ -24,12 +24,14 @@ import com.myoro.myoro_matchup_api.repository.UserStatsRepository;
 import com.myoro.myoro_matchup_api.specification.FriendSpecifications;
 import com.myoro.myoro_matchup_api.specification.UserSpecifications;
 import jakarta.servlet.http.HttpServletRequest;
+import java.io.IOException;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 /** User service. */
 @Service
@@ -51,6 +53,9 @@ public class UserService {
 
   /** JWT service for extracting user ID from bearer token. */
   @Autowired private JwtService jwtService;
+
+  /** Image storage service. */
+  @Autowired private ImageStorageService imageStorageService;
 
   /** Get user by ID. */
   public UserModel get(Long id) {
@@ -110,6 +115,7 @@ public class UserService {
     dto.setStats(buildSportStatsDto(user));
     dto.setIsSubscribed(user.getIsSubscribed());
     dto.setVisibility(user.getVisibility());
+    dto.setProfilePicture(imageStorageService.getImageUrl(user.getProfilePicture()));
 
     final UserLocationModel locationModel = user.getLocation();
     final CountryEnum country = locationModel.getCountry();
@@ -367,6 +373,7 @@ public class UserService {
               dto.setName(friend.getName());
               dto.setEmail(friend.getEmail());
               dto.setVisibility(friend.getVisibility());
+              dto.setProfilePicture(imageStorageService.getImageUrl(friend.getProfilePicture()));
               return dto;
             })
         .collect(Collectors.toList());
@@ -487,5 +494,33 @@ public class UserService {
 
     // Delete the user
     userRepository.delete(user);
+  }
+
+  /**
+   * Updates the profile picture of the authenticated user.
+   *
+   * @param request the HTTP request containing the bearer token
+   * @param file the profile picture file (can be null to remove)
+   * @throws IOException if file storage fails
+   */
+  public void updateProfilePicture(HttpServletRequest request, MultipartFile file)
+      throws IOException {
+    final Long userId = jwtService.getUserIdFromRequest(request);
+    UserModel user = get(userId);
+
+    // Delete old profile picture if exists
+    if (user.getProfilePicture() != null && !user.getProfilePicture().isEmpty()) {
+      imageStorageService.deleteImage(user.getProfilePicture());
+    }
+
+    // Store new profile picture if provided
+    if (file != null && !file.isEmpty()) {
+      String imagePath = imageStorageService.storeImage(file, "profile");
+      user.setProfilePicture(imagePath);
+    } else {
+      user.setProfilePicture(null);
+    }
+
+    userRepository.save(user);
   }
 }

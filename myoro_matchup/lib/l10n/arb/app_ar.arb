@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "اشترك",
+  "userDetailsScreenBodyUserDetailsTitle": "تفاصيل المستخدم",
+  "userDetailsScreenBodyLocationTitle": "الموقع",
+  "userDetailsScreenBodyProfileVisibilityTitle": "رؤية الملف الشخصي",
+  "userDetailsScreenBodySubscriptionStatusTitle": "حالة الاشتراك",
+  "userDetailsScreenBodyBlockedUsersTitle": "المستخدمون المحظورون",
+  "userDetailsScreenBodyDeleteAccountButtonText": "حذف الحساب",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "تغيير رؤية الملف الشخصي",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "هل أنت متأكد من أنك تريد تغيير رؤية ملفك الشخصي؟",
   "userDetailsScreenBodyLocationLabel": "الموقع",

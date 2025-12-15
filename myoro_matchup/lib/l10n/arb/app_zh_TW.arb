@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "訂閱",
+  "userDetailsScreenBodyUserDetailsTitle": "使用者詳情",
+  "userDetailsScreenBodyLocationTitle": "位置",
+  "userDetailsScreenBodyProfileVisibilityTitle": "個人資料可見性",
+  "userDetailsScreenBodySubscriptionStatusTitle": "訂閱狀態",
+  "userDetailsScreenBodyBlockedUsersTitle": "已封鎖的使用者",
+  "userDetailsScreenBodyDeleteAccountButtonText": "刪除帳戶",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "更改個人資料可見性",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "您確定要更改個人資料的可見性嗎？",
   "userDetailsScreenBodyLocationLabel": "位置",

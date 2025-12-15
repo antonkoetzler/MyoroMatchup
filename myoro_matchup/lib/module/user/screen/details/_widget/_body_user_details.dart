@@ -11,10 +11,13 @@ final class _BodyUserDetails extends StatelessWidget {
   /// Build function.
   @override
   Widget build(context) {
+    final userDetailsScreenBodyUserDetailsTitle = localization.userDetailsScreenBodyUserDetailsTitle;
+
     final themeExtension = context.resolveThemeExtension<UserDetailsScreenThemeExtension>();
     final bodySpacing = themeExtension.bodySpacing;
 
     return _BodyCard(
+      userDetailsScreenBodyUserDetailsTitle,
       Row(
         spacing: bodySpacing,
         children: [

@@ -18,19 +18,21 @@ final class _Body extends StatelessWidget {
     return MyoroRequestWidget(
       request: userRequest,
       successBuilder: (_, user) {
-        return Padding(
-          padding: bodyPadding,
-          child: Column(
-            spacing: bodySpacing,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              _BodyUserDetails(user!),
-              _BodyLocation(user),
-              _BodyProfileVisibility(user),
-              _BodySubscriptionStatus(user),
-              const Flexible(child: _BodyBlockedUsers()),
-              const _BodyDeleteAccountButton(),
-            ],
+        return MyoroSingleChildScrollable(
+          child: Padding(
+            padding: bodyPadding,
+            child: Column(
+              spacing: bodySpacing,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                _BodyUserDetails(user!),
+                _BodyLocation(user),
+                _BodyProfileVisibility(user),
+                _BodySubscriptionStatus(user),
+                const Flexible(child: _BodyBlockedUsers()),
+                const _BodyDeleteAccountButton(),
+              ],
+            ),
           ),
         );
       },

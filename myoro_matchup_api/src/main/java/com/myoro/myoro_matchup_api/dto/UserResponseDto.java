@@ -28,6 +28,9 @@ public class UserResponseDto {
   /** Visibility. */
   private VisibilityEnum visibility;
 
+  /** Profile picture path. */
+  private String profilePicture;
+
   /** Default constructor. */
   public UserResponseDto() {}
 
@@ -150,5 +153,19 @@ public class UserResponseDto {
   /** Setter for visibility. */
   public void setVisibility(VisibilityEnum visibility) {
     this.visibility = visibility;
+  }
+
+  /**
+   * Getter for profilePicture
+   *
+   * @return the profile picture path
+   */
+  public String getProfilePicture() {
+    return profilePicture;
+  }
+
+  /** Setter for profilePicture. */
+  public void setProfilePicture(String profilePicture) {
+    this.profilePicture = profilePicture;
   }
 }

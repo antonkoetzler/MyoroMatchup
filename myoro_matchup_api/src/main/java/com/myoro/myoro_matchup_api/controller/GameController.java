@@ -1,5 +1,6 @@
 package com.myoro.myoro_matchup_api.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.myoro.myoro_matchup_api.dto.GameCreationRequestDto;
 import com.myoro.myoro_matchup_api.dto.GameResponseDto;
 import com.myoro.myoro_matchup_api.dto.GameTeamResponseDto;
@@ -13,6 +14,7 @@ import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +26,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 /** Game controller. */
 @Tag(name = "Games", description = "Game management endpoints")
@@ -40,6 +44,9 @@ public class GameController {
   /** JWT service for extracting user ID from token. */
   @Autowired private JwtService jwtService;
 
+  /** Object mapper for JSON parsing. */
+  @Autowired private ObjectMapper objectMapper;
+
   /** Create a game. */
   @Operation(summary = "Create game", description = "Creates a new game")
   @ApiResponses(
@@ -49,15 +56,43 @@ public class GameController {
         @ApiResponse(responseCode = "401", description = "Unauthorized")
       })
   @SecurityRequirement(name = "bearerAuth")
-  @PostMapping
+  @PostMapping(consumes = {"multipart/form-data", "application/json"})
   public ResponseEntity<Map<String, Object>> create(
-      @Valid @RequestBody GameCreationRequestDto request, HttpServletRequest httpRequest) {
-    final Long userId = jwtService.getUserIdFromRequest(httpRequest);
-    final Long response = gameService.create(request, userId);
-    Map<String, Object> responseBody = new HashMap<>();
-    responseBody.put("message", messageService.getMessage("game.create.success"));
-    responseBody.put("id", response);
-    return ResponseEntity.ok(responseBody);
+      @RequestPart(value = "data", required = false) String dataJson,
+      @RequestBody(required = false) @Valid GameCreationRequestDto requestBody,
+      @RequestPart(value = "profilePicture", required = false) MultipartFile profilePicture,
+      @RequestPart(value = "banner", required = false) MultipartFile banner,
+      HttpServletRequest httpRequest)
+      throws IOException {
+    try {
+      final Long userId = jwtService.getUserIdFromRequest(httpRequest);
+
+      // Handle both multipart/form-data and application/json
+      GameCreationRequestDto request;
+      if (dataJson != null && !dataJson.isEmpty()) {
+        // Parse JSON string from multipart
+        request = objectMapper.readValue(dataJson, GameCreationRequestDto.class);
+      } else if (requestBody != null) {
+        // Use JSON body directly
+        request = requestBody;
+      } else {
+        throw new IllegalArgumentException("Request data is required");
+      }
+
+      final Long response = gameService.create(request, userId, profilePicture, banner);
+      Map<String, Object> responseBody = new HashMap<>();
+      responseBody.put("message", messageService.getMessage("game.create.success"));
+      responseBody.put("id", response);
+      return ResponseEntity.ok(responseBody);
+    } catch (IllegalArgumentException e) {
+      Map<String, Object> responseBody = new HashMap<>();
+      responseBody.put("message", e.getMessage());
+      return ResponseEntity.badRequest().body(responseBody);
+    } catch (Exception e) {
+      Map<String, Object> responseBody = new HashMap<>();
+      responseBody.put("message", messageService.getMessage("error.game.create.failed"));
+      return ResponseEntity.status(500).body(responseBody);
+    }
   }
 
   /** Get all games. */

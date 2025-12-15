@@ -67,6 +67,12 @@
     }
   },
   "bodySubscriptionStatusButtonText": "订阅",
+  "userDetailsScreenBodyUserDetailsTitle": "用户详情",
+  "userDetailsScreenBodyLocationTitle": "位置",
+  "userDetailsScreenBodyProfileVisibilityTitle": "个人资料可见性",
+  "userDetailsScreenBodySubscriptionStatusTitle": "订阅状态",
+  "userDetailsScreenBodyBlockedUsersTitle": "已屏蔽的用户",
+  "userDetailsScreenBodyDeleteAccountButtonText": "删除账户",
   "userDetailsScreenBodyProfileVisibilityBottomSheetTitle": "更改个人资料可见性",
   "userDetailsScreenBodyProfileVisibilityBottomSheetMessage": "您确定要更改个人资料的可见性吗？",
   "userDetailsScreenBodyLocationLabel": "位置",

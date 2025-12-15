@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'dart:io';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
@@ -23,10 +25,29 @@ final class GameRepository {
   }
 
   /// Creates a game.
-  Future<int> create(GameCreationRequestDto game) async {
+  Future<int> create(GameCreationRequestDto game, {File? profilePictureFile, File? bannerFile}) async {
     MmLogger.info('[GameRepository.create]: Creating game: ${game.name}.');
     try {
-      final response = await _httpClient.post('/games', data: game.toJson());
+      // Prepare data without image strings
+      final gameData = game.toJson();
+      gameData.remove('profilePicture');
+      gameData.remove('banner');
+
+      // Prepare files map
+      final files = <String, File>{};
+      if (profilePictureFile != null && profilePictureFile.existsSync()) {
+        files['profilePicture'] = profilePictureFile;
+      }
+      if (bannerFile != null && bannerFile.existsSync()) {
+        files['banner'] = bannerFile;
+      }
+
+      // Convert gameData to JSON string for multipart
+      final response = await _httpClient.postMultipart(
+        '/games',
+        data: {'data': jsonEncode(gameData)},
+        files: files.isNotEmpty ? files : null,
+      );
       final id = response.data['id'];
       MmLogger.info('[GameRepository.create]: Game created successfully: ${game.name} (ID: $id).');
       return id;
