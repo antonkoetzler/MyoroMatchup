@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "การมองเห็น",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "ลิงก์แชทกลุ่ม WhatsApp",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "ใช้บอทแชทกลุ่ม WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "ใช้บอทแชทกลุ่ม WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "คุณต้องการเปิดใช้งานบอทแชทกลุ่ม WhatsApp สำหรับเกมนี้หรือไม่?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "ลิงก์กลุ่ม WhatsApp จำเป็นต้องใช้บอท",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "ลิงก์แชทกลุ่ม WhatsApp จำเป็นต้องระบุ",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "ลิงก์แชทกลุ่ม WhatsApp ต้องอยู่ในรูปแบบ: https://chat.whatsapp.com/[รหัส]",
 
   "playerDetailsBottomSheetAddAsFriendText": "เพิ่มเป็นเพื่อน",
   "playerDetailsBottomSheetBlockText": "บล็อก",

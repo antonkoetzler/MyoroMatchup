@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "可見性",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp群組聊天連結",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "使用WhatsApp群組聊天機器人",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "使用WhatsApp群組聊天機器人",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "您想為此遊戲啟用WhatsApp群組聊天機器人嗎？",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "使用機器人需要WhatsApp群組聊天連結。",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp群組聊天連結是必需的。",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp群組聊天連結必須採用以下格式: https://chat.whatsapp.com/[代碼]。",
 
   "playerDetailsBottomSheetAddAsFriendText": "新增為好友",
   "playerDetailsBottomSheetBlockText": "封鎖",

@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Görünürlük",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp Grup Sohbet Bağlantısı",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp Grup Sohbet Botu Kullan",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp Grup Sohbet Botu Kullan",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Bu oyun için WhatsApp grup sohbet botunu etkinleştirmek istiyor musunuz?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "Botu kullanmak için WhatsApp grup bağlantısı gereklidir.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp grup sohbet bağlantısı gereklidir.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp grup sohbet bağlantısı şu formatta olmalıdır: https://chat.whatsapp.com/[kod].",
 
   "playerDetailsBottomSheetAddAsFriendText": "Arkadaş Olarak Ekle",
   "playerDetailsBottomSheetBlockText": "Engelle",

@@ -32,6 +32,9 @@ migrate_working_dir/
 .pub-cache/
 .pub/
 /build/
+pubspec.lock
+**/*.g.dart
+lib/l10n/gen
 
 # Symbolication related
 app.*.symbols

@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "공개 설정",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp 그룹 채팅 링크",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp 그룹 채팅 봇 사용",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp 그룹 채팅 봇 사용",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "이 게임에 WhatsApp 그룹 채팅 봇을 활성화하시겠습니까?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "봇을 사용하려면 WhatsApp 그룹 링크가 필요합니다.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp 그룹 채팅 링크는 필수입니다.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp 그룹 채팅 링크는 다음 형식이어야 합니다: https://chat.whatsapp.com/[코드]。",
 
   "playerDetailsBottomSheetAddAsFriendText": "친구로 추가",
   "playerDetailsBottomSheetBlockText": "차단",

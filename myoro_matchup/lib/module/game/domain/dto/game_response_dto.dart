@@ -10,13 +10,6 @@ part 'game_response_dto.g.dart';
 @myoroModel
 @JsonSerializable()
 final class GameResponseDto with _$GameResponseDtoMixin {
-  /// Generates a random WhatsApp invite code (22 characters, alphanumeric).
-  static String _generateRandomWhatsAppCode() {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    final random = faker.randomGenerator;
-    return List.generate(22, (_) => chars[random.integer(chars.length)]).join();
-  }
-
   /// Default constructor.
   const GameResponseDto({
     required this.name,
@@ -28,8 +21,6 @@ final class GameResponseDto with _$GameResponseDtoMixin {
     required this.visibility,
     required this.profilePicture,
     required this.banner,
-    required this.whatsAppGroupChatLink,
-    required this.useWhatsAppGroupChatBot,
     required this.id,
   });
 
@@ -45,10 +36,6 @@ final class GameResponseDto with _$GameResponseDtoMixin {
       visibility: VisibilityEnum.fake(),
       profilePicture: MmImages.cats.random,
       banner: MmImages.testBanners.random,
-      whatsAppGroupChatLink: faker.randomGenerator.boolean()
-          ? 'https://chat.whatsapp.com/${_generateRandomWhatsAppCode()}'
-          : kMyoroEmptyString,
-      useWhatsAppGroupChatBot: faker.randomGenerator.boolean(),
       id: faker.randomGenerator.integer(1000000),
     );
   }
@@ -89,14 +76,6 @@ final class GameResponseDto with _$GameResponseDtoMixin {
   /// Banner of the [Game].
   @JsonKey(defaultValue: kMyoroEmptyString)
   final String banner;
-
-  /// WhatsApp group chat invite link.
-  @JsonKey(defaultValue: kMyoroEmptyString)
-  final String whatsAppGroupChatLink;
-
-  /// Whether to use the WhatsApp group chat bot.
-  @JsonKey(defaultValue: false)
-  final bool useWhatsAppGroupChatBot;
 
   /// To JSON.
   Map<String, dynamic> toJson() {

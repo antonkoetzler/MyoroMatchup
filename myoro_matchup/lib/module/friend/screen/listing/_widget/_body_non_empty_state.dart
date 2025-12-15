@@ -21,7 +21,7 @@ final class _BodyNonEmptyState extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: MyoroListScrollableBuilder(
+            child: MyoroListScrollable(
               style: bodyNonEmptyStateScrollableStyle,
               itemCount: friendsLength,
               itemBuilder: (_, i) => _BodyNonEmptyStateItem(_friends[i]),

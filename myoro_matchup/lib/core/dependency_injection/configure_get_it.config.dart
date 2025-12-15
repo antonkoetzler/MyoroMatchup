@@ -76,11 +76,11 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.SharedPreferencesRepository>(),
       ),
     );
-    gh.singleton<_i782.UserService>(
-      () => _i782.UserService(gh<_i460.SharedPreferencesService>()),
-    );
     gh.singleton<_i501.MmHttpClient>(
       () => _i501.MmHttpClient(gh<_i460.SharedPreferencesService>()),
+    );
+    gh.singleton<_i782.UserService>(
+      () => _i782.UserService(gh<_i460.SharedPreferencesService>()),
     );
     gh.factory<_i643.AuthRepository>(
       () => _i643.AuthRepository(gh<_i460.MmHttpClient>()),

@@ -78,17 +78,19 @@ final class MmHttpClient {
       final response = HttpClientResponse<T>.fromResponse(await request());
       final statusCode = response.statusCode;
 
+      const jsonEncoder = JsonEncoder.withIndent('  ');
+
       // Throw exception if status code is greater than or equal to 400.
       if (statusCode >= 400) {
         final message = (response.data as Map<String, dynamic>)['message'];
         await MmLogger.error(
-          '[MmHttpClient._runRequest]: Request failed - $endpoint | Status: $statusCode | Response: ${jsonEncode(response.data)}',
+          '[MmHttpClient._runRequest]: Request failed - $endpoint | Status: $statusCode | Response: ${jsonEncoder.convert(response.data)}',
         );
         throw ApiException(message);
       }
 
       MmLogger.info(
-        '[MmHttpClient._runRequest]: Request succeeded - $endpoint | Status: $statusCode | Response: ${jsonEncode(response.data)}',
+        '[MmHttpClient._runRequest]: Request succeeded - $endpoint | Status: $statusCode | Response: ${jsonEncoder.convert(response.data)}',
       );
       return response;
     } on SocketException catch (e, stackTrace) {

@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Zichtbaarheid",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp-groepschatlink",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp-groepschatbot gebruiken",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp-groepschatbot gebruiken",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Wilt u de WhatsApp-groepschatbot voor dit spel inschakelen?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "De WhatsApp-groepslink is vereist om de bot te gebruiken.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp-groepschatlink is verplicht.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp-groepschatlink moet in het formaat zijn: https://chat.whatsapp.com/[code].",
 
   "playerDetailsBottomSheetAddAsFriendText": "Als vriend toevoegen",
   "playerDetailsBottomSheetBlockText": "Blokkeren",

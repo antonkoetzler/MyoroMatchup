@@ -27,6 +27,9 @@ public class InvitationService {
   /** Game repository. */
   @Autowired private GameRepository gameRepository;
 
+  /** Game service. */
+  @Autowired private GameService gameService;
+
   /** User repository. */
   @Autowired private UserRepository userRepository;
 
@@ -189,6 +192,9 @@ public class InvitationService {
 
     gameRepository.save(game);
     invitationRepository.save(invitation);
+
+    // Build teams after adding a player
+    gameService.buildTeams(game.getId());
   }
 
   /**

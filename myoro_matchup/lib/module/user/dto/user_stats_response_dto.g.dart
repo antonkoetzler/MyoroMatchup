@@ -6,19 +6,16 @@ part of 'user_stats_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserFootballStatsResponseDto _$UserFootballStatsResponseDtoFromJson(
-  Map<String, dynamic> json,
-) => UserFootballStatsResponseDto(
-  rating: (json['rating'] as num).toInt(),
-  attack: (json['attack'] as num).toInt(),
-  defense: (json['defense'] as num).toInt(),
-  striking: (json['striking'] as num).toInt(),
-  skills: (json['skills'] as num).toInt(),
-);
+UserFootballStatsResponseDto _$UserFootballStatsResponseDtoFromJson(Map<String, dynamic> json) =>
+    UserFootballStatsResponseDto(
+      rating: (json['rating'] as num).toInt(),
+      attack: (json['attack'] as num).toInt(),
+      defense: (json['defense'] as num).toInt(),
+      striking: (json['striking'] as num).toInt(),
+      skills: (json['skills'] as num).toInt(),
+    );
 
-Map<String, dynamic> _$UserFootballStatsResponseDtoToJson(
-  UserFootballStatsResponseDto instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$UserFootballStatsResponseDtoToJson(UserFootballStatsResponseDto instance) => <String, dynamic>{
   'rating': instance.rating,
   'attack': instance.attack,
   'defense': instance.defense,
@@ -26,9 +23,7 @@ Map<String, dynamic> _$UserFootballStatsResponseDtoToJson(
   'skills': instance.skills,
 };
 
-UserFut7StatsResponseDto _$UserFut7StatsResponseDtoFromJson(
-  Map<String, dynamic> json,
-) => UserFut7StatsResponseDto(
+UserFut7StatsResponseDto _$UserFut7StatsResponseDtoFromJson(Map<String, dynamic> json) => UserFut7StatsResponseDto(
   rating: (json['rating'] as num).toInt(),
   attack: (json['attack'] as num).toInt(),
   defense: (json['defense'] as num).toInt(),
@@ -36,9 +31,7 @@ UserFut7StatsResponseDto _$UserFut7StatsResponseDtoFromJson(
   skills: (json['skills'] as num).toInt(),
 );
 
-Map<String, dynamic> _$UserFut7StatsResponseDtoToJson(
-  UserFut7StatsResponseDto instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$UserFut7StatsResponseDtoToJson(UserFut7StatsResponseDto instance) => <String, dynamic>{
   'rating': instance.rating,
   'attack': instance.attack,
   'defense': instance.defense,
@@ -46,19 +39,16 @@ Map<String, dynamic> _$UserFut7StatsResponseDtoToJson(
   'skills': instance.skills,
 };
 
-UserFutsalStatsResponseDto _$UserFutsalStatsResponseDtoFromJson(
-  Map<String, dynamic> json,
-) => UserFutsalStatsResponseDto(
-  rating: (json['rating'] as num).toInt(),
-  attack: (json['attack'] as num).toInt(),
-  defense: (json['defense'] as num).toInt(),
-  striking: (json['striking'] as num).toInt(),
-  skills: (json['skills'] as num).toInt(),
-);
+UserFutsalStatsResponseDto _$UserFutsalStatsResponseDtoFromJson(Map<String, dynamic> json) =>
+    UserFutsalStatsResponseDto(
+      rating: (json['rating'] as num).toInt(),
+      attack: (json['attack'] as num).toInt(),
+      defense: (json['defense'] as num).toInt(),
+      striking: (json['striking'] as num).toInt(),
+      skills: (json['skills'] as num).toInt(),
+    );
 
-Map<String, dynamic> _$UserFutsalStatsResponseDtoToJson(
-  UserFutsalStatsResponseDto instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$UserFutsalStatsResponseDtoToJson(UserFutsalStatsResponseDto instance) => <String, dynamic>{
   'rating': instance.rating,
   'attack': instance.attack,
   'defense': instance.defense,
@@ -66,25 +56,23 @@ Map<String, dynamic> _$UserFutsalStatsResponseDtoToJson(
   'skills': instance.skills,
 };
 
-UserVolleyballStatsResponseDto _$UserVolleyballStatsResponseDtoFromJson(
-  Map<String, dynamic> json,
-) => UserVolleyballStatsResponseDto(
-  rating: (json['rating'] as num).toInt(),
-  attack: (json['attack'] as num).toInt(),
-  blocking: (json['blocking'] as num).toInt(),
-  serving: (json['serving'] as num).toInt(),
-  reception: (json['reception'] as num).toInt(),
-);
+UserVolleyballStatsResponseDto _$UserVolleyballStatsResponseDtoFromJson(Map<String, dynamic> json) =>
+    UserVolleyballStatsResponseDto(
+      rating: (json['rating'] as num).toInt(),
+      attack: (json['attack'] as num).toInt(),
+      blocking: (json['blocking'] as num).toInt(),
+      serving: (json['serving'] as num).toInt(),
+      reception: (json['reception'] as num).toInt(),
+    );
 
-Map<String, dynamic> _$UserVolleyballStatsResponseDtoToJson(
-  UserVolleyballStatsResponseDto instance,
-) => <String, dynamic>{
-  'rating': instance.rating,
-  'attack': instance.attack,
-  'blocking': instance.blocking,
-  'serving': instance.serving,
-  'reception': instance.reception,
-};
+Map<String, dynamic> _$UserVolleyballStatsResponseDtoToJson(UserVolleyballStatsResponseDto instance) =>
+    <String, dynamic>{
+      'rating': instance.rating,
+      'attack': instance.attack,
+      'blocking': instance.blocking,
+      'serving': instance.serving,
+      'reception': instance.reception,
+    };
 
 // **************************************************************************
 // MyoroModelGenerator
@@ -100,13 +88,7 @@ Map<String, dynamic> _$UserVolleyballStatsResponseDtoToJson(
 mixin _$UserFootballStatsResponseDtoMixin {
   UserFootballStatsResponseDto get self => this as UserFootballStatsResponseDto;
 
-  UserFootballStatsResponseDto copyWith({
-    int? attack,
-    int? defense,
-    int? striking,
-    int? skills,
-    int? rating,
-  }) {
+  UserFootballStatsResponseDto copyWith({int? attack, int? defense, int? striking, int? skills, int? rating}) {
     return UserFootballStatsResponseDto(
       attack: attack ?? self.attack,
       defense: defense ?? self.defense,
@@ -129,13 +111,7 @@ mixin _$UserFootballStatsResponseDtoMixin {
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.attack,
-      self.defense,
-      self.striking,
-      self.skills,
-      self.rating,
-    );
+    return Object.hash(self.attack, self.defense, self.striking, self.skills, self.rating);
   }
 
   @override
@@ -159,13 +135,7 @@ mixin _$UserFootballStatsResponseDtoMixin {
 mixin _$UserFut7StatsResponseDtoMixin {
   UserFut7StatsResponseDto get self => this as UserFut7StatsResponseDto;
 
-  UserFut7StatsResponseDto copyWith({
-    int? attack,
-    int? defense,
-    int? striking,
-    int? skills,
-    int? rating,
-  }) {
+  UserFut7StatsResponseDto copyWith({int? attack, int? defense, int? striking, int? skills, int? rating}) {
     return UserFut7StatsResponseDto(
       attack: attack ?? self.attack,
       defense: defense ?? self.defense,
@@ -188,13 +158,7 @@ mixin _$UserFut7StatsResponseDtoMixin {
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.attack,
-      self.defense,
-      self.striking,
-      self.skills,
-      self.rating,
-    );
+    return Object.hash(self.attack, self.defense, self.striking, self.skills, self.rating);
   }
 
   @override
@@ -218,13 +182,7 @@ mixin _$UserFut7StatsResponseDtoMixin {
 mixin _$UserFutsalStatsResponseDtoMixin {
   UserFutsalStatsResponseDto get self => this as UserFutsalStatsResponseDto;
 
-  UserFutsalStatsResponseDto copyWith({
-    int? attack,
-    int? defense,
-    int? striking,
-    int? skills,
-    int? rating,
-  }) {
+  UserFutsalStatsResponseDto copyWith({int? attack, int? defense, int? striking, int? skills, int? rating}) {
     return UserFutsalStatsResponseDto(
       attack: attack ?? self.attack,
       defense: defense ?? self.defense,
@@ -247,13 +205,7 @@ mixin _$UserFutsalStatsResponseDtoMixin {
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.attack,
-      self.defense,
-      self.striking,
-      self.skills,
-      self.rating,
-    );
+    return Object.hash(self.attack, self.defense, self.striking, self.skills, self.rating);
   }
 
   @override
@@ -275,16 +227,9 @@ mixin _$UserFutsalStatsResponseDtoMixin {
 /// class UserVolleyballStatsResponseDto with _$UserVolleyballStatsResponseDtoMixin {}
 /// ```
 mixin _$UserVolleyballStatsResponseDtoMixin {
-  UserVolleyballStatsResponseDto get self =>
-      this as UserVolleyballStatsResponseDto;
+  UserVolleyballStatsResponseDto get self => this as UserVolleyballStatsResponseDto;
 
-  UserVolleyballStatsResponseDto copyWith({
-    int? attack,
-    int? blocking,
-    int? serving,
-    int? reception,
-    int? rating,
-  }) {
+  UserVolleyballStatsResponseDto copyWith({int? attack, int? blocking, int? serving, int? reception, int? rating}) {
     return UserVolleyballStatsResponseDto(
       attack: attack ?? self.attack,
       blocking: blocking ?? self.blocking,
@@ -307,13 +252,7 @@ mixin _$UserVolleyballStatsResponseDtoMixin {
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.attack,
-      self.blocking,
-      self.serving,
-      self.reception,
-      self.rating,
-    );
+    return Object.hash(self.attack, self.blocking, self.serving, self.reception, self.rating);
   }
 
   @override

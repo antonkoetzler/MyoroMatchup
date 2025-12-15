@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Visibilidade",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "Link do Grupo de Chat do WhatsApp",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "Usar Bot de Chat de Grupo do WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "Usar Bot de Chat de Grupo do WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Deseja habilitar o bot de chat de grupo do WhatsApp para este jogo?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "O link do grupo do WhatsApp é necessário para usar o bot.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "O link do grupo de chat do WhatsApp é obrigatório.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "O link do grupo de chat do WhatsApp deve estar no formato: https://chat.whatsapp.com/[código].",
 
   "playerDetailsBottomSheetAddAsFriendText": "Adicionar como Amigo",
   "playerDetailsBottomSheetBlockText": "Bloquear",

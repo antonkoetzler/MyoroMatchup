@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Tính hiển thị",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "Liên kết Nhóm Chat WhatsApp",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "Sử dụng Bot Nhóm Chat WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "Sử dụng Bot Nhóm Chat WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Bạn có muốn bật bot nhóm chat WhatsApp cho trò chơi này không?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "Liên kết nhóm WhatsApp là bắt buộc để sử dụng bot.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "Liên kết nhóm chat WhatsApp là bắt buộc.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "Liên kết nhóm chat WhatsApp phải có định dạng: https://chat.whatsapp.com/[mã].",
 
   "playerDetailsBottomSheetAddAsFriendText": "Thêm làm Bạn bè",
   "playerDetailsBottomSheetBlockText": "Chặn",

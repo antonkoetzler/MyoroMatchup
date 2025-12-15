@@ -26,7 +26,7 @@ final class MmLogger {
         errorMethodCount: 8,
         lineLength: 120,
         colors: true,
-        printEmojis: true,
+        printEmojis: false,
         noBoxingByDefault: false,
         stackTraceBeginIndex: 0,
       ),

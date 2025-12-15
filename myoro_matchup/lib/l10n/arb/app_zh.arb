@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "可见性",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp群聊链接",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "使用WhatsApp群聊机器人",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "使用WhatsApp群聊机器人",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "您想为此游戏启用WhatsApp群聊机器人吗？",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "使用机器人需要WhatsApp群聊链接。",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp群聊链接是必需的。",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp群聊链接必须采用以下格式: https://chat.whatsapp.com/[代码]。",
 
   "playerDetailsBottomSheetAddAsFriendText": "添加为好友",
   "playerDetailsBottomSheetBlockText": "屏蔽",

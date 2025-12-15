@@ -38,7 +38,7 @@ final class InvitationListingScreenThemeExtension extends ThemeExtension<Invitat
   /// Fake constructor.
   InvitationListingScreenThemeExtension.fake()
     : bodySuccessStateNonEmptyStateItemGamePadding = myoroFake<EdgeInsets>(),
-      bodySuccessStateNonEmptyStateScrollableStyle = myoroFake<MyoroScrollableStyle>(),
+      bodySuccessStateNonEmptyStateScrollableStyle = myoroFake<MyoroListScrollableStyle>(),
       bodySuccessStateNonEmptyStateItemGameTextStyle = myoroFake<TextStyle>(),
       bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle = myoroFake<TextStyle>(),
       bodySuccessStateNonEmptyStateItemStatusTextStyle = myoroFake<TextStyle>(),
@@ -63,7 +63,7 @@ final class InvitationListingScreenThemeExtension extends ThemeExtension<Invitat
 
     return InvitationListingScreenThemeExtension(
       bodySuccessStateNonEmptyStateItemGamePadding: const EdgeInsets.all(kEdgeInsetsLength),
-      bodySuccessStateNonEmptyStateScrollableStyle: const MyoroScrollableStyle(spacing: kEdgeInsetsLength),
+      bodySuccessStateNonEmptyStateScrollableStyle: const MyoroListScrollableStyle(spacing: kEdgeInsetsLength),
       bodySuccessStateNonEmptyStateItemGameTextStyle: textTheme.titleSmall!,
       bodySuccessStateNonEmptyStateItemInviterAndDatesTextStyle: textTheme.headlineSmall!.copyWith(
         fontSize: MyoroFontSizeEnum.tiny.size,
@@ -112,7 +112,7 @@ final class InvitationListingScreenThemeExtension extends ThemeExtension<Invitat
   final EdgeInsets bodySuccessStateNonEmptyStateItemGamePadding;
 
   /// Scrollable style of the non-empty state.
-  final MyoroScrollableStyle bodySuccessStateNonEmptyStateScrollableStyle;
+  final MyoroListScrollableStyle bodySuccessStateNonEmptyStateScrollableStyle;
 
   /// Text style of the game of the non-empty state item.
   final TextStyle bodySuccessStateNonEmptyStateItemGameTextStyle;
@@ -175,7 +175,7 @@ final class InvitationListingScreenThemeExtension extends ThemeExtension<Invitat
         other.bodySuccessStateNonEmptyStateItemGamePadding,
         t,
       ),
-      bodySuccessStateNonEmptyStateScrollableStyle: MyoroScrollableStyle.lerp(
+      bodySuccessStateNonEmptyStateScrollableStyle: MyoroListScrollableStyle.lerp(
         bodySuccessStateNonEmptyStateScrollableStyle,
         other.bodySuccessStateNonEmptyStateScrollableStyle,
         t,

@@ -2,5 +2,7 @@ import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// [Route] of [GameCreationScreen].
 final class GameCreationScreenRoute extends NoPayloadRoute {
-  GameCreationScreenRoute(String name) : super(name: name, child: const GameCreationScreen());
+  /// Default constructor.
+  GameCreationScreenRoute(String rootLocation)
+    : super(parentDirectory: rootLocation, name: 'creation', child: const GameCreationScreen());
 }

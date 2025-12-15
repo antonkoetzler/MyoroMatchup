@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "दृश्यता",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsApp समूह चैट लिंक",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsApp समूह चैट बॉट का उपयोग करें",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsApp समूह चैट बॉट का उपयोग करें",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "क्या आप इस खेल के लिए WhatsApp समूह चैट बॉट सक्षम करना चाहते हैं?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "बॉट का उपयोग करने के लिए WhatsApp समूह लिंक आवश्यक है।",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsApp समूह चैट लिंक आवश्यक है।",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsApp समूह चैट लिंक इस प्रारूप में होना चाहिए: https://chat.whatsapp.com/[कोड]।",
 
   "playerDetailsBottomSheetAddAsFriendText": "मित्र के रूप में जोड़ें",
   "playerDetailsBottomSheetBlockText": "अवरुद्ध करें",

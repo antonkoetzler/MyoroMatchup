@@ -19,18 +19,18 @@ final class FriendListingScreenThemeExtension extends ThemeExtension<FriendListi
   /// Fake constructor.
   FriendListingScreenThemeExtension.fake()
     : bodyNonEmptyStatePadding = myoroFake<EdgeInsets>(),
-      bodyNonEmptyStateScrollableStyle = myoroFake<MyoroScrollableStyle>();
+      bodyNonEmptyStateScrollableStyle = myoroFake<MyoroListScrollableStyle>();
 
   /// Builder constructor.
   FriendListingScreenThemeExtension.builder(TextTheme textTheme)
     : bodyNonEmptyStatePadding = const EdgeInsets.all(kEdgeInsetsLength),
-      bodyNonEmptyStateScrollableStyle = const MyoroScrollableStyle(spacing: kEdgeInsetsLength);
+      bodyNonEmptyStateScrollableStyle = const MyoroListScrollableStyle(spacing: kEdgeInsetsLength);
 
   /// Body padding.
   final EdgeInsets bodyNonEmptyStatePadding;
 
   /// Body scrollable style.
-  final MyoroScrollableStyle bodyNonEmptyStateScrollableStyle;
+  final MyoroListScrollableStyle bodyNonEmptyStateScrollableStyle;
 
   /// Lerp function.
   @override
@@ -38,7 +38,7 @@ final class FriendListingScreenThemeExtension extends ThemeExtension<FriendListi
     if (other is! FriendListingScreenThemeExtension) return this;
     return copyWith(
       bodyNonEmptyStatePadding: EdgeInsets.lerp(bodyNonEmptyStatePadding, other.bodyNonEmptyStatePadding, t),
-      bodyNonEmptyStateScrollableStyle: MyoroScrollableStyle.lerp(
+      bodyNonEmptyStateScrollableStyle: MyoroListScrollableStyle.lerp(
         bodyNonEmptyStateScrollableStyle,
         other.bodyNonEmptyStateScrollableStyle,
         t,

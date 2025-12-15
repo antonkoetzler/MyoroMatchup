@@ -9,26 +9,14 @@ final class _BodySuccessStateTabViewPlayersTabContent extends StatelessWidget {
   @override
   Widget build(context) {
     final viewModel = context.read<GameDetailsScreenViewModel>();
-    final fetchPlayers = viewModel.fetchPlayers;
+    final fetchTeams = viewModel.fetchTeams;
 
     return MyoroRequestWidget(
-      request: fetchPlayers,
-      successBuilder: (_, players) {
-        return Column(
-          children: [
-            Expanded(
-              child: MyoroListScrollableBuilder(
-                itemCount: players!.length,
-                itemBuilder: (_, i) => _BodySuccessStateTabViewPlayersTabContentSuccessStateItem(players[i]),
-              ),
-            ),
-            Expanded(
-              child: MyoroListScrollableBuilder(
-                itemCount: players.length,
-                itemBuilder: (_, i) => _BodySuccessStateTabViewPlayersTabContentSuccessStateItem(players[i]),
-              ),
-            ),
-          ],
+      request: fetchTeams,
+      successBuilder: (_, teams) {
+        return MyoroListScrollable(
+          itemCount: teams!.length,
+          itemBuilder: (_, i) => _BodySuccessStateTabViewPlayersTabContentTeamListing(teams[i]),
         );
       },
     );

@@ -12,11 +12,14 @@ sealed class Route<T extends Object> {
   /// Default constructor.
   Route({
     String parentDirectory = kMyoroEmptyString,
-    String name = kMyoroEmptyString,
+    this.name = kMyoroEmptyString,
     this.redirect,
     this.builder,
     this.routes = const [],
   }) : location = '${parentDirectory.isNotEmpty ? '/$parentDirectory' : kMyoroEmptyString}/$name';
+
+  /// The name of the route.
+  final String name;
 
   /// The location of the route.
   ///
@@ -34,6 +37,20 @@ sealed class Route<T extends Object> {
 
   /// [GoRoute] generator.
   GoRoute get goRoute {
-    return GoRoute(path: location, redirect: redirect, builder: builder, routes: routes.map((r) => r.goRoute).toList());
+    return GoRoute(
+      path: location,
+      redirect: redirect,
+      builder: builder,
+      routes: routes.map((r) {
+        final childGoRoute = r.goRoute;
+        // For nested routes, use relative path (just the name) instead of full location
+        return GoRoute(
+          path: r.name.isEmpty ? childGoRoute.path : r.name,
+          redirect: childGoRoute.redirect,
+          builder: childGoRoute.builder,
+          routes: childGoRoute.routes,
+        );
+      }).toList(),
+    );
   }
 }

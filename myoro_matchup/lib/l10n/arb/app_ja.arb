@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "公開設定",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "WhatsAppグループチャットリンク",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "WhatsAppグループチャットボットを使用",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "WhatsAppグループチャットボットを使用",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "このゲームでWhatsAppグループチャットボットを有効にしますか？",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "ボットを使用するには、WhatsAppグループリンクが必要です。",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "WhatsAppグループチャットリンクは必須です。",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "WhatsAppグループチャットリンクは次の形式である必要があります: https://chat.whatsapp.com/[コード]。",
 
   "playerDetailsBottomSheetAddAsFriendText": "友達として追加",
   "playerDetailsBottomSheetBlockText": "ブロック",

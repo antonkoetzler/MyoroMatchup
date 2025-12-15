@@ -9,7 +9,7 @@ final class _BodyUserGameListingListing extends StatelessWidget {
 
   @override
   Widget build(context) {
-    return MyoroListScrollableBuilder(
+    return MyoroListScrollable(
       itemCount: _games.length,
       itemBuilder: (_, index) => _Game(index == 0, _games.elementAt(index)),
     );

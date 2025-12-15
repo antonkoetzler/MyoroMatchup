@@ -39,8 +39,6 @@ CREATE TABLE games (
     visibility VARCHAR(255) NOT NULL,
     profile_picture VARCHAR(255),
     banner VARCHAR(255),
-    whats_app_group_chat_link VARCHAR(255),
-    use_whats_app_group_chat_bot BOOLEAN NOT NULL DEFAULT FALSE,
     CONSTRAINT fk_games_user FOREIGN KEY (user_id) REFERENCES users(id)
 );
 

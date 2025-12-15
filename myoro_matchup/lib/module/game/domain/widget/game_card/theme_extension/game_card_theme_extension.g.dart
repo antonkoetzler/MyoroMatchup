@@ -34,8 +34,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
     return GameCardThemeExtension(
       bannerMaxHeight: bannerMaxHeight ?? self.bannerMaxHeight,
       bannerDecoration: bannerDecoration ?? self.bannerDecoration,
-      profilePictureBorderRadius:
-          profilePictureBorderRadius ?? self.profilePictureBorderRadius,
+      profilePictureBorderRadius: profilePictureBorderRadius ?? self.profilePictureBorderRadius,
       profilePictureSize: profilePictureSize ?? self.profilePictureSize,
       infoBarPadding: infoBarPadding ?? self.infoBarPadding,
       infoBarSpacing: infoBarSpacing ?? self.infoBarSpacing,
@@ -44,8 +43,7 @@ mixin _$GameCardThemeExtensionMixin on ThemeExtension<GameCardThemeExtension> {
       profilePictureBorder: profilePictureBorder ?? self.profilePictureBorder,
       logoPadding: logoPadding ?? self.logoPadding,
       logoSize: logoSize ?? self.logoSize,
-      bannerlessGameContentPadding:
-          bannerlessGameContentPadding ?? self.bannerlessGameContentPadding,
+      bannerlessGameContentPadding: bannerlessGameContentPadding ?? self.bannerlessGameContentPadding,
     );
   }
 

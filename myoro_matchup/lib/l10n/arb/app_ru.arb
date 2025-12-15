@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Видимость",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "Ссылка на групповой чат WhatsApp",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "Использовать бота группового чата WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "Использовать бота группового чата WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Вы хотите включить бота группового чата WhatsApp для этой игры?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "Ссылка на группу WhatsApp необходима для использования бота.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "Ссылка на групповой чат WhatsApp обязательна.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "Ссылка на групповой чат WhatsApp должна быть в формате: https://chat.whatsapp.com/[код].",
 
   "playerDetailsBottomSheetAddAsFriendText": "Добавить в друзья",
   "playerDetailsBottomSheetBlockText": "Заблокировать",

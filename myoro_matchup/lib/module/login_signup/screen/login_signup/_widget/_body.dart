@@ -17,7 +17,7 @@ final class _Body extends StatelessWidget {
     return Padding(
       padding: bodyPadding,
       child: Center(
-        child: MyoroSingleChildScrollable(
+        child: SingleChildScrollView(
           child: Column(
             spacing: logoInputsSpacing,
             mainAxisSize: MainAxisSize.min,

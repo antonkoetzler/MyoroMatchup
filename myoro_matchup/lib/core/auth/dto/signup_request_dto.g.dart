@@ -6,14 +6,13 @@ part of 'signup_request_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-Map<String, dynamic> _$SignupRequestDtoToJson(SignupRequestDto instance) =>
-    <String, dynamic>{
-      'username': instance.username,
-      'name': instance.name,
-      'email': instance.email,
-      'country': _$MyoroCountryEnumEnumMap[instance.country]!,
-      'password': instance.password,
-    };
+Map<String, dynamic> _$SignupRequestDtoToJson(SignupRequestDto instance) => <String, dynamic>{
+  'username': instance.username,
+  'name': instance.name,
+  'email': instance.email,
+  'country': _$MyoroCountryEnumEnumMap[instance.country]!,
+  'password': instance.password,
+};
 
 const _$MyoroCountryEnumEnumMap = {
   MyoroCountryEnum.afghanistan: 'af',
@@ -258,13 +257,7 @@ mixin _$SignupRequestDtoMixin {
 
   @override
   int get hashCode {
-    return Object.hash(
-      self.username,
-      self.name,
-      self.email,
-      self.country,
-      self.password,
-    );
+    return Object.hash(self.username, self.name, self.email, self.country, self.password);
   }
 
   @override

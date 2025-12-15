@@ -1,14 +1,11 @@
 package com.myoro.myoro_matchup_api.dto;
 
-import com.myoro.myoro_matchup_api.util.ValidationConstants;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Size;
 
 /** Login request. */
 public class LoginRequestDto {
   /** Username. */
-  @Size(min = ValidationConstants.MIN_USERNAME_LENGTH, message = "{validation.username.length}")
   private String username;
 
   /** Email. */
@@ -17,7 +14,6 @@ public class LoginRequestDto {
 
   /** Password. */
   @NotBlank(message = "{validation.password.required}")
-  @Size(min = ValidationConstants.MIN_PASSWORD_LENGTH, message = "{validation.password.length}")
   private String password;
 
   /* Default constructor. */

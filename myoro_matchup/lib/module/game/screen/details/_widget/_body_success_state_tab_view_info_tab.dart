@@ -18,8 +18,6 @@ final class _BodySuccessStateTabViewInfoTab extends StatelessWidget {
         spacing: spacing,
         mainAxisSize: MainAxisSize.min,
         children: [
-          const _BodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSection(),
-          _BodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSection(_game),
           _BodySuccessStateTabViewInfoTabFrequencyDayTimeSection(_game),
           _BodySuccessStateTabViewInfoTabPriceSection(_game),
           Row(

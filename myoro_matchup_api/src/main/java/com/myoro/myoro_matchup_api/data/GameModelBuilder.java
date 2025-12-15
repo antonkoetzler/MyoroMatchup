@@ -38,8 +38,6 @@ public class GameModelBuilder {
   private String country;
   private VisibilityEnum visibility;
   private List<UserModel> players;
-  private String whatsAppGroupChatLink;
-  private Boolean useWhatsAppGroupChatBot;
   private final Faker faker;
   private final Random random;
 
@@ -148,24 +146,6 @@ public class GameModelBuilder {
     this.city = faker.address().city();
     this.state = faker.address().stateAbbr();
     this.country = getRandomCountryCode();
-    return this;
-  }
-
-  /** Generates random WhatsApp group chat link. */
-  public GameModelBuilder withRandomWhatsAppGroupChatLink() {
-    // Generate a fake WhatsApp invite code (22 characters, alphanumeric)
-    String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    StringBuilder code = new StringBuilder();
-    for (int i = 0; i < 22; i++) {
-      code.append(chars.charAt(random.nextInt(chars.length())));
-    }
-    this.whatsAppGroupChatLink = "https://chat.whatsapp.com/" + code.toString();
-    return this;
-  }
-
-  /** Generates random use WhatsApp group chat bot flag. */
-  public GameModelBuilder withRandomUseWhatsAppGroupChatBot() {
-    this.useWhatsAppGroupChatBot = random.nextBoolean();
     return this;
   }
 
@@ -280,16 +260,6 @@ public class GameModelBuilder {
       game.setPlayers(players);
     } else {
       game.setPlayers(new ArrayList<>());
-    }
-
-    // WhatsApp group chat link
-    if (whatsAppGroupChatLink != null) {
-      game.setWhatsAppGroupChatLink(whatsAppGroupChatLink);
-    }
-
-    // Use WhatsApp group chat bot
-    if (useWhatsAppGroupChatBot != null) {
-      game.setUseWhatsAppGroupChatBot(useWhatsAppGroupChatBot);
     }
 
     return game;

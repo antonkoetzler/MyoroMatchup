@@ -96,12 +96,6 @@ public class DataSeeder implements CommandLineRunner {
               .withRandomLocation()
               .build();
 
-      // Randomly add WhatsApp group chat data (70% chance)
-      if (random.nextDouble() < 0.7) {
-        game.setWhatsAppGroupChatLink("https://chat.whatsapp.com/" + generateRandomWhatsAppCode());
-        game.setUseWhatsAppGroupChatBot(random.nextBoolean());
-      }
-
       games.add(gameRepository.save(game));
     }
 
@@ -171,15 +165,5 @@ public class DataSeeder implements CommandLineRunner {
       created++;
       attempts = 0; // Reset attempts on success
     }
-  }
-
-  /** Generates a random WhatsApp invite code (22 characters, alphanumeric). */
-  private String generateRandomWhatsAppCode() {
-    String chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    StringBuilder code = new StringBuilder();
-    for (int i = 0; i < 22; i++) {
-      code.append(chars.charAt(random.nextInt(chars.length())));
-    }
-    return code.toString();
   }
 }

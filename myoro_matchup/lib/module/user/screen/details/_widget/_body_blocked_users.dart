@@ -15,7 +15,7 @@ final class _BodyBlockedUsers extends StatelessWidget {
       MyoroRequestWidget(
         request: fetchBlockedUsers,
         successBuilder: (_, blockedUsers) {
-          return MyoroListScrollableBuilder(
+          return MyoroListScrollable(
             itemCount: blockedUsers!.length,
             itemBuilder: (_, i) {
               final blockedUser = blockedUsers[i];

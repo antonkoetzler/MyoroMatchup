@@ -31,11 +31,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get mmLocationInputTypeEnumContinentLabel => 'Benua';
 
   @override
-  String mmLocationInputItemCityCountryText(
-    String city,
-    String emoji,
-    String countryName,
-  ) {
+  String mmLocationInputItemCityCountryText(String city, String emoji, String countryName) {
     return '$city, $emoji $countryName';
   }
 
@@ -94,8 +90,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get friendRequestStatusEnumRejectedLabel => 'Ditolak';
 
   @override
-  String get gameDetailsScreenBodyErrorFeedbackTitle =>
-      'Gagal mengambil detail permainan!';
+  String get gameDetailsScreenBodyErrorFeedbackTitle => 'Gagal mengambil detail permainan!';
 
   @override
   String get invitationListingScreenAppBarTitle => 'Undangan';
@@ -108,19 +103,13 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String userDetailsScreenBodySubscriptionPlanText(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
-      'true': 'Berlangganan',
-      'other': 'Tidak berlangganan',
-    });
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': 'Berlangganan', 'other': 'Tidak berlangganan'});
     return '$_temp0';
   }
 
   @override
   String bodySubscriptionStatusLabel(String isSubscribed) {
-    String _temp0 = intl.Intl.selectLogic(isSubscribed, {
-      'true': 'Berlangganan',
-      'other': 'Tidak berlangganan',
-    });
+    String _temp0 = intl.Intl.selectLogic(isSubscribed, {'true': 'Berlangganan', 'other': 'Tidak berlangganan'});
     return 'Status berlangganan: $_temp0';
   }
 
@@ -128,8 +117,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get bodySubscriptionStatusButtonText => 'Berlangganan';
 
   @override
-  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle =>
-      'Ubah Visibilitas Profil';
+  String get userDetailsScreenBodyProfileVisibilityBottomSheetTitle => 'Ubah Visibilitas Profil';
 
   @override
   String get userDetailsScreenBodyProfileVisibilityBottomSheetMessage =>
@@ -151,47 +139,32 @@ class AppLocalizationsId extends AppLocalizations {
   String get userDetailsScreenLocationEditingBottomSheetTitle => 'Edit Lokasi';
 
   @override
-  String userLocationResponseDtoFormattedLocation(
-    String city,
-    String state,
-    String country,
-  ) {
+  String userLocationResponseDtoFormattedLocation(String city, String state, String country) {
     String _temp0 = intl.Intl.selectLogic(city, {'other': ', '});
     String _temp1 = intl.Intl.selectLogic(state, {'other': ', '});
     return '$city$_temp0$state$_temp1$country';
   }
 
   @override
-  String get invitationListingScreenBodySuccessStateEmptyTitle =>
-      'Tidak ada undangan ditemukan!';
+  String get invitationListingScreenBodySuccessStateEmptyTitle => 'Tidak ada undangan ditemukan!';
 
   @override
   String get friendListingScreenBodyEmptyTitle => 'Tidak ada teman ditemukan!';
 
   @override
-  String
-  get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel =>
-      'Pesan';
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemMessageLabel => 'Pesan';
 
   @override
-  String
-  get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel =>
-      'Status';
+  String get invitationListingScreenBodySuccessStateNonEmptyStateFiltersStatusFilterButtonLabel => 'Status';
 
   @override
-  String
-  get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText =>
-      'Terima';
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemAcceptButtonText => 'Terima';
 
   @override
-  String
-  get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel =>
-      'Status';
+  String get friendListingScreenBodyNonEmptyStateFiltersStatusFilterButtonLabel => 'Status';
 
   @override
-  String
-  get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText =>
-      'Tolak';
+  String get invitationListingScreenBodySuccessStateNonEmptyStateItemDeclineButtonText => 'Tolak';
 
   @override
   String get gameDetailsScreenBodySuccessStateTabViewInfoTabText => 'Info';
@@ -200,124 +173,64 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameDetailsScreenBodySuccessStateTabViewPlayersTabText => 'Pemain';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText =>
-      'Undang Pemain';
+  String get gameDetailsScreenBodySuccessStateTabViewPlayersTabActionButtonText => 'Undang Pemain';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetTitleText => 'Undang Pemain';
 
   @override
-  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(
-    String username,
-    String name,
-  ) {
+  String gameDetailsScreenInvitationBottomSheetUserSearchInputItemText(String username, String name) {
     return '$username ($name)';
   }
 
   @override
-  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel =>
-      'Cari pengguna...';
+  String get gameDetailsScreenInvitationBottomSheetUserSearchInputLabel => 'Cari pengguna...';
 
   @override
   String get gameDetailsScreenInvitationBottomSheetMessageInputLabel => 'Pesan';
 
   @override
-  String
-  get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText =>
-      'Batal';
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsCancelButtonText => 'Batal';
 
   @override
-  String
-  get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText =>
-      'Kirim';
+  String get gameDetailsScreenInvitationBottomSheetActionButtonsSendButtonText => 'Kirim';
 
   @override
-  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText =>
-      'Peringkat';
+  String get gameDetailsScreenBodySuccessStateTabViewRankingsTabText => 'Peringkat';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel =>
-      'Frekuensi';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionFrequencyLabel => 'Frekuensi';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel =>
-      'Hari Utama';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryDayLabel => 'Hari Utama';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel =>
-      'Waktu Utama';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionPrimaryTimesLabel => 'Waktu Utama';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyDayLabel =>
       'Hari Dua Mingguan';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabFrequencyDayTimeSectionBiWeeklyTimesLabel =>
       'Waktu Dua Mingguan';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel =>
-      'Harga Anggota';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionMemberPriceLabel => 'Harga Anggota';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel =>
-      'Harga Tamu';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabPriceSectionDropInPriceLabel => 'Harga Tamu';
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel =>
-      'Rentang Usia';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionLabel => 'Rentang Usia';
 
   @override
-  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(
-    int minAge,
-    int maxAge,
-  ) {
+  String gameDetailsScreenBodySuccessStateTabViewInfoTabAgeRangeSectionData(int minAge, int maxAge) {
     return '$minAge hingga $maxAge';
   }
 
   @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel =>
-      'Visibilitas';
-
-  @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText =>
-      'Tautan Grup Chat WhatsApp';
-
-  @override
-  String
-  get gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText =>
-      'Gunakan Bot Grup Chat WhatsApp';
-
-  @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =>
-      'Gunakan Bot Grup Chat WhatsApp';
-
-  @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =>
-      'Apakah Anda ingin mengaktifkan bot grup chat WhatsApp untuk permainan ini?';
-
-  @override
-  String get gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =>
-      'Tautan grup WhatsApp diperlukan untuk menggunakan bot.';
-
-  @override
-  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty =>
-      'Tautan grup chat WhatsApp wajib diisi.';
-
-  @override
-  String get gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid =>
-      'Tautan grup chat WhatsApp harus dalam format: https://chat.whatsapp.com/[kode].';
+  String get gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel => 'Visibilitas';
 
   @override
   String get playerDetailsBottomSheetAddAsFriendText => 'Tambah sebagai Teman';
@@ -326,40 +239,33 @@ class AppLocalizationsId extends AppLocalizations {
   String get playerDetailsBottomSheetBlockText => 'Blokir';
 
   @override
-  String get sendFriendRequestConfirmationBottomSheetTitle =>
-      'Kirim Permintaan Pertemanan';
+  String get sendFriendRequestConfirmationBottomSheetTitle => 'Kirim Permintaan Pertemanan';
 
   @override
   String get sendFriendRequestConfirmationBottomSheetMessage =>
       'Apakah Anda yakin ingin mengirim permintaan pertemanan kepada pengguna ini?';
 
   @override
-  String
-  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle =>
-      'Terima Permintaan Pertemanan';
+  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetTitle => 'Terima Permintaan Pertemanan';
 
   @override
-  String
-  get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage =>
+  String get friendListingScreenAcceptFriendRequestConfirmationBottomSheetMessage =>
       'Apakah Anda yakin ingin menerima permintaan pertemanan ini?';
 
   @override
   String get blockUserConfirmationBottomSheetTitle => 'Blokir Pengguna';
 
   @override
-  String get blockUserConfirmationBottomSheetMessage =>
-      'Apakah Anda yakin ingin memblokir pengguna ini?';
+  String get blockUserConfirmationBottomSheetMessage => 'Apakah Anda yakin ingin memblokir pengguna ini?';
 
   @override
   String get unblockUserConfirmationBottomSheetTitle => 'Buka Blokir Pengguna';
 
   @override
-  String get unblockUserConfirmationBottomSheetMessage =>
-      'Apakah Anda yakin ingin membuka blokir pengguna ini?';
+  String get unblockUserConfirmationBottomSheetMessage => 'Apakah Anda yakin ingin membuka blokir pengguna ini?';
 
   @override
-  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle =>
-      'Hapus Akun';
+  String get userDetailsScreenDeleteAccountConfirmationBottomSheetTitle => 'Hapus Akun';
 
   @override
   String get userDetailsScreenDeleteAccountConfirmationBottomSheetMessage =>
@@ -369,19 +275,16 @@ class AppLocalizationsId extends AppLocalizations {
   String get homeScreenAppBarTitle => 'Myoro Matchup';
 
   @override
-  String get homeScreenBodyErrorStateTitle =>
-      'Kesalahan saat mengambil permainan!';
+  String get homeScreenBodyErrorStateTitle => 'Kesalahan saat mengambil permainan!';
 
   @override
-  String get homeScreenBodySuccessStateEmptyTitle =>
-      'Tidak ada permainan ditemukan!';
+  String get homeScreenBodySuccessStateEmptyTitle => 'Tidak ada permainan ditemukan!';
 
   @override
   String get homeScreenNewGameButtonText => 'Buat permainan';
 
   @override
-  String get homeScreenBodyUserGameListingEmptyTitle =>
-      'Anda belum bergabung dengan permainan apa pun!';
+  String get homeScreenBodyUserGameListingEmptyTitle => 'Anda belum bergabung dengan permainan apa pun!';
 
   @override
   String get homeScreenBodyUserSportStatsStatsFootballAttackLabel => 'ATK';
@@ -432,8 +335,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get homeScreenBodyUserSportStatsStatsVolleyballReceptionLabel => 'REC';
 
   @override
-  String get homeScreenBodyUserSportStatsEditProfileButtonText =>
-      'Edit profile';
+  String get homeScreenBodyUserSportStatsEditProfileButtonText => 'Edit profile';
 
   @override
   String get gameCreationScreenAppBarTitle => 'Buat permainan';
@@ -442,44 +344,35 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameCreationScreenNameScreenTitle => 'Nama';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLabel =>
-      'mis. Permainan Sepak Bola Mingguan';
+  String get gameCreationScreenNameScreenNameInputLabel => 'mis. Permainan Sepak Bola Mingguan';
 
   @override
-  String get gameCreationScreenNameScreenNameInputEmptyMessage =>
-      'Nama tidak boleh kosong.';
+  String get gameCreationScreenNameScreenNameInputEmptyMessage => 'Nama tidak boleh kosong.';
 
   @override
-  String get gameCreationScreenNameScreenNameInputLengthMessage =>
-      'Nama harus memiliki setidaknya 3 karakter.';
+  String get gameCreationScreenNameScreenNameInputLengthMessage => 'Nama harus memiliki setidaknya 3 karakter.';
 
   @override
   String get gameCreationScreenSportScreenTitle => 'Olahraga';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTitle =>
-      'Frekuensi dan Tanggal/Waktu';
+  String get gameCreationScreenFrequencyDayTimeScreenTitle => 'Frekuensi dan Tanggal/Waktu';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel =>
-      'Frekuensi';
+  String get gameCreationScreenFrequencyDayTimeScreenFrequencyFieldLabel => 'Frekuensi';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel =>
-      'Mulai';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartLabel => 'Mulai';
 
   @override
-  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel =>
-      'Selesai';
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndLabel => 'Selesai';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldStartTimeEmptyMessage =>
       'Waktu mulai tidak boleh kosong.';
 
   @override
-  String
-  get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
+  String get gameCreationScreenFrequencyDayTimeScreenTimeFieldEndTimeEmptyMessage =>
       'Waktu selesai tidak boleh kosong.';
 
   @override
@@ -498,8 +391,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameCreationScreenLocationScreenTitle => 'Lokasi';
 
   @override
-  String get gameCreationScreenLocationScreenLocationValidationMessage =>
-      'Silakan pilih lokasi.';
+  String get gameCreationScreenLocationScreenLocationValidationMessage => 'Silakan pilih lokasi.';
 
   @override
   String gameCreationScreenLocationScreenCurrencyNotificationText(
@@ -511,17 +403,13 @@ class AppLocalizationsId extends AppLocalizations {
   }
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenTitle =>
-      'Visibilitas dan Gambar';
+  String get gameCreationScreenVisibilityAndImageScreenTitle => 'Visibilitas dan Gambar';
 
   @override
-  String
-  get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle =>
-      'Foto Profil';
+  String get gameCreationScreenVisibilityAndImageScreenProfilePictureImageFieldTitle => 'Foto Profil';
 
   @override
-  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle =>
-      'Banner';
+  String get gameCreationScreenVisibilityAndImageScreenBannerImageFieldTitle => 'Banner';
 
   @override
   String get gameCreationScreenButtonPreviousText => 'Sebelumnya';
@@ -533,12 +421,10 @@ class AppLocalizationsId extends AppLocalizations {
   String get gameCreationScreenButtonFinishText => 'Selesai';
 
   @override
-  String get gameCreationScreenGameCreationSuccessMessage =>
-      'Permainan berhasil dibuat!';
+  String get gameCreationScreenGameCreationSuccessMessage => 'Permainan berhasil dibuat!';
 
   @override
-  String get loginSignupScreenLoginUsernameEmailInputLabel =>
-      'Nama pengguna/email';
+  String get loginSignupScreenLoginUsernameEmailInputLabel => 'Nama pengguna/email';
 
   @override
   String get loginSignupScreenLoginPasswordInputLabel => 'Kata sandi';
@@ -568,44 +454,34 @@ class AppLocalizationsId extends AppLocalizations {
   String get loginSignupScreenSignupSignupButton => 'Daftar';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonLoginText =>
-      'Baru di MyoroMatchup? Daftar!';
+  String get loginSignupScreenFormTypeSwitcherButtonLoginText => 'Baru di MyoroMatchup? Daftar!';
 
   @override
-  String get loginSignupScreenFormTypeSwitcherButtonSignupText =>
-      'Sudah terdaftar? Masuk!';
+  String get loginSignupScreenFormTypeSwitcherButtonSignupText => 'Sudah terdaftar? Masuk!';
 
   @override
-  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage =>
-      'Nama pengguna/email tidak boleh kosong.';
+  String get loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage => 'Nama pengguna/email tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage =>
-      'Kata sandi tidak boleh kosong.';
+  String get loginSignupScreenLoginFormPasswordFieldEmptyMessage => 'Kata sandi tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormNameFieldEmptyMessage =>
-      'Nama tidak boleh kosong.';
+  String get loginSignupScreenSignupFormNameFieldEmptyMessage => 'Nama tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage =>
-      'Nama pengguna tidak boleh kosong.';
+  String get loginSignupScreenSignupFormUsernameFieldEmptyMessage => 'Nama pengguna tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormEmailFieldEmptyMessage =>
-      'Email tidak boleh kosong.';
+  String get loginSignupScreenSignupFormEmailFieldEmptyMessage => 'Email tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage =>
-      'Negara tidak boleh kosong.';
+  String get loginSignupScreenSignupFormLocationCountryFieldEmptyMessage => 'Negara tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage =>
-      'Bidang kata sandi tidak boleh kosong.';
+  String get loginSignupScreenSignupFormPasswordFieldsEmptyMessage => 'Bidang kata sandi tidak boleh kosong.';
 
   @override
-  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage =>
-      'Kata sandi tidak cocok.';
+  String get loginSignupScreenSignupFormPasswordFieldsMismatchMessage => 'Kata sandi tidak cocok.';
 
   @override
   String get loginSignupScreenForgotPasswordDialogTitle => 'Lupa Kata Sandi';
@@ -618,8 +494,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get loginSignupScreenForgotPasswordDialogInputPlaceholder => 'Email';
 
   @override
-  String
-  get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =>
+  String get loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =>
       'Harap masukkan alamat email yang valid.';
 
   @override

@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "Visibilitas",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "Tautan Grup Chat WhatsApp",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "Gunakan Bot Grup Chat WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "Gunakan Bot Grup Chat WhatsApp",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "Apakah Anda ingin mengaktifkan bot grup chat WhatsApp untuk permainan ini?",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "Tautan grup WhatsApp diperlukan untuk menggunakan bot.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "Tautan grup chat WhatsApp wajib diisi.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "Tautan grup chat WhatsApp harus dalam format: https://chat.whatsapp.com/[kode].",
 
   "playerDetailsBottomSheetAddAsFriendText": "Tambah sebagai Teman",
   "playerDetailsBottomSheetBlockText": "Blokir",

@@ -21,7 +21,7 @@ final class _BodySuccessStateNonEmptyState extends StatelessWidget {
       child: Column(
         children: [
           Expanded(
-            child: MyoroListScrollableBuilder(
+            child: MyoroListScrollable(
               style: bodySuccessStateNonEmptyStateScrollableStyle,
               itemCount: invitationsLength,
               itemBuilder: (_, i) => _BodySuccessStateNonEmptyStateItem(_invitations[i]),

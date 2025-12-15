@@ -1,7 +1,0 @@
-node_modules/
-dist/
-auth_info/
-*.log
-.env
-.DS_Store
-

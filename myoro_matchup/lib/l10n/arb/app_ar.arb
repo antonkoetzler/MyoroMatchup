@@ -135,13 +135,6 @@
     }
   },
   "gameDetailsScreenBodySuccessStateTabViewInfoTabVisibilitySectionLabel": "الرؤية",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabWhatsAppGroupChatLinkSectionText": "رابط مجموعة الدردشة على واتساب",
-  "gameDetailsScreenBodySuccessStateTabViewInfoTabUseWhatsAppGroupChatBotSectionText": "استخدام بوت الدردشة الجماعية على واتساب",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle": "استخدام بوت الدردشة الجماعية على واتساب",
-  "gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText": "هل تريد تفعيل بوت الدردشة الجماعية على واتساب لهذه اللعبة؟",
-  "gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage": "رابط مجموعة واتساب مطلوب لاستخدام البوت.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty": "رابط مجموعة الدردشة على واتساب مطلوب.",
-  "gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid": "يجب أن يكون رابط مجموعة الدردشة على واتساب بالتنسيق: https://chat.whatsapp.com/[رمز].",
 
   "playerDetailsBottomSheetAddAsFriendText": "إضافة كصديق",
   "playerDetailsBottomSheetBlockText": "حظر",

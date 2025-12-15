@@ -17,10 +17,6 @@ public final class ValidationConstants {
   /** Username pattern - only letters and numbers. */
   public static final String USERNAME_PATTERN = "^[a-zA-Z0-9]+$";
 
-  /** WhatsApp group chat link pattern - must match https://chat.whatsapp.com/[code]. */
-  public static final String WHATSAPP_GROUP_CHAT_LINK_PATTERN =
-      "^https://chat\\.whatsapp\\.com/[A-Za-z0-9_-]+$";
-
   /** Private constructor to prevent instantiation. */
   private ValidationConstants() {
     throw new UnsupportedOperationException("This is a utility class and cannot be instantiated.");

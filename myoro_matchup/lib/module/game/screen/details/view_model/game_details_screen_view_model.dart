@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
@@ -18,15 +17,8 @@ final class GameDetailsScreenViewModel {
     this._invitationRepository,
     @factoryParam int gameId,
   ) {
-    _state = GameDetailsScreenState(
-      () async => await _gameRepository.get(gameId),
-      () async => await _gameRepository.setWhatsAppGroupChatLink(gameId, state.whatsAppGroupChatLink),
-      () async => await _gameRepository.setUseWhatsAppGroupChatBot(gameId, state.useWhatsAppGroupChatBot),
-    );
-    _state
-      ..gameRequestController.addListener(_gameRequestControllerListener)
-      ..whatsAppGroupChatLinkController.addListener(_whatsAppGroupChatLinkControllerListener)
-      ..useWhatsAppGroupChatBotRequestController.addListener(_useWhatsAppGroupChatBotRequestControllerListener);
+    _state = GameDetailsScreenState(() async => await _gameRepository.get(gameId));
+    _state.gameRequestController.addListener(_gameRequestControllerListener);
     fetch();
   }
 
@@ -52,9 +44,9 @@ final class GameDetailsScreenViewModel {
     state.gameRequestController.fetch();
   }
 
-  /// Fetches the players
-  Future<List<GamePlayerResponseDto>> fetchPlayers() async {
-    return await _gameRepository.getPlayers(state.gameId);
+  /// Fetches the teams
+  Future<List<GameTeamResponseDto>> fetchTeams() async {
+    return await _gameRepository.getTeams(state.gameId);
   }
 
   /// [MyoroSearchInput.requestCallback] of the invitation bottom sheet's user search input.
@@ -99,70 +91,6 @@ final class GameDetailsScreenViewModel {
     Future.delayed(kSuccessNavigationDelayDuration).then((_) => MmRouter.pop());
   }
 
-  /// Sets the use WhatsApp group chat bot.
-  void openUseWhatsAppGroupChatBotBottomSheet(BuildContext context, bool useWhatsAppGroupChatBot) {
-    final gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle =
-        localization.gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle;
-    final gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText =
-        localization.gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText;
-
-    final useWhatsAppGroupChatBotRequestController = state.useWhatsAppGroupChatBotRequestController;
-    final fetch = useWhatsAppGroupChatBotRequestController.fetch;
-
-    MyoroDialogModal.show(
-      context,
-      title: gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetTitle,
-      message: gameDetailsScreenUseWhatsAppGroupChatBotBottomSheetText,
-      onConfirm: fetch,
-    );
-  }
-
-  /// Use WhatsApp group chat bot disabled on tap up.
-  void useWhatsAppGroupChatBotDisabledOnTapUp() {
-    final gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage =
-        localization.gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage;
-
-    MmSnackBarHelper.showSnackBar(
-      snackBar: MyoroSnackBar(
-        snackBarType: MyoroSnackBarTypeEnum.attention,
-        message: gameDetailsScreenUseWhatsAppGroupChatBotDisabledOnTapUpMessage,
-      ),
-    );
-  }
-
-  /// WhatsApp group chat link input validation.
-  String? whatsAppGroupChatLinkInputValidation(String text) {
-    if (text.isEmpty) {
-      return localization.gameDetailsScreenWhatsAppGroupChatLinkInputValidationEmpty;
-    }
-    final pattern = RegExp(r'^https://chat\.whatsapp\.com/[A-Za-z0-9_-]+$');
-    if (!pattern.hasMatch(text)) {
-      return localization.gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid;
-    }
-    return null;
-  }
-
-  /// Clear the WhatsApp group chat link.
-  void clearWhatsAppGroupChatLink() {
-    state.whatsAppGroupChatLinkController.clear();
-  }
-
-  /// Paste the WhatsApp group chat link.
-  void pasteWhatsAppGroupChatLink(_, _) async {
-    final clipboard = await Clipboard.getData(Clipboard.kTextPlain);
-    if (clipboard == null) return;
-    final clipboardText = clipboard.text ?? kMyoroEmptyString;
-    final isValid = whatsAppGroupChatLinkInputValidation(clipboardText) == null;
-    isValid
-        ? _state.whatsAppGroupChatLink = clipboardText
-        : MmSnackBarHelper.showSnackBar(
-            snackBar: MyoroSnackBar(
-              snackBarType: MyoroSnackBarTypeEnum.error,
-              message: localization.gameDetailsScreenWhatsAppGroupChatLinkInputValidationInvalid,
-            ),
-          );
-  }
-
   /// Send friend request.
   Future<String> sendFriendRequest(GamePlayerResponseDto player) async {
     return await _userRepository.sendFriendRequest(player.id);
@@ -174,29 +102,7 @@ final class GameDetailsScreenViewModel {
   }
 
   /// [_gameRequestControllerListener] listener.
-  void _gameRequestControllerListener() {
-    final gameRequest = state.gameRequest;
-    final status = gameRequest.status;
-    final isSuccess = status.isSuccess;
-    if (isSuccess) {
-      final game = gameRequest.data!;
-      state.useWhatsAppGroupChatBot = game.useWhatsAppGroupChatBot;
-    }
-  }
-
-  /// [_whatsAppGroupChatLinkControllerListener] listener.
-  void _whatsAppGroupChatLinkControllerListener() {
-    _state.whatsAppGroupChatLinkIsValid = state.whatsAppGroupChatLinkFormKey.currentState?.validate() ?? false;
-  }
-
-  /// [_useWhatsAppGroupChatBotRequestControllerListener] listener.
-  void _useWhatsAppGroupChatBotRequestControllerListener() {
-    final useWhatsAppGroupChatBotRequest = state.useWhatsAppGroupChatBotRequest;
-    final message = useWhatsAppGroupChatBotRequest.data!;
-    MmSnackBarHelper.showSnackBar(
-      snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.success, message: message),
-    );
-  }
+  void _gameRequestControllerListener() {}
 
   /// [_state] getter.
   GameDetailsScreenState get state {

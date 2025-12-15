@@ -6,24 +6,14 @@ part of 'user_sport_stats_response_dto.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-UserSportStatsResponseDto _$UserSportStatsResponseDtoFromJson(
-  Map<String, dynamic> json,
-) => UserSportStatsResponseDto(
-  football: UserFootballStatsResponseDto.fromJson(
-    json['football'] as Map<String, dynamic>,
-  ),
-  futsal: UserFutsalStatsResponseDto.fromJson(
-    json['futsal'] as Map<String, dynamic>,
-  ),
+UserSportStatsResponseDto _$UserSportStatsResponseDtoFromJson(Map<String, dynamic> json) => UserSportStatsResponseDto(
+  football: UserFootballStatsResponseDto.fromJson(json['football'] as Map<String, dynamic>),
+  futsal: UserFutsalStatsResponseDto.fromJson(json['futsal'] as Map<String, dynamic>),
   fut7: UserFut7StatsResponseDto.fromJson(json['fut7'] as Map<String, dynamic>),
-  volleyball: UserVolleyballStatsResponseDto.fromJson(
-    json['volleyball'] as Map<String, dynamic>,
-  ),
+  volleyball: UserVolleyballStatsResponseDto.fromJson(json['volleyball'] as Map<String, dynamic>),
 );
 
-Map<String, dynamic> _$UserSportStatsResponseDtoToJson(
-  UserSportStatsResponseDto instance,
-) => <String, dynamic>{
+Map<String, dynamic> _$UserSportStatsResponseDtoToJson(UserSportStatsResponseDto instance) => <String, dynamic>{
   'football': instance.football,
   'futsal': instance.futsal,
   'fut7': instance.fut7,

@@ -13,8 +13,7 @@ part of 'home_screen_theme_extension.dart';
 /// ```dart
 /// class HomeScreenThemeExtension with _$HomeScreenThemeExtensionMixin {}
 /// ```
-mixin _$HomeScreenThemeExtensionMixin
-    on ThemeExtension<HomeScreenThemeExtension> {
+mixin _$HomeScreenThemeExtensionMixin on ThemeExtension<HomeScreenThemeExtension> {
   HomeScreenThemeExtension get self => this as HomeScreenThemeExtension;
 
   @override
@@ -43,55 +42,38 @@ mixin _$HomeScreenThemeExtensionMixin
       gameMargin: gameMargin ?? self.gameMargin,
       gameBorderRadius: gameBorderRadius ?? self.gameBorderRadius,
       bodyUserSportStatsPlayerCardNameTextStyle:
-          bodyUserSportStatsPlayerCardNameTextStyle ??
-          self.bodyUserSportStatsPlayerCardNameTextStyle,
+          bodyUserSportStatsPlayerCardNameTextStyle ?? self.bodyUserSportStatsPlayerCardNameTextStyle,
       bodyUserSportStatsPlayerCardBadgeTextStyle:
-          bodyUserSportStatsPlayerCardBadgeTextStyle ??
-          self.bodyUserSportStatsPlayerCardBadgeTextStyle,
+          bodyUserSportStatsPlayerCardBadgeTextStyle ?? self.bodyUserSportStatsPlayerCardBadgeTextStyle,
       bodyUserSportStatsStatsItemLabelTextStyle:
-          bodyUserSportStatsStatsItemLabelTextStyle ??
-          self.bodyUserSportStatsStatsItemLabelTextStyle,
+          bodyUserSportStatsStatsItemLabelTextStyle ?? self.bodyUserSportStatsStatsItemLabelTextStyle,
       bodyUserSportStatsStatsItemValueTextStyle:
-          bodyUserSportStatsStatsItemValueTextStyle ??
-          self.bodyUserSportStatsStatsItemValueTextStyle,
+          bodyUserSportStatsStatsItemValueTextStyle ?? self.bodyUserSportStatsStatsItemValueTextStyle,
       bodyUserSportStatsSuccessStateCardStyle:
-          bodyUserSportStatsSuccessStateCardStyle ??
-          self.bodyUserSportStatsSuccessStateCardStyle,
+          bodyUserSportStatsSuccessStateCardStyle ?? self.bodyUserSportStatsSuccessStateCardStyle,
       bodyUserSportStatsSportSwitcherStyle:
-          bodyUserSportStatsSportSwitcherStyle ??
-          self.bodyUserSportStatsSportSwitcherStyle,
-      bodyUserSportStatsStatsSpacing:
-          bodyUserSportStatsStatsSpacing ?? self.bodyUserSportStatsStatsSpacing,
+          bodyUserSportStatsSportSwitcherStyle ?? self.bodyUserSportStatsSportSwitcherStyle,
+      bodyUserSportStatsStatsSpacing: bodyUserSportStatsStatsSpacing ?? self.bodyUserSportStatsStatsSpacing,
       bodyUserSportStatsPlayerCardBeginnerCardStyle:
-          bodyUserSportStatsPlayerCardBeginnerCardStyle ??
-          self.bodyUserSportStatsPlayerCardBeginnerCardStyle,
+          bodyUserSportStatsPlayerCardBeginnerCardStyle ?? self.bodyUserSportStatsPlayerCardBeginnerCardStyle,
       bodyUserSportStatsPlayerCardProCardStyle:
-          bodyUserSportStatsPlayerCardProCardStyle ??
-          self.bodyUserSportStatsPlayerCardProCardStyle,
+          bodyUserSportStatsPlayerCardProCardStyle ?? self.bodyUserSportStatsPlayerCardProCardStyle,
       bodyUserSportStatsPlayerCardGoatCardStyle:
-          bodyUserSportStatsPlayerCardGoatCardStyle ??
-          self.bodyUserSportStatsPlayerCardGoatCardStyle,
+          bodyUserSportStatsPlayerCardGoatCardStyle ?? self.bodyUserSportStatsPlayerCardGoatCardStyle,
       bodyUserSportStatsPlayerCardBadgeDecoration:
-          bodyUserSportStatsPlayerCardBadgeDecoration ??
-          self.bodyUserSportStatsPlayerCardBadgeDecoration,
+          bodyUserSportStatsPlayerCardBadgeDecoration ?? self.bodyUserSportStatsPlayerCardBadgeDecoration,
       bodyUserSportStatsPlayerCardBadgePadding:
-          bodyUserSportStatsPlayerCardBadgePadding ??
-          self.bodyUserSportStatsPlayerCardBadgePadding,
+          bodyUserSportStatsPlayerCardBadgePadding ?? self.bodyUserSportStatsPlayerCardBadgePadding,
       bodyUserSportStatsSuccessStateRowSpacing:
-          bodyUserSportStatsSuccessStateRowSpacing ??
-          self.bodyUserSportStatsSuccessStateRowSpacing,
+          bodyUserSportStatsSuccessStateRowSpacing ?? self.bodyUserSportStatsSuccessStateRowSpacing,
       bodyUserSportStatsSuccessStateColumnSpacing:
-          bodyUserSportStatsSuccessStateColumnSpacing ??
-          self.bodyUserSportStatsSuccessStateColumnSpacing,
+          bodyUserSportStatsSuccessStateColumnSpacing ?? self.bodyUserSportStatsSuccessStateColumnSpacing,
       bodyUserSportStatsPlayerCardProfilePictureSize:
-          bodyUserSportStatsPlayerCardProfilePictureSize ??
-          self.bodyUserSportStatsPlayerCardProfilePictureSize,
+          bodyUserSportStatsPlayerCardProfilePictureSize ?? self.bodyUserSportStatsPlayerCardProfilePictureSize,
       bodyUserSportStatsEditProfileButtonStyle:
-          bodyUserSportStatsEditProfileButtonStyle ??
-          self.bodyUserSportStatsEditProfileButtonStyle,
+          bodyUserSportStatsEditProfileButtonStyle ?? self.bodyUserSportStatsEditProfileButtonStyle,
       bodyUserSportStatsStatsDividerMargin:
-          bodyUserSportStatsStatsDividerMargin ??
-          self.bodyUserSportStatsStatsDividerMargin,
+          bodyUserSportStatsStatsDividerMargin ?? self.bodyUserSportStatsStatsDividerMargin,
     );
   }
 
@@ -101,40 +83,23 @@ mixin _$HomeScreenThemeExtensionMixin
         other.runtimeType == runtimeType &&
         other.gameMargin == self.gameMargin &&
         other.gameBorderRadius == self.gameBorderRadius &&
-        other.bodyUserSportStatsPlayerCardNameTextStyle ==
-            self.bodyUserSportStatsPlayerCardNameTextStyle &&
-        other.bodyUserSportStatsPlayerCardBadgeTextStyle ==
-            self.bodyUserSportStatsPlayerCardBadgeTextStyle &&
-        other.bodyUserSportStatsStatsItemLabelTextStyle ==
-            self.bodyUserSportStatsStatsItemLabelTextStyle &&
-        other.bodyUserSportStatsStatsItemValueTextStyle ==
-            self.bodyUserSportStatsStatsItemValueTextStyle &&
-        other.bodyUserSportStatsSuccessStateCardStyle ==
-            self.bodyUserSportStatsSuccessStateCardStyle &&
-        other.bodyUserSportStatsSportSwitcherStyle ==
-            self.bodyUserSportStatsSportSwitcherStyle &&
-        other.bodyUserSportStatsStatsSpacing ==
-            self.bodyUserSportStatsStatsSpacing &&
-        other.bodyUserSportStatsPlayerCardBeginnerCardStyle ==
-            self.bodyUserSportStatsPlayerCardBeginnerCardStyle &&
-        other.bodyUserSportStatsPlayerCardProCardStyle ==
-            self.bodyUserSportStatsPlayerCardProCardStyle &&
-        other.bodyUserSportStatsPlayerCardGoatCardStyle ==
-            self.bodyUserSportStatsPlayerCardGoatCardStyle &&
-        other.bodyUserSportStatsPlayerCardBadgeDecoration ==
-            self.bodyUserSportStatsPlayerCardBadgeDecoration &&
-        other.bodyUserSportStatsPlayerCardBadgePadding ==
-            self.bodyUserSportStatsPlayerCardBadgePadding &&
-        other.bodyUserSportStatsSuccessStateRowSpacing ==
-            self.bodyUserSportStatsSuccessStateRowSpacing &&
-        other.bodyUserSportStatsSuccessStateColumnSpacing ==
-            self.bodyUserSportStatsSuccessStateColumnSpacing &&
-        other.bodyUserSportStatsPlayerCardProfilePictureSize ==
-            self.bodyUserSportStatsPlayerCardProfilePictureSize &&
-        other.bodyUserSportStatsEditProfileButtonStyle ==
-            self.bodyUserSportStatsEditProfileButtonStyle &&
-        other.bodyUserSportStatsStatsDividerMargin ==
-            self.bodyUserSportStatsStatsDividerMargin;
+        other.bodyUserSportStatsPlayerCardNameTextStyle == self.bodyUserSportStatsPlayerCardNameTextStyle &&
+        other.bodyUserSportStatsPlayerCardBadgeTextStyle == self.bodyUserSportStatsPlayerCardBadgeTextStyle &&
+        other.bodyUserSportStatsStatsItemLabelTextStyle == self.bodyUserSportStatsStatsItemLabelTextStyle &&
+        other.bodyUserSportStatsStatsItemValueTextStyle == self.bodyUserSportStatsStatsItemValueTextStyle &&
+        other.bodyUserSportStatsSuccessStateCardStyle == self.bodyUserSportStatsSuccessStateCardStyle &&
+        other.bodyUserSportStatsSportSwitcherStyle == self.bodyUserSportStatsSportSwitcherStyle &&
+        other.bodyUserSportStatsStatsSpacing == self.bodyUserSportStatsStatsSpacing &&
+        other.bodyUserSportStatsPlayerCardBeginnerCardStyle == self.bodyUserSportStatsPlayerCardBeginnerCardStyle &&
+        other.bodyUserSportStatsPlayerCardProCardStyle == self.bodyUserSportStatsPlayerCardProCardStyle &&
+        other.bodyUserSportStatsPlayerCardGoatCardStyle == self.bodyUserSportStatsPlayerCardGoatCardStyle &&
+        other.bodyUserSportStatsPlayerCardBadgeDecoration == self.bodyUserSportStatsPlayerCardBadgeDecoration &&
+        other.bodyUserSportStatsPlayerCardBadgePadding == self.bodyUserSportStatsPlayerCardBadgePadding &&
+        other.bodyUserSportStatsSuccessStateRowSpacing == self.bodyUserSportStatsSuccessStateRowSpacing &&
+        other.bodyUserSportStatsSuccessStateColumnSpacing == self.bodyUserSportStatsSuccessStateColumnSpacing &&
+        other.bodyUserSportStatsPlayerCardProfilePictureSize == self.bodyUserSportStatsPlayerCardProfilePictureSize &&
+        other.bodyUserSportStatsEditProfileButtonStyle == self.bodyUserSportStatsEditProfileButtonStyle &&
+        other.bodyUserSportStatsStatsDividerMargin == self.bodyUserSportStatsStatsDividerMargin;
   }
 
   @override
