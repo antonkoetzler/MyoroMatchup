@@ -46,6 +46,8 @@ import 'package:myoro_matchup/module/location/domain/repository/open_street_map_
     as _i423;
 import 'package:myoro_matchup/module/login_signup/screen/login_signup/view_model/login_signup_screen_view_model.dart'
     as _i205;
+import 'package:myoro_matchup/module/subscription/service/subscription_service.dart'
+    as _i595;
 import 'package:myoro_matchup/module/user/repository/user_repository.dart'
     as _i624;
 import 'package:myoro_matchup/module/user/screen/details/view_model/user_details_screen_view_model.dart'
@@ -75,6 +77,9 @@ extension GetItInjectableX on _i174.GetIt {
       () => _i980.SharedPreferencesService(
         gh<_i460.SharedPreferencesRepository>(),
       ),
+    );
+    gh.lazySingleton<_i595.SubscriptionService>(
+      () => _i595.SubscriptionService(gh<_i460.SharedPreferencesService>()),
     );
     gh.singleton<_i501.MmHttpClient>(
       () => _i501.MmHttpClient(gh<_i460.SharedPreferencesService>()),

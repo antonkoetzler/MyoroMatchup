@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "Spiel erstellen",
   "mmAppBarMenuDrawerFriendListingText": "Freunde",
   "mmAppBarMenuDrawerInvitationListingText": "Einladungen",
-  "mmAppBarMenuDrawerLogoutText": "Abmelden"
+  "mmAppBarMenuDrawerLogoutText": "Abmelden",
+
+  "subscriptionScreenAppBarTitle": "Premium",
+  "subscriptionScreenTitle": "Premium freischalten",
+  "subscriptionScreenSubtitle": "Unbegrenzten Zugang zu allen Funktionen erhalten",
+  "subscriptionScreenPremiumLabel": "PREMIUM",
+  "subscriptionScreenPerMonth": "pro Monat",
+  "subscriptionScreenFeaturesTitle": "Premium-Funktionen",
+  "subscriptionScreenFeatureCreateGames": "Unbegrenzt Spiele erstellen",
+  "subscriptionScreenFeatureUnlimitedGames": "Unbegrenzt Spielen beitreten",
+  "subscriptionScreenFeaturePrioritySupport": "Prioritäts-Support",
+  "subscriptionScreenFreeTierTitle": "Kostenlose Stufe",
+  "subscriptionScreenFreeTierDescription": "Kostenlose Nutzer können an bis zu {maxGames} Spielen gleichzeitig teilnehmen.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "Jetzt abonnieren",
+  "subscriptionScreenAlreadySubscribed": "Bereits abonniert",
+  "subscriptionScreenRestoreButton": "Käufe wiederherstellen",
+  "subscriptionScreenRestoreSuccess": "Käufe erfolgreich wiederhergestellt",
+  "subscriptionScreenPurchaseError": "Kauf fehlgeschlagen. Bitte erneut versuchen.",
+  "subscriptionScreenPrivacyPolicy": "Datenschutzrichtlinie",
+  "subscriptionScreenTermsOfService": "Nutzungsbedingungen",
+
+  "premiumGateTitleText": "Premium-Funktion",
+  "premiumGateDescription": "Diese Funktion erfordert ein Premium-Abonnement.",
+  "premiumGateFeatureDescription": "{featureName} erfordert ein Premium-Abonnement.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "Auf Premium upgraden",
+  "premiumGateCancelButton": "Vielleicht später",
+  "premiumGateFeatureCreateGame": "Spiele erstellen",
+  "premiumGateFeatureJoinGame": "Mehr Spielen beitreten",
+  "premiumGateMaxGamesReached": "Sie haben das Maximum von {maxGames} Spielen erreicht. Upgraden Sie auf Premium für unbegrenzte Spiele.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

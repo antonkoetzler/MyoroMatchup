@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "ゲームを作成",
   "mmAppBarMenuDrawerFriendListingText": "友達",
   "mmAppBarMenuDrawerInvitationListingText": "招待",
-  "mmAppBarMenuDrawerLogoutText": "ログアウト"
+  "mmAppBarMenuDrawerLogoutText": "ログアウト",
+
+  "subscriptionScreenAppBarTitle": "プレミアム",
+  "subscriptionScreenTitle": "プレミアムを解除",
+  "subscriptionScreenSubtitle": "すべての機能に無制限にアクセス",
+  "subscriptionScreenPremiumLabel": "プレミアム",
+  "subscriptionScreenPerMonth": "月額",
+  "subscriptionScreenFeaturesTitle": "プレミアム機能",
+  "subscriptionScreenFeatureCreateGames": "ゲームを無制限に作成",
+  "subscriptionScreenFeatureUnlimitedGames": "ゲームに無制限に参加",
+  "subscriptionScreenFeaturePrioritySupport": "優先サポート",
+  "subscriptionScreenFreeTierTitle": "無料プラン",
+  "subscriptionScreenFreeTierDescription": "無料ユーザーは一度に最大 {maxGames} ゲームに参加できます。",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "今すぐ購読",
+  "subscriptionScreenAlreadySubscribed": "購読済み",
+  "subscriptionScreenRestoreButton": "購入を復元",
+  "subscriptionScreenRestoreSuccess": "購入が正常に復元されました",
+  "subscriptionScreenPurchaseError": "購入に失敗しました。再試行してください。",
+  "subscriptionScreenPrivacyPolicy": "プライバシーポリシー",
+  "subscriptionScreenTermsOfService": "利用規約",
+
+  "premiumGateTitleText": "プレミアム機能",
+  "premiumGateDescription": "この機能にはプレミアム購読が必要です。",
+  "premiumGateFeatureDescription": "{featureName} にはプレミアム購読が必要です。",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "プレミアムにアップグレード",
+  "premiumGateCancelButton": "後で",
+  "premiumGateFeatureCreateGame": "ゲームの作成",
+  "premiumGateFeatureJoinGame": "より多くのゲームに参加",
+  "premiumGateMaxGamesReached": "最大 {maxGames} ゲームに達しました。プレミアムにアップグレードして無制限のゲームを。",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

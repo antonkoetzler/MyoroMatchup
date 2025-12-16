@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "Tạo trò chơi",
   "mmAppBarMenuDrawerFriendListingText": "Bạn bè",
   "mmAppBarMenuDrawerInvitationListingText": "Lời mời",
-  "mmAppBarMenuDrawerLogoutText": "Đăng xuất"
+  "mmAppBarMenuDrawerLogoutText": "Đăng xuất",
+
+  "subscriptionScreenAppBarTitle": "Premium",
+  "subscriptionScreenTitle": "Mở khóa Premium",
+  "subscriptionScreenSubtitle": "Truy cập không giới hạn tất cả tính năng",
+  "subscriptionScreenPremiumLabel": "PREMIUM",
+  "subscriptionScreenPerMonth": "mỗi tháng",
+  "subscriptionScreenFeaturesTitle": "Tính năng Premium",
+  "subscriptionScreenFeatureCreateGames": "Tạo trò chơi không giới hạn",
+  "subscriptionScreenFeatureUnlimitedGames": "Tham gia trò chơi không giới hạn",
+  "subscriptionScreenFeaturePrioritySupport": "Hỗ trợ ưu tiên",
+  "subscriptionScreenFreeTierTitle": "Cấp miễn phí",
+  "subscriptionScreenFreeTierDescription": "Người dùng miễn phí có thể tham gia tối đa {maxGames} trò chơi cùng lúc.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "Đăng ký ngay",
+  "subscriptionScreenAlreadySubscribed": "Đã đăng ký",
+  "subscriptionScreenRestoreButton": "Khôi phục mua hàng",
+  "subscriptionScreenRestoreSuccess": "Khôi phục mua hàng thành công",
+  "subscriptionScreenPurchaseError": "Mua hàng thất bại. Vui lòng thử lại.",
+  "subscriptionScreenPrivacyPolicy": "Chính sách bảo mật",
+  "subscriptionScreenTermsOfService": "Điều khoản dịch vụ",
+
+  "premiumGateTitleText": "Tính năng Premium",
+  "premiumGateDescription": "Tính năng này yêu cầu đăng ký premium.",
+  "premiumGateFeatureDescription": "{featureName} yêu cầu đăng ký premium.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "Nâng cấp lên Premium",
+  "premiumGateCancelButton": "Có thể sau",
+  "premiumGateFeatureCreateGame": "Tạo trò chơi",
+  "premiumGateFeatureJoinGame": "Tham gia thêm trò chơi",
+  "premiumGateMaxGamesReached": "Bạn đã đạt tối đa {maxGames} trò chơi. Nâng cấp lên premium để chơi không giới hạn.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

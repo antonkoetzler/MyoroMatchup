@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "Utwórz grę",
   "mmAppBarMenuDrawerFriendListingText": "Przyjaciele",
   "mmAppBarMenuDrawerInvitationListingText": "Zaproszenia",
-  "mmAppBarMenuDrawerLogoutText": "Wyloguj"
+  "mmAppBarMenuDrawerLogoutText": "Wyloguj",
+
+  "subscriptionScreenAppBarTitle": "Premium",
+  "subscriptionScreenTitle": "Odblokuj Premium",
+  "subscriptionScreenSubtitle": "Uzyskaj nieograniczony dostęp do wszystkich funkcji",
+  "subscriptionScreenPremiumLabel": "PREMIUM",
+  "subscriptionScreenPerMonth": "miesięcznie",
+  "subscriptionScreenFeaturesTitle": "Funkcje Premium",
+  "subscriptionScreenFeatureCreateGames": "Twórz nieograniczoną liczbę gier",
+  "subscriptionScreenFeatureUnlimitedGames": "Dołączaj do nieograniczonej liczby gier",
+  "subscriptionScreenFeaturePrioritySupport": "Priorytetowe wsparcie",
+  "subscriptionScreenFreeTierTitle": "Darmowy plan",
+  "subscriptionScreenFreeTierDescription": "Darmowi użytkownicy mogą uczestniczyć w maksymalnie {maxGames} grach jednocześnie.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "Subskrybuj teraz",
+  "subscriptionScreenAlreadySubscribed": "Już subskrybujesz",
+  "subscriptionScreenRestoreButton": "Przywróć zakupy",
+  "subscriptionScreenRestoreSuccess": "Zakupy przywrócone pomyślnie",
+  "subscriptionScreenPurchaseError": "Zakup nie powiódł się. Spróbuj ponownie.",
+  "subscriptionScreenPrivacyPolicy": "Polityka prywatności",
+  "subscriptionScreenTermsOfService": "Warunki usługi",
+
+  "premiumGateTitleText": "Funkcja Premium",
+  "premiumGateDescription": "Ta funkcja wymaga subskrypcji premium.",
+  "premiumGateFeatureDescription": "{featureName} wymaga subskrypcji premium.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "Przejdź na Premium",
+  "premiumGateCancelButton": "Może później",
+  "premiumGateFeatureCreateGame": "Tworzenie gier",
+  "premiumGateFeatureJoinGame": "Dołączanie do większej liczby gier",
+  "premiumGateMaxGamesReached": "Osiągnąłeś maksymalną liczbę {maxGames} gier. Przejdź na premium dla nieograniczonych gier.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

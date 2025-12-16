@@ -25,6 +25,7 @@ final class Root extends StatelessWidget {
         ...homeModuleThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
         ...invitationModuleThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
         ...loginSignupModuleThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
+        ...subscriptionModuleThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
         ...userModuleThemeExtensionsBuilder(isDarkMode, colorScheme, textTheme),
       ],
     );

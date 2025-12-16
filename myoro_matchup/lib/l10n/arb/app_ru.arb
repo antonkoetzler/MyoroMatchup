@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "Создать игру",
   "mmAppBarMenuDrawerFriendListingText": "Друзья",
   "mmAppBarMenuDrawerInvitationListingText": "Приглашения",
-  "mmAppBarMenuDrawerLogoutText": "Выйти"
+  "mmAppBarMenuDrawerLogoutText": "Выйти",
+
+  "subscriptionScreenAppBarTitle": "Премиум",
+  "subscriptionScreenTitle": "Разблокировать Премиум",
+  "subscriptionScreenSubtitle": "Получите неограниченный доступ ко всем функциям",
+  "subscriptionScreenPremiumLabel": "ПРЕМИУМ",
+  "subscriptionScreenPerMonth": "в месяц",
+  "subscriptionScreenFeaturesTitle": "Премиум функции",
+  "subscriptionScreenFeatureCreateGames": "Создание неограниченного количества игр",
+  "subscriptionScreenFeatureUnlimitedGames": "Присоединение к неограниченному количеству игр",
+  "subscriptionScreenFeaturePrioritySupport": "Приоритетная поддержка",
+  "subscriptionScreenFreeTierTitle": "Бесплатный план",
+  "subscriptionScreenFreeTierDescription": "Бесплатные пользователи могут участвовать максимум в {maxGames} играх одновременно.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "Подписаться сейчас",
+  "subscriptionScreenAlreadySubscribed": "Уже подписан",
+  "subscriptionScreenRestoreButton": "Восстановить покупки",
+  "subscriptionScreenRestoreSuccess": "Покупки успешно восстановлены",
+  "subscriptionScreenPurchaseError": "Покупка не удалась. Попробуйте снова.",
+  "subscriptionScreenPrivacyPolicy": "Политика конфиденциальности",
+  "subscriptionScreenTermsOfService": "Условия использования",
+
+  "premiumGateTitleText": "Премиум функция",
+  "premiumGateDescription": "Эта функция требует премиум подписки.",
+  "premiumGateFeatureDescription": "{featureName} требует премиум подписки.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "Перейти на Премиум",
+  "premiumGateCancelButton": "Может быть позже",
+  "premiumGateFeatureCreateGame": "Создание игр",
+  "premiumGateFeatureJoinGame": "Присоединение к большему количеству игр",
+  "premiumGateMaxGamesReached": "Вы достигли максимума в {maxGames} игр. Перейдите на премиум для неограниченных игр.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

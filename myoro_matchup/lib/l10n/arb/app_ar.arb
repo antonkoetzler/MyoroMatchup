@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "إنشاء لعبة",
   "mmAppBarMenuDrawerFriendListingText": "الأصدقاء",
   "mmAppBarMenuDrawerInvitationListingText": "الدعوات",
-  "mmAppBarMenuDrawerLogoutText": "تسجيل الخروج"
+  "mmAppBarMenuDrawerLogoutText": "تسجيل الخروج",
+
+  "subscriptionScreenAppBarTitle": "مميز",
+  "subscriptionScreenTitle": "فتح المميز",
+  "subscriptionScreenSubtitle": "احصل على وصول غير محدود لجميع الميزات",
+  "subscriptionScreenPremiumLabel": "مميز",
+  "subscriptionScreenPerMonth": "شهرياً",
+  "subscriptionScreenFeaturesTitle": "ميزات مميزة",
+  "subscriptionScreenFeatureCreateGames": "إنشاء ألعاب غير محدودة",
+  "subscriptionScreenFeatureUnlimitedGames": "الانضمام لألعاب غير محدودة",
+  "subscriptionScreenFeaturePrioritySupport": "دعم ذو أولوية",
+  "subscriptionScreenFreeTierTitle": "المستوى المجاني",
+  "subscriptionScreenFreeTierDescription": "يمكن للمستخدمين المجانيين المشاركة في {maxGames} ألعاب كحد أقصى في وقت واحد.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "اشترك الآن",
+  "subscriptionScreenAlreadySubscribed": "مشترك بالفعل",
+  "subscriptionScreenRestoreButton": "استعادة المشتريات",
+  "subscriptionScreenRestoreSuccess": "تم استعادة المشتريات بنجاح",
+  "subscriptionScreenPurchaseError": "فشل الشراء. حاول مرة أخرى.",
+  "subscriptionScreenPrivacyPolicy": "سياسة الخصوصية",
+  "subscriptionScreenTermsOfService": "شروط الخدمة",
+
+  "premiumGateTitleText": "ميزة مميزة",
+  "premiumGateDescription": "تتطلب هذه الميزة اشتراكاً مميزاً.",
+  "premiumGateFeatureDescription": "{featureName} يتطلب اشتراكاً مميزاً.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "الترقية إلى المميز",
+  "premiumGateCancelButton": "ربما لاحقاً",
+  "premiumGateFeatureCreateGame": "إنشاء الألعاب",
+  "premiumGateFeatureJoinGame": "الانضمام لمزيد من الألعاب",
+  "premiumGateMaxGamesReached": "لقد وصلت للحد الأقصى {maxGames} ألعاب. قم بالترقية للمميز للألعاب غير المحدودة.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

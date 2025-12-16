@@ -57,6 +57,11 @@ public class GameService {
             .orElseThrow(
                 () -> new RuntimeException(messageService.getMessage("error.user.not.found")));
 
+    // Check if user has premium subscription to create games
+    if (owner.getIsSubscribed() == null || !owner.getIsSubscribed()) {
+      throw new RuntimeException(messageService.getMessage("error.subscription.game.creation"));
+    }
+
     GameModel game = new GameModel();
     game.setName(request.getName());
     game.setSport(request.getSport());

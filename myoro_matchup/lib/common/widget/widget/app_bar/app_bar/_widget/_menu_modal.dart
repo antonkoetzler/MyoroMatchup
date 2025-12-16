@@ -28,11 +28,15 @@ final class _MenuModal extends StatelessWidget {
         spacing: menuDrawerSpacing,
         mainAxisSize: MainAxisSize.min,
         children: [
-          _MenuModalItem(
-            Icons.add,
-            mmAppBarMenuDrawerCreateGameText,
-            () => MmRouter.push(MmRoutes.gameRoutes.gameCreationScreen.navigate()),
-          ),
+          _MenuModalItem(Icons.add, mmAppBarMenuDrawerCreateGameText, () {
+            MmRouter.pop(); // Close the modal first
+            if (PremiumGateWidget.checkAndPrompt(
+              navigatorKey.currentContext!,
+              featureName: localization.premiumGateFeatureCreateGame,
+            )) {
+              MmRouter.push(MmRoutes.gameRoutes.gameCreationScreen.navigate());
+            }
+          }),
           _MenuModalItem(
             Icons.person,
             mmAppBarMenuDrawerFriendListingText,

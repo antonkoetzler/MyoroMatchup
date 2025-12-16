@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "Oyun Oluştur",
   "mmAppBarMenuDrawerFriendListingText": "Arkadaşlar",
   "mmAppBarMenuDrawerInvitationListingText": "Davetler",
-  "mmAppBarMenuDrawerLogoutText": "Çıkış Yap"
+  "mmAppBarMenuDrawerLogoutText": "Çıkış Yap",
+
+  "subscriptionScreenAppBarTitle": "Premium",
+  "subscriptionScreenTitle": "Premium'u Aç",
+  "subscriptionScreenSubtitle": "Tüm özelliklere sınırsız erişim elde edin",
+  "subscriptionScreenPremiumLabel": "PREMİUM",
+  "subscriptionScreenPerMonth": "aylık",
+  "subscriptionScreenFeaturesTitle": "Premium Özellikler",
+  "subscriptionScreenFeatureCreateGames": "Sınırsız oyun oluştur",
+  "subscriptionScreenFeatureUnlimitedGames": "Sınırsız oyuna katıl",
+  "subscriptionScreenFeaturePrioritySupport": "Öncelikli destek",
+  "subscriptionScreenFreeTierTitle": "Ücretsiz Seviye",
+  "subscriptionScreenFreeTierDescription": "Ücretsiz kullanıcılar aynı anda en fazla {maxGames} oyuna katılabilir.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "Şimdi abone ol",
+  "subscriptionScreenAlreadySubscribed": "Zaten abone",
+  "subscriptionScreenRestoreButton": "Satın almaları geri yükle",
+  "subscriptionScreenRestoreSuccess": "Satın almalar başarıyla geri yüklendi",
+  "subscriptionScreenPurchaseError": "Satın alma başarısız. Tekrar deneyin.",
+  "subscriptionScreenPrivacyPolicy": "Gizlilik Politikası",
+  "subscriptionScreenTermsOfService": "Hizmet Şartları",
+
+  "premiumGateTitleText": "Premium Özellik",
+  "premiumGateDescription": "Bu özellik premium abonelik gerektirir.",
+  "premiumGateFeatureDescription": "{featureName} premium abonelik gerektirir.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "Premium'a Yükselt",
+  "premiumGateCancelButton": "Belki daha sonra",
+  "premiumGateFeatureCreateGame": "Oyun oluşturma",
+  "premiumGateFeatureJoinGame": "Daha fazla oyuna katılma",
+  "premiumGateMaxGamesReached": "Maksimum {maxGames} oyuna ulaştınız. Sınırsız oyun için premium'a yükseltin.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

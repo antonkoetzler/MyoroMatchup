@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "สร้างเกม",
   "mmAppBarMenuDrawerFriendListingText": "เพื่อน",
   "mmAppBarMenuDrawerInvitationListingText": "คำเชิญ",
-  "mmAppBarMenuDrawerLogoutText": "ออกจากระบบ"
+  "mmAppBarMenuDrawerLogoutText": "ออกจากระบบ",
+
+  "subscriptionScreenAppBarTitle": "พรีเมียม",
+  "subscriptionScreenTitle": "ปลดล็อคพรีเมียม",
+  "subscriptionScreenSubtitle": "รับสิทธิ์การเข้าถึงไม่จำกัดทุกฟีเจอร์",
+  "subscriptionScreenPremiumLabel": "พรีเมียม",
+  "subscriptionScreenPerMonth": "ต่อเดือน",
+  "subscriptionScreenFeaturesTitle": "ฟีเจอร์พรีเมียม",
+  "subscriptionScreenFeatureCreateGames": "สร้างเกมไม่จำกัด",
+  "subscriptionScreenFeatureUnlimitedGames": "เข้าร่วมเกมไม่จำกัด",
+  "subscriptionScreenFeaturePrioritySupport": "การสนับสนุนลำดับความสำคัญ",
+  "subscriptionScreenFreeTierTitle": "ระดับฟรี",
+  "subscriptionScreenFreeTierDescription": "ผู้ใช้ฟรีสามารถเข้าร่วมได้สูงสุด {maxGames} เกมพร้อมกัน",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "สมัครสมาชิกตอนนี้",
+  "subscriptionScreenAlreadySubscribed": "สมัครสมาชิกแล้ว",
+  "subscriptionScreenRestoreButton": "กู้คืนการซื้อ",
+  "subscriptionScreenRestoreSuccess": "กู้คืนการซื้อสำเร็จ",
+  "subscriptionScreenPurchaseError": "การซื้อล้มเหลว กรุณาลองใหม่",
+  "subscriptionScreenPrivacyPolicy": "นโยบายความเป็นส่วนตัว",
+  "subscriptionScreenTermsOfService": "ข้อกำหนดการให้บริการ",
+
+  "premiumGateTitleText": "ฟีเจอร์พรีเมียม",
+  "premiumGateDescription": "ฟีเจอร์นี้ต้องการการสมัครสมาชิกพรีเมียม",
+  "premiumGateFeatureDescription": "{featureName} ต้องการการสมัครสมาชิกพรีเมียม",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "อัพเกรดเป็นพรีเมียม",
+  "premiumGateCancelButton": "ไว้ทีหลัง",
+  "premiumGateFeatureCreateGame": "การสร้างเกม",
+  "premiumGateFeatureJoinGame": "เข้าร่วมเกมมากขึ้น",
+  "premiumGateMaxGamesReached": "คุณถึงจำนวนสูงสุด {maxGames} เกมแล้ว อัพเกรดเป็นพรีเมียมเพื่อเกมไม่จำกัด",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

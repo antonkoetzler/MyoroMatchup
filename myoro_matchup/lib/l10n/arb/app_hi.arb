@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "गेम बनाएं",
   "mmAppBarMenuDrawerFriendListingText": "मित्र",
   "mmAppBarMenuDrawerInvitationListingText": "आमंत्रण",
-  "mmAppBarMenuDrawerLogoutText": "लॉगआउट"
+  "mmAppBarMenuDrawerLogoutText": "लॉगआउट",
+
+  "subscriptionScreenAppBarTitle": "प्रीमियम",
+  "subscriptionScreenTitle": "प्रीमियम अनलॉक करें",
+  "subscriptionScreenSubtitle": "सभी सुविधाओं तक असीमित पहुंच प्राप्त करें",
+  "subscriptionScreenPremiumLabel": "प्रीमियम",
+  "subscriptionScreenPerMonth": "प्रति माह",
+  "subscriptionScreenFeaturesTitle": "प्रीमियम सुविधाएं",
+  "subscriptionScreenFeatureCreateGames": "असीमित गेम बनाएं",
+  "subscriptionScreenFeatureUnlimitedGames": "असीमित गेम में शामिल हों",
+  "subscriptionScreenFeaturePrioritySupport": "प्राथमिकता समर्थन",
+  "subscriptionScreenFreeTierTitle": "मुफ्त स्तर",
+  "subscriptionScreenFreeTierDescription": "मुफ्त उपयोगकर्ता एक समय में अधिकतम {maxGames} गेम में भाग ले सकते हैं।",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "अभी सदस्यता लें",
+  "subscriptionScreenAlreadySubscribed": "पहले से सदस्य",
+  "subscriptionScreenRestoreButton": "खरीदारी पुनर्स्थापित करें",
+  "subscriptionScreenRestoreSuccess": "खरीदारी सफलतापूर्वक पुनर्स्थापित",
+  "subscriptionScreenPurchaseError": "खरीदारी विफल। कृपया पुनः प्रयास करें।",
+  "subscriptionScreenPrivacyPolicy": "गोपनीयता नीति",
+  "subscriptionScreenTermsOfService": "सेवा की शर्तें",
+
+  "premiumGateTitleText": "प्रीमियम सुविधा",
+  "premiumGateDescription": "इस सुविधा के लिए प्रीमियम सदस्यता आवश्यक है।",
+  "premiumGateFeatureDescription": "{featureName} के लिए प्रीमियम सदस्यता आवश्यक है।",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "प्रीमियम में अपग्रेड करें",
+  "premiumGateCancelButton": "शायद बाद में",
+  "premiumGateFeatureCreateGame": "गेम बनाना",
+  "premiumGateFeatureJoinGame": "अधिक गेम में शामिल होना",
+  "premiumGateMaxGamesReached": "आप अधिकतम {maxGames} गेम तक पहुंच गए हैं। असीमित गेम के लिए प्रीमियम में अपग्रेड करें।",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

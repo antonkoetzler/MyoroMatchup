@@ -1,6 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Required for in-app purchases -->
+    <uses-permission android:name="com.android.vending.BILLING" />
+
     <application
-        android:label="myoro_matchup"
+        android:label="Myoro Matchup"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

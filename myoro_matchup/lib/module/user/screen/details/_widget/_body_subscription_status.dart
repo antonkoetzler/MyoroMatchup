@@ -26,11 +26,10 @@ final class _BodySubscriptionStatus extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(bodySubscriptionStatusLabel(isSubscribed.toString()), style: bodySubscriptionStatusLabelTextStyle),
-          // TODO
           IntrinsicWidth(
             child: MyoroIconTextButton(
               text: bodySubscriptionStatusButtonText,
-              onTapUp: isSubscribed ? null : (_, _) {},
+              onTapUp: isSubscribed ? null : (_, _) => MmRoutes.subscriptionRoutes.subscriptionScreen.push(),
             ),
           ),
         ],

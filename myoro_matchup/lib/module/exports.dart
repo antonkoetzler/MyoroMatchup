@@ -4,5 +4,7 @@ export 'invitation/exports.dart';
 export 'home/exports.dart';
 export 'location/exports.dart';
 export 'login_signup/exports.dart';
+export 'rating/exports.dart';
+export 'subscription/exports.dart';
 export 'user/exports.dart';
 export 'visibility/exports.dart';

@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "建立遊戲",
   "mmAppBarMenuDrawerFriendListingText": "朋友",
   "mmAppBarMenuDrawerInvitationListingText": "邀請",
-  "mmAppBarMenuDrawerLogoutText": "登出"
+  "mmAppBarMenuDrawerLogoutText": "登出",
+
+  "subscriptionScreenAppBarTitle": "高級版",
+  "subscriptionScreenTitle": "解鎖高級版",
+  "subscriptionScreenSubtitle": "獲得所有功能的無限訪問權限",
+  "subscriptionScreenPremiumLabel": "高級版",
+  "subscriptionScreenPerMonth": "每月",
+  "subscriptionScreenFeaturesTitle": "高級功能",
+  "subscriptionScreenFeatureCreateGames": "建立無限遊戲",
+  "subscriptionScreenFeatureUnlimitedGames": "加入無限遊戲",
+  "subscriptionScreenFeaturePrioritySupport": "優先支援",
+  "subscriptionScreenFreeTierTitle": "免費版",
+  "subscriptionScreenFreeTierDescription": "免費用戶一次最多可以參與 {maxGames} 個遊戲。",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "立即訂閱",
+  "subscriptionScreenAlreadySubscribed": "已訂閱",
+  "subscriptionScreenRestoreButton": "恢復購買",
+  "subscriptionScreenRestoreSuccess": "購買恢復成功",
+  "subscriptionScreenPurchaseError": "購買失敗。請重試。",
+  "subscriptionScreenPrivacyPolicy": "隱私政策",
+  "subscriptionScreenTermsOfService": "服務條款",
+
+  "premiumGateTitleText": "高級功能",
+  "premiumGateDescription": "此功能需要高級訂閱。",
+  "premiumGateFeatureDescription": "{featureName} 需要高級訂閱。",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "升級到高級版",
+  "premiumGateCancelButton": "以後再說",
+  "premiumGateFeatureCreateGame": "建立遊戲",
+  "premiumGateFeatureJoinGame": "加入更多遊戲",
+  "premiumGateMaxGamesReached": "您已達到 {maxGames} 個遊戲的上限。升級到高級版可獲得無限遊戲。",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

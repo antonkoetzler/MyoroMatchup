@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- TODO: Enable In-App Purchase capability in Xcode:
+	     1. Open ios/Runner.xcworkspace in Xcode
+	     2. Select the Runner target
+	     3. Go to "Signing & Capabilities"
+	     4. Click "+ Capability"
+	     5. Add "In-App Purchase"
+	     
+	     Then configure products in App Store Connect:
+	     1. Create subscription product with ID: com.myoro.myoro_matchup.premium_monthly
+	     2. Set price to $7.00/month
+	     3. Add localized descriptions
+	-->
+	<key>com.apple.developer.in-app-payments</key>
+	<array>
+		<string>merchant.com.myoro.myoro_matchup</string>
+	</array>
+</dict>
+</plist>
+

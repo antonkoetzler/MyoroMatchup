@@ -240,6 +240,55 @@
   "mmAppBarMenuDrawerCreateGameText": "Buat Permainan",
   "mmAppBarMenuDrawerFriendListingText": "Teman",
   "mmAppBarMenuDrawerInvitationListingText": "Undangan",
-  "mmAppBarMenuDrawerLogoutText": "Keluar"
+  "mmAppBarMenuDrawerLogoutText": "Keluar",
+
+  "subscriptionScreenAppBarTitle": "Premium",
+  "subscriptionScreenTitle": "Buka Premium",
+  "subscriptionScreenSubtitle": "Dapatkan akses tak terbatas ke semua fitur",
+  "subscriptionScreenPremiumLabel": "PREMIUM",
+  "subscriptionScreenPerMonth": "per bulan",
+  "subscriptionScreenFeaturesTitle": "Fitur Premium",
+  "subscriptionScreenFeatureCreateGames": "Buat permainan tanpa batas",
+  "subscriptionScreenFeatureUnlimitedGames": "Gabung permainan tanpa batas",
+  "subscriptionScreenFeaturePrioritySupport": "Dukungan prioritas",
+  "subscriptionScreenFreeTierTitle": "Tingkat Gratis",
+  "subscriptionScreenFreeTierDescription": "Pengguna gratis dapat berpartisipasi dalam maksimal {maxGames} permainan sekaligus.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "Langganan sekarang",
+  "subscriptionScreenAlreadySubscribed": "Sudah berlangganan",
+  "subscriptionScreenRestoreButton": "Pulihkan pembelian",
+  "subscriptionScreenRestoreSuccess": "Pembelian berhasil dipulihkan",
+  "subscriptionScreenPurchaseError": "Pembelian gagal. Silakan coba lagi.",
+  "subscriptionScreenPrivacyPolicy": "Kebijakan Privasi",
+  "subscriptionScreenTermsOfService": "Ketentuan Layanan",
+
+  "premiumGateTitleText": "Fitur Premium",
+  "premiumGateDescription": "Fitur ini memerlukan langganan premium.",
+  "premiumGateFeatureDescription": "{featureName} memerlukan langganan premium.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "Upgrade ke Premium",
+  "premiumGateCancelButton": "Mungkin nanti",
+  "premiumGateFeatureCreateGame": "Membuat permainan",
+  "premiumGateFeatureJoinGame": "Bergabung dengan lebih banyak permainan",
+  "premiumGateMaxGamesReached": "Anda telah mencapai maksimum {maxGames} permainan. Upgrade ke premium untuk permainan tanpa batas.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }
 

@@ -240,5 +240,54 @@
   "mmAppBarMenuDrawerCreateGameText": "Criar Jogo",
   "mmAppBarMenuDrawerFriendListingText": "Amigos",
   "mmAppBarMenuDrawerInvitationListingText": "Convites",
-  "mmAppBarMenuDrawerLogoutText": "Sair"
+  "mmAppBarMenuDrawerLogoutText": "Sair",
+
+  "subscriptionScreenAppBarTitle": "Premium",
+  "subscriptionScreenTitle": "Desbloquear Premium",
+  "subscriptionScreenSubtitle": "Obtenha acesso ilimitado a todos os recursos",
+  "subscriptionScreenPremiumLabel": "PREMIUM",
+  "subscriptionScreenPerMonth": "por mês",
+  "subscriptionScreenFeaturesTitle": "Recursos Premium",
+  "subscriptionScreenFeatureCreateGames": "Criar jogos ilimitados",
+  "subscriptionScreenFeatureUnlimitedGames": "Participar de jogos ilimitados",
+  "subscriptionScreenFeaturePrioritySupport": "Suporte prioritário",
+  "subscriptionScreenFreeTierTitle": "Nível Gratuito",
+  "subscriptionScreenFreeTierDescription": "Usuários gratuitos podem participar de até {maxGames} jogos por vez.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "Assinar agora",
+  "subscriptionScreenAlreadySubscribed": "Já assinado",
+  "subscriptionScreenRestoreButton": "Restaurar compras",
+  "subscriptionScreenRestoreSuccess": "Compras restauradas com sucesso",
+  "subscriptionScreenPurchaseError": "Compra falhou. Tente novamente.",
+  "subscriptionScreenPrivacyPolicy": "Política de Privacidade",
+  "subscriptionScreenTermsOfService": "Termos de Serviço",
+
+  "premiumGateTitleText": "Recurso Premium",
+  "premiumGateDescription": "Este recurso requer uma assinatura premium.",
+  "premiumGateFeatureDescription": "{featureName} requer uma assinatura premium.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "Atualizar para Premium",
+  "premiumGateCancelButton": "Talvez depois",
+  "premiumGateFeatureCreateGame": "Criação de jogos",
+  "premiumGateFeatureJoinGame": "Participar de mais jogos",
+  "premiumGateMaxGamesReached": "Você atingiu o máximo de {maxGames} jogos. Atualize para premium para jogos ilimitados.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  }
 }

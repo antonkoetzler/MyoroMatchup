@@ -19,6 +19,9 @@ final class MmRoutes {
   /// [LoginSignupRoutes].
   static final loginSignupRoutes = LoginSignupRoutes('login_signup');
 
+  /// [SubscriptionRoutes].
+  static final subscriptionRoutes = SubscriptionRoutes('subscription');
+
   /// [UserRoutes].
   static final userRoutes = UserRoutes('user');
 }

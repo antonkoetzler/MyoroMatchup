@@ -68,6 +68,10 @@ final class MmRouter {
     final loginSignupScreenGoRoute = loginSignupScreen.goRoute;
     final loginSignupScreenLocation = loginSignupScreen.location;
 
+    final subscriptionRoutes = MmRoutes.subscriptionRoutes;
+    final subscriptionScreen = subscriptionRoutes.subscriptionScreen;
+    final subscriptionScreenGoRoute = subscriptionScreen.goRoute;
+
     final userRoutes = MmRoutes.userRoutes;
     final userDetailsScreen = userRoutes.userDetailsScreen;
     final userDetailsScreenGoRoute = userDetailsScreen.goRoute;
@@ -85,6 +89,7 @@ final class MmRouter {
         homeScreenGoRoute,
         invitationListingScreenGoRoute,
         loginSignupScreenGoRoute,
+        subscriptionScreenGoRoute,
         userDetailsScreenGoRoute,
       ],
     );

@@ -240,5 +240,86 @@
   "mmAppBarMenuDrawerCreateGameText": "Create Game",
   "mmAppBarMenuDrawerFriendListingText": "Friends",
   "mmAppBarMenuDrawerInvitationListingText": "Invitations",
-  "mmAppBarMenuDrawerLogoutText": "Logout"
+  "mmAppBarMenuDrawerLogoutText": "Logout",
+
+  "subscriptionScreenAppBarTitle": "Premium",
+  "subscriptionScreenTitle": "Unlock Premium",
+  "subscriptionScreenSubtitle": "Get unlimited access to all features",
+  "subscriptionScreenPremiumLabel": "PREMIUM",
+  "subscriptionScreenPerMonth": "per month",
+  "subscriptionScreenFeaturesTitle": "Premium Features",
+  "subscriptionScreenFeatureCreateGames": "Create unlimited games",
+  "subscriptionScreenFeatureUnlimitedGames": "Join unlimited games",
+  "subscriptionScreenFeaturePrioritySupport": "Priority support",
+  "subscriptionScreenFreeTierTitle": "Free Tier",
+  "subscriptionScreenFreeTierDescription": "Free users can participate in up to {maxGames} games at a time.",
+  "@subscriptionScreenFreeTierDescription": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+  "subscriptionScreenSubscribeButton": "Subscribe Now",
+  "subscriptionScreenAlreadySubscribed": "Already Subscribed",
+  "subscriptionScreenRestoreButton": "Restore Purchases",
+  "subscriptionScreenRestoreSuccess": "Purchases restored successfully",
+  "subscriptionScreenPurchaseError": "Purchase failed. Please try again.",
+  "subscriptionScreenPrivacyPolicy": "Privacy Policy",
+  "subscriptionScreenTermsOfService": "Terms of Service",
+
+  "premiumGateTitleText": "Premium Feature",
+  "premiumGateDescription": "This feature requires a premium subscription.",
+  "premiumGateFeatureDescription": "{featureName} requires a premium subscription.",
+  "@premiumGateFeatureDescription": {
+    "placeholders": {
+      "featureName": {
+        "type": "String"
+      }
+    }
+  },
+  "premiumGateUpgradeButton": "Upgrade to Premium",
+  "premiumGateCancelButton": "Maybe Later",
+  "premiumGateFeatureCreateGame": "Creating games",
+  "premiumGateFeatureJoinGame": "Joining more games",
+  "premiumGateMaxGamesReached": "You've reached the maximum of {maxGames} games. Upgrade to premium for unlimited games.",
+  "@premiumGateMaxGamesReached": {
+    "placeholders": {
+      "maxGames": {
+        "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Rate Players",
+  "ratingScreenSubtitle": "Rate your teammates from this game",
+  "ratingScreenDeadlineText": "Rating deadline: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Submit Ratings",
+  "ratingScreenSkipButton": "Skip for now",
+  "ratingScreenMandatoryWarning": "Rating is mandatory within 24 hours after the game",
+  "ratingScreenSuccessMessage": "Ratings submitted successfully!",
+  "ratingScreenErrorMessage": "Failed to submit ratings. Please try again.",
+
+  "gameStatusUpcoming": "Upcoming",
+  "gameStatusInProgress": "In Progress",
+  "gameStatusCompleted": "Completed",
+  "gameStatusPendingRating": "Pending Rating",
+  "gameInProgressTimeRemaining": "{hours}h {minutes}m remaining",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  }
 }
