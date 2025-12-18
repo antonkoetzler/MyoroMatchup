@@ -136,3 +136,4 @@ public class FriendSpecifications {
     return SpecificationHelper.and(forUser(userId), search(searchQuery), byStatus(status));
   }
 }
+
