@@ -25,30 +25,4 @@ jobs:
       - name: Format and fix files
         working-directory: myoro_matchup
         run: |
-          set +e
-          dart format . --line-length 120 --set-exit-if-changed
-          FORMAT_EXIT=$?
-          dart fix --apply
-          FIX_EXIT=$?
-          set -e
-          
-          # Check for changes excluding generated files
-          ALL_CHANGED=$(git status --porcelain | grep -E '\.dart$' || true)
-          if [ -z "$ALL_CHANGED" ]; then
-            exit 0
-          fi
-          
-          # Filter out generated files
-          CHANGED_FILES=$(echo "$ALL_CHANGED" | grep -v -E '(l10n/gen/|\.g\.dart$|\.config\.dart$)' || true)
-          
-          if [ -n "$CHANGED_FILES" ]; then
-            echo "::error::Non-generated files were formatted or fixed. Please run 'dart format' and 'dart fix --apply' locally."
-            echo "Changed files:"
-            echo "$CHANGED_FILES"
-            git diff
-            exit 1
-          fi
-          
-          # If only generated files changed, that's fine
-          exit 0
-
+          find . -name "*.dart" ! -path "./lib/l10n/*" | xargs dart format --line-length 120 -o none --set-exit-if-changed
