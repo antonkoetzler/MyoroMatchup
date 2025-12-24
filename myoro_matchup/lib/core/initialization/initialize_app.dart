@@ -11,9 +11,7 @@ Future<void> initializeApp() async {
   MmLogger.info('[initializeApp]: Flutter bindings initialized.');
 
   // Get the environment.
-  final environment = EnvironmentEnum.getEnvironment(
-    String.fromEnvironment('env', defaultValue: EnvironmentEnum.local.name),
-  );
+  final environment = EnvironmentEnum.tryParse(String.fromEnvironment('env', defaultValue: EnvironmentEnum.local.name));
   EnvironmentConfiguration.currentEnvironment = environment;
   MmLogger.info('[initializeApp]: Environment set to: ${environment.name}.');
 

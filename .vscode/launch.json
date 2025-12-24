@@ -29,7 +29,6 @@
             "type": "pickString",
             "options": [
                 "local",
-                "dev",
                 "prod"
             ],
             "default": "local"

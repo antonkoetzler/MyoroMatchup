@@ -3,13 +3,11 @@ enum EnvironmentEnum {
   /// Local.
   local,
 
-  /// Development.
-  dev,
-
   /// Production.
   prod;
 
-  static EnvironmentEnum getEnvironment(String environment) {
+  /// Parse from string.
+  static EnvironmentEnum tryParse(String environment) {
     return values.firstWhere((v) => v.name == environment, orElse: () => EnvironmentEnum.local);
   }
 }
