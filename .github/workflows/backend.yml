@@ -23,7 +23,9 @@ jobs:
         run: |
           chmod +x mvnw
           ./mvnw fmt:format
-          if [ -n "$(git status --porcelain)" ]; then
+          # Check for changes excluding generated files
+          CHANGED_FILES=$(git status --porcelain | grep -E '\.java$' | grep -v -E '(target/|\.class$)' || true)
+          if [ -n "$CHANGED_FILES" ]; then
             echo "Files were formatted. Please run './mvnw fmt:format' locally."
             git diff
             exit 1

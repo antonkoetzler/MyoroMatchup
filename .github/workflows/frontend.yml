@@ -27,7 +27,9 @@ jobs:
         run: |
           dart format . --line-length 120 --set-exit-if-changed
           dart fix --apply
-          if [ -n "$(git status --porcelain)" ]; then
+          # Check for changes excluding generated files
+          CHANGED_FILES=$(git status --porcelain | grep -E '\.dart$' | grep -v -E '(lib/l10n/gen/|\.g\.dart$|\.config\.dart$)' || true)
+          if [ -n "$CHANGED_FILES" ]; then
             echo "Files were formatted or fixed. Please run 'dart format' and 'dart fix --apply' locally."
             git diff
             exit 1
