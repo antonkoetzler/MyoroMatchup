@@ -22,12 +22,28 @@ jobs:
         working-directory: myoro_matchup_api
         run: |
           chmod +x mvnw
+          set +e
           ./mvnw fmt:format
+          FORMAT_EXIT=$?
+          set -e
+          
           # Check for changes excluding generated files
-          CHANGED_FILES=$(git status --porcelain | grep -E '\.java$' | grep -v -E '(target/|\.class$)' || true)
+          ALL_CHANGED=$(git status --porcelain | grep -E '\.java$' || true)
+          if [ -z "$ALL_CHANGED" ]; then
+            exit 0
+          fi
+          
+          # Filter out generated files (target directory and class files)
+          CHANGED_FILES=$(echo "$ALL_CHANGED" | grep -v -E '(target/|\.class$)' || true)
+          
           if [ -n "$CHANGED_FILES" ]; then
-            echo "Files were formatted. Please run './mvnw fmt:format' locally."
+            echo "::error::Non-generated files were formatted. Please run './mvnw fmt:format' locally."
+            echo "Changed files:"
+            echo "$CHANGED_FILES"
             git diff
             exit 1
           fi
+          
+          # If only generated files changed, that's fine
+          exit 0
 
