@@ -3,7 +3,6 @@ name: Frontend Format Check
 on:
   pull_request:
   push:
-    branches: [main, develop]
 
 jobs:
   format-check:
