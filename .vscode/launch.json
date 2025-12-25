@@ -7,31 +7,8 @@
             "type": "dart",
             "program": "myoro_matchup/lib/main.dart",
             "args": [
-                "--dart-define=env=${input:environment}"
+                "--dart-define-from-file=.env"
             ]
-        },
-        {
-            "type": "java",
-            "name": "Debug Backend",
-            "request": "launch",
-            "cwd": "${workspaceFolder}",
-            "mainClass": "com.myoro.myoro_matchup_api.MyoroMatchupApiApplication",
-            "projectName": "myoro-matchup-api",
-            "args": "",
-            "envFile": "${workspaceFolder}/.env",
-            "preLaunchTask": "Start PostgreSQL container"
-        },
-    ],
-    "inputs": [
-        {
-            "id": "environment",
-            "description": "Select environment",
-            "type": "pickString",
-            "options": [
-                "local",
-                "prod"
-            ],
-            "default": "local"
         }
-    ]
+    ],
 }

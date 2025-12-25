@@ -27,7 +27,7 @@ final class OpenStreetMapLocationRepository {
   /// Returns a [Set] of [Location] objects matching the query.
   Future<Set<OpenStreetMapLocationResponseDto>> select(String query) async {
     final response = await _httpClient.get<List<Map<String, dynamic>>>(
-      '/search',
+      'https://nominatim.openstreetmap.org/search',
       queryParameters: {
         // Output format: 'json' returns results in JSON format (other options: xml, jsonv2, geojson, geocodejson)
         'format': 'json',
@@ -56,7 +56,6 @@ final class OpenStreetMapLocationRepository {
         // For places, include specific names like "YMCA" or "Sports Center" along with optional location hints.
         'q': query,
       },
-      baseUrl: 'https://nominatim.openstreetmap.org',
     );
     return response.data.map<OpenStreetMapLocationResponseDto>(OpenStreetMapLocationResponseDto.fromJson).toSet();
   }

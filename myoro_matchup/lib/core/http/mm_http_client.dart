@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:injectable/injectable.dart';
-import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Http client for the API.
@@ -24,21 +23,16 @@ final class MmHttpClient {
   final _client = http.Client();
 
   /// Get function.
-  Future<HttpClientResponse<T>> get<T>(
-    String path, {
-    Map<String, dynamic>? queryParameters,
-    String baseUrl = kMyoroEmptyString,
-  }) async {
-    final uri = _buildUri(path, baseUrl, queryParameters);
-    return await _runRequest<T>(
-      uri.toString(),
-      () async => await _client.get(uri, headers: _baseHeaders).timeout(timeoutDuration),
-    );
+  Future<HttpClientResponse<T>> get<T>(String url, {Map<String, dynamic>? queryParameters}) async {
+    final uri = _buildUri(url, queryParameters);
+    return await _runRequest<T>(uri.toString(), () async {
+      return await _client.get(uri, headers: _baseHeaders).timeout(timeoutDuration);
+    });
   }
 
   /// Post function.
-  Future<HttpClientResponse> post(String path, {Map<String, dynamic>? data, String baseUrl = kMyoroEmptyString}) async {
-    final uri = _buildUri(path, baseUrl);
+  Future<HttpClientResponse> post(String url, {Map<String, dynamic>? data}) async {
+    final uri = _buildUri(url);
     return await _runRequest(uri.toString(), () async {
       final body = data != null ? jsonEncode(data) : null;
       return await _client.post(uri, headers: _baseHeaders, body: body).timeout(timeoutDuration);
@@ -46,8 +40,8 @@ final class MmHttpClient {
   }
 
   /// Put function.
-  Future<HttpClientResponse> put(String path, {Map<String, dynamic>? data, String baseUrl = kMyoroEmptyString}) async {
-    final uri = _buildUri(path, baseUrl);
+  Future<HttpClientResponse> put(String url, {Map<String, dynamic>? data}) async {
+    final uri = _buildUri(url);
     return await _runRequest(uri.toString(), () async {
       final body = data != null ? jsonEncode(data) : null;
       return await _client.put(uri, headers: _baseHeaders, body: body).timeout(timeoutDuration);
@@ -55,22 +49,16 @@ final class MmHttpClient {
   }
 
   /// Delete function.
-  Future<HttpClientResponse> delete(String path, {String baseUrl = kMyoroEmptyString}) async {
-    final uri = _buildUri(path, baseUrl);
-    return await _runRequest(
-      uri.toString(),
-      () async => await _client.delete(uri, headers: _baseHeaders).timeout(timeoutDuration),
-    );
+  Future<HttpClientResponse> delete(String url) async {
+    final uri = _buildUri(url);
+    return await _runRequest(uri.toString(), () async {
+      return await _client.delete(uri, headers: _baseHeaders).timeout(timeoutDuration);
+    });
   }
 
   /// Post multipart function for file uploads.
-  Future<HttpClientResponse> postMultipart(
-    String path, {
-    Map<String, dynamic>? data,
-    Map<String, File>? files,
-    String baseUrl = kMyoroEmptyString,
-  }) async {
-    final uri = _buildUri(path, baseUrl);
+  Future<HttpClientResponse> postMultipart(String url, {Map<String, dynamic>? data, Map<String, File>? files}) async {
+    final uri = _buildUri(url);
     return await _runRequest(uri.toString(), () async {
       final request = http.MultipartRequest('POST', uri);
 
@@ -136,9 +124,8 @@ final class MmHttpClient {
   }
 
   /// Build URI from path and query parameters.
-  Uri _buildUri(String path, [String baseUrl = kMyoroEmptyString, Map<String, dynamic>? queryParameters]) {
-    baseUrl = baseUrl.isEmpty ? EnvironmentConfiguration.apiUrl : baseUrl;
-    final uri = Uri.parse('$baseUrl$path');
+  Uri _buildUri(String url, [Map<String, dynamic>? queryParameters]) {
+    final uri = Uri.parse(url);
     return queryParameters != null && queryParameters.isNotEmpty
         ? uri.replace(queryParameters: queryParameters.map((key, value) => MapEntry(key, value.toString())))
         : uri;

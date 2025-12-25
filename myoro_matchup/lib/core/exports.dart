@@ -4,7 +4,6 @@ export 'log/exports.dart';
 export 'root/exports.dart';
 export 'auth/exports.dart';
 export 'dependency_injection/exports.dart';
-export 'environment/exports.dart';
 export 'key/exports.dart';
 export 'routing/exports.dart';
 export 'shared_preferences/exports.dart';
