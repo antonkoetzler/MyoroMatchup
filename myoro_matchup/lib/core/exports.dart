@@ -1,9 +1,10 @@
 export 'http/exports.dart';
+export 'env/exports.dart';
 export 'initialization/exports.dart';
-export 'log/exports.dart';
 export 'root/exports.dart';
 export 'auth/exports.dart';
 export 'dependency_injection/exports.dart';
 export 'key/exports.dart';
 export 'routing/exports.dart';
 export 'shared_preferences/exports.dart';
+export 'supabase/exports.dart';

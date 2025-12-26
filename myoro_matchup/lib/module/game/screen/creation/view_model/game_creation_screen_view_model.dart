@@ -240,7 +240,7 @@ final class GameCreationScreenViewModel {
 
       _state.request = _state.request.createSuccessState(id);
     } catch (e, s) {
-      await MmLogger.error('[GameCreationScreenViewModel.onFinish]: Failed to create game.', e, s);
+      await MyoroLogger.error('[GameCreationScreenViewModel.onFinish]: Failed to create game.', e, s);
       _state.request = _state.request.createErrorState(e.toString());
     }
   }

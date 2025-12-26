@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:in_app_purchase/in_app_purchase.dart';
 import 'package:injectable/injectable.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Service for managing in-app subscriptions.
@@ -70,7 +71,7 @@ final class SubscriptionService {
       _storeAvailable = await _inAppPurchase.isAvailable();
 
       if (!_storeAvailable) {
-        MmLogger.warning(
+        MyoroLogger.warning(
           '[SubscriptionService._init]: Store not available. '
           'This is expected in development/emulator environments.',
         );
@@ -81,7 +82,7 @@ final class SubscriptionService {
       _purchaseSubscription = _inAppPurchase.purchaseStream.listen(
         _onPurchaseUpdate,
         onError: (error) {
-          MmLogger.error('[SubscriptionService._init]: Purchase stream error', error, StackTrace.current);
+          MyoroLogger.error('[SubscriptionService._init]: Purchase stream error', error, StackTrace.current);
         },
       );
 
@@ -91,7 +92,7 @@ final class SubscriptionService {
       // Check existing subscription status
       await _checkExistingSubscription();
     } catch (e, stackTrace) {
-      await MmLogger.error('[SubscriptionService._init]: Failed to initialize', e, stackTrace);
+      await MyoroLogger.error('[SubscriptionService._init]: Failed to initialize', e, stackTrace);
     }
   }
 
@@ -101,7 +102,7 @@ final class SubscriptionService {
       final response = await _inAppPurchase.queryProductDetails({_monthlyProductId});
 
       if (response.notFoundIDs.isNotEmpty) {
-        MmLogger.warning(
+        MyoroLogger.warning(
           '[SubscriptionService._loadProducts]: Products not found: ${response.notFoundIDs}. '
           'TODO: Configure products in App Store Connect / Google Play Console.',
         );
@@ -110,13 +111,13 @@ final class SubscriptionService {
       _products = response.productDetails;
 
       if (_products.isEmpty) {
-        MmLogger.warning(
+        MyoroLogger.warning(
           '[SubscriptionService._loadProducts]: No products available. '
           'TODO: Configure subscription products in store.',
         );
       }
     } catch (e, stackTrace) {
-      await MmLogger.error('[SubscriptionService._loadProducts]: Failed to load products', e, stackTrace);
+      await MyoroLogger.error('[SubscriptionService._loadProducts]: Failed to load products', e, stackTrace);
     }
   }
 
@@ -154,7 +155,7 @@ final class SubscriptionService {
           break;
 
         case PurchaseStatus.error:
-          await MmLogger.error(
+          await MyoroLogger.error(
             '[SubscriptionService._onPurchaseUpdate]: Purchase error',
             purchase.error,
             StackTrace.current,
@@ -182,7 +183,7 @@ final class SubscriptionService {
     // 2. Store the subscription status
     // 3. Return whether the subscription is valid
 
-    MmLogger.warning(
+    MyoroLogger.warning(
       '[SubscriptionService._verifyPurchase]: TODO: Implement server-side receipt validation. '
       'Currently accepting all purchases without validation (INSECURE).',
     );
@@ -203,12 +204,12 @@ final class SubscriptionService {
   /// Returns true if purchase was initiated successfully.
   Future<bool> purchaseMonthlySubscription() async {
     if (!_storeAvailable) {
-      MmLogger.warning('[SubscriptionService.purchaseMonthlySubscription]: Store not available.');
+      MyoroLogger.warning('[SubscriptionService.purchaseMonthlySubscription]: Store not available.');
       return false;
     }
 
     if (_products.isEmpty) {
-      MmLogger.warning(
+      MyoroLogger.warning(
         '[SubscriptionService.purchaseMonthlySubscription]: No products available. '
         'TODO: Configure products in store.',
       );
@@ -224,7 +225,7 @@ final class SubscriptionService {
       final success = await _inAppPurchase.buyNonConsumable(purchaseParam: purchaseParam);
       return success;
     } catch (e, stackTrace) {
-      await MmLogger.error(
+      await MyoroLogger.error(
         '[SubscriptionService.purchaseMonthlySubscription]: Failed to initiate purchase',
         e,
         stackTrace,
@@ -236,14 +237,14 @@ final class SubscriptionService {
   /// Restore previous purchases.
   Future<void> restorePurchases() async {
     if (!_storeAvailable) {
-      MmLogger.warning('[SubscriptionService.restorePurchases]: Store not available.');
+      MyoroLogger.warning('[SubscriptionService.restorePurchases]: Store not available.');
       return;
     }
 
     try {
       await _inAppPurchase.restorePurchases();
     } catch (e, stackTrace) {
-      await MmLogger.error('[SubscriptionService.restorePurchases]: Failed to restore', e, stackTrace);
+      await MyoroLogger.error('[SubscriptionService.restorePurchases]: Failed to restore', e, stackTrace);
     }
   }
 

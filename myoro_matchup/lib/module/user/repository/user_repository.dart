@@ -75,13 +75,13 @@ final class UserRepository {
 
   /// Deletes the authenticated user's account.
   Future<String> deleteAccount() async {
-    MmLogger.warning('[UserRepository.deleteAccount]: Deleting user account.');
+    MyoroLogger.warning('[UserRepository.deleteAccount]: Deleting user account.');
     try {
       final response = await _httpClient.delete('/users');
-      MmLogger.info('[UserRepository.deleteAccount]: User account deleted successfully.');
+      MyoroLogger.info('[UserRepository.deleteAccount]: User account deleted successfully.');
       return response.data['message'] as String;
     } catch (e, stackTrace) {
-      await MmLogger.error('[UserRepository.deleteAccount]: Failed to delete user account.', e, stackTrace);
+      await MyoroLogger.error('[UserRepository.deleteAccount]: Failed to delete user account.', e, stackTrace);
       rethrow;
     }
   }
@@ -89,14 +89,18 @@ final class UserRepository {
   /// Updates the profile picture of the authenticated user.
   /// If [file] is null, removes the profile picture.
   Future<String> updateProfilePicture(File? file) async {
-    MmLogger.info('[UserRepository.updateProfilePicture]: Updating profile picture.');
+    MyoroLogger.info('[UserRepository.updateProfilePicture]: Updating profile picture.');
     try {
       final files = file != null && file.existsSync() ? {'file': file} : null;
       final response = await _httpClient.postMultipart('/users/profile-picture', files: files);
-      MmLogger.info('[UserRepository.updateProfilePicture]: Profile picture updated successfully.');
+      MyoroLogger.info('[UserRepository.updateProfilePicture]: Profile picture updated successfully.');
       return response.data['message'] as String;
     } catch (e, stackTrace) {
-      await MmLogger.error('[UserRepository.updateProfilePicture]: Failed to update profile picture.', e, stackTrace);
+      await MyoroLogger.error(
+        '[UserRepository.updateProfilePicture]: Failed to update profile picture.',
+        e,
+        stackTrace,
+      );
       rethrow;
     }
   }

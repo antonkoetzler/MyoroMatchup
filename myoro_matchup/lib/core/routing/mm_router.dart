@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// App's router.
@@ -38,7 +39,7 @@ final class MmRouter {
 
   /// Initialization function.
   Future<void> init() async {
-    MmLogger.info('[MmRouter.init]: Initializing app router...');
+    MyoroLogger.info('[MmRouter.init]: Initializing app router...');
 
     final friendRoutes = MmRoutes.friendRoutes;
     final friendListingScreen = friendRoutes.friendListingScreen;
@@ -78,7 +79,7 @@ final class MmRouter {
 
     final isLoggedIn = _userService.isLoggedIn;
     final initialLocation = isLoggedIn ? homeScreenLocation : loginSignupScreenLocation;
-    MmLogger.info('[MmRouter.init]: User logged in: $isLoggedIn, initial location: $initialLocation.');
+    MyoroLogger.info('[MmRouter.init]: User logged in: $isLoggedIn, initial location: $initialLocation.');
 
     _router = GoRouter(
       navigatorKey: navigatorKey,
@@ -93,7 +94,7 @@ final class MmRouter {
         userDetailsScreenGoRoute,
       ],
     );
-    MmLogger.info('[MmRouter.init]: App router initialized.');
+    MyoroLogger.info('[MmRouter.init]: App router initialized.');
   }
 
   /// [_router] getter.

@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "Termina",
   "gameCreationScreenGameCreationSuccessMessage": "Gioco creato con successo!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "Nome utente/email",
-  "loginSignupScreenLoginPasswordInputLabel": "Password",
-  "loginSignupScreenLoginLoginButton": "Accedi",
-  "loginSignupScreenLoginForgotPasswordButton": "Password dimenticata?",
-  "loginSignupScreenSignupNameInputLabel": "Nome",
-  "loginSignupScreenSignupUsernameInputLabel": "Nome utente",
-  "loginSignupScreenSignupEmailInputLabel": "Email",
-  "loginSignupScreenSignupPasswordInputLabel": "Password",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "Password",
-  "loginSignupScreenSignupSignupButton": "Registrati",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Nuovo su MyoroMatchup? Registrati!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Già registrato? Accedi!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Nome utente/email non può essere vuoto.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "La password non può essere vuota.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Il nome non può essere vuoto.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Il nome utente non può essere vuoto.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "L'email non può essere vuota.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Il paese non può essere vuoto.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "I campi password non possono essere vuoti.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Le password non corrispondono.",
-  "loginSignupScreenForgotPasswordDialogTitle": "Password dimenticata",
-  "loginSignupScreenForgotPasswordDialogMessage": "Inserisci il tuo indirizzo email e ti invieremo un link per reimpostare la password.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Inserisci un indirizzo email valido.",
-
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Crea gioco",
   "mmAppBarMenuDrawerFriendListingText": "Amici",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Valuta Giocatori",
+  "ratingScreenSubtitle": "Valuta i tuoi compagni di squadra da questa partita",
+  "ratingScreenDeadlineText": "Scadenza valutazione: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Invia Valutazioni",
+  "ratingScreenSkipButton": "Salta per ora",
+  "ratingScreenMandatoryWarning": "La valutazione è obbligatoria entro 24 ore dalla partita",
+  "ratingScreenSuccessMessage": "Valutazioni inviate con successo!",
+  "ratingScreenErrorMessage": "Invio valutazioni fallito. Riprova.",
+
+  "gameStatusUpcoming": "In Arrivo",
+  "gameStatusInProgress": "In Corso",
+  "gameStatusCompleted": "Completato",
+  "gameStatusPendingRating": "Valutazione in Attesa",
+  "gameInProgressTimeRemaining": "{hours}h {minutes}m rimanenti",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Continua con Google",
+  "loginSignupScreenAppleOAuthButtonText": "Continua con Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "Continua con GitHub",
+  "loginSignupScreenVersionText": "Versione: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "Terminer",
   "gameCreationScreenGameCreationSuccessMessage": "Jeu créé avec succès !",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "Nom d'utilisateur/e-mail",
-  "loginSignupScreenLoginPasswordInputLabel": "Mot de passe",
-  "loginSignupScreenLoginLoginButton": "Se connecter",
-  "loginSignupScreenLoginForgotPasswordButton": "Mot de passe oublié ?",
-  "loginSignupScreenSignupNameInputLabel": "Nom",
-  "loginSignupScreenSignupUsernameInputLabel": "Nom d'utilisateur",
-  "loginSignupScreenSignupEmailInputLabel": "E-mail",
-  "loginSignupScreenSignupPasswordInputLabel": "Mot de passe",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "Mot de passe",
-  "loginSignupScreenSignupSignupButton": "S'inscrire",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Nouveau sur MyoroMatchup ? Inscrivez-vous.",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Déjà inscrit ? Connectez-vous.",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Le nom d'utilisateur/e-mail ne peut pas être vide.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Le mot de passe ne peut pas être vide.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Le nom ne peut pas être vide.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Le nom d'utilisateur ne peut pas être vide.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "L'e-mail ne peut pas être vide.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Le pays ne peut pas être vide.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Les champs de mot de passe ne peuvent pas être vides.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Les mots de passe ne correspondent pas.",
-  "loginSignupScreenForgotPasswordDialogTitle": "Mot de passe oublié",
-  "loginSignupScreenForgotPasswordDialogMessage": "Entrez votre adresse e-mail et nous vous enverrons un lien pour réinitialiser votre mot de passe.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "E-mail",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Veuillez entrer une adresse e-mail valide.",
-
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Créer un jeu",
   "mmAppBarMenuDrawerFriendListingText": "Amis",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Noter les Joueurs",
+  "ratingScreenSubtitle": "Notez vos coéquipiers de ce match",
+  "ratingScreenDeadlineText": "Date limite de notation: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Soumettre les Notes",
+  "ratingScreenSkipButton": "Passer pour l'instant",
+  "ratingScreenMandatoryWarning": "La notation est obligatoire dans les 24 heures suivant le match",
+  "ratingScreenSuccessMessage": "Notes soumises avec succès!",
+  "ratingScreenErrorMessage": "Échec de la soumission des notes. Veuillez réessayer.",
+
+  "gameStatusUpcoming": "À Venir",
+  "gameStatusInProgress": "En Cours",
+  "gameStatusCompleted": "Terminé",
+  "gameStatusPendingRating": "Note en Attente",
+  "gameInProgressTimeRemaining": "{hours}h {minutes}m restantes",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Continuer avec Google",
+  "loginSignupScreenAppleOAuthButtonText": "Continuer avec Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "Continuer avec GitHub",
+  "loginSignupScreenVersionText": "Version: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

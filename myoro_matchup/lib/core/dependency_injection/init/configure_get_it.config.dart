@@ -11,17 +11,19 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
+import 'package:myoro_matchup/common/service/mm_supabase_service.dart' as _i88;
 import 'package:myoro_matchup/common/widget/widget/input/location_input/view_model/mm_location_input_view_model.dart'
     as _i789;
 import 'package:myoro_matchup/core/auth/repository/auth_repository.dart'
     as _i643;
 import 'package:myoro_matchup/core/auth/service/auth_service.dart' as _i206;
+import 'package:myoro_matchup/core/dependency_injection/module/mm_env_configuration_module.dart'
+    as _i714;
+import 'package:myoro_matchup/core/dependency_injection/module/mm_router_module.dart'
+    as _i691;
+import 'package:myoro_matchup/core/dependency_injection/module/shared_preferences_module.dart'
+    as _i704;
 import 'package:myoro_matchup/core/http/mm_http_client.dart' as _i501;
-import 'package:myoro_matchup/core/log/mm_logger.dart' as _i788;
-import 'package:myoro_matchup/core/routing/module/mm_router_module.dart'
-    as _i908;
-import 'package:myoro_matchup/core/shared_preferences/module/shared_preferences_module.dart'
-    as _i407;
 import 'package:myoro_matchup/core/shared_preferences/repository/shared_preferences_repository.dart'
     as _i558;
 import 'package:myoro_matchup/core/shared_preferences/service/shared_preferences_service.dart'
@@ -63,12 +65,22 @@ extension GetItInjectableX on _i174.GetIt {
     _i526.EnvironmentFilter? environmentFilter,
   }) async {
     final gh = _i526.GetItHelper(this, environment, environmentFilter);
+    final mmEnvConfigurationModule = _$MmEnvConfigurationModule();
     final sharedPreferencesModule = _$SharedPreferencesModule();
     final mmRouterModule = _$MmRouterModule();
-    gh.singleton<_i788.MmLogger>(() => _i788.MmLogger());
+    await gh.singletonAsync<_i460.MmEnvConfiguration>(
+      () => mmEnvConfigurationModule.envConfiguration,
+      preResolve: true,
+    );
     await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.sharedPreferences,
       preResolve: true,
+    );
+    gh.factory<_i88.MmSupabaseService>(
+      () => _i88.MmSupabaseService(gh<_i460.MmEnvConfiguration>()),
+    );
+    gh.factory<_i205.LoginSignupScreenViewModel>(
+      () => _i205.LoginSignupScreenViewModel(gh<_i460.MmSupabaseService>()),
     );
     gh.singleton<_i558.SharedPreferencesRepository>(
       () => _i558.SharedPreferencesRepository(gh<_i460.SharedPreferences>()),
@@ -152,13 +164,12 @@ extension GetItInjectableX on _i174.GetIt {
         gh<_i460.InvitationRepository>(),
       ),
     );
-    gh.factory<_i205.LoginSignupScreenViewModel>(
-      () => _i205.LoginSignupScreenViewModel(gh<_i460.AuthService>()),
-    );
     return this;
   }
 }
 
-class _$SharedPreferencesModule extends _i407.SharedPreferencesModule {}
+class _$MmEnvConfigurationModule extends _i714.MmEnvConfigurationModule {}
 
-class _$MmRouterModule extends _i908.MmRouterModule {}
+class _$SharedPreferencesModule extends _i704.SharedPreferencesModule {}
+
+class _$MmRouterModule extends _i691.MmRouterModule {}

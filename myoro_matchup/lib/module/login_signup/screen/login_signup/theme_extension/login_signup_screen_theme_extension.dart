@@ -16,88 +16,54 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
   /// Default constructor.
   const LoginSignupScreenThemeExtension({
     required this.bodyPadding,
-    required this.inputsSpacing,
-    required this.inputTextStyle,
-    required this.buttonTextStyle,
+    required this.logoButtonsSpacing,
     required this.buttonsSpacing,
-    required this.formTypeSwitcherButtonTextStyle,
-    required this.formTypeSwitcherButtonIdleColor,
-    required this.formTypeSwitcherButtonTapColor,
-    required this.logoInputsSpacing,
-    required this.formSwitcherActionButtonsSpacing,
-    required this.bottomNavigationBarPadding,
-    required this.forgotPasswordDialogStyle,
+    required this.buttonsVersionSpacing,
+    required this.oAuthButtonTextStyle,
+    required this.versionTextStyle,
+    required this.logoSize,
   });
 
   /// Fake constructor.
   LoginSignupScreenThemeExtension.fake()
     : bodyPadding = myoroFake<EdgeInsets>(),
-      inputsSpacing = faker.randomGenerator.decimal(scale: 20),
-      inputTextStyle = myoroFake<TextStyle>(),
-      buttonTextStyle = myoroFake<TextStyle>(),
+      logoButtonsSpacing = faker.randomGenerator.decimal(scale: 20),
       buttonsSpacing = faker.randomGenerator.decimal(scale: 20),
-      formTypeSwitcherButtonTextStyle = myoroFake<TextStyle>(),
-      formTypeSwitcherButtonIdleColor = myoroFake<Color>(),
-      formTypeSwitcherButtonTapColor = myoroFake<Color>(),
-      logoInputsSpacing = faker.randomGenerator.decimal(scale: 20),
-      formSwitcherActionButtonsSpacing = faker.randomGenerator.decimal(scale: 20),
-      bottomNavigationBarPadding = myoroFake<EdgeInsets>(),
-      forgotPasswordDialogStyle = myoroFake<MyoroDialogModalStyle>();
+      buttonsVersionSpacing = faker.randomGenerator.decimal(scale: 20),
+      oAuthButtonTextStyle = myoroFake<MyoroTextStyle>(),
+      versionTextStyle = myoroFake<TextStyle>(),
+      logoSize = faker.randomGenerator.decimal(scale: 20);
 
   /// Builder constructor.
   LoginSignupScreenThemeExtension.builder(TextTheme textTheme)
-    : bodyPadding = const EdgeInsets.only(top: kEdgeInsetsLength, left: kEdgeInsetsLength, right: kEdgeInsetsLength),
-      inputsSpacing = kMyoroMultiplier * 3,
-      inputTextStyle = textTheme.bodySmall!,
-      buttonTextStyle = textTheme.bodySmall!,
+    : bodyPadding = const EdgeInsets.all(kEdgeInsetsLength),
+      logoButtonsSpacing = kMyoroMultiplier * 6,
       buttonsSpacing = kMyoroMultiplier * 2,
-      formTypeSwitcherButtonTextStyle = textTheme.headlineSmall!,
-      formTypeSwitcherButtonIdleColor = MyoroColors.blue1.darken(0.05),
-      formTypeSwitcherButtonTapColor = MyoroColors.blue1,
-      logoInputsSpacing = kMyoroMultiplier * 6,
-      formSwitcherActionButtonsSpacing = kMyoroMultiplier,
-      bottomNavigationBarPadding = const EdgeInsets.only(
-        bottom: kEdgeInsetsLength,
-        left: kEdgeInsetsLength,
-        right: kEdgeInsetsLength,
-      ),
-      forgotPasswordDialogStyle = const MyoroDialogModalStyle(contentPadding: EdgeInsets.all(kMyoroMultiplier * 2));
+      buttonsVersionSpacing = kMyoroMultiplier * 4,
+      oAuthButtonTextStyle = MyoroTextStyle(alignment: TextAlign.left, style: textTheme.bodyMedium!),
+      versionTextStyle = textTheme.bodySmall!,
+      logoSize = 200;
 
   /// Padding of [LoginSignupScreen].
   final EdgeInsets bodyPadding;
 
-  /// Spacing between the [MyoroInput]s.
-  final double inputsSpacing;
-
-  /// [MyoroInputConfiguration.inputTextStyle] of an input of [LoginSignupScreen].
-  final TextStyle inputTextStyle;
-
-  /// [TextStyle] of a generic button of [LoginSignupScreen].
-  final TextStyle buttonTextStyle;
+  /// Spacing between logo and buttons.
+  final double logoButtonsSpacing;
 
   /// Spacing between buttons.
   final double buttonsSpacing;
 
-  /// [TextStyle] of the [LoginSignupScreenEnum] form switcher button.
-  final TextStyle formTypeSwitcherButtonTextStyle;
+  /// Spacing between buttons and version text.
+  final double buttonsVersionSpacing;
 
-  /// [MyoroTapStatusEnum.idle]'s [Color] of the [LoginSignupScreenEnum] form switcher button.
-  final Color formTypeSwitcherButtonIdleColor;
+  /// [MyoroTextStyle] of OAuth buttons.
+  final MyoroTextStyle oAuthButtonTextStyle;
 
-  /// Spacing between logo and inputs.
-  final double logoInputsSpacing;
+  /// [TextStyle] of version text.
+  final TextStyle versionTextStyle;
 
-  /// [MyoroTapStatusEnum.tap]'s [Color] of the [LoginSignupScreenEnum] form switcher button.
-  final Color formTypeSwitcherButtonTapColor;
-
-  /// Spacing between the form switcher button and action buttons.
-  final double formSwitcherActionButtonsSpacing;
-
-  /// Padding of the bottom navigation bar.
-  final EdgeInsets bottomNavigationBarPadding;
-
-  /// Style of the forgot password dialog.
-  final MyoroDialogModalStyle forgotPasswordDialogStyle;
+  /// Size of the logo.
+  final double logoSize;
 
   /// Lerp function.
   @override
@@ -105,37 +71,12 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
     if (other is! LoginSignupScreenThemeExtension) return this;
     return copyWith(
       bodyPadding: EdgeInsets.lerp(bodyPadding, other.bodyPadding, t),
-      inputsSpacing: lerpDouble(inputsSpacing, other.inputsSpacing, t),
-      inputTextStyle: TextStyle.lerp(inputTextStyle, other.inputTextStyle, t),
-      buttonTextStyle: TextStyle.lerp(buttonTextStyle, other.buttonTextStyle, t),
+      logoButtonsSpacing: lerpDouble(logoButtonsSpacing, other.logoButtonsSpacing, t),
       buttonsSpacing: lerpDouble(buttonsSpacing, other.buttonsSpacing, t),
-      formTypeSwitcherButtonTextStyle: TextStyle.lerp(
-        formTypeSwitcherButtonTextStyle,
-        other.formTypeSwitcherButtonTextStyle,
-        t,
-      ),
-      formTypeSwitcherButtonIdleColor: Color.lerp(
-        formTypeSwitcherButtonIdleColor,
-        other.formTypeSwitcherButtonIdleColor,
-        t,
-      ),
-      formTypeSwitcherButtonTapColor: Color.lerp(
-        formTypeSwitcherButtonTapColor,
-        other.formTypeSwitcherButtonTapColor,
-        t,
-      ),
-      logoInputsSpacing: lerpDouble(logoInputsSpacing, other.logoInputsSpacing, t),
-      formSwitcherActionButtonsSpacing: lerpDouble(
-        formSwitcherActionButtonsSpacing,
-        other.formSwitcherActionButtonsSpacing,
-        t,
-      ),
-      bottomNavigationBarPadding: EdgeInsets.lerp(bottomNavigationBarPadding, other.bottomNavigationBarPadding, t),
-      forgotPasswordDialogStyle: MyoroDialogModalStyle.lerp(
-        forgotPasswordDialogStyle,
-        other.forgotPasswordDialogStyle,
-        t,
-      ),
+      buttonsVersionSpacing: lerpDouble(buttonsVersionSpacing, other.buttonsVersionSpacing, t),
+      oAuthButtonTextStyle: MyoroTextStyle.lerp(oAuthButtonTextStyle, other.oAuthButtonTextStyle, t),
+      versionTextStyle: TextStyle.lerp(versionTextStyle, other.versionTextStyle, t),
+      logoSize: lerpDouble(logoSize, other.logoSize, t),
     );
   }
 }

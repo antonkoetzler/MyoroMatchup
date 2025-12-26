@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "完成",
   "gameCreationScreenGameCreationSuccessMessage": "遊戲建立成功！",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "使用者名稱/電子郵件",
-  "loginSignupScreenLoginPasswordInputLabel": "密碼",
-  "loginSignupScreenLoginLoginButton": "登入",
-  "loginSignupScreenLoginForgotPasswordButton": "忘記密碼？",
-  "loginSignupScreenSignupNameInputLabel": "姓名",
-  "loginSignupScreenSignupUsernameInputLabel": "使用者名稱",
-  "loginSignupScreenSignupEmailInputLabel": "電子郵件",
-  "loginSignupScreenSignupPasswordInputLabel": "密碼",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "密碼",
-  "loginSignupScreenSignupSignupButton": "註冊",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "新用戶？註冊！",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "已有帳號？登入！",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "使用者名稱/電子郵件不能為空。",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "密碼不能為空。",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "姓名不能為空。",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "使用者名稱不能為空。",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "電子郵件不能為空。",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "國家不能為空。",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "密碼欄位不能為空。",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "密碼不相符。",
-  "loginSignupScreenForgotPasswordDialogTitle": "忘記密碼",
-  "loginSignupScreenForgotPasswordDialogMessage": "輸入您的電子郵件地址，我們將向您發送重置密碼的連結。",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "電子郵件",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "請輸入有效的電子郵件地址。",
-
   "mmAppBarMenuDrawerTitle": "選單",
   "mmAppBarMenuDrawerCreateGameText": "建立遊戲",
   "mmAppBarMenuDrawerFriendListingText": "朋友",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "評價玩家",
+  "ratingScreenSubtitle": "評價您在這場遊戲中的隊友",
+  "ratingScreenDeadlineText": "評價截止日期: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "提交評價",
+  "ratingScreenSkipButton": "暫時跳過",
+  "ratingScreenMandatoryWarning": "評價必須在遊戲後24小時內完成",
+  "ratingScreenSuccessMessage": "評價提交成功！",
+  "ratingScreenErrorMessage": "提交評價失敗。請重試。",
+
+  "gameStatusUpcoming": "即將開始",
+  "gameStatusInProgress": "進行中",
+  "gameStatusCompleted": "已完成",
+  "gameStatusPendingRating": "等待評價",
+  "gameInProgressTimeRemaining": "剩餘 {hours}小時 {minutes}分鐘",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "使用 Google 繼續",
+  "loginSignupScreenAppleOAuthButtonText": "使用 Apple 繼續",
+  "loginSignupScreenGitHubOAuthButtonText": "使用 GitHub 繼續",
+  "loginSignupScreenVersionText": "版本: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:injectable/injectable.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Repository of [Game]s.
@@ -26,7 +27,7 @@ final class GameRepository {
 
   /// Creates a game.
   Future<int> create(GameCreationRequestDto game, {File? profilePictureFile, File? bannerFile}) async {
-    MmLogger.info('[GameRepository.create]: Creating game: ${game.name}.');
+    MyoroLogger.info('[GameRepository.create]: Creating game: ${game.name}.');
     try {
       // Prepare data without image strings
       final gameData = game.toJson();
@@ -49,10 +50,10 @@ final class GameRepository {
         files: files.isNotEmpty ? files : null,
       );
       final id = response.data['id'];
-      MmLogger.info('[GameRepository.create]: Game created successfully: ${game.name} (ID: $id).');
+      MyoroLogger.info('[GameRepository.create]: Game created successfully: ${game.name} (ID: $id).');
       return id;
     } catch (e, stackTrace) {
-      await MmLogger.error('[GameRepository.create]: Failed to create game: ${game.name}.', e, stackTrace);
+      await MyoroLogger.error('[GameRepository.create]: Failed to create game: ${game.name}.', e, stackTrace);
       rethrow;
     }
   }

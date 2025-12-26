@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "Finalizar",
   "gameCreationScreenGameCreationSuccessMessage": "Jogo criado com sucesso!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "Nome de usuário ou email",
-  "loginSignupScreenLoginPasswordInputLabel": "Senha",
-  "loginSignupScreenLoginLoginButton": "Entrar",
-  "loginSignupScreenLoginForgotPasswordButton": "Esqueceu sua senha?",
-  "loginSignupScreenSignupNameInputLabel": "Nome",
-  "loginSignupScreenSignupUsernameInputLabel": "Nome de usuário",
-  "loginSignupScreenSignupEmailInputLabel": "Email",
-  "loginSignupScreenSignupPasswordInputLabel": "Senha",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "Senha",
-  "loginSignupScreenSignupSignupButton": "Cadastrar-se",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Novo no MyoroMatchup? Cadastre-se!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Já tem cadastro? Entre",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Nome de usuário/e-mail não pode estar vazio.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Senha não pode estar vazio.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "O nome não pode estar vazio.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "O nome de usuário não pode estar vazio.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "O e-mail não pode estar vazio.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "O país não pode estar vazio.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Os campos de senha não podem estar vazios.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "As senhas não coincidem.",
-  "loginSignupScreenForgotPasswordDialogTitle": "Esqueci minha senha",
-  "loginSignupScreenForgotPasswordDialogMessage": "Digite seu endereço de e-mail e enviaremos um link para redefinir sua senha.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "E-mail",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Por favor, insira um endereço de e-mail válido.",
-
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Criar Jogo",
   "mmAppBarMenuDrawerFriendListingText": "Amigos",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Avaliar Jogadores",
+  "ratingScreenSubtitle": "Avalie seus companheiros de equipe deste jogo",
+  "ratingScreenDeadlineText": "Prazo de avaliação: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Enviar Avaliações",
+  "ratingScreenSkipButton": "Pular por enquanto",
+  "ratingScreenMandatoryWarning": "A avaliação é obrigatória dentro de 24 horas após o jogo",
+  "ratingScreenSuccessMessage": "Avaliações enviadas com sucesso!",
+  "ratingScreenErrorMessage": "Falha ao enviar avaliações. Tente novamente.",
+
+  "gameStatusUpcoming": "Próximo",
+  "gameStatusInProgress": "Em Andamento",
+  "gameStatusCompleted": "Concluído",
+  "gameStatusPendingRating": "Avaliação Pendente",
+  "gameInProgressTimeRemaining": "{hours}h {minutes}m restantes",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Continuar com Google",
+  "loginSignupScreenAppleOAuthButtonText": "Continuar com Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "Continuar com GitHub",
+  "loginSignupScreenVersionText": "Versão: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

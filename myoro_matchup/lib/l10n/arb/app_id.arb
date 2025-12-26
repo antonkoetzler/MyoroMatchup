@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "Selesai",
   "gameCreationScreenGameCreationSuccessMessage": "Permainan berhasil dibuat!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "Nama pengguna/email",
-  "loginSignupScreenLoginPasswordInputLabel": "Kata sandi",
-  "loginSignupScreenLoginLoginButton": "Masuk",
-  "loginSignupScreenLoginForgotPasswordButton": "Lupa kata sandi?",
-  "loginSignupScreenSignupNameInputLabel": "Nama",
-  "loginSignupScreenSignupUsernameInputLabel": "Nama pengguna",
-  "loginSignupScreenSignupEmailInputLabel": "Email",
-  "loginSignupScreenSignupPasswordInputLabel": "Kata sandi",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "Kata sandi",
-  "loginSignupScreenSignupSignupButton": "Daftar",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Baru di MyoroMatchup? Daftar!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Sudah terdaftar? Masuk!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Nama pengguna/email tidak boleh kosong.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Kata sandi tidak boleh kosong.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Nama tidak boleh kosong.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Nama pengguna tidak boleh kosong.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email tidak boleh kosong.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Negara tidak boleh kosong.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Bidang kata sandi tidak boleh kosong.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Kata sandi tidak cocok.",
-  "loginSignupScreenForgotPasswordDialogTitle": "Lupa Kata Sandi",
-  "loginSignupScreenForgotPasswordDialogMessage": "Masukkan alamat email Anda dan kami akan mengirimkan tautan untuk mereset kata sandi Anda.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Harap masukkan alamat email yang valid.",
-
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Buat Permainan",
   "mmAppBarMenuDrawerFriendListingText": "Teman",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Nilai Pemain",
+  "ratingScreenSubtitle": "Nilai rekan setim Anda dari permainan ini",
+  "ratingScreenDeadlineText": "Batas waktu penilaian: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Kirim Penilaian",
+  "ratingScreenSkipButton": "Lewati untuk saat ini",
+  "ratingScreenMandatoryWarning": "Penilaian wajib dalam 24 jam setelah permainan",
+  "ratingScreenSuccessMessage": "Penilaian berhasil dikirim!",
+  "ratingScreenErrorMessage": "Gagal mengirim penilaian. Silakan coba lagi.",
+
+  "gameStatusUpcoming": "Akan Datang",
+  "gameStatusInProgress": "Sedang Berlangsung",
+  "gameStatusCompleted": "Selesai",
+  "gameStatusPendingRating": "Penilaian Tertunda",
+  "gameInProgressTimeRemaining": "{hours}j {minutes}m tersisa",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Lanjutkan dengan Google",
+  "loginSignupScreenAppleOAuthButtonText": "Lanjutkan dengan Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "Lanjutkan dengan GitHub",
+  "loginSignupScreenVersionText": "Versi: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

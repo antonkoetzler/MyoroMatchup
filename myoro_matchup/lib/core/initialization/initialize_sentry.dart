@@ -1,9 +1,10 @@
 import 'package:myoro_matchup/myoro_matchup.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 /// Initializes Sentry.
 Future<void> initializeSentry() async {
-  MmLogger.info('[initializeSentry]: Initializing Sentry...');
+  MyoroLogger.info('[initializeSentry]: Initializing Sentry...');
 
   return await SentryFlutter.init(
     (options) {
@@ -17,10 +18,18 @@ Future<void> initializeSentry() async {
         // Set tracesSampleRate to 1.0 to capture 100% of transactions for tracing.
         // We recommend adjusting this value in production.
         ..tracesSampleRate = 1.0;
-
-      MmLogger.info('[initializeSentry]: Sentry configured.');
     },
     appRunner: () async {
+      MyoroLogger.onError = (m, e, s) async {
+        // Send to Sentry if error is provided.
+        if (e != null) {
+          await Sentry.captureException(e, stackTrace: s, hint: Hint.withMap({'message': m}));
+        } else {
+          // Send message as breadcrumb if no error object.
+          await Sentry.captureMessage(m, level: SentryLevel.error);
+        }
+      };
+
       return await initializeApp();
     },
   );

@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "完了",
   "gameCreationScreenGameCreationSuccessMessage": "ゲームが正常に作成されました！",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "ユーザー名/メールアドレス",
-  "loginSignupScreenLoginPasswordInputLabel": "パスワード",
-  "loginSignupScreenLoginLoginButton": "ログイン",
-  "loginSignupScreenLoginForgotPasswordButton": "パスワードをお忘れですか？",
-  "loginSignupScreenSignupNameInputLabel": "名前",
-  "loginSignupScreenSignupUsernameInputLabel": "ユーザー名",
-  "loginSignupScreenSignupEmailInputLabel": "メールアドレス",
-  "loginSignupScreenSignupPasswordInputLabel": "パスワード",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "パスワード",
-  "loginSignupScreenSignupSignupButton": "登録",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchupが初めてですか？登録してください！",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "既に登録済みですか？ログインしてください！",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "ユーザー名/メールアドレスは空にできません。",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "パスワードは空にできません。",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "名前は空にできません。",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "ユーザー名は空にできません。",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "メールアドレスは空にできません。",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "国は空にできません。",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "パスワードフィールドは空にできません。",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "パスワードが一致しません。",
-  "loginSignupScreenForgotPasswordDialogTitle": "パスワードを忘れた場合",
-  "loginSignupScreenForgotPasswordDialogMessage": "メールアドレスを入力すると、パスワードをリセットするためのリンクをお送りします。",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "メール",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "有効なメールアドレスを入力してください。",
-
   "mmAppBarMenuDrawerTitle": "メニュー",
   "mmAppBarMenuDrawerCreateGameText": "ゲームを作成",
   "mmAppBarMenuDrawerFriendListingText": "友達",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "プレイヤーを評価",
+  "ratingScreenSubtitle": "このゲームのチームメイトを評価してください",
+  "ratingScreenDeadlineText": "評価期限: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "評価を送信",
+  "ratingScreenSkipButton": "今はスキップ",
+  "ratingScreenMandatoryWarning": "評価はゲーム後24時間以内に必須です",
+  "ratingScreenSuccessMessage": "評価の送信に成功しました！",
+  "ratingScreenErrorMessage": "評価の送信に失敗しました。もう一度お試しください。",
+
+  "gameStatusUpcoming": "予定",
+  "gameStatusInProgress": "進行中",
+  "gameStatusCompleted": "完了",
+  "gameStatusPendingRating": "評価待ち",
+  "gameInProgressTimeRemaining": "残り {hours}時間 {minutes}分",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Googleで続行",
+  "loginSignupScreenAppleOAuthButtonText": "Appleで続行",
+  "loginSignupScreenGitHubOAuthButtonText": "GitHubで続行",
+  "loginSignupScreenVersionText": "バージョン: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

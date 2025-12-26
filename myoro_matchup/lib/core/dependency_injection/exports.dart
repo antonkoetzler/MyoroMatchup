@@ -1,1 +1,3 @@
-export 'configure_get_it.dart';
+export 'init/exports.dart';
+export 'instance/exports.dart';
+export 'module/exports.dart';

@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "Hoàn thành",
   "gameCreationScreenGameCreationSuccessMessage": "Trò chơi đã được tạo thành công!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "Tên người dùng/email",
-  "loginSignupScreenLoginPasswordInputLabel": "Mật khẩu",
-  "loginSignupScreenLoginLoginButton": "Đăng nhập",
-  "loginSignupScreenLoginForgotPasswordButton": "Quên mật khẩu?",
-  "loginSignupScreenSignupNameInputLabel": "Tên",
-  "loginSignupScreenSignupUsernameInputLabel": "Tên người dùng",
-  "loginSignupScreenSignupEmailInputLabel": "Email",
-  "loginSignupScreenSignupPasswordInputLabel": "Mật khẩu",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "Mật khẩu",
-  "loginSignupScreenSignupSignupButton": "Đăng ký",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Mới với MyoroMatchup? Đăng ký!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Đã đăng ký? Đăng nhập!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Tên người dùng/email không thể để trống.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Mật khẩu không thể để trống.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Tên không thể để trống.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Tên người dùng không thể để trống.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email không thể để trống.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Quốc gia không thể để trống.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Các trường mật khẩu không thể để trống.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Mật khẩu không khớp.",
-  "loginSignupScreenForgotPasswordDialogTitle": "Quên mật khẩu",
-  "loginSignupScreenForgotPasswordDialogMessage": "Nhập địa chỉ email của bạn và chúng tôi sẽ gửi cho bạn một liên kết để đặt lại mật khẩu.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Vui lòng nhập địa chỉ email hợp lệ.",
-
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Tạo trò chơi",
   "mmAppBarMenuDrawerFriendListingText": "Bạn bè",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Đánh Giá Người Chơi",
+  "ratingScreenSubtitle": "Đánh giá đồng đội của bạn từ trò chơi này",
+  "ratingScreenDeadlineText": "Hạn chót đánh giá: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Gửi Đánh Giá",
+  "ratingScreenSkipButton": "Bỏ Qua Bây Giờ",
+  "ratingScreenMandatoryWarning": "Đánh giá là bắt buộc trong vòng 24 giờ sau trò chơi",
+  "ratingScreenSuccessMessage": "Đánh giá đã được gửi thành công!",
+  "ratingScreenErrorMessage": "Gửi đánh giá thất bại. Vui lòng thử lại.",
+
+  "gameStatusUpcoming": "Sắp Tới",
+  "gameStatusInProgress": "Đang Diễn Ra",
+  "gameStatusCompleted": "Hoàn Thành",
+  "gameStatusPendingRating": "Chờ Đánh Giá",
+  "gameInProgressTimeRemaining": "Còn lại {hours}giờ {minutes}phút",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Tiếp tục với Google",
+  "loginSignupScreenAppleOAuthButtonText": "Tiếp tục với Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "Tiếp tục với GitHub",
+  "loginSignupScreenVersionText": "Phiên bản: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "Завершить",
   "gameCreationScreenGameCreationSuccessMessage": "Игра успешно создана!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "Имя пользователя/email",
-  "loginSignupScreenLoginPasswordInputLabel": "Пароль",
-  "loginSignupScreenLoginLoginButton": "Войти",
-  "loginSignupScreenLoginForgotPasswordButton": "Забыли пароль?",
-  "loginSignupScreenSignupNameInputLabel": "Имя",
-  "loginSignupScreenSignupUsernameInputLabel": "Имя пользователя",
-  "loginSignupScreenSignupEmailInputLabel": "Email",
-  "loginSignupScreenSignupPasswordInputLabel": "Пароль",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "Пароль",
-  "loginSignupScreenSignupSignupButton": "Зарегистрироваться",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Новичок в MyoroMatchup? Зарегистрируйтесь!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Уже зарегистрированы? Войдите!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Имя пользователя/email не может быть пустым.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Пароль не может быть пустым.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Имя не может быть пустым.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Имя пользователя не может быть пустым.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "Email не может быть пустым.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Страна не может быть пустой.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Поля пароля не могут быть пустыми.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Пароли не совпадают.",
-  "loginSignupScreenForgotPasswordDialogTitle": "Забыли пароль",
-  "loginSignupScreenForgotPasswordDialogMessage": "Введите свой адрес электронной почты, и мы отправим вам ссылку для сброса пароля.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "Email",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Пожалуйста, введите действительный адрес электронной почты.",
-
   "mmAppBarMenuDrawerTitle": "Меню",
   "mmAppBarMenuDrawerCreateGameText": "Создать игру",
   "mmAppBarMenuDrawerFriendListingText": "Друзья",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Оценить Игроков",
+  "ratingScreenSubtitle": "Оцените своих товарищей по команде из этой игры",
+  "ratingScreenDeadlineText": "Срок оценки: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Отправить Оценки",
+  "ratingScreenSkipButton": "Пропустить сейчас",
+  "ratingScreenMandatoryWarning": "Оценка обязательна в течение 24 часов после игры",
+  "ratingScreenSuccessMessage": "Оценки успешно отправлены!",
+  "ratingScreenErrorMessage": "Не удалось отправить оценки. Пожалуйста, попробуйте снова.",
+
+  "gameStatusUpcoming": "Предстоящий",
+  "gameStatusInProgress": "В Процессе",
+  "gameStatusCompleted": "Завершено",
+  "gameStatusPendingRating": "Ожидает Оценки",
+  "gameInProgressTimeRemaining": "Осталось {hours}ч {minutes}м",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Продолжить с Google",
+  "loginSignupScreenAppleOAuthButtonText": "Продолжить с Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "Продолжить с GitHub",
+  "loginSignupScreenVersionText": "Версия: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

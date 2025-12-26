@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "Bitir",
   "gameCreationScreenGameCreationSuccessMessage": "Oyun başarıyla oluşturuldu!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "Kullanıcı adı/e-posta",
-  "loginSignupScreenLoginPasswordInputLabel": "Şifre",
-  "loginSignupScreenLoginLoginButton": "Giriş Yap",
-  "loginSignupScreenLoginForgotPasswordButton": "Şifrenizi mi unuttunuz?",
-  "loginSignupScreenSignupNameInputLabel": "İsim",
-  "loginSignupScreenSignupUsernameInputLabel": "Kullanıcı adı",
-  "loginSignupScreenSignupEmailInputLabel": "E-posta",
-  "loginSignupScreenSignupPasswordInputLabel": "Şifre",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "Şifre",
-  "loginSignupScreenSignupSignupButton": "Kayıt Ol",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchup'a yeni misiniz? Kayıt olun!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Zaten kayıtlı mısınız? Giriş yapın!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Kullanıcı adı/e-posta boş olamaz.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Şifre boş olamaz.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "İsim boş olamaz.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Kullanıcı adı boş olamaz.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "E-posta boş olamaz.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Ülke boş olamaz.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Şifre alanları boş olamaz.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Şifreler eşleşmiyor.",
-  "loginSignupScreenForgotPasswordDialogTitle": "Şifremi Unuttum",
-  "loginSignupScreenForgotPasswordDialogMessage": "E-posta adresinizi girin, size şifrenizi sıfırlamak için bir bağlantı göndereceğiz.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "E-posta",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Lütfen geçerli bir e-posta adresi girin.",
-
   "mmAppBarMenuDrawerTitle": "Menü",
   "mmAppBarMenuDrawerCreateGameText": "Oyun Oluştur",
   "mmAppBarMenuDrawerFriendListingText": "Arkadaşlar",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Oyuncuları Değerlendir",
+  "ratingScreenSubtitle": "Bu oyundan takım arkadaşlarınızı değerlendirin",
+  "ratingScreenDeadlineText": "Değerlendirme son tarihi: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Değerlendirmeleri Gönder",
+  "ratingScreenSkipButton": "Şimdilik Atla",
+  "ratingScreenMandatoryWarning": "Değerlendirme oyundan sonra 24 saat içinde zorunludur",
+  "ratingScreenSuccessMessage": "Değerlendirmeler başarıyla gönderildi!",
+  "ratingScreenErrorMessage": "Değerlendirmeler gönderilemedi. Lütfen tekrar deneyin.",
+
+  "gameStatusUpcoming": "Yaklaşan",
+  "gameStatusInProgress": "Devam Ediyor",
+  "gameStatusCompleted": "Tamamlandı",
+  "gameStatusPendingRating": "Bekleyen Değerlendirme",
+  "gameInProgressTimeRemaining": "Kalan {hours}s {minutes}dk",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Google ile devam et",
+  "loginSignupScreenAppleOAuthButtonText": "Apple ile devam et",
+  "loginSignupScreenGitHubOAuthButtonText": "GitHub ile devam et",
+  "loginSignupScreenVersionText": "Sürüm: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

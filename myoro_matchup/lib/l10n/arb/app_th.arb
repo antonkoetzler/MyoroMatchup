@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "เสร็จสิ้น",
   "gameCreationScreenGameCreationSuccessMessage": "สร้างเกมสำเร็จแล้ว!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "ชื่อผู้ใช้/อีเมล",
-  "loginSignupScreenLoginPasswordInputLabel": "รหัสผ่าน",
-  "loginSignupScreenLoginLoginButton": "เข้าสู่ระบบ",
-  "loginSignupScreenLoginForgotPasswordButton": "ลืมรหัสผ่าน?",
-  "loginSignupScreenSignupNameInputLabel": "ชื่อ",
-  "loginSignupScreenSignupUsernameInputLabel": "ชื่อผู้ใช้",
-  "loginSignupScreenSignupEmailInputLabel": "อีเมล",
-  "loginSignupScreenSignupPasswordInputLabel": "รหัสผ่าน",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "รหัสผ่าน",
-  "loginSignupScreenSignupSignupButton": "สมัครสมาชิก",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "ใหม่ใน MyoroMatchup? สมัครสมาชิก!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "ลงทะเบียนแล้ว? เข้าสู่ระบบ!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "ชื่อผู้ใช้/อีเมลไม่สามารถว่างได้",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "รหัสผ่านไม่สามารถว่างได้",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "ชื่อไม่สามารถว่างได้",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "ชื่อผู้ใช้ไม่สามารถว่างได้",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "อีเมลไม่สามารถว่างได้",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "ประเทศไม่สามารถว่างได้",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "ฟิลด์รหัสผ่านไม่สามารถว่างได้",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "รหัสผ่านไม่ตรงกัน",
-  "loginSignupScreenForgotPasswordDialogTitle": "ลืมรหัสผ่าน",
-  "loginSignupScreenForgotPasswordDialogMessage": "ใส่อีเมลของคุณแล้วเราจะส่งลิงก์เพื่อรีเซ็ตรหัสผ่านให้คุณ",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "อีเมล",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "กรุณาใส่อีเมลที่ถูกต้อง",
-
   "mmAppBarMenuDrawerTitle": "เมนู",
   "mmAppBarMenuDrawerCreateGameText": "สร้างเกม",
   "mmAppBarMenuDrawerFriendListingText": "เพื่อน",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "ให้คะแนนผู้เล่น",
+  "ratingScreenSubtitle": "ให้คะแนนเพื่อนร่วมทีมของคุณจากเกมนี้",
+  "ratingScreenDeadlineText": "กำหนดส่งคะแนน: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "ส่งคะแนน",
+  "ratingScreenSkipButton": "ข้ามไปก่อน",
+  "ratingScreenMandatoryWarning": "การให้คะแนนเป็นข้อบังคับภายใน 24 ชั่วโมงหลังเกม",
+  "ratingScreenSuccessMessage": "ส่งคะแนนสำเร็จ!",
+  "ratingScreenErrorMessage": "ส่งคะแนนล้มเหลว กรุณาลองอีกครั้ง",
+
+  "gameStatusUpcoming": "กำลังจะมาถึง",
+  "gameStatusInProgress": "กำลังดำเนินการ",
+  "gameStatusCompleted": "เสร็จสมบูรณ์",
+  "gameStatusPendingRating": "รอการให้คะแนน",
+  "gameInProgressTimeRemaining": "เหลือ {hours}ชม. {minutes}นาที",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "ดำเนินการต่อด้วย Google",
+  "loginSignupScreenAppleOAuthButtonText": "ดำเนินการต่อด้วย Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "ดำเนินการต่อด้วย GitHub",
+  "loginSignupScreenVersionText": "เวอร์ชัน: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

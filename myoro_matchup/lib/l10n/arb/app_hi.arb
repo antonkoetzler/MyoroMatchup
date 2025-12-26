@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "समाप्त करें",
   "gameCreationScreenGameCreationSuccessMessage": "गेम सफलतापूर्वक बनाया गया!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "उपयोगकर्ता नाम/ईमेल",
-  "loginSignupScreenLoginPasswordInputLabel": "पासवर्ड",
-  "loginSignupScreenLoginLoginButton": "लॉगिन",
-  "loginSignupScreenLoginForgotPasswordButton": "पासवर्ड भूल गए?",
-  "loginSignupScreenSignupNameInputLabel": "नाम",
-  "loginSignupScreenSignupUsernameInputLabel": "उपयोगकर्ता नाम",
-  "loginSignupScreenSignupEmailInputLabel": "ईमेल",
-  "loginSignupScreenSignupPasswordInputLabel": "पासवर्ड",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "पासवर्ड",
-  "loginSignupScreenSignupSignupButton": "साइन अप",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "MyoroMatchup में नए हैं? साइन अप करें!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "पहले से पंजीकृत हैं? लॉगिन करें!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "उपयोगकर्ता नाम/ईमेल खाली नहीं हो सकता।",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "पासवर्ड खाली नहीं हो सकता।",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "नाम खाली नहीं हो सकता।",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "उपयोगकर्ता नाम खाली नहीं हो सकता।",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "ईमेल खाली नहीं हो सकता।",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "देश खाली नहीं हो सकता।",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "पासवर्ड फ़ील्ड खाली नहीं हो सकते।",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "पासवर्ड मेल नहीं खाते।",
-  "loginSignupScreenForgotPasswordDialogTitle": "पासवर्ड भूल गए",
-  "loginSignupScreenForgotPasswordDialogMessage": "अपना ईमेल पता दर्ज करें और हम आपको अपना पासवर्ड रीसेट करने के लिए एक लिंक भेजेंगे।",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "ईमेल",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "कृपया एक वैध ईमेल पता दर्ज करें।",
-
   "mmAppBarMenuDrawerTitle": "मेनू",
   "mmAppBarMenuDrawerCreateGameText": "गेम बनाएं",
   "mmAppBarMenuDrawerFriendListingText": "मित्र",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "खिलाड़ियों को रेट करें",
+  "ratingScreenSubtitle": "इस गेम से अपने साथी खिलाड़ियों को रेट करें",
+  "ratingScreenDeadlineText": "रेटिंग की समय सीमा: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "रेटिंग सबमिट करें",
+  "ratingScreenSkipButton": "अभी के लिए छोड़ें",
+  "ratingScreenMandatoryWarning": "गेम के 24 घंटे के भीतर रेटिंग अनिवार्य है",
+  "ratingScreenSuccessMessage": "रेटिंग सफलतापूर्वक सबमिट की गई!",
+  "ratingScreenErrorMessage": "रेटिंग सबमिट करने में विफल। कृपया पुनः प्रयास करें।",
+
+  "gameStatusUpcoming": "आगामी",
+  "gameStatusInProgress": "प्रगति में",
+  "gameStatusCompleted": "पूर्ण",
+  "gameStatusPendingRating": "रेटिंग लंबित",
+  "gameInProgressTimeRemaining": "{hours}घं {minutes}मि शेष",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Google के साथ जारी रखें",
+  "loginSignupScreenAppleOAuthButtonText": "Apple के साथ जारी रखें",
+  "loginSignupScreenGitHubOAuthButtonText": "GitHub के साथ जारी रखें",
+  "loginSignupScreenVersionText": "संस्करण: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

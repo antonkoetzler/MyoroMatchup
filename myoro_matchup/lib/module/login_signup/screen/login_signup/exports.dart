@@ -1,4 +1,3 @@
-export 'enum/exports.dart';
 export 'widget/exports.dart';
 export 'route/exports.dart';
 export 'theme_extension/exports.dart';

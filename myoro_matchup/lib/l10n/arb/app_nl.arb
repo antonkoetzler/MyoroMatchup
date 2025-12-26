@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "Voltooien",
   "gameCreationScreenGameCreationSuccessMessage": "Spel succesvol aangemaakt!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "Gebruikersnaam/e-mail",
-  "loginSignupScreenLoginPasswordInputLabel": "Wachtwoord",
-  "loginSignupScreenLoginLoginButton": "Inloggen",
-  "loginSignupScreenLoginForgotPasswordButton": "Wachtwoord vergeten?",
-  "loginSignupScreenSignupNameInputLabel": "Naam",
-  "loginSignupScreenSignupUsernameInputLabel": "Gebruikersnaam",
-  "loginSignupScreenSignupEmailInputLabel": "E-mail",
-  "loginSignupScreenSignupPasswordInputLabel": "Wachtwoord",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "Wachtwoord",
-  "loginSignupScreenSignupSignupButton": "Registreren",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "Nieuw bij MyoroMatchup? Registreer!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "Al geregistreerd? Log in!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "Gebruikersnaam/e-mail mag niet leeg zijn.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "Wachtwoord mag niet leeg zijn.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "Naam mag niet leeg zijn.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "Gebruikersnaam mag niet leeg zijn.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "E-mail mag niet leeg zijn.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "Land mag niet leeg zijn.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "Wachtwoordvelden mogen niet leeg zijn.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "Wachtwoorden komen niet overeen.",
-  "loginSignupScreenForgotPasswordDialogTitle": "Wachtwoord vergeten",
-  "loginSignupScreenForgotPasswordDialogMessage": "Voer uw e-mailadres in en we sturen u een link om uw wachtwoord opnieuw in te stellen.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "E-mail",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "Voer een geldig e-mailadres in.",
-
   "mmAppBarMenuDrawerTitle": "Menu",
   "mmAppBarMenuDrawerCreateGameText": "Spel maken",
   "mmAppBarMenuDrawerFriendListingText": "Vrienden",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "Spelers Beoordelen",
+  "ratingScreenSubtitle": "Beoordeel je teamgenoten van dit spel",
+  "ratingScreenDeadlineText": "Beoordelingsdeadline: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "Beoordelingen Verzenden",
+  "ratingScreenSkipButton": "Nu Overslaan",
+  "ratingScreenMandatoryWarning": "Beoordeling is verplicht binnen 24 uur na het spel",
+  "ratingScreenSuccessMessage": "Beoordelingen succesvol verzonden!",
+  "ratingScreenErrorMessage": "Verzenden van beoordelingen mislukt. Probeer het opnieuw.",
+
+  "gameStatusUpcoming": "Binnenkort",
+  "gameStatusInProgress": "Bezig",
+  "gameStatusCompleted": "Voltooid",
+  "gameStatusPendingRating": "Beoordeling in Afwachting",
+  "gameInProgressTimeRemaining": "{hours}u {minutes}m resterend",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "Doorgaan met Google",
+  "loginSignupScreenAppleOAuthButtonText": "Doorgaan met Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "Doorgaan met GitHub",
+  "loginSignupScreenVersionText": "Versie: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }

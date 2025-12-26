@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 import 'package:injectable/injectable.dart';
+import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
 
 /// Http client for the API.
@@ -142,28 +143,28 @@ final class MmHttpClient {
       // Throw exception if status code is greater than or equal to 400.
       if (statusCode >= 400) {
         final message = (response.data as Map<String, dynamic>)['message'];
-        await MmLogger.error(
+        await MyoroLogger.error(
           '[MmHttpClient._runRequest]: Request failed - $endpoint | Status: $statusCode | Response: ${jsonEncoder.convert(response.data)}',
         );
         throw ApiException(message);
       }
 
-      MmLogger.info(
+      MyoroLogger.info(
         '[MmHttpClient._runRequest]: Request succeeded - $endpoint | Status: $statusCode | Response: ${jsonEncoder.convert(response.data)}',
       );
       return response;
     } on SocketException catch (e, stackTrace) {
-      await MmLogger.error('[MmHttpClient._runRequest]: Connection failed - $endpoint', e, stackTrace);
+      await MyoroLogger.error('[MmHttpClient._runRequest]: Connection failed - $endpoint', e, stackTrace);
       throw ApiException(localization.httpClientConnectionExceptionMessage);
     } on TimeoutException catch (e, stackTrace) {
-      await MmLogger.error('[MmHttpClient._runRequest]: Request timeout - $endpoint', e, stackTrace);
+      await MyoroLogger.error('[MmHttpClient._runRequest]: Request timeout - $endpoint', e, stackTrace);
       throw ApiException(localization.httpClientConnectionExceptionMessage);
     } on ApiException catch (e, stackTrace) {
       // Re-throw ApiException but try to extract status code if available
-      await MmLogger.error('[MmHttpClient._runRequest]: API exception occurred - $endpoint', e, stackTrace);
+      await MyoroLogger.error('[MmHttpClient._runRequest]: API exception occurred - $endpoint', e, stackTrace);
       rethrow;
     } catch (e, stackTrace) {
-      await MmLogger.error('[MmHttpClient._runRequest]: Unexpected error - $endpoint', e, stackTrace);
+      await MyoroLogger.error('[MmHttpClient._runRequest]: Unexpected error - $endpoint', e, stackTrace);
       throw ApiException(e.toString());
     }
   }

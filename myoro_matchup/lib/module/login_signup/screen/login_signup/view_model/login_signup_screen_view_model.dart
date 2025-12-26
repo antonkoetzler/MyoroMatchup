@@ -1,169 +1,39 @@
-import 'package:email_validator/email_validator.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
 import 'package:myoro_matchup/myoro_matchup.dart';
+import 'package:package_info_plus/package_info_plus.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-part 'login_signup_screen_login_state.dart';
-part 'login_signup_screen_signup_state.dart';
 part 'login_signup_screen_state.dart';
 
 /// View model of [LoginSignupScreen].
 @injectable
 final class LoginSignupScreenViewModel {
   /// Default constructor.
-  LoginSignupScreenViewModel(this._authService);
+  LoginSignupScreenViewModel(this._supabaseService) {
+    SchedulerBinding.instance.addPostFrameCallback((_) {
+      PackageInfo.fromPlatform().then((packageInfo) {
+        _state.versionText = '${packageInfo.version}+${packageInfo.buildNumber}';
+      });
+    });
+  }
 
-  /// [User] repository.
-  final AuthService _authService;
+  /// [MmSupabaseService] instance.
+  final MmSupabaseService _supabaseService;
 
   /// State.
-  late final _state = LoginSignupScreenState(_validation, _request, _onSuccess, _onError);
+  final _state = LoginSignupScreenState();
 
   /// Dispose function.
   void dispose() {
     _state.dispose();
   }
 
-  /// Updates the [LoginSignupScreenState.formTypeController].
-  void formTypeSwitcherButtonOnTapUp() {
-    _state.formTypeController.value = switch (_state.formTypeController.value) {
-      LoginSignupScreenEnum.login => LoginSignupScreenEnum.signup,
-      LoginSignupScreenEnum.signup => LoginSignupScreenEnum.login,
-    };
-  }
-
-  /// Updates the [LoginSignupScreenState.signupState.countryController].
-  void onSignupCountryChanged(MyoroCountryEnum? country) {
-    _state.signupState.countryController.value = country;
-  }
-
-  /// Validation function for the [LoginSignupScreenState.forgotPasswordEmailController].
-  String? forgotPasswordEmailInputValidation(_) {
-    final loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage =
-        localization.loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage;
-    final forgotPasswordEmail = _state.forgotPasswordEmail;
-    return EmailValidator.validate(forgotPasswordEmail)
-        ? null
-        : loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage;
-  }
-
-  /// Sends the forgot password email.
-  Future<String> sendForgotPasswordEmail() async {
-    return await _authService.forgotPassword(ForgotPasswordRequestDto(email: _state.forgotPasswordEmail));
-  }
-
-  /// On success function.
-  void onSendForgotPasswordEmail(String? message) {
-    MmSnackBarHelper.showSnackBar(
-      snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.success, message: message!),
-    );
-  }
-
-  /// On error function.
-  void onErrorSendingForgotPasswordEmail(String errorMessage) {
-    MmSnackBarHelper.showSnackBar(
-      snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage),
-    );
-  }
-
-  /// Form validation function.
-  String _validation() {
-    switch (_state.formTypeController.value) {
-      case LoginSignupScreenEnum.login:
-        final loginState = _state.loginState;
-        final usernameEmailController = loginState.usernameEmailController;
-        final passwordController = loginState.passwordController;
-
-        if (usernameEmailController.text.isEmpty) {
-          return localization.loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage;
-        }
-        if (passwordController.text.isEmpty) {
-          return localization.loginSignupScreenLoginFormPasswordFieldEmptyMessage;
-        }
-
-        break;
-      case LoginSignupScreenEnum.signup:
-        final signupState = _state.signupState;
-        final nameController = signupState.nameController;
-        final usernameController = signupState.usernameController;
-        final emailController = signupState.emailController;
-        final passwordController = signupState.passwordController;
-        final passwordRepeatController = signupState.passwordRepeatController;
-
-        if (nameController.text.isEmpty) {
-          return localization.loginSignupScreenSignupFormNameFieldEmptyMessage;
-        }
-        if (usernameController.text.isEmpty) {
-          return localization.loginSignupScreenSignupFormUsernameFieldEmptyMessage;
-        }
-        if (emailController.text.isEmpty) {
-          return localization.loginSignupScreenSignupFormEmailFieldEmptyMessage;
-        }
-        if (signupState.country == null) {
-          return localization.loginSignupScreenSignupFormLocationCountryFieldEmptyMessage;
-        }
-        if (passwordController.text.isEmpty || passwordRepeatController.text.isEmpty) {
-          return localization.loginSignupScreenSignupFormPasswordFieldsEmptyMessage;
-        }
-        if (passwordController.text != passwordRepeatController.text) {
-          return localization.loginSignupScreenSignupFormPasswordFieldsMismatchMessage;
-        }
-
-        break;
-    }
-
-    return kMyoroEmptyString;
-  }
-
-  /// Form request function.
-  Future<void> _request() async {
-    final formType = _state.formType;
-
-    final loginState = _state.loginState;
-    final loginUsernameEmail = loginState.usernameEmail;
-    final loginPassword = loginState.password;
-    final loginIsEmail = loginUsernameEmail.contains('@');
-
-    final signupState = _state.signupState;
-    final signupName = signupState.name;
-    final signupUsername = signupState.username;
-    final signupEmail = signupState.email;
-    final signupCountry = signupState.country;
-    final signupPassword = signupState.password;
-
-    return await switch (formType) {
-      LoginSignupScreenEnum.login => _authService.login(
-        LoginRequestDto(
-          username: loginIsEmail ? null : loginUsernameEmail,
-          email: loginIsEmail ? loginUsernameEmail : null,
-          password: loginPassword,
-        ),
-      ),
-      LoginSignupScreenEnum.signup => _authService.signup(
-        SignupRequestDto(
-          username: signupUsername,
-          name: signupName,
-          email: signupEmail,
-          country: signupCountry!,
-          password: signupPassword,
-        ),
-      ),
-    };
-  }
-
-  /// On success function.
-  void _onSuccess(_) {
-    MmLogger.info('[LoginSignupScreenViewModel._onSuccess]: Login/Signup successful, navigating to home.');
-    MmRouter.replace(MmRoutes.homeRoutes.homeScreen.navigate());
-  }
-
-  /// On error function.
-  void _onError(String errorMessage) {
-    MmLogger.error('[LoginSignupScreenViewModel._onError]: Login/Signup failed: $errorMessage.');
-    MmSnackBarHelper.showSnackBar(
-      snackBar: MyoroSnackBar(snackBarType: MyoroSnackBarTypeEnum.error, message: errorMessage),
-    );
+  /// On tap up.
+  void oAuthButtonOnTapUp(OAuthProvider provider) async {
+    await _supabaseService.signInWithOAuth(provider);
   }
 
   /// [_state] getter.

@@ -15,15 +15,15 @@ final class InvitationRepository {
   ///
   /// Returns a success message.
   Future<String> sendInvitation(int gameId, int inviteeId, String message) async {
-    MmLogger.info('[InvitationRepository.sendInvitation]: Sending invitation for game $gameId to user $inviteeId.');
+    MyoroLogger.info('[InvitationRepository.sendInvitation]: Sending invitation for game $gameId to user $inviteeId.');
     try {
       final response = await _httpClient.post('/invitations/invite/$gameId/$inviteeId', data: {'message': message});
-      MmLogger.info(
+      MyoroLogger.info(
         '[InvitationRepository.sendInvitation]: Invitation sent successfully for game $gameId to user $inviteeId.',
       );
       return response.data['message'];
     } catch (e, stackTrace) {
-      await MmLogger.error(
+      await MyoroLogger.error(
         '[InvitationRepository.sendInvitation]: Failed to send invitation for game $gameId to user $inviteeId.',
         e,
         stackTrace,

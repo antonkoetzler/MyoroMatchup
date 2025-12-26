@@ -211,31 +211,6 @@
   "gameCreationScreenButtonFinishText": "إنهاء",
   "gameCreationScreenGameCreationSuccessMessage": "تم إنشاء اللعبة بنجاح!",
 
-  "loginSignupScreenLoginUsernameEmailInputLabel": "اسم المستخدم/البريد الإلكتروني",
-  "loginSignupScreenLoginPasswordInputLabel": "كلمة المرور",
-  "loginSignupScreenLoginLoginButton": "تسجيل الدخول",
-  "loginSignupScreenLoginForgotPasswordButton": "نسيت كلمة المرور؟",
-  "loginSignupScreenSignupNameInputLabel": "الاسم",
-  "loginSignupScreenSignupUsernameInputLabel": "اسم المستخدم",
-  "loginSignupScreenSignupEmailInputLabel": "البريد الإلكتروني",
-  "loginSignupScreenSignupPasswordInputLabel": "كلمة المرور",
-  "loginSignupScreenSignupPasswordRepeatInputLabel": "كلمة المرور",
-  "loginSignupScreenSignupSignupButton": "التسجيل",
-  "loginSignupScreenFormTypeSwitcherButtonLoginText": "جديد في MyoroMatchup؟ سجل!",
-  "loginSignupScreenFormTypeSwitcherButtonSignupText": "مسجل بالفعل؟ سجل الدخول!",
-  "loginSignupScreenLoginFormUsernameEmailFieldEmptyMessage": "لا يمكن أن يكون اسم المستخدم/البريد الإلكتروني فارغًا.",
-  "loginSignupScreenLoginFormPasswordFieldEmptyMessage": "لا يمكن أن تكون كلمة المرور فارغة.",
-  "loginSignupScreenSignupFormNameFieldEmptyMessage": "لا يمكن أن يكون الاسم فارغًا.",
-  "loginSignupScreenSignupFormUsernameFieldEmptyMessage": "لا يمكن أن يكون اسم المستخدم فارغًا.",
-  "loginSignupScreenSignupFormEmailFieldEmptyMessage": "لا يمكن أن يكون البريد الإلكتروني فارغًا.",
-  "loginSignupScreenSignupFormLocationCountryFieldEmptyMessage": "لا يمكن أن تكون الدولة فارغة.",
-  "loginSignupScreenSignupFormPasswordFieldsEmptyMessage": "لا يمكن أن تكون حقول كلمة المرور فارغة.",
-  "loginSignupScreenSignupFormPasswordFieldsMismatchMessage": "كلمات المرور غير متطابقة.",
-  "loginSignupScreenForgotPasswordDialogTitle": "نسيت كلمة المرور",
-  "loginSignupScreenForgotPasswordDialogMessage": "أدخل عنوان بريدك الإلكتروني وسنرسل لك رابطًا لإعادة تعيين كلمة المرور.",
-  "loginSignupScreenForgotPasswordDialogInputPlaceholder": "البريد الإلكتروني",
-  "loginSignupScreenForgotPasswordDialogEmailInputInvalidValidationMessage": "يرجى إدخال عنوان بريد إلكتروني صحيح.",
-
   "mmAppBarMenuDrawerTitle": "القائمة",
   "mmAppBarMenuDrawerCreateGameText": "إنشاء لعبة",
   "mmAppBarMenuDrawerFriendListingText": "الأصدقاء",
@@ -287,6 +262,50 @@
     "placeholders": {
       "maxGames": {
         "type": "int"
+      }
+    }
+  },
+
+  "ratingScreenTitle": "تقييم اللاعبين",
+  "ratingScreenSubtitle": "قيم زملائك في الفريق من هذه اللعبة",
+  "ratingScreenDeadlineText": "موعد نهائي للتقييم: {deadline}",
+  "@ratingScreenDeadlineText": {
+    "placeholders": {
+      "deadline": {
+        "type": "String"
+      }
+    }
+  },
+  "ratingScreenSubmitButton": "إرسال التقييمات",
+  "ratingScreenSkipButton": "تخطي الآن",
+  "ratingScreenMandatoryWarning": "التقييم إلزامي خلال 24 ساعة بعد اللعبة",
+  "ratingScreenSuccessMessage": "تم إرسال التقييمات بنجاح!",
+  "ratingScreenErrorMessage": "فشل إرسال التقييمات. يرجى المحاولة مرة أخرى.",
+
+  "gameStatusUpcoming": "قادم",
+  "gameStatusInProgress": "قيد التنفيذ",
+  "gameStatusCompleted": "مكتمل",
+  "gameStatusPendingRating": "في انتظار التقييم",
+  "gameInProgressTimeRemaining": "{hours}س {minutes}د متبقية",
+  "@gameInProgressTimeRemaining": {
+    "placeholders": {
+      "hours": {
+        "type": "int"
+      },
+      "minutes": {
+        "type": "int"
+      }
+    }
+  },
+
+  "loginSignupScreenGoogleOAuthButtonText": "المتابعة مع Google",
+  "loginSignupScreenAppleOAuthButtonText": "المتابعة مع Apple",
+  "loginSignupScreenGitHubOAuthButtonText": "المتابعة مع GitHub",
+  "loginSignupScreenVersionText": "الإصدار: {version}",
+  "@loginSignupScreenVersionText": {
+    "placeholders": {
+      "version": {
+        "type": "String"
       }
     }
   }
