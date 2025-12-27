@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "使用 Google 繼續",
-  "loginSignupScreenAppleOAuthButtonText": "使用 Apple 繼續",
   "loginSignupScreenGitHubOAuthButtonText": "使用 GitHub 繼續",
   "loginSignupScreenVersionText": "版本: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "使用者名稱或電子郵件",
+  "loginSignupScreenPasswordInputLabel": "密碼",
+  "loginSignupScreenPasswordRepetitionInputLabel": "重複密碼",
+  "loginSignupScreenFormDividerText": "或",
+  "loginSignupScreenManualAuthButtonsLoginText": "登入",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "忘記密碼",
+  "loginSignupScreenManualAuthButtonsSignupText": "註冊"
 }
 

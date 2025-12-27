@@ -50,8 +50,6 @@ import 'package:myoro_matchup/module/login_signup/screen/login_signup/view_model
     as _i205;
 import 'package:myoro_matchup/module/subscription/service/subscription_service.dart'
     as _i595;
-import 'package:myoro_matchup/module/user/repository/user_repository.dart'
-    as _i624;
 import 'package:myoro_matchup/module/user/screen/details/view_model/user_details_screen_view_model.dart'
     as _i703;
 import 'package:myoro_matchup/module/user/service/user_service.dart' as _i782;
@@ -68,6 +66,7 @@ extension GetItInjectableX on _i174.GetIt {
     final mmEnvConfigurationModule = _$MmEnvConfigurationModule();
     final sharedPreferencesModule = _$SharedPreferencesModule();
     final mmRouterModule = _$MmRouterModule();
+    gh.factory<_i88.MmSupabaseService>(() => _i88.MmSupabaseService());
     await gh.singletonAsync<_i460.MmEnvConfiguration>(
       () => mmEnvConfigurationModule.envConfiguration,
       preResolve: true,
@@ -75,12 +74,6 @@ extension GetItInjectableX on _i174.GetIt {
     await gh.singletonAsync<_i460.SharedPreferences>(
       () => sharedPreferencesModule.sharedPreferences,
       preResolve: true,
-    );
-    gh.factory<_i88.MmSupabaseService>(
-      () => _i88.MmSupabaseService(gh<_i460.MmEnvConfiguration>()),
-    );
-    gh.factory<_i205.LoginSignupScreenViewModel>(
-      () => _i205.LoginSignupScreenViewModel(gh<_i460.MmSupabaseService>()),
     );
     gh.singleton<_i558.SharedPreferencesRepository>(
       () => _i558.SharedPreferencesRepository(gh<_i460.SharedPreferences>()),
@@ -96,7 +89,7 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i501.MmHttpClient>(
       () => _i501.MmHttpClient(gh<_i460.SharedPreferencesService>()),
     );
-    gh.singleton<_i782.UserService>(
+    gh.factory<_i782.UserService>(
       () => _i782.UserService(gh<_i460.SharedPreferencesService>()),
     );
     gh.factory<_i643.AuthRepository>(
@@ -114,22 +107,33 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i423.OpenStreetMapLocationRepository>(
       () => _i423.OpenStreetMapLocationRepository(gh<_i460.MmHttpClient>()),
     );
-    gh.factory<_i624.UserRepository>(
-      () => _i624.UserRepository(gh<_i460.MmHttpClient>()),
-    );
     gh.factory<_i789.MmLocationInputViewModel>(
       () => _i789.MmLocationInputViewModel(
         gh<_i460.OpenStreetMapLocationRepository>(),
+      ),
+    );
+    gh.factory<_i703.UserDetailsScreenViewModel>(
+      () => _i703.UserDetailsScreenViewModel(
+        gh<_i460.SharedPreferencesService>(),
+        gh<_i460.UserService>(),
+      ),
+    );
+    gh.factoryParam<_i17.GameDetailsScreenViewModel, int, dynamic>(
+      (gameId, _) => _i17.GameDetailsScreenViewModel(
+        gh<_i460.UserService>(),
+        gh<_i460.GameRepository>(),
+        gh<_i460.InvitationRepository>(),
+        gameId,
       ),
     );
     await gh.singletonAsync<_i460.MmRouter>(
       () => mmRouterModule.appRouter(gh<_i460.UserService>()),
       preResolve: true,
     );
-    gh.factory<_i703.UserDetailsScreenViewModel>(
-      () => _i703.UserDetailsScreenViewModel(
-        gh<_i460.SharedPreferencesService>(),
-        gh<_i460.UserRepository>(),
+    gh.factory<_i205.LoginSignupScreenViewModel>(
+      () => _i205.LoginSignupScreenViewModel(
+        gh<_i460.MmSupabaseService>(),
+        gh<_i460.UserService>(),
       ),
     );
     gh.factory<_i898.FriendListingScreenViewModel>(
@@ -144,16 +148,8 @@ extension GetItInjectableX on _i174.GetIt {
     gh.factory<_i1009.HomeScreenViewModel>(
       () => _i1009.HomeScreenViewModel(
         gh<_i460.SharedPreferencesService>(),
-        gh<_i460.UserRepository>(),
+        gh<_i460.UserService>(),
         gh<_i460.GameRepository>(),
-      ),
-    );
-    gh.factoryParam<_i17.GameDetailsScreenViewModel, int, dynamic>(
-      (gameId, _) => _i17.GameDetailsScreenViewModel(
-        gh<_i460.UserRepository>(),
-        gh<_i460.GameRepository>(),
-        gh<_i460.InvitationRepository>(),
-        gameId,
       ),
     );
     gh.factory<_i606.GameCreationScreenViewModel>(

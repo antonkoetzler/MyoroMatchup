@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "使用 Google 继续",
-  "loginSignupScreenAppleOAuthButtonText": "使用 Apple 继续",
   "loginSignupScreenGitHubOAuthButtonText": "使用 GitHub 继续",
   "loginSignupScreenVersionText": "版本: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "用户名或邮箱",
+  "loginSignupScreenPasswordInputLabel": "密码",
+  "loginSignupScreenPasswordRepetitionInputLabel": "重复密码",
+  "loginSignupScreenFormDividerText": "或",
+  "loginSignupScreenManualAuthButtonsLoginText": "登录",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "忘记密码",
+  "loginSignupScreenManualAuthButtonsSignupText": "注册"
 }
 

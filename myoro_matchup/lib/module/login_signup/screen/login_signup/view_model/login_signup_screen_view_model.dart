@@ -1,4 +1,4 @@
-import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:injectable/injectable.dart';
 import 'package:myoro_flutter_library/myoro_flutter_library.dart';
@@ -12,7 +12,11 @@ part 'login_signup_screen_state.dart';
 @injectable
 final class LoginSignupScreenViewModel {
   /// Default constructor.
-  LoginSignupScreenViewModel(this._supabaseService) {
+  LoginSignupScreenViewModel(this._supabaseService, UserService userService) {
+    _state = LoginSignupScreenState(() async {
+      return await userService.existsByUsernameOrEmail(_state.username);
+    });
+    _state.usernameInputController.addListener(_usernameInputControllerListener);
     SchedulerBinding.instance.addPostFrameCallback((_) {
       PackageInfo.fromPlatform().then((packageInfo) {
         _state.versionText = '${packageInfo.version}+${packageInfo.buildNumber}';
@@ -24,7 +28,7 @@ final class LoginSignupScreenViewModel {
   final MmSupabaseService _supabaseService;
 
   /// State.
-  final _state = LoginSignupScreenState();
+  late final LoginSignupScreenState _state;
 
   /// Dispose function.
   void dispose() {
@@ -32,8 +36,18 @@ final class LoginSignupScreenViewModel {
   }
 
   /// On tap up.
-  void oAuthButtonOnTapUp(OAuthProvider provider) async {
-    await _supabaseService.signInWithOAuth(provider);
+  void oAuthButtonOnTapUp(OAuthProvider provider) {
+    _state.providerBeingUsedToLogin = provider;
+    _supabaseService.signInWithOAuth(provider).then((_) {
+      _state.providerBeingUsedToLogin = null;
+    });
+  }
+
+  /// On username input controller listener.
+  void _usernameInputControllerListener() {
+    if (_state.formKey.currentState?.validate() ?? false) {
+      _state.existsByUsernameOrEmailRequestController.fetch();
+    }
   }
 
   /// [_state] getter.

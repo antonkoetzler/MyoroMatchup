@@ -19,9 +19,14 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
     required this.logoButtonsSpacing,
     required this.buttonsSpacing,
     required this.buttonsVersionSpacing,
-    required this.oAuthButtonTextStyle,
+    required this.buttonTextStyle,
     required this.versionTextStyle,
     required this.logoSize,
+    required this.formDividerTextStyle,
+    required this.formDividerSpacing,
+    required this.formDividerPadding,
+    required this.manualAuthButtonsSpacing,
+    required this.usernameEmailInputPrefixStyle,
   });
 
   /// Fake constructor.
@@ -30,9 +35,14 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       logoButtonsSpacing = faker.randomGenerator.decimal(scale: 20),
       buttonsSpacing = faker.randomGenerator.decimal(scale: 20),
       buttonsVersionSpacing = faker.randomGenerator.decimal(scale: 20),
-      oAuthButtonTextStyle = myoroFake<MyoroTextStyle>(),
+      buttonTextStyle = myoroFake<MyoroTextStyle>(),
       versionTextStyle = myoroFake<TextStyle>(),
-      logoSize = faker.randomGenerator.decimal(scale: 20);
+      logoSize = faker.randomGenerator.decimal(scale: 20),
+      formDividerTextStyle = myoroFake<TextStyle>(),
+      formDividerSpacing = faker.randomGenerator.decimal(scale: 20),
+      formDividerPadding = myoroFake<EdgeInsets>(),
+      manualAuthButtonsSpacing = faker.randomGenerator.decimal(scale: 20),
+      usernameEmailInputPrefixStyle = myoroFake<MyoroIconStyle>();
 
   /// Builder constructor.
   LoginSignupScreenThemeExtension.builder(TextTheme textTheme)
@@ -40,9 +50,14 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       logoButtonsSpacing = kMyoroMultiplier * 6,
       buttonsSpacing = kMyoroMultiplier * 2,
       buttonsVersionSpacing = kMyoroMultiplier * 4,
-      oAuthButtonTextStyle = MyoroTextStyle(alignment: TextAlign.left, style: textTheme.bodyMedium!),
+      buttonTextStyle = MyoroTextStyle(alignment: TextAlign.left, style: textTheme.bodyMedium!),
       versionTextStyle = textTheme.bodySmall!,
-      logoSize = 200;
+      logoSize = 200,
+      formDividerTextStyle = textTheme.bodySmall!,
+      formDividerSpacing = kMyoroMultiplier * 2,
+      formDividerPadding = const EdgeInsets.symmetric(horizontal: kMyoroMultiplier),
+      manualAuthButtonsSpacing = kMyoroMultiplier * 2,
+      usernameEmailInputPrefixStyle = const MyoroIconStyle(size: kMyoroMultiplier * 3);
 
   /// Padding of [LoginSignupScreen].
   final EdgeInsets bodyPadding;
@@ -57,13 +72,28 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
   final double buttonsVersionSpacing;
 
   /// [MyoroTextStyle] of OAuth buttons.
-  final MyoroTextStyle oAuthButtonTextStyle;
+  final MyoroTextStyle buttonTextStyle;
 
   /// [TextStyle] of version text.
   final TextStyle versionTextStyle;
 
   /// Size of the logo.
   final double logoSize;
+
+  /// [TextStyle] of form divider.
+  final TextStyle formDividerTextStyle;
+
+  /// Spacing between form divider.
+  final double formDividerSpacing;
+
+  /// [EdgeInsets] of the form divider.
+  final EdgeInsets formDividerPadding;
+
+  /// Spacing between manual auth buttons.
+  final double manualAuthButtonsSpacing;
+
+  /// [MyoroIconStyle] of username/email input prefix.
+  final MyoroIconStyle usernameEmailInputPrefixStyle;
 
   /// Lerp function.
   @override
@@ -74,9 +104,18 @@ final class LoginSignupScreenThemeExtension extends ThemeExtension<LoginSignupSc
       logoButtonsSpacing: lerpDouble(logoButtonsSpacing, other.logoButtonsSpacing, t),
       buttonsSpacing: lerpDouble(buttonsSpacing, other.buttonsSpacing, t),
       buttonsVersionSpacing: lerpDouble(buttonsVersionSpacing, other.buttonsVersionSpacing, t),
-      oAuthButtonTextStyle: MyoroTextStyle.lerp(oAuthButtonTextStyle, other.oAuthButtonTextStyle, t),
+      buttonTextStyle: MyoroTextStyle.lerp(buttonTextStyle, other.buttonTextStyle, t),
       versionTextStyle: TextStyle.lerp(versionTextStyle, other.versionTextStyle, t),
       logoSize: lerpDouble(logoSize, other.logoSize, t),
+      formDividerTextStyle: TextStyle.lerp(formDividerTextStyle, other.formDividerTextStyle, t),
+      formDividerSpacing: lerpDouble(formDividerSpacing, other.formDividerSpacing, t),
+      formDividerPadding: EdgeInsets.lerp(formDividerPadding, other.formDividerPadding, t),
+      manualAuthButtonsSpacing: lerpDouble(manualAuthButtonsSpacing, other.manualAuthButtonsSpacing, t),
+      usernameEmailInputPrefixStyle: MyoroIconStyle.lerp(
+        usernameEmailInputPrefixStyle,
+        other.usernameEmailInputPrefixStyle,
+        t,
+      ),
     );
   }
 }

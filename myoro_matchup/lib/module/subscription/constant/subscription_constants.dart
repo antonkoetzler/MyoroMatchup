@@ -7,7 +7,7 @@ final class SubscriptionConstants {
 
   /// Product ID for monthly subscription on iOS.
   /// TODO: Set up in App Store Connect.
-  static const String iosMonthlyProductId = 'com.myoro.myoro_matchup.premium_monthly';
+  static const String iosMonthlyProductId = 'com.myoro.myoromatchup.premium_monthly';
 
   /// Product ID for monthly subscription on Android.
   /// TODO: Set up in Google Play Console.

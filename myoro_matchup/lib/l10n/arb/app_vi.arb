@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Tiếp tục với Google",
-  "loginSignupScreenAppleOAuthButtonText": "Tiếp tục với Apple",
   "loginSignupScreenGitHubOAuthButtonText": "Tiếp tục với GitHub",
   "loginSignupScreenVersionText": "Phiên bản: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "Tên người dùng hoặc email",
+  "loginSignupScreenPasswordInputLabel": "Mật khẩu",
+  "loginSignupScreenPasswordRepetitionInputLabel": "Nhập lại mật khẩu",
+  "loginSignupScreenFormDividerText": "hoặc",
+  "loginSignupScreenManualAuthButtonsLoginText": "Đăng nhập",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "Quên mật khẩu",
+  "loginSignupScreenManualAuthButtonsSignupText": "Đăng ký"
 }
 

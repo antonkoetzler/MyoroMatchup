@@ -8,6 +8,14 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 part '../_widget/_body.dart';
 part '../_widget/_oauth_button.dart';
 part '../_widget/_version_text.dart';
+part '../_widget/_form.dart';
+part '../_widget/_username_email_input.dart';
+part '../_widget/_username_email_input_prefix.dart';
+part '../_widget/_username_email_input_prefix_state.dart';
+part '../_widget/_form_divider.dart';
+part '../_widget/_manual_auth_buttons.dart';
+part '../_widget/_button.dart';
+part '../_widget/_manual_auth_buttons_content.dart';
 
 /// Login/signup screen.
 final class LoginSignupScreen extends StatelessWidget {

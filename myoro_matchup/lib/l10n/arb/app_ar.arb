@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "المتابعة مع Google",
-  "loginSignupScreenAppleOAuthButtonText": "المتابعة مع Apple",
   "loginSignupScreenGitHubOAuthButtonText": "المتابعة مع GitHub",
   "loginSignupScreenVersionText": "الإصدار: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "اسم المستخدم أو البريد الإلكتروني",
+  "loginSignupScreenPasswordInputLabel": "كلمة المرور",
+  "loginSignupScreenPasswordRepetitionInputLabel": "تأكيد كلمة المرور",
+  "loginSignupScreenFormDividerText": "أو",
+  "loginSignupScreenManualAuthButtonsLoginText": "تسجيل الدخول",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "نسيت كلمة المرور",
+  "loginSignupScreenManualAuthButtonsSignupText": "إنشاء حساب"
 }
 

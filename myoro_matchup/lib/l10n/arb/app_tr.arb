@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Google ile devam et",
-  "loginSignupScreenAppleOAuthButtonText": "Apple ile devam et",
   "loginSignupScreenGitHubOAuthButtonText": "GitHub ile devam et",
   "loginSignupScreenVersionText": "Sürüm: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "Kullanıcı adı veya e-posta",
+  "loginSignupScreenPasswordInputLabel": "Şifre",
+  "loginSignupScreenPasswordRepetitionInputLabel": "Şifreyi tekrarla",
+  "loginSignupScreenFormDividerText": "veya",
+  "loginSignupScreenManualAuthButtonsLoginText": "Giriş yap",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "Şifremi unuttum",
+  "loginSignupScreenManualAuthButtonsSignupText": "Kayıt ol"
 }
 

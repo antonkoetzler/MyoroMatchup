@@ -9,11 +9,8 @@ part 'home_screen_state.dart';
 @injectable
 final class HomeScreenViewModel {
   /// Default constructor.
-  HomeScreenViewModel(
-    SharedPreferencesService sharedPreferencesService,
-    UserRepository userRepository,
-    this._gameRepository,
-  ) : _state = HomeScreenState(() async => userRepository.get(sharedPreferencesService.loggedInUser!.id));
+  HomeScreenViewModel(SharedPreferencesService sharedPreferencesService, UserService userService, this._gameRepository)
+    : _state = HomeScreenState(() async => userService.get(sharedPreferencesService.loggedInUser!.id));
 
   /// [GameRepository].
   final GameRepository _gameRepository;

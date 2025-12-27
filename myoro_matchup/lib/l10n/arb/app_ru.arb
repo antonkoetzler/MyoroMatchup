@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Продолжить с Google",
-  "loginSignupScreenAppleOAuthButtonText": "Продолжить с Apple",
   "loginSignupScreenGitHubOAuthButtonText": "Продолжить с GitHub",
   "loginSignupScreenVersionText": "Версия: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "Имя пользователя или электронная почта",
+  "loginSignupScreenPasswordInputLabel": "Пароль",
+  "loginSignupScreenPasswordRepetitionInputLabel": "Повторите пароль",
+  "loginSignupScreenFormDividerText": "или",
+  "loginSignupScreenManualAuthButtonsLoginText": "Войти",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "Забыли пароль",
+  "loginSignupScreenManualAuthButtonsSignupText": "Зарегистрироваться"
 }
 

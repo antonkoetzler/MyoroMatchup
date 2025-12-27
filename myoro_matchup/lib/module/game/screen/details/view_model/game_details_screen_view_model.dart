@@ -12,7 +12,7 @@ part 'game_details_screen_state.dart';
 final class GameDetailsScreenViewModel {
   /// Default constructor.
   GameDetailsScreenViewModel(
-    this._userRepository,
+    this._userService,
     this._gameRepository,
     this._invitationRepository,
     @factoryParam int gameId,
@@ -20,8 +20,8 @@ final class GameDetailsScreenViewModel {
     fetch();
   }
 
-  /// [UserRepository]
-  final UserRepository _userRepository;
+  /// [UserService]
+  final UserService _userService;
 
   /// [GameRepository]
   final GameRepository _gameRepository;
@@ -50,7 +50,7 @@ final class GameDetailsScreenViewModel {
   /// [MyoroSearchInput.requestCallback] of the invitation bottom sheet's user search input.
   FutureOr<Set<UserResponseDto>> getUsers() async {
     final userSelectionBottomSheetSearchQuery = state.userSelectionBottomSheetSearchQuery;
-    return await _userRepository.getAll(userSelectionBottomSheetSearchQuery);
+    return await _userService.getAll(userSelectionBottomSheetSearchQuery);
   }
 
   /// Cancel invitation.
@@ -77,12 +77,12 @@ final class GameDetailsScreenViewModel {
 
   /// Send friend request.
   Future<String> sendFriendRequest(GamePlayerResponseDto player) async {
-    return await _userRepository.sendFriendRequest(player.id);
+    return await _userService.sendFriendRequest(player.id);
   }
 
   /// Block user.
   Future<String> blockUser(GamePlayerResponseDto player) async {
-    return await _userRepository.blockUser(player.id);
+    return await _userService.blockUser(player.id);
   }
 
   /// Select user.

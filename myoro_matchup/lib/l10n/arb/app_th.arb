@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "ดำเนินการต่อด้วย Google",
-  "loginSignupScreenAppleOAuthButtonText": "ดำเนินการต่อด้วย Apple",
   "loginSignupScreenGitHubOAuthButtonText": "ดำเนินการต่อด้วย GitHub",
   "loginSignupScreenVersionText": "เวอร์ชัน: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "ชื่อผู้ใช้หรืออีเมล",
+  "loginSignupScreenPasswordInputLabel": "รหัสผ่าน",
+  "loginSignupScreenPasswordRepetitionInputLabel": "ยืนยันรหัสผ่าน",
+  "loginSignupScreenFormDividerText": "หรือ",
+  "loginSignupScreenManualAuthButtonsLoginText": "เข้าสู่ระบบ",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "ลืมรหัสผ่าน",
+  "loginSignupScreenManualAuthButtonsSignupText": "สมัครสมาชิก"
 }
 

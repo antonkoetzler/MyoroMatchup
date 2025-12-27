@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Continuar com Google",
-  "loginSignupScreenAppleOAuthButtonText": "Continuar com Apple",
   "loginSignupScreenGitHubOAuthButtonText": "Continuar com GitHub",
   "loginSignupScreenVersionText": "Versão: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,5 +307,12 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "Nome de usuário ou e-mail",
+  "loginSignupScreenPasswordInputLabel": "Senha",
+  "loginSignupScreenPasswordRepetitionInputLabel": "Repetir senha",
+  "loginSignupScreenFormDividerText": "ou",
+  "loginSignupScreenManualAuthButtonsLoginText": "Entrar",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "Esqueci a senha",
+  "loginSignupScreenManualAuthButtonsSignupText": "Cadastrar"
 }

@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Googleで続行",
-  "loginSignupScreenAppleOAuthButtonText": "Appleで続行",
   "loginSignupScreenGitHubOAuthButtonText": "GitHubで続行",
   "loginSignupScreenVersionText": "バージョン: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "ユーザー名またはメールアドレス",
+  "loginSignupScreenPasswordInputLabel": "パスワード",
+  "loginSignupScreenPasswordRepetitionInputLabel": "パスワードを再入力",
+  "loginSignupScreenFormDividerText": "または",
+  "loginSignupScreenManualAuthButtonsLoginText": "ログイン",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "パスワードを忘れた場合",
+  "loginSignupScreenManualAuthButtonsSignupText": "サインアップ"
 }
 

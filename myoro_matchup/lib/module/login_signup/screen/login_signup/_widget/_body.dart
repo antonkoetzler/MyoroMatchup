@@ -10,7 +10,6 @@ final class _Body extends StatelessWidget {
     final themeExtension = context.resolveThemeExtension<LoginSignupScreenThemeExtension>();
     final bodyPadding = themeExtension.bodyPadding;
     final logoButtonsSpacing = themeExtension.logoButtonsSpacing;
-    final buttonsSpacing = themeExtension.buttonsSpacing;
     final buttonsVersionSpacing = themeExtension.buttonsVersionSpacing;
     final logoSize = themeExtension.logoSize;
 
@@ -21,25 +20,19 @@ final class _Body extends StatelessWidget {
         spacing: buttonsVersionSpacing,
         children: [
           Expanded(
-            child: Column(
-              spacing: logoButtonsSpacing,
-              mainAxisSize: MainAxisSize.min,
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                MyoroImage(path: MmImages.svgs.logo, width: logoSize, fit: BoxFit.contain),
-                Flexible(
-                  child: Column(
-                    spacing: buttonsSpacing,
-                    mainAxisSize: MainAxisSize.min,
-                    children: const [
-                      _OAuthButton(OAuthProvider.google),
-                      _OAuthButton(OAuthProvider.github),
-                      _OAuthButton(OAuthProvider.apple),
-                    ],
-                  ),
+            child: Center(
+              child: SingleChildScrollView(
+                child: Column(
+                  spacing: logoButtonsSpacing,
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    MyoroImage(path: MmImages.svgs.logo, width: logoSize, fit: BoxFit.contain),
+                    const Flexible(child: _Form()),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
           const _VersionText(),

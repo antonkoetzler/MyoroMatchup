@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Doorgaan met Google",
-  "loginSignupScreenAppleOAuthButtonText": "Doorgaan met Apple",
   "loginSignupScreenGitHubOAuthButtonText": "Doorgaan met GitHub",
   "loginSignupScreenVersionText": "Versie: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "Gebruikersnaam of e-mail",
+  "loginSignupScreenPasswordInputLabel": "Wachtwoord",
+  "loginSignupScreenPasswordRepetitionInputLabel": "Wachtwoord herhalen",
+  "loginSignupScreenFormDividerText": "of",
+  "loginSignupScreenManualAuthButtonsLoginText": "Inloggen",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "Wachtwoord vergeten",
+  "loginSignupScreenManualAuthButtonsSignupText": "Registreren"
 }
 

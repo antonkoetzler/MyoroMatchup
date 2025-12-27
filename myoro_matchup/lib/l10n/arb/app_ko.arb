@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Google로 계속하기",
-  "loginSignupScreenAppleOAuthButtonText": "Apple로 계속하기",
   "loginSignupScreenGitHubOAuthButtonText": "GitHub로 계속하기",
   "loginSignupScreenVersionText": "버전: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "사용자 이름 또는 이메일",
+  "loginSignupScreenPasswordInputLabel": "비밀번호",
+  "loginSignupScreenPasswordRepetitionInputLabel": "비밀번호 확인",
+  "loginSignupScreenFormDividerText": "또는",
+  "loginSignupScreenManualAuthButtonsLoginText": "로그인",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "비밀번호 찾기",
+  "loginSignupScreenManualAuthButtonsSignupText": "회원가입"
 }
 

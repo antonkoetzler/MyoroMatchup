@@ -176,7 +176,7 @@ final class MmHttpClient {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
       'Accept-Language': Localizations.localeOf(navigatorKey.currentContext!).languageCode,
-      'User-Agent': 'MyoroMatchup/0.1.0 (com.myoro.myoro_matchup)',
+      'User-Agent': 'MyoroMatchup/0.0.1 (com.myoro.myoromatchup)',
       if (loggedInUser != null) 'Authorization': 'Bearer ${loggedInUser.token}',
     };
   }

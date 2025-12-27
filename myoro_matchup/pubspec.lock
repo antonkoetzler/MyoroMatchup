@@ -792,17 +792,19 @@ packages:
   myoro_flutter_annotations:
     dependency: "direct main"
     description:
-      path: "../../myoro_flutter_annotations"
-      relative: true
-    source: path
+      name: myoro_flutter_annotations
+      sha256: "6c81db90dd0fbb90873b37a38744566c4e579f772b690552c5e01c879e21d70b"
+      url: "https://pub.dev"
+    source: hosted
     version: "1.4.11"
   myoro_flutter_library:
     dependency: "direct main"
     description:
-      path: "../../myoro_flutter_library"
-      relative: true
-    source: path
-    version: "2.7.3"
+      name: myoro_flutter_library
+      sha256: "1058cbc166f49f920d22a191489f23e6ea618acf5f451923c75cb9dbd413902b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.7.4"
   nested:
     dependency: transitive
     description:

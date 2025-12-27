@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Google के साथ जारी रखें",
-  "loginSignupScreenAppleOAuthButtonText": "Apple के साथ जारी रखें",
   "loginSignupScreenGitHubOAuthButtonText": "GitHub के साथ जारी रखें",
   "loginSignupScreenVersionText": "संस्करण: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "उपयोगकर्ता नाम या ईमेल",
+  "loginSignupScreenPasswordInputLabel": "पासवर्ड",
+  "loginSignupScreenPasswordRepetitionInputLabel": "पासवर्ड दोहराएं",
+  "loginSignupScreenFormDividerText": "या",
+  "loginSignupScreenManualAuthButtonsLoginText": "लॉग इन करें",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "पासवर्ड भूल गए",
+  "loginSignupScreenManualAuthButtonsSignupText": "साइन अप करें"
 }
 

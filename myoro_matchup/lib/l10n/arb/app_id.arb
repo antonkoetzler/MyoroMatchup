@@ -299,7 +299,6 @@
   },
 
   "loginSignupScreenGoogleOAuthButtonText": "Lanjutkan dengan Google",
-  "loginSignupScreenAppleOAuthButtonText": "Lanjutkan dengan Apple",
   "loginSignupScreenGitHubOAuthButtonText": "Lanjutkan dengan GitHub",
   "loginSignupScreenVersionText": "Versi: {version}",
   "@loginSignupScreenVersionText": {
@@ -308,6 +307,13 @@
         "type": "String"
       }
     }
-  }
+  },
+  "loginSignupScreenManualAuthUsernameEmailInputLabel": "Nama pengguna atau email",
+  "loginSignupScreenPasswordInputLabel": "Kata sandi",
+  "loginSignupScreenPasswordRepetitionInputLabel": "Ulangi kata sandi",
+  "loginSignupScreenFormDividerText": "atau",
+  "loginSignupScreenManualAuthButtonsLoginText": "Masuk",
+  "loginSignupScreenManualAuthButtonsForgotPasswordText": "Lupa kata sandi",
+  "loginSignupScreenManualAuthButtonsSignupText": "Daftar"
 }
 
